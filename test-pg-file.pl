@@ -9,14 +9,14 @@ $gotinclude = 0;
 $gotPGcourse = 0;
 
 while ($line = <$in>) {
-	if ($line =~ m/^ *DOCUMENT/) {
+	if ($line =~ m/^ *&?DOCUMENT/) {
 		if ($indoc != 0) {
 			print(STDERR "$ARGV[0] ... DOCUMENT out of place\n");
 			print("$ARGV[0]\n");
 			exit(1);
 		}
 		$indoc ++;
-	} elsif ($line =~ m/^ *ENDDOCUMENT/) {
+	} elsif ($line =~ m/^ *&?ENDDOCUMENT/) {
 		if ($indoc != 1) {
 			print(STDERR "$ARGV[0] ... ENDDOCUMENT out of place\n");
 			print("$ARGV[0]\n");
