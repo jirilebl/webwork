@@ -2,11 +2,41 @@
 
 open(my $in, '<', $ARGV[0]) or die $!;
 
+$taxonomy_file = "~/gh/webwork-open-problem-library/OpenProblemLibrary/Taxonomy";
+
+@f = glob($taxonomy_file);
+
+if (scalar (@f) != 1) {
+	print (STDERR "Can't open/find $taxonomy_file with the taxonomy, you might want to edit the script\n");
+	exit(2);
+}
+
+$taxonomy_file = @f[0];
+
+sub is_in_taxonomy {
+	open(my $taxin, '<', $taxonomy_file) or die $!;
+
+	my $x = $_[0];
+
+	my $ln;
+	while ($ln = <$taxin>) {
+		if ($ln =~ m/^[ \t]*\Q$x\E[ \t]*$/) {
+			close($taxin);
+			return 1;
+		}
+	}
+	close($taxin);
+	return 0;
+}
+
 
 $indoc = 0;
 $gotbeginproblem = 0;
 $gotinclude = 0;
 $gotPGcourse = 0;
+$gotDBsubj = 0;
+$gotDBch = 0;
+$gotDBsec = 0;
 
 while ($line = <$in>) {
 	if ($line =~ m/^ *&?DOCUMENT/) {
@@ -29,6 +59,40 @@ while ($line = <$in>) {
 		$gotinclude++;
 	} elsif ($line =~ m/PGcourse.pl/) {
 		$gotPGcourse++;
+	} elsif ($line =~ m/^[ \t]*#+[ \t]*DBsubject\( *'*ZZZ/ or
+		 $line =~ m/^[ \t]*#+[ \t]*DBchapter\( *'*ZZZ/ or
+		 $line =~ m/^[ \t]*#+[ \t]*DBsection\( *'*ZZZ/) {
+		exit(0);
+	} elsif ($line =~ m/^[ \t]*#+[ \t]*DBsubject\( *'(.*?)' *\)[ \t]*$/ or
+		 $line =~ m/^[ \t]*#+[ \t]*DBsubject\( *(.*?) *\)[ \t]*$/) {
+		my $subj = $1;
+		#print "subj>$subj\n";
+		if (not is_in_taxonomy($subj)) {
+			print(STDERR "$ARGV[0] ... DBsubject $subj not in taxonomy\n");
+			print("$ARGV[0]\n");
+			exit(1);
+		}
+		$gotDBsubj++;
+	} elsif ($line =~ m/^[ \t]*#+[ \t]*DBchapter\( *'(.*?)' *\)[ \t]*$/ or
+		 $line =~ m/^[ \t]*#+[ \t]*DBchapter\( *(.*?) *\)[ \t]*$/) {
+		my $subj = $1;
+		#print "ch>$subj\n";
+		if (not is_in_taxonomy($subj)) {
+			print(STDERR "$ARGV[0] ... DBchapter $subj not in taxonomy\n");
+			print("$ARGV[0]\n");
+			exit(1);
+		}
+		$gotDBch++;
+	} elsif ($line =~ m/^[ \t]*#+[ \t]*DBsection\( *'(.*?)' *\)[ \t]*$/ or
+		 $line =~ m/^[ \t]*#+[ \t]*DBsection\( *(.*?) *\)[ \t]*$/) {
+		my $subj = $1;
+		#print "sec>$subj\n";
+		if (not is_in_taxonomy($subj)) {
+			print(STDERR "$ARGV[0] ... DBsection $subj not in taxonomy\n");
+			print("$ARGV[0]\n");
+			exit(1);
+		}
+		$gotDBsec++;
 	}
 }
 
@@ -46,6 +110,42 @@ if ($gotbeginproblem == 0 and $gotinclude == 0) {
 
 if ($gotPGcourse == 0 and $gotinclude == 0) {
 	print(STDERR "$ARGV[0] ... no PGcourse.pl and not an include\n");
+	print("$ARGV[0]\n");
+	exit(1);
+}
+
+if ($gotDBsubj > 1) {
+	print(STDERR "$ARGV[0] ... More than one DBsubject\n");
+	print("$ARGV[0]\n");
+	exit(1);
+}
+
+if ($gotDBch > 1) {
+	print(STDERR "$ARGV[0] ... More than one DBchapter\n");
+	print("$ARGV[0]\n");
+	exit(1);
+}
+
+if ($gotDBsec > 1) {
+	print(STDERR "$ARGV[0] ... More than one DBsection\n");
+	print("$ARGV[0]\n");
+	exit(1);
+}
+
+if ($gotDBsubj < 1) {
+	print(STDERR "$ARGV[0] ... No DBsubject\n");
+	print("$ARGV[0]\n");
+	exit(1);
+}
+
+if ($gotDBch < 1) {
+	print(STDERR "$ARGV[0] ... No DBchapter\n");
+	print("$ARGV[0]\n");
+	exit(1);
+}
+
+if ($gotDBsec < 1) {
+	print(STDERR "$ARGV[0] ... No DBsection\n");
 	print("$ARGV[0]\n");
 	exit(1);
 }
