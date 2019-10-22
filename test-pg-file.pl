@@ -53,11 +53,11 @@ while ($line = <$in>) {
 			exit(1);
 		}
 		$indoc ++;
-	} elsif ($line =~ m/beginproblem/) {
+	} elsif ($line =~ m/^[^#]*beginproblem/) {
 		$gotbeginproblem++;
 	} elsif ($line =~ m/^ *includePGproblem/) {
 		$gotinclude++;
-	} elsif ($line =~ m/PGcourse.pl/) {
+	} elsif ($line =~ m/^[^#]*PGcourse.pl/) {
 		$gotPGcourse++;
 	} elsif ($line =~ m/^[ \t]*#+[ \t]*DBsubject\( *'*ZZZ/ or
 		 $line =~ m/^[ \t]*#+[ \t]*DBchapter\( *'*ZZZ/ or
