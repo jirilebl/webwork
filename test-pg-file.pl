@@ -38,19 +38,19 @@ $gotDBsubj = 0;
 $gotDBch = 0;
 $gotDBsec = 0;
 
+$result = 0;
+
 while ($line = <$in>) {
 	if ($line =~ m/^ *&?DOCUMENT/) {
 		if ($indoc != 0) {
 			print(STDERR "$ARGV[0] ... DOCUMENT out of place\n");
-			print("$ARGV[0]\n");
-			exit(1);
+			$result++;
 		}
 		$indoc ++;
 	} elsif ($line =~ m/^ *&?ENDDOCUMENT/) {
 		if ($indoc != 1) {
 			print(STDERR "$ARGV[0] ... ENDDOCUMENT out of place\n");
-			print("$ARGV[0]\n");
-			exit(1);
+			$result++;
 		}
 		$indoc ++;
 	} elsif ($line =~ m/^[^#]*beginproblem/) {
@@ -69,8 +69,7 @@ while ($line = <$in>) {
 		#print "subj>$subj\n";
 		if (not is_in_taxonomy($subj)) {
 			print(STDERR "$ARGV[0] ... DBsubject $subj not in taxonomy\n");
-			print("$ARGV[0]\n");
-			exit(1);
+			$result++;
 		}
 		$gotDBsubj++;
 	} elsif ($line =~ m/^[ \t]*#+[ \t]*DBchapter\( *'(.*?)' *\)[ \t]*$/ or
@@ -79,8 +78,7 @@ while ($line = <$in>) {
 		#print "ch>$subj\n";
 		if (not is_in_taxonomy($subj)) {
 			print(STDERR "$ARGV[0] ... DBchapter $subj not in taxonomy\n");
-			print("$ARGV[0]\n");
-			exit(1);
+			$result++;
 		}
 		$gotDBch++;
 	} elsif ($line =~ m/^[ \t]*#+[ \t]*DBsection\( *'(.*?)' *\)[ \t]*$/ or
@@ -89,8 +87,7 @@ while ($line = <$in>) {
 		#print "sec>$subj\n";
 		if (not is_in_taxonomy($subj)) {
 			print(STDERR "$ARGV[0] ... DBsection $subj not in taxonomy\n");
-			print("$ARGV[0]\n");
-			exit(1);
+			$result++;
 		}
 		$gotDBsec++;
 	}
@@ -98,54 +95,60 @@ while ($line = <$in>) {
 
 if ($indoc != 2) {
 	print(STDERR "$ARGV[0] ... DOCUMENT/ENDDOCUMENT missing\n");
-	print("$ARGV[0]\n");
-	exit(1);
+	$result++;
 }
 
 if ($gotbeginproblem == 0 and $gotinclude == 0) {
 	print(STDERR "$ARGV[0] ... no beginproblem and not an include\n");
-	print("$ARGV[0]\n");
-	exit(1);
+	$result++;
+}
+
+if ($gotbeginproblem > 1) {
+	print(STDERR "$ARGV[0] ... more than one beginproblem\n");
+	$result++;
 }
 
 if ($gotPGcourse == 0 and $gotinclude == 0) {
 	print(STDERR "$ARGV[0] ... no PGcourse.pl and not an include\n");
-	print("$ARGV[0]\n");
-	exit(1);
+	$result++;
+}
+
+if ($gotPGcourse > 1) {
+	print(STDERR "$ARGV[0] ... more than one PGcourse.pl\n");
+	$result++;
 }
 
 if ($gotDBsubj > 1) {
 	print(STDERR "$ARGV[0] ... More than one DBsubject\n");
-	print("$ARGV[0]\n");
-	exit(1);
+	$result++;
 }
 
 if ($gotDBch > 1) {
 	print(STDERR "$ARGV[0] ... More than one DBchapter\n");
-	print("$ARGV[0]\n");
-	exit(1);
+	$result++;
 }
 
 if ($gotDBsec > 1) {
 	print(STDERR "$ARGV[0] ... More than one DBsection\n");
-	print("$ARGV[0]\n");
-	exit(1);
+	$result++;
 }
 
 if ($gotDBsubj < 1) {
 	print(STDERR "$ARGV[0] ... No DBsubject\n");
-	print("$ARGV[0]\n");
-	exit(1);
+	$result++;
 }
 
 if ($gotDBch < 1) {
 	print(STDERR "$ARGV[0] ... No DBchapter\n");
-	print("$ARGV[0]\n");
-	exit(1);
+	$result++;
 }
 
 if ($gotDBsec < 1) {
 	print(STDERR "$ARGV[0] ... No DBsection\n");
+	$result++;
+}
+
+if ($result > 0) {
 	print("$ARGV[0]\n");
 	exit(1);
 }
