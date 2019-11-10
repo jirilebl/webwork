@@ -57,7 +57,7 @@ while ($line = <$in>) {
 		$gotbeginproblem++;
 	} elsif ($line =~ m/^ *includePGproblem/) {
 		$gotinclude++;
-	} elsif ($line =~ m/^[^#]*PGcourse.pl/) {
+	} elsif ($line =~ m/^[^#]*['"]PGcourse.pl['"]/) {
 		$gotPGcourse++;
 	} elsif ($line =~ m/^[ \t]*#+[ \t]*DBsubject\( *'*ZZZ/ or
 		 $line =~ m/^[ \t]*#+[ \t]*DBchapter\( *'*ZZZ/ or
