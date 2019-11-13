@@ -40,6 +40,9 @@ $gotDBsec = 0;
 
 $result = 0;
 
+$resources = "";
+@images = ();
+
 while ($line = <$in>) {
 	if ($line =~ m/^ *&?DOCUMENT/) {
 		if ($indoc != 0) {
@@ -59,6 +62,8 @@ while ($line = <$in>) {
 		$gotinclude++;
 	} elsif ($line =~ m/^[^#]*['"]PGcourse.pl['"]/) {
 		$gotPGcourse++;
+	} elsif ($line =~ m/^[ \t]*#+[ \t]*RESOURCES/) {
+		$resources = $line;
 	} elsif ($line =~ m/^[ \t]*#+[ \t]*DBsubject\( *'*ZZZ/ or
 		 $line =~ m/^[ \t]*#+[ \t]*DBchapter\( *'*ZZZ/ or
 		 $line =~ m/^[ \t]*#+[ \t]*DBsection\( *'*ZZZ/) {
@@ -90,6 +95,8 @@ while ($line = <$in>) {
 			$result++;
 		}
 		$gotDBsec++;
+	} elsif ($line =~ m/^[^#]*image[ \t]*\([ \t]*['"]([^'"]*)['"]/) {
+		push(@images,$1);
 	}
 }
 
@@ -146,6 +153,15 @@ if ($gotDBch < 1) {
 if ($gotDBsec < 1) {
 	print(STDERR "$ARGV[0] ... No DBsection\n");
 	$result++;
+}
+
+foreach (@images) {
+	$image = $_;
+	if (index($resources, "'$image'") == -1 and
+	    index($resources, '"$image"') == -1) {
+		print(STDERR "$ARGV[0] ... $image not found in RESOURCES (or no RESOURCES)\n");
+		$result++;
+	}
 }
 
 if ($result > 0) {
