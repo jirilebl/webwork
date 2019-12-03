@@ -1,0 +1,175 @@
+##DESCRIPTION
+##  FIXME 
+##ENDDESCRIPTION
+
+
+## DBsubject()
+## DBchapter()
+## DBsection()
+## Date()
+## Institution()
+## Author(Jiri Lebl)
+## Level()
+## TitleText1('')
+## AuthorText1('')
+## EditionText1('')
+## Section1('')
+## Problem1('')
+## KEYWORDS()
+
+########################################################################
+
+###########################
+##  Initialization
+
+DOCUMENT();
+
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"AnswerFormatHelp.pl",
+"parserFunction.pl",
+);
+
+TEXT(beginproblem());
+
+
+###########################
+#  Setup
+
+Context("Numeric");
+
+
+$a = random(2,9,1);
+#$asq=$a*$a;
+do { $b = random(2,9,1); } until ($b != $a);
+do { $c = random(2,9,1); } until (($c != $a) and ($c != $b));
+#do { $d = random(2,9,1); } until (($d != $a) and ($d != $b) and ($d != $c));
+
+#Context()->variables->add(x => "Real");
+#Context()->variables->add(y => "Real");
+#Context()->variables->add(z => "Real");
+#Context()->variables->add(dx => "Real");
+#Context()->variables->add(dy => "Real");
+#Context()->variables->add(dz => "Real");
+#Context()->variables->add(t => ["Real", limits=>[0.1,4]]);
+#Context()->variables->add(u => ["Real"]);
+#Context()->variables->add(n => ['Real', limits=>[1,20], resolution=>1]);
+#Context()->variables->add(xi => ["Real", TeX=>"\xi"]);
+#Context()->variables->add(s => ["Real"]);
+#Context()->variables->add(eta => ["Real", TeX=>"\eta"]);
+#Context()->variables->add(uxi => ["Real", TeX=>"u_\xi"]);
+#Context()->variables->add(ueta => ["Real", TeX=>"u_\eta"]);
+#
+# This should be good enough for testing if the formula is correct
+#parserFunction("A(xi)" => "exp(xi)");
+#parserFunction("B(eta)" => "exp(-1.337*eta)");
+
+Context()->flags->set(
+     reduceConstants => 0,
+     reduceConstantFunctions => 0,
+);
+
+$answer1 = Formula("$a/3");
+$answer2 = Formula("-(4*$a+$b)/12");
+$answer3 = Formula("($a+24*$b)/24");
+
+############################
+##  Main text
+#
+
+Context()->texStrings;
+BEGIN_TEXT
+Compute the following integrals
+$PAR
+a) \(\displaystyle
+\int_C $a x^2 z \, dx + $b e^z \,dy + $c \cos(xyz) \, dz
+\)
+=
+\{ ans_rule(20) \}
+$BR
+where \(C\) is the straight line from the point \((0,3,1)\) to the point \((1,3,1)\).
+$PAR
+b) \(\displaystyle
+\int_S $a xy \, dy \wedge dz + $b y z \,dx \wedge dy
+\)
+=
+\{ ans_rule(20) \}
+$BR
+where \(S\) is the surface given by \(z=x^2-y^2\), \( 0 \leq x \leq 1 \), \( 0 \leq y \leq 1\),
+oriented in the standard way,
+that is with the unit normal going upwards. 
+$PAR
+c) \(\displaystyle
+\int_R ($a xy^2 z^3 + $b) \, dx \wedge dy \wedge dz
+\)
+=
+\{ ans_rule(20) \}
+$BR
+where \(R\) is the region \( 0 \leq x \leq 1 \), \( 0 \leq y \leq 1\), \( 0 \leq z \leq 1 \).
+$PAR
+\{ AnswerFormatHelp("formulas") \}
+END_TEXT
+Context()->normalStrings;
+
+
+#############################
+##  Answer evaluation
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $answer1->cmp() );
+ANS( $answer2->cmp() );
+ANS( $answer3->cmp() );
+
+
+#####################
+# Solution
+
+Context()->texStrings;
+BEGIN_SOLUTION
+${PAR}SOLUTION:$PAR
+$BR
+a) \( 
+\displaystyle
+\int_C $a x^2 z \, dx + $b e^z \,dy + $c \cos(xyz) \, dz
+=
+\int_0^1 $a x^2 (1) \, dx =
+$answer1 \)
+$PAR
+b) \( 
+\displaystyle
+\int_S $a xy \, dy \wedge dz + $b y z \,dx \wedge dy
+=
+\int_0^1 \int_0^1
+\left(
+$a xy \, \frac{\partial (y,z)}{\partial (x,y)} +
+$b y z \,
+ \frac{\partial (x,y)}{\partial (x,y)} +
+\right)
+\, dx \, dy
+=
+\int_0^1 \int_0^1
+\left(
+$a xy (-2x) +
+$b y (x^2-y^2) \, (1)
+\right)
+\, dx \, dy
+=
+$answer2 \)
+$PAR
+c) \( 
+\displaystyle
+\int_R $a xy^2 z^3 \, dx \wedge dy \wedge dz
+=
+\int_0^1 \int_0^1 \int_0^1
+( $a xy^2 z^3 + $b) \,
+dx \, dy \, dz
+=
+$answer3 \)
+END_SOLUTION
+Context()->normalStrings;
+
+;
+
+ENDDOCUMENT();
