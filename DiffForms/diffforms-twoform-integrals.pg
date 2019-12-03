@@ -25,10 +25,11 @@
 DOCUMENT();
 
 loadMacros(
-"PGstandard.pl",
-"MathObjects.pl",
-"AnswerFormatHelp.pl",
-"parserFunction.pl",
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "AnswerFormatHelp.pl",
+  #"parserFunction.pl",
+  "PGcourse.pl",
 );
 
 TEXT(beginproblem());
@@ -41,14 +42,13 @@ Context("Numeric");
 
 
 $a = random(2,9,1);
-#$asq=$a*$a;
 do { $b = random(2,9,1); } until ($b != $a);
-#do { $c = random(2,9,1); } until (($c != $a) and ($c != $b));
-#do { $d = random(2,9,1); } until (($d != $a) and ($d != $b) and ($d != $c));
+do { $c = random(2,9,1); } until (($c != $a) and ($c != $b));
+do { $d = random(2,9,1); } until (($d != $a) and ($d != $b) and ($d != $c));
 
 #Context()->variables->add(x => "Real");
-Context()->variables->add(y => "Real");
-Context()->variables->add(z => "Real");
+#Context()->variables->add(y => "Real");
+#Context()->variables->add(z => "Real");
 #Context()->variables->add(dx => "Real");
 #Context()->variables->add(dy => "Real");
 #Context()->variables->add(dz => "Real");
@@ -70,18 +70,8 @@ Context()->flags->set(
      reduceConstantFunctions => 0,
 );
 
-#First form
-$answer1 = Formula("0");
-$answer2 = Formula("-$b y");
-$answer3 = Formula("$a x^2");
-
-#Second form
-$answer4 = Formula("$b e^(xy)");
-$answer5 = Formula("-$a e^z");
-$answer6 = Formula("0");
-
-#Third form (3-form)
-$answer7 = Formula("$a sin(x)");
+$answer1 = Compute("-(4*$a+$b)/12")->reduce;
+$answer2 = Compute("-((10*$c-9*$b)*$d+14*$c+4*$b-6*$a)/12")->reduce;
 
 ############################
 ##  Main text
@@ -89,23 +79,35 @@ $answer7 = Formula("$a sin(x)");
 
 Context()->texStrings;
 BEGIN_TEXT
-Write the following the the standard form
+Compute the following integrals
 $PAR
-a) \( $a x^2 \, dx \wedge dy + $b y \, dx \wedge dz
-= {} \)
-\{ ans_rule(20) \} \( dy \wedge dz + {} \)
-\{ ans_rule(20) \} \( dz \wedge dx + {} \)
-\{ ans_rule(20) \} \( dx \wedge dy \)
+\(\displaystyle
+\int_S $a xy \, dy \wedge dz + $b y z \,dx \wedge dy
+= {}
+\)
+\{ ans_rule(30) \}
+\{ AnswerFormatHelp("numbers") \}
+$BRBR
+where \(S\) is the surface given by \(z=x^2-y^2\), \( 0 \leq x \leq 1 \), \( 0 \leq y \leq 1\),
+oriented in the standard way,
+that is with the unit normal going upwards. 
 $PAR
-b) \( ( $a e^z \, dx + $b e^{xy} dy ) \wedge dz = {} \)
-\{ ans_rule(20) \} \( dy \wedge dz + {} \)
-\{ ans_rule(20) \} \( dz \wedge dx + {} \)
-\{ ans_rule(20) \} \( dx \wedge dy \)
-$PAR
-c) \( dy \wedge \bigl( $a \sin(x) \, dz \wedge dx + $b y^2 dx \wedge dy \bigr) = {} \)
-\{ ans_rule(20) \} \( dx \wedge dy \wedge dz  \)
-$PAR
-\{ AnswerFormatHelp("formulas") \}
+\(\displaystyle
+\int_T
+$a z \, dy \wedge dz +
+$b y \, dz \wedge dx +
+$c x \,dx \wedge dy
+= {}
+\)
+\{ ans_rule(30) \}
+\{ AnswerFormatHelp("numbers") \}
+$BRBR
+where \(T\) is the surface parametrized by \(u,v\) as
+\( x = u+v^2 \),
+\( y = u^2-$d v \),
+\( z = v^3 \),
+where \( 0 \leq u \leq 1 , \)  and
+\( 0 \leq v \leq 1 .\)
 END_TEXT
 Context()->normalStrings;
 
@@ -117,11 +119,6 @@ $showPartialCorrectAnswers = 1;
 
 ANS( $answer1->cmp() );
 ANS( $answer2->cmp() );
-ANS( $answer3->cmp() );
-ANS( $answer4->cmp() );
-ANS( $answer5->cmp() );
-ANS( $answer6->cmp() );
-ANS( $answer7->cmp() );
 
 
 #####################
@@ -129,16 +126,42 @@ ANS( $answer7->cmp() );
 
 Context()->texStrings;
 BEGIN_SOLUTION
-${PAR}SOLUTION:$PAR
-$BR
-a) \( $answer1 \, dy \wedge dz + $answer2 \, dz \wedge dx + $answer3 \, dx \wedge dy \)
+\( 
+\displaystyle
+\int_S $a xy \, dy \wedge dz + $b y z \,dx \wedge dy
+=
+\int_0^1 \int_0^1
+\left(
+$a xy \, \frac{\partial (y,z)}{\partial (x,y)} +
+$b y z \,
+ \frac{\partial (x,y)}{\partial (x,y)} +
+\right)
+\, dx \, dy
+=
+\int_0^1 \int_0^1
+\left(
+$a xy (-2x) +
+$b y (x^2-y^2) \, (1)
+\right)
+\, dx \, dy
+=
+$answer1 \)
 $PAR
-b) \( $answer4 \, dy \wedge dz + $answer5 \, dz \wedge dx + $answer6 \, dx \wedge dy \)
-$PAR
-c) \( $answer7 \, dx \wedge dy \wedge dz \)
+\( 
+\displaystyle
+\int_T
+$a z \, dy \wedge dz +
+$b y \, dz \wedge dx +
+$c x \,dx \wedge dy
+=
+\int_0^1 \int_0^1
+\bigl(
+$a (v^3) ((2u)(3v^2)-0)+$b(u^2-$d v)(0-3(v^2))+$c(u+v^2)(-$d-(2v)(2u))
+\bigr)
+\, du \, dv
+=
+$answer2 \)
 END_SOLUTION
 Context()->normalStrings;
-
-;
 
 ENDDOCUMENT();
