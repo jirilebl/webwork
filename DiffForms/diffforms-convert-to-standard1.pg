@@ -1,26 +1,19 @@
 ##DESCRIPTION
-##  FIXME 
+##  Convert differential forms to standard form
 ##ENDDESCRIPTION
 
-
-## DBsubject()
-## DBchapter()
+## DBsubject('Calculus - multivariable')
+## DBchapter('Differential forms')
 ## DBsection()
-## Date()
-## Institution()
+## Institution(Oklahoma State University)
 ## Author(Jiri Lebl)
-## Level()
-## TitleText1('')
-## AuthorText1('')
-## EditionText1('')
-## Section1('')
-## Problem1('')
-## KEYWORDS()
+## Level(3)
+## KEYWORDS('Differential forms')
 
 ########################################################################
 
 ###########################
-##  Initialization
+# Initialization
 
 DOCUMENT();
 
@@ -36,34 +29,15 @@ TEXT(beginproblem());
 
 
 ###########################
-#  Setup
+# Setup
 
 Context("Numeric");
 
-
 $a = random(2,9,1);
 do { $b = random(2,9,1); } until ($b != $a);
-#do { $c = random(2,9,1); } until (($c != $a) and ($c != $b));
-#do { $d = random(2,9,1); } until (($d != $a) and ($d != $b) and ($d != $c));
 
-#Context()->variables->add(x => "Real");
 Context()->variables->add(y => "Real");
 Context()->variables->add(z => "Real");
-#Context()->variables->add(dx => "Real");
-#Context()->variables->add(dy => "Real");
-#Context()->variables->add(dz => "Real");
-#Context()->variables->add(t => ["Real", limits=>[0.1,4]]);
-#Context()->variables->add(u => ["Real"]);
-#Context()->variables->add(n => ['Real', limits=>[1,20], resolution=>1]);
-#Context()->variables->add(xi => ["Real", TeX=>"\xi"]);
-#Context()->variables->add(s => ["Real"]);
-#Context()->variables->add(eta => ["Real", TeX=>"\eta"]);
-#Context()->variables->add(uxi => ["Real", TeX=>"u_\xi"]);
-#Context()->variables->add(ueta => ["Real", TeX=>"u_\eta"]);
-#
-# This should be good enough for testing if the formula is correct
-#parserFunction("A(xi)" => "exp(xi)");
-#parserFunction("B(eta)" => "exp(-1.337*eta)");
 
 Context()->flags->set(
      reduceConstants => 0,
@@ -84,8 +58,7 @@ $answer6 = Formula("0");
 $answer7 = Formula("$a sin(x)");
 
 ############################
-##  Main text
-#
+# Main text
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -109,9 +82,8 @@ $PAR
 END_TEXT
 Context()->normalStrings;
 
-
 #############################
-##  Answer evaluation
+# Answer evaluation
 
 $showPartialCorrectAnswers = 1;
 
@@ -123,8 +95,7 @@ ANS( $answer5->cmp() );
 ANS( $answer6->cmp() );
 ANS( $answer7->cmp() );
 
-
-#####################
+############################
 # Solution
 
 Context()->texStrings;

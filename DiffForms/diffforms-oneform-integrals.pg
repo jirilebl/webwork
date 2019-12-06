@@ -1,26 +1,19 @@
 ##DESCRIPTION
-##  FIXME 
+##  Compute line integrals of one-forms
 ##ENDDESCRIPTION
 
-
-## DBsubject()
-## DBchapter()
+## DBsubject('Calculus - multivariable')
+## DBchapter('Differential forms')
 ## DBsection()
-## Date()
-## Institution()
+## Institution(Oklahoma State University)
 ## Author(Jiri Lebl)
-## Level()
-## TitleText1('')
-## AuthorText1('')
-## EditionText1('')
-## Section1('')
-## Problem1('')
-## KEYWORDS()
+## Level(4)
+## KEYWORDS('Differential forms', 'line integral', 'one-form')
 
 ########################################################################
 
 ###########################
-##  Initialization
+# Initialization
 
 DOCUMENT();
 
@@ -28,43 +21,20 @@ loadMacros(
   "PGstandard.pl",
   "MathObjects.pl",
   "AnswerFormatHelp.pl",
-  #"parserFunction.pl",
   "PGcourse.pl",
 );
 
 TEXT(beginproblem());
 
-
 ###########################
-#  Setup
+# Setup
 
 Context("Numeric");
 
-
 $a = random(2,9,1);
-#$asq=$a*$a;
 do { $b = random(2,9,1); } until ($b != $a);
 do { $c = random(2,9,1); } until (($c != $a) and ($c != $b));
 do { $d = random(2,9,1); } until (($d != $a) and ($d != $b) and ($d != $c));
-
-#Context()->variables->add(x => "Real");
-#Context()->variables->add(y => "Real");
-#Context()->variables->add(z => "Real");
-#Context()->variables->add(dx => "Real");
-#Context()->variables->add(dy => "Real");
-#Context()->variables->add(dz => "Real");
-#Context()->variables->add(t => ["Real", limits=>[0.1,4]]);
-#Context()->variables->add(u => ["Real"]);
-#Context()->variables->add(n => ['Real', limits=>[1,20], resolution=>1]);
-#Context()->variables->add(xi => ["Real", TeX=>"\xi"]);
-#Context()->variables->add(s => ["Real"]);
-#Context()->variables->add(eta => ["Real", TeX=>"\eta"]);
-#Context()->variables->add(uxi => ["Real", TeX=>"u_\xi"]);
-#Context()->variables->add(ueta => ["Real", TeX=>"u_\eta"]);
-#
-# This should be good enough for testing if the formula is correct
-#parserFunction("A(xi)" => "exp(xi)");
-#parserFunction("B(eta)" => "exp(-1.337*eta)");
 
 Context()->flags->set(
      reduceConstants => 0,
@@ -76,8 +46,7 @@ $answer2 = Compute("(2*$b*$c^2+$a^2*$c)/3")->reduce;
 $answer3 = Compute("(($a*$c+8*$b+2*$a)*$d)/(4*$c+8)")->reduce;
 
 ############################
-##  Main text
-#
+# Main text
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -114,7 +83,7 @@ Context()->normalStrings;
 
 
 #############################
-##  Answer evaluation
+# Answer evaluation
 
 $showPartialCorrectAnswers = 1;
 
@@ -122,8 +91,7 @@ ANS( $answer1->cmp() );
 ANS( $answer2->cmp() );
 ANS( $answer3->cmp() );
 
-
-#####################
+#############################
 # Solution
 
 Context()->texStrings;
