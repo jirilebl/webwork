@@ -1,6 +1,6 @@
 # Webwork problems
 
-These are problems that for whatever reason I am not pushing into the OPL Contrib directory
+These are problems that for whatever reason I am not pushing into the OPL Contrib directory, templates for my own use (though of course feel free to use them), and a few scripts for working with webwork.
 
 There are no guarantees here
 
