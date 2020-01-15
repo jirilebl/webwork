@@ -1,0 +1,63 @@
+# Template for checkboxes (all that apply) 
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "PGchoicemacros.pl",
+  "PGcourse.pl"
+);
+
+TEXT(beginproblem());
+
+##############################################################
+#  Setup
+
+$mc = new_checkbox_multiple_choice();
+$mc -> qa (
+  "Check all that apply.", 
+  "ODE",
+  "linear",
+  "constant coefficients"
+);
+$mc -> extra(
+  "system",
+  "homogeneous",
+  "autonomous",
+  "PDE"
+);
+
+
+##############################################################
+#  Text
+
+BEGIN_TEXT
+Consider
+\[
+\frac{dy}{dx}=y+e^x .
+\]
+\{ $mc -> print_q() \}
+$BR
+\{ $mc -> print_a() \}
+END_TEXT
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
+
+ANS( checkbox_cmp( $mc->correct_ans() ) );
+
+##############################################################
+
+#BEGIN_SOLUTION
+#Solution here
+#END_SOLUTION
+
+##############################################################
+
+ENDDOCUMENT();
+
