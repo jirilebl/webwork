@@ -6,37 +6,23 @@ DOCUMENT();
 
 loadMacros(
   "PGstandard.pl",
-  "PGchoicemacros.pl",
+  "MathObjects.pl",
+  "parserRadioButtons.pl",
   "PGcourse.pl"
 );
-
-TEXT(beginproblem());
 
 ##############################################################
 #  Setup
 
-$mc = new_checkbox_multiple_choice();
-$mc -> qa (
-  "Check all that apply.", 
-  "ODE",
-  "linear",
-  "constant coefficients"
-);
-$mc -> extra(
-  "system",
-  "homogeneous",
-  "autonomous",
-  "PDE"
-);
-#If a certain order is wanted, do not use "extra" but this
-#and order all of them here
-#$mc -> makeLast( 
-#"foo1",
-#"foo2",
-#"leprechaun", 
-#); 
+TEXT(beginproblem());
 
+Context("Numeric");
 
+$radio = RadioButtons(
+  ["Red","Blue","Green","None of these"],
+  "Blue", # correct answer
+  last => ["None of these"], # can be a list
+);
 
 ##############################################################
 #  Text
@@ -46,9 +32,10 @@ Consider
 \[
 \frac{dy}{dx}=y+e^x .
 \]
-\{ $mc -> print_q() \}
+
+The equation is:
 $BR
-\{ $mc -> print_a() \}
+\{ $radio->buttons() \}
 END_TEXT
 
 ##############################################################
@@ -57,7 +44,7 @@ END_TEXT
 install_problem_grader(~~&std_problem_grader);
 $showPartialCorrectAnswers = 0;
 
-ANS( checkbox_cmp( $mc->correct_ans() ) );
+ANS( $radio->cmp() );
 
 ##############################################################
 
