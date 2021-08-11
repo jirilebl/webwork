@@ -1,0 +1,104 @@
+# Template for five true/false
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl"
+);
+
+##############################################################
+#  Setup
+
+TEXT(beginproblem());
+
+Context("Numeric");
+
+$q1 = "First statement.";
+$radio1 = RadioButtons(
+  ["True","False"],
+  "True"
+);
+
+$q2 = "Second statement.";
+$radio2 = RadioButtons(
+  ["True","False"],
+  "True"
+);
+
+$q3 = "Third statement.";
+$radio3 = RadioButtons(
+  ["True","False"],
+  "True"
+);
+
+$q4 = "Fourth statement.";
+$radio4 = RadioButtons(
+  ["True","False"],
+  "True"
+);
+
+$q5 = "Fifth statement.";
+$radio5 = RadioButtons(
+  ["True","False"],
+  "True"
+);
+
+##############################################################
+#  Text
+
+BEGIN_TEXT
+Mark the following statements as true or false.
+
+$PAR
+
+\{ $q1 \}
+$BR
+\{ $radio1->buttons() \}
+
+$PAR
+
+\{ $q2 \}
+$BR
+\{ $radio2->buttons() \}
+
+$PAR
+
+\{ $q3 \}
+$BR
+\{ $radio3->buttons() \}
+
+$PAR
+
+\{ $q4 \}
+$BR
+\{ $radio4->buttons() \}
+
+$PAR
+
+\{ $q5 \}
+$BR
+\{ $radio5->buttons() \}
+
+END_TEXT
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
+
+ANS( $radio1->cmp() );
+ANS( $radio2->cmp() );
+ANS( $radio3->cmp() );
+ANS( $radio4->cmp() );
+ANS( $radio5->cmp() );
+
+##############################################################
+
+ENDDOCUMENT();
+
