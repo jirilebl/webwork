@@ -1,4 +1,4 @@
-# Template for radiobox (one option)
+# Template for radiobox (choose exactly one option, randomized or not)
 
 ########################################################################
 
@@ -18,15 +18,17 @@ TEXT(beginproblem());
 
 Context("Numeric");
 
+# Remove the inner brackets around red/blue/green to avoid
+# randomizing options
 $radio = RadioButtons(
-  ["Red","Blue","Green","None of these"],
+  [["Red","Blue","Green"],"None of these"],
   "Blue", # correct answer
-  last => ["None of these"], # can be a list
 );
 
 ##############################################################
 #  Text
 
+Context()->texStrings;
 BEGIN_TEXT
 Consider
 \[
@@ -37,6 +39,7 @@ The equation is:
 $BR
 \{ $radio->buttons() \}
 END_TEXT
+Context()->normalStrings;
 
 ##############################################################
 #  Answers

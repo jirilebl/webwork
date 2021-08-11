@@ -44,8 +44,8 @@ BEGIN_TEXT
 Prove foo.
 
 $PAR
-(Drag \{ $TheProof->numNeeded \} statements from the left column
-to the right, putting them in the correct order.)
+$BITALIC (Drag \{ $TheProof->numNeeded \} statements from the left column
+to the right, putting them in the correct order.) $EITALIC
 
 \{ $TheProof->Print \}
 END_TEXT

@@ -1,0 +1,56 @@
+This is an example story proof thingie
+with interspersed questions.  Here's some math \(\int_0^1 f(x)\,dx .\)
+
+That was a paragraph break
+
+%PROOF
+First statement
+Second statement
+Third statement
+%EXTRA
+Extra wrong statement
+Another Extra wrong statement
+%END
+
+There are also radio buttons with only a linebreak;
+%BR
+%RADIO
+Wrong 1 (some math \(x^2\))
+Wrong 2
+%CORRECT Correct
+Wrong 3
+%END
+
+And another radio thing
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+Here are radio buttons randomized except for the last option which always comes last.  And there's a whole paragraph break
+
+%RADIO
+%BEGINRANDOM
+%CORRECT Choice A
+Choice B
+Choice C
+%ENDRANDOM
+None of these
+%END
+
+We can also have another proof surely, maybe without any wrong statements
+
+%PROOF
+Statement \(x \not= y\)
+Another Statement
+%END
+
+And we can avoid the hint on the number of correct statements
+
+%PROOFNOHINT
+Statement \(x \not= y\)
+Another Statement
+%EXTRA
+Wrong statement
+%END
