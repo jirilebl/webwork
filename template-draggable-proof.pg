@@ -1,5 +1,7 @@
-# Note: These so far still require manual installation of "draggableProof.pl" into
-# the course
+# Draggable proof (construct proof from possible statements)
+#
+# Note: So far this still requires manual installation of "draggableProof.pl"
+# into the course
 
 ###########################
 # Initialization
