@@ -41,8 +41,11 @@ TargetLabel =>  "The proof",
 
 Context()->texStrings;
 BEGIN_TEXT
-Prove blahblahblah by dragging \{ $TheProof->numNeeded \} statements from the left column to the right and putting
-them in the correct order.
+Prove foo.
+
+$PAR
+(Drag \{ $TheProof->numNeeded \} statements from the left column
+to the right, putting them in the correct order.)
 
 \{ $TheProof->Print \}
 END_TEXT
