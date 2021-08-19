@@ -1,0 +1,15 @@
+Prove that if \(t > 0,\) then there exists an \(n \in {\mathbb{N}}\) such that
+\(\frac{1}{n^2} < t\).
+
+%PROOF
+Suppose \(t > 0\) is given.
+By the Archimedean property, there exists an \(n \in {\mathbb{N}}\) such that \(n > t.\)
+As \(n \geq 1,\) we have \(n^2 \geq n.\)
+Hence, \(t < n \leq n^2.\)
+And so \(\frac{1}{n^2} < t .\)
+%EXTRA
+Suppose \(n > 0\) is given.
+As \(n \geq 1,\) we have \(n^2 \leq n.\)
+Hence, \(t \geq n^2.\)
+By density of \({\mathbb{Q}}\) we have an \(n\) such that \(0 < \frac{1}{n} < t.\)
+%END

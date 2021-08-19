@@ -1,0 +1,69 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Prove that if \(t > 0,\) then there exists an \(n \in {\mathbb{N}}\) such that
+\(\frac{1}{n^2} < t\).
+
+$PAR
+
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Suppose \(t > 0\) is given.",
+"By the Archimedean property, there exists an \(n \in {\mathbb{N}}\) such that \(n > t.\)",
+"As \(n \geq 1,\) we have \(n^2 \geq n.\)",
+"Hence, \(t < n \leq n^2.\)",
+"And so \(\frac{1}{n^2} < t .\)",
+],
+[
+"Suppose \(n > 0\) is given.",
+"As \(n \geq 1,\) we have \(n^2 \leq n.\)",
+"Hence, \(t \geq n^2.\)",
+"By density of \({\mathbb{Q}}\) we have an \(n\) such that \(0 < \frac{1}{n} < t.\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag \{ $q1->numNeeded \} statements from the left column
+to the right, putting them in the correct order.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+ANS($q1->cmp());
+
+ENDDOCUMENT();
