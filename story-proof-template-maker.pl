@@ -39,10 +39,10 @@ EOF
 while ($line = <$in>) {
 	chomp($line);
 	if ($line =~ m/^%PROOF/) {
-		if ($line =~ m/^%PROOFNOHINT/) {
-			$hint = 0;
-		} else {
+		if ($line =~ m/^%PROOFHINT/) {
 			$hint = 1;
+		} else {
+			$hint = 0;
 		}
 		$qnum++;
 		print << "EOF";

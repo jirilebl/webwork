@@ -46,9 +46,9 @@ Statement \(x \not= y\)
 Another Statement
 %END
 
-And we can avoid the hint on the number of correct statements
+And we can add a hint on the number of correct statements
 
-%PROOFNOHINT
+%PROOFHINT
 Statement \(x \not= y\)
 Another Statement
 %EXTRA
