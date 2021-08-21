@@ -8,44 +8,26 @@ open(my $in, '<', $ARGV[0]) or die $!;
 
 $qnum = 0;
 
-print << 'EOF';
-DOCUMENT();
+$partialanswers = 1;
 
-loadMacros(
- "PGstandard.pl",
- "MathObjects.pl",
- "AnswerFormatHelp.pl",
- "draggableProof.pl",
- "parserRadioButtons.pl",
- "PGcourse.pl",
-);
+$haveproofs = 0;
+$haveradios = 0;
 
-TEXT(beginproblem());
-
-###########################
-# Setup
-
-$showPartialCorrectAnswers = 1;
-
-Context("Numeric");
-
-############################
-# Main text
-
-Context()->texStrings;
-BEGIN_TEXT
-EOF
+$out = "";
 
 while ($line = <$in>) {
 	chomp($line);
-	if ($line =~ m/^%PROOF/) {
+	if ($line =~ m/^%NOPARTIALANSWERS/) {
+		$partialanswers = 0;
+	} elsif ($line =~ m/^%PROOF/) {
+		$haveproofs = 1;
 		if ($line =~ m/^%PROOFHINT/) {
 			$hint = 1;
 		} else {
 			$hint = 0;
 		}
 		$qnum++;
-		print << "EOF";
+		$out .= << "EOF";
 END_TEXT
 Context()->normalStrings;
 
@@ -56,12 +38,12 @@ EOF
 			chomp($line);
 			if ($line =~ m/^%EXTRA/) {
 				$gotextra = 1;
-				print("],\n[\n");
+				$out .= "],\n[\n";
 			} elsif ($line =~ m/^%END/) {
 				if ($gotextra == 0) {
-					print("],\n[");
+					$out .= "],\n[";
 				}
-				print << "EOF";
+				$out .= << "EOF";
 ],
 
 SourceLabel => \"Choose from these statements\",
@@ -73,30 +55,31 @@ BEGIN_TEXT
 
 EOF
 				if ($hint) {
-					print << "EOF";
+					$out .= << "EOF";
 \$BITALIC (Drag \\{ \$q$qnum->numNeeded \\} statements from the left column
 to the right, putting them in the correct order.) \$EITALIC
 EOF
 				} else {
-					print << "EOF";
+					$out .= << "EOF";
 \$BITALIC (Drag the statements from the left column
 to the right, putting them in the correct order.  There could be extras.) \$EITALIC
 EOF
 				}
-				print << "EOF";
+				$out .= << "EOF";
 
 \\{ \$q$qnum\->Print \\}
 
 EOF
 				last;
 			} else {
-				print("\"$line\",\n");
+				$out .= "\"$line\",\n";
 			}
 		}
 	} elsif ($line =~ m/^%RADIO/) {
 		$qnum++;
+		$haveradios = 1;
 		$correct = "";
-		print << "EOF";
+		$out .= << "EOF";
 END_TEXT
 Context()->normalStrings;
 
@@ -105,14 +88,14 @@ EOF
 		while ($line = <$in>) {
 			chomp($line);
 			if ($line =~ s/^%CORRECT *//) {
-				print("\"$line\",\n");
+				$out .= "\"$line\",\n";
 				$correct = $line;
 			} elsif ($line =~ m/^%BEGINRANDOM/) {
-				print("[\n");
+				$out .= "[\n";
 			} elsif ($line =~ m/^%ENDRANDOM/) {
-				print("],\n");
+				$out .= "],\n";
 			} elsif ($line =~ m/^%END/) {
-				print << "EOF";
+				$out .= << "EOF";
 ],
 \"$correct\",
 );
@@ -123,18 +106,60 @@ BEGIN_TEXT
 EOF
 				last;
 			} else {
-				print("\"$line\",\n");
+				$out .= "\"$line\",\n";
 			}
 		}
 	} elsif ($line eq "%BR") {
-		print("\$BR\n");
+		$out .= "\$BR\n";
 	} elsif ($line eq "") {
-		print("\n\$PAR\n\n");
+		$out .= "\n\$PAR\n\n";
 	} else {
-		print("$line\n");
+		$out .= "$line\n";
 	}
 }
 
+
+# Print header
+print << "EOF";
+DOCUMENT();
+
+loadMacros(
+ \"PGstandard.pl\",
+ \"MathObjects.pl\",
+ \"AnswerFormatHelp.pl\",
+EOF
+
+if ($haveproofs) {
+	 print " \"draggableProof.pl\",\n";
+}
+if ($haveradios) {
+	 print " \"parserRadioButtons.pl\",\n";
+}
+
+print << "EOF";
+ \"PGcourse.pl\",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+\$showPartialCorrectAnswers = $partialanswers;
+
+Context(\"Numeric\");
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+EOF
+
+# print the collected stuff
+print $out;
+
+#print "footer"
 print << 'EOF';
 
 END_TEXT

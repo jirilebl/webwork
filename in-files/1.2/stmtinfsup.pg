@@ -1,0 +1,108 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Let \(A \subset \mathbb{R}\) is a set such that \(x < 1 \) for all \(x \in A.\)
+What is the only definitely correct statement?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+[
+"\(\sup \, A \leq 1 .\)",
+"\(\sup \, A < 1 .\)",
+"\(\sup \, A \geq 1 .\)",
+"\(\sup \, A > 1 .\)",
+],
+"None of these.",
+],
+"\(\sup \, A \leq 1 .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+
+$PAR
+
+Let \(A,B \subset \mathbb{R}\) be nonempty bounded sets such that
+\( \inf \, B \in A.\)
+What is the only definitely correct statement?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+[
+"\(\sup \, A \leq \inf \, B .\)",
+"\(\sup \, A < \inf \, B .\)",
+"\(\inf \, A < \inf \, B .\)",
+"\(\inf \, A \leq \inf \, B .\)",
+"\(\sup \, A > \inf \, B .\)",
+],
+"None of these.",
+],
+"\(\inf \, A \leq \inf \, B .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+
+$PAR
+
+Let \(A \subset \mathbb{R}\) be a nonempty bounded set and
+\(1 \notin A.\)
+What is the only definitely correct statement?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+[
+"\(\sup \, A \leq 1 .\)",
+"\(\sup \, A \geq 1 .\)",
+"\(\inf \, A \leq 1 .\)",
+"\(\inf \, A < \sup A .\)",
+],
+"None of these.",
+],
+"None of these.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+
+ENDDOCUMENT();

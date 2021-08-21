@@ -22,8 +22,10 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
-Prove that if \(t > 0,\) then there exists an \(n \in {\mathbb{N}}\) such that
-\(\frac{1}{n^2} < t\).
+Prove Proposition 1.2.8:
+If \(S \subset \mathbb{R}\) is nonempty and bounded above,
+then for every \(\epsilon > 0\) there exists an \(x \in S\) such
+that \((\sup\, S) - \epsilon < x \leq \sup\, S.\)
 
 $PAR
 
@@ -31,17 +33,17 @@ END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Suppose \(t > 0\) is given.",
-"By the Archimedean property, there exists an \(n \in {\mathbb{N}}\) such that \(n > t.\)",
-"As \(n \geq 1,\) we have \(n^2 \geq n.\)",
-"Hence, \(t < n \leq n^2.\)",
-"And so \(\frac{1}{n^2} < t .\)",
+"Let \(\epsilon > 0\) be given and let \(y\) be an upper bound for \(S\).",
+"If \(x \leq y-\epsilon\) for all \(x \in S,\) then",
+"\(y\) is not the least upper bound.",
+"Hence, if \(y=\sup\,S\) there must be an \(x \in S\) such that \(x > y -\epsilon.\)",
+"As \(\sup \, S\) is an upper bound, we also have \(x \leq \sup \, S.\)",
 ],
 [
-"Suppose \(n > 0\) is given.",
-"As \(n \geq 1,\) we have \(n^2 \leq n.\)",
-"Hence, \(t \geq n^2.\)",
-"By density of \({\mathbb{Q}}\) we have an \(n\) such that \(0 < \frac{1}{n} < t.\)",
+"Let \(y=\inf \,S.\)",
+"Set \(\epsilon = 1.\)",
+"Take \(x = (\sup \, S)-1.\)",
+"As \(y < \sup \, S\), we have \( x > y .\)",
 ],
 
 SourceLabel => "Choose from these statements",
