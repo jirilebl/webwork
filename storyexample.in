@@ -2,7 +2,8 @@ This is an example story proof thingie
 with interspersed questions.  Here's some math \(\int_0^1 f(x)\,dx .\)
 
 That was a paragraph break (leave empty line).  The rest of the syntax is
-like regular WeBWorK syntax (i.e. not PGML).
+like regular WeBWorK syntax (i.e. not PGML).  Normal text just gets
+copied verbatim into the problem file.
 
 If you want to avoid giving hints after submit about which parts were correct,
 put %NOPARTIALANSWERS at the beginning of a line (presumably first line is
