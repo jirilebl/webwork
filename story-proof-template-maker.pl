@@ -9,6 +9,7 @@ open(my $in, '<', $ARGV[0]) or die $!;
 $qnum = 0;
 
 $partialanswers = 1;
+$nopartialcredit = 0;
 
 $haveproofs = 0;
 $haveradios = 0;
@@ -19,6 +20,8 @@ while ($line = <$in>) {
 	chomp($line);
 	if ($line =~ m/^%NOPARTIALANSWERS/) {
 		$partialanswers = 0;
+	} elsif ($line =~ m/^%NOPARTIALCREDIT/) {
+		$nopartialcredit = 1;
 	} elsif ($line =~ m/^%PROOF/) {
 		$haveproofs = 1;
 		if ($line =~ m/^%PROOFHINT/) {
@@ -169,6 +172,10 @@ Context()->normalStrings;
 #  Answers
 
 EOF
+
+if ($nopartialcredit) {
+	print("install_problem_grader(~~&std_problem_grader);\n\n");
+}
 
 for (my $i=1; $i <= $qnum; $i++) {
 	print("ANS(\$q$i\->cmp());\n");
