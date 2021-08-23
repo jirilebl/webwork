@@ -1,0 +1,160 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Suppose that \(f \colon D \to {\mathbb{R}}\) and \(g \colon D \to {\mathbb{R}}\) are functions.
+
+$PAR
+
+First, prove that if \(f\) and \(g\) are both bounded, then \(f+g\) is bounded.
+
+$PAR
+
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Let \(M_1\) be such that \(|f(x)| \leq M_1\) for all \(x \in D.\)",
+"Let \(M_2\) be such that \(|g(x)|\leq M_2\) for all \(x \in D.\)",
+"Now for any \(x \in D\) we have",
+"\(|f(x)+g(x)| \leq |f(x)|+|g(x)|\)",
+"\(\qquad \leq M_1+M_2\)",
+"So \(f+g\) is bounded.",
+],
+[
+"\(|f(x)| = |f(x)|-|g(x)|\)",
+"\(\qquad \leq |f(x)-g(x)|+|g(x)|\)",
+"\(\qquad \leq \max\{M_1,M_2\}\)",
+"Let \(M_1\) be such that \(|f(x)+g(x)|\leq M_1\) for all \(x \in D.\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+$PAR
+
+Next, modify your proof a little bit to prove that
+if \(f+g\) and \(g\) are both bounded, then \(f\) is bounded.
+
+$PAR
+
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"Let \(M_1\) be such that \(|f(x)+g(x)|\leq M_1\) for all \(x \in D.\)",
+"Let \(M_2\) be such that \(|g(x)|\leq M_2\) for all \(x \in D.\)",
+"Now for any \(x \in D\) we have",
+"\(|f(x)| = |f(x)+g(x)-g(x)|\)",
+"\(\qquad \leq |f(x)+g(x)|+|g(x)|\)",
+"\(\qquad \leq M_1+M_2\)",
+"So \(f\) is bounded.",
+],
+[
+"\(|f(x)| = |f(x)|-|g(x)|\)",
+"\(\qquad \leq |f(x)+g(x)|-|g(x)|\)",
+"\(\qquad \leq \max\{M_1,M_2\}\)",
+"Let \(M_1\) be such that \(|f(x)| \leq M_1\) for all \(x \in D.\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+
+$PAR
+
+True or false: If \(f+g\) is bounded, then \(f\) and \(g\) are bounded.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+
+$PAR
+
+
+$PAR
+
+If you picked false, one of these is a counterexample.  Otherwise
+say you picked true.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+[
+"\(D={\mathbb{R}}\), \(f(x) = x\), \(g(x)=-x.\)",
+"\(D=[0,1]\), \(f(x) = x\), \(g(x)=-x.\)",
+"\(D={\mathbb{R}}\), \(f(x) = x\), \(g(x)=1.\)",
+"\(D={\mathbb{R}}\), \(f(x) = 0\), \(g(x)=x.\)",
+],
+"There is no counterexample, the statement is true.",
+],
+"\(D={\mathbb{R}}\), \(f(x) = x\), \(g(x)=-x.\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+
+ENDDOCUMENT();

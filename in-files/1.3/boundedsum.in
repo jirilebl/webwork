@@ -1,0 +1,57 @@
+%NOPARTIALANSWERS
+Suppose that \(f \colon D \to {\mathbb{R}}\) and \(g \colon D \to {\mathbb{R}}\) are functions.
+
+First, prove that if \(f\) and \(g\) are both bounded, then \(f+g\) is bounded.
+
+%PROOF
+Let \(M_1\) be such that \(|f(x)| \leq M_1\) for all \(x \in D.\)
+Let \(M_2\) be such that \(|g(x)|\leq M_2\) for all \(x \in D.\)
+Now for any \(x \in D\) we have
+\(|f(x)+g(x)| \leq |f(x)|+|g(x)|\)
+\(\qquad \leq M_1+M_2\)
+So \(f+g\) is bounded.
+%EXTRA
+\(|f(x)| = |f(x)|-|g(x)|\)
+\(\qquad \leq |f(x)-g(x)|+|g(x)|\)
+\(\qquad \leq \max\{M_1,M_2\}\)
+Let \(M_1\) be such that \(|f(x)+g(x)|\leq M_1\) for all \(x \in D.\)
+%END
+
+Next, modify your proof a little bit to prove that
+if \(f+g\) and \(g\) are both bounded, then \(f\) is bounded.
+
+%PROOF
+Let \(M_1\) be such that \(|f(x)+g(x)|\leq M_1\) for all \(x \in D.\)
+Let \(M_2\) be such that \(|g(x)|\leq M_2\) for all \(x \in D.\)
+Now for any \(x \in D\) we have
+\(|f(x)| = |f(x)+g(x)-g(x)|\)
+\(\qquad \leq |f(x)+g(x)|+|g(x)|\)
+\(\qquad \leq M_1+M_2\)
+So \(f\) is bounded.
+%EXTRA
+\(|f(x)| = |f(x)|-|g(x)|\)
+\(\qquad \leq |f(x)+g(x)|-|g(x)|\)
+\(\qquad \leq \max\{M_1,M_2\}\)
+Let \(M_1\) be such that \(|f(x)| \leq M_1\) for all \(x \in D.\)
+%END
+
+True or false: If \(f+g\) is bounded, then \(f\) and \(g\) are bounded.
+%BR
+%RADIO                                                                          
+True
+%CORRECT False
+%END
+
+
+If you picked false, one of these is a counterexample.  Otherwise
+say you picked true.
+%BR
+%RADIO                                                                          
+%BEGINRANDOM                                                                    
+%CORRECT \(D={\mathbb{R}}\), \(f(x) = x\), \(g(x)=-x.\)
+\(D=[0,1]\), \(f(x) = x\), \(g(x)=-x.\)
+\(D={\mathbb{R}}\), \(f(x) = x\), \(g(x)=1.\)
+\(D={\mathbb{R}}\), \(f(x) = 0\), \(g(x)=x.\)
+%ENDRANDOM
+There is no counterexample, the statement is true.
+%END
