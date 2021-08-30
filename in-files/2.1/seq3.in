@@ -1,0 +1,23 @@
+Consider the sequence \($LB x_n $RB = \left$LB \frac{n+1}{n} \right$RB\).
+
+Let \(L\) be the limit of this sequence.  What is it?
+%BR
+%NUMBER 1
+
+If \( \epsilon = 0.1 , \) what is the smallest \(M\) such that
+for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+%BR
+\(M=\)
+%NUMBER 11
+
+If \( \epsilon = 0.01 , \) what is the smallest \(M\) such that
+for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+%BR
+\(M=\)
+%NUMBER 101
+
+If \( \epsilon = 0.01 , \) what is the smallest \(M\) such that
+for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+%BR
+\(M=\)
+%NUMBER 1001

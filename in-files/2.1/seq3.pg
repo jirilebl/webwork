@@ -1,0 +1,101 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Consider the sequence \($LB x_n $RB = \left$LB \frac{n+1}{n} \right$RB\).
+
+$PAR
+
+Let \(L\) be the limit of this sequence.  What is it?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+If \( \epsilon = 0.1 , \) what is the smallest \(M\) such that
+for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+$BR
+\(M=\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("11");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+If \( \epsilon = 0.01 , \) what is the smallest \(M\) such that
+for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+$BR
+\(M=\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("101");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+If \( \epsilon = 0.01 , \) what is the smallest \(M\) such that
+for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+$BR
+\(M=\)
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("1001");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+
+ENDDOCUMENT();
