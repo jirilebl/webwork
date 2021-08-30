@@ -1,0 +1,157 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+True or false: If \(I\) is an interval, \(x,y \in I\), then \(\frac{x+y}{2} \in I\).
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+
+$PAR
+
+True or false: There exists an interval with exactly two points.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+
+$PAR
+
+True or false: If \(I\) is an interval, then it has uncountably many points.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+
+$PAR
+
+True or false: There exists a bijection between the set \([0,1]\) and \({\mathbb{R}}\).
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+$PAR
+
+True or false: There exists a bijection between the set \([0,1]\) and \((0,1)\).
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+
+$PAR
+
+Which one of the following is a bijection \(f \colon (0,1) \to {\mathbb{R}}\) (if one exists):
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+[
+"\( f(x) = \frac{1}{x}+\frac{1}{x-1} \)",
+"\( f(x) = \frac{1}{x(x-1)} \)",
+"\( f(x) = \tan\left(\frac{x \pi}{2}\right) \)",
+"\( f(x) = \frac{1}{2}+\frac{\operatorname{arctan}(x)}{\pi} \)",
+"\( f(x) = \frac{2 \operatorname{arctan}(x)}{\pi} \)",
+"\( f(x) = \frac{1}{x} \)",
+"\( f(x) = x \)",
+],
+"None of these.",
+"No bijection exists.",
+],
+"\( f(x) = \frac{1}{x}+\frac{1}{x-1} \)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+
+ENDDOCUMENT();

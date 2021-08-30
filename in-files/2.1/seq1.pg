@@ -1,0 +1,196 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(DNE=>"Real");
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Consider the sequence \(\left$LB \frac{(-1)^n}{n^2} \right$RB\).
+
+$PAR
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+Is this sequence bounded?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+
+$PAR
+
+
+$PAR
+
+Consider the sequence \(\left$LB n^2 \right$RB\).
+
+$PAR
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("DNE");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+Is this sequence bounded?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+$PAR
+
+
+$PAR
+
+Consider the sequence \(\left$LB \frac{n(-1)^n}{n+1} \right$RB\).
+
+$PAR
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("DNE");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+Is this sequence bounded?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+
+$PAR
+
+
+$PAR
+
+Consider the sequence \(\left$LB \frac{6n}{3n+1} \right$RB\).
+
+$PAR
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = Formula("2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+Is this sequence bounded?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+
+ENDDOCUMENT();

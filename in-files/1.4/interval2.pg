@@ -1,0 +1,137 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Suppose that \(I\) is a set and \(a,b\in I\) where \(a < b \) are given.
+Suppose furthermore that whenever \(c < d < e\) where \(c,e \in I \),
+then \(d \in I.\)
+
+$PAR
+
+Suppose you cannot use Proposition 1.4.1.  Prove that
+\( [a,b] \subset I . \)
+
+$PAR
+
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Suppose that \(x\) is such that \(a < x < b.\)",
+"As \(a,b \in I\) and \(a < x < b\), then by assumption \(x \in I.\)",
+"So the set \((a,b) = \{ x : a < x < b \} \subset I .\)",
+"Also \(a,b \in I,\) so \([a,b] \subset I .\)",
+],
+[
+"Suppose that \(x \in I.\)",
+"Suppose that \(a,b \notin I.\)",
+"If \(x < a,\) then \(x \notin I.\)",
+"If \(x > b,\) then \(x \notin I.\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+$PAR
+
+True or false: If \(a = \inf\, I\) and \(b = \sup\, I,\)
+then \(I=[a,b]\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+
+$PAR
+
+True or false: If instead \(\inf\, I = -\infty\) and \(\sup\, I = \infty,\)
+then \(I={\mathbb{R}}.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+
+$PAR
+
+True or false: If \({\mathbb{N}} \subset I,\) then \(I={\mathbb{R}}.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+
+ENDDOCUMENT();

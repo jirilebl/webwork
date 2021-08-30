@@ -1,0 +1,198 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+True or false: Every bounded sequence is convergent.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+
+$PAR
+
+True or false: Every convergent sequence is bounded.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+
+$PAR
+
+True or false: If \($LB x_n $RB\) converges to \(x\) and also converges to \(y,\) then
+\(x=y,\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+
+$PAR
+
+True or false:
+Given a sequence \($LB x_n$RB\),
+if for all \(N \in {\mathbb{N}}\) there exists an \(m > N\) such that
+\(x_m = \frac{1}{m},\) then \($LB x_n$RB\) converges.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+$PAR
+
+True or false:
+Given a sequence \($LB x_n$RB\),
+if there exists an \(N \in {\mathbb{N}}\) such that for all \(m > N\) we have
+\(x_m = \frac{1}{m},\) then \($LB x_n$RB\) converges.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+
+$PAR
+
+True or false:
+\(1,2,3,0,5,6,7,\ldots\) is a subsequence of \(1,2,3,4,5,6,7,\ldots\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+
+$PAR
+
+True or false:
+\(1,2,3,5,6,7,\ldots\) is a subsequence of \(1,2,3,4,5,6,7,\ldots\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+
+$PAR
+
+True or false:
+\( \left$LB  \frac{1}{n+5} \right$RB \)
+is a tail of 
+\( \left$LB  \frac{1}{n} \right$RB . \)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+
+ENDDOCUMENT();

@@ -1,0 +1,43 @@
+%NOPARTIALANSWERS
+%NOPARTIALCREDIT
+Suppose that \(I\) is a set and \(a,b\in I\) where \(a < b \) are given.
+Suppose furthermore that whenever \(c < d < e\) where \(c,e \in I \),
+then \(d \in I.\)
+
+Suppose you cannot use Proposition 1.4.1.  Prove that
+\( [a,b] \subset I . \)
+
+%PROOF
+Suppose that \(x\) is such that \(a < x < b.\)
+As \(a,b \in I\) and \(a < x < b\), then by assumption \(x \in I.\)
+So the set \((a,b) = \{ x : a < x < b \} \subset I .\)
+Also \(a,b \in I,\) so \([a,b] \subset I .\)
+%EXTRA
+Suppose that \(x \in I.\)
+Suppose that \(a,b \notin I.\)
+If \(x < a,\) then \(x \notin I.\)
+If \(x > b,\) then \(x \notin I.\)
+%END
+
+True or false: If \(a = \inf\, I\) and \(b = \sup\, I,\)
+then \(I=[a,b]\)
+%BR
+%RADIO                                                                          
+%CORRECT True
+False
+%END
+
+True or false: If instead \(\inf\, I = -\infty\) and \(\sup\, I = \infty,\)
+then \(I={\mathbb{R}}.\)
+%BR
+%RADIO                                                                          
+%CORRECT True
+False
+%END
+
+True or false: If \({\mathbb{N}} \subset I,\) then \(I={\mathbb{R}}.\)
+%BR
+%RADIO                                                                          
+True
+%CORRECT False
+%END

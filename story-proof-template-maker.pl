@@ -14,7 +14,13 @@ $nopartialcredit = 0;
 $haveproofs = 0;
 $haveradios = 0;
 
+$formulas = 0;
+$numbers = 0;
+
 $out = "";
+
+$setvars = "";
+$setup = "";
 
 while ($line = <$in>) {
 	chomp($line);
@@ -112,6 +118,44 @@ EOF
 				$out .= "\"$line\",\n";
 			}
 		}
+	} elsif ($line =~ m/^%SETUP[ \t]*(.*)$/) {
+		$setup .= "$1\n";
+	} elsif ($line =~ m/^%NUMBER [ \t]*(.*)$/) {
+		$qnum++;
+		$numbers++;
+		$answer = $1;
+		$out .= << "EOF";
+END_TEXT
+Context()->normalStrings;
+
+\$q$qnum = Formula(\"$answer\");
+
+Context()->texStrings;
+BEGIN_TEXT
+\\{ ans_rule(20) \\}
+\\{ AnswerFormatHelp("numbers") \\}
+EOF
+	} elsif ($line =~ m/^%FORMULAVARS ([a-zA-Z,]*)[ \t]*$/) {
+		$vars = $1;
+		$vars =~ s/,$//;
+		$vars =~ s/,/=>"Real",/g;
+		$vars .= "=>\"Real\"";
+		$setvars = "Context()->variables->are($vars);\n"
+	} elsif ($line =~ m/^%FORMULA [ \t]*(.*)$/) {
+		$qnum++;
+		$formulas++;
+		$answer = $1;
+		$out .= << "EOF";
+END_TEXT
+Context()->normalStrings;
+
+\$q$qnum = Formula(\"$answer\");
+
+Context()->texStrings;
+BEGIN_TEXT
+\\{ ans_rule(40) \\}
+\\{ AnswerFormatHelp("formulas") \\}
+EOF
 	} elsif ($line eq "%BR") {
 		$out .= "\$BR\n";
 	} elsif ($line eq "") {
@@ -152,6 +196,8 @@ TEXT(beginproblem());
 
 Context(\"Numeric\");
 
+$setvars
+$setup
 ############################
 # Main text
 

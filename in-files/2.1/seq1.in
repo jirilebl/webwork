@@ -1,0 +1,57 @@
+%NOPARTIALANSWERS
+%NOPARTIALCREDIT
+%FORMULAVARS DNE
+Consider the sequence \(\left$LB \frac{(-1)^n}{n^2} \right$RB\).
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+%BR
+%NUMBER 0
+
+Is this sequence bounded?
+%BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+
+Consider the sequence \(\left$LB n^2 \right$RB\).
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+%BR
+%NUMBER DNE
+
+Is this sequence bounded?
+%BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+
+Consider the sequence \(\left$LB \frac{n(-1)^n}{n+1} \right$RB\).
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+%BR
+%NUMBER DNE
+
+Is this sequence bounded?
+%BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+
+Consider the sequence \(\left$LB \frac{6n}{3n+1} \right$RB\).
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+%BR
+%NUMBER 2
+
+Is this sequence bounded?
+%BR
+%RADIO
+%CORRECT Yes
+No
+%END

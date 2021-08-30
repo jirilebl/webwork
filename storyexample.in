@@ -64,3 +64,27 @@ Another Statement
 %EXTRA
 Wrong statement
 %END
+
+If we want to have formulas, add %FORMULAVARS x,y on a separate line
+where the list is a comma separated (no spaces) list of variable names
+all formulas here will use.
+
+%FORMULAVARS x,y,z
+
+Then we ask a formula as follows.
+
+How about a formula
+%FORMULA x^2+y^2+z^2
+
+We can also ask for a number:
+
+How about a number
+%NUMBER 42
+
+We can randomize by adding some setup and using that.
+Note that setup is always put at the top of the file!
+It can really be kind of anything.
+%SETUP $a=random(2,9,1);
+
+What's 2 times \{$a\}?
+%NUMBER 2*$a
