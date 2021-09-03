@@ -1,0 +1,78 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Prove that \($LB \frac{2n^2-n}{n^2+1} $RB\) converges to
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"Write \(\frac{2n^2-n}{n^2+1} = \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}.\)",
+"As \(\lim \frac{1}{n} = 0\) and the denominator does not go to zero, \(\lim \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)^2} = 2.\)",
+],
+[
+"Write \(\frac{2n^2-n}{n^2+1} < \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}.\)",
+"\(\left|\frac{2n^2-n}{n^2+1}\right| < 1.\)",
+"Let \(\epsilon=1\)",
+"As \(\lim \frac{1}{n} = 0\) and the denominator does not go to zero, \(\lim \frac{2n^2-n}{n^2+1} = 1.\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+
+ENDDOCUMENT();
