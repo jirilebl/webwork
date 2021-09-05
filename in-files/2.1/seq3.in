@@ -16,7 +16,7 @@ for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
 \(M=\)
 %NUMBER 101
 
-If \( \epsilon = 0.01 , \) what is the smallest \(M\) such that
+If \( \epsilon = 0.001 , \) what is the smallest \(M\) such that
 for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
 %BR
 \(M=\)
