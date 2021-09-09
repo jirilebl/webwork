@@ -24,11 +24,11 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
-Prove that \($LB \frac{2n^2-n}{n^2+1} $RB\) converges to
+Prove that \(\left$LB \frac{n^2}{2^n} \right$RB\) converges to
 END_TEXT
 Context()->normalStrings;
 
-$q1 = Formula("2");
+$q1 = Formula("0");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -41,15 +41,19 @@ END_TEXT
 Context()->normalStrings;
 
 $q2 = DraggableProof([
-"Write \(\frac{2n^2-n}{n^2+1} = \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)",
-"As \(\lim \frac{1}{n} = 0\), \(\lim \left(2-\frac{1}{n}\right) = 2\) and \(\lim \left(1+\left(\frac{1}{n}\right)^2\right) = 1\text{.}\)",
-"So as the denominator does not go to zero, \(\lim \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)^2} = 2\text{.}\)",
+"First, suppose \(n \geq 3\text{.}\)",
+"Estimate \( \frac{\left\lvert \frac{(n+1)^2}{2^{n+1}} \right\rvert}{\left\lvert \frac{n^2}{2^{n}} \right\rvert} = \frac{(n+1)^2 2^n}{n^2 2^{n+1} } \)",
+"\( \qquad = \frac{(n+1)^2}{2 n^2 } = \frac{1}{2} \left(\frac{n+1}{n}\right)^2 = \frac{1}{2} \left(1 + \frac{1}{n}\right)^2 \)",
+"\( \qquad \leq \frac{1}{2} \left( \frac{4}{3} \right)^2 \)",
+"\( \qquad = \frac{8}{9} < 1 \)",
+"So by the ratio test, \(\left$LB \frac{n^2}{2^n} \right$RB\) converges to \(0\text{.}\)",
 ],
 [
-"Write \(\frac{2n^2-n}{n^2+1} < \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)",
-"\(\left|\frac{2n^2-n}{n^2+1}\right| < 1\text{.}\)",
-"Let \(\epsilon=1\text{.}\)",
-"As \(\lim \frac{1}{n} = 0\) and the denominator does not go to zero, \(\lim \frac{2n^2-n}{n^2+1} = 1\text{.}\)",
+"Estimate \( \frac{\left\lvert \frac{n^2}{2^n} \right\rvert}{\left\lvert \frac{(n+1)^2}{2^{n+1}} \right\rvert} = \frac{n^2 2^{n+1}}{(n+1)^2 2^{n} } \)",
+"\( \qquad \leq \frac{1}{2} < 1 \)",
+"\( \qquad \leq 1 \)",
+"First, suppose \(n \geq 2\text{.}\)",
+"So by the ratio test, \(\left$LB \frac{n^2}{2^n} \right$RB\) converges to \(1\text{.}\)",
 ],
 
 SourceLabel => "Choose from these statements",

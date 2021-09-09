@@ -1,0 +1,20 @@
+Suppose that \( $LB x_n $RB \) is bounded.  Show that there exists a \( K > 0 \) such that
+\( \left$LB \left(\frac{x_n}{K}\right)^n \right$RB \) converges to \(0\text{.}\)
+
+%PROOF
+Suppose \(B > 0\) is such that \( \lvert x_n \rvert \leq B \) for all \( n \in \mathbb{N} \text{.}\)
+Let \(K = 2B\text{.}\)
+We have \( 0 \leq \left\lvert \left(\frac{x_n}{K}\right)^n\right\rvert \)
+\( \qquad = \left(\frac{\lvert x_n \rvert}{K}\right)^n \)
+\( \qquad \leq \left(\frac{B}{K}\right)^n \)
+\( \qquad \leq \left( \frac{1}{2} \right)^n \)
+As \(\frac{1}{2^n}\) goes to \(0\text{,}\) the Squeeze Lemma says
+\(\left\lvert \left(\frac{x_n}{K}\right)^n\right\rvert\) goes to zero.
+And so \(\left(\frac{x_n}{K}\right)^n\) goes to zero.
+%EXTRA
+\( \qquad \leq 2^n \)
+\( \qquad \leq 1 \)
+As \(2^n\) goes to \(0\text{,}\) the Squeeze Lemma says
+Let \(K = B\text{.}\)
+Let \(K = \frac{2}{B}\text{.}\)
+%END
