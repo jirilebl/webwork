@@ -1,0 +1,29 @@
+%NOPARTIALANSWERS
+%NOPARTIALCREDIT
+%FORMULAVARS DNE
+Consider the sequence \(\left$LB \frac{n\cos(n)+1}{n} \right$RB \text{.}\)
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+%BR
+%NUMBER DNE
+
+
+Consider the sequence \(\left$LB \frac{n\cos(n)+1}{n^2} \right$RB \text{.}\)
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+%BR
+%NUMBER 0
+
+
+Consider the sequence \(\left$LB \frac{\cos(n)+n}{n} \right$RB \text{.}\)
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+%BR
+%NUMBER 1
+
+
+Consider the sequence \(\left$LB c^{\sqrt{n}} \right$RB\) where \( 0 < c < 1 \text{.}\)
+
+If the limit of this sequence exists, what is it, otherwise write DNE.
+%BR
+%NUMBER 0

@@ -1,0 +1,91 @@
+%NOPARTIALANSWERS
+%NOPARTIALCREDIT
+True or false:
+If \(x_n > 0\) for all \(n\) and \(\lim \, x_n\) exists, then
+\(\lim \, x_n > 0\text{.}\)
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(a_n < x_n < b_n\) for all \(n\) and
+\(\lim \, a_n\) and
+\(\lim \, b_n\) exist, then
+\($LB x_n $RB\) converges.
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(\lvert 3x_n \rvert < \frac{1}{n}\) for all \(n\text{,}\)
+then
+\(\lim \, x_n = 0\text{.}\)
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \($LB x_n y_n $RB\) converges to \(xy\text{,}\) then
+\($LB x_n $RB\) converges to \(x\) and
+\($LB y_n $RB\) converges to \(y\text{.}\)
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \($LB x_n y_n $RB\) converges and
+\($LB y_n $RB\) converges, then
+\($LB x_n $RB\) converges.
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \($LB x_n y_n $RB\) converges and
+\($LB y_n $RB\) converges to something nonzero, then
+\($LB x_n $RB\) converges.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \( x_n \geq 0 \) for all \(n\) and
+\($LB x_n^2 $RB\) converges, then
+\($LB x_n $RB\) converges.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(0 < c < 1\) and 
+\($LB c^n x_n $RB\) converges, then
+\($LB x_n $RB\) is bounded.
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(0 < c < 1\) and 
+\($LB c^n x_n $RB\) converges to \(0\text{,}\) then
+\($LB x_n $RB\) is bounded.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
