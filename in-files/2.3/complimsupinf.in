@@ -1,0 +1,49 @@
+%NOPARTIALANSWERS
+%NOPARTIALCREDIT
+%FORMULAVARS n
+\(\displaystyle \limsup_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
+%NUMBER 0
+
+\(\displaystyle \liminf_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
+%NUMBER 0
+
+\(\displaystyle \limsup_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
+%NUMBER 1
+
+\(\displaystyle \liminf_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
+%NUMBER -1
+
+
+Now let \(x_n =
+\begin{cases}
+\frac{-1}{n} & \text{if } n \text{ even,} \\
+\frac{n-1}{n} & \text{if } n \text{ odd.} \\
+\end{cases}\)
+
+Let
+\(a_n = \sup $LB x_k : k \geq n $RB \) and
+\(b_n = \inf $LB x_k : k \geq n $RB \).
+
+For \(n\) even,
+%BR
+\(a_n = {}\)
+%FORMULA 1
+%BR
+\(b_n = {}\)
+%FORMULA -1/n
+
+For \(n\) odd,
+%BR
+\(a_n = {}\)
+%FORMULA 1
+%BR
+\(b_n = {}\)
+%FORMULA -1/(n+1)
+
+So
+%BR
+\(\displaystyle \limsup_{n\to\infty} \, x_n = {}\)
+%NUMBER 1
+%BR
+\(\displaystyle \liminf_{n\to\infty} \, x_n = {}\)
+%NUMBER 0

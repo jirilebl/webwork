@@ -86,6 +86,6 @@ If \(0 < c < 1\) and
 \($LB x_n $RB\) is bounded.
 %BR
 %RADIO
-%CORRECT True
-False
+True
+%CORRECT False
 %END

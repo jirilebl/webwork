@@ -25,8 +25,9 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 True or false:
-If \(x_n > 0\) for all \(n\) and \(\lim \, x_n\) exists, then
-\(\lim \, x_n > 0\text{.}\)
+If \($LB x_n $RB\) is a bounded sequence and
+\(a_n = \sup $LB x_k : k \geq n $RB , \)
+then \($LB a_n $RB\) is a subsequence of \($LB x_n $RB .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -45,10 +46,8 @@ BEGIN_TEXT
 $PAR
 
 True or false:
-If \(a_n < x_n < b_n\) for all \(n\) and
-\(\lim \, a_n\) and
-\(\lim \, b_n\) exist, then
-\($LB x_n $RB\) converges.
+If \(\liminf \, x_n < \limsup \, x_n ,\) then
+\($LB x_n $RB\) diverges.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -57,7 +56,7 @@ $q2 = RadioButtons([
 "True",
 "False",
 ],
-"False",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -67,9 +66,11 @@ BEGIN_TEXT
 $PAR
 
 True or false:
-If \(\lvert 3x_n \rvert < \frac{1}{n}\) for all \(n\text{,}\)
-then
-\(\lim \, x_n = 0\text{.}\)
+Let \($LB x_n $RB\) be a bounded sequence.
+Then for every \(x\) such that
+\(\liminf \, x_n \leq x \leq \limsup \, x_n ,\) there
+exists a subsequence
+\($LB x_{n_k} $RB\) converging to \(x.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -78,7 +79,7 @@ $q3 = RadioButtons([
 "True",
 "False",
 ],
-"True",
+"False",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -88,9 +89,10 @@ BEGIN_TEXT
 $PAR
 
 True or false:
-If \($LB x_n y_n $RB\) converges to \(xy\text{,}\) then
-\($LB x_n $RB\) converges to \(x\) and
-\($LB y_n $RB\) converges to \(y\text{.}\)
+Let \($LB x_n $RB\) be a bounded sequence and
+\($LB x_{n_k} $RB\) be a subsequence.
+Then there exists a subsequence \($LB x_{n_{k_i}} $RB\) of the subsequence
+that converges.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -99,7 +101,7 @@ $q4 = RadioButtons([
 "True",
 "False",
 ],
-"False",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -109,9 +111,11 @@ BEGIN_TEXT
 $PAR
 
 True or false:
-If \($LB x_n y_n $RB\) converges and
-\($LB y_n $RB\) converges, then
-\($LB x_n $RB\) converges.
+Let \($LB x_n $RB\) be a bounded sequence and
+\(a_n = \sup $LB x_k : k \geq n $RB . \)
+Then
+\($LB a_n : n \in {\mathbb{N}} $RB\) is
+a subset of \($LB x_n : n \in {\mathbb{N}} $RB.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -129,10 +133,16 @@ BEGIN_TEXT
 
 $PAR
 
+
+$PAR
+
 True or false:
-If \($LB x_n y_n $RB\) converges and
-\($LB y_n $RB\) converges to something nonzero, then
-\($LB x_n $RB\) converges.
+Let \($LB x_n $RB\) be a bounded sequence and
+\(a_n = \sup $LB x_k : k \geq n $RB . \)
+If \($LB x_n : n \in {\mathbb{N}} $RB\)
+is a finite set, then
+\($LB a_n : n \in {\mathbb{N}} $RB\) is
+a subset of \($LB x_n : n \in {\mathbb{N}} $RB.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -151,9 +161,8 @@ BEGIN_TEXT
 $PAR
 
 True or false:
-If \( x_n \geq 0 \) for all \(n\) and
-\($LB x_n^2 $RB\) converges, then
-\($LB x_n $RB\) converges.
+If \($LB x_n $RB\) be a bounded sequence of nonnegative numbers
+and \(\limsup\, x_n  = 0,\) then \( $LB x_n $RB \) converges to 0.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -172,9 +181,9 @@ BEGIN_TEXT
 $PAR
 
 True or false:
-If \(0 < c < 1\) and 
-\($LB c^n x_n $RB\) converges, then
-\($LB x_n $RB\) is bounded.
+If \(\liminf \, x_n < \limsup \, x_n ,\) then
+there exists a divergent subsequence
+\($LB x_{n_k} $RB .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -183,32 +192,11 @@ $q8 = RadioButtons([
 "True",
 "False",
 ],
-"False",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q8->buttons \}
-
-
-$PAR
-
-True or false:
-If \(0 < c < 1\) and 
-\($LB c^n x_n $RB\) converges to \(0\text{,}\) then
-\($LB x_n $RB\) is bounded.
-$BR
-END_TEXT
-Context()->normalStrings;
-
-$q9 = RadioButtons([
-"True",
-"False",
-],
-"False",
-);
-Context()->texStrings;
-BEGIN_TEXT
-\{ $q9->buttons \}
 
 
 END_TEXT
@@ -227,6 +215,5 @@ ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
-ANS($q9->cmp());
 
 ENDDOCUMENT();

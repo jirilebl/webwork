@@ -1,0 +1,191 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(n=>"Real");
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+\(\displaystyle \limsup_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+\(\displaystyle \liminf_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+\(\displaystyle \limsup_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+\(\displaystyle \liminf_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("-1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+
+$PAR
+
+Now let \(x_n =
+\begin{cases}
+\frac{-1}{n} & \text{if } n \text{ even,} \\
+\frac{n-1}{n} & \text{if } n \text{ odd.} \\
+\end{cases}\)
+
+$PAR
+
+Let
+\(a_n = \sup $LB x_k : k \geq n $RB \) and
+\(b_n = \inf $LB x_k : k \geq n $RB \).
+
+$PAR
+
+For \(n\) even,
+$BR
+\(a_n = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$BR
+\(b_n = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("-1/n");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+
+$PAR
+
+For \(n\) odd,
+$BR
+\(a_n = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q7 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$BR
+\(b_n = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q8 = Formula("-1/(n+1)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+
+$PAR
+
+So
+$BR
+\(\displaystyle \limsup_{n\to\infty} \, x_n = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q9 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+\(\displaystyle \liminf_{n\to\infty} \, x_n = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q10 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+ANS($q10->cmp());
+
+ENDDOCUMENT();

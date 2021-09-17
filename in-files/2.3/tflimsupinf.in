@@ -1,0 +1,88 @@
+%NOPARTIALANSWERS
+%NOPARTIALCREDIT
+True or false:
+If \($LB x_n $RB\) is a bounded sequence and
+\(a_n = \sup $LB x_k : k \geq n $RB , \)
+then \($LB a_n $RB\) is a subsequence of \($LB x_n $RB .\)
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(\liminf \, x_n < \limsup \, x_n ,\) then
+\($LB x_n $RB\) diverges.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Let \($LB x_n $RB\) be a bounded sequence.
+Then for every \(x\) such that
+\(\liminf \, x_n \leq x \leq \limsup \, x_n ,\) there
+exists a subsequence
+\($LB x_{n_k} $RB\) converging to \(x.\)
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Let \($LB x_n $RB\) be a bounded sequence and
+\($LB x_{n_k} $RB\) be a subsequence.
+Then there exists a subsequence \($LB x_{n_{k_i}} $RB\) of the subsequence
+that converges.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Let \($LB x_n $RB\) be a bounded sequence and
+\(a_n = \sup $LB x_k : k \geq n $RB . \)
+Then
+\($LB a_n : n \in {\mathbb{N}} $RB\) is
+a subset of \($LB x_n : n \in {\mathbb{N}} $RB.\)
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+
+True or false:
+Let \($LB x_n $RB\) be a bounded sequence and
+\(a_n = \sup $LB x_k : k \geq n $RB . \)
+If \($LB x_n : n \in {\mathbb{N}} $RB\)
+is a finite set, then
+\($LB a_n : n \in {\mathbb{N}} $RB\) is
+a subset of \($LB x_n : n \in {\mathbb{N}} $RB.\)
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \($LB x_n $RB\) be a bounded sequence of nonnegative numbers
+and \(\limsup\, x_n  = 0,\) then \( $LB x_n $RB \) converges to 0.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(\liminf \, x_n < \limsup \, x_n ,\) then
+there exists a divergent subsequence
+\($LB x_{n_k} $RB .\)
+%BR
+%RADIO
+%CORRECT True
+False
+%END
