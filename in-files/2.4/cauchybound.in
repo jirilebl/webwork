@@ -1,0 +1,20 @@
+Suppose that \( $LB x_n $RB \) is a sequence such that whenever \( k \leq m , \) we have
+\( |x_k - x_m| < \frac{1}{k} . \)
+Prove that \( $LB x_n $RB \) is Cauchy.
+
+%PROOF
+Let \(\epsilon > 0\) be given.
+Find \(M \in {\mathbb{N}}\) such that \(\frac{1}{M} < \epsilon .\)
+Suppose \(k,m \geq M .\)
+Without loss of generality suppose \(k \leq m .\)
+Then \( |x_k - x_m| < \frac{1}{k} \)
+\( \qquad \leq \frac{1}{M} \)
+\( \qquad < \epsilon \)
+Therefore, \( $LB x_n $RB \) is Cauchy.
+%EXTRA
+Find \(M \in {\mathbb{N}}\) such that \(M > \epsilon .\)
+Suppose \(k,m \leq M .\)
+Then \( |x_k - x_m| > \epsilon . \)
+\( \qquad \leq \frac{1}{\epsilon} \)
+Without loss of generality suppose \(k = m .\)
+%END

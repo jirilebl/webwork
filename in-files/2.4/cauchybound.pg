@@ -1,0 +1,75 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Suppose that \( $LB x_n $RB \) is a sequence such that whenever \( k \leq m , \) we have
+\( |x_k - x_m| < \frac{1}{k} . \)
+Prove that \( $LB x_n $RB \) is Cauchy.
+
+$PAR
+
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Let \(\epsilon > 0\) be given.",
+"Find \(M \in {\mathbb{N}}\) such that \(\frac{1}{M} < \epsilon .\)",
+"Suppose \(k,m \geq M .\)",
+"Without loss of generality suppose \(k \leq m .\)",
+"Then \( |x_k - x_m| < \frac{1}{k} \)",
+"\( \qquad \leq \frac{1}{M} \)",
+"\( \qquad < \epsilon \)",
+"Therefore, \( $LB x_n $RB \) is Cauchy.",
+],
+[
+"Find \(M \in {\mathbb{N}}\) such that \(M > \epsilon .\)",
+"Suppose \(k,m \leq M .\)",
+"Then \( |x_k - x_m| > \epsilon . \)",
+"\( \qquad \leq \frac{1}{\epsilon} \)",
+"Without loss of generality suppose \(k = m .\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+ANS($q1->cmp());
+
+ENDDOCUMENT();
