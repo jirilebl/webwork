@@ -1,0 +1,87 @@
+%NOPARTIALANSWERS
+%NOPARTIALCREDIT
+True or false:
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
+\(\displaystyle \sum_{n=1}^\infty x_{n+1}\) converges.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
+\(\displaystyle\lim_{n\to\infty} x_n = 0.\)
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
+\(\displaystyle \sum_{n=1}^\infty {(-1)}^n x_{n}\) converges.
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges, then
+\(\displaystyle \sum_{n=1}^\infty \frac{x_n}{n}\) converges.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges, then
+\(\displaystyle \sum_{n=1}^\infty n x_n\) converges.
+%BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If according to the ratio test, the series
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges absolutely, then
+\(\displaystyle \sum_{n=1}^\infty n x_n\) converges.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Suppose
+\(\displaystyle \sum_{n=1}^\infty x_n\)
+and
+\(\displaystyle \sum_{n=1}^\infty y_n\)
+converge absolutely.  Then
+\(\displaystyle \sum_{n=1}^\infty x_n y_n\)
+converges absolutely.
+%BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Suppose
+\(\displaystyle \sum_{n=1}^\infty x_n\)
+and
+\(\displaystyle \sum_{n=1}^\infty y_n\)
+converge absolutely.  Then
+\(\displaystyle \sum_{n=1}^\infty x_n y_n\)
+converges to
+\(\displaystyle \left(\sum_{n=1}^\infty x_n \right)\left(\sum_{n=1}^\infty y_n\right) .\)
+%BR
+%RADIO
+True
+%CORRECT False
+%END

@@ -1,0 +1,118 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(n=>"Real",DNE=>"Real");
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+Consider the series
+\(\displaystyle \sum_{n=1}^\infty x_n ,\) where
+the partial sum is
+\(\displaystyle \sum_{n=1}^k x_n = \frac{k}{k+1} .\)
+
+$PAR
+
+Find
+$BR
+\(x_n = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("n/(n+1)-(n-1)/n");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+
+$PAR
+
+Does the series converge?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+
+$PAR
+
+What does the series converge to if it converges (write "DNE" if it doesn't)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+$PAR
+
+What is the reason?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+[
+"The expression for the partial sums converges.",
+"The series is a \(p\)-series with \(p=1 .\)",
+"The series is like a harmonic series.",
+"The expression for the partial sums diverges.",
+"The numerator for each term in the series is 1.",
+"The series is not Cauchy.",
+"The terms of the series go to 0.",
+],
+],
+"The expression for the partial sums converges.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+
+ENDDOCUMENT();

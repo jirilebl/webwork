@@ -1,0 +1,37 @@
+%NOPARTIALANSWERS
+%NOPARTIALCREDIT
+%FORMULAVARS n,DNE
+Consider the series
+\(\displaystyle \sum_{n=1}^\infty x_n ,\) where
+the partial sum is
+\(\displaystyle \sum_{n=1}^k x_n = \frac{k}{k+1} .\)
+
+Find
+%BR
+\(x_n = {}\)
+%FORMULA n/(n+1)-(n-1)/n
+
+Does the series converge?
+%BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+What does the series converge to if it converges (write "DNE" if it doesn't)?
+%BR
+%NUMBER 1
+
+What is the reason?
+%BR
+%RADIO
+%BEGINRANDOM
+%CORRECT The expression for the partial sums converges.
+The series is a \(p\)-series with \(p=1 .\)
+The series is like a harmonic series.
+The expression for the partial sums diverges.
+The numerator for each term in the series is 1.
+The series is not Cauchy.
+The terms of the series go to 0.
+%ENDRANDOM
+%END

@@ -1,0 +1,216 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+True or false:
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
+\(\displaystyle \sum_{n=1}^\infty x_{n+1}\) converges.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+
+$PAR
+
+True or false:
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
+\(\displaystyle\lim_{n\to\infty} x_n = 0.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+
+$PAR
+
+True or false:
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
+\(\displaystyle \sum_{n=1}^\infty {(-1)}^n x_{n}\) converges.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+
+$PAR
+
+True or false:
+If
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges, then
+\(\displaystyle \sum_{n=1}^\infty \frac{x_n}{n}\) converges.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+$PAR
+
+True or false:
+If
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges, then
+\(\displaystyle \sum_{n=1}^\infty n x_n\) converges.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+
+$PAR
+
+True or false:
+If according to the ratio test, the series
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges absolutely, then
+\(\displaystyle \sum_{n=1}^\infty n x_n\) converges.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+
+$PAR
+
+True or false:
+Suppose
+\(\displaystyle \sum_{n=1}^\infty x_n\)
+and
+\(\displaystyle \sum_{n=1}^\infty y_n\)
+converge absolutely.  Then
+\(\displaystyle \sum_{n=1}^\infty x_n y_n\)
+converges absolutely.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+
+$PAR
+
+True or false:
+Suppose
+\(\displaystyle \sum_{n=1}^\infty x_n\)
+and
+\(\displaystyle \sum_{n=1}^\infty y_n\)
+converge absolutely.  Then
+\(\displaystyle \sum_{n=1}^\infty x_n y_n\)
+converges to
+\(\displaystyle \left(\sum_{n=1}^\infty x_n \right)\left(\sum_{n=1}^\infty y_n\right) .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+
+ENDDOCUMENT();
