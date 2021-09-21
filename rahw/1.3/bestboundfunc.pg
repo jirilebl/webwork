@@ -1,0 +1,51 @@
+###########################
+# Initialization
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserFunction.pl",
+ "PGML.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+Context("Numeric");
+
+$a = random(4,9,1);
+
+
+############################
+# Main text
+
+BEGIN_PGML
+Suppose [`f \colon [-2,2] \to \mathbb{R}`] is given by
+[`f(x) = x^2-2x-[$a].`]
+
+First, find the best (smallest) bound [:M:] for [`f`], that is, find
+the smallest [:M:] such that
+
+[```|f(x)| \leq M```]
+
+for all [` x \in [-2,2] `]
+
+[`M={}`] [____________]{"$a+1"}{10}
+[@ AnswerFormatHelp("numbers") @]*
+
+Now compute
+
+[``\sup_{x\in[-2,2]} f(x)={}``] [____________]{"8-$a"}{10}
+[@ AnswerFormatHelp("numbers") @]*
+
+[``\inf_{x\in[-2,2]} f(x)={}``] [____________]{"-$a-1"}{10}
+[@ AnswerFormatHelp("numbers") @]*
+END_PGML
+
+ENDDOCUMENT();

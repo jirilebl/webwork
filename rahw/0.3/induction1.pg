@@ -1,0 +1,97 @@
+###########################
+# Initialization
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+$BasisStep = DraggableProof([
+"If \(n=1\), then \(4^n-1=4-1=3\).",
+"\(3\) is divisible by \(3\).",
+"So the basis statement holds for \(n=1\)."
+],
+
+[
+"If \(n=1\), then \(4^n=4\).",
+"\(6\) is divisible by \(3\).",
+"So the basis statement holds for \(n=0\)."
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+$InductionStep = DraggableProof([
+"Suppose \(3\) divides \(4^n-1\).",
+"\(4^{n+1}-1=4(4^n)-1\)",
+"\(\qquad=4(4^n-1+1)-1\)",
+"\(\qquad=4(4^n-1)+3\)",
+"\(3\) divides both \(4^n-1\) and \(3\).",
+"Therefore, \(3\) divides \(4^{n+1}-1\).",
+"Thus, the induction step holds."
+],
+
+[
+"Suppose \(4^n-1=3\).",
+"Supppse \(3\) divides \(4^{n+1}-1\).",
+"Therefore, \(4\) divides \(4^n-1\)."
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+We wish to prove that \(3\) divides \(4^n-1\) for all
+natural numbers \(n.\).
+
+$PAR
+
+Prove the basis statement by dragging \{ $BasisStep->numNeeded \} statements
+from the left column to the right, putting
+them in the correct order.
+
+\{ $BasisStep->Print \}
+
+$PAR
+
+Prove the induction step by dragging \{ $InductionStep->numNeeded \} statements
+from the left column to the right, putting
+them in the correct order.
+
+\{ $InductionStep->Print \}
+
+$PAR
+
+We can now finish the proof by stating.
+$BR
+"Therefore, \(3\) divides \(4^n-1\) for all natural numbers \(n\)."
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answer evaluation
+
+ANS($BasisStep->cmp);
+ANS($InductionStep->cmp);
+
+
+ENDDOCUMENT();

@@ -1,0 +1,98 @@
+# Template for checkboxes (all that apply) 
+
+########################################################################
+
+DOCUMENT();      
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl"
+);
+
+##############################################################
+#  Setup
+
+TEXT(beginproblem());
+
+Context("Numeric");
+
+$n = random(5,9,1);
+$ans = Compute("2^($n)");
+
+$radio1 = RadioButtons(
+  ["\(\emptyset\)",
+   "\($LB \emptyset $RB\)",
+   "\($LB \emptyset , $LB \emptyset $RB $RB\)",
+   "\($LB $LB \emptyset $RB $RB\)",
+   "None of these"],
+  "\($LB \emptyset $RB\)", # correct answer
+);
+
+
+$radio2 = RadioButtons(
+  ["\($LB \emptyset $RB\)",
+   "\($LB a,b $RB\)",
+   "\($LB \emptyset , a, b $RB\)",
+   "\($LB $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
+   "\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
+   "None of these"],
+  "\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)", # correct answer
+);
+
+
+$radio3 = RadioButtons(
+  ["Yes",
+   "No",
+   "Depends on what \(X\) is",
+   "None of these"],
+  "Yes", # correct answer
+);
+
+##############################################################
+#  Text
+
+BEGIN_TEXT
+What is the power set of \( \emptyset \)?
+$BR
+\{ $radio1->buttons() \}
+
+$PAR
+What is the power set of \( $LB a,b $RB \)?
+$BR
+\{ $radio2->buttons() \}
+
+$PAR
+If \(X\) is a set, is \(X\) a member of the powerset of \(X\)?
+$BR
+\{ $radio3->buttons() \}
+
+$PAR
+The power set of \( $LB 1,2,\ldots,\{ $n \} $RB \) has how many elements?
+$BR
+\{ ans_rule(20) \}
+
+END_TEXT
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+$showPartialCorrectAnswers = 0;
+
+ANS( $radio1->cmp() );
+ANS( $radio2->cmp() );
+ANS( $radio3->cmp() );
+ANS( $ans->cmp() );
+
+##############################################################
+
+#BEGIN_SOLUTION
+#Solution here
+#END_SOLUTION
+
+##############################################################
+
+ENDDOCUMENT();
+
