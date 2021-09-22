@@ -24,12 +24,11 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 Suppose that \( $LB x_n $RB \) is a sequence such that whenever \( k \leq m , \) we have
 \( |x_k - x_m| < \frac{1}{k} . \)
 Prove that \( $LB x_n $RB \) is Cauchy.
-
 $PAR
-
 END_TEXT
 Context()->normalStrings;
 

@@ -24,6 +24,7 @@ Context()->variables->are(n=>"Real");
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 \(\displaystyle \limsup_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
 END_TEXT
 Context()->normalStrings;
@@ -34,9 +35,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 \(\displaystyle \liminf_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
 END_TEXT
 Context()->normalStrings;
@@ -47,9 +46,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 \(\displaystyle \limsup_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
 END_TEXT
 Context()->normalStrings;
@@ -60,9 +57,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 \(\displaystyle \liminf_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
 END_TEXT
 Context()->normalStrings;
@@ -73,26 +68,18 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
-
 $PAR
-
 Now let \(x_n =
 \begin{cases}
 \frac{-1}{n} & \text{if } n \text{ even,} \\
 \frac{n-1}{n} & \text{if } n \text{ odd.} \\
 \end{cases}\)
-
 $PAR
-
 Let
 \(a_n = \sup $LB x_k : k \geq n $RB \) and
 \(b_n = \inf $LB x_k : k \geq n $RB \).
-
 $PAR
-
 For \(n\) even,
 $BR
 \(a_n = {}\)
@@ -116,9 +103,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(40) \}
 \{ AnswerFormatHelp("formulas") \}
-
 $PAR
-
 For \(n\) odd,
 $BR
 \(a_n = {}\)
@@ -142,9 +127,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(40) \}
 \{ AnswerFormatHelp("formulas") \}
-
 $PAR
-
 So
 $BR
 \(\displaystyle \limsup_{n\to\infty} \, x_n = {}\)

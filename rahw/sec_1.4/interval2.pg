@@ -25,17 +25,14 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 Suppose that \(I\) is a set and \(a,b\in I\) where \(a < b \) are given.
 Suppose furthermore that whenever \(c < d < e\) where \(c,e \in I \),
 then \(d \in I.\)
-
 $PAR
-
 Suppose you cannot use Proposition 1.4.1.  Prove that
 \( [a,b] \subset I . \)
-
 $PAR
-
 END_TEXT
 Context()->normalStrings;
 
@@ -64,9 +61,7 @@ to the right, putting them in the correct order.  There could be extras.) $EITAL
 
 \{ $q1->Print \}
 
-
 $PAR
-
 True or false: If \(a = \inf\, I\) and \(b = \sup\, I,\)
 then \(I=[a,b]\)
 $BR
@@ -83,9 +78,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q2->buttons \}
 
-
 $PAR
-
 True or false: If instead \(\inf\, I = -\infty\) and \(\sup\, I = \infty,\)
 then \(I={\mathbb{R}}.\)
 $BR
@@ -102,9 +95,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q3->buttons \}
 
-
 $PAR
-
 True or false: If \({\mathbb{N}} \subset I,\) then \(I={\mathbb{R}}.\)
 $BR
 END_TEXT

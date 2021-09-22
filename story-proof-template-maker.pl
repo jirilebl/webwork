@@ -159,7 +159,7 @@ EOF
 	} elsif ($line eq "%BR") {
 		$out .= "\$BR\n";
 	} elsif ($line eq "") {
-		$out .= "\n\$PAR\n\n";
+		$out .= "\$PAR\n";
 	} else {
 		$out .= "$line\n";
 	}
@@ -203,6 +203,7 @@ $setup
 
 Context()->texStrings;
 BEGIN_TEXT
+\$PAR
 EOF
 
 # print the collected stuff

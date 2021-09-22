@@ -24,6 +24,7 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 True or false:
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
 \(\displaystyle \sum_{n=1}^\infty x_{n+1}\) converges.
@@ -41,9 +42,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q1->buttons \}
 
-
 $PAR
-
 True or false:
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
 \(\displaystyle\lim_{n\to\infty} x_n = 0.\)
@@ -61,9 +60,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q2->buttons \}
 
-
 $PAR
-
 True or false:
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
 \(\displaystyle \sum_{n=1}^\infty {(-1)}^n x_{n}\) converges.
@@ -81,9 +78,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q3->buttons \}
 
-
 $PAR
-
 True or false:
 If
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges, then
@@ -102,9 +97,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q4->buttons \}
 
-
 $PAR
-
 True or false:
 If
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges, then
@@ -123,9 +116,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q5->buttons \}
 
-
 $PAR
-
 True or false:
 If according to the ratio test, the series
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges absolutely, then
@@ -144,9 +135,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q6->buttons \}
 
-
 $PAR
-
 True or false:
 Suppose
 \(\displaystyle \sum_{n=1}^\infty x_n\)
@@ -169,9 +158,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q7->buttons \}
 
-
 $PAR
-
 True or false:
 Suppose
 \(\displaystyle \sum_{n=1}^\infty x_n\)

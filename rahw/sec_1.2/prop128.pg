@@ -17,18 +17,19 @@ $showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 
+
+
 ############################
 # Main text
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 Prove Proposition 1.2.8:
 If \(S \subset \mathbb{R}\) is nonempty and bounded above,
 then for every \(\epsilon > 0\) there exists an \(x \in S\) such
 that \((\sup\, S) - \epsilon < x \leq \sup\, S.\)
-
 $PAR
-
 END_TEXT
 Context()->normalStrings;
 

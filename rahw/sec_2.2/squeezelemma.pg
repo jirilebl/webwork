@@ -24,11 +24,10 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 Suppose that \( $LB x_n $RB \) is bounded.  Show that there exists a \( K > 0 \) such that
 \( \left$LB \left(\frac{x_n}{K}\right)^n \right$RB \) converges to \(0\text{.}\)
-
 $PAR
-
 END_TEXT
 Context()->normalStrings;
 

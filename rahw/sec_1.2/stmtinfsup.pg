@@ -17,11 +17,14 @@ $showPartialCorrectAnswers = 0;
 
 Context("Numeric");
 
+
+
 ############################
 # Main text
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 Let \(A \subset \mathbb{R}\) is a set such that \(x < 1 \) for all \(x \in A.\)
 What is the only definitely correct statement?
 $BR
@@ -43,9 +46,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q1->buttons \}
 
-
 $PAR
-
 Let \(A,B \subset \mathbb{R}\) be nonempty bounded sets such that
 \( \inf \, B \in A.\)
 What is the only definitely correct statement?
@@ -69,9 +70,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q2->buttons \}
 
-
 $PAR
-
 Let \(A \subset \mathbb{R}\) be a nonempty bounded set and
 \(1 \notin A.\)
 What is the only definitely correct statement?

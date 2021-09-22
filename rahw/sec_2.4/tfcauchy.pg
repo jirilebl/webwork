@@ -24,6 +24,7 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 True or false:
 A sequence is Cauchy if and only if it is convergent.
 $BR
@@ -40,9 +41,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q1->buttons \}
 
-
 $PAR
-
 True or false:
 The sequence
 \($LB 2^n $RB\) is Cauchy.
@@ -60,9 +59,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q2->buttons \}
 
-
 $PAR
-
 True or false:
 The sequence
 \($LB 2^{-n} $RB\) is Cauchy.
@@ -80,9 +77,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q3->buttons \}
 
-
 $PAR
-
 True or false:
 Every bounded sequence has a Cauchy subsequence.
 $BR
@@ -99,9 +94,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q4->buttons \}
 
-
 $PAR
-
 True or false:
 A Cauchy sequence of rational numbers converges to a rational number.
 $BR
@@ -118,9 +111,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q5->buttons \}
 
-
 $PAR
-
 True or false:
 If
 \(\displaystyle \lim_{n\to\infty} |x_{n+1}-x_{n}| = 0 , \)
@@ -139,9 +130,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q6->buttons \}
 
-
 $PAR
-
 True or false:
 If
 \(\displaystyle \lim_{n\to\infty} |x_{n+k}-x_{n}| = 0 \)
@@ -161,9 +150,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q7->buttons \}
 
-
 $PAR
-
 True or false:
 It is possible for a sequence to be unbounded and Cauchy at the same time.
 $BR

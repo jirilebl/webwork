@@ -23,10 +23,9 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
-Consider the sequence \($LB x_n $RB = \left$LB \frac{n+1}{n} \right$RB\).
-
 $PAR
-
+Consider the sequence \($LB x_n $RB = \left$LB \frac{n+1}{n} \right$RB\).
+$PAR
 Let \(L\) be the limit of this sequence.  What is it?
 $BR
 END_TEXT
@@ -38,9 +37,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 If \( \epsilon = 0.1 , \) what is the smallest \(M\) such that
 for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
 $BR
@@ -54,9 +51,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 If \( \epsilon = 0.01 , \) what is the smallest \(M\) such that
 for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
 $BR
@@ -70,9 +65,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 If \( \epsilon = 0.001 , \) what is the smallest \(M\) such that
 for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
 $BR

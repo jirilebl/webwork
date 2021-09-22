@@ -24,6 +24,7 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 Prove that \(\left$LB \frac{n^2}{2^n} \right$RB\) converges to
 END_TEXT
 Context()->normalStrings;
@@ -34,9 +35,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 END_TEXT
 Context()->normalStrings;
 

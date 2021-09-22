@@ -25,10 +25,9 @@ Context()->variables->are(DNE=>"Real");
 
 Context()->texStrings;
 BEGIN_TEXT
-Consider the sequence \(\left$LB \frac{(-1)^n}{n^2} \right$RB\).
-
 $PAR
-
+Consider the sequence \(\left$LB \frac{(-1)^n}{n^2} \right$RB\).
+$PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
 END_TEXT
@@ -40,9 +39,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 Is this sequence bounded?
 $BR
 END_TEXT
@@ -58,16 +55,10 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q2->buttons \}
 
-
 $PAR
-
-
 $PAR
-
 Consider the sequence \(\left$LB n^2 \right$RB\).
-
 $PAR
-
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
 END_TEXT
@@ -79,9 +70,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 Is this sequence bounded?
 $BR
 END_TEXT
@@ -97,16 +86,10 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q4->buttons \}
 
-
 $PAR
-
-
 $PAR
-
 Consider the sequence \(\left$LB \frac{n(-1)^n}{n+1} \right$RB\).
-
 $PAR
-
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
 END_TEXT
@@ -118,9 +101,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 Is this sequence bounded?
 $BR
 END_TEXT
@@ -136,16 +117,10 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q6->buttons \}
 
-
 $PAR
-
-
 $PAR
-
 Consider the sequence \(\left$LB \frac{6n}{3n+1} \right$RB\).
-
 $PAR
-
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
 END_TEXT
@@ -157,9 +132,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 Is this sequence bounded?
 $BR
 END_TEXT

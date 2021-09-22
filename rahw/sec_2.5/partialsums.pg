@@ -25,13 +25,12 @@ Context()->variables->are(n=>"Real",DNE=>"Real");
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 Consider the series
 \(\displaystyle \sum_{n=1}^\infty x_n ,\) where
 the partial sum is
 \(\displaystyle \sum_{n=1}^k x_n = \frac{k}{k+1} .\)
-
 $PAR
-
 Find
 $BR
 \(x_n = {}\)
@@ -44,9 +43,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(40) \}
 \{ AnswerFormatHelp("formulas") \}
-
 $PAR
-
 Does the series converge?
 $BR
 END_TEXT
@@ -62,9 +59,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q2->buttons \}
 
-
 $PAR
-
 What does the series converge to if it converges (write "DNE" if it doesn't)?
 $BR
 END_TEXT
@@ -76,9 +71,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 What is the reason?
 $BR
 END_TEXT

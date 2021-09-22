@@ -24,10 +24,9 @@ Context()->variables->are(n=>"Real");
 
 Context()->texStrings;
 BEGIN_TEXT
-Suppose \( x_n = \frac{(-1)^n}{n} . \)  (Note: The sequence \($LB x_n $RB\) is Cauchy as it converges)
-
 $PAR
-
+Suppose \( x_n = \frac{(-1)^n}{n} . \)  (Note: The sequence \($LB x_n $RB\) is Cauchy as it converges)
+$PAR
 Given \(\epsilon = \frac{1}{2} , \) what is the smallest \(M \in \mathbb{N}\)
 such that for all \(k,m \geq M ,\) we have
 \( | x_k - x_m | < \epsilon . \)
@@ -42,9 +41,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 Given \(\epsilon = \frac{1}{10} , \) what is the smallest \(M \in \mathbb{N}\)
 such that for all \(k,m \geq M ,\) we have
 \( | x_k - x_m | < \epsilon . \)
@@ -59,9 +56,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-
 $PAR
-
 For any particular \(n \in \mathbb{N}\) what is the maximum that
 \( | x_k - x_m | \)
 could be for \( k,m \geq n ? \)
@@ -76,9 +71,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(40) \}
 \{ AnswerFormatHelp("formulas") \}
-
 $PAR
-
 
 END_TEXT
 Context()->normalStrings;

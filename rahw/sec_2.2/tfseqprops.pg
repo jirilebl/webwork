@@ -24,6 +24,7 @@ Context("Numeric");
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 True or false:
 If \(x_n > 0\) for all \(n\) and \(\lim \, x_n\) exists, then
 \(\lim \, x_n > 0\text{.}\)
@@ -41,9 +42,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q1->buttons \}
 
-
 $PAR
-
 True or false:
 If \(a_n < x_n < b_n\) for all \(n\) and
 \(\lim \, a_n\) and
@@ -63,9 +62,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q2->buttons \}
 
-
 $PAR
-
 True or false:
 If \(\lvert 3x_n \rvert < \frac{1}{n}\) for all \(n\text{,}\)
 then
@@ -84,9 +81,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q3->buttons \}
 
-
 $PAR
-
 True or false:
 If \($LB x_n y_n $RB\) converges to \(xy\text{,}\) then
 \($LB x_n $RB\) converges to \(x\) and
@@ -105,9 +100,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q4->buttons \}
 
-
 $PAR
-
 True or false:
 If \($LB x_n y_n $RB\) converges and
 \($LB y_n $RB\) converges, then
@@ -126,9 +119,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q5->buttons \}
 
-
 $PAR
-
 True or false:
 If \($LB x_n y_n $RB\) converges and
 \($LB y_n $RB\) converges to something nonzero, then
@@ -147,9 +138,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q6->buttons \}
 
-
 $PAR
-
 True or false:
 If \( x_n \geq 0 \) for all \(n\) and
 \($LB x_n^2 $RB\) converges, then
@@ -168,9 +157,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q7->buttons \}
 
-
 $PAR
-
 True or false:
 If \(0 < c < 1\) and 
 \($LB c^n x_n $RB\) converges, then
@@ -189,9 +176,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q8->buttons \}
 
-
 $PAR
-
 True or false:
 If \(0 < c < 1\) and 
 \($LB c^n x_n $RB\) converges to \(0\text{,}\) then

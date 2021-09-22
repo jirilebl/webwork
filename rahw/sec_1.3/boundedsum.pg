@@ -18,19 +18,18 @@ $showPartialCorrectAnswers = 0;
 
 Context("Numeric");
 
+
+
 ############################
 # Main text
 
 Context()->texStrings;
 BEGIN_TEXT
+$PAR
 Suppose that \(f \colon D \to {\mathbb{R}}\) and \(g \colon D \to {\mathbb{R}}\) are functions.
-
 $PAR
-
 First, prove that if \(f\) and \(g\) are both bounded, then \(f+g\) is bounded.
-
 $PAR
-
 END_TEXT
 Context()->normalStrings;
 
@@ -61,14 +60,10 @@ to the right, putting them in the correct order.  There could be extras.) $EITAL
 
 \{ $q1->Print \}
 
-
 $PAR
-
 Next, modify your proof a little bit to prove that
 if \(f+g\) and \(g\) are both bounded, then \(f\) is bounded.
-
 $PAR
-
 END_TEXT
 Context()->normalStrings;
 
@@ -100,9 +95,7 @@ to the right, putting them in the correct order.  There could be extras.) $EITAL
 
 \{ $q2->Print \}
 
-
 $PAR
-
 True or false: If \(f+g\) is bounded, then \(f\) and \(g\) are bounded.
 $BR
 END_TEXT
@@ -118,12 +111,8 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q3->buttons \}
 
-
 $PAR
-
-
 $PAR
-
 If you picked false, one of these is a counterexample.  Otherwise
 say you picked true.
 $BR
