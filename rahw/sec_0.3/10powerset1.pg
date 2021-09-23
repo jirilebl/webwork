@@ -54,6 +54,7 @@ $radio3 = RadioButtons(
 #  Text
 
 BEGIN_TEXT
+$PAR
 What is the power set of \( \emptyset \)?
 $BR
 \{ $radio1->buttons() \}

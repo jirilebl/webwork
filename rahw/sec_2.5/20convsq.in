@@ -1,0 +1,16 @@
+Suppose that \(\displaystyle\sum_{n=1}^{\infty} x_n\) converges where \(x_n \geq 0\)
+for all \(n\in \mathbb{N}.\)
+Prove that \(\displaystyle\sum_{n=1}^{\infty} x_n^2\) converges.
+
+%PROOF
+As \(\displaystyle\sum_{n=1}^{\infty} x_n\) converges, \(\displaystyle \lim_{n\to\infty} x_n = 0 .\)
+Thus, there exists \(M\) such that for all \(n \geq M\), we have \(x_n < 1.\)
+So for all \(n \geq M,\) we have \(x_n^2 < x_n.\)
+By the comparison test and the fact that \(\displaystyle\sum_{n=M}^\infty x_n\) converges, we have \(\displaystyle\sum_{n=M}^\infty x_n^2\) converges.
+Hence, \(\displaystyle\sum_{n=1}^\infty x_n^2\) converges.
+%EXTRA
+As \(\displaystyle \lim_{n\to\infty} x_n = 0 ,\) we have \(\displaystyle\sum_{n=1}^{\infty} x_n\) converges. 
+So for all \(n,\) we have \(x_n^2 < x_n.\)
+Thus, there exists \(M\) such that for all \(n \geq M\), we have \(x_n < \epsilon.\)
+By the ratio test, \(\displaystyle\sum_{n=M}^\infty x_n^2\) converges absolutely.
+%END

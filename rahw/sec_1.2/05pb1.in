@@ -1,5 +1,5 @@
 Prove that if \(t > 0,\) then there exists an \(n \in {\mathbb{N}}\) such that
-\(\frac{1}{n^2} < t\).
+\(\frac{1}{n^2} < t.\)
 
 %PROOF
 Suppose \(t > 0\) is given.

@@ -1,0 +1,70 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Let \( f \colon A \to B,\) \(g \colon B \to C \) be injective functions.
+$PAR
+Prove that \(g \circ f\) is injective.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Suppose \(g(f(x))=g(f(y))\) for some \(x,y \in A.\)",
+"As \(g\) is injective, we have \(f(x)=f(y).\)",
+"As \(f\) is injective, we have \(x=y.\)",
+"Therefore, \(g \circ f\) is injective.",
+],
+[
+"Suppose \(f(g(x))=f(g(y))\) for some \(x,y \in B.\)",
+"Suppose \(g(f(x))=g(f(x))\) for some \(x \in A.\)",
+"As \(g\) is injective, we have \(x=y.\)",
+"As \(f\) is injective, we have \(f(x)=f(y).\)",
+"As \(f(x)=g(y)\), \(g \circ f\) is injective.",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag \{ $q1->numNeeded \} statements from the left column
+to the right, putting them in the correct order.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+ANS($q1->cmp());
+
+ENDDOCUMENT();

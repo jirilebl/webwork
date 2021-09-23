@@ -1,10 +1,10 @@
-Prove Proposition 1.2.8:
+Prove Proposition 1.2.8 from [1]:
 If \(S \subset \mathbb{R}\) is nonempty and bounded above,
 then for every \(\epsilon > 0\) there exists an \(x \in S\) such
 that \((\sup\, S) - \epsilon < x \leq \sup\, S.\)
 
 %PROOF
-Let \(\epsilon > 0\) be given and let \(y\) be an upper bound for \(S\).
+Let \(\epsilon > 0\) be given and let \(y\) be an upper bound for \(S.\)
 If \(x \leq y-\epsilon\) for all \(x \in S,\) then
 \(y\) is not the least upper bound.
 Hence, if \(y=\sup\,S\) there must be an \(x \in S\) such that \(x > y -\epsilon.\)
@@ -15,3 +15,5 @@ Set \(\epsilon = 1.\)
 Take \(x = (\sup \, S)-1.\)
 As \(y < \sup \, S\), we have \( x > y .\)
 %END
+
+[1] J. Lebl, $BITALIC Basic Analysis : Introduction to Analysis $EITALIC

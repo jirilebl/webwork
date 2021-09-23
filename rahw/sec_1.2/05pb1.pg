@@ -26,7 +26,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 Prove that if \(t > 0,\) then there exists an \(n \in {\mathbb{N}}\) such that
-\(\frac{1}{n^2} < t\).
+\(\frac{1}{n^2} < t.\)
 $PAR
 END_TEXT
 Context()->normalStrings;

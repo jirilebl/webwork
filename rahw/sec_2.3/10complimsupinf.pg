@@ -78,7 +78,7 @@ Now let \(x_n =
 $PAR
 Let
 \(a_n = \sup $LB x_k : k \geq n $RB \) and
-\(b_n = \inf $LB x_k : k \geq n $RB \).
+\(b_n = \inf $LB x_k : k \geq n $RB . \)
 $PAR
 For \(n\) even,
 $BR

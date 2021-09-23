@@ -1,0 +1,70 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \(S\) is an ordered set and \(A \subset S\) with lower bound
+\(x\) which is such that \(x \in A.\)
+$PAR
+Prove that \(x\) is the greatest lower bound.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Suppose \(y \in S\) is a lower bound for \(A.\)",
+"Then \(y \leq x\), as \(y\) is a lower bound for \(A\) and \(x \in A.\)",
+"So \(x\) is the greatest lower bound, as \(y\) was an arbitrary lower bound.",
+],
+[
+"Suppose \(x \in S\) is the greatest lower bound for \(A.\)",
+"Suppose \(y \in S\) is an upper bound for \(A.\)",
+"Suppose \(y \in A\) is a lower bound for \(A.\)",
+"As \(x \leq y \), we have that \(x\) is the greatest lower bound.",
+"Then \( y \in S .\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag \{ $q1->numNeeded \} statements from the left column
+to the right, putting them in the correct order.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+ANS($q1->cmp());
+
+ENDDOCUMENT();

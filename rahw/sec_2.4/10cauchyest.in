@@ -21,6 +21,5 @@ For any particular \(n \in \mathbb{N}\) what is the maximum that
 \( | x_k - x_m | \)
 could be for \( k,m \geq n ? \)
 %BR
-\(n = {}\)
 %FORMULA (2*n+1)/(n*(n+1))
 

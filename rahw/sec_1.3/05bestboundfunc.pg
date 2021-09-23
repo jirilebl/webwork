@@ -26,6 +26,7 @@ $a = random(4,9,1);
 # Main text
 
 BEGIN_PGML
+
 Suppose [`f \colon [-2,2] \to \mathbb{R}`] is given by
 [`f(x) = x^2-2x-[$a].`]
 

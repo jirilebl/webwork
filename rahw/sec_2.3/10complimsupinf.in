@@ -22,7 +22,7 @@ Now let \(x_n =
 
 Let
 \(a_n = \sup $LB x_k : k \geq n $RB \) and
-\(b_n = \inf $LB x_k : k \geq n $RB \).
+\(b_n = \inf $LB x_k : k \geq n $RB . \)
 
 For \(n\) even,
 %BR

@@ -1,0 +1,34 @@
+We wish to prove that \(3\) divides \(4^n-1\) for all
+natural numbers \(n.\)
+
+Prove the basis statement:
+
+%PROOFHINT
+If \(n=1\), then \(4^n-1=4-1=3.\)
+\(3\) is divisible by \(3.\)
+So the basis statement holds for \(n=1.\)
+%EXTRA
+If \(n=1\), then \(4^n=4.\)
+\(6\) is divisible by \(3.\)
+So the basis statement holds for \(n=0.\)
+%END
+
+Now prove the induction step:
+
+%PROOFHINT
+Suppose \(3\) divides \(4^n-1.\)
+\(4^{n+1}-1=4(4^n)-1,\)
+\(\qquad=4(4^n-1+1)-1,\)
+\(\qquad=4(4^n-1)+3,\)
+\(3\) divides both \(4^n-1\) and \(3.\)
+Therefore, \(3\) divides \(4^{n+1}-1.\)
+Thus, the induction step holds.
+%EXTRA
+Suppose \(4^n-1=3.\)
+Supppse \(3\) divides \(4^{n+1}-1.\)
+Therefore, \(4\) divides \(4^n-1.\)
+%END
+
+We can now finish the proof by stating.
+%BR
+"Therefore, \(3\) divides \(4^n-1\) for all natural numbers \(n.\)"

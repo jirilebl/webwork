@@ -61,7 +61,6 @@ For any particular \(n \in \mathbb{N}\) what is the maximum that
 \( | x_k - x_m | \)
 could be for \( k,m \geq n ? \)
 $BR
-\(n = {}\)
 END_TEXT
 Context()->normalStrings;
 

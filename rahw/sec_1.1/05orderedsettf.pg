@@ -1,0 +1,127 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+If \(S\) is a nonempty finite ordered set, then \(\sup S\) exists and \(\sup S \in S.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+If \(S\) is an ordered set and \(A \subset S\) is a bounded nonempty subset, then the least upper bound of \(A\) exists.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+The set of rational numbers has the least-upper-bound property.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+In any ordered field for any nonzero \(x,y,z,\) we have \(x^2+y^2+z^2 > 0. \)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+Every field can be ordered, that is, made into an ordered field by defining an order relation.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+
+ENDDOCUMENT();

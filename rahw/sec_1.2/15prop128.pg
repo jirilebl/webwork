@@ -25,7 +25,7 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Prove Proposition 1.2.8:
+Prove Proposition 1.2.8 from [1]:
 If \(S \subset \mathbb{R}\) is nonempty and bounded above,
 then for every \(\epsilon > 0\) there exists an \(x \in S\) such
 that \((\sup\, S) - \epsilon < x \leq \sup\, S.\)
@@ -34,7 +34,7 @@ END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Let \(\epsilon > 0\) be given and let \(y\) be an upper bound for \(S\).",
+"Let \(\epsilon > 0\) be given and let \(y\) be an upper bound for \(S.\)",
 "If \(x \leq y-\epsilon\) for all \(x \in S,\) then",
 "\(y\) is not the least upper bound.",
 "Hence, if \(y=\sup\,S\) there must be an \(x \in S\) such that \(x > y -\epsilon.\)",
@@ -59,6 +59,8 @@ to the right, putting them in the correct order.  There could be extras.) $EITAL
 
 \{ $q1->Print \}
 
+$PAR
+[1] J. Lebl, $BITALIC Basic Analysis : Introduction to Analysis $EITALIC
 
 END_TEXT
 Context()->normalStrings;

@@ -36,6 +36,7 @@ Context()->flags->set(
 # Main text
 
 BEGIN_PGML
+
 Let [:A:] be the interval [`([$a],[$b]) .`]
 
 Compute

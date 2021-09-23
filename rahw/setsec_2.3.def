@@ -2,6 +2,6 @@ openDate = 01/01/19, 0600
 dueDate = 01/01/29, 2359
 answerDate = 01/01/29, 2359
 problemList =
-rahw/sec_2.3/complimsupinf.pg,	1
-rahw/sec_2.3/powerstozero.pg,	1
-rahw/sec_2.3/tflimsupinf.pg,	1
+rahw/sec_2.3/05tflimsupinf.pg,	1
+rahw/sec_2.3/10complimsupinf.pg,	1
+rahw/sec_2.3/15powerstozero.pg,	1
