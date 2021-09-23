@@ -17,7 +17,7 @@ such that for all \(k,m \geq M ,\) we have
 \(M={}\)
 %NUMBER 20
 
-For any particular \(n \in \mathbb{N}\) what is the maximum that
+For any particular \(n \in \mathbb{N},\) what is the maximum that
 \( | x_k - x_m | \)
 could be for \( k,m \geq n ? \)
 %BR
