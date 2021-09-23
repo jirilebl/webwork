@@ -5,4 +5,6 @@ problemList =
 rahw/sec_2.5/05tfseries.pg,	1
 rahw/sec_2.5/10partialsums.pg,	1
 rahw/sec_2.5/15convdiv.pg,	1
-rahw/sec_2.5/20convsq.pg,	1
+rahw/sec_2.5/20num.pg,	1
+rahw/sec_2.5/25convsq.pg,	1
+rahw/sec_2.5/30badcauchy.pg,	1
