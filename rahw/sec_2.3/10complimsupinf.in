@@ -1,5 +1,4 @@
-%NOPARTIALANSWERS
-%NOPARTIALCREDIT
+%NOPARTIAL
 %FORMULAVARS n
 \(\displaystyle \limsup_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
 %NUMBER 0

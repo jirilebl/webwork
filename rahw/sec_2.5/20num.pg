@@ -1,0 +1,152 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(DNE=>"Real");
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Denote by \(s_k\) the partial sum of a series from \(n=1\) to \(n=k .\)
+For the series
+\(\displaystyle \sum_{n=1}^\infty \frac{2}{3^n}, \) what is
+$BR
+\(s_1={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("2/3");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+\(s_2={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("2/3+2/9");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+\(s_3={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("2/3+2/9+2/27");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Note that
+\(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2}\)
+converges to \(\frac{\pi^2}{6}.\)
+What does
+\(\displaystyle \sum_{n=1}^\infty \left(\frac{1}{n^2} + \frac{1}{(n+1)^2}\right)\)
+converge to.  Type "pi" for \(\pi\) and use DNE if it doesn't converge.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("((pi^2)/3)-1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The series
+\(\displaystyle \sum_{n=1}^\infty \frac{n}{n^3+n-1}\)
+behaves like the \(p\)-series for what \(p\):
+$BR
+\(p={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The series
+\(\displaystyle \sum_{n=1}^\infty \frac{n^2}{n^3+n-1}\)
+behaves like the \(p\)-series for what \(p\):
+$BR
+\(p={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+For \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2+1},\) we want to
+compare to the series \(\displaystyle \sum_{n=1}^\infty \frac{1}{2n^2},\) which
+we know converges by the \(p\)-series test.
+Which one of the estimates is the correct one to use in comparison test?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"\(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2+1} \leq \sum_{n=1}^\infty \frac{1}{2n^2}\)",
+"\(\displaystyle \sum_{n=1}^k \frac{1}{n^2+1} \leq \sum_{n=1}^k \frac{1}{2n^2}\) for all \(k\)",
+"\(\displaystyle \frac{1}{n^2+1} \leq \frac{1}{2n^2}\) for all \(n\)",
+"\(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2+1} \geq \sum_{n=1}^\infty \frac{1}{2n^2}\)",
+"\(\displaystyle \sum_{n=1}^k \frac{1}{n^2+1} \geq \sum_{n=1}^k \frac{1}{2n^2}\) for all \(k\)",
+"\(\displaystyle \frac{1}{n^2+1} \geq \frac{1}{2n^2}\) for all \(n\)",
+],
+"\(\displaystyle \frac{1}{n^2+1} \leq \frac{1}{2n^2}\) for all \(n\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+
+ENDDOCUMENT();

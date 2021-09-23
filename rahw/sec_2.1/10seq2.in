@@ -1,15 +1,14 @@
-%NOPARTIALANSWERS
-%NOPARTIALCREDIT
+%NOPARTIAL
 True or false: Every bounded sequence is convergent.
 %BR
-%RADIO                                                                          
+%RADIO
 True
 %CORRECT False
 %END
 
 True or false: Every convergent sequence is bounded.
 %BR
-%RADIO                                                                          
+%RADIO
 %CORRECT True
 False
 %END
@@ -17,7 +16,7 @@ False
 True or false: If \($LB x_n $RB\) converges to \(x\) and also converges to \(y,\) then
 \(x=y,\)
 %BR
-%RADIO                                                                          
+%RADIO
 %CORRECT True
 False
 %END
@@ -27,7 +26,7 @@ Given a sequence \($LB x_n$RB\),
 if for all \(N \in {\mathbb{N}}\) there exists an \(m > N\) such that
 \(x_m = \frac{1}{m},\) then \($LB x_n$RB\) converges.
 %BR
-%RADIO                                                                          
+%RADIO
 True
 %CORRECT False
 %END
@@ -37,7 +36,7 @@ Given a sequence \($LB x_n$RB\),
 if there exists an \(N \in {\mathbb{N}}\) such that for all \(m > N\) we have
 \(x_m = \frac{1}{m},\) then \($LB x_n$RB\) converges.
 %BR
-%RADIO                                                                          
+%RADIO
 %CORRECT True
 False
 %END
@@ -45,7 +44,7 @@ False
 True or false:
 \(1,2,3,0,5,6,7,\ldots\) is a subsequence of \(1,2,3,4,5,6,7,\ldots\)
 %BR
-%RADIO                                                                          
+%RADIO
 True
 %CORRECT False
 %END
@@ -53,7 +52,7 @@ True
 True or false:
 \(1,2,3,5,6,7,\ldots\) is a subsequence of \(1,2,3,4,5,6,7,\ldots\)
 %BR
-%RADIO                                                                          
+%RADIO
 %CORRECT True
 False
 %END
@@ -63,7 +62,7 @@ True or false:
 is a tail of 
 \( \left$LB  \frac{1}{n} \right$RB . \)
 %BR
-%RADIO                                                                          
+%RADIO
 %CORRECT True
 False
 %END

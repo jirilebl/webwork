@@ -1,0 +1,119 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Let \(\displaystyle x_n := \sum_{j=1}^n \frac{1}{j}.\)
+$PAR
+Is the sequence \( $LB x_n $RB \) a Cauchy sequence?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+Why?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+[
+"Because \(x_n\) is the \(n\)th partial sum of the harmonic series, which is divergent.",
+"Because \( $LB x_n $RB \) converges.",
+"Because \( $LB \frac{1}{n} $RB \) converges to \(0.\)",
+"Because \( $LB x_n $RB \) satisfies the ratio test.",
+"Because \( \frac{1}{j} > 0 \) for all \(j \in {\mathbb{N}}.\)",
+],
+],
+"Because \(x_n\) is the \(n\)th partial sum of the harmonic series, which is divergent.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+Prove that despite the above, for any \(k \in \mathbb{N},\) we have
+\(\displaystyle\lim_{n\to\infty} \lvert x_{n+k}-x_n \rvert = 0 .\)
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = DraggableProof([
+"Fix \( k \in \mathbb{N}.\)",
+"Let \( y_n := x_{n+k}-x_n = \sum_{j=n+1}^{n+k} \frac{1}{j} .\)",
+"What we need to show is that \(y_n \to 0 .\)",
+"Estimate \( \displaystyle y_n = \sum_{j=n+1}^{n+k} \frac{1}{j} \)",
+"\(\displaystyle \qquad \leq \sum_{j=n+1}^{n+k} \frac{1}{n+1} \)",
+"\(\displaystyle \qquad = \frac{k}{n+1} . \)",
+"We know that \( \frac{k}{n+1} \to 0 \) as \(n \to \infty.\)",
+"So by sequeeze lemma, as \( 0 \leq y_n \leq \frac{k}{n+1} ,\) we have \(y_n \to 0 .\)",
+"As \(y_n \to 0\), we get \(\lvert y_n \rvert \to 0 \) as well.",
+],
+[
+"What we need to show is that \(y_n \to 1 .\)",
+"Fix \( n \in \mathbb{N}.\)",
+"\(\displaystyle \qquad = \frac{k}{n+k} . \)",
+"\(\displaystyle \qquad \leq \sum_{j=n+1}^{n+k} \frac{1}{n+k} \)",
+"So by sequeeze lemma, as \( 0 \leq y_n \leq \frac{n}{k+1} ,\) we have \(y_n \to 0 .\)",
+"\(\displaystyle \qquad < 1 . \)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q3->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+##############################################################
+#  Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+
+ENDDOCUMENT();

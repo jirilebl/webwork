@@ -1,5 +1,4 @@
-%NOPARTIALANSWERS
-%NOPARTIALCREDIT
+%NOPARTIAL
 True or false:
 If \(x_n > 0\) for all \(n\) and \(\lim \, x_n\) exists, then
 \(\lim \, x_n > 0\text{.}\)

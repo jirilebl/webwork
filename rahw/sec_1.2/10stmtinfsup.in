@@ -1,10 +1,8 @@
-%NOPARTIALANSWERS
-%NOPARTIALCREDIT
+%NOPARTIAL
 Let \(A \subset \mathbb{R}\) is a set such that \(x < 1 \) for all \(x \in A.\)
 What is the only definitely correct statement?
 %BR
-%RADIO                                                                          
-%BEGINRANDOM                                                                    
+%RADIORANDOM
 %CORRECT \(\sup \, A \leq 1 .\)
 \(\sup \, A < 1 .\)
 \(\sup \, A \geq 1 .\)
@@ -17,8 +15,7 @@ Let \(A,B \subset \mathbb{R}\) be nonempty bounded sets such that
 \( \inf \, B \in A.\)
 What is the only definitely correct statement?
 %BR
-%RADIO                                                                          
-%BEGINRANDOM                                                                    
+%RADIORANDOM
 \(\sup \, A \leq \inf \, B .\)
 \(\sup \, A < \inf \, B .\)
 \(\inf \, A < \inf \, B .\)
@@ -32,8 +29,7 @@ Let \(A \subset \mathbb{R}\) be a nonempty bounded set and
 \(1 \notin A.\)
 What is the only definitely correct statement?
 %BR
-%RADIO                                                                          
-%BEGINRANDOM                                                                    
+%RADIORANDOM
 \(\sup \, A \leq 1 .\)
 \(\sup \, A \geq 1 .\)
 \(\inf \, A \leq 1 .\)

@@ -9,6 +9,8 @@ If you want to avoid giving hints after submit about which parts were correct,
 put %NOPARTIALANSWERS at the beginning of a line.  If you want to give all or
 nothing rather than partial credit, put %NOPARTIALCREDIT at the beginning of a
 line.  Presumably you'd use the first few lines of the file for these.
+You can also just use %NOPARTIAL to turn on both of these, which is the most
+common option
 
 Proofs require draggableProof.pl to work (presumably from WeBWork 2.16
 onwards this works automatically).
@@ -47,6 +49,33 @@ Choice B
 Choice C
 %ENDRANDOM
 None of these
+%END
+
+There is a short version of this:
+
+%RADIORANDOM
+%CORRECT Choice A
+Choice B
+Choice C
+%ENDRANDOM
+None of these
+%END
+
+The %ENDRANDOM is added automatically if needed so if we want to just randomize everything we can write:
+
+%RADIORANDOM
+%CORRECT Choice A
+Choice B
+Choice C
+%END
+
+The given first option is taken as the correct answer in case nothing is marked as correct, so the following
+is the same as above, just a bit less readable.
+
+%RADIORANDOM
+Choice A
+Choice B
+Choice C
 %END
 
 We can also have another proof surely, maybe without any wrong statements
@@ -88,3 +117,18 @@ It can really be kind of anything.
 
 What's 2 times \{$a\}?
 %NUMBER 2*$a
+
+Normally the answer rule width is 20 for numbers and 40 for formulas.  With
+the %RULEWIDTH statement you can change it to another width (used for both
+from then on.)  The next rule will be 80-wide.
+
+%RULEWIDTH 80
+%NUMBER 42
+
+If you want to go back to the defaults just set rule width to 0.
+
+%RULEWIDTH 0
+
+Now the number field will be again 20-wide.
+
+%NUMBER 42

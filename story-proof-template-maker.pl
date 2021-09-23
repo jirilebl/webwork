@@ -17,6 +17,8 @@ $haveradios = 0;
 $formulas = 0;
 $numbers = 0;
 
+$rulewidth = 0;
+
 $out = "";
 
 $setvars = "";
@@ -27,6 +29,9 @@ while ($line = <$in>) {
 	if ($line =~ m/^%NOPARTIALANSWERS/) {
 		$partialanswers = 0;
 	} elsif ($line =~ m/^%NOPARTIALCREDIT/) {
+		$nopartialcredit = 1;
+	} elsif ($line =~ m/^%NOPARTIAL[ \t]*$/) {
+		$partialanswers = 0;
 		$nopartialcredit = 1;
 	} elsif ($line =~ m/^%PROOF/) {
 		$haveproofs = 1;
@@ -80,6 +85,8 @@ EOF
 
 EOF
 				last;
+			} elsif ($line eq "") {
+				# Do nothing on empty line
 			} else {
 				$out .= "\"$line\",\n";
 			}
@@ -88,22 +95,38 @@ EOF
 		$qnum++;
 		$haveradios = 1;
 		$correct = "";
+		$inrandom = 0;
+		$optnum = 0;
+		if ($line =~ m/^%RADIORANDOM/) {
+			$inrandom = 1;
+		}
 		$out .= << "EOF";
 END_TEXT
 Context()->normalStrings;
 
 \$q$qnum = RadioButtons([
 EOF
+		if ($inrandom == 1) {
+			$out .= "[\n";
+		}
+
 		while ($line = <$in>) {
 			chomp($line);
 			if ($line =~ s/^%CORRECT *//) {
 				$out .= "\"$line\",\n";
 				$correct = $line;
-			} elsif ($line =~ m/^%BEGINRANDOM/) {
+				$optnum++;
+			} elsif ($inrandom == 0 and $line =~ m/^%BEGINRANDOM/) {
 				$out .= "[\n";
-			} elsif ($line =~ m/^%ENDRANDOM/) {
+				$inrandom = 1;
+			} elsif ($inrandom == 1 and $line =~ m/^%ENDRANDOM/) {
 				$out .= "],\n";
+				$inrandom = 0;
 			} elsif ($line =~ m/^%END/) {
+				if ($inrandom == 1) {
+					$out .= "],\n";
+					$inrandom = 0;
+				}
 				$out .= << "EOF";
 ],
 \"$correct\",
@@ -114,16 +137,29 @@ BEGIN_TEXT
 
 EOF
 				last;
+			} elsif ($line eq "") {
+				# Do nothing on empty line
 			} else {
 				$out .= "\"$line\",\n";
+				$optnum++;
+				if ($optnum == 1) {
+					# The first guy is taken as correct
+					$correct = $line;
+				}
 			}
 		}
 	} elsif ($line =~ m/^%SETUP[ \t]*(.*)$/) {
 		$setup .= "$1\n";
+	} elsif ($line =~ m/^%RULEWIDTH [ \t]*([0-9]*)$/) {
+		$rulewidth = int($1);
 	} elsif ($line =~ m/^%NUMBER [ \t]*(.*)$/) {
 		$qnum++;
 		$numbers++;
 		$answer = $1;
+		$rw = 20;
+		if ($rulewidth > 0) {
+			$rw = $rulewidth;
+		}
 		$out .= << "EOF";
 END_TEXT
 Context()->normalStrings;
@@ -132,7 +168,7 @@ Context()->normalStrings;
 
 Context()->texStrings;
 BEGIN_TEXT
-\\{ ans_rule(20) \\}
+\\{ ans_rule($rw) \\}
 \\{ AnswerFormatHelp("numbers") \\}
 EOF
 	} elsif ($line =~ m/^%FORMULAVARS ([a-zA-Z,]*)[ \t]*$/) {
@@ -145,6 +181,10 @@ EOF
 		$qnum++;
 		$formulas++;
 		$answer = $1;
+		$rw = 40;
+		if ($rulewidth > 0) {
+			$rw = $rulewidth;
+		}
 		$out .= << "EOF";
 END_TEXT
 Context()->normalStrings;
@@ -153,7 +193,7 @@ Context()->normalStrings;
 
 Context()->texStrings;
 BEGIN_TEXT
-\\{ ans_rule(40) \\}
+\\{ ans_rule($rw) \\}
 \\{ AnswerFormatHelp("formulas") \\}
 EOF
 	} elsif ($line eq "%BR") {

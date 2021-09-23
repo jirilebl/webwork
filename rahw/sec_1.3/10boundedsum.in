@@ -1,4 +1,4 @@
-%NOPARTIALANSWERS
+%NOPARTIAL
 Suppose that \(f \colon D \to {\mathbb{R}}\) and \(g \colon D \to {\mathbb{R}}\) are functions.
 
 First, prove that if \(f\) and \(g\) are both bounded, then \(f+g\) is bounded.
@@ -37,7 +37,7 @@ Let \(M_1\) be such that \(|f(x)| \leq M_1\) for all \(x \in D.\)
 
 True or false: If \(f+g\) is bounded, then \(f\) and \(g\) are bounded.
 %BR
-%RADIO                                                                          
+%RADIO
 True
 %CORRECT False
 %END
@@ -46,8 +46,7 @@ True
 If you picked false, one of these is a counterexample.  Otherwise
 say you picked true.
 %BR
-%RADIO                                                                          
-%BEGINRANDOM                                                                    
+%RADIORANDOM
 %CORRECT \(D={\mathbb{R}}\), \(f(x) = x\), \(g(x)=-x.\)
 \(D=[0,1]\), \(f(x) = x\), \(g(x)=-x.\)
 \(D={\mathbb{R}}\), \(f(x) = x\), \(g(x)=1.\)

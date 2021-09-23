@@ -1,43 +1,42 @@
-%NOPARTIALANSWERS
-%NOPARTIALCREDIT
+%NOPARTIAL
 True or false: Every monotone sequence is convergent.
 %BR
-%RADIO                                                                          
+%RADIO
 True
 %CORRECT False
 %END
 
 True or false: A sequence that is both monotone increasing and monotone decreasing is constant.
 %BR
-%RADIO                                                                          
+%RADIO
 %CORRECT True
 False
 %END
 
 True or false: A sequence is bounded if and only if its \(K\)-tail is bounded for some \(K \in {\mathbb{N}}.\)
 %BR
-%RADIO                                                                          
+%RADIO
 %CORRECT True
 False
 %END
 
 True or false: A sequence that has a convergent subsequence is convergent.
 %BR
-%RADIO                                                                          
+%RADIO
 True
 %CORRECT False
 %END
 
 True or false: A sequence is unbounded if and only if there exists an unbounded subsequence.
 %BR
-%RADIO                                                                          
+%RADIO
 %CORRECT True
 False
 %END
 
 True or false: A sequence is unbounded if and only if every subsequence is unbounded.
 %BR
-%RADIO                                                                          
+%RADIO
 True
 %CORRECT False
 %END

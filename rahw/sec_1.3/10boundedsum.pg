@@ -141,6 +141,8 @@ Context()->normalStrings;
 ##############################################################
 #  Answers
 
+install_problem_grader(~~&std_problem_grader);
+
 ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());

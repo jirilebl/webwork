@@ -1,5 +1,4 @@
-%NOPARTIALANSWERS
-%NOPARTIALCREDIT
+%NOPARTIAL
 True or false:
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
 \(\displaystyle \sum_{n=1}^\infty x_{n+1}\) converges.

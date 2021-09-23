@@ -1,5 +1,4 @@
-%NOPARTIALANSWERS
-%NOPARTIALCREDIT
+%NOPARTIAL
 %FORMULAVARS n
 Suppose \( x_n = \frac{(-1)^n}{n} . \)  (Note: The sequence \($LB x_n $RB\) is Cauchy as it converges)
 
