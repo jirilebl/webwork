@@ -2,5 +2,6 @@ openDate = 01/01/19, 0600
 dueDate = 01/01/29, 2359
 answerDate = 01/01/29, 2359
 problemList =
-rahw/sec_1.3/05bestboundfunc.pg,	1
-rahw/sec_1.3/10boundedsum.pg,	1
+rahw/ra_1.1/05orderedsettf.pg,	1
+rahw/ra_1.1/10inf1.pg,	1
+rahw/ra_1.1/15prop118vi.pg,	1
