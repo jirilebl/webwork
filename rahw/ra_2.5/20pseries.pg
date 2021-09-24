@@ -136,6 +136,7 @@ compare to the series \(\displaystyle \sum_{n=1}^\infty \frac{1}{2n^2},\) which
 we know converges by the \(p\)-series test.
 Which one of the estimates is the correct one to use in comparison test?
 $BR
+$BR
 END_TEXT
 Context()->normalStrings;
 

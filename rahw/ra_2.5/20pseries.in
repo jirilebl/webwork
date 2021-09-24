@@ -46,6 +46,7 @@ compare to the series \(\displaystyle \sum_{n=1}^\infty \frac{1}{2n^2},\) which
 we know converges by the \(p\)-series test.
 Which one of the estimates is the correct one to use in comparison test?
 %BR
+%BR
 %RADIO
 \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2+1} \leq \sum_{n=1}^\infty \frac{1}{2n^2}\)$BR$BR
 \(\displaystyle \sum_{n=1}^k \frac{1}{n^2+1} \leq \sum_{n=1}^k \frac{1}{2n^2}\) for all \(k\)$BR$BR
