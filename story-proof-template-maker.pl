@@ -3,8 +3,15 @@
 # See storyexample.in for an example.  Then run
 # ./story-proof-template-maker.pl storyexample.in > out.pg
 #
+$allowinc = 1;
 
-open(my $in, '<', $ARGV[0]) or die $!;
+my $in;
+
+if ($#ARGV >= 0) {
+	open($in, '<', $ARGV[0]) or die $!;
+} else {
+	$in  = *STDIN;
+}
 
 $qnum = 0;
 $qcheckers[0] = "";
@@ -40,7 +47,7 @@ while ($line = <$in>) {
 	} elsif ($line =~ m/^%DESC[ \t]*(.*)$/) {
 		$header .= "##DESCRIPTION\n## $1\n##ENDDESCRIPTION\n\n";
 	# If making an online version, this needs to be removed
-	} elsif ($line =~ m/^%HINC[ \t]*(.*)$/) {
+	} elsif ($allowinc and $line =~ m/^%HINC[ \t]*(.*)$/) {
 		if (open(my $headin, '<', $1)) {
 			$header .= do { local $/; <$headin> };
 			close($headin);
