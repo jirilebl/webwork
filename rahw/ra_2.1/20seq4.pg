@@ -1,3 +1,21 @@
+##DESCRIPTION
+## Proof that an eventually constant sequence converges
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(5)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('2.1')
+## Problem1('')
+
+######################################################
+
 DOCUMENT();
 
 loadMacros(
@@ -26,7 +44,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 Let \($LB x_n $RB\) be a sequence and \(x \in \mathbb{R}\) such that
-there exists a \(k \in \mathbb{N}\) such that for all \(n \geq k\),
+there exists a \(k \in \mathbb{N}\) such that for all \(n \geq k,\)
 \(x_n = x.\)  Prove that \($LB x_n $RB\) converges to \(x.\)
 $PAR
 END_TEXT
@@ -63,8 +81,8 @@ to the right, putting them in the correct order.  There could be extras.) $EITAL
 END_TEXT
 Context()->normalStrings;
 
-##############################################################
-#  Answers
+############################
+# Answers
 
 ANS($q1->cmp());
 

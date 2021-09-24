@@ -23,16 +23,27 @@ $out = "";
 
 $setvars = "";
 $setup = "";
+$header = "";
 
 while ($line = <$in>) {
 	chomp($line);
-	if ($line =~ m/^%NOPARTIALANSWERS/) {
+	if ($line eq "%NOPARTIALANSWERS") {
 		$partialanswers = 0;
-	} elsif ($line =~ m/^%NOPARTIALCREDIT/) {
+	} elsif ($line eq "%NOPARTIALCREDIT") {
 		$nopartialcredit = 1;
-	} elsif ($line =~ m/^%NOPARTIAL[ \t]*$/) {
+	} elsif ($line eq "%NOPARTIAL") {
 		$partialanswers = 0;
 		$nopartialcredit = 1;
+	} elsif ($line =~ m/^%DESC[ \t]*(.*)$/) {
+		$header .= "##DESCRIPTION\n## $1\n##ENDDESCRIPTION\n\n";
+	# If making an online version, this needs to be removed
+	} elsif ($line =~ m/^%HINC[ \t]*(.*)$/) {
+		if (open(my $headin, '<', $1)) {
+			$header .= do { local $/; <$headin> };
+			close($headin);
+		}
+	} elsif ($line =~ m/^%H *(.*)$/) {
+		$header .= "$1\n";
 	} elsif ($line =~ m/^%PROOF/) {
 		$haveproofs = 1;
 		if ($line =~ m/^%PROOFHINT/) {
@@ -148,11 +159,11 @@ EOF
 				}
 			}
 		}
-	} elsif ($line =~ m/^%SETUP[ \t]*(.*)$/) {
+	} elsif ($line =~ m/^%SETUP[ \t][ \t]*(.*)$/ or $line =~ m/^%S[ \t][ \t]*(.*)$/) {
 		$setup .= "$1\n";
-	} elsif ($line =~ m/^%RULEWIDTH [ \t]*([0-9]*)$/) {
+	} elsif ($line =~ m/^%RULEWIDTH[ \t][ \t]*([0-9]*)$/) {
 		$rulewidth = int($1);
-	} elsif ($line =~ m/^%NUMBER [ \t]*(.*)$/) {
+	} elsif ($line =~ m/^%NUMBER[ \t][ \t]*(.*)$/) {
 		$qnum++;
 		$numbers++;
 		$answer = $1;
@@ -171,13 +182,13 @@ BEGIN_TEXT
 \\{ ans_rule($rw) \\}
 \\{ AnswerFormatHelp("numbers") \\}
 EOF
-	} elsif ($line =~ m/^%FORMULAVARS ([a-zA-Z,]*)[ \t]*$/) {
+	} elsif ($line =~ m/^%FORMULAVARS[ \t][ \t]*([a-zA-Z,]*)[ \t]*$/) {
 		$vars = $1;
 		$vars =~ s/,$//;
 		$vars =~ s/,/=>"Real",/g;
 		$vars .= "=>\"Real\"";
 		$setvars = "Context()->variables->are($vars);\n"
-	} elsif ($line =~ m/^%FORMULA [ \t]*(.*)$/) {
+	} elsif ($line =~ m/^%FORMULA[ \t][ \t]*(.*)$/) {
 		$qnum++;
 		$formulas++;
 		$answer = $1;
@@ -207,6 +218,12 @@ EOF
 
 
 # Print header
+if ($header ne "") {
+	print $header;
+	print "\n";
+	print "######################################################\n\n";
+}
+
 print << "EOF";
 DOCUMENT();
 
@@ -255,8 +272,8 @@ print << 'EOF';
 END_TEXT
 Context()->normalStrings;
 
-##############################################################
-#  Answers
+############################
+# Answers
 
 EOF
 
@@ -269,3 +286,5 @@ for (my $i=1; $i <= $qnum; $i++) {
 }
 
 print("\nENDDOCUMENT();\n");
+
+close($in);

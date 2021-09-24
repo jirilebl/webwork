@@ -1,3 +1,5 @@
+%DESC Prove Proposition 1.2.8 from the Basic Analysis book
+%HINC head.txt
 Prove Proposition 1.2.8 from [1]:
 If \(S \subset \mathbb{R}\) is nonempty and bounded above,
 then for every \(\epsilon > 0\) there exists an \(x \in S\) such
@@ -16,4 +18,4 @@ Take \(x = (\sup \, S)-1.\)
 As \(y < \sup \, S\), we have \( x > y .\)
 %END
 
-[1] J. Lebl, $BITALIC Basic Analysis : Introduction to Analysis $EITALIC
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC

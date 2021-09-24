@@ -1,3 +1,5 @@
+%DESC Explicit computations of M given epsilon
+%HINC head.txt
 Consider the sequence \($LB x_n $RB = \left$LB \frac{n+1}{n} \right$RB\).
 
 Let \(L\) be the limit of this sequence.  What is it?

@@ -1,3 +1,5 @@
+%DESC Limits of sequences
+%HINC head.txt
 %NOPARTIAL
 %FORMULAVARS DNE
 Consider the sequence \(\left$LB \frac{n\cos(n)+1}{n} \right$RB \text{.}\)

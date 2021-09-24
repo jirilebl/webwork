@@ -1,3 +1,5 @@
+%DESC True/False questions on sequences
+%HINC head.txt
 %NOPARTIAL
 True or false: Every bounded sequence is convergent.
 %BR

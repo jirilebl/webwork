@@ -1,3 +1,5 @@
+%DESC Series with an explicit partial sum
+%HINC head.txt
 %NOPARTIAL
 %FORMULAVARS n,DNE
 Consider the series

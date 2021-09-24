@@ -114,6 +114,7 @@ We can randomize by adding some setup and using that.
 Note that setup is always put at the top of the file!
 It can really be kind of anything.
 %SETUP $a=random(2,9,1);
+You can also use %S as shorthand for %SETUP.
 
 What's 2 times \{$a\}?
 %NUMBER 2*$a
@@ -132,3 +133,12 @@ If you want to go back to the defaults just set rule width to 0.
 Now the number field will be again 20-wide.
 
 %NUMBER 42
+
+You can also include the standard description headers by "%H text here".
+The "%DESC Description here" line would expand to
+the BEGINDESCRIPTION/ENDDESCRIPTION comment.
+Headers are put at the very very top of the output no matter
+where they are in your input.
+
+A header file can be included with "%HINC file.txt" (but not in the
+online version of this script).

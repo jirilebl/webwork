@@ -1,3 +1,5 @@
+%DESC Proof that a certain sequence is Cauchy
+%HINC head.txt
 Suppose that \( $LB x_n $RB \) is a sequence such that whenever \( k \leq m , \) we have
 \( |x_k - x_m| < \frac{1}{k} . \)
 Prove that \( $LB x_n $RB \) is Cauchy.

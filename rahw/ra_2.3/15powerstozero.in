@@ -1,3 +1,5 @@
+%DESC Proof of a version of ratio test
+%HINC head.txt
 Let \($LB x_n $RB\) be a bounded sequence of nonnegative
 numbers such that
 \(\limsup \, x_n < 1 .\)  Prove that 

@@ -1,3 +1,21 @@
+##DESCRIPTION
+## Proof that composition is injective
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(5)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('0.3')
+## Problem1('')
+
+######################################################
+
 DOCUMENT();
 
 loadMacros(
@@ -62,8 +80,8 @@ to the right, putting them in the correct order.) $EITALIC
 END_TEXT
 Context()->normalStrings;
 
-##############################################################
-#  Answers
+############################
+# Answers
 
 ANS($q1->cmp());
 

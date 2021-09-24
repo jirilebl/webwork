@@ -1,3 +1,21 @@
+##DESCRIPTION
+## Working through the non-Cauchy sequence example given by the harmonic series
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(5)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('2.5')
+## Problem1('')
+
+######################################################
+
 DOCUMENT();
 
 loadMacros(
@@ -107,8 +125,8 @@ to the right, putting them in the correct order.  There could be extras.) $EITAL
 END_TEXT
 Context()->normalStrings;
 
-##############################################################
-#  Answers
+############################
+# Answers
 
 install_problem_grader(~~&std_problem_grader);
 

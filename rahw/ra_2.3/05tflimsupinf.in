@@ -1,3 +1,5 @@
+%DESC True/false questions on liminf and limsup
+%HINC head.txt
 %NOPARTIAL
 True or false:
 If \($LB x_n $RB\) is a bounded sequence and
@@ -52,7 +54,6 @@ a subset of \($LB x_n : n \in {\mathbb{N}} $RB.\)
 True
 %CORRECT False
 %END
-
 
 True or false:
 Let \($LB x_n $RB\) be a bounded sequence and

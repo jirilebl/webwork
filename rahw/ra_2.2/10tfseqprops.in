@@ -1,3 +1,5 @@
+%DESC True/false questions on sequence properties
+%HINC head.txt
 %NOPARTIAL
 True or false:
 If \(x_n > 0\) for all \(n\) and \(\lim \, x_n\) exists, then

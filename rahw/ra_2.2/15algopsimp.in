@@ -1,3 +1,5 @@
+%DESC Compute and prove a simple limit by using algebraic operations
+%HINC head.txt
 %NOPARTIAL
 Prove that \($LB \frac{2n^2-n}{n^2+1} $RB\) converges to
 %NUMBER 2

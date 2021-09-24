@@ -1,3 +1,5 @@
+%DESC User Archimedean property on one over n squared
+%HINC head.txt
 Prove that if \(t > 0,\) then there exists an \(n \in {\mathbb{N}}\) such that
 \(\frac{1}{n^2} < t.\)
 

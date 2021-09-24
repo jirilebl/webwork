@@ -1,3 +1,5 @@
+%DESC True/false questions on ordered sets
+%HINC head.txt
 %NOPARTIAL
 True or false:
 If \(S\) is a nonempty finite ordered set, then \(\sup S\) exists and \(\sup S \in S.\)

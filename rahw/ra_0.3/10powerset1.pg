@@ -1,99 +1,128 @@
-# Template for checkboxes (all that apply) 
+##DESCRIPTION
+## Multiple choice questions about power sets, and computing the size of the power set
+##ENDDESCRIPTION
 
-########################################################################
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(5)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('0.3')
+## Problem1('')
 
-DOCUMENT();      
+######################################################
+
+DOCUMENT();
 
 loadMacros(
-  "PGstandard.pl",
-  "MathObjects.pl",
-  "parserRadioButtons.pl",
-  "PGcourse.pl"
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
 );
-
-##############################################################
-#  Setup
 
 TEXT(beginproblem());
 
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
 Context("Numeric");
+
 
 $n = random(5,9,1);
 $ans = Compute("2^($n)");
 
-$radio1 = RadioButtons(
-  ["\(\emptyset\)",
-   "\($LB \emptyset $RB\)",
-   "\($LB \emptyset , $LB \emptyset $RB $RB\)",
-   "\($LB $LB \emptyset $RB $RB\)",
-   "None of these"],
-  "\($LB \emptyset $RB\)", # correct answer
-);
+############################
+# Main text
 
-
-$radio2 = RadioButtons(
-  ["\($LB \emptyset $RB\)",
-   "\($LB a,b $RB\)",
-   "\($LB \emptyset , a, b $RB\)",
-   "\($LB $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
-   "\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
-   "None of these"],
-  "\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)", # correct answer
-);
-
-
-$radio3 = RadioButtons(
-  ["Yes",
-   "No",
-   "Depends on what \(X\) is",
-   "None of these"],
-  "Yes", # correct answer
-);
-
-##############################################################
-#  Text
-
+Context()->texStrings;
 BEGIN_TEXT
 $PAR
 What is the power set of \( \emptyset \)?
 $BR
-\{ $radio1->buttons() \}
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"\(\emptyset\)",
+"\($LB \emptyset $RB\)",
+"\($LB \emptyset , $LB \emptyset $RB $RB\)",
+"\($LB $LB \emptyset $RB $RB\)",
+"None of these",
+],
+"\($LB \emptyset $RB\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
 
 $PAR
 What is the power set of \( $LB a,b $RB \)?
 $BR
-\{ $radio2->buttons() \}
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"\($LB \emptyset $RB\)",
+"\($LB a,b $RB\)",
+"\($LB \emptyset , a, b $RB\)",
+"\($LB $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
+"\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
+"None of these"],",
+],
+"\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
 
 $PAR
 If \(X\) is a set, is \(X\) a member of the powerset of \(X\)?
 $BR
-\{ $radio3->buttons() \}
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"Yes",
+"No",
+"Depends on what \(X\) is",
+"None of these",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
 
 $PAR
 The power set of \( $LB 1,2,\ldots,\{ $n \} $RB \) has how many elements?
 $BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("$ans");
+
+Context()->texStrings;
+BEGIN_TEXT
 \{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
 
 END_TEXT
+Context()->normalStrings;
 
-##############################################################
-#  Answers
+############################
+# Answers
 
-install_problem_grader(~~&std_problem_grader);
-$showPartialCorrectAnswers = 0;
-
-ANS( $radio1->cmp() );
-ANS( $radio2->cmp() );
-ANS( $radio3->cmp() );
-ANS( $ans->cmp() );
-
-##############################################################
-
-#BEGIN_SOLUTION
-#Solution here
-#END_SOLUTION
-
-##############################################################
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
 
 ENDDOCUMENT();
-

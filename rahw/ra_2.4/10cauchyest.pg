@@ -1,3 +1,21 @@
+##DESCRIPTION
+## Explicit computation of the M for Cauchy
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(5)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('2.4')
+## Problem1('')
+
+######################################################
+
 DOCUMENT();
 
 loadMacros(
@@ -75,8 +93,8 @@ $PAR
 END_TEXT
 Context()->normalStrings;
 
-##############################################################
-#  Answers
+############################
+# Answers
 
 install_problem_grader(~~&std_problem_grader);
 

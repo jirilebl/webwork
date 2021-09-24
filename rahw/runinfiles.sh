@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for n in sec_* ; do
+for n in ra_* ; do
 	cd $n
 	echo
 	echo '=================='

@@ -1,5 +1,20 @@
-###########################
-# Initialization
+##DESCRIPTION
+## Computing infs/sups of sets after algebraic operations
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(5)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('1.2')
+## Problem1('')
+
+######################################################
 
 DOCUMENT();
 

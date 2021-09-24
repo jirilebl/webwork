@@ -1,3 +1,21 @@
+##DESCRIPTION
+## Explicit computations of M given epsilon
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(5)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('2.1')
+## Problem1('')
+
+######################################################
+
 DOCUMENT();
 
 loadMacros(
@@ -83,8 +101,8 @@ BEGIN_TEXT
 END_TEXT
 Context()->normalStrings;
 
-##############################################################
-#  Answers
+############################
+# Answers
 
 ANS($q1->cmp());
 ANS($q2->cmp());

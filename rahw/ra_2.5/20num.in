@@ -1,3 +1,5 @@
+%DESC Computing some explicit numbers for series
+%HINC head.txt
 %NOPARTIAL
 %FORMULAVARS DNE
 Denote by \(s_k\) the partial sum of a series from \(n=1\) to \(n=k .\)

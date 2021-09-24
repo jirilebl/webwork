@@ -1,3 +1,5 @@
+%DESC Picking correct statements about infs and sups
+%HINC head.txt
 %NOPARTIAL
 Let \(A \subset \mathbb{R}\) is a set such that \(x < 1 \) for all \(x \in A.\)
 What is the only definitely correct statement?

@@ -1,3 +1,5 @@
+%DESC Proof that a sequence converges using ratio test
+%HINC head.txt
 %NOPARTIAL
 Prove that \(\left$LB \frac{n^2}{2^n} \right$RB\) converges to
 %NUMBER 0

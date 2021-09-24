@@ -1,5 +1,7 @@
+%DESC Proof that an eventually constant sequence converges
+%HINC head.txt
 Let \($LB x_n $RB\) be a sequence and \(x \in \mathbb{R}\) such that
-there exists a \(k \in \mathbb{N}\) such that for all \(n \geq k\),
+there exists a \(k \in \mathbb{N}\) such that for all \(n \geq k,\)
 \(x_n = x.\)  Prove that \($LB x_n $RB\) converges to \(x.\)
 
 %PROOF
