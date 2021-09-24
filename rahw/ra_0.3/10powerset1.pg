@@ -75,7 +75,7 @@ $q2 = RadioButtons([
 "\($LB \emptyset , a, b $RB\)",
 "\($LB $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
 "\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
-"None of these"],",
+"None of these",
 ],
 "\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
 );

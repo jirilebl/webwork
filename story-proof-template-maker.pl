@@ -99,6 +99,7 @@ EOF
 			} elsif ($line eq "") {
 				# Do nothing on empty line
 			} else {
+				$line =~ s/"/\\"/g;
 				$out .= "\"$line\",\n";
 			}
 		}
@@ -124,6 +125,7 @@ EOF
 		while ($line = <$in>) {
 			chomp($line);
 			if ($line =~ s/^%CORRECT *//) {
+				$line =~ s/"/\\"/g;
 				$out .= "\"$line\",\n";
 				$correct = $line;
 				$optnum++;
@@ -151,6 +153,7 @@ EOF
 			} elsif ($line eq "") {
 				# Do nothing on empty line
 			} else {
+				$line =~ s/"/\\"/g;
 				$out .= "\"$line\",\n";
 				$optnum++;
 				if ($optnum == 1) {

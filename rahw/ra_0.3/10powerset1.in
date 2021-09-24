@@ -20,7 +20,7 @@ What is the power set of \( $LB a,b $RB \)?
 \($LB \emptyset , a, b $RB\)
 \($LB $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)
 %CORRECT \($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)
-None of these"],
+None of these
 %END
 
 If \(X\) is a set, is \(X\) a member of the powerset of \(X\)?

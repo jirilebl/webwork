@@ -7,7 +7,7 @@ Your proof must start with one of the starred statements, that is, statements st
 
 %PROOFHINT
 (*) Since \( x > 0 \) and \( x < y ,\) then by (iii) we have \(x^2 < xy .\)
-By transitivity, \(0 < x < y\) implies \(0 < y\).",
+By transitivity, \(0 < x < y\) implies \(0 < y.\)
 Since \( y > 0 \) and \( x < y , \) then by (iii) we have \(xy < y^2.\)
 As \(x^2 < xy\) and \(xy < y^2,\) transitivity implies \(x^2 < y^2.\)
 %EXTRA
