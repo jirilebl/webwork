@@ -83,7 +83,7 @@ BEGIN_TEXT
 $PAR
 Note that
 \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2}\)
-converges to \(\frac{\pi^2}{6}.\)
+converges to \(\dfrac{\pi^2}{6}.\)
 What does
 \(\displaystyle \sum_{n=1}^\infty \left(\frac{1}{n^2} + \frac{1}{(n+1)^2}\right)\)
 converge to.  Type "pi" for \(\pi\) and use DNE if it doesn't converge.
