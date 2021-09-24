@@ -51,7 +51,7 @@ Context()->normalStrings;
 
 $q1 = DraggableProof([
 "Suppose \(B > 0\) is such that \( \lvert x_n \rvert \leq B \) for all \( n \in \mathbb{N} \text{.}\)",
-"Let \(K = 2B\text{.}\)",
+"Let \(K := 2B\text{.}\)",
 "We have \( 0 \leq \left\lvert \left(\frac{x_n}{K}\right)^n\right\rvert \)",
 "\( \qquad = \left(\frac{\lvert x_n \rvert}{K}\right)^n \)",
 "\( \qquad \leq \left(\frac{B}{K}\right)^n \)",
@@ -64,8 +64,8 @@ $q1 = DraggableProof([
 "\( \qquad \leq 2^n \)",
 "\( \qquad \leq 1 \)",
 "As \(2^n\) goes to \(0\text{,}\) the Squeeze Lemma says",
-"Let \(K = B\text{.}\)",
-"Let \(K = \frac{2}{B}\text{.}\)",
+"Let \(K := B\text{.}\)",
+"Let \(K := \frac{2}{B}\text{.}\)",
 ],
 
 SourceLabel => "Choose from these statements",

@@ -59,9 +59,9 @@ $q1 = DraggableProof([
 "As \(\sup \, S\) is an upper bound, we also have \(x \leq \sup \, S.\)",
 ],
 [
-"Let \(y=\inf \,S.\)",
-"Set \(\epsilon = 1.\)",
-"Take \(x = (\sup \, S)-1.\)",
+"Let \(y:=\inf \,S.\)",
+"Set \(\epsilon := 1.\)",
+"Take \(x := (\sup \, S)-1.\)",
 "As \(y < \sup \, S\), we have \( x > y .\)",
 ],
 

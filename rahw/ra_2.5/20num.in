@@ -1,19 +1,19 @@
-%DESC Computing some explicit numbers for series
+%DESC Some questions on p-series and comparisons
 %HINC head.txt
 %NOPARTIAL
 %FORMULAVARS DNE
 Denote by \(s_k\) the partial sum of a series from \(n=1\) to \(n=k .\)
 For the series
-\(\displaystyle \sum_{n=1}^\infty \frac{2}{3^n}, \) what is
+\(\displaystyle \sum_{n=1}^\infty \frac{2}{n^2}, \) what is
 %BR
 \(s_1={}\)
-%NUMBER 2/3
+%NUMBER 2/1
 %BR
 \(s_2={}\)
-%NUMBER 2/3+2/9
+%NUMBER 2/1+2/4
 %BR
 \(s_3={}\)
-%NUMBER 2/3+2/9+2/27
+%NUMBER 2/1+2/4+2/9
 
 Note that
 \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2}\)
@@ -26,14 +26,17 @@ converge to.  Type "pi" for \(\pi\) and use DNE if it doesn't converge.
 
 The series
 \(\displaystyle \sum_{n=1}^\infty \frac{n}{n^3+n-1}\)
-behaves like the \(p\)-series for what \(p\):
+behaves like the \(p\)-series for what \(p\)?
 %BR
 \(p={}\)
 %NUMBER 2
+%BR
+(By "behaves like," we mean that for very large \(n,\) the terms of the series
+get relatively close to a constant multiple of the terms of some \(p\)-series.)
 
 The series
 \(\displaystyle \sum_{n=1}^\infty \frac{n^2}{n^3+n-1}\)
-behaves like the \(p\)-series for what \(p\):
+behaves like the \(p\)-series for what \(p\)?
 %BR
 \(p={}\)
 %NUMBER 1

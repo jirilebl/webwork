@@ -62,6 +62,7 @@ $q1 = DraggableProof([
 "So for all \(n,\) we have \(x_n^2 < x_n.\)",
 "Thus, there exists \(M\) such that for all \(n \geq M\), we have \(x_n < \epsilon.\)",
 "By the ratio test, \(\displaystyle\sum_{n=M}^\infty x_n^2\) converges absolutely.",
+"Let \(M:=1.\)",
 ],
 
 SourceLabel => "Choose from these statements",

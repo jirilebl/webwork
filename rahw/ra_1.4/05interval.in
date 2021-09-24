@@ -39,13 +39,13 @@ False
 Which one of the following is a bijection \(f \colon (0,1) \to {\mathbb{R}}\) (if one exists):
 %BR
 %RADIORANDOM
-%CORRECT \( f(x) = \frac{1}{x}+\frac{1}{x-1} \)
-\( f(x) = \frac{1}{x(x-1)} \)
-\( f(x) = \tan\left(\frac{x \pi}{2}\right) \)
-\( f(x) = \frac{1}{2}+\frac{\operatorname{arctan}(x)}{\pi} \)
-\( f(x) = \frac{2 \operatorname{arctan}(x)}{\pi} \)
-\( f(x) = \frac{1}{x} \)
-\( f(x) = x \)
+%CORRECT \( f(x) := \frac{1}{x}+\frac{1}{x-1} \)
+\( f(x) := \frac{1}{x(x-1)} \)
+\( f(x) := \tan\left(\frac{x \pi}{2}\right) \)
+\( f(x) := \frac{1}{2}+\frac{\operatorname{arctan}(x)}{\pi} \)
+\( f(x) := \frac{2 \operatorname{arctan}(x)}{\pi} \)
+\( f(x) := \frac{1}{x} \)
+\( f(x) := x \)
 %ENDRANDOM
 None of these.
 No bijection exists.

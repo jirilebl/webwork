@@ -130,18 +130,18 @@ Context()->normalStrings;
 
 $q6 = RadioButtons([
 [
-"\( f(x) = \frac{1}{x}+\frac{1}{x-1} \)",
-"\( f(x) = \frac{1}{x(x-1)} \)",
-"\( f(x) = \tan\left(\frac{x \pi}{2}\right) \)",
-"\( f(x) = \frac{1}{2}+\frac{\operatorname{arctan}(x)}{\pi} \)",
-"\( f(x) = \frac{2 \operatorname{arctan}(x)}{\pi} \)",
-"\( f(x) = \frac{1}{x} \)",
-"\( f(x) = x \)",
+"\( f(x) := \frac{1}{x}+\frac{1}{x-1} \)",
+"\( f(x) := \frac{1}{x(x-1)} \)",
+"\( f(x) := \tan\left(\frac{x \pi}{2}\right) \)",
+"\( f(x) := \frac{1}{2}+\frac{\operatorname{arctan}(x)}{\pi} \)",
+"\( f(x) := \frac{2 \operatorname{arctan}(x)}{\pi} \)",
+"\( f(x) := \frac{1}{x} \)",
+"\( f(x) := x \)",
 ],
 "None of these.",
 "No bijection exists.",
 ],
-"\( f(x) = \frac{1}{x}+\frac{1}{x-1} \)",
+"\( f(x) := \frac{1}{x}+\frac{1}{x-1} \)",
 );
 Context()->texStrings;
 BEGIN_TEXT

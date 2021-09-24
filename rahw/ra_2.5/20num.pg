@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Computing some explicit numbers for series
+## Some questions on p-series and comparisons
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -46,13 +46,13 @@ BEGIN_TEXT
 $PAR
 Denote by \(s_k\) the partial sum of a series from \(n=1\) to \(n=k .\)
 For the series
-\(\displaystyle \sum_{n=1}^\infty \frac{2}{3^n}, \) what is
+\(\displaystyle \sum_{n=1}^\infty \frac{2}{n^2}, \) what is
 $BR
 \(s_1={}\)
 END_TEXT
 Context()->normalStrings;
 
-$q1 = Formula("2/3");
+$q1 = Formula("2/1");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -63,7 +63,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q2 = Formula("2/3+2/9");
+$q2 = Formula("2/1+2/4");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -74,7 +74,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q3 = Formula("2/3+2/9+2/27");
+$q3 = Formula("2/1+2/4+2/9");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -100,7 +100,7 @@ BEGIN_TEXT
 $PAR
 The series
 \(\displaystyle \sum_{n=1}^\infty \frac{n}{n^3+n-1}\)
-behaves like the \(p\)-series for what \(p\):
+behaves like the \(p\)-series for what \(p\)?
 $BR
 \(p={}\)
 END_TEXT
@@ -112,10 +112,13 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
+$BR
+(By "behaves like," we mean that for very large \(n,\) the terms of the series
+get relatively close to a constant multiple of the terms of some \(p\)-series.)
 $PAR
 The series
 \(\displaystyle \sum_{n=1}^\infty \frac{n^2}{n^3+n-1}\)
-behaves like the \(p\)-series for what \(p\):
+behaves like the \(p\)-series for what \(p\)?
 $BR
 \(p={}\)
 END_TEXT

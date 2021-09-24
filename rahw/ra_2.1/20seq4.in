@@ -6,13 +6,13 @@ there exists a \(k \in \mathbb{N}\) such that for all \(n \geq k,\)
 
 %PROOF
 Let \(\epsilon > 0\) be given.
-Let \(M = k.\)
+Let \(M := k.\)
 Then for all \(n \geq M = k,\) we have \(|x_n-x| = 0 < \epsilon.\)
 Therefore, \($LB x_n $RB\) converges to \(x.\)
 %EXTRA
 For all \(n \in {\mathbb{N}},\) we have \(|x_n-x| = 0 < \epsilon.\)
-Let \(M = k-1 .\)
-Let \(x_k = x .\)
+Let \(M := k-1 .\)
+Let \(x_k := x .\)
 Suppose \(x=1.\)
 Suppose \(x_n=x\) for all \(n.\)
 We have \(|x_n-x| = \epsilon\) for all \(n \geq k.\)

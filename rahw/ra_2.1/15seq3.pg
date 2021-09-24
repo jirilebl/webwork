@@ -42,7 +42,7 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Consider the sequence \($LB x_n $RB = \left$LB \frac{n+1}{n} \right$RB\).
+Consider the sequence \($LB x_n $RB\) given by \(x_n := \frac{n+1}{n}.\)
 $PAR
 Let \(L\) be the limit of this sequence.  What is it?
 $BR

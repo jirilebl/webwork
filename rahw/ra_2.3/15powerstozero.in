@@ -5,8 +5,8 @@ numbers such that
 \(\limsup \, x_n < 1 .\)  Prove that 
 \($LB (x_{n})^n $RB\) converges to zero.
 
-In the following proof, write \(a=\limsup \, x_n ,\) and
-let \(a_n = \sup $LB x_k : k \geq n $RB \) as usual.
+In the following proof, write \(a:=\limsup \, x_n ,\) and
+let \(a_n := \sup $LB x_k : k \geq n $RB \) as usual.
 
 %PROOF
 Given \(\epsilon > 0,\) find \(M\) such that \(a_n < 1-\epsilon \) for all \(n \geq M .\)
