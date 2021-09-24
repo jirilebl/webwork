@@ -78,6 +78,31 @@ Choice B
 Choice C
 %END
 
+There are also check-all-that-apply type things, always randomized.  First come the correct ones,
+then the extras, you can make one specific thing be always last, otherwise they are all randomized.
+
+%CHECKBOXES
+Correct 1
+Correct 2
+%EXTRA
+Incorrect 1
+%LAST None of the above
+%END
+
+%CHECKBOXES
+Correct 1
+%LAST Correct 2 and always last
+%EXTRA
+Incorrect 1
+%END
+
+%CHECKBOXES
+Correct 1
+Correct 2
+Correct 3
+%END
+
+
 We can also have another proof surely, maybe without any wrong statements
 
 %PROOF

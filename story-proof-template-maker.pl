@@ -7,12 +7,14 @@
 open(my $in, '<', $ARGV[0]) or die $!;
 
 $qnum = 0;
+$qcheckers[0] = "";
 
 $partialanswers = 1;
 $nopartialcredit = 0;
 
 $haveproofs = 0;
 $haveradios = 0;
+$havecheckboxes = 0;
 
 $formulas = 0;
 $numbers = 0;
@@ -24,6 +26,7 @@ $out = "";
 $setvars = "";
 $setup = "";
 $header = "";
+
 
 while ($line = <$in>) {
 	chomp($line);
@@ -52,6 +55,7 @@ while ($line = <$in>) {
 			$hint = 0;
 		}
 		$qnum++;
+		$qcheckers[$qnum-1]="ANS(\$q$qnum\->cmp());\n";
 		$out .= << "EOF";
 END_TEXT
 Context()->normalStrings;
@@ -105,6 +109,7 @@ EOF
 		}
 	} elsif ($line =~ m/^%RADIO/) {
 		$qnum++;
+		$qcheckers[$qnum-1]="ANS(\$q$qnum\->cmp());\n";
 		$haveradios = 1;
 		$correct = "";
 		$inrandom = 0;
@@ -162,12 +167,53 @@ EOF
 				}
 			}
 		}
+	} elsif ($line =~ m/^%CHECKBOXES/) {
+		$qnum++;
+		$qcheckers[$qnum-1]="ANS(checkbox_cmp(\$q$qnum\->correct_ans()));\n";
+		$havecheckboxes = 1;
+		$thelast = "";
+		$out .= << "EOF";
+END_TEXT
+Context()->normalStrings;
+
+\$q$qnum = new_checkbox_multiple_choice();
+\$q$qnum\->qa("Check all that apply",
+EOF
+
+		while ($line = <$in>) {
+			chomp($line);
+			if ($line =~ m/^%EXTRA/) {
+				$out .= ");\n\$q$qnum\->extra(\n";
+			} elsif ($line =~ m/^%END/) {
+				$out .= ");\n";
+				if ($thelast ne "") {
+					$out .= "\$q$qnum\->makeLast(\"$thelast\");\n";
+				}
+				$out .= << "EOF";
+Context()->texStrings;
+BEGIN_TEXT
+\\{ \$q$qnum\->print_a() \\}
+
+EOF
+				last;
+			} elsif ($line eq "") {
+				# Do nothing on empty line
+			} elsif ($line =~ s/^%LAST *//) {
+				$line =~ s/"/\\"/g;
+				$out .= "\"$line\",\n";
+				$thelast = $line;
+			} else {
+				$line =~ s/"/\\"/g;
+				$out .= "\"$line\",\n";
+			}
+		}
 	} elsif ($line =~ m/^%SETUP[ \t][ \t]*(.*)$/ or $line =~ m/^%S[ \t][ \t]*(.*)$/) {
 		$setup .= "$1\n";
 	} elsif ($line =~ m/^%RULEWIDTH[ \t][ \t]*([0-9]*)$/) {
 		$rulewidth = int($1);
 	} elsif ($line =~ m/^%NUMBER[ \t][ \t]*(.*)$/) {
 		$qnum++;
+		$qcheckers[$qnum-1]="ANS(\$q$qnum\->cmp());\n";
 		$numbers++;
 		$answer = $1;
 		$rw = 20;
@@ -193,6 +239,7 @@ EOF
 		$setvars = "Context()->variables->are($vars);\n"
 	} elsif ($line =~ m/^%FORMULA[ \t][ \t]*(.*)$/) {
 		$qnum++;
+		$qcheckers[$qnum-1]="ANS(\$q$qnum\->cmp());\n";
 		$formulas++;
 		$answer = $1;
 		$rw = 40;
@@ -242,6 +289,9 @@ if ($haveproofs) {
 if ($haveradios) {
 	 print " \"parserRadioButtons.pl\",\n";
 }
+if ($havecheckboxes) {
+	 print " \"PGchoicemacros.pl\",\n";
+}
 
 print << "EOF";
  \"PGcourse.pl\",
@@ -284,8 +334,8 @@ if ($nopartialcredit) {
 	print("install_problem_grader(~~&std_problem_grader);\n\n");
 }
 
-for (my $i=1; $i <= $qnum; $i++) {
-	print("ANS(\$q$i\->cmp());\n");
+for (my $i=0; $i < $qnum; $i++) {
+	print($qcheckers[$i]);
 }
 
 print("\nENDDOCUMENT();\n");
