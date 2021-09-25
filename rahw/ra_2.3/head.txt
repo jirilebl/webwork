@@ -3,7 +3,7 @@
 ## DBsection()
 ## Institution(Oklahoma State University)
 ## Author(Jiri Lebl)
-## Level(5)
+## Level(6)
 ## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
 ## AuthorText1('Jiri Lebl')
 ## EditionText1('5')
