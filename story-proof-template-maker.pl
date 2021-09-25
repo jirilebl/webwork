@@ -3,6 +3,9 @@
 # See storyexample.in for an example.  Then run
 # ./story-proof-template-maker.pl storyexample.in > out.pg
 #
+
+# This allows includes into headers with %HINC, this is not safe
+# for a webscript so here is where it is easy to disable.
 $allowinc = 1;
 
 my $in;
@@ -36,6 +39,7 @@ $header = "";
 
 
 while ($line = <$in>) {
+	$line =~ s/[\r\n]+//;
 	chomp($line);
 	if ($line eq "%NOPARTIALANSWERS") {
 		$partialanswers = 0;
@@ -71,6 +75,7 @@ Context()->normalStrings;
 EOF
 		$gotextra = 0;
 		while ($line = <$in>) {
+			$line =~ s/[\r\n]+//;
 			chomp($line);
 			if ($line =~ m/^%EXTRA/) {
 				$gotextra = 1;
@@ -135,6 +140,7 @@ EOF
 		}
 
 		while ($line = <$in>) {
+			$line =~ s/[\r\n]+//;
 			chomp($line);
 			if ($line =~ s/^%CORRECT *//) {
 				$line =~ s/"/\\"/g;
@@ -188,6 +194,7 @@ Context()->normalStrings;
 EOF
 
 		while ($line = <$in>) {
+			$line =~ s/[\r\n]+//;
 			chomp($line);
 			if ($line =~ m/^%EXTRA/) {
 				$out .= ");\n\$q$qnum\->extra(\n";
