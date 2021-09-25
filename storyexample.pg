@@ -1,0 +1,429 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "parserRadioButtons.pl",
+ "PGchoicemacros.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+Context()->variables->are(x=>"Real",y=>"Real",z=>"Real");
+
+$a=random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+This is an example story proof thingie with interspersed questions.  Here's
+some math \(\int_0^1 f(x)\,dx .\)  We can have proofs, radio boxes, check
+boxes, numbers and formulas, including some simple setup.
+$PAR
+That was a paragraph break (leave empty line).  Leaving two empty lines
+gives two paragraph breaks (larger break).  The rest of the syntax is
+like regular WeBWorK syntax (i.e. not PGML).  Normal text just gets
+copied verbatim into the problem file.  So you have to follow WeBWorK
+idiosyncracies such as \( $LB 1,2,3 $RB \) for the braces as slash-brace
+has a meaning in WeBWorK.  You can also do some styling with the standard
+WeBWorK styling with variables.  The next line is bold.
+$PAR
+$PAR
+$BBOLD Proofs $EBOLD
+$PAR
+Proofs require draggableProof.pl to work (presumably from WeBWork 2.16
+onwards this works automatically).
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"First statement",
+"Second statement",
+"Third statement",
+],
+[
+"Extra wrong statement",
+"Another Extra wrong statement",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+$PAR
+We can also have another proof surely, maybe without any wrong statements
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"Statement \(x \not= y\)",
+"Another Statement",
+],
+[],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+$PAR
+And we can add a hint on the number of correct statements
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = DraggableProof([
+"Statement \(x \not= y\)",
+"Another Statement",
+],
+[
+"Wrong statement",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag \{ $q3->numNeeded \} statements from the left column
+to the right, putting them in the correct order.) $EITALIC
+
+\{ $q3->Print \}
+
+$PAR
+$PAR
+$BBOLD Radio buttons $EBOLD
+$PAR
+There are also radio buttons (here with only a linebreak).
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"Wrong 1 (some math \(x^2\))",
+"Wrong 2",
+"Correct",
+"Wrong 3",
+],
+"Correct",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+And another radio thing.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+Here are radio buttons randomized except for the last option which always comes
+last.  And there's a whole paragraph break.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+[
+"Choice A",
+"Choice B",
+"Choice C",
+],
+"None of these",
+],
+"Choice A",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+There is a short version of this since I'm lazy:
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+[
+"Choice A",
+"Choice B",
+"Choice C",
+],
+"None of these",
+],
+"Choice A",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+The %ENDRANDOM is added automatically if needed, so if we want to just
+randomize everything we can write:
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+[
+"Choice A",
+"Choice B",
+"Choice C",
+],
+],
+"Choice A",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+$PAR
+The given first option is taken as the correct answer in case nothing is marked
+as correct, so the following is the same as above, just a bit less readable.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+[
+"Choice A",
+"Choice B",
+"Choice C",
+],
+],
+"Choice A",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+$PAR
+$PAR
+$BBOLD Check all that applies (check boxes) $EBOLD
+$PAR
+There are also check-all-that-applies type things, always randomized.  First
+come the correct ones, then the extras, you can make one specific thing be
+always last, otherwise they are all randomized.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q10 = new_checkbox_multiple_choice();
+$q10->qa("Check all that apply",
+"Correct 1",
+"Correct 2",
+);
+$q10->extra(
+"Incorrect 1",
+"None of the above",
+);
+$q10->makeLast("None of the above");
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q10->print_a() \}
+
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q11 = new_checkbox_multiple_choice();
+$q11->qa("Check all that apply",
+"Correct 1",
+"Correct 2 and always last",
+);
+$q11->extra(
+"Incorrect 1",
+);
+$q11->makeLast("Correct 2 and always last");
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q11->print_a() \}
+
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q12 = new_checkbox_multiple_choice();
+$q12->qa("Check all that apply",
+"Correct 1",
+"Correct 2",
+"Correct 3",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q12->print_a() \}
+
+$PAR
+$PAR
+For radio buttons and checkboxes, if you want to avoid giving hints after
+submit about which parts were correct, put %NOPARTIALANSWERS at the beginning
+of a line.  If you want to give all or nothing rather than partial credit,
+put %NOPARTIALCREDIT at the beginning of a line.  Presumably you'd use the
+first few lines of the file for these.  You can also just use %NOPARTIAL to
+turn on both of these, which is the most common option
+$PAR
+$PAR
+$BBOLD Inputs (formulas, numbers, strings) $EBOLD
+$PAR
+If we want to have formulas, add %FORMULAVARS x,y on a separate line
+where the list is a comma separated (no spaces) list of variable names
+all formulas here will use.
+$PAR
+$PAR
+Then we ask a formula as follows.
+$PAR
+How about a formula
+END_TEXT
+Context()->normalStrings;
+
+$q13 = Formula("x^2+y^2+z^2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+We can also ask for a number:
+$PAR
+How about a number
+END_TEXT
+Context()->normalStrings;
+
+$q14 = Formula("42");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+We can randomize by adding some setup and using that.
+Note that setup is always put at the top of the file!
+It can really be kind of anything.
+You can also use %S as shorthand for %SETUP.
+$PAR
+What's 2 times \{$a\}?
+END_TEXT
+Context()->normalStrings;
+
+$q15 = Formula("2*$a");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Normally the answer rule width is 20 for numbers and 40 for formulas.  With
+the %RULEWIDTH statement you can change it to another width (used for both
+from then on.)  The next rule will be 80-wide.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q16 = Formula("42");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(80) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+If you want to go back to the defaults just set rule width to 0.
+$PAR
+$PAR
+Now the number field will be again 20-wide.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q17 = Formula("42");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+We can also have a string.  Normally whitespace and case is more or less
+ignored, as long as the same words are given so "good bye" and "  Good   BYE "
+would be equivalent, but "goodbye" is not.  By default it is a 40-wide rule.
+$PAR
+\{ ans_rule(40) \}
+$PAR
+$PAR
+$BBOLD Descriptive headers $EBOLD
+$PAR
+You can also include the standard description headers by "%H text here".
+The "%DESC Description here" line would expand to the BEGINDESCRIPTION /
+ENDDESCRIPTION comment.  Headers are put at the very very top of the output no
+matter where they are in your input.
+$PAR
+A header file can be included with "%HINC file.txt" (but not in the online
+version of this script).
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+ANS(checkbox_cmp($q10->correct_ans()));
+ANS(checkbox_cmp($q11->correct_ans()));
+ANS(checkbox_cmp($q12->correct_ans()));
+ANS($q13->cmp());
+ANS($q14->cmp());
+ANS($q15->cmp());
+ANS($q16->cmp());
+ANS($q17->cmp());
+ANS(str_cmp("Good Bye"));
+
+ENDDOCUMENT();

@@ -1,16 +1,17 @@
 This is an example story proof thingie with interspersed questions.  Here's
-some math \(\int_0^1 f(x)\,dx .\)
+some math \(\int_0^1 f(x)\,dx .\)  We can have proofs, radio boxes, check
+boxes, numbers and formulas, including some simple setup.
 
-That was a paragraph break (leave empty line).  The rest of the syntax is
+That was a paragraph break (leave empty line).  Leaving two empty lines
+gives two paragraph breaks (larger break).  The rest of the syntax is
 like regular WeBWorK syntax (i.e. not PGML).  Normal text just gets
-copied verbatim into the problem file.
+copied verbatim into the problem file.  So you have to follow WeBWorK
+idiosyncracies such as \( $LB 1,2,3 $RB \) for the braces as slash-brace
+has a meaning in WeBWorK.  You can also do some styling with the standard
+WeBWorK styling with variables.  The next line is bold.
 
-If you want to avoid giving hints after submit about which parts were correct,
-put %NOPARTIALANSWERS at the beginning of a line.  If you want to give all or
-nothing rather than partial credit, put %NOPARTIALCREDIT at the beginning of a
-line.  Presumably you'd use the first few lines of the file for these.
-You can also just use %NOPARTIAL to turn on both of these, which is the most
-common option
+
+$BBOLD Proofs $EBOLD
 
 Proofs require draggableProof.pl to work (presumably from WeBWork 2.16
 onwards this works automatically).
@@ -24,7 +25,26 @@ Extra wrong statement
 Another Extra wrong statement
 %END
 
-There are also radio buttons with only a linebreak;
+We can also have another proof surely, maybe without any wrong statements
+
+%PROOF
+Statement \(x \not= y\)
+Another Statement
+%END
+
+And we can add a hint on the number of correct statements
+
+%PROOFHINT
+Statement \(x \not= y\)
+Another Statement
+%EXTRA
+Wrong statement
+%END
+
+
+$BBOLD Radio buttons $EBOLD
+
+There are also radio buttons (here with only a linebreak).
 %BR
 %RADIO
 Wrong 1 (some math \(x^2\))
@@ -33,14 +53,15 @@ Wrong 2
 Wrong 3
 %END
 
-And another radio thing
+And another radio thing.
 %BR
 %RADIO
 True
 %CORRECT False
 %END
 
-Here are radio buttons randomized except for the last option which always comes last.  And there's a whole paragraph break
+Here are radio buttons randomized except for the last option which always comes
+last.  And there's a whole paragraph break.
 
 %RADIO
 %BEGINRANDOM
@@ -51,7 +72,7 @@ Choice C
 None of these
 %END
 
-There is a short version of this:
+There is a short version of this since I'm lazy:
 
 %RADIORANDOM
 %CORRECT Choice A
@@ -61,7 +82,8 @@ Choice C
 None of these
 %END
 
-The %ENDRANDOM is added automatically if needed so if we want to just randomize everything we can write:
+The %ENDRANDOM is added automatically if needed, so if we want to just
+randomize everything we can write:
 
 %RADIORANDOM
 %CORRECT Choice A
@@ -69,8 +91,8 @@ Choice B
 Choice C
 %END
 
-The given first option is taken as the correct answer in case nothing is marked as correct, so the following
-is the same as above, just a bit less readable.
+The given first option is taken as the correct answer in case nothing is marked
+as correct, so the following is the same as above, just a bit less readable.
 
 %RADIORANDOM
 Choice A
@@ -78,8 +100,12 @@ Choice B
 Choice C
 %END
 
-There are also check-all-that-apply type things, always randomized.  First come the correct ones,
-then the extras, you can make one specific thing be always last, otherwise they are all randomized.
+
+$BBOLD Check all that applies (check boxes) $EBOLD
+
+There are also check-all-that-applies type things, always randomized.  First
+come the correct ones, then the extras, you can make one specific thing be
+always last, otherwise they are all randomized.
 
 %CHECKBOXES
 Correct 1
@@ -103,21 +129,15 @@ Correct 3
 %END
 
 
-We can also have another proof surely, maybe without any wrong statements
+For radio buttons and checkboxes, if you want to avoid giving hints after
+submit about which parts were correct, put %NOPARTIALANSWERS at the beginning
+of a line.  If you want to give all or nothing rather than partial credit,
+put %NOPARTIALCREDIT at the beginning of a line.  Presumably you'd use the
+first few lines of the file for these.  You can also just use %NOPARTIAL to
+turn on both of these, which is the most common option
 
-%PROOF
-Statement \(x \not= y\)
-Another Statement
-%END
 
-And we can add a hint on the number of correct statements
-
-%PROOFHINT
-Statement \(x \not= y\)
-Another Statement
-%EXTRA
-Wrong statement
-%END
+$BBOLD Inputs (formulas, numbers, strings) $EBOLD
 
 If we want to have formulas, add %FORMULAVARS x,y on a separate line
 where the list is a comma separated (no spaces) list of variable names
@@ -159,11 +179,19 @@ Now the number field will be again 20-wide.
 
 %NUMBER 42
 
-You can also include the standard description headers by "%H text here".
-The "%DESC Description here" line would expand to
-the BEGINDESCRIPTION/ENDDESCRIPTION comment.
-Headers are put at the very very top of the output no matter
-where they are in your input.
+We can also have a string.  Normally whitespace and case is more or less
+ignored, as long as the same words are given so "good bye" and "  Good   BYE "
+would be equivalent, but "goodbye" is not.  By default it is a 40-wide rule.
 
-A header file can be included with "%HINC file.txt" (but not in the
-online version of this script).
+%STRING Good Bye
+
+
+$BBOLD Descriptive headers $EBOLD
+
+You can also include the standard description headers by "%H text here".
+The "%DESC Description here" line would expand to the BEGINDESCRIPTION /
+ENDDESCRIPTION comment.  Headers are put at the very very top of the output no
+matter where they are in your input.
+
+A header file can be included with "%HINC file.txt" (but not in the online
+version of this script).

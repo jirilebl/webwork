@@ -271,6 +271,16 @@ BEGIN_TEXT
 \\{ ans_rule($rw) \\}
 \\{ AnswerFormatHelp("formulas") \\}
 EOF
+	} elsif ($line =~ m/^%STRING[ \t][ \t]*(.*)$/) {
+		$answer = $1;
+		$answer =~ s/"/\\"/g;
+		$qnum++;
+		$qcheckers[$qnum-1]="ANS(str_cmp(\"$answer\"));\n";
+		$rw = 40;
+		if ($rulewidth > 0) {
+			$rw = $rulewidth;
+		}
+		$out .= "\\{ ans_rule($rw) \\}\n";
 	} elsif ($line eq "%BR") {
 		$out .= "\$BR\n";
 	} elsif ($line eq "") {
