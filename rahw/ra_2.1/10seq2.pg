@@ -36,6 +36,7 @@ $showPartialCorrectAnswers = 0;
 Context("Numeric");
 
 
+$a = random(3,8,1);
 
 ############################
 # Main text
@@ -165,7 +166,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-\( \left$LB  \frac{1}{n+5} \right$RB \)
+\( \left$LB  \frac{1}{n+$a} \right$RB \)
 is a tail of 
 \( \left$LB  \frac{1}{n} \right$RB . \)
 $BR

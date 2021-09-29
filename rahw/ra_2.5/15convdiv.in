@@ -1,9 +1,9 @@
 %DESC Deciding on convergence/divergence of series
 %HINC head.txt
 %NOPARTIAL
-%SETUP $a = randint(2,9,1);
-%SETUP $b = randint(2,9,1);
-%SETUP $c = randint(2,9,1);
+%SETUP $a = random(2,9,1);
+%SETUP $b = random(2,9,1);
+%SETUP $c = random(2,9,1);
 Decide on the convergence of the following series.
 
 The series \(\displaystyle\sum_{n=1}^\infty \frac{$a}{n^2+$b} \)

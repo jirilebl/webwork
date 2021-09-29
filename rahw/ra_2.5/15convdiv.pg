@@ -36,9 +36,9 @@ $showPartialCorrectAnswers = 0;
 Context("Numeric");
 
 
-$a = randint(2,9,1);
-$b = randint(2,9,1);
-$c = randint(2,9,1);
+$a = random(2,9,1);
+$b = random(2,9,1);
+$c = random(2,9,1);
 
 ############################
 # Main text

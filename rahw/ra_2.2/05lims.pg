@@ -36,6 +36,7 @@ Context("Numeric");
 
 Context()->variables->are(DNE=>"Real");
 
+$a = random(2,5,1);
 
 ############################
 # Main text
@@ -43,7 +44,7 @@ Context()->variables->are(DNE=>"Real");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Consider the sequence \(\left$LB \frac{n\cos(n)+1}{n} \right$RB \text{.}\)
+Consider the sequence \(\left$LB \frac{n\cos(n)+$a}{n} \right$RB \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -58,7 +59,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 $PAR
-Consider the sequence \(\left$LB \frac{n\cos(n)+1}{n^2} \right$RB \text{.}\)
+Consider the sequence \(\left$LB \frac{n\cos(n)+$a}{n^2} \right$RB \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -73,14 +74,14 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 $PAR
-Consider the sequence \(\left$LB \frac{\cos(n)+n}{n} \right$RB \text{.}\)
+Consider the sequence \(\left$LB \frac{\cos(n)+$a n}{n} \right$RB \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
 END_TEXT
 Context()->normalStrings;
 
-$q3 = Formula("1");
+$q3 = Formula("$a");
 
 Context()->texStrings;
 BEGIN_TEXT

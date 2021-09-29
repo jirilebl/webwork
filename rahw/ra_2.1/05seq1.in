@@ -2,6 +2,10 @@
 %HINC head.txt
 %NOPARTIAL
 %FORMULAVARS DNE
+%SETUP $a = random(2,5,1);
+%SETUP $b = random(2,5,1);
+%SETUP $ab = $a*$b;
+%SETUP $c = random(2,5,1);
 Consider the sequence \(\left$LB \frac{(-1)^n}{n^2} \right$RB\).
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
@@ -30,7 +34,7 @@ Yes
 %END
 
 
-Consider the sequence \(\left$LB \frac{n(-1)^n}{n+1} \right$RB\).
+Consider the sequence \(\left$LB \frac{n(-1)^n}{n+$c} \right$RB\).
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
 %BR
@@ -44,11 +48,11 @@ No
 %END
 
 
-Consider the sequence \(\left$LB \frac{6n}{3n+1} \right$RB\).
+Consider the sequence \(\left$LB \frac{$ab n}{$b n+1} \right$RB\).
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
 %BR
-%NUMBER 2
+%NUMBER $a
 
 Is this sequence bounded?
 %BR

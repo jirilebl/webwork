@@ -2,11 +2,11 @@
 %HINC head.txt
 %NOPARTIAL
 %FORMULAVARS DNE
-%SETUP $a = randint(2,9,1);
-%SETUP $b = randint(2,9,1);
-%SETUP $p = randint(2,5,1);
+%SETUP $a = random(2,9,1);
+%SETUP $b = random(2,9,1);
+%SETUP $p = random(2,5,1);
 %SETUP $ppo = $p+1;
-%SETUP $m = randint(2,5,1);
+%SETUP $m = random(2,5,1);
 %SETUP $mpt = $m+2;
 Denote by \(s_k\) the partial sum of a series from \(n=1\) to \(n=k .\)
 For the series

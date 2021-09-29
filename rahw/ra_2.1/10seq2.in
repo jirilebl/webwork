@@ -1,6 +1,7 @@
 %DESC True/False questions on sequences
 %HINC head.txt
 %NOPARTIAL
+%SETUP $a = random(3,8,1);
 True or false: Every bounded sequence is convergent.
 %BR
 %RADIO
@@ -60,7 +61,7 @@ False
 %END
 
 True or false:
-\( \left$LB  \frac{1}{n+5} \right$RB \)
+\( \left$LB  \frac{1}{n+$a} \right$RB \)
 is a tail of 
 \( \left$LB  \frac{1}{n} \right$RB . \)
 %BR

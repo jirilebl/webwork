@@ -1,6 +1,7 @@
 %DESC True/false questions on sequence properties
 %HINC head.txt
 %NOPARTIAL
+%SETUP $a = random(2,5,1);
 True or false:
 If \(x_n > 0\) for all \(n\) and \(\lim \, x_n\) exists, then
 \(\lim \, x_n > 0\text{.}\)
@@ -22,7 +23,7 @@ True
 %END
 
 True or false:
-If \(\lvert 3x_n \rvert < \frac{1}{n}\) for all \(n\text{,}\)
+If \(\lvert $a x_n \rvert < \frac{1}{n}\) for all \(n\text{,}\)
 then
 \(\lim \, x_n = 0\text{.}\)
 %BR

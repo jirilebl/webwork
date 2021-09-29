@@ -37,6 +37,10 @@ Context("Numeric");
 
 Context()->variables->are(DNE=>"Real");
 
+$a = random(2,5,1);
+$b = random(2,5,1);
+$ab = $a*$b;
+$c = random(2,5,1);
 
 ############################
 # Main text
@@ -106,7 +110,7 @@ BEGIN_TEXT
 
 $PAR
 $PAR
-Consider the sequence \(\left$LB \frac{n(-1)^n}{n+1} \right$RB\).
+Consider the sequence \(\left$LB \frac{n(-1)^n}{n+$c} \right$RB\).
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -137,14 +141,14 @@ BEGIN_TEXT
 
 $PAR
 $PAR
-Consider the sequence \(\left$LB \frac{6n}{3n+1} \right$RB\).
+Consider the sequence \(\left$LB \frac{$ab n}{$b n+1} \right$RB\).
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
 END_TEXT
 Context()->normalStrings;
 
-$q7 = Formula("2");
+$q7 = Formula("$a");
 
 Context()->texStrings;
 BEGIN_TEXT

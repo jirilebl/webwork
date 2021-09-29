@@ -2,23 +2,27 @@
 %HINC head.txt
 %NOPARTIAL
 %FORMULAVARS n
-\(\displaystyle \limsup_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
+%SETUP $a = random(2,5,1);
+%SETUP $b = random(2,5,1);
+%SETUP $c = random(2,5,1);
+%SETUP $d = random(2,5,1);
+\(\displaystyle \limsup_{n\to\infty} \, \frac{$a (-1)^n}{n} = {}\)
 %NUMBER 0
 
-\(\displaystyle \liminf_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
+\(\displaystyle \liminf_{n\to\infty} \, \frac{$a (-1)^n}{n} = {}\)
 %NUMBER 0
 
-\(\displaystyle \limsup_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
-%NUMBER 1
+\(\displaystyle \limsup_{n\to\infty} \, \frac{$b (n+1)(-1)^n}{n} = {}\)
+%NUMBER $b
 
-\(\displaystyle \liminf_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
-%NUMBER -1
+\(\displaystyle \liminf_{n\to\infty} \, \frac{$b (n+1)(-1)^n}{n} = {}\)
+%NUMBER -$b
 
 
 Now let \(x_n :=
 \begin{cases}
-\frac{-1}{n} & \text{if } n \text{ even,} \\
-\frac{n-1}{n} & \text{if } n \text{ odd.} \\
+\frac{-$c}{n} & \text{if } n \text{ even,} \\
+\frac{$d n-1}{n} & \text{if } n \text{ odd.} \\
 \end{cases}\)
 
 Let
@@ -28,23 +32,23 @@ Let
 For \(n\) even,
 %BR
 \(a_n = {}\)
-%FORMULA 1
+%FORMULA $d
 %BR
 \(b_n = {}\)
-%FORMULA -1/n
+%FORMULA -$c/n
 
 For \(n\) odd,
 %BR
 \(a_n = {}\)
-%FORMULA 1
+%FORMULA $d
 %BR
 \(b_n = {}\)
-%FORMULA -1/(n+1)
+%FORMULA -$c/(n+1)
 
 So
 %BR
 \(\displaystyle \limsup_{n\to\infty} \, x_n = {}\)
-%NUMBER 1
+%NUMBER $d
 %BR
 \(\displaystyle \liminf_{n\to\infty} \, x_n = {}\)
 %NUMBER 0

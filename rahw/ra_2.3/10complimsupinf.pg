@@ -36,6 +36,10 @@ Context("Numeric");
 
 Context()->variables->are(n=>"Real");
 
+$a = random(2,5,1);
+$b = random(2,5,1);
+$c = random(2,5,1);
+$d = random(2,5,1);
 
 ############################
 # Main text
@@ -43,7 +47,7 @@ Context()->variables->are(n=>"Real");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-\(\displaystyle \limsup_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
+\(\displaystyle \limsup_{n\to\infty} \, \frac{$a (-1)^n}{n} = {}\)
 END_TEXT
 Context()->normalStrings;
 
@@ -54,7 +58,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-\(\displaystyle \liminf_{n\to\infty} \, \frac{(-1)^n}{n} = {}\)
+\(\displaystyle \liminf_{n\to\infty} \, \frac{$a (-1)^n}{n} = {}\)
 END_TEXT
 Context()->normalStrings;
 
@@ -65,22 +69,22 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-\(\displaystyle \limsup_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
+\(\displaystyle \limsup_{n\to\infty} \, \frac{$b (n+1)(-1)^n}{n} = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q3 = Formula("1");
+$q3 = Formula("$b");
 
 Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-\(\displaystyle \liminf_{n\to\infty} \, \frac{(n+1)(-1)^n}{n} = {}\)
+\(\displaystyle \liminf_{n\to\infty} \, \frac{$b (n+1)(-1)^n}{n} = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q4 = Formula("-1");
+$q4 = Formula("-$b");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -90,8 +94,8 @@ $PAR
 $PAR
 Now let \(x_n :=
 \begin{cases}
-\frac{-1}{n} & \text{if } n \text{ even,} \\
-\frac{n-1}{n} & \text{if } n \text{ odd.} \\
+\frac{-$c}{n} & \text{if } n \text{ even,} \\
+\frac{$d n-1}{n} & \text{if } n \text{ odd.} \\
 \end{cases}\)
 $PAR
 Let
@@ -104,7 +108,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q5 = Formula("1");
+$q5 = Formula("$d");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -115,7 +119,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q6 = Formula("-1/n");
+$q6 = Formula("-$c/n");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -128,7 +132,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q7 = Formula("1");
+$q7 = Formula("$d");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -139,7 +143,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q8 = Formula("-1/(n+1)");
+$q8 = Formula("-$c/(n+1)");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -152,7 +156,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q9 = Formula("1");
+$q9 = Formula("$d");
 
 Context()->texStrings;
 BEGIN_TEXT

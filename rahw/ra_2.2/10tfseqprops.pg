@@ -36,6 +36,7 @@ $showPartialCorrectAnswers = 0;
 Context("Numeric");
 
 
+$a = random(2,5,1);
 
 ############################
 # Main text
@@ -82,7 +83,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(\lvert 3x_n \rvert < \frac{1}{n}\) for all \(n\text{,}\)
+If \(\lvert $a x_n \rvert < \frac{1}{n}\) for all \(n\text{,}\)
 then
 \(\lim \, x_n = 0\text{.}\)
 $BR
