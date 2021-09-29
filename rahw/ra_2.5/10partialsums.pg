@@ -39,7 +39,6 @@ Context()->variables->are(n=>"Real",DNE=>"Real");
 
 $a = random(2,5,1);
 $b = random(2,5,1);
-$c = random(1,5,1);
 
 ############################
 # Main text
@@ -50,7 +49,7 @@ $PAR
 Consider the series
 \(\displaystyle \sum_{n=1}^\infty x_n ,\) where
 the partial sum is
-\(\displaystyle \sum_{n=1}^k x_n = \frac{$a*k}{$b*k+$c} .\)
+\(\displaystyle \sum_{n=1}^k x_n = \frac{$a k}{$b k+1} .\)
 $PAR
 Find
 $BR
@@ -58,7 +57,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q1 = Formula("($a*n)/($b*n+$c)-($a*(n-1))/($b*(n-1)+$c)");
+$q1 = Formula("($a*n)/($b*n+1)-($a*(n-1))/($b*(n-1)+1)");
 
 Context()->texStrings;
 BEGIN_TEXT

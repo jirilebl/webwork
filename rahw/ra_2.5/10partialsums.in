@@ -4,16 +4,15 @@
 %FORMULAVARS n,DNE
 %SETUP $a = random(2,5,1);
 %SETUP $b = random(2,5,1);
-%SETUP $c = random(1,5,1);
 Consider the series
 \(\displaystyle \sum_{n=1}^\infty x_n ,\) where
 the partial sum is
-\(\displaystyle \sum_{n=1}^k x_n = \frac{$a*k}{$b*k+$c} .\)
+\(\displaystyle \sum_{n=1}^k x_n = \frac{$a k}{$b k+1} .\)
 
 Find
 %BR
 \(x_n = {}\)
-%FORMULA ($a*n)/($b*n+$c)-($a*(n-1))/($b*(n-1)+$c)
+%FORMULA ($a*n)/($b*n+1)-($a*(n-1))/($b*(n-1)+1)
 
 Does the series converge?
 %BR
