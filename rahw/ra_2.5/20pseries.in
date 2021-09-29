@@ -2,44 +2,50 @@
 %HINC head.txt
 %NOPARTIAL
 %FORMULAVARS DNE
+%SETUP $a = randint(2,9,1);
+%SETUP $b = randint(2,9,1);
+%SETUP $p = randint(2,5,1);
+%SETUP $ppo = $p+1;
+%SETUP $m = randint(2,5,1);
+%SETUP $mpt = $m+2;
 Denote by \(s_k\) the partial sum of a series from \(n=1\) to \(n=k .\)
 For the series
-\(\displaystyle \sum_{n=1}^\infty \frac{2}{n^2}, \) what is
+\(\displaystyle \sum_{n=1}^\infty \frac{$a}{n^2}, \) what is
 %BR
 \(s_1={}\)
-%NUMBER 2/1
+%NUMBER $a/1
 %BR
 \(s_2={}\)
-%NUMBER 2/1+2/4
+%NUMBER $a/1+$a/4
 %BR
 \(s_3={}\)
-%NUMBER 2/1+2/4+2/9
+%NUMBER $a/1+$a/4+$a/9
 
 Note that
 \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2}\)
 converges to \(\dfrac{\pi^2}{6}.\)
 What does
-\(\displaystyle \sum_{n=1}^\infty \left(\frac{1}{n^2} + \frac{1}{(n+1)^2}\right)\)
+\(\displaystyle \sum_{n=1}^\infty \left(\frac{$a}{n^2} + \frac{$b}{(n+1)^2}\right)\)
 converge to.  Type "pi" for \(\pi\) and use DNE if it doesn't converge.
 %BR
-%NUMBER ((pi^2)/3)-1
+%NUMBER $a*((pi^2)/6)+$b*((pi^2)/6)-$b
 
 The series
-\(\displaystyle \sum_{n=1}^\infty \frac{n}{n^3+n-1}\)
+\(\displaystyle \sum_{n=1}^\infty \frac{n}{n^{$ppo}+n-1}\)
 behaves like the \(p\)-series for what \(p\)?
 %BR
 \(p={}\)
-%NUMBER 2
+%NUMBER $p
 %BR
 (By "behaves like," we mean that for very large \(n,\) the terms of the series
 get relatively close to a constant multiple of the terms of some \(p\)-series.)
 
 The series
-\(\displaystyle \sum_{n=1}^\infty \frac{n^2}{n^3+n-1}\)
+\(\displaystyle \sum_{n=1}^\infty \frac{n^2}{n^{$mpt}+n-1}\)
 behaves like the \(p\)-series for what \(p\)?
 %BR
 \(p={}\)
-%NUMBER 1
+%NUMBER $m
 
 For \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^3+n+1},\) we want to
 compare to the series \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^3},\) which

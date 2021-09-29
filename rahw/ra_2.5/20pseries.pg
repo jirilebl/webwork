@@ -37,6 +37,12 @@ Context("Numeric");
 
 Context()->variables->are(DNE=>"Real");
 
+$a = randint(2,9,1);
+$b = randint(2,9,1);
+$p = randint(2,5,1);
+$ppo = $p+1;
+$m = randint(2,5,1);
+$mpt = $m+2;
 
 ############################
 # Main text
@@ -46,13 +52,13 @@ BEGIN_TEXT
 $PAR
 Denote by \(s_k\) the partial sum of a series from \(n=1\) to \(n=k .\)
 For the series
-\(\displaystyle \sum_{n=1}^\infty \frac{2}{n^2}, \) what is
+\(\displaystyle \sum_{n=1}^\infty \frac{$a}{n^2}, \) what is
 $BR
 \(s_1={}\)
 END_TEXT
 Context()->normalStrings;
 
-$q1 = Formula("2/1");
+$q1 = Formula("$a/1");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -63,7 +69,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q2 = Formula("2/1+2/4");
+$q2 = Formula("$a/1+$a/4");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -74,7 +80,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q3 = Formula("2/1+2/4+2/9");
+$q3 = Formula("$a/1+$a/4+$a/9");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -85,13 +91,13 @@ Note that
 \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2}\)
 converges to \(\dfrac{\pi^2}{6}.\)
 What does
-\(\displaystyle \sum_{n=1}^\infty \left(\frac{1}{n^2} + \frac{1}{(n+1)^2}\right)\)
+\(\displaystyle \sum_{n=1}^\infty \left(\frac{$a}{n^2} + \frac{$b}{(n+1)^2}\right)\)
 converge to.  Type "pi" for \(\pi\) and use DNE if it doesn't converge.
 $BR
 END_TEXT
 Context()->normalStrings;
 
-$q4 = Formula("((pi^2)/3)-1");
+$q4 = Formula("$a*((pi^2)/6)+$b*((pi^2)/6)-$b");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -99,14 +105,14 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 The series
-\(\displaystyle \sum_{n=1}^\infty \frac{n}{n^3+n-1}\)
+\(\displaystyle \sum_{n=1}^\infty \frac{n}{n^{$ppo}+n-1}\)
 behaves like the \(p\)-series for what \(p\)?
 $BR
 \(p={}\)
 END_TEXT
 Context()->normalStrings;
 
-$q5 = Formula("2");
+$q5 = Formula("$p");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -117,14 +123,14 @@ $BR
 get relatively close to a constant multiple of the terms of some \(p\)-series.)
 $PAR
 The series
-\(\displaystyle \sum_{n=1}^\infty \frac{n^2}{n^3+n-1}\)
+\(\displaystyle \sum_{n=1}^\infty \frac{n^2}{n^{$mpt}+n-1}\)
 behaves like the \(p\)-series for what \(p\)?
 $BR
 \(p={}\)
 END_TEXT
 Context()->normalStrings;
 
-$q6 = Formula("1");
+$q6 = Formula("$m");
 
 Context()->texStrings;
 BEGIN_TEXT
