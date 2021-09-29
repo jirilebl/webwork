@@ -1,9 +1,12 @@
 %DESC Deciding on convergence/divergence of series
 %HINC head.txt
 %NOPARTIAL
+%SETUP $a = randint(2,9,1);
+%SETUP $b = randint(2,9,1);
+%SETUP $c = randint(2,9,1);
 Decide on the convergence of the following series.
 
-The series \(\displaystyle\sum_{n=1}^\infty \frac{1}{n^2+1} \)
+The series \(\displaystyle\sum_{n=1}^\infty \frac{$a}{n^2+$b} \)
 %BR
 %RADIO
 %CORRECT Converges absolutely
@@ -11,7 +14,7 @@ Converges conditionally
 Diverges
 %END
 
-The series \(\displaystyle\sum_{n=1}^\infty \frac{n}{n^2+1} \)
+The series \(\displaystyle\sum_{n=1}^\infty \frac{n}{n^2+$b} \)
 %BR
 %RADIO
 Converges absolutely
@@ -19,7 +22,7 @@ Converges conditionally
 %CORRECT Diverges
 %END
 
-The series \(\displaystyle\sum_{n=1}^\infty \frac{1}{5n+1} \)
+The series \(\displaystyle\sum_{n=1}^\infty \frac{$a}{$c n+$b} \)
 %BR
 %RADIO
 Converges absolutely
@@ -74,4 +77,3 @@ Converges absolutely
 Converges conditionally
 %CORRECT Diverges
 %END
-

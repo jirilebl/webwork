@@ -49,9 +49,7 @@ Which one of the estimates is the correct one to use in comparison test?
 %BR
 %RADIO
 \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^3+n+1} \leq \sum_{n=1}^\infty \frac{1}{n^3}\)$BR$BR
-\(\displaystyle \sum_{n=1}^k \frac{1}{n^3+n+1} \leq \sum_{n=1}^k \frac{1}{n^3}\) for all \(k\)$BR$BR
 %CORRECT \(\displaystyle \frac{1}{n^3+n+1} \leq \frac{1}{n^3}\) for all \(n\)$BR$BR
 \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^3+n+1} \geq \sum_{n=1}^\infty \frac{1}{n^3}\)$BR$BR
-\(\displaystyle \sum_{n=1}^k \frac{1}{n^3+n+1} \geq \sum_{n=1}^k \frac{1}{n^3}\) for all \(k\)$BR$BR
 \(\displaystyle \frac{1}{n^3+n+1} \geq \frac{1}{n^3}\) for all \(n\)$BR$BR
 %END

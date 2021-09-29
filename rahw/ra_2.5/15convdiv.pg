@@ -36,6 +36,9 @@ $showPartialCorrectAnswers = 0;
 Context("Numeric");
 
 
+$a = randint(2,9,1);
+$b = randint(2,9,1);
+$c = randint(2,9,1);
 
 ############################
 # Main text
@@ -45,7 +48,7 @@ BEGIN_TEXT
 $PAR
 Decide on the convergence of the following series.
 $PAR
-The series \(\displaystyle\sum_{n=1}^\infty \frac{1}{n^2+1} \)
+The series \(\displaystyle\sum_{n=1}^\infty \frac{$a}{n^2+$b} \)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -62,7 +65,7 @@ BEGIN_TEXT
 \{ $q1->buttons \}
 
 $PAR
-The series \(\displaystyle\sum_{n=1}^\infty \frac{n}{n^2+1} \)
+The series \(\displaystyle\sum_{n=1}^\infty \frac{n}{n^2+$b} \)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -79,7 +82,7 @@ BEGIN_TEXT
 \{ $q2->buttons \}
 
 $PAR
-The series \(\displaystyle\sum_{n=1}^\infty \frac{1}{5n+1} \)
+The series \(\displaystyle\sum_{n=1}^\infty \frac{$a}{$c n+$b} \)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -197,7 +200,6 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q9->buttons \}
 
-$PAR
 
 END_TEXT
 Context()->normalStrings;
