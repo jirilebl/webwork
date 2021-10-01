@@ -30,25 +30,25 @@ Let
 \(b_n := \inf $LB x_k : k \geq n $RB . \)
 
 For \(n\) even,
-%BR
+$BR
 \(a_n = {}\)
 %FORMULA $d
-%BR
+$BR
 \(b_n = {}\)
 %FORMULA -$c/n
 
 For \(n\) odd,
-%BR
+$BR
 \(a_n = {}\)
 %FORMULA $d
-%BR
+$BR
 \(b_n = {}\)
 %FORMULA -$c/(n+1)
 
 So
-%BR
+$BR
 \(\displaystyle \limsup_{n\to\infty} \, x_n = {}\)
 %NUMBER $d
-%BR
+$BR
 \(\displaystyle \liminf_{n\to\infty} \, x_n = {}\)
 %NUMBER 0

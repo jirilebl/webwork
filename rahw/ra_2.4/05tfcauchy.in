@@ -3,7 +3,7 @@
 %NOPARTIAL
 True or false:
 A sequence is Cauchy if and only if it is convergent.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -12,7 +12,7 @@ False
 True or false:
 The sequence
 \($LB 2^n $RB\) is Cauchy.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -21,7 +21,7 @@ True
 True or false:
 The sequence
 \($LB 2^{-n} $RB\) is Cauchy.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -29,7 +29,7 @@ False
 
 True or false:
 Every bounded sequence has a Cauchy subsequence.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -37,7 +37,7 @@ False
 
 True or false:
 A Cauchy sequence of rational numbers converges to a rational number.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -47,7 +47,7 @@ True or false:
 If
 \(\displaystyle \lim_{n\to\infty} |x_{n+1}-x_{n}| = 0 , \)
 then \($LB x_n $RB\) is Cauchy.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -58,7 +58,7 @@ If
 \(\displaystyle \lim_{n\to\infty} |x_{n+k}-x_{n}| = 0 \)
 for every \(k \in \mathbb{N} ,\)
 then \($LB x_n $RB\) is Cauchy.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -66,7 +66,7 @@ True
 
 True or false:
 It is possible for a sequence to be unbounded and Cauchy at the same time.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False

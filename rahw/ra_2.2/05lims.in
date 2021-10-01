@@ -6,26 +6,26 @@
 Consider the sequence \(\left$LB \frac{n\cos(n)+$a}{n} \right$RB \text{.}\)
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
-%BR
+$BR
 %NUMBER DNE
 
 
 Consider the sequence \(\left$LB \frac{n\cos(n)+$a}{n^2} \right$RB \text{.}\)
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
-%BR
+$BR
 %NUMBER 0
 
 
 Consider the sequence \(\left$LB \frac{\cos(n)+$a n}{n} \right$RB \text{.}\)
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
-%BR
+$BR
 %NUMBER $a
 
 
 Consider the sequence \(\left$LB c^{\sqrt{n}} \right$RB\) where \( 0 < c < 1 \text{.}\)
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
-%BR
+$BR
 %NUMBER 0

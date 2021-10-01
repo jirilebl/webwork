@@ -11,13 +11,13 @@
 Denote by \(s_k\) the partial sum of a series from \(n=1\) to \(n=k .\)
 For the series
 \(\displaystyle \sum_{n=1}^\infty \frac{$a}{n^2}, \) what is
-%BR
+$BR
 \(s_1={}\)
 %NUMBER $a/1
-%BR
+$BR
 \(s_2={}\)
 %NUMBER $a/1+$a/4
-%BR
+$BR
 \(s_3={}\)
 %NUMBER $a/1+$a/4+$a/9
 
@@ -27,23 +27,23 @@ converges to \(\dfrac{\pi^2}{6}.\)
 What does
 \(\displaystyle \sum_{n=1}^\infty \left(\frac{$a}{n^2} + \frac{$b}{(n+1)^2}\right)\)
 converge to.  Type "pi" for \(\pi\) and use DNE if it doesn't converge.
-%BR
+$BR
 %NUMBER $a*((pi^2)/6)+$b*((pi^2)/6)-$b
 
 The series
 \(\displaystyle \sum_{n=1}^\infty \frac{n}{n^{$ppo}+n-1}\)
 behaves like the \(p\)-series for what \(p\)?
-%BR
+$BR
 \(p={}\)
 %NUMBER $p
-%BR
+$BR
 (By "behaves like," we mean that for very large \(n,\) the terms of the series
 get relatively close to a constant multiple of the terms of some \(p\)-series.)
 
 The series
 \(\displaystyle \sum_{n=1}^\infty \frac{n^2}{n^{$mpt}+n-1}\)
 behaves like the \(p\)-series for what \(p\)?
-%BR
+$BR
 \(p={}\)
 %NUMBER $m
 
@@ -51,8 +51,8 @@ For \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^3+n+1},\) we want to
 compare to the series \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^3},\) which
 we know converges by the \(p\)-series test.
 Which one of the estimates is the correct one to use in comparison test?
-%BR
-%BR
+$BR
+$BR
 %RADIO
 \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^3+n+1} \leq \sum_{n=1}^\infty \frac{1}{n^3}\)$BR$BR
 %CORRECT \(\displaystyle \frac{1}{n^3+n+1} \leq \frac{1}{n^3}\) for all \(n\)$BR$BR

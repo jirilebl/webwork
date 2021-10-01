@@ -400,8 +400,23 @@ matter where they are in your input.
 $PAR
 A header file can be included with "%HINC file.txt" (but not in the online
 version of this script).
-
+$PAR
+$PAR
+$BBOLD Solutions $EBOLD
+$PAR
+Finally a solution can be started by putting %SOLUTION on an empty line.
+Everything after that will be in the solution.
+$PAR
 END_TEXT
+Context()->normalStrings;
+
+Context()->texStrings;
+BEGIN_SOLUTION
+This text is in the solution.
+$PAR
+Same exact rules for empty lines causing paragraph breaks.
+
+END_SOLUTION
 Context()->normalStrings;
 
 ############################

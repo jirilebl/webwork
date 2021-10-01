@@ -45,7 +45,7 @@ Wrong statement
 $BBOLD Radio buttons $EBOLD
 
 There are also radio buttons (here with only a linebreak).
-%BR
+$BR
 %RADIO
 Wrong 1 (some math \(x^2\))
 Wrong 2
@@ -54,7 +54,7 @@ Wrong 3
 %END
 
 And another radio thing.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -195,3 +195,14 @@ matter where they are in your input.
 
 A header file can be included with "%HINC file.txt" (but not in the online
 version of this script).
+
+
+$BBOLD Solutions $EBOLD
+
+Finally a solution can be started by putting %SOLUTION on an empty line.
+Everything after that will be in the solution.
+
+%SOLUTION
+This text is in the solution.
+
+Same exact rules for empty lines causing paragraph breaks.

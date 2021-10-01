@@ -3,7 +3,7 @@
 %NOPARTIAL
 True or false:
 If \(S\) is a nonempty finite ordered set, then \(\sup S\) exists and \(\sup S \in S.\)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -11,7 +11,7 @@ False
 
 True or false:
 If \(S\) is an ordered set and \(A \subset S\) is a bounded nonempty subset, then the least upper bound of \(A\) exists.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -19,7 +19,7 @@ True
 
 True or false:
 The set of rational numbers has the least-upper-bound property.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -27,7 +27,7 @@ True
 
 True or false:
 In any ordered field for any nonzero \(x,y,z,\) we have \(x^2+y^2+z^2 > 0. \)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -35,7 +35,7 @@ False
 
 True or false:
 Every field can be ordered, that is, made into an ordered field by defining an order relation.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False

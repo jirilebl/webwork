@@ -7,7 +7,7 @@
 Decide on the convergence of the following series.
 
 The series \(\displaystyle\sum_{n=1}^\infty \frac{$a}{n^2+$b} \)
-%BR
+$BR
 %RADIO
 %CORRECT Converges absolutely
 Converges conditionally
@@ -15,7 +15,7 @@ Diverges
 %END
 
 The series \(\displaystyle\sum_{n=1}^\infty \frac{n}{n^2+$b} \)
-%BR
+$BR
 %RADIO
 Converges absolutely
 Converges conditionally
@@ -23,7 +23,7 @@ Converges conditionally
 %END
 
 The series \(\displaystyle\sum_{n=1}^\infty \frac{$a}{$c n+$b} \)
-%BR
+$BR
 %RADIO
 Converges absolutely
 Converges conditionally
@@ -31,7 +31,7 @@ Converges conditionally
 %END
 
 The series \(\displaystyle\sum_{n=1}^\infty \frac{{(-1)}^n}{n^2} \)
-%BR
+$BR
 %RADIO
 %CORRECT Converges absolutely
 Converges conditionally
@@ -39,7 +39,7 @@ Diverges
 %END
 
 The series \(\displaystyle\sum_{n=1}^\infty \frac{n^2}{2^n} \)
-%BR
+$BR
 %RADIO
 %CORRECT Converges absolutely
 Converges conditionally
@@ -47,7 +47,7 @@ Diverges
 %END
 
 The series \(\displaystyle\sum_{n=1}^\infty \frac{2^n}{n^2} \)
-%BR
+$BR
 %RADIO
 Converges absolutely
 Converges conditionally
@@ -55,7 +55,7 @@ Converges conditionally
 %END
 
 The series \(\displaystyle\sum_{n=1}^\infty \frac{{(-1)}^n}{n} \)
-%BR
+$BR
 %RADIO
 Converges absolutely
 %CORRECT Converges conditionally
@@ -63,7 +63,7 @@ Diverges
 %END
 
 The series \(\displaystyle\sum_{n=1}^\infty n^{1000} e^{-n} \)
-%BR
+$BR
 %RADIO
 %CORRECT Converges absolutely
 Converges conditionally
@@ -71,7 +71,7 @@ Diverges
 %END
 
 The series \(\displaystyle\sum_{n=1}^\infty \frac{n-1}{n} \)
-%BR
+$BR
 %RADIO
 Converges absolutely
 Converges conditionally

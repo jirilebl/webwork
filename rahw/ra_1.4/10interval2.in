@@ -22,7 +22,7 @@ If \(x > b,\) then \(x \notin I.\)
 
 True or false: If \(a = \inf\, I\) and \(b = \sup\, I,\)
 then \(I=[a,b]\)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -30,14 +30,14 @@ False
 
 True or false: If instead \(\inf\, I = -\infty\) and \(\sup\, I = \infty,\)
 then \(I={\mathbb{R}}.\)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
 %END
 
 True or false: If \({\mathbb{N}} \subset I,\) then \(I={\mathbb{R}}.\)
-%BR
+$BR
 %RADIO
 True
 %CORRECT False

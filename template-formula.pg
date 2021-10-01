@@ -137,6 +137,4 @@ note that 2) all characteristics go through the point \( (0,$answer4)\).
 END_SOLUTION
 Context()->normalStrings;
 
-;
-
 ENDDOCUMENT();

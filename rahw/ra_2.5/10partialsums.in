@@ -10,23 +10,23 @@ the partial sum is
 \(\displaystyle \sum_{n=1}^k x_n = \frac{$a k}{$b k+1} .\)
 
 Find
-%BR
+$BR
 \(x_n = {}\)
 %FORMULA ($a*n)/($b*n+1)-($a*(n-1))/($b*(n-1)+1)
 
 Does the series converge?
-%BR
+$BR
 %RADIO
 %CORRECT Yes
 No
 %END
 
 What does the series converge to if it converges (write "DNE" if it doesn't)?
-%BR
+$BR
 %NUMBER $a/$b
 
 What is the reason?
-%BR
+$BR
 %RADIORANDOM
 %CORRECT The expression for the partial sums converges.
 The series is a \(p\)-series with \(p=1 .\)

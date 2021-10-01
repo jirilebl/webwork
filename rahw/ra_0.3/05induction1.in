@@ -32,5 +32,5 @@ Therefore, \(4\) divides \(4^n-1.\)
 %END
 
 We can now finish the proof by stating.
-%BR
+$BR
 "Therefore, \(3\) divides \(4^n-1\) for all natural numbers \(n.\)"

@@ -4,14 +4,14 @@
 Let \(\displaystyle x_n := \sum_{j=1}^n \frac{1}{j}.\)
 
 Is the sequence \( $LB x_n $RB \) a Cauchy sequence?
-%BR
+$BR
 %RADIO
 Yes
 %CORRECT No
 %END
 
 Why?
-%BR
+$BR
 %RADIORANDOM
 %CORRECT Because \(x_n\) is the \(n\)th partial sum of the harmonic series, which is divergent.
 Because \( $LB x_n $RB \) converges.

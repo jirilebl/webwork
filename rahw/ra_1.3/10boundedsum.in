@@ -38,7 +38,7 @@ Let \(M_1\) be such that \(|f(x)| \leq M_1\) for all \(x \in D.\)
 %END
 
 True or false: If \(f+g\) is bounded, then \(f\) and \(g\) are bounded.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -47,7 +47,7 @@ True
 
 If you picked false, one of these is a counterexample.  Otherwise
 say you picked true.
-%BR
+$BR
 %RADIORANDOM
 %CORRECT \(D:={\mathbb{R}}\), \(f(x) := x\), \(g(x):=-x.\)
 \(D:=[0,1]\), \(f(x) := x\), \(g(x):=-x.\)

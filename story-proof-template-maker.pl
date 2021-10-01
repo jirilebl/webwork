@@ -37,6 +37,8 @@ $setvars = "";
 $setup = "";
 $header = "";
 
+$insolution = 0;
+
 
 while ($line = <$in>) {
 	$line =~ s/[\r\n]+//;
@@ -58,7 +60,7 @@ while ($line = <$in>) {
 		}
 	} elsif ($line =~ m/^%H *(.*)$/) {
 		$header .= "$1\n";
-	} elsif ($line =~ m/^%PROOF/) {
+	} elsif ($insolution == 0 and $line =~ m/^%PROOF/) {
 		$haveproofs = 1;
 		if ($line =~ m/^%PROOFHINT/) {
 			$hint = 1;
@@ -119,7 +121,7 @@ EOF
 				$out .= "\"$line\",\n";
 			}
 		}
-	} elsif ($line =~ m/^%RADIO/) {
+	} elsif ($insolution == 0 and $line =~ m/^%RADIO/) {
 		$qnum++;
 		$qcheckers[$qnum-1]="ANS(\$q$qnum\->cmp());\n";
 		$haveradios = 1;
@@ -180,7 +182,7 @@ EOF
 				}
 			}
 		}
-	} elsif ($line =~ m/^%CHECKBOXES/) {
+	} elsif ($insolution == 0 and $line =~ m/^%CHECKBOXES/) {
 		$qnum++;
 		$qcheckers[$qnum-1]="ANS(checkbox_cmp(\$q$qnum\->correct_ans()));\n";
 		$havecheckboxes = 1;
@@ -223,9 +225,9 @@ EOF
 		}
 	} elsif ($line =~ m/^%SETUP[ \t][ \t]*(.*)$/ or $line =~ m/^%S[ \t][ \t]*(.*)$/) {
 		$setup .= "$1\n";
-	} elsif ($line =~ m/^%RULEWIDTH[ \t][ \t]*([0-9]*)$/) {
+	} elsif ($insolution == 0 and $line =~ m/^%RULEWIDTH[ \t][ \t]*([0-9]*)$/) {
 		$rulewidth = int($1);
-	} elsif ($line =~ m/^%NUMBER[ \t][ \t]*(.*)$/) {
+	} elsif ($insolution == 0 and $line =~ m/^%NUMBER[ \t][ \t]*(.*)$/) {
 		$qnum++;
 		$qcheckers[$qnum-1]="ANS(\$q$qnum\->cmp());\n";
 		$numbers++;
@@ -245,13 +247,13 @@ BEGIN_TEXT
 \\{ ans_rule($rw) \\}
 \\{ AnswerFormatHelp("numbers") \\}
 EOF
-	} elsif ($line =~ m/^%FORMULAVARS[ \t][ \t]*([a-zA-Z,]*)[ \t]*$/) {
+	} elsif ($insolution == 0 and $line =~ m/^%FORMULAVARS[ \t][ \t]*([a-zA-Z,]*)[ \t]*$/) {
 		$vars = $1;
 		$vars =~ s/,$//;
 		$vars =~ s/,/=>"Real",/g;
 		$vars .= "=>\"Real\"";
 		$setvars = "Context()->variables->are($vars);\n"
-	} elsif ($line =~ m/^%FORMULA[ \t][ \t]*(.*)$/) {
+	} elsif ($insolution == 0 and $line =~ m/^%FORMULA[ \t][ \t]*(.*)$/) {
 		$qnum++;
 		$qcheckers[$qnum-1]="ANS(\$q$qnum\->cmp());\n";
 		$formulas++;
@@ -271,7 +273,7 @@ BEGIN_TEXT
 \\{ ans_rule($rw) \\}
 \\{ AnswerFormatHelp("formulas") \\}
 EOF
-	} elsif ($line =~ m/^%STRING[ \t][ \t]*(.*)$/) {
+	} elsif ($insolution == 0 and $line =~ m/^%STRING[ \t][ \t]*(.*)$/) {
 		$answer = $1;
 		$answer =~ s/"/\\"/g;
 		$qnum++;
@@ -281,8 +283,15 @@ EOF
 			$rw = $rulewidth;
 		}
 		$out .= "\\{ ans_rule($rw) \\}\n";
-	} elsif ($line eq "%BR") {
-		$out .= "\$BR\n";
+	} elsif ($line eq "%SOLUTION") {
+		$out .= << "EOF";
+END_TEXT
+Context()->normalStrings;
+
+Context()->texStrings;
+BEGIN_SOLUTION
+EOF
+		$insolution = 1;
 	} elsif ($line eq "") {
 		$out .= "\$PAR\n";
 	} else {
@@ -343,10 +352,13 @@ EOF
 # print the collected stuff
 print $out;
 
-#print "footer"
+# print "footer"
+if ($insolution == 1) {
+	print "\nEND_SOLUTION\n";
+} else {
+	print "\nEND_TEXT\n";
+}
 print << 'EOF';
-
-END_TEXT
 Context()->normalStrings;
 
 ############################

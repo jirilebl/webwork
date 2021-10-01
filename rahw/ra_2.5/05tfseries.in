@@ -4,7 +4,7 @@
 True or false:
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
 \(\displaystyle \sum_{n=1}^\infty x_{n+1}\) converges.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -13,7 +13,7 @@ False
 True or false:
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
 \(\displaystyle\lim_{n\to\infty} x_n = 0.\)
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -22,7 +22,7 @@ True
 True or false:
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if
 \(\displaystyle \sum_{n=1}^\infty {(-1)}^n x_{n}\) converges.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -32,7 +32,7 @@ True or false:
 If
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges, then
 \(\displaystyle \sum_{n=1}^\infty \frac{x_n}{n}\) converges.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -42,7 +42,7 @@ True or false:
 If
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges, then
 \(\displaystyle \sum_{n=1}^\infty n x_n\) converges.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -52,7 +52,7 @@ True or false:
 If according to the ratio test, the series
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges absolutely, then
 \(\displaystyle \sum_{n=1}^\infty n x_n\) converges.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -66,7 +66,7 @@ and
 converge absolutely.  Then
 \(\displaystyle \sum_{n=1}^\infty x_n y_n\)
 converges absolutely.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -81,7 +81,7 @@ converge absolutely.  Then
 \(\displaystyle \sum_{n=1}^\infty x_n y_n\)
 converges to
 \(\displaystyle \left(\sum_{n=1}^\infty x_n \right)\left(\sum_{n=1}^\infty y_n\right) .\)
-%BR
+$BR
 %RADIO
 True
 %CORRECT False

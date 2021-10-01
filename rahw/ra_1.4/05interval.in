@@ -2,42 +2,42 @@
 %HINC head.txt
 %NOPARTIAL
 True or false: If \(I\) is an interval, \(x,y \in I\), then \(\frac{x+y}{2} \in I\).
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
 %END
 
 True or false: There exists an interval with exactly two points.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
 %END
 
 True or false: If \(I\) is an interval, then it has uncountably many points.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
 %END
 
 True or false: There exists a bijection between the set \([0,1]\) and \({\mathbb{R}}\).
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
 %END
 
 True or false: There exists a bijection between the set \([0,1]\) and \((0,1)\).
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
 %END
 
 Which one of the following is a bijection \(f \colon (0,1) \to {\mathbb{R}}\) (if one exists):
-%BR
+$BR
 %RADIORANDOM
 %CORRECT \( f(x) := \frac{1}{x}+\frac{1}{x-1} \)
 \( f(x) := \frac{1}{x(x-1)} \)

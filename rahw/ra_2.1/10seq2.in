@@ -3,14 +3,14 @@
 %NOPARTIAL
 %SETUP $a = random(3,8,1);
 True or false: Every bounded sequence is convergent.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
 %END
 
 True or false: Every convergent sequence is bounded.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -18,7 +18,7 @@ False
 
 True or false: If \($LB x_n $RB\) converges to \(x\) and also converges to \(y,\) then
 \(x=y,\)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -28,7 +28,7 @@ True or false:
 Given a sequence \($LB x_n$RB\),
 if for all \(N \in {\mathbb{N}}\) there exists an \(m > N\) such that
 \(x_m = \frac{1}{m},\) then \($LB x_n$RB\) converges.
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -38,7 +38,7 @@ True or false:
 Given a sequence \($LB x_n$RB\),
 if there exists an \(N \in {\mathbb{N}}\) such that for all \(m > N\) we have
 \(x_m = \frac{1}{m},\) then \($LB x_n$RB\) converges.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -46,7 +46,7 @@ False
 
 True or false:
 \(1,2,3,0,5,6,7,\ldots\) is a subsequence of \(1,2,3,4,5,6,7,\ldots\)
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -54,7 +54,7 @@ True
 
 True or false:
 \(1,2,3,5,6,7,\ldots\) is a subsequence of \(1,2,3,4,5,6,7,\ldots\)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -64,7 +64,7 @@ True or false:
 \( \left$LB  \frac{1}{n+$a} \right$RB \)
 is a tail of 
 \( \left$LB  \frac{1}{n} \right$RB . \)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False

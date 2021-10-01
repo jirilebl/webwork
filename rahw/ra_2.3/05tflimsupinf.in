@@ -5,7 +5,7 @@ True or false:
 If \($LB x_n $RB\) is a bounded sequence and
 \(a_n := \sup $LB x_k : k \geq n $RB , \)
 then \($LB a_n $RB\) is a subsequence of \($LB x_n $RB .\)
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -14,7 +14,7 @@ True
 True or false:
 If \(\liminf \, x_n < \limsup \, x_n ,\) then
 \($LB x_n $RB\) diverges.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -26,7 +26,7 @@ Then for every \(x\) such that
 \(\liminf \, x_n \leq x \leq \limsup \, x_n ,\) there
 exists a subsequence
 \($LB x_{n_k} $RB\) converging to \(x.\)
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -37,7 +37,7 @@ Let \($LB x_n $RB\) be a bounded sequence and
 \($LB x_{n_k} $RB\) be a subsequence.
 Then there exists a subsequence \($LB x_{n_{k_i}} $RB\) of the subsequence
 that converges.
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -49,7 +49,7 @@ Let \($LB x_n $RB\) be a bounded sequence and
 Then
 \($LB a_n : n \in {\mathbb{N}} $RB\) is
 a subset of \($LB x_n : n \in {\mathbb{N}} $RB.\)
-%BR
+$BR
 %RADIO
 True
 %CORRECT False
@@ -62,7 +62,7 @@ If \($LB x_n : n \in {\mathbb{N}} $RB\)
 is a finite set, then
 \($LB a_n : n \in {\mathbb{N}} $RB\) is
 a subset of \($LB x_n : n \in {\mathbb{N}} $RB.\)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -71,7 +71,7 @@ False
 True or false:
 If \($LB x_n $RB\) be a bounded sequence of nonnegative numbers
 and \(\limsup\, x_n  = 0,\) then \( $LB x_n $RB \) converges to \(0.\)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False
@@ -81,7 +81,7 @@ True or false:
 If \(\liminf \, x_n < \limsup \, x_n ,\) then
 there exists a divergent subsequence
 \($LB x_{n_k} $RB .\)
-%BR
+$BR
 %RADIO
 %CORRECT True
 False

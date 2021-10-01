@@ -9,11 +9,11 @@
 Consider the sequence \(\left$LB \frac{(-1)^n}{n^2} \right$RB\).
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
-%BR
+$BR
 %NUMBER 0
 
 Is this sequence bounded?
-%BR
+$BR
 %RADIO
 %CORRECT Yes
 No
@@ -23,11 +23,11 @@ No
 Consider the sequence \(\left$LB n^2 \right$RB\).
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
-%BR
+$BR
 %NUMBER DNE
 
 Is this sequence bounded?
-%BR
+$BR
 %RADIO
 Yes
 %CORRECT No
@@ -37,11 +37,11 @@ Yes
 Consider the sequence \(\left$LB \frac{n(-1)^n}{n+$c} \right$RB\).
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
-%BR
+$BR
 %NUMBER DNE
 
 Is this sequence bounded?
-%BR
+$BR
 %RADIO
 %CORRECT Yes
 No
@@ -51,11 +51,11 @@ No
 Consider the sequence \(\left$LB \frac{$ab n}{$b n+1} \right$RB\).
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
-%BR
+$BR
 %NUMBER $a
 
 Is this sequence bounded?
-%BR
+$BR
 %RADIO
 %CORRECT Yes
 No
