@@ -24,7 +24,7 @@ Prove that despite the above, for any \(k \in \mathbb{N},\) we have
 \(\displaystyle\lim_{n\to\infty} \lvert x_{n+k}-x_n \rvert = 0 .\)
 
 %PROOF
-Fix \( k \in \mathbb{N}.\)
+Let \(k\) be a fixed natural number.
 Let \( y_n := x_{n+k}-x_n = \sum_{j=n+1}^{n+k} \frac{1}{j} .\)
 What we need to show is that \(y_n \to 0 .\)
 Estimate \( \displaystyle y_n = \sum_{j=n+1}^{n+k} \frac{1}{j} \)
@@ -35,7 +35,7 @@ So by sequeeze lemma, as \( 0 \leq y_n \leq \frac{k}{n+1} ,\) we have \(y_n \to 
 As \(y_n \to 0\), we get \(\lvert y_n \rvert \to 0 \) as well.
 %EXTRA
 What we need to show is that \(y_n \to 1 .\)
-Fix \( n \in \mathbb{N}.\)
+Let \(n\) be a fixed natural number.
 \(\displaystyle \qquad = \frac{k}{n+k} . \)
 \(\displaystyle \qquad \leq \sum_{j=n+1}^{n+k} \frac{1}{n+k} \)
 So by sequeeze lemma, as \( 0 \leq y_n \leq \frac{n}{k+1} ,\) we have \(y_n \to 0 .\)
