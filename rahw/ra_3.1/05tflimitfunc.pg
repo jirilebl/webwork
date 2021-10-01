@@ -22,6 +22,7 @@ loadMacros(
  "PGstandard.pl",
  "MathObjects.pl",
  "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
  "PGcourse.pl",
 );
 
@@ -43,7 +44,130 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 True or false:
+If \(c \in S\), then \(c\) is a cluster point of \(S.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
 $PAR
+True or false:
+Suppose \(f\colon {\mathbb{R}} \to {\mathbb{R}}\) is a function and \(c \in {\mathbb{R}} .\)
+\(\displaystyle \lim_{x \to c} f(x) = L \) whenever there exists
+a sequence \( $LB x_n $RB \) such that \(\lim x_n = c\) and \(\displaystyle \lim_{n\to \infty} f(x_n) .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+Suppose \(f\colon {\mathbb{R}} \to {\mathbb{R}}\) is a function and \(\lvert f(x) \rvert \leq \lvert x \rvert\)
+for all \(x.\)  Then 
+\(\displaystyle \lim_{x \to 0} f(x) = 0 . \)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+Suppose
+\(f\colon {\mathbb{R}} \to {\mathbb{R}}\)
+and
+\(g\colon {\mathbb{R}} \to {\mathbb{R}}\)
+are functions and \(\lvert g(x) \rvert \leq \lvert f(x) \rvert \leq 2 \lvert g(x) \rvert\)
+for all \(x.\)  Then 
+\(\displaystyle \lim_{x \to 0} f(x) = 0 \)
+if and only if
+\(\displaystyle \lim_{x \to 0} g(x) = 0 . \)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+The following statement is equivalent to the definition of limit.
+Consider
+\(f\colon {\mathbb{R}} \to {\mathbb{R}}\) for simplicity.
+\(\displaystyle \lim_{x \to c} f(x) = L \) whenever
+for every \(n \in \mathbb{N}\) there is an \(m \in \mathbb{N} \)
+such that for every \(x \not= c\) where
+\(\lvert x - c\rvert < \frac{1}{m} \)
+we have 
+\(\lvert f(x) - L\rvert < \frac{1}{n} . \)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+Suppose
+\(f\colon {\mathbb{R}} \to {\mathbb{R}}\)
+is bounded and \( c \in \mathbb{R},\)
+then
+\(\displaystyle \lim_{x \to 0} f(x) \) exists.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
 
 END_TEXT
 Context()->normalStrings;
@@ -53,5 +177,11 @@ Context()->normalStrings;
 
 install_problem_grader(~~&std_problem_grader);
 
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
 
 ENDDOCUMENT();
