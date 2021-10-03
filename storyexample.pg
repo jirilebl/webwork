@@ -419,10 +419,12 @@ Context()->normalStrings;
 
 Context()->texStrings;
 BEGIN_SOLUTION
-This text is in the solution.  Once you start the solution, that's it, everything after is in the solution.
+This text is in the solution.  Once you start the solution, that's it,
+everything after is in the solution.
 $PAR
-Same exact rules for empty lines causing paragraph breaks.  However, none of the question things
-work, of course, since you can't ask questions in the solution.
+Same exact rules for empty lines causing paragraph breaks.  However, none of
+the question things work, of course, since you can't ask questions in the
+solution.
 
 END_SOLUTION
 Context()->normalStrings;
