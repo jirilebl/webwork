@@ -170,7 +170,7 @@ in the right order.  It can really be kind of anything.
 %SETUP $a=random(2,9,1);
 Note that you can also use %S as shorthand for %SETUP.
 
-What's 2 times \{$a\}?
+What's 2 times $a?
 %NUMBER 2*$a
 
 Normally the answer rule width is 20 for numbers and 40 for formulas.  With

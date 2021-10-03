@@ -352,7 +352,7 @@ even though you can specify it wherever.  But it does come
 in the right order.  It can really be kind of anything.
 Note that you can also use %S as shorthand for %SETUP.
 $PAR
-What's 2 times \{$a\}?
+What's 2 times $a?
 END_TEXT
 Context()->normalStrings;
 
