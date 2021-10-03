@@ -47,7 +47,7 @@ $PAR
 Let us study Example 3.1.5.  Answer the interspersed questions.
 $PAR
 $PAR
-Consider \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) defined by \(f(x) := x^2 .\)  Then
+Claim: Consider \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) defined by \(f(x) := x^2 .\)  Then
 for any \(c \in {\mathbb{R}}\)
 \[
 \lim_{x\to c} f(x) = \lim_{x\to c} x^2 = c^2 .
@@ -193,7 +193,7 @@ We compute
 \end{split}
 \]
 $PAR
-$BITALIC Q: What did we not just define \(\delta := \frac{\epsilon}{\abs{x+c}}\) as that's what we need to bound? $EITALIC
+$BITALIC Q: Why did we not just define \(\delta := \frac{\epsilon}{\abs{x+c}}\) as that's what we need to bound? $EITALIC
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -215,7 +215,6 @@ BEGIN_TEXT
 
 $PAR
 $BITALIC Q: In the argument, what does \(x\) depend on? $EITALIC
-$BR
 END_TEXT
 Context()->normalStrings;
 
@@ -234,7 +233,6 @@ BEGIN_TEXT
 
 $PAR
 $BITALIC Q: In the argument, what does \(c\) depend on? $EITALIC
-$BR
 END_TEXT
 Context()->normalStrings;
 
@@ -253,7 +251,6 @@ BEGIN_TEXT
 
 $PAR
 $BITALIC Q: In the argument, what does \(\epsilon\) depend on? $EITALIC
-$BR
 END_TEXT
 Context()->normalStrings;
 
@@ -272,7 +269,6 @@ BEGIN_TEXT
 
 $PAR
 $BITALIC Q: In the argument, what does \(\delta\) depend on? $EITALIC
-$BR
 END_TEXT
 Context()->normalStrings;
 

@@ -46,13 +46,13 @@ False
 %END
 
 True or false:
-The following statement is equivalent to the definition of limit.
-Consider
-\(f\colon {\mathbb{R}} \to {\mathbb{R}}\) for simplicity.
+The following statement is equivalent to the definition of limit
+(Consider
+\(f\colon {\mathbb{R}} \to {\mathbb{R}}\) for simplicity.):
 \(\displaystyle \lim_{x \to c} f(x) = L \) whenever
 for every \(n \in \mathbb{N}\) there is an \(m \in \mathbb{N} \)
 such that for every \(x \not= c\) where
-\(\lvert x - c\rvert < \frac{1}{m} \)
+\(\lvert x - c\rvert < \frac{1}{m} , \)
 we have 
 \(\lvert f(x) - L\rvert < \frac{1}{n} . \)
 $BR
@@ -66,7 +66,7 @@ Suppose
 \(f\colon {\mathbb{R}} \to {\mathbb{R}}\)
 is bounded and \( c \in \mathbb{R},\)
 then
-\(\displaystyle \lim_{x \to 0} f(x) \) exists.
+\(\displaystyle \lim_{x \to c} f(x) \) exists.
 $BR
 %RADIO
 True

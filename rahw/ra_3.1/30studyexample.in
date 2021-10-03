@@ -4,7 +4,7 @@
 Let us study Example 3.1.5.  Answer the interspersed questions.
 
 
-Consider \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) defined by \(f(x) := x^2 .\)  Then
+Claim: Consider \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) defined by \(f(x) := x^2 .\)  Then
 for any \(c \in {\mathbb{R}}\)
 \[
 \lim_{x\to c} f(x) = \lim_{x\to c} x^2 = c^2 .
@@ -88,7 +88,7 @@ We compute
 \end{split}
 \]
 
-$BITALIC Q: What did we not just define \(\delta := \frac{\epsilon}{\abs{x+c}}\) as that's what we need to bound? $EITALIC
+$BITALIC Q: Why did we not just define \(\delta := \frac{\epsilon}{\abs{x+c}}\) as that's what we need to bound? $EITALIC
 $BR
 %RADIORANDOM
 %CORRECT The \(\delta\) cannot depend on \(x,\) it can only depend on \(c\) and \(\epsilon .\)
@@ -99,7 +99,6 @@ That would make the proof too simple.
 %END
 
 $BITALIC Q: In the argument, what does \(x\) depend on? $EITALIC
-$BR
 %CHECKBOXES
 \(c\)
 \(\epsilon\)
@@ -109,7 +108,6 @@ Nothing
 %END
 
 $BITALIC Q: In the argument, what does \(c\) depend on? $EITALIC
-$BR
 %CHECKBOXES
 Nothing
 %EXTRA
@@ -119,7 +117,6 @@ Nothing
 %END
 
 $BITALIC Q: In the argument, what does \(\epsilon\) depend on? $EITALIC
-$BR
 %CHECKBOXES
 Nothing
 %EXTRA
@@ -129,7 +126,6 @@ Nothing
 %END
 
 $BITALIC Q: In the argument, what does \(\delta\) depend on? $EITALIC
-$BR
 %CHECKBOXES
 \(c\)
 \(\epsilon\)

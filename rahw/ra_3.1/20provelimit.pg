@@ -46,7 +46,7 @@ $PAR
 Suppose that \(f \colon \mathbb{R} \to \mathbb{R}\) is defined as degree 2 polynomial 
 \(f(x) := a_2 x^2+a_1 x + a_0 \) for some constants \(a_2,a_1,a_0 .\)
 Prove that
-\(\displaystyle \lim_{x \to c\} f(x) = f(c) \) for all \(c \in {\mathbb{R}}\)
+\(\displaystyle \lim_{x \to c} f(x) = f(c) \) for all \(c \in {\mathbb{R}}\)
 $PAR
 First prove that the function \(g(x) = x\) has the same property:
 $PAR
@@ -56,9 +56,9 @@ Context()->normalStrings;
 $q1 = DraggableProof([
 "Let \(c \in \mathbb{R}\) be arbitrary and let \(\epsilon > 0\) be given.",
 "Take \(\delta := \epsilon.\)",
-"Now suppose that \(\lvert x-c\rvert < \delta\) and \(x \not=c .\)",
+"Now suppose \(x\) is such that \(\lvert x-c\rvert < \delta\) and \(x \not=c .\)",
 "Estimate \( \lvert g(x) - g(c) \rvert = \lvert x-c\rvert\)",
-"\( \qquad < delta \)",
+"\( \qquad < \delta \)",
 "\( \qquad = \epsilon . \)",
 ],
 [
@@ -93,7 +93,7 @@ $q2 = DraggableProof([
 "Finally \(\displaystyle \lim_{x\to c} (a_2 x^2+a_1 x + a_0) = a_2 c^2 + a_1 c + a_0 \) by Corollary 3.1.12 part (i)",
 ],
 [
-"Let \(epsilon > 0\) be given.",
+"Let \(\epsilon > 0\) be given.",
 "Let \(\delta := \epsilon^2.\)",
 ],
 
