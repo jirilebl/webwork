@@ -292,6 +292,8 @@ Context()->texStrings;
 BEGIN_SOLUTION
 EOF
 		$insolution = 1;
+	} elsif ($line eq "%") {
+		# do nothing
 	} elsif ($line eq "") {
 		$out .= "\$PAR\n";
 	} else {

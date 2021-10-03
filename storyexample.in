@@ -2,13 +2,16 @@ This is an example story proof thingie with interspersed questions.  Here's
 some math \(\int_0^1 f(x)\,dx .\)  We can have proofs, radio boxes, check
 boxes, numbers and formulas, including some simple setup.
 
-That was a paragraph break (leave empty line).  Leaving two empty lines
-gives two paragraph breaks (larger break).  The rest of the syntax is
-like regular WeBWorK syntax (i.e. not PGML).  Normal text just gets
-copied verbatim into the problem file.  So you have to follow WeBWorK
-idiosyncracies such as \( $LB 1,2,3 $RB \) for the braces as slash-brace
-has a meaning in WeBWorK.  You can also do some styling with the standard
-WeBWorK styling with variables.  The next line is bold.
+That was a paragraph break (we left an empty line).  Leaving two empty lines
+gives two paragraph breaks (very large break).  If you want to just make the
+file more readable you can include % on a line by itself and that just does
+nothing (no new paragraph break).
+%
+The rest of the syntax is like regular WeBWorK syntax (i.e. not PGML).  Normal
+text just gets copied verbatim into the problem file.  So you have to follow
+WeBWorK idiosyncracies such as \( $LB 1,2,3 $RB \) for the braces as
+slash-brace has a meaning in WeBWorK.  You can also do some styling with the
+standard WeBWorK styling with variables.  The next line is bold.
 
 
 $BBOLD Proofs $EBOLD
@@ -131,7 +134,6 @@ Correct 3
 %END
 
 
-
 For radio buttons and checkboxes, if you want to avoid giving hints after
 submit about which parts were correct, put %NOPARTIALANSWERS at the beginning
 of a line.  If you want to give all or nothing rather than partial credit,
@@ -208,8 +210,10 @@ $BBOLD Solutions $EBOLD
 
 Finally a solution can be started by putting %SOLUTION on an empty line.
 Everything after that will be in the solution.
-
+%
+%
 %SOLUTION
-This text is in the solution.
+This text is in the solution.  Once you start the solution, that's it, everything after is in the solution.
 
-Same exact rules for empty lines causing paragraph breaks.
+Same exact rules for empty lines causing paragraph breaks.  However, none of the question things
+work, of course, since you can't ask questions in the solution.
