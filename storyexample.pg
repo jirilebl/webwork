@@ -283,6 +283,8 @@ BEGIN_TEXT
 \{ $q11->print_a() \}
 
 $PAR
+(Note that checkboxes automatically adds a line break in front, so unlike
+for radio buttons you can just start CHECKBOXES on the next line)
 END_TEXT
 Context()->normalStrings;
 
@@ -296,6 +298,7 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q12->print_a() \}
 
+$PAR
 $PAR
 $PAR
 For radio buttons and checkboxes, if you want to avoid giving hints after
@@ -315,7 +318,7 @@ $PAR
 $PAR
 Then we ask a formula as follows.
 $PAR
-How about a formula
+How about a formula:
 END_TEXT
 Context()->normalStrings;
 
@@ -326,9 +329,12 @@ BEGIN_TEXT
 \{ ans_rule(40) \}
 \{ AnswerFormatHelp("formulas") \}
 $PAR
-We can also ask for a number:
+We can also ask for a number.  By the way, note how the answer blank
+comes on the same line.  You'd need to add a line break if you want it to
+come on the next line.
 $PAR
-How about a number
+How about a number:
+$BR
 END_TEXT
 Context()->normalStrings;
 
@@ -340,9 +346,10 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 We can randomize by adding some setup and using that.
-Note that setup is always put at the top of the file!
-It can really be kind of anything.
-You can also use %S as shorthand for %SETUP.
+Note that setup is always put at the top of the output file
+even though you can specify it wherever.  But it does come
+in the right order.  It can really be kind of anything.
+Note that you can also use %S as shorthand for %SETUP.
 $PAR
 What's 2 times \{$a\}?
 END_TEXT
