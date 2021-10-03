@@ -122,11 +122,14 @@ Correct 1
 Incorrect 1
 %END
 
+(Note that checkboxes automatically adds a line break in front, so unlike
+for radio buttons you can just start CHECKBOXES on the next line)
 %CHECKBOXES
 Correct 1
 Correct 2
 Correct 3
 %END
+
 
 
 For radio buttons and checkboxes, if you want to avoid giving hints after
@@ -147,19 +150,23 @@ all formulas here will use.
 
 Then we ask a formula as follows.
 
-How about a formula
+How about a formula:
 %FORMULA x^2+y^2+z^2
 
-We can also ask for a number:
+We can also ask for a number.  By the way, note how the answer blank
+comes on the same line.  You'd need to add a line break if you want it to
+come on the next line.
 
-How about a number
+How about a number:
+$BR
 %NUMBER 42
 
 We can randomize by adding some setup and using that.
-Note that setup is always put at the top of the file!
-It can really be kind of anything.
+Note that setup is always put at the top of the output file
+even though you can specify it wherever.  But it does come
+in the right order.  It can really be kind of anything.
 %SETUP $a=random(2,9,1);
-You can also use %S as shorthand for %SETUP.
+Note that you can also use %S as shorthand for %SETUP.
 
 What's 2 times \{$a\}?
 %NUMBER 2*$a
