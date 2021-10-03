@@ -1,0 +1,31 @@
+%DESC Comppute a few function limits
+%HINC head.txt
+%NOPARTIAL
+%FORMULAVARS DNE
+%SETUP $a = random(2,9,1);
+%SETUP $b = random(2,5,1);
+%SETUP $c = random($b+1,9,1);
+%SETUP $cmb = $c-$b;
+Compute the following limits if possible.  If they do not exist, write "DNE".
+
+\(\displaystyle \lim_{x \to 0\} \frac{$b}{x} = {}\)
+%NUMBER DNE
+
+\(\displaystyle \lim_{x \to 0\} \frac{$b x^2 + $cmb x - $c}{x-1} = {}\)
+%NUMBER $c
+
+\(\displaystyle \lim_{x \to 1\} \frac{$b x^2 + $cmb x - $c}{x-1} = {}\)
+%NUMBER $b+$c
+
+For \(f \colon [0,1] \to \mathbb{R}\) defined by
+\[
+f(x) :=
+\begin{cases}
+$b+$c x^2 \text{ if } x > 0 , \\
+$a \text{ if } x = 0 ,
+\end{cases}
+\]
+compute:
+$BR
+\(\displaystyle \lim_{x \to 0\} f(x) = {}\)
+%NUMBER $b

@@ -1,0 +1,122 @@
+##DESCRIPTION
+## Prove a simple limit exists
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('3.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose that \(f \colon \mathbb{R} \to \mathbb{R}\) is defined as degree 2 polynomial 
+\(f(x) := a_2 x^2+a_1 x + a_0 \) for some constants \(a_2,a_1,a_0 .\)
+Prove that
+\(\displaystyle \lim_{x \to c\} f(x) = f(c) \) for all \(c \in {\mathbb{R}}\)
+$PAR
+First prove that the function \(g(x) = x\) has the same property:
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Let \(c \in \mathbb{R}\) be arbitrary and let \(\epsilon > 0\) be given.",
+"Take \(\delta := \epsilon.\)",
+"Now suppose that \(\lvert x-c\rvert < \delta\) and \(x \not=c .\)",
+"Estimate \( \lvert g(x) - g(c) \rvert = \lvert x-c\rvert\)",
+"\( \qquad < delta \)",
+"\( \qquad = \epsilon . \)",
+],
+[
+"Take \( \delta := 0 \)",
+"Let \(x=c\) and let \(\epsilon > 0\) be given.",
+"Let \(\delta > 0\) be given.",
+"\( \qquad = \delta \)",
+"\( \lvert g(x) - g(c) \rvert = \lvert x^2-c^2\rvert\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+$PAR
+Now we will apply Corollary 3.1.12.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"As \(\displaystyle \lim_{x\to c} x = c \), then \(\displaystyle \lim_{x\to c} x^2 = c^2 \) by Corollary 3.1.12 part (iii).",
+"Similarly \(\displaystyle \lim_{x\to c} (a_2) (x^2) = a_2 c^2 \) and \(\displaystyle \lim_{x\to c} (a_1) (x) = a_1 c . \)",
+"Finally \(\displaystyle \lim_{x\to c} (a_2 x^2+a_1 x + a_0) = a_2 c^2 + a_1 c + a_0 \) by Corollary 3.1.12 part (i)",
+],
+[
+"Let \(epsilon > 0\) be given.",
+"Let \(\delta := \epsilon^2.\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+
+ENDDOCUMENT();

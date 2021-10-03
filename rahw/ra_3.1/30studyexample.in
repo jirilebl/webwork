@@ -1,0 +1,139 @@
+%DESC Prove Corollary 3.1.12 part (i)
+%HINC head.txt
+%NOPARTIAL
+Let us study Example 3.1.5.  Answer the interspersed questions.
+
+
+Consider \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) defined by \(f(x) := x^2 .\)  Then
+for any \(c \in {\mathbb{R}}\)
+\[
+\lim_{x\to c} f(x) = \lim_{x\to c} x^2 = c^2 .
+\]
+
+$BITALIC Q: Is an arbitrary \(c\) a cluster point of the domain of \(f?\) $EITALIC
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+Proof: Let \(c \in {\mathbb{R}}\) be fixed, and suppose \(\epsilon > 0\) is given.
+
+$BITALIC Q: Why are we taking a fixed \(c ?\) $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Because if we prove the claim for an arbitrary fixed \(c,\) it is true for all \(c.\)
+Because the claim is true for only some \(c .\)
+Because \(c\) depends on \(\epsilon .\)
+Because we are allowed to choose \(c\) arbitrarily.
+%END
+
+$BITALIC Q: Why are we taking an arbitrary \(\epsilon > 0 ?\) $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Because we need to prove that the definition of the limit is satisfied for all \(\epsilon > 0 .\)
+Because we need to prove that the definition of the limit for some specific \(\epsilon > 0 .\)
+Because \( \epsilon \) depends on \(c .\)
+Because we are allowed to choose \(\epsilon\) arbitrarily.
+%END
+
+Write
+\[
+\newcommand{\abs}[1]{\left\lvert {#1} \right\rvert}
+\delta := \min \left$LB 1 , \, \frac{\epsilon}{2\abs{c}+1} \right$RB .
+\]
+
+$BITALIC Q: Is \(\delta\) always positive? $EITALIC
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+$BITALIC Q: Why are we allowed to define \(\delta?\) $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Because we only need to show existence of \( \delta \) given an \(\epsilon .\)
+Because we chose an arbitrary \(\epsilon .\)
+Because we can always define all the quantities to a convenient value.
+%END
+
+Take \(x \not= c\) such that \(\abs{x-c} < \delta .\)
+In particular, \(\abs{x-c} < 1 .\)
+By reverse triangle inequality, we get
+\[
+\abs{x}-\abs{c} \leq \abs{x-c} < 1 .
+\]
+Adding \(2\abs{c}\) to both sides, we obtain
+\(\abs{x} + \abs{c} < 2\abs{c} + 1 .\)
+
+$BITALIC Q: What did we really just obtain about \(\abs{x}?\) $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT We found \(\abs{x} < \abs{c}+1 .\)
+We found \(\abs{c} < \abs{x}+1 .\)
+We found \(2\abs{x} < 2\abs{c}+1 .\)
+We found that \(\abs{x}\) is arbitrarily close to \(c.\)
+%END
+
+We compute
+\[
+\begin{split}
+\abs{f(x) - c^2} &= \abs{x^2-c^2} \\
+&= \abs{(x+c)(x-c)} \\
+&= \abs{x+c}\abs{x-c} \\
+&\leq (\abs{x}+\abs{c})\abs{x-c} \\
+&< (2\abs{c}+1)\abs{x-c} \\
+&< (2\abs{c}+1)\frac{\epsilon}{2\abs{c}+1} = \epsilon .
+\end{split}
+\]
+
+$BITALIC Q: What did we not just define \(\delta := \frac{\epsilon}{\abs{x+c}}\) as that's what we need to bound? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT The \(\delta\) cannot depend on \(x,\) it can only depend on \(c\) and \(\epsilon .\)
+We could be dividing by zero if \(x+c=0 .\)
+We can't do that, but we could define \(\delta :=\frac{\epsilon}{\abs{x}+\abs{c}+1} .\)
+The \(\delta\) cannot depend on \(c.\)
+That would make the proof too simple.
+%END
+
+$BITALIC Q: In the argument, what does \(x\) depend on? $EITALIC
+$BR
+%CHECKBOXES
+\(c\)
+\(\epsilon\)
+\(\delta\)
+%EXTRA
+Nothing
+%END
+
+$BITALIC Q: In the argument, what does \(c\) depend on? $EITALIC
+$BR
+%CHECKBOXES
+Nothing
+%EXTRA
+\(x\)
+\(\epsilon\)
+\(\delta\)
+%END
+
+$BITALIC Q: In the argument, what does \(\epsilon\) depend on? $EITALIC
+$BR
+%CHECKBOXES
+Nothing
+%EXTRA
+\(c\)
+\(x\)
+\(\delta\)
+%END
+
+$BITALIC Q: In the argument, what does \(\delta\) depend on? $EITALIC
+$BR
+%CHECKBOXES
+\(c\)
+\(\epsilon\)
+%EXTRA
+\(x\)
+Nothing
+%END

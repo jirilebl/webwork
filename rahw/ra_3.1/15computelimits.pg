@@ -1,0 +1,119 @@
+##DESCRIPTION
+## Comppute a few function limits
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('3.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(DNE=>"Real");
+
+$a = random(2,9,1);
+$b = random(2,5,1);
+$c = random($b+1,9,1);
+$cmb = $c-$b;
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Compute the following limits if possible.  If they do not exist, write "DNE".
+$PAR
+\(\displaystyle \lim_{x \to 0\} \frac{$b}{x} = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("DNE");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(\displaystyle \lim_{x \to 0\} \frac{$b x^2 + $cmb x - $c}{x-1} = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("$c");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(\displaystyle \lim_{x \to 1\} \frac{$b x^2 + $cmb x - $c}{x-1} = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("$b+$c");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+For \(f \colon [0,1] \to \mathbb{R}\) defined by
+\[
+f(x) :=
+\begin{cases}
+$b+$c x^2 \text{ if } x > 0 , \\
+$a \text{ if } x = 0 ,
+\end{cases}
+\]
+compute:
+$BR
+\(\displaystyle \lim_{x \to 0\} f(x) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("$b");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+
+ENDDOCUMENT();

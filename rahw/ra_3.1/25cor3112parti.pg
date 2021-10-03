@@ -1,0 +1,86 @@
+##DESCRIPTION
+## Prove Corollary 3.1.12 part (i)
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('3.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Prove Corollary 3.1.12 part (i)
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Let \(S,f,g,c\) be as in the Corollary and suppose \(f(x) \to L_f\) and \(g(x) \to L_g\) as \(x \to c.\)",
+"Consider an arbitrary sequence \( $LB x_n $RB \) in \( S \setminus $LB c $RB \) that converges to \(c.\)",
+"As \(f(x) \to L_f\) as \(x \to c,\) Lemma 3.1.7 says that \(\lim\limits_{n\to\infty} f(x_n) = L_f .\)",
+"Similarly, \(\lim\limits_{n\to\infty} g(x_n) = L_g .\)",
+"Then Proposition 2.2.5 part (i) says that \(\lim\limits_{n\to\infty} \bigl( f(x_n) + g(x_n) \bigr) = L_f + L_g .\)",
+"As \( $LB x_n $RB \) was an arbitrary sequence in \( S \setminus $LB c $RB \) converging to \(c,\) we have \(\lim\limits_{x\to c} \bigl( f(x) + g(x) \bigr) = L_f + L_g .\)",
+],
+[
+"Consider an arbitrary sequence \( $LB x_n $RB \) in \( S \setminus $LB c $RB . \)",
+"As \( $LB x_n $RB \) does not converge to \(c,\) the corollary is proved.",
+"Then \( L_f = L_g . \)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+
+ENDDOCUMENT();
