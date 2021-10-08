@@ -46,7 +46,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If every continuous \(f \colon S \to {\mathbb{R}}\) achieves a maximum
-on \(S,\) then every continuous \(f\) also achieves a minimum.
+on \(S,\) then every continuous \(f\) also achieves a minimum on \(S.\)
 $BR
 END_TEXT
 Context()->normalStrings;

@@ -2,7 +2,7 @@
 %HINC head.txt
 %NOPARTIAL
 %SETUP $a = random(5,9,1);
-Consider \(f \colon [0,1] \to \mathbb{R} \(f(x) := $a x^2 - 1 .\)
+Consider \(f \colon [0,1] \to \mathbb{R}\) defined by \(f(x) := $a x^2 - 1 .\)
 
 \(f(0)\) is
 $BR
@@ -42,12 +42,12 @@ The second interval is
 $BR
 from
 %NUMBER 0
-to
+\(\qquad\) to
 %NUMBER 1/2
 
 The third interval is
 $BR
 from
 %NUMBER 1/4
-to
+\(\qquad\) to
 %NUMBER 1/2
