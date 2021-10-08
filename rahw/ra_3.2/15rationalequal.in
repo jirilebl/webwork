@@ -1,0 +1,21 @@
+%DESC Prove that two continuous functions equal on rational points are equal.
+%HINC head.txt
+Prove that if
+\( f \colon {\mathbb{R}} \to {\mathbb{R}}\) and
+\( g \colon {\mathbb{R}} \to {\mathbb{R}}\) are continuous and
+\(f(r) = g(r)\) for all rational \(r,\) then
+\(f(x) = g(x)\) for all \(x.\)
+
+%PROOF
+Let \(x \in {\mathbb{R}}\) be arbitrary.
+Take a sequence \($LB r_n $RB\) of rational numbers that converges to \(x.\)
+As \(f\) and \(g\) are continuous at \(x,\) we have \(f(x) = \lim\, f(r_n) = \lim\, g(r_n) = g(x) .\)
+%EXTRA
+As \(f\) is continuous, \( lvert f(x) - f(r_n) \lvert < \epsilon . \)
+As \(g\) is continuous, \( lvert g(x) - g(r_n) \lvert < \epsilon . \)
+Take \(M\) large enough so that \(\lvert x-r_n\rvert < \epsilon . \)
+Define \(g(x) := f(x) . \)
+Let \(\epsilon > 0 \) be given.
+Let \(\delta := \epsilon \) be given.
+Take an arbitrary sequence \($LB r_n $RB . \)
+%END

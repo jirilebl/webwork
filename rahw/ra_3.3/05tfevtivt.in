@@ -1,0 +1,55 @@
+%DESC True/false questions on extreme and intermediate value theorems
+%HINC head.txt
+%NOPARTIAL
+%SETUP $d = random(3,17,2);
+True or false:
+If every continuous \(f \colon S \to {\mathbb{R}}\) achieves a maximum
+on \(S,\) then every continuous \(f\) also achieves a minimum.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every continuous function on the open interval \((0,1)\) achieves a maximum.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Every continuous function on the interval \([0,\infty)\) achieves a maximum.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Suppose \( f \colon [-1,1] \to {\mathbb{R}}\) is continuous everywhere
+except possibly at \(0\) (which is in the interior of \([-1,1]\)).  Then
+\(f\) achieves a maximum on \([-1,1] .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon [a,b] \to \mathbb{R}\) is continuous, then the direct image \(f([a,b])\)
+is an interval.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every polynomial of degree \($d\) has a root.
+$BR
+%RADIO
+%CORRECT True
+False
+%END

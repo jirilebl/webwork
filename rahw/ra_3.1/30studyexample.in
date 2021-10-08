@@ -1,7 +1,7 @@
-%DESC Prove Corollary 3.1.12 part (i)
+%DESC Understanding the proof of Example 3.1.5
 %HINC head.txt
 %NOPARTIAL
-Let us study Example 3.1.5.  Answer the interspersed questions.
+Let us study Example 3.1.5 in the book [1].  Answer the interspersed questions.
 
 
 Claim: Consider \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) defined by \(f(x) := x^2 .\)  Then
@@ -17,7 +17,7 @@ $BR
 No
 %END
 
-Proof: Let \(c \in {\mathbb{R}}\) be fixed, and suppose \(\epsilon > 0\) is given.
+$BITALIC Proof: $EITALIC Let \(c \in {\mathbb{R}}\) be fixed, and suppose \(\epsilon > 0\) is given.
 
 $BITALIC Q: Why are we taking a fixed \(c ?\) $EITALIC
 $BR
@@ -88,6 +88,8 @@ We compute
 \end{split}
 \]
 
+QED
+
 $BITALIC Q: Why did we not just define \(\delta := \frac{\epsilon}{\abs{x+c}}\) as that's what we need to bound? $EITALIC
 $BR
 %RADIORANDOM
@@ -133,3 +135,6 @@ $BITALIC Q: In the argument, what does \(\delta\) depend on? $EITALIC
 \(x\)
 Nothing
 %END
+
+
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC

@@ -22,7 +22,7 @@ Let \(\delta > 0\) be given.
 \( \lvert g(x) - g(c) \rvert = \lvert x^2-c^2\rvert\)
 %END
 
-Now we will apply Corollary 3.1.12.
+Now we will apply Corollary 3.1.12 (from the book [1]).
 
 %PROOF
 As \(\displaystyle \lim_{x\to c} x = c \), then \(\displaystyle \lim_{x\to c} x^2 = c^2 \) by Corollary 3.1.12 part (iii).
@@ -32,3 +32,6 @@ Finally \(\displaystyle \lim_{x\to c} (a_2 x^2+a_1 x + a_0) = a_2 c^2 + a_1 c + 
 Let \(\epsilon > 0\) be given.
 Let \(\delta := \epsilon^2.\)
 %END
+
+
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC

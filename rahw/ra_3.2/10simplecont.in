@@ -1,0 +1,21 @@
+%DESC Prove that c x^n is continuous at the origin.
+%HINC head.txt
+%SETUP $n = random(3,6,1);
+%SETUP $c = random(2,9,1);
+Prove that \(f(x) := $c x^{$n}\) is continuous at the origin using directly the definition of continuity.
+
+%PROOF
+Let \(\epsilon > 0 \) be given.
+Let \(\delta := {\left(\frac{\epsilon}{$c}\right)}^{1/$n} .\)
+Now suppose that \(x\) is such that \(\lvert x-0\rvert < \delta .\)
+Estimate, \( \lvert f(x) - f(0) \rvert = \lvert $c x^{$n} - $c (0)^{$n} \rvert\)
+\(\qquad = $c {\lvert x\rvert}^{$n}\)
+\(\qquad < $c {\delta}^{$n}\)
+\(\qquad = \epsilon \)
+%EXTRA
+Let \(\delta > 0 \) be given.
+Let \(\epsilon := {\left(\frac{\delta}{$c}\right)}^{1/$n} .\)
+Let \(\delta := {\left( $c \epsilon \right)}^{$n} .\)
+\(\qquad < \delta \)
+\(\qquad < \lvert x \rvert \)
+%END

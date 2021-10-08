@@ -1,0 +1,184 @@
+##DESCRIPTION
+## Bisection method
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('3.3')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a = random(5,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Consider \(f \colon [0,1] \to \mathbb{R} \(f(x) := $a x^2 - 1 .\)
+$PAR
+\(f(0)\) is
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"Positive",
+"Negative",
+"Zero",
+],
+"Negative",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+\(f(1)\) is
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"Positive",
+"Negative",
+"Zero",
+],
+"Positive",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+Does Bolzano's intermediate value theorem apply?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"Yes",
+"No",
+"Maybe",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+If it applies, which of the following follows from Bolzano's theorem:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+[
+"The function has a root in \((0,1).\)",
+"The function achieves a minimum and a maximum.",
+"The function is bounded.",
+],
+],
+"The function has a root in \((0,1).\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+If applying bisection method to finding a root of \(f,\) the first interval is \((0,1).\)
+$PAR
+The second interval is
+$BR
+from
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+to
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("1/2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The third interval is
+$BR
+from
+END_TEXT
+Context()->normalStrings;
+
+$q7 = Formula("1/4");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+to
+END_TEXT
+Context()->normalStrings;
+
+$q8 = Formula("1/2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+
+ENDDOCUMENT();

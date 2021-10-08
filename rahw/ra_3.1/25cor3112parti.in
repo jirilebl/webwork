@@ -1,6 +1,6 @@
 %DESC Prove Corollary 3.1.12 part (i)
 %HINC head.txt
-Prove Corollary 3.1.12 part (i)
+Prove Corollary 3.1.12 part (i) (from the book [1])
 
 %PROOF
 Let \(S,f,g,c\) be as in the Corollary and suppose \(f(x) \to L_f\) and \(g(x) \to L_g\) as \(x \to c.\)
@@ -14,3 +14,6 @@ Consider an arbitrary sequence \( $LB x_n $RB \) in \( S \setminus $LB c $RB . \
 As \( $LB x_n $RB \) does not converge to \(c,\) the corollary is proved.
 Then \( L_f = L_g . \)
 %END
+
+
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC

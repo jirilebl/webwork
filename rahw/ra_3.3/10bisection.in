@@ -1,0 +1,53 @@
+%DESC Bisection method
+%HINC head.txt
+%NOPARTIAL
+%SETUP $a = random(5,9,1);
+Consider \(f \colon [0,1] \to \mathbb{R} \(f(x) := $a x^2 - 1 .\)
+
+\(f(0)\) is
+$BR
+%RADIO
+Positive
+%CORRECT Negative
+Zero
+%END
+
+\(f(1)\) is
+$BR
+%RADIO
+%CORRECT Positive
+Negative
+Zero
+%END
+
+Does Bolzano's intermediate value theorem apply?
+$BR
+%RADIO
+%CORRECT Yes
+No
+Maybe
+%END
+
+If it applies, which of the following follows from Bolzano's theorem:
+$BR
+%RADIORANDOM
+%CORRECT The function has a root in \((0,1).\)
+The function achieves a minimum and a maximum.
+The function is bounded.
+%END
+
+If applying bisection method to finding a root of \(f,\) the first interval is \((0,1).\)
+
+The second interval is
+$BR
+from
+%NUMBER 0
+to
+%NUMBER 1/2
+
+The third interval is
+$BR
+from
+%NUMBER 1/4
+to
+%NUMBER 1/2

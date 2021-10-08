@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove Corollary 3.1.12 part (i)
+## Understanding the proof of Example 3.1.5
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -44,7 +44,7 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Let us study Example 3.1.5.  Answer the interspersed questions.
+Let us study Example 3.1.5 in the book [1].  Answer the interspersed questions.
 $PAR
 $PAR
 Claim: Consider \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) defined by \(f(x) := x^2 .\)  Then
@@ -69,7 +69,7 @@ BEGIN_TEXT
 \{ $q1->buttons \}
 
 $PAR
-Proof: Let \(c \in {\mathbb{R}}\) be fixed, and suppose \(\epsilon > 0\) is given.
+$BITALIC Proof: $EITALIC Let \(c \in {\mathbb{R}}\) be fixed, and suppose \(\epsilon > 0\) is given.
 $PAR
 $BITALIC Q: Why are we taking a fixed \(c ?\) $EITALIC
 $BR
@@ -193,6 +193,8 @@ We compute
 \end{split}
 \]
 $PAR
+QED
+$PAR
 $BITALIC Q: Why did we not just define \(\delta := \frac{\epsilon}{\abs{x+c}}\) as that's what we need to bound? $EITALIC
 $BR
 END_TEXT
@@ -285,6 +287,9 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q11->print_a() \}
 
+$PAR
+$PAR
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC
 
 END_TEXT
 Context()->normalStrings;

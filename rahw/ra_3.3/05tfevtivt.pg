@@ -1,0 +1,168 @@
+##DESCRIPTION
+## True/false questions on extreme and intermediate value theorems
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('3.3')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$d = random(3,17,2);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+If every continuous \(f \colon S \to {\mathbb{R}}\) achieves a maximum
+on \(S,\) then every continuous \(f\) also achieves a minimum.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+Every continuous function on the open interval \((0,1)\) achieves a maximum.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+Every continuous function on the interval \([0,\infty)\) achieves a maximum.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+Suppose \( f \colon [-1,1] \to {\mathbb{R}}\) is continuous everywhere
+except possibly at \(0\) (which is in the interior of \([-1,1]\)).  Then
+\(f\) achieves a maximum on \([-1,1] .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [a,b] \to \mathbb{R}\) is continuous, then the direct image \(f([a,b])\)
+is an interval.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+Every polynomial of degree \($d\) has a root.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+
+ENDDOCUMENT();

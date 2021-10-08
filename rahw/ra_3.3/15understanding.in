@@ -1,0 +1,125 @@
+%DESC Understanding proof of Lemma 3.3.1
+%HINC head.txt
+%NOPARTIAL
+Let us study Lemma 3.3.1 (from the book [1]).  Answer the interspersed questions.
+
+$BBOLD Lemma 3.3.1. $EBOLD
+$BITALIC A continuous function \(f \colon [a,b] \to \mathbb{R}\) is bounded. $EITALIC
+
+$BITALIC Q: What is the statement about the function \(f \colon [a,b] \to \mathbb{R} ?\) $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT continuous implies bounded
+bounded implies continuous
+continuous if and only if bounded
+%END
+
+$BITALIC Proof: $EITALIC
+Let us prove this claim by contrapositive.
+
+$BITALIC Q: Contrapositive of the statment of the lemma means what? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT \(f\) not bounded implies \(f\) is not continuous.
+\(f\) not bounded implies \(f\) is not a function.
+\(f\) bounded implies \(f\) is continuous.
+%END
+
+Suppose \(f\) is not bounded.
+
+$BITALIC Q: What do we need to prove now? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT That there is at least one point in \([a,b]\) where \(f\) is not continuous.
+That \(f\) is bounded, hence contradiction.
+That \(f\) is continuous at all points.
+%END
+
+Then for each
+\(n \in \mathbb{N} ,\) there is an \(x_n \in [a,b],\) such that
+\[
+\lvert f(x_n) \rvert \geq n .
+\]
+
+$BITALIC Q: Why? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Negation of the definition of bounded: For every \(B\) there is an \(x\) such that \(\lvert f(x) \rvert \geq B.\)
+Because the domain of \(f\) is open.
+Every bounded sequence must have an bounded subsequence.
+%END
+
+The sequence \($LB x_n $RB\) is bounded as \(a \leq x_n \leq b .\)
+
+$BITALIC Q: Why? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT The sequence is in the interal \([a,b] .\)
+We choose the sequence to be such.
+The sequence is convergent.
+%END
+
+By the Bolzano-Weierstrass theorem,
+there is a convergent subsequence \($LB x_{n_i} $RB.\)
+
+$BITALIC Q: Does the sequence \($LB x_n $RB\) need to necessarily be convergent? $EITALIC
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+Let \(x := \lim\, x_{n_i} .\)
+
+$BITALIC Q: This limit is a ... $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT sequence limit as \(i\) goes to \(\infty .\)
+sequence limit as \(n\) goes to \(\infty .\)
+sequence limit as \(n_i\) goes to \(\infty .\)
+function limit as \(x_{n_i}\) goes to \(x .\)
+%END
+
+Since \(a \leq x_{n_i} \leq b\) for all \(i,\) then \(a \leq x \leq b .\)
+The sequence \($LB f(x_{n_i}) $RB\) is not bounded 
+as 
+\(\lvert f(x_{n_i}) \rvert \geq n_i \geq i .\)
+Thus \(f\) is not continuous at \(x\) as
+\[
+f(x)
+=
+f\Bigl( \lim_{i\to\infty} x_{n_i} \Bigr) ,
+\qquad \text{but} \qquad
+\lim_{i\to\infty} f(x_{n_i}) \enspace \text{does not exist.}
+\]
+
+$BITALIC Q: Why does this imply that \(f\) is not continuous at \(x?\) $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Continuous functions preserve sequence limits.
+Continuous functions are bounded.
+Functions defined on sequences are continuous.
+%END
+
+QED
+
+$BITALIC Q: Why do we need to find the subsequence? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT The original sequence \($LB x_n $RB\) might not be convergent.
+To make the sequence bounded.
+To make sure we find an nonconvergent sequence \($LB f(x_{n_i}) $RB .\)
+Because we want to make the proof more complicated.
+%END
+
+$BITALIC Q: What did we actually conclude in the proof? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT There is at least one point of \([a,b]\) where the function is not continuous.
+The function is discontinuous at all points.
+The function is unbounded.
+The function is bounded.
+%END
+
+
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC

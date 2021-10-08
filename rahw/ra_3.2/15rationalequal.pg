@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove Corollary 3.1.12 part (i)
+## Prove that two continuous functions equal on rational points are equal.
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -11,7 +11,7 @@
 ## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
 ## AuthorText1('Jiri Lebl')
 ## EditionText1('5')
-## Section1('3.1')
+## Section1('3.2')
 ## Problem1('')
 
 ######################################################
@@ -43,23 +43,28 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Prove Corollary 3.1.12 part (i) (from the book [1])
+Prove that if
+\( f \colon {\mathbb{R}} \to {\mathbb{R}}\) and
+\( g \colon {\mathbb{R}} \to {\mathbb{R}}\) are continuous and
+\(f(r) = g(r)\) for all rational \(r,\) then
+\(f(x) = g(x)\) for all \(x.\)
 $PAR
 END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Let \(S,f,g,c\) be as in the Corollary and suppose \(f(x) \to L_f\) and \(g(x) \to L_g\) as \(x \to c.\)",
-"Consider an arbitrary sequence \( $LB x_n $RB \) in \( S \setminus $LB c $RB \) that converges to \(c.\)",
-"As \(f(x) \to L_f\) as \(x \to c,\) Lemma 3.1.7 says that \(\lim\limits_{n\to\infty} f(x_n) = L_f .\)",
-"Similarly, \(\lim\limits_{n\to\infty} g(x_n) = L_g .\)",
-"Then Proposition 2.2.5 part (i) says that \(\lim\limits_{n\to\infty} \bigl( f(x_n) + g(x_n) \bigr) = L_f + L_g .\)",
-"As \( $LB x_n $RB \) was an arbitrary sequence in \( S \setminus $LB c $RB \) converging to \(c,\) we have \(\lim\limits_{x\to c} \bigl( f(x) + g(x) \bigr) = L_f + L_g .\)",
+"Let \(x \in {\mathbb{R}}\) be arbitrary.",
+"Take a sequence \($LB r_n $RB\) of rational numbers that converges to \(x.\)",
+"As \(f\) and \(g\) are continuous at \(x,\) we have \(f(x) = \lim\, f(r_n) = \lim\, g(r_n) = g(x) .\)",
 ],
 [
-"Consider an arbitrary sequence \( $LB x_n $RB \) in \( S \setminus $LB c $RB . \)",
-"As \( $LB x_n $RB \) does not converge to \(c,\) the corollary is proved.",
-"Then \( L_f = L_g . \)",
+"As \(f\) is continuous, \( lvert f(x) - f(r_n) \lvert < \epsilon . \)",
+"As \(g\) is continuous, \( lvert g(x) - g(r_n) \lvert < \epsilon . \)",
+"Take \(M\) large enough so that \(\lvert x-r_n\rvert < \epsilon . \)",
+"Define \(g(x) := f(x) . \)",
+"Let \(\epsilon > 0 \) be given.",
+"Let \(\delta := \epsilon \) be given.",
+"Take an arbitrary sequence \($LB r_n $RB . \)",
 ],
 
 SourceLabel => "Choose from these statements",
@@ -74,9 +79,6 @@ to the right, putting them in the correct order.  There could be extras.) $EITAL
 
 \{ $q1->Print \}
 
-$PAR
-$PAR
-[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC
 
 END_TEXT
 Context()->normalStrings;
