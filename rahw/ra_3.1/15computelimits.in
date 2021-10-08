@@ -1,6 +1,5 @@
 %DESC Comppute a few function limits
 %HINC head.txt
-%NOPARTIAL
 %FORMULAVARS DNE
 %SETUP $a = random(2,9,1);
 %SETUP $b = random(2,5,1);

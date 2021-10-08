@@ -30,7 +30,7 @@ TEXT(beginproblem());
 ###########################
 # Setup
 
-$showPartialCorrectAnswers = 0;
+$showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 
@@ -108,8 +108,6 @@ Context()->normalStrings;
 
 ############################
 # Answers
-
-install_problem_grader(~~&std_problem_grader);
 
 ANS($q1->cmp());
 ANS($q2->cmp());
