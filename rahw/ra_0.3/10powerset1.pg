@@ -102,7 +102,7 @@ BEGIN_TEXT
 \{ $q3->buttons \}
 
 $PAR
-The power set of \( $LB 1,2,\ldots,\{ $n \} $RB \) has how many elements?
+The power set of \( $LB 1,2,\ldots, $n $RB \) has how many elements?
 $BR
 END_TEXT
 Context()->normalStrings;

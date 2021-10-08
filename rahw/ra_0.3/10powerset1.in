@@ -32,6 +32,6 @@ Depends on what \(X\) is
 None of these
 %END
 
-The power set of \( $LB 1,2,\ldots,\{ $n \} $RB \) has how many elements?
+The power set of \( $LB 1,2,\ldots, $n $RB \) has how many elements?
 $BR
 %NUMBER $ans

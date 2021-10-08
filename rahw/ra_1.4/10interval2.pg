@@ -57,7 +57,7 @@ Context()->normalStrings;
 $q1 = DraggableProof([
 "Suppose that \(x\) is such that \(a < x < b.\)",
 "As \(a,b \in I\) and \(a < x < b\), then by assumption \(x \in I.\)",
-"So the set \((a,b) = \{ x : a < x < b \} \subset I .\)",
+"So the set \((a,b) = $LB x : a < x < b $RB \subset I .\)",
 "Also \(a,b \in I,\) so \([a,b] \subset I .\)",
 ],
 [
