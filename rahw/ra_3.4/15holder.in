@@ -19,7 +19,7 @@ Let \(\delta := \epsilon^2 .\)
 Suppose \(x,y \in [a,b]\) are such that \(\lvert x-y\rvert < \delta . \)
 Estimate, \( \lvert f(x)-f(y) \rvert \leq {\lvert x-y \rvert}^{1/2} \)
 \( \qquad < {\delta}^{1/2} \)
-\( \qquad = {(\epsilon^2)}^{1/2} = \epsilon \)
+\( \qquad = {(\epsilon^2)}^{1/2} = \epsilon . \)
 %EXTRA
 Let \(\delta > 0 \) be given.
 Let \(\delta := \epsilon^{1/2} .\)
@@ -27,7 +27,7 @@ Suppose \(x,y \in [a,b]\) are such that \({\lvert x-y\rvert}^{1/2} < \delta . \)
 Suppose \(x,y \in [a,b]\) are such that \(\lvert f(x)-f(y)\rvert < \epsilon . \)
 Estimate, \( \lvert x-y \rvert < \delta \)
 \( \qquad < \epsilon^2 \)
-\( \qquad = \delta \)
+\( \qquad = \delta . \)
 \( \qquad = \epsilon^2 \)
 %END
 
