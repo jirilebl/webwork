@@ -1,0 +1,124 @@
+##DESCRIPTION
+## Bounding a function based on Lipschitz constant
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('3.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a = random(2,9,1);
+$len = random(2,9,1);
+$b = $a+$len;
+$k = random(2,9,1);
+$v = random(1,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose that \(f \colon [$a,$b] \to \mathbb{R}\) is Lipschitz with constant \(K=$k .\)
+Suppose that \(f($a) = $v .\)
+What can you say about \(f($b) ?\)
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("$v-($k*$len)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+\(\qquad \leq f($b) \leq \qquad \)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("$v+($k*$len)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+$PAR
+Can these values be attained?  That is, is it possible to have one of the
+inequalities be an iequality?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+$PAR
+If you didn't know the Lipschitz constant for \(f,\) can you say anything else
+about \(f($b)\) besides it being a real number?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+
+ENDDOCUMENT();

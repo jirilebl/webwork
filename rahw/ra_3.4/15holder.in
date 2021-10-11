@@ -1,0 +1,38 @@
+%DESC Showing a Holder continuous function is uniformly continuous.
+%HINC head.txt
+%NOPARTIAL
+Suppose \(f \colon [a,b] \to {\mathbb{R}}\) is such that
+\( \lvert f(x)-f(y) \rvert \leq {\lvert x-y \rvert}^{1/2} . \)
+
+Is \(f\) necessarily Lipschitz?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+Prove that \(f\) is uniformly continuous.
+
+%PROOF
+Let \(\epsilon > 0\) be given.
+Let \(\delta := \epsilon^2 .\)
+Suppose \(x,y\) are such that \(\lvert x-y\rvert < \delta . \)
+Estimate, \( \lvert f(x)-f(y) \rvert \leq {\lvert x-y \rvert}^{1/2} \)
+\( \qquad < {\delta}^{1/2} \)
+\( \qquad = {(\epsilon^2)}^{1/2} \)
+\( \qquad = \epsilon \)
+%EXTRA
+Let \(\delta := \epsilon^{1/2} .\)
+Suppose \(x,y\) are such that \({\lvert x-y\rvert}^{1/2} < \delta . \)
+Suppose \(x,y\) are such that \(\lvert f(x)-f(y)\rvert < \epsilon . \)
+Estimate, \( \lvert x-y \rvert < \delta \)
+\( \qquad < \epsilon^2 \)
+\( \qquad = \delta \)
+\( \qquad = \epsilon^2 \)
+%END
+
+
+$BBOLD Remark: $EBOLD $BITALIC Such a function is said to be Hölder continuous: That is,
+\(f \colon S \to \mathbb{R}\) is Hölder if there are positive \(C\) and \(\alpha\)
+such that
+\( \lvert f(x)-f(y) \rvert \leq C {\lvert x-y \rvert}^{\alpha} \) for all \(x,y \in S .\)  $EITALIC

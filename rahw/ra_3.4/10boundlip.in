@@ -1,0 +1,33 @@
+%DESC Bounding a function based on Lipschitz constant
+%HINC head.txt
+%NOPARTIAL
+%SETUP $a = random(2,9,1);
+%SETUP $len = random(2,9,1);
+%SETUP $b = $a+$len;
+%SETUP $k = random(2,9,1);
+%SETUP $v = random(1,9,1);
+Suppose that \(f \colon [$a,$b] \to \mathbb{R}\) is Lipschitz with constant \(K=$k .\)
+Suppose that \(f($a) = $v .\)
+What can you say about \(f($b) ?\)
+
+%NUMBER $v-($k*$len)
+\(\qquad \leq f($b) \leq \qquad \)
+%NUMBER $v+($k*$len)
+
+
+Can these values be attained?  That is, is it possible to have one of the
+inequalities be an iequality?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+
+If you didn't know the Lipschitz constant for \(f,\) can you say anything else
+about \(f($b)\) besides it being a real number?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END

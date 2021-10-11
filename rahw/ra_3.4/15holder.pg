@@ -1,0 +1,120 @@
+##DESCRIPTION
+## Showing a Holder continuous function is uniformly continuous.
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('3.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \(f \colon [a,b] \to {\mathbb{R}}\) is such that
+\( \lvert f(x)-f(y) \rvert \leq {\lvert x-y \rvert}^{1/2} . \)
+$PAR
+Is \(f\) necessarily Lipschitz?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+Prove that \(f\) is uniformly continuous.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"Let \(\epsilon > 0\) be given.",
+"Let \(\delta := \epsilon^2 .\)",
+"Suppose \(x,y\) are such that \(\lvert x-y\rvert < \delta . \)",
+"Estimate, \( \lvert f(x)-f(y) \rvert \leq {\lvert x-y \rvert}^{1/2} \)",
+"\( \qquad < {\delta}^{1/2} \)",
+"\( \qquad = {(\epsilon^2)}^{1/2} \)",
+"\( \qquad = \epsilon \)",
+],
+[
+"Let \(\delta := \epsilon^{1/2} .\)",
+"Suppose \(x,y\) are such that \({\lvert x-y\rvert}^{1/2} < \delta . \)",
+"Suppose \(x,y\) are such that \(\lvert f(x)-f(y)\rvert < \epsilon . \)",
+"Estimate, \( \lvert x-y \rvert < \delta \)",
+"\( \qquad < \epsilon^2 \)",
+"\( \qquad = \delta \)",
+"\( \qquad = \epsilon^2 \)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+$PAR
+$PAR
+$BBOLD Remark: $EBOLD $BITALIC Such a function is said to be Hölder continuous: That is,
+\(f \colon S \to \mathbb{R}\) is Hölder if there are positive \(C\) and \(\alpha\)
+such that
+\( \lvert f(x)-f(y) \rvert \leq C {\lvert x-y \rvert}^{\alpha} \) for all \(x,y \in S .\)  $EITALIC
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+
+ENDDOCUMENT();
