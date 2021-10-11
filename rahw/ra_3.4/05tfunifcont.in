@@ -1,0 +1,62 @@
+%DESC True/false questions on uniform/Lipschitz continuity
+%HINC head.txt
+%NOPARTIAL
+True or false:
+Every uniformly continuous function is Lipschitz continuous.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Every Lipschitz continuous function is uniformly continuous.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every continuous function \(f \colon [0,1] \to {\mathbb{R}}\) is uniformly continuous.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every continuous function \(f \colon [0,1) \to {\mathbb{R}}\) is uniformly continuous.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Every continuous function \(f \colon (0,1) \to {\mathbb{R}}\) is uniformly continuous.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Consider a function \( f \colon {\mathbb{R}} \to {\mathbb{R}}.\)
+Suppose for every bounded interval \(I \subset {\mathbb{R}},\) the restriction \(f|_I\) is 
+uniformly continuous.  Then \(f\) is uniformly continuous.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Consider a continuous function \( f \colon {\mathbb{R}} \to {\mathbb{R}}.\)
+Then for every bounded interval \(I \subset {\mathbb{R}},\) the restriction \(f|_I\) is 
+uniformly continuous.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
