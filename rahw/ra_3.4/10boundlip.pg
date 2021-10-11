@@ -74,7 +74,7 @@ BEGIN_TEXT
 $PAR
 $PAR
 Can these values be attained?  That is, is it possible to have one of the
-inequalities be an iequality?
+inequalities be an equality?
 $BR
 END_TEXT
 Context()->normalStrings;

@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Showing a Holder continuous function is uniformly continuous.
+## Showing a Hoelder continuous function is uniformly continuous.
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -101,8 +101,8 @@ to the right, putting them in the correct order.  There could be extras.) $EITAL
 
 $PAR
 $PAR
-$BBOLD Remark: $EBOLD $BITALIC Such a function is said to be Hölder continuous: That is,
-\(f \colon S \to \mathbb{R}\) is Hölder if there are positive \(C\) and \(\alpha\)
+$BBOLD Remark: $EBOLD $BITALIC Such a function is said to be Hoelder continuous: That is,
+\(f \colon S \to \mathbb{R}\) is Hoelder if there are positive \(C\) and \(\alpha\)
 such that
 \( \lvert f(x)-f(y) \rvert \leq C {\lvert x-y \rvert}^{\alpha} \) for all \(x,y \in S .\)  $EITALIC
 
