@@ -47,7 +47,7 @@ $PAR
 Suppose \(f \colon [a,b] \to {\mathbb{R}}\) is such that
 \( \lvert f(x)-f(y) \rvert \leq {\lvert x-y \rvert}^{1/2} . \)
 $PAR
-Is \(f\) necessarily Lipschitz?
+Is \(f\) necessarily Lipschitz?  (Note that the function \(\sqrt{x},\) for example, satisfies this condition.)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -71,7 +71,7 @@ Context()->normalStrings;
 $q2 = DraggableProof([
 "Let \(\epsilon > 0\) be given.",
 "Let \(\delta := \epsilon^2 .\)",
-"Suppose \(x,y\) are such that \(\lvert x-y\rvert < \delta . \)",
+"Suppose \(x,y \in [a,b]\) are such that \(\lvert x-y\rvert < \delta . \)",
 "Estimate, \( \lvert f(x)-f(y) \rvert \leq {\lvert x-y \rvert}^{1/2} \)",
 "\( \qquad < {\delta}^{1/2} \)",
 "\( \qquad = {(\epsilon^2)}^{1/2} = \epsilon \)",
@@ -79,8 +79,8 @@ $q2 = DraggableProof([
 [
 "Let \(\delta > 0 \) be given.",
 "Let \(\delta := \epsilon^{1/2} .\)",
-"Suppose \(x,y\) are such that \({\lvert x-y\rvert}^{1/2} < \delta . \)",
-"Suppose \(x,y\) are such that \(\lvert f(x)-f(y)\rvert < \epsilon . \)",
+"Suppose \(x,y \in [a,b]\) are such that \({\lvert x-y\rvert}^{1/2} < \delta . \)",
+"Suppose \(x,y \in [a,b]\) are such that \(\lvert f(x)-f(y)\rvert < \epsilon . \)",
 "Estimate, \( \lvert x-y \rvert < \delta \)",
 "\( \qquad < \epsilon^2 \)",
 "\( \qquad = \delta \)",
