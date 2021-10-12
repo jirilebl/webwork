@@ -1,0 +1,41 @@
+%DESC Computing the difference quotients
+%HINC head.txt
+%NOPARTIAL
+%SETUP $a = random(2,4,1);
+%SETUP $b = random(2,4,1);
+%SETUP $x = random(2,4,1);
+%SETUP $x1 = $x+1
+%SETUP $x2 = $x+0.1
+%SETUP $x3 = $x+0.01
+Let \(f(x) := $a x^2 + $b x . \)
+
+
+Compute the slope of the line going through the points
+\( \bigl($x,f($x)\bigr) \) and
+\( \bigl($x1,f($x1)\bigr) . \) (You may want to use a calculator.)
+
+slope \(=\)
+%NUMBER (($a*($x1)^2+$b*$x1)-($a*($x)^2+$b*$x))/($x1-$x)
+
+
+Compute the slope of the line going through the points
+\( \bigl($x,f($x)\bigr) \) and
+\( \bigl($x2,f($x2)\bigr) .\)
+
+slope \(=\)
+%NUMBER (($a*($x2)^2+$b*$x2)-($a*($x)^2+$b*$x))/($x2-$x)
+
+
+Compute the slope of the line going through the points
+\( \bigl($x,f($x)\bigr) \) and
+\( \bigl($x3,f($x3)\bigr) .\)
+
+slope \(=\)
+%NUMBER (($a*($x3)^2+$b*$x3)-($a*($x)^2+$b*$x))/($x3-$x)
+
+
+Now what is the slope of the line tangent to the graph of
+\(f\) at the point \( \bigl($x,f($x)\bigr) ? \)
+
+slope \(=\)
+%NUMBER (2*$a*$x)+$b
