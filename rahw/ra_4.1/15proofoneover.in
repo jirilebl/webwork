@@ -7,16 +7,15 @@ Prove that \(f\) is differentiable at every \(c \in (0,\infty) .\)
 Let \(c \in (0,\infty) \) be arbitrary.
 Suppose \(x \in (0,\infty)\) is such that \(x \not= c .\)
 Write \( \frac{f(x)-f(c)}{x-c} = \frac{1/x-1/c}{x-c} \)
-\(=\frac{c-x}{(xc)(x-c)}\)
-\(=\frac{-1}{xc}. \)
+\( \qquad =\frac{c-x}{(xc)(x-c)} =\frac{-1}{xc}. \)
 As \(c^2 \not= 0,\) we have \(\displaystyle \lim_{x \to c} \frac{-1}{xc} = \frac{-1}{c^2} .\)
 Thus, \( \displaystyle \lim_{x \to c} \frac{f(x)-f(c)}{x-c} = \frac{-1}{c^2} . \)
 So \(f\) is differentiable at \(c.\)
 %EXTRA
 Let \(\epsilon > 0\) be given.
-Let \(\delta := \frac{1}{c}\).
+Let \(\delta := \frac{1}{c} .\)
 Let \(x \in (0,\infty) \) be arbitrary.
-\(=\frac{1}{x}-\frac{1}{c}\)
+\(\qquad =\frac{1}{x}-\frac{1}{c} .\)
 Now as \(c = 0,\) we have that the limit does not exist.
 So \(f\) is differentiable at \(0.\)
 Thus, \( \displaystyle \lim_{x \to c} \frac{f(x)-f(c)}{x-c} \) does not exist.
