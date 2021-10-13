@@ -3,8 +3,8 @@
 %NOPARTIAL
 %SETUP $a = random(2,5,1);
 True or false:
-If \(x_n > 0\) for all \(n\) and \(\lim \, x_n\) exists, then
-\(\lim \, x_n > 0\text{.}\)
+If \(x_n $GTS 0\) for all \(n\) and \(\lim \, x_n\) exists, then
+\(\lim \, x_n $GTS 0\text{.}\)
 $BR
 %RADIO
 True
@@ -12,7 +12,7 @@ True
 %END
 
 True or false:
-If \(a_n < x_n < b_n\) for all \(n\) and
+If \(a_n $LTS x_n $LTS b_n\) for all \(n\) and
 \(\lim \, a_n\) and
 \(\lim \, b_n\) exist, then
 \($LB x_n $RB\) converges.
@@ -23,7 +23,7 @@ True
 %END
 
 True or false:
-If \(\lvert $a x_n \rvert < \frac{1}{n}\) for all \(n\text{,}\)
+If \(\lvert $a x_n \rvert $LTS \frac{1}{n}\) for all \(n\text{,}\)
 then
 \(\lim \, x_n = 0\text{.}\)
 $BR
@@ -73,7 +73,7 @@ False
 %END
 
 True or false:
-If \(0 < c < 1\) and 
+If \(0 $LTS c $LTS 1\) and 
 \($LB c^n x_n $RB\) converges, then
 \($LB x_n $RB\) is bounded.
 $BR
@@ -83,7 +83,7 @@ True
 %END
 
 True or false:
-If \(0 < c < 1\) and 
+If \(0 $LTS c $LTS 1\) and 
 \($LB c^n x_n $RB\) converges to \(0\text{,}\) then
 \($LB x_n $RB\) is bounded.
 $BR

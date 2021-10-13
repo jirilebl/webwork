@@ -5,12 +5,12 @@ there exists a \(k \in \mathbb{N}\) such that for all \(n \geq k,\)
 \(x_n = x.\)  Prove that \($LB x_n $RB\) converges to \(x.\)
 
 %PROOF
-Let \(\epsilon > 0\) be given.
+Let \(\epsilon $GTS 0\) be given.
 Let \(M := k.\)
-Then for all \(n \geq M = k,\) we have \(|x_n-x| = 0 < \epsilon.\)
+Then for all \(n \geq M = k,\) we have \(|x_n-x| = 0 $LTS \epsilon.\)
 Therefore, \($LB x_n $RB\) converges to \(x.\)
 %EXTRA
-For all \(n \in {\mathbb{N}},\) we have \(|x_n-x| = 0 < \epsilon.\)
+For all \(n \in {\mathbb{N}},\) we have \(|x_n-x| = 0 $LTS \epsilon.\)
 Let \(M := k-1 .\)
 Let \(x_k := x .\)
 Suppose \(x=1.\)

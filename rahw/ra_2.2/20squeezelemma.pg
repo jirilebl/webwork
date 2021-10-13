@@ -43,14 +43,14 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Suppose that \( $LB x_n $RB \) is bounded.  Show that there exists a \( K > 0 \) such that
+Suppose that \( $LB x_n $RB \) is bounded.  Show that there exists a \( K $GTS 0 \) such that
 \( \left$LB \left(\frac{x_n}{K}\right)^n \right$RB \) converges to \(0\text{.}\)
 $PAR
 END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Suppose \(B > 0\) is such that \( \lvert x_n \rvert \leq B \) for all \( n \in \mathbb{N} \text{.}\)",
+"Suppose \(B $GTS 0\) is such that \( \lvert x_n \rvert \leq B \) for all \( n \in \mathbb{N} \text{.}\)",
 "Let \(K := 2B\text{.}\)",
 "We have \( 0 \leq \left\lvert \left(\frac{x_n}{K}\right)^n\right\rvert \)",
 "\( \qquad = \left(\frac{\lvert x_n \rvert}{K}\right)^n \)",

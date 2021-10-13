@@ -59,7 +59,7 @@ $q1 = DraggableProof([
 "So \(f\) is differentiable at \(c.\)",
 ],
 [
-"Let \(\epsilon > 0\) be given.",
+"Let \(\epsilon $GTS 0\) be given.",
 "Let \(\delta := \frac{1}{c} .\)",
 "Let \(x \in (0,\infty) \) be arbitrary.",
 "\(\qquad =\frac{1}{x}-\frac{1}{c} .\)",

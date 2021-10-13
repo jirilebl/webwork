@@ -6,14 +6,14 @@ Suppose \( x_n = \frac{(-1)^n}{n} . \)  (Note: The sequence \($LB x_n $RB\) is C
 
 Given \(\epsilon = \frac{1}{2} , \) what is the smallest \(M \in \mathbb{N}\)
 such that for all \(k,m \geq M ,\) we have
-\( | x_k - x_m | < \epsilon . \)
+\( | x_k - x_m | $LTS \epsilon . \)
 $BR
 \(M={}\)
 %NUMBER 4
 
 Given \(\epsilon = \frac{1}{10} , \) what is the smallest \(M \in \mathbb{N}\)
 such that for all \(k,m \geq M ,\) we have
-\( | x_k - x_m | < \epsilon . \)
+\( | x_k - x_m | $LTS \epsilon . \)
 $BR
 \(M={}\)
 %NUMBER 20

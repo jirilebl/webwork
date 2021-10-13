@@ -20,7 +20,7 @@ For \(f \colon [0,1] \to \mathbb{R}\) defined by
 \[
 f(x) :=
 \begin{cases}
-$b+$c x^2 & \text{if } x > 0 , \\
+$b+$c x^2 & \text{if } x $GTS 0 , \\
 $a & \text{if } x = 0 ,
 \end{cases}
 \]

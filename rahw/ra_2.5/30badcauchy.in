@@ -17,7 +17,7 @@ $BR
 Because \( $LB x_n $RB \) converges.
 Because \( $LB \frac{1}{n} $RB \) converges to \(0.\)
 Because \( $LB x_n $RB \) satisfies the ratio test.
-Because \( \frac{1}{j} > 0 \) for all \(j \in {\mathbb{N}}.\)
+Because \( \frac{1}{j} $GTS 0 \) for all \(j \in {\mathbb{N}}.\)
 %END
 
 Prove that despite the above, for any \(k \in \mathbb{N},\) we have
@@ -39,5 +39,5 @@ Let \(n\) be a fixed natural number.
 \(\displaystyle \qquad = \frac{k}{n+k} . \)
 \(\displaystyle \qquad \leq \sum_{j=n+1}^{n+k} \frac{1}{n+k} \)
 So by sequeeze lemma, as \( 0 \leq y_n \leq \frac{n}{k+1} ,\) we have \(y_n \to 0 .\)
-\(\displaystyle \qquad < 1 . \)
+\(\displaystyle \qquad $LTS 1 . \)
 %END

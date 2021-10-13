@@ -12,7 +12,7 @@ True
 %END
 
 True or false:
-If \(\liminf \, x_n < \limsup \, x_n ,\) then
+If \(\liminf \, x_n $LTS \limsup \, x_n ,\) then
 \($LB x_n $RB\) diverges.
 $BR
 %RADIO
@@ -78,7 +78,7 @@ False
 %END
 
 True or false:
-If \(\liminf \, x_n < \limsup \, x_n ,\) then
+If \(\liminf \, x_n $LTS \limsup \, x_n ,\) then
 there exists a divergent subsequence
 \($LB x_{n_k} $RB .\)
 $BR

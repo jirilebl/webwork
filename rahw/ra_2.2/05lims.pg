@@ -89,7 +89,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 $PAR
-Consider the sequence \(\left$LB c^{\sqrt{n}} \right$RB\) where \( 0 < c < 1 \text{.}\)
+Consider the sequence \(\left$LB c^{\sqrt{n}} \right$RB\) where \( 0 $LTS c $LTS 1 \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR

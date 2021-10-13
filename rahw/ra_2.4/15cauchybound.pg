@@ -44,26 +44,26 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 Suppose that \( $LB x_n $RB \) is a sequence such that whenever \( k \leq m , \) we have
-\( |x_k - x_m| < \frac{1}{k} . \)
+\( |x_k - x_m| $LTS \frac{1}{k} . \)
 Prove that \( $LB x_n $RB \) is Cauchy.
 $PAR
 END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Let \(\epsilon > 0\) be given.",
-"Find \(M \in {\mathbb{N}}\) such that \(\frac{1}{M} < \epsilon .\)",
+"Let \(\epsilon $GTS 0\) be given.",
+"Find \(M \in {\mathbb{N}}\) such that \(\frac{1}{M} $LTS \epsilon .\)",
 "Suppose \(k,m \geq M .\)",
 "Without loss of generality suppose \(k \leq m .\)",
-"Then \( |x_k - x_m| < \frac{1}{k} \)",
+"Then \( |x_k - x_m| $LTS \frac{1}{k} \)",
 "\( \qquad \leq \frac{1}{M} \)",
-"\( \qquad < \epsilon \)",
+"\( \qquad $LTS \epsilon \)",
 "Therefore, \( $LB x_n $RB \) is Cauchy.",
 ],
 [
-"Find \(M \in {\mathbb{N}}\) such that \(M > \epsilon .\)",
+"Find \(M \in {\mathbb{N}}\) such that \(M $GTS \epsilon .\)",
 "Suppose \(k,m \leq M .\)",
-"Then \( |x_k - x_m| > \epsilon . \)",
+"Then \( |x_k - x_m| $GTS \epsilon . \)",
 "\( \qquad \leq \frac{1}{\epsilon} \)",
 "Without loss of generality suppose \(k = m .\)",
 ],

@@ -17,7 +17,7 @@ $BR
 No
 %END
 
-$BITALIC Proof: $EITALIC Let \(c \in {\mathbb{R}}\) be fixed, and suppose \(\epsilon > 0\) is given.
+$BITALIC Proof: $EITALIC Let \(c \in {\mathbb{R}}\) be fixed, and suppose \(\epsilon $GTS 0\) is given.
 
 $BITALIC Q: Why are we taking a fixed \(c ?\) $EITALIC
 $BR
@@ -28,11 +28,11 @@ Because \(c\) depends on \(\epsilon .\)
 Because we are allowed to choose \(c\) arbitrarily.
 %END
 
-$BITALIC Q: Why are we taking an arbitrary \(\epsilon > 0 ?\) $EITALIC
+$BITALIC Q: Why are we taking an arbitrary \(\epsilon $GTS 0 ?\) $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT Because we need to prove that the definition of the limit is satisfied for all \(\epsilon > 0 .\)
-Because we need to prove that the definition of the limit for some specific \(\epsilon > 0 .\)
+%CORRECT Because we need to prove that the definition of the limit is satisfied for all \(\epsilon $GTS 0 .\)
+Because we need to prove that the definition of the limit for some specific \(\epsilon $GTS 0 .\)
 Because \( \epsilon \) depends on \(c .\)
 Because we are allowed to choose \(\epsilon\) arbitrarily.
 %END
@@ -58,21 +58,21 @@ Because we chose an arbitrary \(\epsilon .\)
 Because we can always define all the quantities to a convenient value.
 %END
 
-Take \(x \not= c\) such that \(\abs{x-c} < \delta .\)
-In particular, \(\abs{x-c} < 1 .\)
+Take \(x \not= c\) such that \(\abs{x-c} $LTS \delta .\)
+In particular, \(\abs{x-c} $LTS 1 .\)
 By reverse triangle inequality, we get
 \[
-\abs{x}-\abs{c} \leq \abs{x-c} < 1 .
+\abs{x}-\abs{c} \leq \abs{x-c} $LTS 1 .
 \]
 Adding \(2\abs{c}\) to both sides, we obtain
-\(\abs{x} + \abs{c} < 2\abs{c} + 1 .\)
+\(\abs{x} + \abs{c} $LTS 2\abs{c} + 1 .\)
 
 $BITALIC Q: What did we really just obtain about \(\abs{x}?\) $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT We found \(\abs{x} < \abs{c}+1 .\)
-We found \(\abs{c} < \abs{x}+1 .\)
-We found \(2\abs{x} < 2\abs{c}+1 .\)
+%CORRECT We found \(\abs{x} $LTS \abs{c}+1 .\)
+We found \(\abs{c} $LTS \abs{x}+1 .\)
+We found \(2\abs{x} $LTS 2\abs{c}+1 .\)
 We found that \(\abs{x}\) is arbitrarily close to \(c.\)
 %END
 
@@ -83,8 +83,8 @@ We compute
 &= \abs{(x+c)(x-c)} \\
 &= \abs{x+c}\abs{x-c} \\
 &\leq (\abs{x}+\abs{c})\abs{x-c} \\
-&< (2\abs{c}+1)\abs{x-c} \\
-&< (2\abs{c}+1)\frac{\epsilon}{2\abs{c}+1} = \epsilon .
+&$LTS (2\abs{c}+1)\abs{x-c} \\
+&$LTS (2\abs{c}+1)\frac{\epsilon}{2\abs{c}+1} = \epsilon .
 \end{split}
 \]
 

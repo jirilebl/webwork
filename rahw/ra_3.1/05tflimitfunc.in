@@ -52,9 +52,9 @@ The following statement is equivalent to the definition of limit
 \(\displaystyle \lim_{x \to c} f(x) = L \) whenever
 for every \(n \in \mathbb{N}\) there is an \(m \in \mathbb{N} \)
 such that for every \(x \not= c\) where
-\(\lvert x - c\rvert < \frac{1}{m} , \)
+\(\lvert x - c\rvert $LTS \frac{1}{m} , \)
 we have 
-\(\lvert f(x) - L\rvert < \frac{1}{n} . \)
+\(\lvert f(x) - L\rvert $LTS \frac{1}{n} . \)
 $BR
 %RADIO
 %CORRECT True

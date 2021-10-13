@@ -95,7 +95,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-In any ordered field for any nonzero \(x,y,z,\) we have \(x^2+y^2+z^2 > 0. \)
+In any ordered field for any nonzero \(x,y,z,\) we have \(x^2+y^2+z^2 $GTS 0. \)
 $BR
 END_TEXT
 Context()->normalStrings;

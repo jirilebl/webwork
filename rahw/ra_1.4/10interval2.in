@@ -1,23 +1,23 @@
 %DESC Proof of one direction of charaterization of intervals
 %HINC head.txt
 %NOPARTIAL
-Suppose that \(I\) is a set and \(a,b\in I\) where \(a < b \) are given.
-Suppose furthermore that whenever \(c < d < e\) where \(c,e \in I \),
+Suppose that \(I\) is a set and \(a,b\in I\) where \(a $LTS b \) are given.
+Suppose furthermore that whenever \(c $LTS d $LTS e\) where \(c,e \in I \),
 then \(d \in I.\)
 
 Suppose you cannot use Proposition 1.4.1.  Prove that
 \( [a,b] \subset I . \)
 
 %PROOF
-Suppose that \(x\) is such that \(a < x < b.\)
-As \(a,b \in I\) and \(a < x < b\), then by assumption \(x \in I.\)
-So the set \((a,b) = $LB x : a < x < b $RB \subset I .\)
+Suppose that \(x\) is such that \(a $LTS x $LTS b.\)
+As \(a,b \in I\) and \(a $LTS x $LTS b\), then by assumption \(x \in I.\)
+So the set \((a,b) = $LB x : a $LTS x $LTS b $RB \subset I .\)
 Also \(a,b \in I,\) so \([a,b] \subset I .\)
 %EXTRA
 Suppose that \(x \in I.\)
 Suppose that \(a,b \notin I.\)
-If \(x < a,\) then \(x \notin I.\)
-If \(x > b,\) then \(x \notin I.\)
+If \(x $LTS a,\) then \(x \notin I.\)
+If \(x $GTS b,\) then \(x \notin I.\)
 %END
 
 True or false: If \(a = \inf\, I\) and \(b = \sup\, I,\)

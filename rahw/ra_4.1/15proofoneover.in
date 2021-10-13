@@ -12,7 +12,7 @@ As \(c^2 \not= 0,\) we have \(\displaystyle \lim_{x \to c} \frac{-1}{xc} = \frac
 Thus, \( \displaystyle \lim_{x \to c} \frac{f(x)-f(c)}{x-c} = \frac{-1}{c^2} . \)
 So \(f\) is differentiable at \(c.\)
 %EXTRA
-Let \(\epsilon > 0\) be given.
+Let \(\epsilon $GTS 0\) be given.
 Let \(\delta := \frac{1}{c} .\)
 Let \(x \in (0,\infty) \) be arbitrary.
 \(\qquad =\frac{1}{x}-\frac{1}{c} .\)

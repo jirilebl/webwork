@@ -62,8 +62,9 @@ The sequence is convergent.
 $BITALIC Q: Is the sequence \($LB x_n $RB\) necessarily convergent? $EITALIC
 $BR
 %RADIO
-Yes
-%CORRECT No
+Yes.
+%CORRECT No, it might or might not converge.
+No, the series necessarily diverges.
 %END
 
 By the Bolzano-Weierstrass theorem,

@@ -51,20 +51,20 @@ END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Let \(\epsilon > 0 \) be given.",
+"Let \(\epsilon $GTS 0 \) be given.",
 "Let \(\delta := {\left(\frac{\epsilon}{$c}\right)}^{1/$n} .\)",
-"Now suppose that \(x\) is such that \(\lvert x-0\rvert < \delta .\)",
+"Now suppose that \(x\) is such that \(\lvert x-0\rvert $LTS \delta .\)",
 "Estimate, \( \lvert f(x) - f(0) \rvert = \lvert $c x^{$n} - $c (0)^{$n} \rvert\)",
 "\(\qquad = $c {\lvert x\rvert}^{$n}\)",
-"\(\qquad < $c {\delta}^{$n}\)",
+"\(\qquad $LTS $c {\delta}^{$n}\)",
 "\(\qquad = \epsilon \)",
 ],
 [
-"Let \(\delta > 0 \) be given.",
+"Let \(\delta $GTS 0 \) be given.",
 "Let \(\epsilon := {\left(\frac{\delta}{$c}\right)}^{1/$n} .\)",
 "Let \(\delta := {\left( $c \epsilon \right)}^{$n} .\)",
-"\(\qquad < \delta \)",
-"\(\qquad < \lvert x \rvert \)",
+"\(\qquad $LTS \delta \)",
+"\(\qquad $LTS \lvert x \rvert \)",
 ],
 
 SourceLabel => "Choose from these statements",

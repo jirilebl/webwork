@@ -32,7 +32,7 @@ True or false:
 Suppose that \(f \colon [-1,0] \to {\mathbb{R}}\) and
 \(g \colon [0,1] \to {\mathbb{R}}\) are continuous and \(f(0)=g(0) .\)
 Define \(h \colon [-1,1] \to {\mathbb{R}}\) by \(h(x) := f(x)\) for \(x \leq 0\) and
-\(h(x) := g(x) \) for \(x > 0 . \)  Then \(h\) is continuous.
+\(h(x) := g(x) \) for \(x $GTS 0 . \)  Then \(h\) is continuous.
 $BR
 %RADIO
 %CORRECT True

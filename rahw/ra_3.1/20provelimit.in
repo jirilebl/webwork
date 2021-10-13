@@ -8,16 +8,16 @@ Prove that
 First prove that the function \(g(x) = x\) has the same property:
 
 %PROOF
-Let \(c \in \mathbb{R}\) be arbitrary and let \(\epsilon > 0\) be given.
+Let \(c \in \mathbb{R}\) be arbitrary and let \(\epsilon $GTS 0\) be given.
 Take \(\delta := \epsilon.\)
-Now suppose \(x\) is such that \(\lvert x-c\rvert < \delta\) and \(x \not=c .\)
+Now suppose \(x\) is such that \(\lvert x-c\rvert $LTS \delta\) and \(x \not=c .\)
 Estimate \( \lvert g(x) - g(c) \rvert = \lvert x-c\rvert\)
-\( \qquad < \delta \)
+\( \qquad $LTS \delta \)
 \( \qquad = \epsilon . \)
 %EXTRA
 Take \( \delta := 0 \)
-Let \(x=c\) and let \(\epsilon > 0\) be given.
-Let \(\delta > 0\) be given.
+Let \(x=c\) and let \(\epsilon $GTS 0\) be given.
+Let \(\delta $GTS 0\) be given.
 \( \qquad = \delta \)
 \( \lvert g(x) - g(c) \rvert = \lvert x^2-c^2\rvert\)
 %END
@@ -29,7 +29,7 @@ As \(\displaystyle \lim_{x\to c} x = c \), then \(\displaystyle \lim_{x\to c} x^
 Similarly \(\displaystyle \lim_{x\to c} (a_2) (x^2) = a_2 c^2 \) and \(\displaystyle \lim_{x\to c} (a_1) (x) = a_1 c . \)
 Finally \(\displaystyle \lim_{x\to c} (a_2 x^2+a_1 x + a_0) = a_2 c^2 + a_1 c + a_0 \) by Corollary 3.1.12 part (i)
 %EXTRA
-Let \(\epsilon > 0\) be given.
+Let \(\epsilon $GTS 0\) be given.
 Let \(\delta := \epsilon^2.\)
 %END
 

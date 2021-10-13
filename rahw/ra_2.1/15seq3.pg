@@ -57,7 +57,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 If \( \epsilon = 0.1 , \) what is the smallest \(M\) such that
-for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+for all \(n \geq M\) we have \(|x_n-L| $LTS \epsilon .\)
 $BR
 \(M=\)
 END_TEXT
@@ -71,7 +71,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 If \( \epsilon = 0.01 , \) what is the smallest \(M\) such that
-for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+for all \(n \geq M\) we have \(|x_n-L| $LTS \epsilon .\)
 $BR
 \(M=\)
 END_TEXT
@@ -85,7 +85,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 If \( \epsilon = 0.001 , \) what is the smallest \(M\) such that
-for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+for all \(n \geq M\) we have \(|x_n-L| $LTS \epsilon .\)
 $BR
 \(M=\)
 END_TEXT

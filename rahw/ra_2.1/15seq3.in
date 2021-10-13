@@ -7,19 +7,19 @@ $BR
 %NUMBER 1
 
 If \( \epsilon = 0.1 , \) what is the smallest \(M\) such that
-for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+for all \(n \geq M\) we have \(|x_n-L| $LTS \epsilon .\)
 $BR
 \(M=\)
 %NUMBER 11
 
 If \( \epsilon = 0.01 , \) what is the smallest \(M\) such that
-for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+for all \(n \geq M\) we have \(|x_n-L| $LTS \epsilon .\)
 $BR
 \(M=\)
 %NUMBER 101
 
 If \( \epsilon = 0.001 , \) what is the smallest \(M\) such that
-for all \(n \geq M\) we have \(|x_n-L| < \epsilon .\)
+for all \(n \geq M\) we have \(|x_n-L| $LTS \epsilon .\)
 $BR
 \(M=\)
 %NUMBER 1001
