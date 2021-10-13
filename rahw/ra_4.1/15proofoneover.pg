@@ -50,7 +50,7 @@ END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Let \(c \in (0,\infty) be arbitrary.\)",
+"Let \(c \in (0,\infty) \) be arbitrary.",
 "Suppose \(x \in (0,\infty)\) is such that \(x \not= c .\)",
 "Write \( \frac{f(x)-f(c)}{x-c} = \frac{1/x-1/c}{x-c} \)",
 "\(=\frac{c-x}{(xc)(x-c)}\)",
@@ -63,7 +63,7 @@ $q1 = DraggableProof([
 [
 "Let \(\epsilon > 0\) be given.",
 "Let \(\delta := \frac{1}{c}\).",
-"Let \(x \in (0,\infty) be arbitrary.\)",
+"Let \(x \in (0,\infty) \) be arbitrary.",
 "\(=\frac{1}{x}-\frac{1}{c}\)",
 "Now as \(c = 0,\) we have that the limit does not exist.",
 "So \(f\) is differentiable at \(0.\)",

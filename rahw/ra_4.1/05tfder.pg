@@ -100,10 +100,11 @@ BEGIN_TEXT
 \{ $q3->buttons \}
 
 $PAR
+$HR
 $PAR
 True or false:
 If \(f \colon {\mathbb{R}} \to \mathbb{R}\) and
-\(g \colon {\mathbb{R}} \to \mathbb{R}\) are any differentiable functions
+\(g \colon {\mathbb{R}} \to \mathbb{R}\) are differentiable functions
 (differentiable at all points), then \(h := f+g\) (defined by the pointwise
 sum) is differentiable.
 $BR
@@ -143,9 +144,9 @@ $PAR
 True or false:
 If \(f \colon {\mathbb{R}} \to \mathbb{R}\) and
 \(g \colon {\mathbb{R}} \to \mathbb{R}\) are such that
-\(f(0) = g(0) = 0,\) and the composition
-\(h := f \circ g\) is differentiable at \(0,\) then \(f\) and \(g\) are differentiable
-at \(0 .\)
+\(f(0) = g(0) = 0,\) and both are differentiable at \(0,\) then
+the composition
+\(h := f \circ g\) is differentiable at \(0.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -154,11 +155,32 @@ $q6 = RadioButtons([
 "True",
 "False",
 ],
-"False",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q6->buttons \}
+
+$PAR
+True or false:
+If \(f \colon {\mathbb{R}} \to \mathbb{R}\) and
+\(g \colon {\mathbb{R}} \to \mathbb{R}\) are such that
+\(f(0) = g(0) = 0,\) and the composition
+\(h := f \circ g\) is differentiable at \(0,\) then \(f\) and \(g\) are differentiable
+at \(0 .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
 
 $PAR
 True or false:
@@ -168,7 +190,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q7 = RadioButtons([
+$q8 = RadioButtons([
 "True",
 "False",
 ],
@@ -176,7 +198,7 @@ $q7 = RadioButtons([
 );
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q7->buttons \}
+\{ $q8->buttons \}
 
 
 END_TEXT
@@ -194,5 +216,6 @@ ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
+ANS($q8->cmp());
 
 ENDDOCUMENT();

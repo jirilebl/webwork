@@ -4,9 +4,9 @@
 %SETUP $a = random(2,4,1);
 %SETUP $b = random(2,4,1);
 %SETUP $x = random(2,4,1);
-%SETUP $x1 = $x+1
-%SETUP $x2 = $x+0.1
-%SETUP $x3 = $x+0.01
+%SETUP $x1 = $x+1;
+%SETUP $x2 = $x+0.1;
+%SETUP $x3 = $x+0.01;
 Let \(f(x) := $a x^2 + $b x . \)
 
 
