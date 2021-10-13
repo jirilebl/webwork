@@ -156,10 +156,7 @@ BEGIN_TEXT
 \{ $q5->buttons \}
 
 $PAR
-By the Bolzano-Weierstrass theorem,
-there is a convergent subsequence \($LB x_{n_i} $RB.\)
-$PAR
-$BITALIC Q: Does the sequence \($LB x_n $RB\) need to necessarily be convergent? $EITALIC
+$BITALIC Q: Is the sequence \($LB x_n $RB\) necessarily convergent? $EITALIC
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -175,6 +172,8 @@ BEGIN_TEXT
 \{ $q6->buttons \}
 
 $PAR
+By the Bolzano-Weierstrass theorem,
+there is a convergent subsequence \($LB x_{n_i} $RB.\)
 Let \(x := \lim\, x_{n_i} .\)
 $PAR
 $BITALIC Q: This limit is a ... $EITALIC

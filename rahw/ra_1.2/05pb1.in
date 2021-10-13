@@ -1,17 +1,17 @@
 %DESC User Archimedean property on one over n squared
 %HINC head.txt
-Prove that if \(t > 0,\) then there exists an \(n \in {\mathbb{N}}\) such that
-\(\frac{1}{n^2} < t.\)
+Prove that if \(t $GTS 0,\) then there exists an \(n \in {\mathbb{N}}\) such that
+\(\frac{1}{n^2} $LTS t.\)
 
 %PROOF
-Suppose \(t > 0\) is given.
-By the Archimedean property, there exists an \(n \in {\mathbb{N}}\) such that \(n > t.\)
+Suppose \(t $GTS 0\) is given.
+By the Archimedean property, there exists an \(n \in {\mathbb{N}}\) such that \(n $GTS t.\)
 As \(n \geq 1,\) we have \(n^2 \geq n.\)
-Hence, \(t < n \leq n^2.\)
-And so \(\frac{1}{n^2} < t .\)
+Hence, \(t $LTS n \leq n^2.\)
+And so \(\frac{1}{n^2} $LTS t .\)
 %EXTRA
-Suppose \(n > 0\) is given.
+Suppose \(n $GTS 0\) is given.
 As \(n \geq 1,\) we have \(n^2 \leq n.\)
 Hence, \(t \geq n^2.\)
-By density of \({\mathbb{Q}}\) we have an \(n\) such that \(0 < \frac{1}{n} < t.\)
+By density of \({\mathbb{Q}}\) we have an \(n\) such that \(0 $LTS \frac{1}{n} $LTS t.\)
 %END

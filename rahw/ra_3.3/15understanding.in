@@ -59,16 +59,15 @@ We choose the sequence to be such.
 The sequence is convergent.
 %END
 
-By the Bolzano-Weierstrass theorem,
-there is a convergent subsequence \($LB x_{n_i} $RB.\)
-
-$BITALIC Q: Does the sequence \($LB x_n $RB\) need to necessarily be convergent? $EITALIC
+$BITALIC Q: Is the sequence \($LB x_n $RB\) necessarily convergent? $EITALIC
 $BR
 %RADIO
 Yes
 %CORRECT No
 %END
 
+By the Bolzano-Weierstrass theorem,
+there is a convergent subsequence \($LB x_{n_i} $RB.\)
 Let \(x := \lim\, x_{n_i} .\)
 
 $BITALIC Q: This limit is a ... $EITALIC

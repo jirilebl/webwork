@@ -2,20 +2,20 @@
 %HINC head.txt
 Prove Proposition 1.2.8 from [1]:
 If \(S \subset \mathbb{R}\) is nonempty and bounded above,
-then for every \(\epsilon > 0\) there exists an \(x \in S\) such
-that \((\sup\, S) - \epsilon < x \leq \sup\, S.\)
+then for every \(\epsilon $GTS 0\) there exists an \(x \in S\) such
+that \((\sup\, S) - \epsilon $LTS x \leq \sup\, S.\)
 
 %PROOF
-Let \(\epsilon > 0\) be given and let \(y\) be an upper bound for \(S.\)
+Let \(\epsilon $GTS 0\) be given and let \(y\) be an upper bound for \(S.\)
 If \(x \leq y-\epsilon\) for all \(x \in S,\) then
 \(y\) is not the least upper bound.
-Hence, if \(y=\sup\,S\) there must be an \(x \in S\) such that \(x > y -\epsilon.\)
+Hence, if \(y=\sup\,S\) there must be an \(x \in S\) such that \(x $GTS y -\epsilon.\)
 As \(\sup \, S\) is an upper bound, we also have \(x \leq \sup \, S.\)
 %EXTRA
 Let \(y:=\inf \,S.\)
 Set \(\epsilon := 1.\)
 Take \(x := (\sup \, S)-1.\)
-As \(y < \sup \, S\), we have \( x > y .\)
+As \(y $LTS \sup \, S\), we have \( x $GTS y .\)
 %END
 
 

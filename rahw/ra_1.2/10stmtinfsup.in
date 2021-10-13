@@ -1,14 +1,14 @@
 %DESC Picking correct statements about infs and sups
 %HINC head.txt
 %NOPARTIAL
-Let \(A \subset \mathbb{R}\) is a set such that \(x < 1 \) for all \(x \in A.\)
+Let \(A \subset \mathbb{R}\) is a set such that \(x $LTS 1 \) for all \(x \in A.\)
 What is the only definitely correct statement?
 $BR
 %RADIORANDOM
 %CORRECT \(\sup \, A \leq 1 .\)
-\(\sup \, A < 1 .\)
+\(\sup \, A $LTS 1 .\)
 \(\sup \, A \geq 1 .\)
-\(\sup \, A > 1 .\)
+\(\sup \, A $GTS 1 .\)
 %ENDRANDOM
 None of these.
 %END
@@ -19,10 +19,10 @@ What is the only definitely correct statement?
 $BR
 %RADIORANDOM
 \(\sup \, A \leq \inf \, B .\)
-\(\sup \, A < \inf \, B .\)
-\(\inf \, A < \inf \, B .\)
+\(\sup \, A $LTS \inf \, B .\)
+\(\inf \, A $LTS \inf \, B .\)
 %CORRECT \(\inf \, A \leq \inf \, B .\)
-\(\sup \, A > \inf \, B .\)
+\(\sup \, A $GTS \inf \, B .\)
 %ENDRANDOM
 None of these.
 %END
@@ -35,7 +35,7 @@ $BR
 \(\sup \, A \leq 1 .\)
 \(\sup \, A \geq 1 .\)
 \(\inf \, A \leq 1 .\)
-\(\inf \, A < \sup A .\)
+\(\inf \, A $LTS \sup A .\)
 %ENDRANDOM
 %CORRECT None of these.
 %END

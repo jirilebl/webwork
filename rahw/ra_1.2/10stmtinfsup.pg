@@ -43,7 +43,7 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Let \(A \subset \mathbb{R}\) is a set such that \(x < 1 \) for all \(x \in A.\)
+Let \(A \subset \mathbb{R}\) is a set such that \(x $LTS 1 \) for all \(x \in A.\)
 What is the only definitely correct statement?
 $BR
 END_TEXT
@@ -52,9 +52,9 @@ Context()->normalStrings;
 $q1 = RadioButtons([
 [
 "\(\sup \, A \leq 1 .\)",
-"\(\sup \, A < 1 .\)",
+"\(\sup \, A $LTS 1 .\)",
 "\(\sup \, A \geq 1 .\)",
-"\(\sup \, A > 1 .\)",
+"\(\sup \, A $GTS 1 .\)",
 ],
 "None of these.",
 ],
@@ -75,10 +75,10 @@ Context()->normalStrings;
 $q2 = RadioButtons([
 [
 "\(\sup \, A \leq \inf \, B .\)",
-"\(\sup \, A < \inf \, B .\)",
-"\(\inf \, A < \inf \, B .\)",
+"\(\sup \, A $LTS \inf \, B .\)",
+"\(\inf \, A $LTS \inf \, B .\)",
 "\(\inf \, A \leq \inf \, B .\)",
-"\(\sup \, A > \inf \, B .\)",
+"\(\sup \, A $GTS \inf \, B .\)",
 ],
 "None of these.",
 ],
@@ -101,7 +101,7 @@ $q3 = RadioButtons([
 "\(\sup \, A \leq 1 .\)",
 "\(\sup \, A \geq 1 .\)",
 "\(\inf \, A \leq 1 .\)",
-"\(\inf \, A < \sup A .\)",
+"\(\inf \, A $LTS \sup A .\)",
 ],
 "None of these.",
 ],
