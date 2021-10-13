@@ -39,7 +39,7 @@ True
 
 True or false:
 If \(f \colon [a,b] \to \mathbb{R}\) is continuous, then the direct image \(f([a,b])\)
-is an interval.
+is an interval or a point.
 $BR
 %RADIO
 %CORRECT True
