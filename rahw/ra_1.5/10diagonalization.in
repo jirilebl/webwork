@@ -1,0 +1,16 @@
+%DESC Diagonalization to prove that the power set of the natural numbers is uncountable.
+%HINC head.txt
+Using the digonalization argument, prove that the power set of the natural numbers,
+\({\mathcal{P}}({\mathbb{N}}),\) is uncountable.
+
+%PROOF
+Suppose that \(S_1,S_2,S_3,\ldots\) is a countable collection of subsets of \({\mathbb{N}} .\)
+Define a set \(T \subset {\mathbb{N}}\) by
+\(n \in T\) if and only if \(n \not\in S_n .\)
+Hence, \(T\) is not equal to \(S_n \) for any \(n \in {\mathbb{N}}.\)
+So every countable subset of \({\mathcal{P}}({\mathbb{N}})\) is a proper subset, and so \({\mathcal{P}}({\mathbb{N}})\) is uncountable.
+%EXTRA
+\(n \in T\) if and only if \(n \not S_n .\)
+\(T \not= S_n \) for all \(n.\)
+So every countable subset of \({\mathcal{P}}({\mathbb{N}})\) is equal to \({\mathcal{P}}({\mathbb{N}}) .\)
+%END

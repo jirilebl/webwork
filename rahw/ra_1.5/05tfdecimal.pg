@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## True/false and multiple choice about intervals
+## True/false and multiple choice about decimal expansion
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -11,7 +11,7 @@
 ## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
 ## AuthorText1('Jiri Lebl')
 ## EditionText1('5')
-## Section1('1.4')
+## Section1('1.5')
 ## Problem1('')
 
 ######################################################
@@ -43,7 +43,8 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-True or false: If \(I\) is an interval, \(x,y \in I\), then \(\frac{x+y}{2} \in I .\)
+True or false: 
+Every number in \((0,1)\) has a unique decimal expansion.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -52,14 +53,15 @@ $q1 = RadioButtons([
 "True",
 "False",
 ],
-"True",
+"False",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q1->buttons \}
 
 $PAR
-True or false: There exists an interval with exactly two points.
+True or false: 
+There are countably many numbers in \((0,1)\) whose decimal expansion is finite (all digits are zero past a certain point).
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -68,30 +70,37 @@ $q2 = RadioButtons([
 "True",
 "False",
 ],
-"False",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q2->buttons \}
 
 $PAR
-True or false: If \(I\) is an interval, then it has uncountably many points.
+Which of the following numbers numbers has a unique decimal expansion:
 $BR
 END_TEXT
 Context()->normalStrings;
 
 $q3 = RadioButtons([
-"True",
-"False",
+[
+"\(\frac{1}{3}\)",
+"\(0.123\)",
+"\(\frac{56}{100}\)",
+"\(0.5\)",
 ],
-"True",
+"None of them",
+"All of them",
+],
+"\(\frac{1}{3}\)",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q3->buttons \}
 
 $PAR
-True or false: There exists a bijection between the set \([0,1]\) and \({\mathbb{R}} .\)
+True or false: 
+There are only countably many numbers whose decimal expansion contains only the digits \(0\) and \(3 .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -100,14 +109,16 @@ $q4 = RadioButtons([
 "True",
 "False",
 ],
-"True",
+"False",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q4->buttons \}
 
 $PAR
-True or false: There exists a bijection between the set \([0,1]\) and \((0,1) .\)
+True or false: 
+There are only countably many numbers whose decimal expansion contains only the digits \(0\) and \(3,\)
+but there are only finitely many of the digit \(3 .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -123,25 +134,18 @@ BEGIN_TEXT
 \{ $q5->buttons \}
 
 $PAR
-Which one of the following is a bijection \(f \colon (0,1) \to {\mathbb{R}}\) (if one exists):
+True or false: 
+The rational numbers in \((0,1)\) that have a finite decimal expansion (has all zero digits past a certain point)
+are exactly those whose denominators are products of powers of \(2\) and \(5 .\)
 $BR
 END_TEXT
 Context()->normalStrings;
 
 $q6 = RadioButtons([
-[
-"\( f(x) := \frac{1}{x}+\frac{1}{x-1} \)",
-"\( f(x) := \frac{1}{x(x-1)} \)",
-"\( f(x) := \tan\left(\frac{x \pi}{2}\right) \)",
-"\( f(x) := \frac{1}{2}+\frac{\operatorname{arctan}(x)}{\pi} \)",
-"\( f(x) := \frac{2 \operatorname{arctan}(x)}{\pi} \)",
-"\( f(x) := \frac{1}{x} \)",
-"\( f(x) := x \)",
+"True",
+"False",
 ],
-"None of these.",
-"No bijection exists.",
-],
-"\( f(x) := \frac{1}{x}+\frac{1}{x-1} \)",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT

@@ -1,7 +1,7 @@
 %DESC True/false and multiple choice about intervals
 %HINC head.txt
 %NOPARTIAL
-True or false: If \(I\) is an interval, \(x,y \in I\), then \(\frac{x+y}{2} \in I\).
+True or false: If \(I\) is an interval, \(x,y \in I\), then \(\frac{x+y}{2} \in I .\)
 $BR
 %RADIO
 %CORRECT True
@@ -22,14 +22,14 @@ $BR
 False
 %END
 
-True or false: There exists a bijection between the set \([0,1]\) and \({\mathbb{R}}\).
+True or false: There exists a bijection between the set \([0,1]\) and \({\mathbb{R}} .\)
 $BR
 %RADIO
 %CORRECT True
 False
 %END
 
-True or false: There exists a bijection between the set \([0,1]\) and \((0,1)\).
+True or false: There exists a bijection between the set \([0,1]\) and \((0,1) .\)
 $BR
 %RADIO
 %CORRECT True

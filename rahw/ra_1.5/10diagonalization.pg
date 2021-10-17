@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove that 1/x is differentiable
+## Diagonalization to prove that the power set of the natural numbers is uncountable.
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -11,7 +11,7 @@
 ## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
 ## AuthorText1('Jiri Lebl')
 ## EditionText1('5')
-## Section1('4.1')
+## Section1('1.5')
 ## Problem1('')
 
 ######################################################
@@ -43,29 +43,23 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Suppose that \(f \colon (0,\infty) \to \mathbb{R}\) is defined by \(f(x) = \frac{1}{x} .\)
-Using the definition of the derivative, prove that \(f\) is differentiable at every \(c \in (0,\infty) .\)
+Using the digonalization argument, prove that the power set of the natural numbers,
+\({\mathcal{P}}({\mathbb{N}}),\) is uncountable.
 $PAR
 END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Let \(c \in (0,\infty) \) be arbitrary.",
-"Suppose \(x \in (0,\infty)\) is such that \(x \not= c .\)",
-"Write \( \frac{f(x)-f(c)}{x-c} = \frac{1/x-1/c}{x-c} \)",
-"\( \qquad =\frac{c-x}{(xc)(x-c)} =\frac{-1}{xc}. \)",
-"As \(c^2 \not= 0,\) we have \(\displaystyle \lim_{x \to c} \frac{-1}{xc} = \frac{-1}{c^2} .\)",
-"Thus, \( \displaystyle \lim_{x \to c} \frac{f(x)-f(c)}{x-c} = \frac{-1}{c^2} . \)",
-"So \(f\) is differentiable at \(c.\)",
+"Suppose that \(S_1,S_2,S_3,\ldots\) is a countable collection of subsets of \({\mathbb{N}} .\)",
+"Define a set \(T \subset {\mathbb{N}}\) by",
+"\(n \in T\) if and only if \(n \not\in S_n .\)",
+"Hence, \(T\) is not equal to \(S_n \) for any \(n \in {\mathbb{N}}.\)",
+"So every countable subset of \({\mathcal{P}}({\mathbb{N}})\) is a proper subset, and so \({\mathcal{P}}({\mathbb{N}})\) is uncountable.",
 ],
 [
-"Let \(\epsilon $GTS 0\) be given.",
-"Let \(\delta := \frac{1}{c} .\)",
-"Let \(x \in (0,\infty) \) be arbitrary.",
-"\(\qquad =\frac{1}{x}-\frac{1}{c} .\)",
-"Now as \(c = 0,\) we have that the limit does not exist.",
-"So \(f\) is differentiable at \(0.\)",
-"Thus, \( \displaystyle \lim_{x \to c} \frac{f(x)-f(c)}{x-c} \) does not exist.",
+"\(n \in T\) if and only if \(n \not S_n .\)",
+"\(T \not= S_n \) for all \(n.\)",
+"So every countable subset of \({\mathcal{P}}({\mathbb{N}})\) is equal to \({\mathcal{P}}({\mathbb{N}}) .\)",
 ],
 
 SourceLabel => "Choose from these statements",

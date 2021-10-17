@@ -2,7 +2,7 @@
 %HINC head.txt
 %NOPARTIAL
 Suppose that \(I\) is a set and \(a,b\in I\) where \(a $LTS b \) are given.
-Suppose furthermore that whenever \(c $LTS d $LTS e\) where \(c,e \in I \),
+Suppose furthermore that whenever \(c $LTS d $LTS e\) where \(c,e \in I , \)
 then \(d \in I.\)
 
 Suppose you cannot use Proposition 1.4.1.  Prove that
