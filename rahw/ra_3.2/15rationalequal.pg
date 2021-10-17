@@ -64,7 +64,7 @@ $q1 = DraggableProof([
 "Take \(M\) large enough so that \(\lvert x-r_n\rvert $LTS \epsilon . \)",
 "Define \(g(x) := f(x) . \)",
 "Let \(\epsilon $GTS 0 \) be given.",
-"Let \(\delta := \epsilon \) be given.",
+"Let \(\delta := \epsilon .\)",
 "Take an arbitrary sequence \($LB r_n $RB . \)",
 ],
 
