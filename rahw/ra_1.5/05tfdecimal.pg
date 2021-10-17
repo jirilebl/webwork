@@ -44,7 +44,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 True or false: 
-Every number in \((0,1)\) has a unique decimal expansion.
+Every number in \((0,1]\) has a unique decimal expansion.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -61,7 +61,7 @@ BEGIN_TEXT
 
 $PAR
 True or false: 
-There are countably many numbers in \((0,1)\) whose decimal expansion is finite (all digits are zero past a certain point).
+There are countably many numbers in \((0,1]\) whose decimal expansion is finite (all digits are zero past a certain point).
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -100,7 +100,7 @@ BEGIN_TEXT
 
 $PAR
 True or false: 
-There are only countably many numbers whose decimal expansion contains only the digits \(0\) and \(3 .\)
+There are only countably many numbers in \((0,1]\) whose decimal expansion contains only the digits \(0\) and \(3 .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -117,7 +117,7 @@ BEGIN_TEXT
 
 $PAR
 True or false: 
-There are only countably many numbers whose decimal expansion contains only the digits \(0\) and \(3,\)
+There are only countably many numbers in \((0,1]\) whose decimal expansion contains only the digits \(0\) and \(3,\)
 but there are only finitely many of the digit \(3 .\)
 $BR
 END_TEXT
@@ -135,7 +135,7 @@ BEGIN_TEXT
 
 $PAR
 True or false: 
-The rational numbers in \((0,1)\) that have a finite decimal expansion (has all zero digits past a certain point)
+The rational numbers in \((0,1]\) that have a finite decimal expansion (has all zero digits past a certain point)
 are exactly those whose denominators are products of powers of \(2\) and \(5 .\)
 $BR
 END_TEXT

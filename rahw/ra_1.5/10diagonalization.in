@@ -10,7 +10,8 @@ Define a set \(T \subset {\mathbb{N}}\) by
 Hence, \(T\) is not equal to \(S_n \) for any \(n \in {\mathbb{N}}.\)
 So every countable subset of \({\mathcal{P}}({\mathbb{N}})\) is a proper subset, and so \({\mathcal{P}}({\mathbb{N}})\) is uncountable.
 %EXTRA
-\(n \in T\) if and only if \(n \not S_n .\)
-\(T \not= S_n \) for all \(n.\)
+\(n \in T\) if and only if \(n \in S_n .\)
+\(T := S_n \setminus $LB n $RB \) for all \(n.\)
+\(T := S_n \setminus S_{n-1} \) for all \(n.\)
 So every countable subset of \({\mathcal{P}}({\mathbb{N}})\) is equal to \({\mathcal{P}}({\mathbb{N}}) .\)
 %END
