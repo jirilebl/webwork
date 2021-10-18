@@ -1,0 +1,157 @@
+##DESCRIPTION
+## Compute radius of convergence for a specific power series
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('2.6')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+$a = random(2,9,1);
+$b = random(2,9,1);
+$c = random(2,9,1);
+$d = random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Compute the radius of convergence for the following series.  Write "infinity" for infinity, and write 0
+if the series does not converge.
+$PAR
+The series \(\displaystyle \sum_{n=0}^\infty $a^n x^n\) has radius of
+convergence:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("1/$a");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The series \(\displaystyle \sum_{n=0}^\infty $b^n n x^n\) has radius of
+convergence:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("1/$b");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The series \(\displaystyle \sum_{n=0}^\infty \frac{$c^n}{n} x^n\) has radius of
+convergence:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("1/$c");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The series \(\displaystyle \sum_{n=0}^\infty \frac{$d}{n^n} x^n\) has radius of
+convergence:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("infinity");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The series \(\displaystyle \sum_{n=0}^\infty $a^n x^{2n}\) has radius of
+convergence:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("sqrt($b)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The series \(\displaystyle \sum_{n=0}^\infty n^n x^n\) has radius of
+convergence:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The series \(\displaystyle \sum_{n=0}^\infty n^n x^{n^n}\) has radius of
+convergence:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+
+ENDDOCUMENT();

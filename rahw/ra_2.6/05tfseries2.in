@@ -1,0 +1,140 @@
+%DESC True/false and multiple choice questions on series for section 2.6
+%HINC head.txt
+%NOPARTIAL
+True or false:
+\(\displaystyle \sum_{n=1}^\infty x_n\) converges via the 
+ratio test, so does
+\(\displaystyle \sum_{n=1}^\infty n x_{n} .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+\(\displaystyle \sum_{n=1}^\infty n^{-1/2}{(-1)}^{n}\) converges.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Suppose \($LB x_n $RB\) is a monotone decreasing sequence converging to \(0\) and
+\(y_n\) is a sequence \( -1,-1,1,1,-1,-1,1,1,-1,-1, \ldots,\) that is,
+two negative ones followed by two positive ones, and so on.  Then
+\(\displaystyle \sum_{n=1}^\infty y_n x_n\) converges.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Suppose \($LB x_n $RB\) is a monotone decreasing sequence converging to \(0\) and
+\(y_n\) is a sequence \( -1,-1,1,-1,-1,1,-1,-1, \ldots,\) that is,
+two negative ones followed by one positive one, and so on.  Then
+\(\displaystyle \sum_{n=1}^\infty y_n x_n\) converges.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If 
+\(\displaystyle \sum_{n=0}^\infty x_n\) and
+\(\displaystyle \sum_{n=0}^\infty y_n\) converge,
+then
+\(\displaystyle \sum_{n=0}^\infty \sum_{k=0}^n x_k y_{n-k}\) converges.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If 
+\(\displaystyle \sum_{n=0}^\infty x_n\) and
+\(\displaystyle \sum_{n=0}^\infty y_n\) converge absolutely,
+then
+\(\displaystyle \sum_{n=0}^\infty \sum_{k=0}^n x_k y_{n-k}\) converges absolutely.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+$HR
+
+Suppose that the power series
+\(\displaystyle \sum_{n=0}^\infty c_n x^n\) converges at \( x=2 \)
+and does not converge at \(x = 4 .\)
+Answer the following questions:
+
+Does the power series converge at \(x=1?\)
+$BR
+%RADIO
+%CORRECT Yes
+No
+Not enough information
+%END
+
+Does the power series converge at \(x=-1?\)
+$BR
+%RADIO
+%CORRECT Yes
+No
+Not enough information
+%END
+
+Does the power series converge at \(x=-2?\)
+$BR
+%RADIO
+Yes
+No
+%CORRECT Not enough information
+%END
+
+Does the power series converge at \(x=3?\)
+$BR
+%RADIO
+Yes
+No
+%CORRECT Not enough information
+%END
+
+Does the power series converge at \(x=-4?\)
+$BR
+%RADIO
+Yes
+No
+%CORRECT Not enough information
+%END
+
+Does the power series converge at \(x=5?\)
+$BR
+%RADIO
+Yes
+%CORRECT No
+Not enough information
+%END
+
+Does the power series converge at \(x=-5?\)
+$BR
+%RADIO
+Yes
+%CORRECT No
+Not enough information
+%END
+
+What is the best that you can say about the radius of convergence \(r:\)
+$BR
+%RADIORANDOM
+%CORRECT \(2 \leq r \leq 4 \)
+\(2 $LTS r $LTS 4 \)
+\(r=2\)
+\(r=4\)
+\(r $LTS 4 \)
+\(r $GTS 2 \)
+%END
