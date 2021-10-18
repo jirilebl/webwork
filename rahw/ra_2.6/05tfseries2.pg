@@ -81,7 +81,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 Suppose \($LB x_n $RB\) is a monotone decreasing sequence converging to \(0\) and
-\(y_n\) is a sequence \( -1,-1,1,1,-1,-1,1,1,-1,-1, \ldots,\) that is,
+\(y_n\) is the sequence \( -1,-1,1,1,-1,-1,1,1,-1,-1, \ldots,\) that is,
 two negative ones followed by two positive ones, and so on.  Then
 \(\displaystyle \sum_{n=1}^\infty y_n x_n\) converges.
 $BR
@@ -101,7 +101,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 Suppose \($LB x_n $RB\) is a monotone decreasing sequence converging to \(0\) and
-\(y_n\) is a sequence \( -1,-1,1,-1,-1,1,-1,-1, \ldots,\) that is,
+\(y_n\) is the sequence \( -1,-1,1,-1,-1,1,-1,-1, \ldots,\) that is,
 two negative ones followed by one positive one, and so on.  Then
 \(\displaystyle \sum_{n=1}^\infty y_n x_n\) converges.
 $BR
@@ -124,7 +124,8 @@ If
 \(\displaystyle \sum_{n=0}^\infty x_n\) and
 \(\displaystyle \sum_{n=0}^\infty y_n\) converge,
 then
-\(\displaystyle \sum_{n=0}^\infty \sum_{k=0}^n x_k y_{n-k}\) converges.
+\(\displaystyle \sum_{n=0}^\infty \sum_{k=0}^n x_k y_{n-k}\) converges to
+\(\displaystyle \left( \sum_{n=0}^\infty x_n \right) \left( \sum_{n=0}^\infty y_n \right) .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -145,7 +146,8 @@ If
 \(\displaystyle \sum_{n=0}^\infty x_n\) and
 \(\displaystyle \sum_{n=0}^\infty y_n\) converge absolutely,
 then
-\(\displaystyle \sum_{n=0}^\infty \sum_{k=0}^n x_k y_{n-k}\) converges absolutely.
+\(\displaystyle \sum_{n=0}^\infty \sum_{k=0}^n x_k y_{n-k}\) converges absolutely to
+\(\displaystyle \left( \sum_{n=0}^\infty x_n \right) \left( \sum_{n=0}^\infty y_n \right) .\)
 $BR
 END_TEXT
 Context()->normalStrings;

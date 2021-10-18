@@ -4,6 +4,8 @@
 %SETUP $b = random(2,9,1);
 %SETUP $c = random(2,9,1);
 %SETUP $d = random(2,9,1);
+%SETUP $q = random(2,4,1);
+%SETUP $qsq = $q*$q
 Compute the radius of convergence for the following series.  Write "infinity" for infinity, and write 0
 if the series does not converge.
 
@@ -27,10 +29,10 @@ convergence:
 $BR
 %NUMBER infinity
 
-The series \(\displaystyle \sum_{n=0}^\infty $a^n x^{2n}\) has radius of
+The series \(\displaystyle \sum_{n=0}^\infty {$qsq}^n x^{2n}\) has radius of
 convergence:
 $BR
-%NUMBER sqrt($b)
+%NUMBER 1/$q
 
 The series \(\displaystyle \sum_{n=0}^\infty n^n x^n\) has radius of
 convergence:
