@@ -5,7 +5,7 @@
 %SETUP $c = random(2,9,1);
 %SETUP $d = random(2,9,1);
 %SETUP $q = random(2,4,1);
-%SETUP $qsq = $q*$q
+%SETUP $qsq = $q*$q;
 Compute the radius of convergence for the following series.  Write "infinity" for infinity, and write 0
 if the series does not converge.
 
