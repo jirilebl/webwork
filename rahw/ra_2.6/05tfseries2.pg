@@ -289,22 +289,22 @@ BEGIN_TEXT
 \{ $q13->buttons \}
 
 $PAR
-What is the best that you can say about the radius of convergence \(r:\)
+What is the best that you can say about the radius of convergence \(\rho:\)
 $BR
 END_TEXT
 Context()->normalStrings;
 
 $q14 = RadioButtons([
 [
-"\(2 \leq r \leq 4 \)",
-"\(2 $LTS r $LTS 4 \)",
-"\(r=2\)",
-"\(r=4\)",
-"\(r $LTS 4 \)",
-"\(r $GTS 2 \)",
+"\(2 \leq \rho \leq 4 \)",
+"\(2 $LTS \rho $LTS 4 \)",
+"\(\rho=2\)",
+"\(\rho=4\)",
+"\(\rho $LTS 4 \)",
+"\(\rho $GTS 2 \)",
 ],
 ],
-"\(2 \leq r \leq 4 \)",
+"\(2 \leq \rho \leq 4 \)",
 );
 Context()->texStrings;
 BEGIN_TEXT
