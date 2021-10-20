@@ -70,7 +70,7 @@ BEGIN_TEXT
 
 $PAR
 $BITALIC Q: If \(g \colon {\mathbb{R}} \to {\mathbb{R}} \) is differentiable and \(g'(x) \not= 0\) for all \(x \in {\mathbb{R}} ,\)
-what does Rolle's theorem immediately imply about \(g\) $EITALIC
+what does Rolle's theorem immediately imply about \(g ?\) $EITALIC
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -174,7 +174,7 @@ On the other hand, if there exists an \(x\)
 such that \(f(x) $LTS K,\) then the absolute minimum occurs at some
 \(c \in (a,b),\) and so \(f'(c) = 0.\)
 $PAR
-$BITALIC Q: Could both of the cases above (\(x\) exists in both cases) occur at once? $EITALIC
+$BITALIC Q: Could both of the cases above (an \(x\) exists in both cases) occur at once? $EITALIC
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -236,6 +236,9 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q9->buttons \}
 
+$PAR
+$PAR
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC
 
 END_TEXT
 Context()->normalStrings;

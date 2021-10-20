@@ -19,7 +19,7 @@ No
 %END
 
 $BITALIC Q: If \(g \colon {\mathbb{R}} \to {\mathbb{R}} \) is differentiable and \(g'(x) \not= 0\) for all \(x \in {\mathbb{R}} ,\)
-what does Rolle's theorem immediately imply about \(g\) $EITALIC
+what does Rolle's theorem immediately imply about \(g ?\) $EITALIC
 $BR
 %RADIORANDOM
 Nothing.
@@ -74,7 +74,7 @@ On the other hand, if there exists an \(x\)
 such that \(f(x) $LTS K,\) then the absolute minimum occurs at some
 \(c \in (a,b),\) and so \(f'(c) = 0.\)
 
-$BITALIC Q: Could both of the cases above (\(x\) exists in both cases) occur at once? $EITALIC
+$BITALIC Q: Could both of the cases above (an \(x\) exists in both cases) occur at once? $EITALIC
 $BR
 %RADIO
 %CORRECT Yes
@@ -105,3 +105,6 @@ No
 Absolute maxima and minima are not defined for constant functions.
 No, but it has relative absolute minima and maxima.
 %END
+
+
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC
