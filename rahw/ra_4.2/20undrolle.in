@@ -1,0 +1,107 @@
+%DESC Prove that a constat derivative implies f is affine
+%HINC head.txt
+%NOPARTIAL
+Let us study Rolle's theorem and its proof (from the book [1]).  Answer the interspersed questions.
+
+$BBOLD Theorem $EBOLD (Rolle) .
+$BITALIC
+Let \(f \colon [a,b] \to {\mathbb{R}}\) be continuous function
+differentiable on \((a,b)\) such that \(f(a) = f(b).\)
+Then there exists a \(c \in (a,b)\) such that \(f'(c) = 0 .\)
+$EITALIC
+
+$BITALIC Q: Would the theorem be true if \(f\) was instead of continuous simply assumed
+to be differentiable on \([a,b] ?\) $EITALIC
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+$BITALIC Q: If \(g \colon {\mathbb{R}} \to {\mathbb{R}} \) is differentiable and \(g'(x) \not= 0\) for all \(x \in {\mathbb{R}} ,\)
+what does Rolle's theorem immediately imply about \(g\) $EITALIC
+$BR
+%RADIORANDOM
+Nothing.
+%CORRECT That \(g\) is one-to-one.
+That \(g\) is onto.
+That \(g\) is increasing.
+%END
+
+$BITALIC Proof: $EITALIC
+As \(f\) is continuous on \([a,b],\) it attains
+an absolute minimum and an absolute maximum in \([a,b].\)
+
+$BITALIC Q: Is it possible that the maximum occurs at \(a\) or \(b ?\) $EITALIC
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+We wish to apply Lemma 4.2.2, and so we need to find
+some \(c \in (a,b)\) where \(f\) attains a minimum or a maximum.
+
+$BITALIC Q: Is it possible that there is no minimum in \((a,b) ?\) $EITALIC
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+$BITALIC Q: Is it possible that there is no maximum in \((a,b) ?\) $EITALIC
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+Write \(K := f(a) = f(b).\)
+If there exists an \(x\) such that \(f(x) $GTS K,\) then the absolute
+maximum is bigger than \(K\) and hence occurs at some \(c \in (a,b),\) and
+therefore \(f'(c) = 0.\)
+
+$BITALIC Q: Why did we conclude that the maximum is bigger than \(K ?\) $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Because \( \max_{s \in [a,b]} f(s) \geq f(x) $GTS K . \)
+Because \(x \in [a,b] .\)
+Because \(K = f(a) = f(b) . \)
+Because \(K\) is the minimum of \(f(x) .\)
+%END
+
+On the other hand, if there exists an \(x\)
+such that \(f(x) $LTS K,\) then the absolute minimum occurs at some
+\(c \in (a,b),\) and so \(f'(c) = 0.\)
+
+$BITALIC Q: Could both of the cases above (\(x\) exists in both cases) occur at once? $EITALIC
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+$BITALIC Q: What case is left over? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT There is no \(x\) such that \(f(x) \not= K .\)
+We handled all the cases already.
+When \(f\) is strictly increasing.
+When \(f'(x) = K\) is strictly increasing.
+There is some \(x\) such that \(f(x) = K .\)
+%END
+
+If there is no \(x\) such that
+\(f(x) $GTS K\) or
+\(f(x) $LTS K,\) then \(f(x) = K\) for all \(x\) and then
+\(f'(x) = 0\) for all \(x \in [a,b],\) so any \(c \in (a,b)\) works.
+QED.
+
+$BITALIC Q: If \(f\) is constant, does it have absolute minima and maxima? $EITALIC
+$BR
+%RADIORANDOM
+No
+%CORRECT Every point is an absolute maximum and a minimum.
+Absolute maxima and minima are not defined for constant functions.
+No, but it has relative absolute minima and maxima.
+%END

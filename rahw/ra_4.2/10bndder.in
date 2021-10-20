@@ -1,0 +1,31 @@
+%DESC Prove that a bounded derivative implies Lipschitz
+%HINC head.txt
+Suppose \( f \colon [a,b] \to {\mathbb{R}}\) is differentiable, and suppose
+that \(\lvert f'(x) \rvert \leq K \) for all \(x \in [a,b] .\) 
+Prove that \(f\) is Lipschitz with Lipschitz constant 1.
+
+%PROOF
+Suppose \(x,y \in [a,b] \) are such that \(x \not= y .\)
+Without loss of generality, suppose that \( x $LTS y . \)
+By the mean value theorem, there exists \(c \in (x,y) \) such that \( f(y)-f(x) = f'(c) (y-x) . \)
+Then estimate, \( \lvert f(x)-f(y) \rvert = \lvert f'(c) \rvert \, \lvert x-y \rvert \)
+\( \qquad \leq K \lvert x-y \rvert .\)
+%EXTRA
+\( \qquad = K \lvert x-y \rvert .\)
+\( \qquad \leq \lvert x-y \rvert .\)
+\( \qquad $LTS K \lvert x-y \rvert .\)
+Without loss of generality, suppose that \( x = y . \)
+By the mean value theorem, there exists \(c \in (a,b) \) such that \( f(b)-f(a) = f'(c) (b-a) . \)
+By the mean value theorem, there exists \(c \in (x,y) \) such that \( f(y)-f(x) = K (y-x) . \)
+%END
+
+%SETUP $a = random(2,5,1);
+%SETUP $b = $a+random(2,5,1);
+%SETUP $c = random(2,6,1);
+%SETUP $k = random(2,4,1);
+Now suppose that \(a=$a , b=$b , K=$k \) and suppose \(f($a) = $c .\)
+Then we have the following bounds (the best ones you can prove given the information) on \(f($b) :\)
+
+%NUMBER $c-$k*($b-$a)
+\( \qquad \leq f($b) \leq \qquad \)
+%NUMBER $c+$k*($b-$a)

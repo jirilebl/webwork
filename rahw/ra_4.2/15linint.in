@@ -1,0 +1,21 @@
+%DESC Prove that a constat derivative implies f is affine
+%HINC head.txt
+Suppose that \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is differentiable,
+\(A\) and \(B\) are constants,
+\(f'(x) = B \) for all \(x \in {\mathbb{R}},\)  
+and \(f(0) = A .\)
+Prove that \(f(x) = A + Bx\) for all \(x \in {\mathbb{R}} .\)
+
+%PROOF
+Suppose \( x \not= 0 . \)
+By the mean value theorem, there exists a \(c \) between \(x\) and \(0\) such that
+\(\frac{f(x)-f(0)}{x-0} = f'(c) = B . \)
+In other words, \(f(x) = f(0) + Bx ,\) or \(f(x) = A+Bx .\)
+Clearly, this also holds when \(x=0, \)
+so \(f(x) = A+Bx \) for all \(x \in {\mathbb{R}} . \)
+%EXTRA
+Fix some \(x\) and \(y\) such that \( x $LTS y . \)
+There exists a \(c \) such that \(B = f'(c) = \frac{f(y)-f(x)}{y-x} \)
+\(\frac{f(x)-f(y)}{x-y} = f'(c) = B . \)
+so \(f'(x) = A \) for all \(x \in {\mathbb{R}} . \)
+%END

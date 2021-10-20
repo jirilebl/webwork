@@ -1,0 +1,258 @@
+##DESCRIPTION
+## Prove that a constat derivative implies f is affine
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('4.2')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Let us study Rolle's theorem and its proof (from the book [1]).  Answer the interspersed questions.
+$PAR
+$BBOLD Theorem $EBOLD (Rolle) .
+$BITALIC
+Let \(f \colon [a,b] \to {\mathbb{R}}\) be continuous function
+differentiable on \((a,b)\) such that \(f(a) = f(b).\)
+Then there exists a \(c \in (a,b)\) such that \(f'(c) = 0 .\)
+$EITALIC
+$PAR
+$BITALIC Q: Would the theorem be true if \(f\) was instead of continuous simply assumed
+to be differentiable on \([a,b] ?\) $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+$BITALIC Q: If \(g \colon {\mathbb{R}} \to {\mathbb{R}} \) is differentiable and \(g'(x) \not= 0\) for all \(x \in {\mathbb{R}} ,\)
+what does Rolle's theorem immediately imply about \(g\) $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+[
+"Nothing.",
+"That \(g\) is one-to-one.",
+"That \(g\) is onto.",
+"That \(g\) is increasing.",
+],
+],
+"That \(g\) is one-to-one.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+$BITALIC Proof: $EITALIC
+As \(f\) is continuous on \([a,b],\) it attains
+an absolute minimum and an absolute maximum in \([a,b].\)
+$PAR
+$BITALIC Q: Is it possible that the maximum occurs at \(a\) or \(b ?\) $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+We wish to apply Lemma 4.2.2, and so we need to find
+some \(c \in (a,b)\) where \(f\) attains a minimum or a maximum.
+$PAR
+$BITALIC Q: Is it possible that there is no minimum in \((a,b) ?\) $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+$BITALIC Q: Is it possible that there is no maximum in \((a,b) ?\) $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+Write \(K := f(a) = f(b).\)
+If there exists an \(x\) such that \(f(x) $GTS K,\) then the absolute
+maximum is bigger than \(K\) and hence occurs at some \(c \in (a,b),\) and
+therefore \(f'(c) = 0.\)
+$PAR
+$BITALIC Q: Why did we conclude that the maximum is bigger than \(K ?\) $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+[
+"Because \( \max_{s \in [a,b]} f(s) \geq f(x) $GTS K . \)",
+"Because \(x \in [a,b] .\)",
+"Because \(K = f(a) = f(b) . \)",
+"Because \(K\) is the minimum of \(f(x) .\)",
+],
+],
+"Because \( \max_{s \in [a,b]} f(s) \geq f(x) $GTS K . \)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+On the other hand, if there exists an \(x\)
+such that \(f(x) $LTS K,\) then the absolute minimum occurs at some
+\(c \in (a,b),\) and so \(f'(c) = 0.\)
+$PAR
+$BITALIC Q: Could both of the cases above (\(x\) exists in both cases) occur at once? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+$BITALIC Q: What case is left over? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+[
+"There is no \(x\) such that \(f(x) \not= K .\)",
+"We handled all the cases already.",
+"When \(f\) is strictly increasing.",
+"When \(f'(x) = K\) is strictly increasing.",
+"There is some \(x\) such that \(f(x) = K .\)",
+],
+],
+"There is no \(x\) such that \(f(x) \not= K .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+$PAR
+If there is no \(x\) such that
+\(f(x) $GTS K\) or
+\(f(x) $LTS K,\) then \(f(x) = K\) for all \(x\) and then
+\(f'(x) = 0\) for all \(x \in [a,b],\) so any \(c \in (a,b)\) works.
+QED.
+$PAR
+$BITALIC Q: If \(f\) is constant, does it have absolute minima and maxima? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+[
+"No",
+"Every point is an absolute maximum and a minimum.",
+"Absolute maxima and minima are not defined for constant functions.",
+"No, but it has relative absolute minima and maxima.",
+],
+],
+"Every point is an absolute maximum and a minimum.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+
+ENDDOCUMENT();
