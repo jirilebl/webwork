@@ -43,7 +43,7 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-True or false: If \(I\) is an interval, \(x,y \in I\), then \(\frac{x+y}{2} \in I .\)
+True or false: If \(I\) is an interval, \(x,y \in I,\) then \(\frac{x+y}{2} \in I .\)
 $BR
 END_TEXT
 Context()->normalStrings;

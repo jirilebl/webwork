@@ -25,7 +25,7 @@ False
 %END
 
 True or false:
-Given a sequence \($LB x_n$RB\),
+Given a sequence \($LB x_n$RB ,\)
 if for all \(N \in {\mathbb{N}}\) there exists an \(m $GTS N\) such that
 \(x_m = \frac{1}{m},\) then \($LB x_n$RB\) converges.
 $BR
@@ -35,7 +35,7 @@ True
 %END
 
 True or false:
-Given a sequence \($LB x_n$RB\),
+Given a sequence \($LB x_n$RB ,\)
 if there exists an \(N \in {\mathbb{N}}\) such that for all \(m $GTS N\) we have
 \(x_m = \frac{1}{m},\) then \($LB x_n$RB\) converges.
 $BR

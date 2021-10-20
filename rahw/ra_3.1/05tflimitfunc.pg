@@ -44,7 +44,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 True or false:
-If \(c \in S\), then \(c\) is a cluster point of \(S.\)
+If \(c \in S ,\) then \(c\) is a cluster point of \(S.\)
 $BR
 END_TEXT
 Context()->normalStrings;

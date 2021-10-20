@@ -59,7 +59,7 @@ Context()->normalStrings;
 
 $q2 = DraggableProof([
 "Write \(\frac{2n^2-n}{n^2+1} = \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)",
-"As \(\lim \frac{1}{n} = 0\), \(\lim \left(2-\frac{1}{n}\right) = 2\) and \(\lim \left(1+\left(\frac{1}{n}\right)^2\right) = 1\text{.}\)",
+"As \(\lim \frac{1}{n} = 0 \text{,}\) \(\lim \left(2-\frac{1}{n}\right) = 2\) and \(\lim \left(1+\left(\frac{1}{n}\right)^2\right) = 1\text{.}\)",
 "So as the denominator does not go to zero, \(\lim \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)^2} = 2\text{.}\)",
 ],
 [

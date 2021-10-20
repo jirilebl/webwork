@@ -61,7 +61,7 @@ $q1 = DraggableProof([
 "Suppose \(g(f(x))=g(f(x))\) for some \(x \in A.\)",
 "As \(g\) is injective, we have \(x=y.\)",
 "As \(f\) is injective, we have \(f(x)=f(y).\)",
-"As \(f(x)=g(y)\), \(g \circ f\) is injective.",
+"As \(f(x)=g(y),\) \(g \circ f\) is injective.",
 ],
 
 SourceLabel => "Choose from these statements",

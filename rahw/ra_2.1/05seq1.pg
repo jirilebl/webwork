@@ -48,7 +48,7 @@ $c = random(2,5,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Consider the sequence \(\left$LB \frac{(-1)^n}{n^2} \right$RB\).
+Consider the sequence \(\left$LB \frac{(-1)^n}{n^2} \right$RB .\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -79,7 +79,7 @@ BEGIN_TEXT
 
 $PAR
 $PAR
-Consider the sequence \(\left$LB n^2 \right$RB\).
+Consider the sequence \(\left$LB n^2 \right$RB .\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -110,7 +110,7 @@ BEGIN_TEXT
 
 $PAR
 $PAR
-Consider the sequence \(\left$LB \frac{n(-1)^n}{n+$c} \right$RB\).
+Consider the sequence \(\left$LB \frac{n(-1)^n}{n+$c} \right$RB .\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -141,7 +141,7 @@ BEGIN_TEXT
 
 $PAR
 $PAR
-Consider the sequence \(\left$LB \frac{$ab n}{$b n+1} \right$RB\).
+Consider the sequence \(\left$LB \frac{$ab n}{$b n+1} \right$RB .\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR

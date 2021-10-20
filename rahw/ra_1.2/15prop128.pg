@@ -62,7 +62,7 @@ $q1 = DraggableProof([
 "Let \(y:=\inf \,S.\)",
 "Set \(\epsilon := 1.\)",
 "Take \(x := (\sup \, S)-1.\)",
-"As \(y $LTS \sup \, S\), we have \( x $GTS y .\)",
+"As \(y $LTS \sup \, S ,\) we have \( x $GTS y .\)",
 ],
 
 SourceLabel => "Choose from these statements",

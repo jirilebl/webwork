@@ -67,7 +67,7 @@ $q1 = DraggableProof([
 "We have \( x_n \geq a_n \geq 1+\epsilon \) for all \(n \geq M .\)",
 "And so \( (x_n)^n \geq (a_n)^n \geq (1+\epsilon)^n \) for all \(n \geq M .\)",
 "The sequence \( $LB (1+\epsilon)^n $RB \) is unbounded.",
-"So, \($LB (x_{n})^n $RB\) converges to \(1\).",
+"So, \($LB (x_{n})^n $RB\) converges to \(1 .\)",
 ],
 
 SourceLabel => "Choose from these statements",

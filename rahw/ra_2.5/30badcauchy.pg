@@ -98,7 +98,7 @@ $q3 = DraggableProof([
 "\(\displaystyle \qquad = \frac{k}{n+1} . \)",
 "We know that \( \frac{k}{n+1} \to 0 \) as \(n \to \infty.\)",
 "So by sequeeze lemma, as \( 0 \leq y_n \leq \frac{k}{n+1} ,\) we have \(y_n \to 0 .\)",
-"As \(y_n \to 0\), we get \(\lvert y_n \rvert \to 0 \) as well.",
+"As \(y_n \to 0 ,\) we get \(\lvert y_n \rvert \to 0 \) as well.",
 ],
 [
 "What we need to show is that \(y_n \to 1 .\)",

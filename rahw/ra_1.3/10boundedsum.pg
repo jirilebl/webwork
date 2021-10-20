@@ -139,14 +139,14 @@ Context()->normalStrings;
 
 $q4 = RadioButtons([
 [
-"\(D:={\mathbb{R}}\), \(f(x) := x\), \(g(x):=-x.\)",
-"\(D:=[0,1]\), \(f(x) := x\), \(g(x):=-x.\)",
-"\(D:={\mathbb{R}}\), \(f(x) := x\), \(g(x):=1.\)",
-"\(D:={\mathbb{R}}\), \(f(x) := 0\), \(g(x):=x.\)",
+"\(D:={\mathbb{R}}, f(x) := x, g(x):=-x.\)",
+"\(D:=[0,1], f(x) := x, g(x):=-x.\)",
+"\(D:={\mathbb{R}}, f(x) := x, g(x):=1.\)",
+"\(D:={\mathbb{R}}, f(x) := 0, g(x):=x.\)",
 ],
 "There is no counterexample, the statement is true.",
 ],
-"\(D:={\mathbb{R}}\), \(f(x) := x\), \(g(x):=-x.\)",
+"\(D:={\mathbb{R}}, f(x) := x, g(x):=-x.\)",
 );
 Context()->texStrings;
 BEGIN_TEXT

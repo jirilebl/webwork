@@ -11,7 +11,7 @@ True
 %END
 
 True or false:
-If \(f\colon [a,b] \to {\mathbb{R}}\) attains a maximum at \(c\in (a,b)\), then \(f'(c)\) exists
+If \(f\colon [a,b] \to {\mathbb{R}}\) attains a maximum at \(c\in (a,b) ,\) then \(f'(c)\) exists
 and \(f'(c) = 0 .\)
 $BR
 %RADIO

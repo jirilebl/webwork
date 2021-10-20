@@ -6,14 +6,14 @@ Prove that \(\displaystyle\sum_{n=1}^{\infty} x_n^2\) converges.
 
 %PROOF
 As \(\displaystyle\sum_{n=1}^{\infty} x_n\) converges, \(\displaystyle \lim_{n\to\infty} x_n = 0 .\)
-Thus, there exists \(M\) such that for all \(n \geq M\), we have \(x_n $LTS 1.\)
+Thus, there exists \(M\) such that for all \(n \geq M ,\) we have \(x_n $LTS 1.\)
 So for all \(n \geq M,\) we have \(x_n^2 $LTS x_n.\)
 By the comparison test and the fact that \(\displaystyle\sum_{n=M}^\infty x_n\) converges, we have \(\displaystyle\sum_{n=M}^\infty x_n^2\) converges.
 Hence, \(\displaystyle\sum_{n=1}^\infty x_n^2\) converges.
 %EXTRA
 As \(\displaystyle \lim_{n\to\infty} x_n = 0 ,\) we have \(\displaystyle\sum_{n=1}^{\infty} x_n\) converges. 
 So for all \(n,\) we have \(x_n^2 $LTS x_n.\)
-Thus, there exists \(M\) such that for all \(n \geq M\), we have \(x_n $LTS \epsilon.\)
+Thus, there exists \(M\) such that for all \(n \geq M ,\) we have \(x_n $LTS \epsilon.\)
 By the ratio test, \(\displaystyle\sum_{n=M}^\infty x_n^2\) converges absolutely.
 Let \(M:=1.\)
 %END

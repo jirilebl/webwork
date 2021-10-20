@@ -25,7 +25,7 @@ Let \(\delta $GTS 0\) be given.
 Now we will apply Corollary 3.1.12 (from the book [1]).
 
 %PROOF
-As \(\displaystyle \lim_{x\to c} x = c \), then \(\displaystyle \lim_{x\to c} x^2 = c^2 \) by Corollary 3.1.12 part (iii).
+As \(\displaystyle \lim_{x\to c} x = c ,\) then \(\displaystyle \lim_{x\to c} x^2 = c^2 \) by Corollary 3.1.12 part (iii).
 Similarly \(\displaystyle \lim_{x\to c} (a_2) (x^2) = a_2 c^2 \) and \(\displaystyle \lim_{x\to c} (a_1) (x) = a_1 c . \)
 Finally \(\displaystyle \lim_{x\to c} (a_2 x^2+a_1 x + a_0) = a_2 c^2 + a_1 c + a_0 \) by Corollary 3.1.12 part (i)
 %EXTRA
