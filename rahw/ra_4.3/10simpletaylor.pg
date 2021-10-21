@@ -57,12 +57,12 @@ BEGIN_TEXT
 \{ ans_rule(40) \}
 \{ AnswerFormatHelp("formulas") \}
 $PAR
-Compute the 3rd Taylor polynomial of \(e^{$b x})\) at \(x_0=0.\)
+Compute the 3rd Taylor polynomial of \(e^{$b x}\) at \(x_0=0.\)
 $BR
 END_TEXT
 Context()->normalStrings;
 
-$q2 = Formula("1+($b)*x+((1/2)*($b)^2)*x^2+((1/6)*($b)^3)*x^2");
+$q2 = Formula("1+($b)*x+((1/2)*($b)^2)*x^2+((1/6)*($b)^3)*x^6");
 
 Context()->texStrings;
 BEGIN_TEXT
