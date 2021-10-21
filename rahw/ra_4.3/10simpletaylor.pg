@@ -34,6 +34,7 @@ $showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 
+Context()->variables->are(x=>"Real");
 
 $a=random(2,5,1);
 $b=random(2,5,1);
@@ -44,7 +45,6 @@ $b=random(2,5,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-%FORMULAVAR x
 Compute the 2nd Taylor polynomial of \(x^2+x^3\) at \(x_0=$a.\)
 $BR
 END_TEXT
@@ -57,7 +57,7 @@ BEGIN_TEXT
 \{ ans_rule(40) \}
 \{ AnswerFormatHelp("formulas") \}
 $PAR
-Compute the 3rd Taylor polynomial of \(\exp($b x\) at \(x_0=0.\)
+Compute the 3rd Taylor polynomial of \(e^{$b x})\) at \(x_0=0.\)
 $BR
 END_TEXT
 Context()->normalStrings;

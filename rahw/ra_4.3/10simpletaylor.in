@@ -1,13 +1,13 @@
 %DESC Compute some simple Taylor polynomials
 %HINC head.txt
-%FORMULAVAR x
+%FORMULAVARS x
 %SETUP $a=random(2,5,1);
 %SETUP $b=random(2,5,1);
 Compute the 2nd Taylor polynomial of \(x^2+x^3\) at \(x_0=$a.\)
 $BR
 %FORMULA (($a)^2+($a)^3)+((2*($a)+3*($a)^2)*(x-$a))+((1/2)*(2+6*$a)*(x-$a)^2)
 
-Compute the 3rd Taylor polynomial of \(\exp($b x\) at \(x_0=0.\)
+Compute the 3rd Taylor polynomial of \(e^{$b x})\) at \(x_0=0.\)
 $BR
 %FORMULA 1+($b)*x+((1/2)*($b)^2)*x^2+((1/6)*($b)^3)*x^2
 
