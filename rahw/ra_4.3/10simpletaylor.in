@@ -9,7 +9,7 @@ $BR
 
 Compute the 3rd Taylor polynomial of \(e^{$b x}\) at \(x_0=0.\)
 $BR
-%FORMULA 1+($b)*x+((1/2)*($b)^2)*x^2+((1/6)*($b)^3)*x^6
+%FORMULA 1+($b)*x+((1/2)*($b)^2)*x^2+((1/6)*($b)^3)*x^3
 
 If \(f(x)\) is a polynomial of degree \(d\) and \(P(x)\) is the \(d\)th Taylor polynomial,
 what is the remainder from Taylor's theorem:

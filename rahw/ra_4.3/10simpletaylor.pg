@@ -62,7 +62,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q2 = Formula("1+($b)*x+((1/2)*($b)^2)*x^2+((1/6)*($b)^3)*x^6");
+$q2 = Formula("1+($b)*x+((1/2)*($b)^2)*x^2+((1/6)*($b)^3)*x^3");
 
 Context()->texStrings;
 BEGIN_TEXT
