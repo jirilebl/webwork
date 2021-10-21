@@ -1,0 +1,135 @@
+##DESCRIPTION
+## True/false and multiple choice questions on Taylor's theorem
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('4.3')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+The Taylor series
+\(\displaystyle \sum_{k=0}^\infty
+\frac{f^{(k)}(x_0)}{k!}{(x-x_0)}^k\) of an infinitely differentiable function is
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"Always convergent.",
+"Sometimes convergent, sometimes divergent, depends on the function.",
+"Never convergent.",
+],
+"Sometimes convergent, sometimes divergent, depends on the function.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+Taylor's theorem with the Lagrange form of the remainder is a generalization of
+which theorem to higher order derivatives:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+[
+"Mean value theorem",
+"Extreme value theorem",
+"Intermediate value theorem",
+"Bolzano-Weierstrass theorem",
+"Fundamental theorem of calculus",
+],
+],
+"Mean value theorem",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+An \(n\)-times differentiable function has at least \(n-1\) continuous derivatives.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+If the \(n\)th Taylor polynomial of a function \(f\) at \(x_0\) is the zero polynomial,
+then \(f(x_0) = f'(x_0) = \cdots = f^{(n)}(x_0) = 0 .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+
+ENDDOCUMENT();

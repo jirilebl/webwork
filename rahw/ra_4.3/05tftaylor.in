@@ -1,0 +1,40 @@
+%DESC True/false and multiple choice questions on Taylor's theorem
+%HINC head.txt
+%NOPARTIAL
+The Taylor series
+\(\displaystyle \sum_{k=0}^\infty
+\frac{f^{(k)}(x_0)}{k!}{(x-x_0)}^k\) of an infinitely differentiable function is
+$BR
+%RADIO
+Always convergent.
+%CORRECT Sometimes convergent, sometimes divergent, depends on the function.
+Never convergent.
+%END
+
+Taylor's theorem with the Lagrange form of the remainder is a generalization of
+which theorem to higher order derivatives:
+$BR
+%RADIORANDOM
+%CORRECT Mean value theorem
+Extreme value theorem
+Intermediate value theorem
+Bolzano-Weierstrass theorem
+Fundamental theorem of calculus
+%END
+
+True or false:
+An \(n\)-times differentiable function has at least \(n-1\) continuous derivatives.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If the \(n\)th Taylor polynomial of a function \(f\) at \(x_0\) is the zero polynomial,
+then \(f(x_0) = f'(x_0) = \cdots = f^{(n)}(x_0) = 0 .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
