@@ -1,0 +1,57 @@
+%DESC True/false questions on the integral using Darboux
+%HINC head.txt
+%NOPARTIAL
+True or false:
+Every bounded function \(f \colon [a,b] \to {\mathbb{R}}\) is integrable.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Every integrable function \(f \colon [a,b] \to {\mathbb{R}}\) is continuous.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+All constant functions are integrable on every closed interval.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+The partition
+\($LB 0, 0.1, 0.2, 0.9, 1 $RB \) is a refinement of
+\($LB 0, 0.2, 1 $RB . \)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+The partition
+\($LB 0, 0.1, 0.2, 0.9, 1 $RB \) is a refinement of
+\($LB 0, 0.2, 0.8, 1 $RB . \)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon [0,1] \to {\mathbb{R}}\) is such that
+for every \(n \in {\mathbb{N}}\) there is an \(M \in {\mathbb{N}}\) such that \( P = \left$LB 0, \frac{1}{M} , \frac{2}{M} , \ldots, 1 \right$RN \)
+is such that \( U(P,f) - L(P,f) < \frac{1}{n} , \)
+then \(f\) is Riemann integrable.
+$BR
+%RADIO
+%CORRECT True
+False
+%END

@@ -1,0 +1,40 @@
+%DESC Show that a removable singularity on a zero function is integrable.
+%HINC head.txt
+%NOPARTIAL
+Suppose 
+\[
+f(x) =
+\begin{cases}
+0 & \text{if } x \not= 0 ,\\
+1 & \text{if } x = 0 .
+\end{cases}
+\]
+
+Prove that \(f\) is Riemann integrable on on \([-1,1]\) and compute the integral.
+(In the proof, treat the lower sum before the upper sum.)
+
+%PROOF
+Let \(\epsilon > 0\) be given.
+Consider the partition \(P = \left$LB -1,\frac{-\epsilon}{2},\frac{\epsilon}{2},1 \right$RB . \)
+Next, \(m_1 = m_2 = m_3 = 0\) and \(M_1 = 0, M_2 = 1, M_3 = 0 . \)
+Compute \(L(P,f) = 0 \Delta x_1 + 0 \Delta x_2 + 0 \Delta x_3 = 0 , \)
+and \(U(P,f) = 0 \Delta x_1 + 1 \Delta x_2 + 0 \Delta x_3 = \Delta x_2 = \epsilon . \)
+So \(\overline{\int_{-1}^1} f(x)\, dx - \underline{\int_{-1}^1} f(x)\, dx \leq U(P,f)-L(P,f) = \epsilon . \)
+As \( \epsilon > 0 \) is arbitrary, \(\overline{\int_{-1}^1} f(x)\, dx = \underline{\int_{-1}^1} f(x)\, dx \) and \(f\) is integrable.
+%EXTRA
+%END
+
+What is the integral?
+
+\(\displaystyle \int_{-1}^1 f(x) \, dx = {} \)
+%NUMBER 0
+
+Why?
+
+%RADIORANDOM
+%CORRECT Because \(L(P,f) = 0\) for any one of the partitions \(P.\)
+Because \(U(P,f) > 0\) for any one of the partitions \(P.\)
+Because the partitions only have finitely many subintervals.
+Because that's what calculus says.
+Because it is not integrable.
+%END

@@ -1,0 +1,172 @@
+##DESCRIPTION
+## Compute simple Darboux sums.
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('5.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+$a = random(2,5,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Consider partitions
+\(P_1 = $LB 0, 1 $RB , \)
+\(P_2 = $LB 0, 0.5, 1 $RB , \)
+\(P_3 = $LB 0, 0.3, 0.7, 1 $RB . \)
+Consider \(f \colon [0,1] \to {\mathbb{R}}\) defined by \(f(x) = $a x^2 . \)
+$PAR
+Compute:
+$PAR
+\(L(P_1,f) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(U(P_1,f) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("$a");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(L(P_2,f) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("(($a)*(0.5)^2)*0.5");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(U(P_2,f) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("(($a)*(0.5)^2)*0.5+($a)*0.5");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(L(P_3,f) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("(($a)*(0.3)^2)*0.4+(($a)*(0.7)^2)*0.3");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(U(P_3,f) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("(($a)*(0.3)^2)*0.3+(($a)*(0.7)^2)*0.4+($a)*0.3");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+The function \(f\) is, in fact, integrable, and the integral is the one you know from calculus.
+Given this information, compute the Darboux integrals and Riemann integral:
+$PAR
+\(\displaystyle \underline{\int_0^1} f(x) \, dx = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q7 = Formula("($a)/3");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(\displaystyle \overline{\int_0^1} f(x) \, dx = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q8 = Formula("($a)/3");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(\displaystyle \int_0^1 f(x) \, dx = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q9 = Formula("($a)/3");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+
+ENDDOCUMENT();

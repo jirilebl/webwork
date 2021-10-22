@@ -1,0 +1,40 @@
+%DESC Compute simple Darboux sums.
+%HINC head.txt
+%SETUP $a = random(2,5,1);
+Consider partitions
+\(P_1 = $LB 0, 1 $RB , \)
+\(P_2 = $LB 0, 0.5, 1 $RB , \)
+\(P_3 = $LB 0, 0.3, 0.7, 1 $RB . \)
+Consider \(f \colon [0,1] \to {\mathbb{R}}\) defined by \(f(x) = $a x^2 . \)
+
+Compute:
+
+\(L(P_1,f) = {}\)
+%NUMBER 0
+
+\(U(P_1,f) = {}\)
+%NUMBER $a
+
+\(L(P_2,f) = {}\)
+%NUMBER (($a)*(0.5)^2)*0.5
+
+\(U(P_2,f) = {}\)
+%NUMBER (($a)*(0.5)^2)*0.5+($a)*0.5
+
+\(L(P_3,f) = {}\)
+%NUMBER (($a)*(0.3)^2)*0.4+(($a)*(0.7)^2)*0.3
+
+\(U(P_3,f) = {}\)
+%NUMBER (($a)*(0.3)^2)*0.3+(($a)*(0.7)^2)*0.4+($a)*0.3
+
+The function \(f\) is, in fact, integrable, and the integral is the one you know from calculus.
+Given this information, compute the Darboux integrals and Riemann integral:
+
+\(\displaystyle \underline{\int_0^1} f(x) \, dx = {}\)
+%NUMBER ($a)/3
+
+\(\displaystyle \overline{\int_0^1} f(x) \, dx = {}\)
+%NUMBER ($a)/3
+
+\(\displaystyle \int_0^1 f(x) \, dx = {}\)
+%NUMBER ($a)/3
