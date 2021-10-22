@@ -59,7 +59,7 @@ $q1 = Formula("0");
 
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
+\{ ans_rule(40) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 \(U(P_1,f) = {}\)
@@ -70,7 +70,7 @@ $q2 = Formula("$a");
 
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
+\{ ans_rule(40) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 \(L(P_2,f) = {}\)
@@ -81,7 +81,7 @@ $q3 = Formula("(($a)*(0.5)^2)*0.5");
 
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
+\{ ans_rule(40) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 \(U(P_2,f) = {}\)
@@ -92,7 +92,7 @@ $q4 = Formula("(($a)*(0.5)^2)*0.5+($a)*0.5");
 
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
+\{ ans_rule(40) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 \(L(P_3,f) = {}\)
@@ -103,7 +103,7 @@ $q5 = Formula("(($a)*(0.3)^2)*0.4+(($a)*(0.7)^2)*0.3");
 
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
+\{ ans_rule(40) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 \(U(P_3,f) = {}\)
@@ -114,7 +114,7 @@ $q6 = Formula("(($a)*(0.3)^2)*0.3+(($a)*(0.7)^2)*0.4+($a)*0.3");
 
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
+\{ ans_rule(40) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 The function \(f\) is, in fact, integrable, and the integral is the one you know from calculus.

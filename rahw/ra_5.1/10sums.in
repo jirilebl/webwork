@@ -9,6 +9,7 @@ Consider \(f \colon [0,1] \to {\mathbb{R}}\) defined by \(f(x) = $a x^2 . \)
 
 Compute:
 
+%RULEWIDTH 40
 \(L(P_1,f) = {}\)
 %NUMBER 0
 
@@ -30,6 +31,7 @@ Compute:
 The function \(f\) is, in fact, integrable, and the integral is the one you know from calculus.
 Given this information, compute the Darboux integrals and Riemann integral:
 
+%RULEWIDTH 20
 \(\displaystyle \underline{\int_0^1} f(x) \, dx = {}\)
 %NUMBER ($a)/3
 

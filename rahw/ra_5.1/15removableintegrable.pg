@@ -64,11 +64,14 @@ $q1 = DraggableProof([
 "Consider the partition \(P = \left$LB -1,\frac{-\epsilon}{2},\frac{\epsilon}{2},1 \right$RB . \)",
 "Next, \(m_1 = m_2 = m_3 = 0\) and \(M_1 = 0, M_2 = 1, M_3 = 0 . \)",
 "Compute \(L(P,f) = 0 \Delta x_1 + 0 \Delta x_2 + 0 \Delta x_3 = 0 , \)",
-"and \(U(P,f) = 0 \Delta x_1 + 1 \Delta x_2 + 0 \Delta x_3 = \Delta x_2 = \epsilon . \)",
-"So \(\overline{\int_{-1}^1} f(x)\, dx - \underline{\int_{-1}^1} f(x)\, dx \leq U(P,f)-L(P,f) = \epsilon . \)",
+"and \(U(P,f) = 0 \Delta x_1 + 1 \Delta x_2 + 0 \Delta x_3 = \epsilon . \)",
+"So \(\overline{\int_{-1}^1} f(x)\, dx - \underline{\int_{-1}^1} f(x)\, dx \)",
+"\( \qquad \leq U(P,f)-L(P,f) = \epsilon . \)",
 "As \( \epsilon > 0 \) is arbitrary, \(\overline{\int_{-1}^1} f(x)\, dx = \underline{\int_{-1}^1} f(x)\, dx \) and \(f\) is integrable.",
 ],
 [
+"Compute \(L(P,f) = \Delta x_1 + \Delta x_2 + \Delta x_3 = 1 , \)",
+"Next, \(m_1 = m_2 = m_3 = 1\) and \(M_1 = 1, M_2 = 0, M_3 = 1 . \)",
 ],
 
 SourceLabel => "Choose from these statements",
