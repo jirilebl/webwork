@@ -72,6 +72,7 @@ $q1 = DraggableProof([
 [
 "Compute \(L(P,f) = \Delta x_1 + \Delta x_2 + \Delta x_3 = 1 , \)",
 "Next, \(m_1 = m_2 = m_3 = 1\) and \(M_1 = 1, M_2 = 0, M_3 = 1 . \)",
+"Consider the partition \(P = \left$LB -1,0,1 \right$RB . \)",
 ],
 
 SourceLabel => "Choose from these statements",

@@ -174,8 +174,8 @@ What's 2 times $a?
 %NUMBER 2*$a
 
 Normally the answer rule width is 20 for numbers and 40 for formulas.  With
-the %RULEWIDTH statement you can change it to another width (used for both
-from then on.)  The next rule will be 80-wide.
+the %RULEWIDTH statement you can change it to another width (used for all
+rules from then on.)  The next rule will be 80-wide.
 
 %RULEWIDTH 80
 %NUMBER 42

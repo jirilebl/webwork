@@ -364,8 +364,8 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 Normally the answer rule width is 20 for numbers and 40 for formulas.  With
-the %RULEWIDTH statement you can change it to another width (used for both
-from then on.)  The next rule will be 80-wide.
+the %RULEWIDTH statement you can change it to another width (used for all
+rules from then on.)  The next rule will be 80-wide.
 $PAR
 END_TEXT
 Context()->normalStrings;
