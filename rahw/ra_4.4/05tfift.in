@@ -1,0 +1,68 @@
+%DESC True/false questions on inverse function theorem
+%HINC head.txt
+%NOPARTIAL
+True or false:
+If \(I,J \subset {\mathbb{R}}\) are intervals and \(f \colon I \to J\)
+a differentiable bijective (one-to-one and onto) function.
+Then \(f^{-1}\) is differentiable.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(I,J \subset {\mathbb{R}}\) are intervals and \(f \colon I \to J\)
+a differentiable surjective (onto) function such that \(f'(x) $GTS 0\) for every
+\(x \in I .\)  Then \(f^{-1}\) exists and is differentiable.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(I,J \subset {\mathbb{R}}\) are intervals and \(f \colon I \to J\)
+and \(g \colon J \to I\) are differentiable functions that are inverses
+of each other.
+If \(g'(y) $GTS 0 \) for all \(y \in J,\)
+then \(f'(x) $GTS 0 \) for all \(x \in I.\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(I \subset {\mathbb{R}}\) is an interval and \(f \colon I \to {\mathbb{R}}\)
+is an injective (one-to-one) function.  Then either \(f'(x) \geq 0\)
+for all \(x \in I\) or \(f'(x) \geq 0\) for all \(x \in I.\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f \colon [-1,1] \to {\mathbb{R}}\)
+is a differentiable function such that \(f(0) $GTS 0 , \)
+then there exists an \(\epsilon > 0 \)
+such that the restriction of \(f\) to \((-\epsilon,\epsilon)\)
+is strictly increasing.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon [-1,1] \to {\mathbb{R}}\)
+is a continuously differentiable function such that \(f(0) $GTS 0 , \)
+then there exists an \(\epsilon > 0 \)
+such that the restriction of \(f\) to \((-\epsilon,\epsilon)\)
+is strictly increasing.
+$BR
+%RADIO
+%CORRECT True
+False
+%END

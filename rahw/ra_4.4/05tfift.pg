@@ -1,0 +1,181 @@
+##DESCRIPTION
+## True/false questions on inverse function theorem
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('4.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+If \(I,J \subset {\mathbb{R}}\) are intervals and \(f \colon I \to J\)
+a differentiable bijective (one-to-one and onto) function.
+Then \(f^{-1}\) is differentiable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+If \(I,J \subset {\mathbb{R}}\) are intervals and \(f \colon I \to J\)
+a differentiable surjective (onto) function such that \(f'(x) $GTS 0\) for every
+\(x \in I .\)  Then \(f^{-1}\) exists and is differentiable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+If \(I,J \subset {\mathbb{R}}\) are intervals and \(f \colon I \to J\)
+and \(g \colon J \to I\) are differentiable functions that are inverses
+of each other.
+If \(g'(y) $GTS 0 \) for all \(y \in J,\)
+then \(f'(x) $GTS 0 \) for all \(x \in I.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+If \(I \subset {\mathbb{R}}\) is an interval and \(f \colon I \to {\mathbb{R}}\)
+is an injective (one-to-one) function.  Then either \(f'(x) \geq 0\)
+for all \(x \in I\) or \(f'(x) \geq 0\) for all \(x \in I.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [-1,1] \to {\mathbb{R}}\)
+is a differentiable function such that \(f(0) $GTS 0 , \)
+then there exists an \(\epsilon > 0 \)
+such that the restriction of \(f\) to \((-\epsilon,\epsilon)\)
+is strictly increasing.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [-1,1] \to {\mathbb{R}}\)
+is a continuously differentiable function such that \(f(0) $GTS 0 , \)
+then there exists an \(\epsilon > 0 \)
+such that the restriction of \(f\) to \((-\epsilon,\epsilon)\)
+is strictly increasing.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+
+ENDDOCUMENT();
