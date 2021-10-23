@@ -14,14 +14,14 @@ Prove that \(f\) is Riemann integrable on on \([-1,1]\) and compute the integral
 (In the proof, treat the lower sum before the upper sum.)
 
 %PROOF
-Let \(\epsilon > 0\) be given.
+Let \(\epsilon $GTS 0\) be given.
 Consider the partition \(P = \left$LB -1,\frac{-\epsilon}{2},\frac{\epsilon}{2},1 \right$RB . \)
 Next, \(m_1 = m_2 = m_3 = 0\) and \(M_1 = 0, M_2 = 1, M_3 = 0 . \)
 Compute \(L(P,f) = 0 \Delta x_1 + 0 \Delta x_2 + 0 \Delta x_3 = 0 , \)
 and \(U(P,f) = 0 \Delta x_1 + 1 \Delta x_2 + 0 \Delta x_3 = \epsilon . \)
 So \(\overline{\int_{-1}^1} f(x)\, dx - \underline{\int_{-1}^1} f(x)\, dx \)
 \( \qquad \leq U(P,f)-L(P,f) = \epsilon . \)
-As \( \epsilon > 0 \) is arbitrary, \(\overline{\int_{-1}^1} f(x)\, dx = \underline{\int_{-1}^1} f(x)\, dx \) and \(f\) is integrable.
+As \( \epsilon $GTS 0 \) is arbitrary, \(\overline{\int_{-1}^1} f(x)\, dx = \underline{\int_{-1}^1} f(x)\, dx \) and \(f\) is integrable.
 %EXTRA
 Compute \(L(P,f) = \Delta x_1 + \Delta x_2 + \Delta x_3 = 1 , \)
 Next, \(m_1 = m_2 = m_3 = 1\) and \(M_1 = 1, M_2 = 0, M_3 = 1 . \)
@@ -37,8 +37,8 @@ Why (choose the most complete and correct reason)?
 
 %RADIORANDOM
 Because \(L(P,f) = 0\) for any one of the partitions \(P.\)
-Because \(U(P,f) > 0\) for any one of the partitions \(P.\)
-%CORRECT Because \(0 = L(P,f) \leq \int_{-1}^1 f(x) \, dx \leq U(P,f) = \epsilon \) and \(\epsilon > 0\) is arbitrary.
+Because \(U(P,f) $GTS 0\) for any one of the partitions \(P.\)
+%CORRECT Because \(0 = L(P,f) \leq \int_{-1}^1 f(x) \, dx \leq U(P,f) = \epsilon \) and \(\epsilon $GTS 0\) is arbitrary.
 Because the partitions only have finitely many subintervals.
 Because that's what calculus says.
 Because it is not integrable.

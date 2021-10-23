@@ -125,7 +125,7 @@ $PAR
 True or false:
 If \(f \colon [-1,1] \to {\mathbb{R}}\)
 is a differentiable function such that \(f(0) $GTS 0 , \)
-then there exists an \(\epsilon > 0 \)
+then there exists an \(\epsilon $GTS 0 \)
 such that the restriction of \(f\) to \((-\epsilon,\epsilon)\)
 is strictly increasing.
 $BR
@@ -146,7 +146,7 @@ $PAR
 True or false:
 If \(f \colon [-1,1] \to {\mathbb{R}}\)
 is a continuously differentiable function such that \(f(0) $GTS 0 , \)
-then there exists an \(\epsilon > 0 \)
+then there exists an \(\epsilon $GTS 0 \)
 such that the restriction of \(f\) to \((-\epsilon,\epsilon)\)
 is strictly increasing.
 $BR

@@ -135,7 +135,7 @@ $PAR
 True or false:
 If \(f \colon [0,1] \to {\mathbb{R}}\) is such that
 for every \(n \in {\mathbb{N}}\) there is an \(M \in {\mathbb{N}}\) such that \( P = \left$LB 0, \frac{1}{M} , \frac{2}{M} , \ldots, 1 \right$RB \)
-is such that \( U(P,f) - L(P,f) < \frac{1}{n} , \)
+is such that \( U(P,f) - L(P,f) $LTS \frac{1}{n} , \)
 then \(f\) is Riemann integrable.
 $BR
 END_TEXT
