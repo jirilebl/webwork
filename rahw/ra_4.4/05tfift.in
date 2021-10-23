@@ -3,7 +3,7 @@
 %NOPARTIAL
 True or false:
 If \(I,J \subset {\mathbb{R}}\) are intervals and \(f \colon I \to J\)
-a differentiable bijective (one-to-one and onto) function.
+is a differentiable bijective (one-to-one and onto) function.
 Then \(f^{-1}\) is differentiable.
 $BR
 %RADIO
@@ -13,8 +13,9 @@ True
 
 True or false:
 If \(I,J \subset {\mathbb{R}}\) are intervals and \(f \colon I \to J\)
-a differentiable surjective (onto) function such that \(f'(x) $GTS 0\) for every
-\(x \in I .\)  Then \(f^{-1}\) exists and is differentiable.
+is a differentiable surjective (onto) function such that \(f'(x) $GTS 0\)
+for every \(x \in I .\)
+Then \(f^{-1}\) exists and is differentiable.
 $BR
 %RADIO
 %CORRECT True
@@ -36,7 +37,7 @@ False
 True or false:
 If \(I \subset {\mathbb{R}}\) is an interval and \(f \colon I \to {\mathbb{R}}\)
 is an injective (one-to-one) function.  Then either \(f'(x) \geq 0\)
-for all \(x \in I\) or \(f'(x) \geq 0\) for all \(x \in I.\)
+for all \(x \in I\) or \(f'(x) \leq 0\) for all \(x \in I.\)
 $BR
 %RADIO
 %CORRECT True
