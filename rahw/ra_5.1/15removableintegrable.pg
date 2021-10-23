@@ -101,7 +101,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-Why?
+Why (choose the most complete and correct reason)?
 $PAR
 END_TEXT
 Context()->normalStrings;
@@ -110,12 +110,13 @@ $q3 = RadioButtons([
 [
 "Because \(L(P,f) = 0\) for any one of the partitions \(P.\)",
 "Because \(U(P,f) > 0\) for any one of the partitions \(P.\)",
+"Because \(0 = L(P,f) \leq \int_{-1}^1 f(x) \, dx \leq U(P,f) = \epsilon \) and \(\epsilon > 0\) is arbitrary.",
 "Because the partitions only have finitely many subintervals.",
 "Because that's what calculus says.",
 "Because it is not integrable.",
 ],
 ],
-"Because \(L(P,f) = 0\) for any one of the partitions \(P.\)",
+"Because \(0 = L(P,f) \leq \int_{-1}^1 f(x) \, dx \leq U(P,f) = \epsilon \) and \(\epsilon > 0\) is arbitrary.",
 );
 Context()->texStrings;
 BEGIN_TEXT
