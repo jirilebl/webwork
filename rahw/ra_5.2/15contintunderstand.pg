@@ -79,12 +79,12 @@ Context()->normalStrings;
 
 $q2 = RadioButtons([
 [
-"Because \(a $LTS b\) then \(\frac{\epsilon}{b-a} $GTS 0 . \)",
+"Because \(a $LTS b\) and so \(\frac{\epsilon}{b-a} $GTS 0 . \)",
 "Because we can use any number as \(\epsilon . \)",
 "Because \(f\) is uniformly continuous.",
 ],
 ],
-"Because \(a $LTS b\) then \(\frac{\epsilon}{b-a} $GTS 0 . \)",
+"Because \(a $LTS b\) and so \(\frac{\epsilon}{b-a} $GTS 0 . \)",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -159,6 +159,28 @@ $PAR
 Let \(x\) be a point where \(f\) attains the maximum and \(y\) be a point
 where \(f\) attains the minimum.  Then \(f(x) = M_i\)
 and \(f(y) = m_i\) in the notation from the definition of the integral.
+$PAR
+$BITALIC Q: What does \(m_i \) and \(M_i\) mean? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+[
+"\(m_i = \inf $LB f(x) : x \in [x_{i-1},x_i] $RB \) and \(M_i = \sup $LB f(x) : x \in [x_{i-1},x_i] $RB .\)",
+"\(m_i = \sup $LB f(x) : x \in [x_{i-1},x_i] $RB \) and \(M_i = \inf $LB f(x) : x \in [x_{i-1},x_i] $RB .\)",
+"\(m_i = \inf $LB f(x) : x \in [x_{i},x_{i+1}] $RB \) and \(M_i = \sup $LB f(x) : x \in [x_{i},x_{i+1}] $RB .\)",
+"\(m_i = \sup $LB f(x) : x \in [x_{i},x_{i+1}] $RB \) and \(M_i = \inf $LB f(x) : x \in [x_{i},x_{i+1}] $RB .\)",
+"\(m_i = \inf $LB f(x) : x \in [a,b] $RB \) and \(M_i = \sup $LB f(x) : x \in [a,b] $RB .\)",
+],
+],
+"\(m_i = \inf $LB f(x) : x \in [x_{i-1},x_i] $RB \) and \(M_i = \sup $LB f(x) : x \in [x_{i-1},x_i] $RB .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
 Therefore,
 \[
 M_i-m_i = f(x)-f(y) $LTS 
@@ -209,19 +231,19 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q6 = RadioButtons([
+$q7 = RadioButtons([
 [
-"That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \sum_{i=1}^n \left(\inf\limits_{x \in [x_{i-1},x_i]} f(x)\right) \Delta x_i .\)",
+"That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf $LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \frac{i}{n}(b-a) + a $RB )\right) .\)",
 "That \(f\) is continuous",
 "That \(\int_a^b f = 0 . \)",
 "That the uniform partition can be used to integrate any Riemann integrable function.",
 ],
 ],
-"That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \sum_{i=1}^n \left(\inf\limits_{x \in [x_{i-1},x_i]} f(x)\right) \Delta x_i .\)",
+"That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf $LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \frac{i}{n}(b-a) + a $RB )\right) .\)",
 );
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q6->buttons \}
+\{ $q7->buttons \}
 
 $PAR
 $PAR
@@ -241,5 +263,6 @@ ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
+ANS($q7->cmp());
 
 ENDDOCUMENT();

@@ -24,7 +24,7 @@ Let \(\epsilon $GTS 0\) be given.  Find a \(\delta $GTS 0\) such that
 $BITALIC Q: Why can we use \(\frac{\epsilon}{b-a}\) instead of \(\epsilon ?\) $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT Because \(a $LTS b\) then \(\frac{\epsilon}{b-a} $GTS 0 . \)
+%CORRECT Because \(a $LTS b\) and so \(\frac{\epsilon}{b-a} $GTS 0 . \)
 Because we can use any number as \(\epsilon . \)
 Because \(f\) is uniformly continuous.
 %END
@@ -68,6 +68,17 @@ That \(a $LTS b .\)
 Let \(x\) be a point where \(f\) attains the maximum and \(y\) be a point
 where \(f\) attains the minimum.  Then \(f(x) = M_i\)
 and \(f(y) = m_i\) in the notation from the definition of the integral.
+
+$BITALIC Q: What does \(m_i \) and \(M_i\) mean? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT \(m_i = \inf $LB f(x) : x \in [x_{i-1},x_i] $RB \) and \(M_i = \sup $LB f(x) : x \in [x_{i-1},x_i] $RB .\)
+\(m_i = \sup $LB f(x) : x \in [x_{i-1},x_i] $RB \) and \(M_i = \inf $LB f(x) : x \in [x_{i-1},x_i] $RB .\)
+\(m_i = \inf $LB f(x) : x \in [x_{i},x_{i+1}] $RB \) and \(M_i = \sup $LB f(x) : x \in [x_{i},x_{i+1}] $RB .\)
+\(m_i = \sup $LB f(x) : x \in [x_{i},x_{i+1}] $RB \) and \(M_i = \inf $LB f(x) : x \in [x_{i},x_{i+1}] $RB .\)
+\(m_i = \inf $LB f(x) : x \in [a,b] $RB \) and \(M_i = \sup $LB f(x) : x \in [a,b] $RB .\)
+%END
+
 Therefore,
 \[
 M_i-m_i = f(x)-f(y) $LTS 
@@ -116,7 +127,7 @@ QED.
 $BITALIC Q: What else have we essentially proved for the uniform partition? $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \sum_{i=1}^n \left(\inf\limits_{x \in [x_{i-1},x_i]} f(x)\right) \Delta x_i .\)
+%CORRECT That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf $LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \frac{i}{n}(b-a) + a $RB )\right) .\)
 That \(f\) is continuous
 That \(\int_a^b f = 0 . \)
 That the uniform partition can be used to integrate any Riemann integrable function.

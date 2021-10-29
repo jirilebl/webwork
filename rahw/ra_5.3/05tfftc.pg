@@ -62,7 +62,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(F \colon [a,b] \to {\mathbb{R}}\) is continuous and except
-at finitely many points, \(F\) is differentiable and \(F'(x)=f(x),\)
+at finitely many points, \(F\) is differentiable, and \(F'(x)=f(x),\)
 then \(\int_a^b f = F(b)-F(a) .\)
 $BR
 END_TEXT

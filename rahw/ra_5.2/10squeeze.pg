@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## A squeeze type lemma for integrals.
+## Prove that if a function can be approximated from above and below by integrable functions it is integrable
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -43,7 +43,7 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Prove a squeeze-type lemma for integrals:
+Prove that if a function can be approximated from above and below by integrable functions it is integrable:
 $PAR
 $BBOLD Lemma $EBOLD .
 $BITALIC
@@ -71,19 +71,22 @@ END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Estimate \(\int_a^b f_n = \underline{\int_a^b} f \)",
+"Estimate \(\int_a^b f_n = \underline{\int_a^b} f_n \)",
 "\(\qquad \leq \underline{\int_a^b} h \)",
 "\(\qquad \leq \underline{\int_a^b} g_n \)",
 "\(\qquad = \int_a^b g_n . \)",
-"By squeeze lemma for sequences, \(\lim\limits_{n\to\infty} \underline{\int_a^b} h = L .\)",
-"Similarly, \(\lim\limits_{n\to\infty} \overline{\int_a^b} h = L .\)",
+"Taking the limit the we find \(L \leq \underline{\int_a^b} h \leq L . \)",
+"So \(\underline{\int_a^b} h = L . \)",
+"Similarly, \(overline{\int_a^b} h = L .\)",
 "So \(h\) is integrable and \(\int_a^b h = L .\)",
 ],
 [
 "Let \(\epsilon $GTS 0\) be given.",
 "By squeeze lemma for sequences, \(\lim\limits_{n\to\infty} \int_a^b h = L .\)",
 "\(\qquad \leq \int_a^b h \)",
-"\(\qquad \leq \int_a^b g_n \)",
+"\(\qquad \leq \overline{\int_a^b} g_n \)",
+"\(\qquad $LTS \epsilon \)",
+"Let \(\int_a^b h := L .\)",
 "Consider a partition \(P = $LB x_0, \ldots, x_k $RB \) of \([a,b] .\)",
 ],
 

@@ -107,7 +107,7 @@ True or false:
 If
 \(f \colon [a,b] \to {\mathbb{R}}\)
 is such that \(f^2\) (the square of \(f\)) is integrable,
-then is \(f\) integrable?
+then \(f\) is integrable.
 $BR
 END_TEXT
 Context()->normalStrings;

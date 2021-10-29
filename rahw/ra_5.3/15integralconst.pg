@@ -45,7 +45,7 @@ BEGIN_TEXT
 $PAR
 Suppose \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is continuous.
 Prove that if \(\int_a^b f = b-a\) whenever \(a $LTS b,\) then
-\(f(x) = x .\)
+\(f(x) = 1 .\)
 $PAR
 END_TEXT
 Context()->normalStrings;
