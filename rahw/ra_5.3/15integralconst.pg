@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove that a constant derivative implies f is affine
+## Prove that if integral is always the length of an interval, then the function is 1
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -11,7 +11,7 @@
 ## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
 ## AuthorText1('Jiri Lebl')
 ## EditionText1('5')
-## Section1('4.2')
+## Section1('5.3')
 ## Problem1('')
 
 ######################################################
@@ -43,28 +43,26 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Suppose that \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is differentiable,
-\(A\) and \(B\) are constants,
-\(f'(x) = B \) for all \(x \in {\mathbb{R}},\)  
-and \(f(0) = A .\)
-Prove that \(f(x) = A + Bx\) for all \(x \in {\mathbb{R}} .\)
+Suppose \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is continuous.
+Prove that if \(\int_a^b f = b-a\) whenever \(a $LTS b,\) then
+\(f(x) = x .\)
 $PAR
 END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Suppose \( x \not= 0 . \)",
-"By the mean value theorem, there exists a \(c \) between \(x\) and \(0\) such that",
-"\(\frac{f(x)-f(0)}{x-0} = f'(c) = B . \)",
-"In other words, \(f(x) = f(0) + Bx ,\) or \(f(x) = A+Bx .\)",
-"Clearly, this also holds when \(x=0, \)",
-"so \(f(x) = A+Bx \) for all \(x \in {\mathbb{R}} . \)",
+"Let \(F(x) := \int_0^x f .\)",
+"The hypothesis says that \(F'(x) = \frac{d}{dx}(x-0) = 1\) for all \(x ,\) and",
+"the fundamental theorem of calculus (second form) says that \(F'(x) = f(x) \) for all \(x .\)",
+"So \(f(x) = 1\) for all \(x.\)",
 ],
 [
-"Fix some \(x\) and \(y\) such that \( x $LTS y . \)",
-"There exists a \(c \) such that \(B = f'(c) = \frac{f(y)-f(x)}{y-x} \)",
-"\(\frac{f(x)-f(y)}{x-y} = f'(c) = B . \)",
-"so \(f'(x) = A \) for all \(x \in {\mathbb{R}} . \)",
+"Let \(\epsilon $GTS 0\) be given.",
+"The hypothesis says that \(F'(x) = x\) for all \(x ,\) and",
+"the fundamental theorem of calculus (first form) says that \(F(x) -F(0) = \int_0^x f \) for all \(x .\)",
+"So \(f(x) = x\) for all \(x.\)",
+"Let \(F(b) := \int_a^b f .\)",
+"Let \(F'(x) := f(x) .\)",
 ],
 
 SourceLabel => "Choose from these statements",

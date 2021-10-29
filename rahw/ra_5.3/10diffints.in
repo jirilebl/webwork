@@ -1,0 +1,22 @@
+%DESC Differentiate some expressions with integrals (like problems 1 and 2)
+%HINC head.txt
+%FORMULAVARS x
+%SETUP $a = random(2,9,1);
+%SETUP $b = random(2,9,1);
+Compute
+
+\(
+\displaystyle
+\frac{d}{dx}
+\int_{-x}^{$a x} e^{s^2} \, ds
+= {}
+\)
+%FORMULA $a*e^(($a*x)^2)+e^(x^2)
+
+\(
+\displaystyle
+\frac{d}{dx}
+\int_{0}^{x^{$b}} e^{s^2} \, ds
+= {}
+\)
+%FORMULA ($b)*(x^($b-1))*e^(x^(2*$b))

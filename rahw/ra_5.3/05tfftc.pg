@@ -1,0 +1,178 @@
+##DESCRIPTION
+## True/false questions on the fundamental theorem of calculus
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('5.3')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+\(\frac{d}{dx} \int_a^x f = f(x)\) for every Riemann integrable function \(f .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+If \(F \colon [a,b] \to {\mathbb{R}}\) is continuous and except
+at finitely many points, \(F\) is differentiable and \(F'(x)=f(x),\)
+then \(\int_a^b f = F(b)-F(a) .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+Every Riemann integrable function 
+\(f \colon [a,b] \to {\mathbb{R}}\) is the derivative of
+some differentiable function
+\(F \colon [a,b] \to {\mathbb{R}} .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+Every continuous function 
+\(f \colon [a,b] \to {\mathbb{R}}\) is the derivative of
+some differentiable function
+\(F \colon [a,b] \to {\mathbb{R}} .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+Suppose \(f \colon [a,b] \to {\mathbb{R}}\) Riemann integrable.
+If \(f\) is continuous at \(c \in [a,b], \)
+then
+\(F(x) := \int_a^x f\) is differentiable at \(c .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+Suppose \(f \colon [a,b] \to {\mathbb{R}}\) Riemann integrable.
+If
+\(F(x) := \int_a^x f\) is differentiable at some \(c \in [a,b] , \)
+then
+\(f\) is continuous at \(c .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+
+ENDDOCUMENT();

@@ -1,0 +1,65 @@
+%DESC True/false questions on the fundamental theorem of calculus
+%HINC head.txt
+%NOPARTIAL
+True or false:
+\(\frac{d}{dx} \int_a^x f = f(x)\) for every Riemann integrable function \(f .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(F \colon [a,b] \to {\mathbb{R}}\) is continuous and except
+at finitely many points, \(F\) is differentiable and \(F'(x)=f(x),\)
+then \(\int_a^b f = F(b)-F(a) .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every Riemann integrable function 
+\(f \colon [a,b] \to {\mathbb{R}}\) is the derivative of
+some differentiable function
+\(F \colon [a,b] \to {\mathbb{R}} .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Every continuous function 
+\(f \colon [a,b] \to {\mathbb{R}}\) is the derivative of
+some differentiable function
+\(F \colon [a,b] \to {\mathbb{R}} .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Suppose \(f \colon [a,b] \to {\mathbb{R}}\) Riemann integrable.
+If \(f\) is continuous at \(c \in [a,b], \)
+then
+\(F(x) := \int_a^x f\) is differentiable at \(c .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Suppose \(f \colon [a,b] \to {\mathbb{R}}\) Riemann integrable.
+If
+\(F(x) := \int_a^x f\) is differentiable at some \(c \in [a,b] , \)
+then
+\(f\) is continuous at \(c .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END

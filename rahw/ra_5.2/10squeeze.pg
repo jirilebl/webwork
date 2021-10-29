@@ -1,0 +1,111 @@
+##DESCRIPTION
+## A squeeze type lemma for integrals.
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('5.2')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Prove a squeeze-type lemma for integrals:
+$PAR
+$BBOLD Lemma $EBOLD .
+$BITALIC
+Suppose that
+\( h \colon [a,b] \to {\mathbb{R}} \) is a function.
+Suppose that
+\( f_n \colon [a,b] \to {\mathbb{R}} \)
+and
+\( g_n \colon [a,b] \to {\mathbb{R}} \)
+are Riemann integrable functions for each \(n \in {\mathbb{N}}\) (sequences of functions) such that
+\[
+f_n(x) \leq h(x) \leq g_n(x)
+\qquad \text{for all } x \in [a,b] .
+\]
+and such that
+\[
+L:=
+\lim_{n\to\infty} \int_a^b f_n =
+\lim_{n\to\infty} \int_a^b g_n .
+\]
+Then \(h\) is Riemann integrable and \(\int_a^b h = L .\)
+$EITALIC
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Estimate \(\int_a^b f_n = \underline{\int_a^b} f \)",
+"\(\qquad \leq \underline{\int_a^b} h \)",
+"\(\qquad \leq \underline{\int_a^b} g_n \)",
+"\(\qquad = \int_a^b g_n . \)",
+"By squeeze lemma for sequences, \(\lim\limits_{n\to\infty} \underline{\int_a^b} h = L .\)",
+"Similarly, \(\lim\limits_{n\to\infty} \overline{\int_a^b} h = L .\)",
+"So \(h\) is integrable and \(\int_a^b h = L .\)",
+],
+[
+"Let \(\epsilon $GTS 0\) be given.",
+"By squeeze lemma for sequences, \(\lim\limits_{n\to\infty} \int_a^b h = L .\)",
+"\(\qquad \leq \int_a^b h \)",
+"\(\qquad \leq \int_a^b g_n \)",
+"Consider a partition \(P = $LB x_0, \ldots, x_k $RB \) of \([a,b] .\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+
+ENDDOCUMENT();

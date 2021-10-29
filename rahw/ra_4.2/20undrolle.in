@@ -1,4 +1,4 @@
-%DESC Prove that a constat derivative implies f is affine
+%DESC Understanding the proof of Rolle's theorem
 %HINC head.txt
 %NOPARTIAL
 Let us study Rolle's theorem and its proof (from the book [1]).  Answer the interspersed questions.

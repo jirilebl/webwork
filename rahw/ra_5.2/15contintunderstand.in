@@ -1,0 +1,126 @@
+%DESC Understanding the proof of integrability of continuous functions
+%HINC head.txt
+%NOPARTIAL
+Let us study the proof that continuous functions are Riemann integrable (from the book [1]).  Answer the interspersed questions.
+
+$BBOLD Lemma $EBOLD .
+$BITALIC If \(f \colon [a,b] \to {\mathbb{R}}\) is a continuous function,
+then \(f\) is Riemann integrable.
+\end{lemma}
+
+$BITALIC Q: Are we claiming that only continuous functions are integrable? $EITALIC
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+$BITALIC Proof: $EITALIC
+As \(f\) is continuous on a closed bounded interval, it is
+uniformly continuous.
+Let \(\epsilon $GTS 0\) be given.  Find a \(\delta $GTS 0\) such that
+\(\lvert x-y\rvert $LTS \delta\) implies \(\lvert f(x)-f(y) \rvert $LTS \frac{\epsilon}{b-a}.\)
+
+$BITALIC Q: Why can we use \(\frac{\epsilon}{b-a}\) instead of \(\epsilon ?\) $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Because \(a $LTS b\) then \(\frac{\epsilon}{b-a} $GTS 0 . \)
+Because we can use any number as \(\epsilon . \)
+Because \(f\) is uniformly continuous.
+%END
+
+Let \(P = $LB x_0, x_1, \ldots, x_n $RB \)
+be a partition of \([a,b]\) such that \(\Delta x_i $LTS \delta\) for all \(i = 1,2, \ldots, n.\)
+For example,
+take \(n\) such that \(\frac{b-a}{n} $LTS \delta,\) and
+let \(x_i := \frac{i}{n}(b-a) + a.\)
+
+$BITALIC Q: Would a partition defined by \(x_i := \frac{i^2}{n^2}(b-a) + a.\) also work? (Perhaps for a different \(n\)) $EITALIC
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+$BITALIC Q: Would a partition defined by random points, as long as there are sufficiently many of them also work? $EITALIC
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+Then for all \(x, y \in [x_{i-1},x_i],\) we have 
+\(\lvert x-y \rvert \leq \Delta x_i $LTS \delta,\) and so
+\[
+f(x)-f(y) \leq \lvert f(x)-f(y) \rvert $LTS \frac{\epsilon}{b-a} .
+\]
+As \(f\) is continuous on \([x_{i-1},x_i],\) it attains a maximum and a minimum
+on this interval.
+
+$BITALIC Q: Besides \(f\) being continuous on \([x_{i-1},x_i],\) what other hypothesis have we just used? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT That \([x_{i-1},x_i]\) is a closed and bounded interval.
+That \(f\) is uniformly continuous.
+That \(a $LTS b .\)
+%END
+
+Let \(x\) be a point where \(f\) attains the maximum and \(y\) be a point
+where \(f\) attains the minimum.  Then \(f(x) = M_i\)
+and \(f(y) = m_i\) in the notation from the definition of the integral.
+Therefore,
+\[
+M_i-m_i = f(x)-f(y) $LTS 
+\frac{\epsilon}{b-a} .
+\]
+And so
+\[
+\begin{split}
+\overline{\int_a^b} f - 
+\underline{\int_a^b} f 
+& \leq
+U(P,f) - L(P,f)
+\\
+& =
+\left(
+\sum_{i=1}^n
+M_i \Delta x_i
+\right)
+-
+\left(
+\sum_{i=1}^n
+m_i \Delta x_i
+\right)
+\\
+& =
+\sum_{i=1}^n
+(M_i-m_i) \Delta x_i
+\\
+& $LTS
+\frac{\epsilon}{b-a}
+\sum_{i=1}^n
+\Delta x_i
+\\
+& =
+\frac{\epsilon}{b-a} (b-a)
+= \epsilon .
+\end{split}
+\]
+As \(\epsilon $GTS 0\) was arbitrary,
+\[
+\overline{\int_a^b} f = \underline{\int_a^b} f ,
+\]
+and \(f\) is Riemann integrable on \([a,b].\)
+QED.
+
+$BITALIC Q: What else have we essentially proved for the uniform partition? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \sum_{i=1}^n \left(\inf\limits_{x \in [x_{i-1},x_i]} f(x)\right) \Delta x_i .\)
+That \(f\) is continuous
+That \(\int_a^b f = 0 . \)
+That the uniform partition can be used to integrate any Riemann integrable function.
+%END
+
+
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC

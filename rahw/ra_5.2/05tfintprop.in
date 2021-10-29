@@ -1,0 +1,74 @@
+%DESC True/false questions on integral properties
+%HINC head.txt
+%NOPARTIAL
+True or false:
+The upper and lower Darboux integrals are linear.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If
+\(f \colon [a,b] \to {\mathbb{R}}\)
+and
+\(g \colon [a,b] \to {\mathbb{R}}\)
+are Riemann integrable.  Then
+\(h \colon [a,b] \to {\mathbb{R}}\) defined by
+\(h(x) := 3f(x) -6g(x)\) is Riemann integrable.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If
+\(f \colon {\mathbb{R}} \to {\mathbb{R}}\)
+is integrable on \([-n,n]\) for every \(n \in {\mathbb{N}},\)
+then \(f\) is integrable on every bounded interval \([a,b]\).
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If
+\(f \colon [a,b] \to {\mathbb{R}}\)
+is such that \(f^2\) (the square of \(f\)) is integrable,
+then is \(f\) integrable?
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If
+\(f \colon [a,b] \to {\mathbb{R}}\)
+and
+\(g \colon [a,b] \to {\mathbb{R}}\)
+are Riemann integrable and
+\( \int_a^b f \leq \int_a^b g , \)
+then \(f(x) \leq g(x)\) for all \(x \in [a,b] .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If
+\(f \colon [a,b] \to {\mathbb{R}}\)
+and
+\(g \colon [a,b] \to {\mathbb{R}}\)
+are Riemann integrable and
+\( \int_a^b f \leq \int_a^b g , \)
+then \(f(x) \leq g(x)\) for some \(x \in [a,b] .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END

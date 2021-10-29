@@ -1,0 +1,19 @@
+%DESC Prove that if integral is always the length of an interval, then the function is 1
+%HINC head.txt
+Suppose \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is continuous.
+Prove that if \(\int_a^b f = b-a\) whenever \(a $LTS b,\) then
+\(f(x) = x .\)
+
+%PROOF
+Let \(F(x) := \int_0^x f .\)
+The hypothesis says that \(F'(x) = \frac{d}{dx}(x-0) = 1\) for all \(x ,\) and
+the fundamental theorem of calculus (second form) says that \(F'(x) = f(x) \) for all \(x .\)
+So \(f(x) = 1\) for all \(x.\)
+%EXTRA
+Let \(\epsilon $GTS 0\) be given.
+The hypothesis says that \(F'(x) = x\) for all \(x ,\) and
+the fundamental theorem of calculus (first form) says that \(F(x) -F(0) = \int_0^x f \) for all \(x .\)
+So \(f(x) = x\) for all \(x.\)
+Let \(F(b) := \int_a^b f .\)
+Let \(F'(x) := f(x) .\)
+%END
