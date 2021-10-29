@@ -254,13 +254,13 @@ Context()->normalStrings;
 
 $q8 = RadioButtons([
 [
-"That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf $LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \frac{i}{n}(b-a) + a $RB )\right) .\)",
+"That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf \left$LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \frac{i}{n}(b-a) + a \right$RB \right) .\)",
 "That \(f\) is continuous",
 "That \(\int_a^b f = 0 . \)",
 "That the uniform partition can be used to integrate any Riemann integrable function.",
 ],
 ],
-"That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf $LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \frac{i}{n}(b-a) + a $RB )\right) .\)",
+"That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf \left$LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \frac{i}{n}(b-a) + a \right$RB \right) .\)",
 );
 Context()->texStrings;
 BEGIN_TEXT
