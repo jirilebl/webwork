@@ -48,7 +48,7 @@ $PAR
 $BBOLD Lemma $EBOLD .
 $BITALIC If \(f \colon [a,b] \to {\mathbb{R}}\) is a continuous function,
 then \(f\) is Riemann integrable.
-\end{lemma}
+$EITALIC
 $PAR
 $BITALIC Q: Are we claiming that only continuous functions are integrable? $EITALIC
 $BR
@@ -226,12 +226,33 @@ As \(\epsilon $GTS 0\) was arbitrary,
 and \(f\) is Riemann integrable on \([a,b].\)
 QED.
 $PAR
-$BITALIC Q: What else have we essentially proved for the uniform partition? $EITALIC
+$BITALIC Q: Why is
+\(\overline{\int_a^b} f - \underline{\int_a^b} f \leq U(P,f) - L(P,f) ? \) $EITALIC
 $BR
 END_TEXT
 Context()->normalStrings;
 
 $q7 = RadioButtons([
+[
+"As \(\underline{\int_a^b} f\) is the supremum of \(L(Q,f)\) over all partitions \(Q,\) we have \(\underline{\int_a^b} f \geq L(P,f) ,\) similarly \(\overline{\int_a^b} f \leq U(P,f) .\)",
+"As \(\underline{\int_a^b} f\) is the infimum of \(L(Q,f)\) over all partitions \(Q,\) we have \(\underline{\int_a^b} f \leq L(P,f) ,\) similarly \(\overline{\int_a^b} f \geq U(P,f) .\)",
+"Because \(P\) is the uniform partition.",
+"Because \(f\) is continuous.",
+],
+],
+"As \(\underline{\int_a^b} f\) is the supremum of \(L(Q,f)\) over all partitions \(Q,\) we have \(\underline{\int_a^b} f \geq L(P,f) ,\) similarly \(\overline{\int_a^b} f \leq U(P,f) .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+$BITALIC Q: What else have we essentially proved for the uniform partition? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
 [
 "That if \(f\) is continuous, then \(\int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf $LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \frac{i}{n}(b-a) + a $RB )\right) .\)",
 "That \(f\) is continuous",
@@ -243,7 +264,7 @@ $q7 = RadioButtons([
 );
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q7->buttons \}
+\{ $q8->buttons \}
 
 $PAR
 $PAR
@@ -264,5 +285,6 @@ ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
+ANS($q8->cmp());
 
 ENDDOCUMENT();

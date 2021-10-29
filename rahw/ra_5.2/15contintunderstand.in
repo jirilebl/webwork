@@ -6,7 +6,7 @@ Let us study the proof that continuous functions are Riemann integrable (from th
 $BBOLD Lemma $EBOLD .
 $BITALIC If \(f \colon [a,b] \to {\mathbb{R}}\) is a continuous function,
 then \(f\) is Riemann integrable.
-\end{lemma}
+$EITALIC
 
 $BITALIC Q: Are we claiming that only continuous functions are integrable? $EITALIC
 $BR
@@ -123,6 +123,16 @@ As \(\epsilon $GTS 0\) was arbitrary,
 \]
 and \(f\) is Riemann integrable on \([a,b].\)
 QED.
+
+$BITALIC Q: Why is
+\(\overline{\int_a^b} f - \underline{\int_a^b} f \leq U(P,f) - L(P,f) ? \) $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT As \(\underline{\int_a^b} f\) is the supremum of \(L(Q,f)\) over all partitions \(Q,\) we have \(\underline{\int_a^b} f \geq L(P,f) ,\) similarly \(\overline{\int_a^b} f \leq U(P,f) .\)
+As \(\underline{\int_a^b} f\) is the infimum of \(L(Q,f)\) over all partitions \(Q,\) we have \(\underline{\int_a^b} f \leq L(P,f) ,\) similarly \(\overline{\int_a^b} f \geq U(P,f) .\)
+Because \(P\) is the uniform partition.
+Because \(f\) is continuous.
+%END
 
 $BITALIC Q: What else have we essentially proved for the uniform partition? $EITALIC
 $BR
