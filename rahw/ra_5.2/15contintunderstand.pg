@@ -97,7 +97,7 @@ For example,
 take \(n\) such that \(\frac{b-a}{n} $LTS \delta,\) and
 let \(x_i := \frac{i}{n}(b-a) + a.\)
 $PAR
-$BITALIC Q: Would a partition defined by \(x_i := \frac{i^2}{n^2}(b-a) + a.\) also work? (Perhaps for a different \(n\)) $EITALIC
+$BITALIC Q: Would a partition defined by \(x_i := \frac{i^2}{n^2}(b-a) + a\) also work? (Perhaps for a different \(n\)) $EITALIC
 $BR
 END_TEXT
 Context()->normalStrings;
