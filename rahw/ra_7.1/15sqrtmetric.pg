@@ -47,8 +47,7 @@ $PAR
 Suppose \((X,d)\) is a metric space.  Define \(d'(x,y) := \sqrt{d(x,y)} .\)
 Prove that \((X,d')\) is also a metric space.
 $PAR
-Besides the triangle inequality, which one of the following statements are the properties
-of metrics, which we need to check, but which are rather obvious:
+Besides the triangle inequality, we have to check some other properties.  Which of the following statements check those properties:
 $PAR
 END_TEXT
 Context()->normalStrings;
@@ -70,15 +69,13 @@ BEGIN_TEXT
 \{ $q1->print_a() \}
 
 $PAR
-Next, to prove the triangle inequality we prove a Lemma:
+Next, to prove the triangle inequality we prove a lemma:
 $PAR
 $BBOLD Lemma. $EBOLD
 $BITALIC
 For any \(s \geq 0\) and any \(t \geq 0,\) we have
+\(\sqrt{s^2+t^2} \leq s+t .\)
 $EITALIC
-\[
-\sqrt{s^2+t^2} \leq s+t .
-\]
 $PAR
 END_TEXT
 Context()->normalStrings;

@@ -89,7 +89,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-What is the "unit sphere" look like, that is the set
+What does the "unit sphere" look like, that is, the set
 of points at exactly distance 1 from the origin.
 $PAR
 END_TEXT

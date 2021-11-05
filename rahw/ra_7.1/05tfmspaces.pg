@@ -79,7 +79,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(X=$LB a,b $RB,\) for any \(r > 0,\) we can define a metric such that
+If \(X=$LB a,b $RB,\) for any \(r $GTS 0,\) we can define a metric such that
 \(d(a,b) := r .\)
 $BR
 END_TEXT
@@ -97,7 +97,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(X:=$LB a,b,c $RB,\) for any \(r > 0,\) \(s > 0,\) and \(t > 0,\) we can define a metric such that
+If \(X:=$LB a,b,c $RB,\) for any \(r $GTS 0,\) \(s $GTS 0,\) and \(t $GTS 0,\) we can define a metric such that
 \(d(a,b) := r ,\)
 \(d(a,c) := s ,\) and
 \(d(b,c) := t .\)
