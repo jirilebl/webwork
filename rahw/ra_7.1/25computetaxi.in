@@ -1,0 +1,34 @@
+%DESC Compute a few distances in the taxicab distance
+%HINC head.txt
+%SETUP $a = random(2,9,1);
+%SETUP $b = random(2,9,1);
+Consider \({\mathbb{R}}^2\) with the so called taxicab distance
+\(d\bigl((a,b),(x,y)\bigr) := \lvert a-x \rvert + \lvert b-y \rvert .\)
+It is not hard to see that this is a metric space.  It measures how far you
+have to go in the \(x\)-direction and then how far you have to go in the
+\(y\)-direction, so how far a taxicab would drive if it were going between
+two points in some place like Manhattan.
+
+What is the distance of \(($a,$b)\) from the origin?
+$BR
+%NUMBER $a+$b
+
+What is the distance of \(($a,-$b)\) from the origin?
+$BR
+%NUMBER $a+$b
+
+If \(R := [0,1] \times [0,1] ,\) what is the diameter?
+$BR
+\(\operatorname{diam}(R)={}\)
+%NUMBER 2
+
+What is the "unit sphere" look like, that is the set
+of points at exactly distance 1 from the origin.
+
+%RADIORANDOM
+%CORRECT The square with vertices \((1,0),\) \((0,1),\) \((-1,0),\) and \((0,-1).\)
+The (standard euclidean) circle centered at the origin of (euclidean) radius 1.
+The square with vertices \((-1,-1),\) \((-1,1),\) \((1,1),\) and \((1,-1).\)
+The square with vertices \((0,0),\) \((1,0),\) \((1,1),\) and \((0,1).\)
+The triangle with vertices \((0,0),\) \((1,0),\) and \((0,1).\)
+%END
