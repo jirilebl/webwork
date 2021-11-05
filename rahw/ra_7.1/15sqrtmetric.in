@@ -39,11 +39,11 @@ Now we prove the triangle inequality for \(d'\) using the lemma
 %PROOF
 Suppose \(x,y,z \in X .\)
 \(d'(x,z) = \sqrt{d(x,z)} \)
-\(\qquad \leq \sqrt{d(x,y)+d(y,z)} \quad \) (as the square root is increasing)
-\(\qquad \leq \sqrt{d(x,y)}+\sqrt{d(y,z)} \quad \) (using the lemma above)
-\(\qquad = d'(x,y)+d'(y,z) \)
+\(\quad \leq \sqrt{d(x,y)+d(y,z)} \)
+\(\quad \leq \sqrt{d(x,y)}+\sqrt{d(y,z)} \quad \) (lemma)
+\(\quad = d'(x,y)+d'(y,z) \)
 %EXTRA
 \(d'(x,z) = d(x,z) \)
-\(\qquad = \sqrt{d(x,y)+d(y,z)} \quad \) (as the square root is increasing)
-\(\qquad = \sqrt{d(x,y)}+\sqrt{d(y,z)} \quad \) (using the lemma above)
+\(\quad = \sqrt{d(x,y)+d(y,z)} \)
+\(\quad = \sqrt{d(x,y)}+\sqrt{d(y,z)} \quad \) (lemma)
 %END
