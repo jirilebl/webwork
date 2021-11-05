@@ -190,7 +190,8 @@ BEGIN_TEXT
 \{ $q8->buttons \}
 
 $PAR
-\( $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+$PAR
+\( (0,1] \cup (1,2) \)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -201,14 +202,14 @@ $q9 = RadioButtons([
 "open and closed (clopen)",
 "neither",
 ],
-"neither",
+"open",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q9->buttons \}
 
 $PAR
-\( $LB 0 \$RB \cup $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+\( $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -219,11 +220,29 @@ $q10 = RadioButtons([
 "open and closed (clopen)",
 "neither",
 ],
-"closed",
+"neither",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q10->buttons \}
+
+$PAR
+\( $LB 0 $RB \cup $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q11 = RadioButtons([
+"open",
+"closed",
+"open and closed (clopen)",
+"neither",
+],
+"closed",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q11->buttons \}
 
 
 END_TEXT
@@ -244,5 +263,6 @@ ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
 ANS($q10->cmp());
+ANS($q11->cmp());
 
 ENDDOCUMENT();

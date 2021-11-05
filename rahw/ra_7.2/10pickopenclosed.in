@@ -76,6 +76,16 @@ open and closed (clopen)
 neither
 %END
 
+
+\( (0,1] \cup (1,2) \)
+$BR
+%RADIO
+%CORRECT open
+closed
+open and closed (clopen)
+neither
+%END
+
 \( $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
 $BR
 %RADIO
@@ -85,7 +95,7 @@ open and closed (clopen)
 %CORRECT neither
 %END
 
-\( $LB 0 \$RB \cup $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+\( $LB 0 $RB \cup $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
 $BR
 %RADIO
 open

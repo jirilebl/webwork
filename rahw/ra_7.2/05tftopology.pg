@@ -43,12 +43,12 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-In the following \((X,d)\) is a metric space.  Also note that we follow the convention that when we say open or closed ball,
+In the following, \((X,d)\) is a metric space.  Note that we follow the convention that when we say open or closed ball,
 we mean that the radius is always positive.
 $PAR
 True or false:
 Suppose \(A \subset B \subset X.\)
-Then \(A\) is open in the subspace toplogy of \(B\) if and only if it is open in the toplogy of \(X.\)
+Then \(A\) is open in the subspace topology of \(B\) if and only if it is open in the topology of \(X.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -66,7 +66,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 Suppose \(A \subset B \subset X\) and \(B\) is open (in \(X\)).
-Then \(A\) is open in the subspace toplogy of \(B\) if and only if it is open in the toplogy of \(X.\)
+Then \(A\) is open in the subspace topology of \(B\) if and only if it is open in the topology of \(X.\)
 $BR
 END_TEXT
 Context()->normalStrings;

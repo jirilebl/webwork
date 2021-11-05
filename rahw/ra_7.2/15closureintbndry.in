@@ -6,7 +6,7 @@ Figure out the following.
 
 The closure of \( (0,1) \)
 $BR
-%RADIORADNOM
+%RADIO
 %CORRECT \([0,1]\)
 \((0,1)\)
 \((0,1]\)
@@ -17,7 +17,7 @@ $BR
 
 The boundary of \( (0,1) \)
 $BR
-%RADIORADNOM
+%RADIO
 \([0,1]\)
 \((0,1)\)
 \((0,1]\)
@@ -28,7 +28,7 @@ $BR
 
 The interior of \( (0,1) \)
 $BR
-%RADIORADNOM
+%RADIO
 \([0,1]\)
 %CORRECT \((0,1)\)
 \((0,1]\)
@@ -39,7 +39,7 @@ $BR
 
 The closure of \( (0,1] \)
 $BR
-%RADIORADNOM
+%RADIO
 %CORRECT \([0,1]\)
 \((0,1)\)
 \((0,1]\)
@@ -50,7 +50,7 @@ $BR
 
 The boundary of \( (0,1] \)
 $BR
-%RADIORADNOM
+%RADIO
 \([0,1]\)
 \((0,1)\)
 \((0,1]\)
@@ -61,7 +61,7 @@ $BR
 
 The interior of \( (0,1] \)
 $BR
-%RADIORADNOM
+%RADIO
 \([0,1]\)
 %CORRECT \((0,1)\)
 \((0,1]\)
@@ -72,7 +72,7 @@ $BR
 
 The closure of \( {\mathbb{Q}} \)
 $BR
-%RADIORADNOM
+%RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
 \($LB 0 $RB \)
@@ -82,7 +82,7 @@ $BR
 
 The boundary of \( {\mathbb{Q}} \)
 $BR
-%RADIORADNOM
+%RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
 \($LB 0 $RB \)
@@ -92,7 +92,7 @@ $BR
 
 The interior of \( {\mathbb{Q}} \)
 $BR
-%RADIORADNOM
+%RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
 \($LB 0 $RB \)
@@ -102,7 +102,7 @@ $BR
 
 The closure of \( {\mathbb{R}} \)
 $BR
-%RADIORADNOM
+%RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
 \($LB 0 $RB \)
@@ -112,7 +112,7 @@ $BR
 
 The boundary of \( {\mathbb{R}} \)
 $BR
-%RADIORADNOM
+%RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
 \($LB 0 $RB \)
@@ -122,7 +122,7 @@ $BR
 
 The interior of \( {\mathbb{R}} \)
 $BR
-%RADIORADNOM
+%RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
 \($LB 0 $RB \)
