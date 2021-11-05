@@ -48,7 +48,7 @@ Suppose \((X,d)\) is a metric space.  Define \(d'(x,y) := \sqrt{d(x,y)} .\)
 Prove that \((X,d')\) is also a metric space.
 $PAR
 Besides the triangle inequality, we have to check some other properties.  Which of the following statements check those properties:
-$PAR
+$BR
 END_TEXT
 Context()->normalStrings;
 
