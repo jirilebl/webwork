@@ -1,0 +1,73 @@
+%DESC True/false or multiple choice questions on topology of metric spaces
+%HINC head.txt
+%NOPARTIAL
+In the following \((X,d)\) is a metric space.  Also note that we follow the convention that when we say open or closed ball,
+we mean that the radius is always positive.
+
+True or false:
+Suppose \(A \subset B \subset X.\)
+Then \(A\) is open in the subspace toplogy of \(B\) if and only if it is open in the toplogy of \(X.\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Suppose \(A \subset B \subset X\) and \(B\) is open (in \(X\)).
+Then \(A\) is open in the subspace toplogy of \(B\) if and only if it is open in the toplogy of \(X.\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every open set \(U \subset X\) is a union of open balls.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every open set \(U \subset X\) is a union of closed balls.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every closed set \(C \subset X\) is a union of closed balls.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+In \({\mathbb{R}}\) with the standard topology, which statement describes 
+all (nonempty) connected subsets:
+$BR
+%RADIORANDOM
+%CORRECT intervals and single point sets
+open intervals
+open sets
+closed intervals and single point sets
+subsets with more than one point
+intervals
+single point sets
+%END
+
+In \({\mathbb{R}}\) with the discrete topology, which statement describes 
+all (nonempty) connected subsets:
+$BR
+%RADIORANDOM
+intervals and single point sets
+open intervals
+open sets
+closed intervals and single point sets
+subsets with more than one point
+intervals
+%CORRECT single point sets
+%END

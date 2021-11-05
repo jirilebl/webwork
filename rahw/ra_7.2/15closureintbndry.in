@@ -1,0 +1,131 @@
+%DESC Compute closure / interior / boundary in R
+%HINC head.txt
+%NOPARTIAL
+In the following questions, suppose the metric space is \(\mathbb{R}\) with the standard metric.
+Figure out the following.
+
+The closure of \( (0,1) \)
+$BR
+%RADIORADNOM
+%CORRECT \([0,1]\)
+\((0,1)\)
+\((0,1]\)
+\($LB 0,1 $RB \)
+\(\emptyset \)
+\(\mathbb{R} \)
+%END
+
+The boundary of \( (0,1) \)
+$BR
+%RADIORADNOM
+\([0,1]\)
+\((0,1)\)
+\((0,1]\)
+%CORRECT \($LB 0,1 $RB \)
+\(\emptyset \)
+\(\mathbb{R} \)
+%END
+
+The interior of \( (0,1) \)
+$BR
+%RADIORADNOM
+\([0,1]\)
+%CORRECT \((0,1)\)
+\((0,1]\)
+\($LB 0,1 $RB \)
+\(\emptyset \)
+\(\mathbb{R} \)
+%END
+
+The closure of \( (0,1] \)
+$BR
+%RADIORADNOM
+%CORRECT \([0,1]\)
+\((0,1)\)
+\((0,1]\)
+\($LB 0,1 $RB \)
+\(\emptyset \)
+\(\mathbb{R} \)
+%END
+
+The boundary of \( (0,1] \)
+$BR
+%RADIORADNOM
+\([0,1]\)
+\((0,1)\)
+\((0,1]\)
+%CORRECT \($LB 0,1 $RB \)
+\(\emptyset \)
+\(\mathbb{R} \)
+%END
+
+The interior of \( (0,1] \)
+$BR
+%RADIORADNOM
+\([0,1]\)
+%CORRECT \((0,1)\)
+\((0,1]\)
+\($LB 0,1 $RB \)
+\(\emptyset \)
+\(\mathbb{R} \)
+%END
+
+The closure of \( {\mathbb{Q}} \)
+$BR
+%RADIORADNOM
+\({\mathbb{Q}}\)
+\({\mathbb{R}} \setminus {\mathbb{Q}}\)
+\($LB 0 $RB \)
+\(\emptyset \)
+%CORRECT \(\mathbb{R} \)
+%END
+
+The boundary of \( {\mathbb{Q}} \)
+$BR
+%RADIORADNOM
+\({\mathbb{Q}}\)
+\({\mathbb{R}} \setminus {\mathbb{Q}}\)
+\($LB 0 $RB \)
+\(\emptyset \)
+%CORRECT \(\mathbb{R} \)
+%END
+
+The interior of \( {\mathbb{Q}} \)
+$BR
+%RADIORADNOM
+\({\mathbb{Q}}\)
+\({\mathbb{R}} \setminus {\mathbb{Q}}\)
+\($LB 0 $RB \)
+%CORRECT \(\emptyset \)
+\(\mathbb{R} \)
+%END
+
+The closure of \( {\mathbb{R}} \)
+$BR
+%RADIORADNOM
+\({\mathbb{Q}}\)
+\({\mathbb{R}} \setminus {\mathbb{Q}}\)
+\($LB 0 $RB \)
+\(\emptyset \)
+%CORRECT \(\mathbb{R} \)
+%END
+
+The boundary of \( {\mathbb{R}} \)
+$BR
+%RADIORADNOM
+\({\mathbb{Q}}\)
+\({\mathbb{R}} \setminus {\mathbb{Q}}\)
+\($LB 0 $RB \)
+%CORRECT \(\emptyset \)
+\(\mathbb{R} \)
+%END
+
+The interior of \( {\mathbb{R}} \)
+$BR
+%RADIORADNOM
+\({\mathbb{Q}}\)
+\({\mathbb{R}} \setminus {\mathbb{Q}}\)
+\($LB 0 $RB \)
+\(\emptyset \)
+%CORRECT \(\mathbb{R} \)
+%END

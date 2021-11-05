@@ -1,0 +1,95 @@
+%DESC Check openness / closedness of sets in R
+%HINC head.txt
+%NOPARTIAL
+In the following questions, suppose the metric space is \(\mathbb{R}\) with the standard metric.
+For each set check if it is open, closed, both, or neither.
+
+\( (0,1) \)
+$BR
+%RADIO
+%CORRECT open
+closed
+open and closed (clopen)
+neither
+%END
+
+\( {\mathbb{R}} \)
+$BR
+%RADIO
+open
+closed
+%CORRECT open and closed (clopen)
+neither
+%END
+
+\( [0,1) \)
+$BR
+%RADIO
+open
+closed
+open and closed (clopen)
+%CORRECT neither
+%END
+
+\( [0,\infty) \)
+$BR
+%RADIO
+open
+%CORRECT closed
+open and closed (clopen)
+neither
+%END
+
+\( (0,\infty) \)
+$BR
+%RADIO
+%CORRECT open
+closed
+open and closed (clopen)
+neither
+%END
+
+\( {\mathbb{Q}} \)
+$BR
+%RADIO
+open
+closed
+open and closed (clopen)
+%CORRECT neither
+%END
+
+\( {\mathbb{Z}} \)
+$BR
+%RADIO
+open
+%CORRECT closed
+open and closed (clopen)
+neither
+%END
+
+\( (0,1) \cup (1,2) \)
+$BR
+%RADIO
+%CORRECT open
+closed
+open and closed (clopen)
+neither
+%END
+
+\( $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+$BR
+%RADIO
+open
+closed
+open and closed (clopen)
+%CORRECT neither
+%END
+
+\( $LB 0 \$RB \cup $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+$BR
+%RADIO
+open
+%CORRECT closed
+open and closed (clopen)
+neither
+%END

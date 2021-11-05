@@ -1,0 +1,200 @@
+##DESCRIPTION
+## True/false or multiple choice questions on topology of metric spaces
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('7.2')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+In the following \((X,d)\) is a metric space.  Also note that we follow the convention that when we say open or closed ball,
+we mean that the radius is always positive.
+$PAR
+True or false:
+Suppose \(A \subset B \subset X.\)
+Then \(A\) is open in the subspace toplogy of \(B\) if and only if it is open in the toplogy of \(X.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+Suppose \(A \subset B \subset X\) and \(B\) is open (in \(X\)).
+Then \(A\) is open in the subspace toplogy of \(B\) if and only if it is open in the toplogy of \(X.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+Every open set \(U \subset X\) is a union of open balls.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+Every open set \(U \subset X\) is a union of closed balls.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+Every closed set \(C \subset X\) is a union of closed balls.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+In \({\mathbb{R}}\) with the standard topology, which statement describes 
+all (nonempty) connected subsets:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+[
+"intervals and single point sets",
+"open intervals",
+"open sets",
+"closed intervals and single point sets",
+"subsets with more than one point",
+"intervals",
+"single point sets",
+],
+],
+"intervals and single point sets",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+In \({\mathbb{R}}\) with the discrete topology, which statement describes 
+all (nonempty) connected subsets:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+[
+"intervals and single point sets",
+"open intervals",
+"open sets",
+"closed intervals and single point sets",
+"subsets with more than one point",
+"intervals",
+"single point sets",
+],
+],
+"single point sets",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+
+ENDDOCUMENT();
