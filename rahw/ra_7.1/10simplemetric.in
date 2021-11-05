@@ -1,0 +1,32 @@
+%DESC Finish definition of a metric
+%HINC head.txt
+%SETUP $a = random(2,5,1);
+%SETUP $b = $a+random(2,4,1);
+Suppose \(X := $LB a,b,c $RB .\)
+Finish the definition of a metric \(d\) so that the remaining distances are as
+small as possible.
+
+\(d(a,a) := {}\)
+%NUMBER 0
+
+\(d(a,b) := $a\)
+
+\(d(a,c) := $b\)
+
+\(d(b,a) := {}\)
+%NUMBER $a
+
+\(d(b,b) := {}\)
+%NUMBER 0
+
+\(d(b,c) := {}\)
+%NUMBER $b-$a
+
+\(d(c,a) := {}\)
+%NUMBER $b
+
+\(d(c,b) := {}\)
+%NUMBER $b-$a
+
+\(d(c,c) := {}\)
+%NUMBER 0

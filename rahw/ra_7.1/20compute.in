@@ -1,0 +1,24 @@
+%DESC Compute a few distances in the plane.
+%HINC head.txt
+%SETUP $a = random(2,5,1);
+%SETUP $b = $a+random(1,4,1);
+%SETUP $c = $a+random(5,9,1);
+In the metric space \({\mathbb{R}}^2\) with the standard euclidean metric,
+let \(R := [0,$a] \times [0,$b] .\)
+
+Compute the diameter of \(R\):
+$BR
+\(\operatorname{diam}(R) = {}\)
+%NUMBER sqrt($a^2+$b^2)
+
+If \(p := ($c,0),\) then compute
+$BR
+\(\inf \, $LB d(p,q) : q \in R $RB = {} \)
+%NUMBER $c-$a
+
+Compute the smallest real \(M\)
+such that \(d\bigl((1,1),q\bigr) \leq M\)
+for all \(q \in R .\)
+$BR
+\(M={}\)
+%NUMBER sqrt(($a-1)^2+($b-1)^2)

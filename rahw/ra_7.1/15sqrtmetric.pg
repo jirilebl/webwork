@@ -1,0 +1,152 @@
+##DESCRIPTION
+## Prove that square root of a metric is a metric
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('7.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGchoicemacros.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \((X,d)\) is a metric space.  Define \(d'(x,y) := \sqrt{d(x,y)} .\)
+Prove that \((X,d')\) is also a metric space.
+$PAR
+Besides the triangle inequality, which one of the following statements are the properties
+of metrics, which we need to check, but which are rather obvious:
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = new_checkbox_multiple_choice();
+$q1->qa("Check all that apply",
+"For any \(x,y\), since \(d(x,y) \geq 0,\) we have \(d'(x,y) = \sqrt{d(x,y)} \geq 0 . \)",
+"\(0 = d'(x,y) = \sqrt{d(x,y)} \) if and only if \(d(x,y) = 0\) if and only if \(x=y.\)",
+"For any \(x,y ,\) we have \(d'(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d'(y,x) . \)",
+);
+$q1->extra(
+"For any \(x,y\), \(d'(x,y) = \sqrt{d(x,y)} $GTS 0\)",
+"For any \(x,y\), \(d'(x,y) = d(x,y) \) for all \(x,y\)",
+"None of the above",
+);
+$q1->makeLast("None of the above");
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->print_a() \}
+
+$PAR
+Next, to prove the triangle inequality we prove a Lemma:
+$PAR
+$BBOLD Lemma. $EBOLD
+$BITALIC
+For any \(s \geq 0\) and any \(t \geq 0,\) we have
+$EITALIC
+\[
+\sqrt{s^2+t^2} \leq s+t .
+\]
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"Estimate, \(s^2+t^2 \leq s^2+t^2 + 2st\)",
+"\( \qquad = (s+t)^2 . \)",
+"Taking square root, \(\sqrt{s^2+t^2} \leq s+t .\)",
+],
+[
+"Estimate, \(s^2+t^2 \leq s^2+t^2 - 2st\)",
+"\( \qquad = (s^2+t^2)^2 . \)",
+"\( \qquad \leq s^2+t^2 . \)",
+"\( \qquad = \sqrt{s+t} . \)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+$PAR
+Now we prove the triangle inequality for \(d'\) using the lemma
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = DraggableProof([
+"Suppose \(x,y,z \in X .\)",
+"\(d'(x,z) = \sqrt{d(x,z)} \)",
+"\(\qquad \leq \sqrt{d(x,y)+d(y,z)} \quad \) (as the square root is increasing)",
+"\(\qquad \leq \sqrt{d(x,y)}+\sqrt{d(y,z)} \quad \) (using the lemma above)",
+"\(\qquad = d'(x,y)+d'(y,z) \)",
+],
+[
+"\(d'(x,z) = d(x,z) \)",
+"\(\qquad = \sqrt{d(x,y)+d(y,z)} \quad \) (as the square root is increasing)",
+"\(\qquad = \sqrt{d(x,y)}+\sqrt{d(y,z)} \quad \) (using the lemma above)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q3->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS(checkbox_cmp($q1->correct_ans()));
+ANS($q2->cmp());
+ANS($q3->cmp());
+
+ENDDOCUMENT();

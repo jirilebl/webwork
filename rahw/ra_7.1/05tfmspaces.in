@@ -1,0 +1,80 @@
+%DESC True/false questions on metric spaces
+%HINC head.txt
+%NOPARTIAL
+%SETUP $a = random(2,9,1);
+True or false:
+Every set can be made into a metric space by defining a metric.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+In a metric space \((X,d),\) if \(d(x,y) = 0 ,\) then \(x=y .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(X=$LB a,b $RB,\) for any \(r > 0,\) we can define a metric such that
+\(d(a,b) := r .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(X:=$LB a,b,c $RB,\) for any \(r > 0,\) \(s > 0,\) and \(t > 0,\) we can define a metric such that
+\(d(a,b) := r ,\)
+\(d(a,c) := s ,\) and
+\(d(b,c) := t .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+In a metric space, the distance between any two points is finite.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \((X,d)\) is a metric space and \(d'(x,y) := $a d(x,y), \) then \((X,d')\) is also a metric space.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \((X,d)\) is a metric space and \(d'(x,y) := {\bigl(d(x,y)\bigr)}^2, \) then \((X,d')\) is also a metric space.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+For any set \(X,\) we can define a metric \(d\) that makes \(X\) into a bounded set.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \((X,d)\) is a metric space and \(S \subset X\) is a finite set, then \(S\) is a bounded
+subset.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
