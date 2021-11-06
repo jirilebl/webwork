@@ -142,7 +142,7 @@ BEGIN_TEXT
 \{ $q5->buttons \}
 
 $PAR
-If \( A= (-\pi,\pi) \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
+If \( A= (-1,1] \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
 then \(A\) is
 $BR
 END_TEXT
@@ -154,14 +154,14 @@ $q6 = RadioButtons([
 "open and closed (clopen) in \(B\)",
 "neither",
 ],
-"open and closed (clopen) in \(B\)",
+"neither",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q6->buttons \}
 
 $PAR
-If \( A= (-\pi,\pi] \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
+If \( A= (-\pi,\pi) \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
 then \(A\) is
 $BR
 END_TEXT
@@ -173,7 +173,7 @@ $q7 = RadioButtons([
 "open and closed (clopen) in \(B\)",
 "neither",
 ],
-"neither",
+"open and closed (clopen) in \(B\)",
 );
 Context()->texStrings;
 BEGIN_TEXT

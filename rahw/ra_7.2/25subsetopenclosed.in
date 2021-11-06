@@ -55,6 +55,16 @@ open and closed (clopen) in \(B\)
 neither
 %END
 
+If \( A= (-1,1] \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
+then \(A\) is
+$BR
+%RADIO
+open in \(B\)
+closed in \(B\)
+open and closed (clopen) in \(B\)
+%CORRECT neither
+%END
+
 If \( A= (-\pi,\pi) \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
 then \(A\) is
 $BR
@@ -63,14 +73,4 @@ open in \(B\)
 closed in \(B\)
 %CORRECT open and closed (clopen) in \(B\)
 neither
-%END
-
-If \( A= (-\pi,\pi] \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
-then \(A\) is
-$BR
-%RADIO
-open in \(B\)
-closed in \(B\)
-open and closed (clopen) in \(B\)
-%CORRECT neither
 %END
