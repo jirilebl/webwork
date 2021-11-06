@@ -1,0 +1,17 @@
+%DESC Prove that isolated points are closed
+%HINC head.txt
+Prove that in a metric space \((X,d),\) one point sets are closed.
+
+%PROOF
+Let \(p\in X\) be a point.
+Let \(q \in X\) be such that \(p\neq q .\)
+Let \(r := d(p,q).\)
+As \(d(p,q) = r,\) we have \(p \notin B(q,r).\)
+Thus \(B(q,r) \subset X \setminus $LB p $RB \) and so
+\(X \setminus $LB p $RB\) is open, and \($LB p $RB\) is closed.
+%EXTRA
+Then \(q=p.\)
+As \(d(p,q) = r,\) we have \(p \in C(q,r).\)
+Thus \(X \setminus $LB p $RB\) is closed.
+Thus \($LB p $RB\) is open.
+%END

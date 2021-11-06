@@ -5,3 +5,5 @@ problemList =
 rahw/ra_7.2/05tftopology.pg,	1
 rahw/ra_7.2/10pickopenclosed.pg,	1
 rahw/ra_7.2/15closureintbndry.pg,	1
+rahw/ra_7.2/20pointsclosed.pg,	1
+rahw/ra_7.2/25subsetopenclosed.pg,	1

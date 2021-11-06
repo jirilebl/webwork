@@ -1,0 +1,87 @@
+##DESCRIPTION
+## Prove that isolated points are closed
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('7.2')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Prove that in a metric space \((X,d),\) one point sets are closed.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Let \(p\in X\) be a point.",
+"Let \(q \in X\) be such that \(p\neq q .\)",
+"Let \(r := d(p,q).\)",
+"As \(d(p,q) = r,\) we have \(p \notin B(q,r).\)",
+"Thus \(B(q,r) \subset X \setminus $LB p $RB \) and so",
+"\(X \setminus $LB p $RB\) is open, and \($LB p $RB\) is closed.",
+],
+[
+"Then \(q=p.\)",
+"As \(d(p,q) = r,\) we have \(p \in C(q,r).\)",
+"Thus \(X \setminus $LB p $RB\) is closed.",
+"Thus \($LB p $RB\) is open.",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+
+ENDDOCUMENT();

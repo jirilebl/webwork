@@ -1,0 +1,76 @@
+%DESC Check openness / closedness of sets in R in subset topology.
+%HINC head.txt
+%NOPARTIAL
+In the following questions, suppose the metric space is \(\mathbb{R}\) with the standard metric.
+
+For each set check if it is open, closed, both, or neither in $BBOLD subspace topology $EBOLD with the sets given.
+
+If \( A= (0,1) \) and \(B = (0,\infty), \)
+then \(A\) is
+$BR
+%RADIO
+%CORRECT open in \(B\)
+closed in \(B\)
+open and closed (clopen) in \(B\)
+neither
+%END
+
+If \( A= [0,1) \) and \(B = [0,\infty) , \)
+then \(A\) is
+$BR
+%RADIO
+%CORRECT open in \(B\)
+closed in \(B\)
+open and closed (clopen) in \(B\)
+neither
+%END
+
+If \( A= (0,1] \) and \(B = (0,\infty) , \)
+then \(A\) is
+$BR
+%RADIO
+open in \(B\)
+%CORRECT closed in \(B\)
+open and closed (clopen) in \(B\)
+neither
+%END
+
+If \( A= $LB 2 $RB \) and \(B = {\mathbb{Z}} , \)
+then \(A\) is
+$BR
+%RADIO
+open in \(B\)
+closed in \(B\)
+%CORRECT open and closed (clopen) in \(B\)
+neither
+%END
+
+If \( A= (-1,1) \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
+then \(A\) is
+$BR
+%RADIO
+%CORRECT open in \(B\)
+closed in \(B\)
+open and closed (clopen) in \(B\)
+neither
+%END
+
+If \( A= (-\pi,\pi) \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
+then \(A\) is
+$BR
+%RADIO
+open in \(B\)
+closed in \(B\)
+%CORRECT open and closed (clopen) in \(B\)
+neither
+%END
+
+If \( A= (-\pi,\pi] \cap {\mathbb{Q}} \) and \(B = {\mathbb{Q}} , \)
+then \(A\) is
+$BR
+%RADIO
+open in \(B\)
+closed in \(B\)
+open and closed (clopen) in \(B\)
+%CORRECT neither
+%END
