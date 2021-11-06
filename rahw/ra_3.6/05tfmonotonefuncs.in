@@ -2,7 +2,7 @@
 %HINC head.txt
 %NOPARTIAL
 True or false:
-A strictly monotone function \(f \colon [0,1] \to {\mathbb{R}}\) is always continuous.
+A monotone function \(f \colon [0,1] \to {\mathbb{R}}\) is always continuous.
 $BR
 %RADIO
 True
@@ -10,11 +10,27 @@ True
 %END
 
 True or false:
-A strictly monotone surjective (onto) function \(f \colon [0,1] \to [0,1]\) is always continuous.
+A monotone surjective (onto) function \(f \colon [0,1] \to [0,1]\) is always continuous.
 $BR
 %RADIO
 %CORRECT True
 False
+%END
+
+True or false:
+A monotone function \(f \colon [0,1] \to {\mathbb{R}}\) is always bounded.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+A monotone function \(f \colon (0,1) \to {\mathbb{R}}\) is always bounded.
+$BR
+%RADIO
+True
+%CORRECT False
 %END
 
 True or false:

@@ -44,7 +44,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 True or false:
-The set \(\mathbb{Z}\) has a cluster point at \(\infty\)
+The set \(\mathbb{Z}\) has a cluster point at \(\infty .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -80,7 +80,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If a set \(S \subset {\mathbb{R}}\) is unbounded, then it has a cluster point at
-\(\infty \) or \(-\infty .\)
+\(\infty ,\) or at \(-\infty ,\) or both.
 $BR
 END_TEXT
 Context()->normalStrings;

@@ -44,7 +44,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 True or false:
-A strictly monotone function \(f \colon [0,1] \to {\mathbb{R}}\) is always continuous.
+A monotone function \(f \colon [0,1] \to {\mathbb{R}}\) is always continuous.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -61,7 +61,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-A strictly monotone surjective (onto) function \(f \colon [0,1] \to [0,1]\) is always continuous.
+A monotone surjective (onto) function \(f \colon [0,1] \to [0,1]\) is always continuous.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -78,7 +78,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-It is possible for a monotone function \(f \colon [0,1] \to {\mathbb{R}}\) to have countably infinite many discontinuities.
+A monotone function \(f \colon [0,1] \to {\mathbb{R}}\) is always bounded.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -95,7 +95,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-It is possible for a monotone function \(f \colon [0,1] \to {\mathbb{R}}\) to be discontinuous at every irrational number.
+A monotone function \(f \colon (0,1) \to {\mathbb{R}}\) is always bounded.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -112,8 +112,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(f \colon [0,1] \to {\mathbb{R}}\) is monotone, \(f(0)=0,\) \(f(1)=1,\) but there is no \(x \in (0,1)\)
-such that \(f(x) = \frac{1}{2},\) then \(f\) is discontinuous.
+It is possible for a monotone function \(f \colon [0,1] \to {\mathbb{R}}\) to have countably infinite many discontinuities.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -130,8 +129,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(f \colon [0,1) \to {\mathbb{R}}\) is monotone and bounded,
-then \(\lim\limits_{x\to 1} f(x) \) exists
+It is possible for a monotone function \(f \colon [0,1] \to {\mathbb{R}}\) to be discontinuous at every irrational number.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -140,7 +138,7 @@ $q6 = RadioButtons([
 "True",
 "False",
 ],
-"True",
+"False",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -148,8 +146,8 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(f \colon [0,2] \to {\mathbb{R}}\) is monotone,
-then \(\lim\limits_{x\to 1} f(x) \) exists
+If \(f \colon [0,1] \to {\mathbb{R}}\) is monotone, \(f(0)=0,\) \(f(1)=1,\) but there is no \(x \in (0,1)\)
+such that \(f(x) = \frac{1}{2},\) then \(f\) is discontinuous.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -158,7 +156,7 @@ $q7 = RadioButtons([
 "True",
 "False",
 ],
-"False",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -166,8 +164,8 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(f \colon [0,2] \to {\mathbb{R}}\) is monotone,
-then \(\lim\limits_{x\to 1^-} f(x) \) exists
+If \(f \colon [0,1) \to {\mathbb{R}}\) is monotone and bounded,
+then \(\lim\limits_{x\to 1} f(x) \) exists
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -181,6 +179,42 @@ $q8 = RadioButtons([
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q8->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [0,2] \to {\mathbb{R}}\) is monotone,
+then \(\lim\limits_{x\to 1} f(x) \) exists
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [0,2] \to {\mathbb{R}}\) is monotone,
+then \(\lim\limits_{x\to 1^-} f(x) \) exists
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q10 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q10->buttons \}
 
 
 END_TEXT
@@ -199,5 +233,7 @@ ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
+ANS($q9->cmp());
+ANS($q10->cmp());
 
 ENDDOCUMENT();

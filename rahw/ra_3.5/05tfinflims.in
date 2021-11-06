@@ -2,7 +2,7 @@
 %HINC head.txt
 %NOPARTIAL
 True or false:
-The set \(\mathbb{Z}\) has a cluster point at \(\infty\)
+The set \(\mathbb{Z}\) has a cluster point at \(\infty .\)
 $BR
 %RADIO
 %CORRECT True
@@ -20,7 +20,7 @@ True
 
 True or false:
 If a set \(S \subset {\mathbb{R}}\) is unbounded, then it has a cluster point at
-\(\infty \) or \(-\infty .\)
+\(\infty ,\) or at \(-\infty ,\) or both.
 $BR
 %RADIO
 %CORRECT True
