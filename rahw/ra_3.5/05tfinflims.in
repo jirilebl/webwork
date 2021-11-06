@@ -1,0 +1,65 @@
+%DESC True/false questions on limits at infinity
+%HINC head.txt
+%NOPARTIAL
+True or false:
+The set \(\mathbb{Z}\) has a cluster point at \(\infty\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If a set \(S \subset {\mathbb{R}}\) is unbounded, then it has a cluster point at
+both \(\infty\) and \(-\infty .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If a set \(S \subset {\mathbb{R}}\) is unbounded, then it has a cluster point at
+\(\infty \) or \(-\infty .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+A bounded function \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) always
+has a finite limit as \(x \to \infty .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is continuous and
+has a finite limit both as \(x \to \infty \) and as \(x \to -\infty ,\)
+then \(f\) is bounded.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(P\) is a nonconstant polynomial, then
+the \(\lim\limits_{x \to \infty} P(x) = \infty\) or \(-\infty .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f \colon [0,\infty) \to {\mathbb{R}}\) is continuous and unbounded,
+then \(\lim\limits_{x \to \infty} f(x) = \infty\) or \(-\infty .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END

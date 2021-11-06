@@ -1,0 +1,70 @@
+%DESC True/false questions on monotone functions
+%HINC head.txt
+%NOPARTIAL
+True or false:
+A strictly monotone function \(f \colon [0,1] \to {\mathbb{R}}\) is always continuous.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+A strictly monotone surjective (onto) function \(f \colon [0,1] \to [0,1]\) is always continuous.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+It is possible for a monotone function \(f \colon [0,1] \to {\mathbb{R}}\) to have countably infinite many discontinuities.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+It is possible for a monotone function \(f \colon [0,1] \to {\mathbb{R}}\) to be discontinuous at every irrational number.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon [0,1] \to {\mathbb{R}}\) is monotone, \(f(0)=0,\) \(f(1)=1,\) but there is no \(x \in (0,1)\)
+such that \(f(x) = \frac{1}{2},\) then \(f\) is discontinuous.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f \colon [0,1) \to {\mathbb{R}}\) is monotone and bounded,
+then \(\lim\limits_{x\to 1} f(x) \) exists
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f \colon [0,2] \to {\mathbb{R}}\) is monotone,
+then \(\lim\limits_{x\to 1} f(x) \) exists
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon [0,2] \to {\mathbb{R}}\) is monotone,
+then \(\lim\limits_{x\to 1^-} f(x) \) exists
+$BR
+%RADIO
+%CORRECT True
+False
+%END
