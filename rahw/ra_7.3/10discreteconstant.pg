@@ -1,0 +1,122 @@
+##DESCRIPTION
+## Prove that in a discrete metric a sequence is convergent if and only if it is eventually constant.
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('7.3')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Prove that in a metric space \((X,d)\) where \(d\) is the discrete metric, a sequence is convergent if and only if
+some \(K\)-tail is constant.
+$PAR
+First prove that a convergent sequence is eventually constant:
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Suppose \($LB x_n $RB\) is a convergent sequence in \((X,d),\) converging to \(x \in X.\)",
+"There exists an \(N\) such that for all \(n \geq N,\) we have \(d(x_n,x) < 1 .\)",
+"As \(d\) is the discrete metric, \(d(x_n,x) < 1\) implies \(d(x_n,x) = 0,\)",
+"and so \(x_n = x\) for all \(n \geq N.\)",
+],
+[
+"and so \(x_n = 0\) for all \(n \geq N.\)",
+"and so \(x_n = x\) for all \(n \in {\mathbb{N}}.\)",
+"There exists an \(N\) such that for all \(n \leq N,\) we have \(d(x_n,x) < 1 .\)",
+"Suppose \($LB x_n $RB\) is a divergent sequence in \((X,d).\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+$PAR
+Now prove that every eventually convergent sequence is convergent.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"Suppose \($LB x_n $RB\) is a sequence, \(N\) a number, and \(x \in X\) such that \(x_n=x\) for all \(n \geq N ,\)",
+"and let \(\epsilon > 0 \) be given.",
+"Then for all \(n \geq N\) we have",
+"\(d(x_n,x) = 0 < \epsilon .\)",
+"Thus \($LB x_n $RB\) converges to \(x.\)",
+],
+[
+"Suppose \($LB x_n $RB\) is a convergent sequence,",
+"and let \(\epsilon = 1 .\)",
+"\(d(x_n,x) = \epsilon .\)",
+"\(d(x_n,x) = 1 .\)",
+"Thus \($LB x_n $RB\) diverges.",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+
+ENDDOCUMENT();

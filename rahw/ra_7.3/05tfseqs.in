@@ -1,0 +1,91 @@
+%DESC True/false questions on sequences in metric spaces
+%HINC head.txt
+%NOPARTIAL
+True or false:
+If a sequence converges in \((X,d),\) then the same sequence converges in \((X,d'),\)
+where \(d'\) is any other metric on \(X.\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+The sequence \($LB \frac{1}{n} $RB\) converges in \(({\mathbb{R}},d),\)
+where \(d\) is the discrete metric.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+The constant sequence \($LB 1 $RB\) converges in \(({\mathbb{R}},d),\)
+where \(d\) is the discrete metric.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(A \subset X\) is closed subset of a metric space \((X,d),\) and \($LB x_n $RB\) is a convergent sequence
+of elements of \(A,\) then the limit is in \(A.\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \($LB x_n $RB\) is a convergent sequence in a metric space,
+then some \(K\)-tail is a constant sequence.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+In any metric space, a constant sequence is convergent.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+In a metric space, every convergent sequence is bounded.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+In a metric space, every bounded sequence is convergent.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Suppose \($LB x_n $RB\) is a convergent sequence in a metric space \((X,d)\)
+with limit \(p \in X.\)  Suppose \(A \subset X \) and suppose \(x_n \in A\) for
+all \(n.\)  Then \($LB x_n $RB\) is convergent in the subspace \(A.\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Suppose \($LB x_n $RB\) is a convergent sequence in a metric space \((X,d)\)
+with limit \(p \in X.\)  Suppose \(A \subset X \) and suppose \(x_n \in A\) for
+all \(n\) and \(p \in A.\)  Then \($LB x_n $RB\) is convergent in the subspace \(A.\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END

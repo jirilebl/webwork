@@ -1,0 +1,34 @@
+%DESC Prove that in a discrete metric a sequence is convergent if and only if it is eventually constant.
+%HINC head.txt
+Prove that in a metric space \((X,d)\) where \(d\) is the discrete metric, a sequence is convergent if and only if
+some \(K\)-tail is constant.
+
+First prove that a convergent sequence is eventually constant:
+
+%PROOF
+Suppose \($LB x_n $RB\) is a convergent sequence in \((X,d),\) converging to \(x \in X.\)
+There exists an \(N\) such that for all \(n \geq N,\) we have \(d(x_n,x) < 1 .\)
+As \(d\) is the discrete metric, \(d(x_n,x) < 1\) implies \(d(x_n,x) = 0,\)
+and so \(x_n = x\) for all \(n \geq N.\)
+%EXTRA
+and so \(x_n = 0\) for all \(n \geq N.\)
+and so \(x_n = x\) for all \(n \in {\mathbb{N}}.\)
+There exists an \(N\) such that for all \(n \leq N,\) we have \(d(x_n,x) < 1 .\)
+Suppose \($LB x_n $RB\) is a divergent sequence in \((X,d).\)
+%END
+
+Now prove that every eventually convergent sequence is convergent.
+
+%PROOF
+Suppose \($LB x_n $RB\) is a sequence, \(N\) a number, and \(x \in X\) such that \(x_n=x\) for all \(n \geq N ,\)
+and let \(\epsilon > 0 \) be given.
+Then for all \(n \geq N\) we have
+\(d(x_n,x) = 0 < \epsilon .\)
+Thus \($LB x_n $RB\) converges to \(x.\)
+%EXTRA
+Suppose \($LB x_n $RB\) is a convergent sequence,
+and let \(\epsilon = 1 .\)
+\(d(x_n,x) = \epsilon .\)
+\(d(x_n,x) = 1 .\)
+Thus \($LB x_n $RB\) diverges.
+%END
