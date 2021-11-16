@@ -1,0 +1,185 @@
+##DESCRIPTION
+## Select the set where a sequence of functions converges
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('6.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Consider the sequence of functions
+\(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
+\(f_n(x) = x^n .\)  What is the largest subset of \([0,1]\)
+on which \($LB f_n $RB\) converges pointwise.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"\([0,1]\)",
+"\([0,1)\)",
+"\((0,1]\)",
+"\((0,1)\)",
+"\($LB 0, 1 $RB\)",
+"\($LB 1 $RB\)",
+"\($LB 0 $RB\)",
+"\( \emptyset \)",
+],
+"\([0,1]\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+Consider the sequence of functions
+\(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
+\(f_n(x) = (-1)^n x^n .\)  What is the largest subset of \([0,1]\)
+on which \($LB f_n $RB\) converges pointwise.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"\([0,1]\)",
+"\([0,1)\)",
+"\((0,1]\)",
+"\((0,1)\)",
+"\($LB 0, 1 $RB\)",
+"\($LB 1 $RB\)",
+"\($LB 0 $RB\)",
+"\( \emptyset \)",
+],
+"\([0,1)\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+Consider the sequence of functions
+\(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
+\(f_n(x) = x^{1/n} .\)  What is the largest subset of \([0,1]\)
+on which \($LB f_n $RB\) converges pointwise.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"\([0,1]\)",
+"\([0,1)\)",
+"\((0,1]\)",
+"\((0,1)\)",
+"\($LB 0, 1 $RB\)",
+"\($LB 1 $RB\)",
+"\($LB 0 $RB\)",
+"\( \emptyset \)",
+],
+"\($LB 0 $RB\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+Consider the sequence of functions
+\(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
+\(f_n(x) = (-1)^n x^{1/n} .\)  What is the largest subset of \([0,1]\)
+on which \($LB f_n $RB\) converges pointwise.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"\([0,1]\)",
+"\([0,1)\)",
+"\((0,1]\)",
+"\((0,1)\)",
+"\($LB 0, 1 $RB\)",
+"\($LB 1 $RB\)",
+"\($LB 0 $RB\)",
+"\( \emptyset \)",
+],
+"\($LB 0 $RB\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+Consider the sequence of functions
+\(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
+\(f_n(x) = (-1)^n {\left(\frac{1+x}{2}\right)}^{n} .\)  What is the largest subset of \([0,1]\)
+on which \($LB f_n $RB\) converges pointwise.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"\([0,1]\)",
+"\([0,1)\)",
+"\((0,1]\)",
+"\((0,1)\)",
+"\($LB 0, 1 $RB\)",
+"\($LB 1 $RB\)",
+"\($LB 0 $RB\)",
+"\( \emptyset \)",
+],
+"\( \emptyset \)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+
+ENDDOCUMENT();
