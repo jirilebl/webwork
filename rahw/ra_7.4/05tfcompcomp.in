@@ -1,0 +1,106 @@
+%DESC True/false and multiple choice questions on completeness and compactness
+%HINC head.txt
+%NOPARTIAL
+True or false:
+Every Cauchy sequence in a metric space is convergent.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Every Cauchy sequence in a complete metric space is convergent.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every Cauchy sequence in a compact metric space is convergent.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Every subset of \({\mathbb{R}}^n\) is complete as a subspace.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Every closed subset of \({\mathbb{R}}^n\) is complete as a subspace.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+A subset \(S \subset {\mathbb{R}}^n\) is compact if and only if it
+is closed and bounded.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Let \(E \subset {\mathbb{R}}^n\) be any subset.
+A subset \(S \subset E\) is compact if and only if it
+is closed in subspace topology on \(E\) and bounded.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Let \((X,d)\) be a metric space.
+A subset \(S \subset X\) is compact if and only if it
+is closed and bounded.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+Select the properties that are $BITALIC equivalent $EITALIC
+to \(X\) being "compact" (for any metric space):
+$BR
+%CHECKBOXES
+Every open cover of \(X\) has a finite subcover.
+Every sequence has subsequence that converges.
+%EXTRA
+\(X\) is closed and bounded.
+Every Cauchy sequence is convergent.
+Every sequence has a Cauchy subsequence.
+%END
+
+Select all the properties that a compact \(X\) satisfies
+(so properties implied by "compact"):
+$BR
+%CHECKBOXES
+Every open cover of \(X\) has a finite subcover.
+Every sequence has subsequence that converges.
+Every sequence has a Cauchy subsequence.
+\(X\) is closed and bounded.
+Every Cauchy sequence is convergent.
+%END
+
+Select the properties that are $BITALIC equivalent $EITALIC
+to \(X\) being "complete":
+$BR
+%CHECKBOXES
+Every Cauchy sequence is convergent.
+%EXTRA
+Every open cover of \(X\) has a finite subcover.
+Every sequence has subsequence that converges.
+Every sequence has a Cauchy subsequence.
+\(X\) is closed and bounded.
+%END

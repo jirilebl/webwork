@@ -1,0 +1,47 @@
+%DESC Pick the compact sets in R and in R with the discrete metric
+%HINC head.txt
+%NOPARTIAL
+Select the sets that are compact in \({\mathbb{R}}\)
+(with the standard metric):
+$BR
+%CHECKBOXES
+\([0,1]\)
+\(\emptyset\)
+\($LB 0,1 $RB \)
+\($LB 0,1,2,3,4,5 $RB \)
+\([-1,1] \cup $LB 3 $RB \)
+%EXTRA
+\({\mathbb{N}}\)
+\({\mathbb{Q}}\)
+\({\mathbb{Q}} \cap [-1,1]\)
+\([-1,1] \setminus $LB 0 $RB \)
+\([0,\infty)\)
+%END
+
+
+Select the sets that are compact in \({\mathbb{R}}\) with the discrete
+metric:
+$BR
+%CHECKBOXES
+\(\emptyset\)
+\($LB 0,1 $RB \)
+\($LB 0,1,2,3,4,5 $RB \)
+%EXTRA
+\([-1,1] \cup $LB 3 $RB \)
+\([0,1]\)
+\({\mathbb{N}}\)
+\({\mathbb{Q}}\)
+\({\mathbb{Q}} \cap [-1,1]\)
+\([-1,1] \setminus $LB 0 $RB \)
+\([0,\infty)\)
+%END
+
+
+In \({\mathbb{R}}\) with the discrete metric, which of the above subsets are
+closed and bounded:
+$BR
+%RADIO
+Only the compact ones.
+%CORRECT All of them.
+None of them.
+%END

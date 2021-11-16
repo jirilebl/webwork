@@ -1,0 +1,131 @@
+##DESCRIPTION
+## Pick the compact sets in R and in R with the discrete metric
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('7.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGchoicemacros.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Select the sets that are compact in \({\mathbb{R}}\)
+(with the standard metric):
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = new_checkbox_multiple_choice();
+$q1->qa("Check all that apply",
+"\([0,1]\)",
+"\(\emptyset\)",
+"\($LB 0,1 $RB \)",
+"\($LB 0,1,2,3,4,5 $RB \)",
+"\([-1,1] \cup $LB 3 $RB \)",
+);
+$q1->extra(
+"\({\mathbb{N}}\)",
+"\({\mathbb{Q}}\)",
+"\({\mathbb{Q}} \cap [-1,1]\)",
+"\([-1,1] \setminus $LB 0 $RB \)",
+"\([0,\infty)\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->print_a() \}
+
+$PAR
+$PAR
+Select the sets that are compact in \({\mathbb{R}}\) with the discrete
+metric:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = new_checkbox_multiple_choice();
+$q2->qa("Check all that apply",
+"\(\emptyset\)",
+"\($LB 0,1 $RB \)",
+"\($LB 0,1,2,3,4,5 $RB \)",
+);
+$q2->extra(
+"\([-1,1] \cup $LB 3 $RB \)",
+"\([0,1]\)",
+"\({\mathbb{N}}\)",
+"\({\mathbb{Q}}\)",
+"\({\mathbb{Q}} \cap [-1,1]\)",
+"\([-1,1] \setminus $LB 0 $RB \)",
+"\([0,\infty)\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->print_a() \}
+
+$PAR
+$PAR
+In \({\mathbb{R}}\) with the discrete metric, which of the above subsets are
+closed and bounded:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"Only the compact ones.",
+"All of them.",
+"None of them.",
+],
+"All of them.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp($q1->correct_ans()));
+ANS(checkbox_cmp($q2->correct_ans()));
+ANS($q3->cmp());
+
+ENDDOCUMENT();

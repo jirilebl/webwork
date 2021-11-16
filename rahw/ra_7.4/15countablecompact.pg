@@ -1,0 +1,158 @@
+##DESCRIPTION
+## Prove that a well-ordered subset 
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('7.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "parserRadioButtons.pl",
+ "PGchoicemacros.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Prove:
+$PAR
+$BBOLD Proposition: $EBOLD
+$BITALIC
+Suppose \($LB x_n $RB\) is a strictly increasing sequencce.  Let \(S = $LB x_n : n \in {\mathbb{N}} $RB .\)  Prove that \(S\) is not compact.
+$EITALIC
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"If \($LB x_n $RB\) is unbounded, then \(S\) is unbounded and not compact.",
+"So suppose that \(S\) is bounded.",
+"A bounded increasing sequence is convergent, and",
+"the limit of \($LB x_n $RB\) is equal to \( x = \sup \, S .\)",
+"For any \(n ,\) we have \(x_n < x_{n+1} \leq x .\)",
+"So \(x \neq x_n\) for any \(n .\)",
+"Hence \(x \not\in S\) and so \(S\) is not compact.",
+],
+[
+"So suppose that \(S\) is unbounded.",
+"So \(x = x_n\) for some \(n .\)",
+"Hence \(x \in S .\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+$PAR
+$PAR
+Did we just prove that no countable set in \(\mathbb{R}\) is compact?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+$PAR
+Which one of the following sets could be the set \(S\) from the lemma:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = new_checkbox_multiple_choice();
+$q3->qa("Check all that apply",
+"\(\mathbb{N}\)",
+"\($LB 1-\frac{1}{n} : n \in \mathbb{N} $RB\)",
+);
+$q3->extra(
+"\($LB 1-\frac{1}{n} : n \in \mathbb{N} $RB \cup $LB 1 $RB\)",
+"\($LB \frac{1}{n} : n \in \mathbb{N} $RB \cup $LB 0 $RB\)",
+"\($LB \frac{1}{n} : n \in \mathbb{N} $RB\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->print_a() \}
+
+$PAR
+$PAR
+Which one of the following sets is compact:
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = new_checkbox_multiple_choice();
+$q4->qa("Check all that apply",
+"\($LB 1-\frac{1}{n} : n \in \mathbb{N} $RB \cup $LB 1 $RB\)",
+"\($LB \frac{1}{n} : n \in \mathbb{N} $RB \cup $LB 0 $RB\)",
+);
+$q4->extra(
+"\(\mathbb{N}\)",
+"\($LB 1-\frac{1}{n} : n \in \mathbb{N} $RB\)",
+"\($LB \frac{1}{n} : n \in \mathbb{N} $RB\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->print_a() \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS(checkbox_cmp($q3->correct_ans()));
+ANS(checkbox_cmp($q4->correct_ans()));
+
+ENDDOCUMENT();
