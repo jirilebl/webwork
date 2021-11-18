@@ -1,0 +1,134 @@
+%DESC Understanding the proof of the Lebesgue covering lemma
+%HINC head.txt
+%NOPARTIAL
+Let us study the proof of the Lebesgue covering lemma (from the book [1]).  Answer the interspersed questions.
+
+$BBOLD Lemma $EBOLD (Lebesgue covering lemma).
+$BITALIC
+Let \((X,d)\) be a metric space and \(K \subset X.\)  Suppose 
+every sequence in \(K\) has a subsequence convergent in \(K.\)  Given
+an open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) there exists a
+\(\delta $GTS 0\) such that for every \(x \in K,\) there exists a \(\lambda \in I\)
+with \(B(x,\delta) \subset U_\lambda.\)
+$EITALIC
+
+$BITALIC Q: Since each \(U_\lambda\) is open, if \(x \in U_\lambda ,\) there exists
+a \(\delta $GTS 0\) such that \(B(x,\delta) \subset U_\lambda .\)
+So what is the point of the lemma? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT The \(\delta\) does not depend on \(x .\)
+But perhaps not all the \(U_\lambda\) are open.
+Not every \(x \in K\) is in some \(U_\lambda .\)
+We are restricting to \(x \in K .\)
+This holds in any metric space.
+We are just trying to make this difficult.
+%END
+
+$BITALIC Proof: $EITALIC
+We prove the lemma by contrapositive.
+
+$BITALIC Q: The conclusion is (in more concise and formal notation): $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\exists \delta $GTS 0 ,\) \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\forall x \in K ,\) \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\)  \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\exists \lambda \in I ,\) \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(B(x,\delta) \subset U_\lambda .\)
+%END
+
+$BITALIC Q: The negation of the conclusion is (in more concise and formal notation): $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT \(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)
+\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)
+\(\forall \delta $GTS 0 ,\) \(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \lambda \in I ,\) \(\exists x \in K ,\) \(B(x,\delta) \not\subset U_\lambda .\)
+\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)
+%END
+
+If the conclusion is not true, then there is
+an open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K\) with
+the following property.
+For every \(n \in {\mathbb{N}},\) there exists an \(x_n \in K\) such that
+\(B(x_n,\frac{1}{n})\) is not a subset of any \(U_\lambda.\)
+
+$BITALIC Q: What part of the statement from the lemma does \(\frac{1}{n}\) stand for here? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT \(\delta\)
+\(\lambda\)
+\(x\)
+\(K\)
+\(U_\lambda\)
+%END
+
+$BITALIC Q: The \(x_n\) exists why? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Because the negation of the final statement was that \(B(x_n,\frac{1}{n}) \not\subset U_\lambda .\)
+We simply define \(x_n\) that way.
+Because \(K\) is sequentially compact.
+%END
+
+Take any \(x \in K.\)  There is
+a \(\lambda \in I\) such that \(x \in U_\lambda.\)
+
+$BITALIC Q: Why does such a \(\lambda\) exist? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Because \({$LB U_\lambda $RB}_{\lambda \in I}\) is an open cover.
+Because \(K\) is sequentially compact.
+Because \(x\) is arbitrary.
+%END
+
+As \(U_\lambda\) is open, there is an \(\epsilon $GTS 0\) 
+such that \(B(x,\epsilon) \subset U_\lambda.\)
+Take \(M\) such that
+\(\frac{1}{M} $LTS \frac{\epsilon}{2}.\)
+If \(y \in B(x,\frac{\epsilon}{2})\) and \(n \geq M,\) then 
+\[
+B(y,\frac{1}{n}) \subset
+B(y,\frac{1}{M}) \subset
+B(y,\frac{\epsilon}{2}) \subset B(x,\epsilon)
+\subset U_\lambda ,
+\]
+where \(B(y,\frac{\epsilon}{2}) \subset B(x,\epsilon)\)
+follows by triangle inequality.
+
+$BITALIC Q: What's the use of triangle inequality here? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT If \(z \in B(y,\frac{\epsilon}{2})\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{\epsilon}{2}+\frac{\epsilon}{2} . \)
+If \(z \in B(y,\epsilon\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \epsilon+\epsilon . \)
+If \(z \in B(y,\frac{1}{M})\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{1}{n}+\frac{1}{M} . \)
+%END
+
+In other words, for all \(n \geq M,\) \(x_n \notin B(x,\frac{\epsilon}{2}).\) 
+
+$BITALIC Q: Why? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Because if \(y=x_n, \) then we get a contradiction that \(B(x_n,\frac{1}{n}) \subset U_{\lambda} .\)
+Because \(B(x_n,\frac{1}{n}) \subset U_{\lambda} .\)
+Because if \(y \neq x_n,\) then \(B(y,\frac{1}{n}) \subset B(x_n,\frac{1}{n}) .\)
+Because \(B(x_n,\epsilon) \subset B(x,\frac{1}{n}) .\)
+%END
+
+The sequence cannot have a subsequence converging to \(x.\)
+
+$BITALIC Q: Why? $EITALIC
+$BR
+%RADIORANDOM
+%CORRECT Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would contain infinitely many \(x_n . \)
+Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) not contain any \(x_n .\)
+Because we defined \(x\) that way.
+Because \(x \in K .\)
+%END
+
+As \(x \in K\) was arbitrary we are done.
+QED.
+
+
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC

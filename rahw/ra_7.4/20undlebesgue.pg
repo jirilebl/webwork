@@ -1,0 +1,295 @@
+##DESCRIPTION
+## Understanding the proof of the Lebesgue covering lemma
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('7.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Let us study the proof of the Lebesgue covering lemma (from the book [1]).  Answer the interspersed questions.
+$PAR
+$BBOLD Lemma $EBOLD (Lebesgue covering lemma).
+$BITALIC
+Let \((X,d)\) be a metric space and \(K \subset X.\)  Suppose 
+every sequence in \(K\) has a subsequence convergent in \(K.\)  Given
+an open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) there exists a
+\(\delta $GTS 0\) such that for every \(x \in K,\) there exists a \(\lambda \in I\)
+with \(B(x,\delta) \subset U_\lambda.\)
+$EITALIC
+$PAR
+$BITALIC Q: Since each \(U_\lambda\) is open, if \(x \in U_\lambda ,\) there exists
+a \(\delta $GTS 0\) such that \(B(x,\delta) \subset U_\lambda .\)
+So what is the point of the lemma? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+[
+"The \(\delta\) does not depend on \(x .\)",
+"But perhaps not all the \(U_\lambda\) are open.",
+"Not every \(x \in K\) is in some \(U_\lambda .\)",
+"We are restricting to \(x \in K .\)",
+"This holds in any metric space.",
+"We are just trying to make this difficult.",
+],
+],
+"The \(\delta\) does not depend on \(x .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+$BITALIC Proof: $EITALIC
+We prove the lemma by contrapositive.
+$PAR
+$BITALIC Q: The conclusion is (in more concise and formal notation): $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+[
+"\(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)",
+"\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)",
+"\(\exists \delta $GTS 0 ,\) \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)",
+"\(\forall x \in K ,\) \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\)  \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)",
+"\(\exists \lambda \in I ,\) \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(B(x,\delta) \subset U_\lambda .\)",
+],
+],
+"\(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+$BITALIC Q: The negation of the conclusion is (in more concise and formal notation): $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+[
+"\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)",
+"\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)",
+"\(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)",
+"\(\forall \delta $GTS 0 ,\) \(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \lambda \in I ,\) \(\exists x \in K ,\) \(B(x,\delta) \not\subset U_\lambda .\)",
+"\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)",
+],
+],
+"\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+If the conclusion is not true, then there is
+an open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K\) with
+the following property.
+For every \(n \in {\mathbb{N}},\) there exists an \(x_n \in K\) such that
+\(B(x_n,\frac{1}{n})\) is not a subset of any \(U_\lambda.\)
+$PAR
+$BITALIC Q: What part of the statement from the lemma does \(\frac{1}{n}\) stand for here? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+[
+"\(\delta\)",
+"\(\lambda\)",
+"\(x\)",
+"\(K\)",
+"\(U_\lambda\)",
+],
+],
+"\(\delta\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+$BITALIC Q: The \(x_n\) exists why? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+[
+"Because the negation of the final statement was that \(B(x_n,\frac{1}{n}) \not\subset U_\lambda .\)",
+"We simply define \(x_n\) that way.",
+"Because \(K\) is sequentially compact.",
+],
+],
+"Because the negation of the final statement was that \(B(x_n,\frac{1}{n}) \not\subset U_\lambda .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+Take any \(x \in K.\)  There is
+a \(\lambda \in I\) such that \(x \in U_\lambda.\)
+$PAR
+$BITALIC Q: Why does such a \(\lambda\) exist? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+[
+"Because \({$LB U_\lambda $RB}_{\lambda \in I}\) is an open cover.",
+"Because \(K\) is sequentially compact.",
+"Because \(x\) is arbitrary.",
+],
+],
+"Because \({$LB U_\lambda $RB}_{\lambda \in I}\) is an open cover.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+As \(U_\lambda\) is open, there is an \(\epsilon $GTS 0\) 
+such that \(B(x,\epsilon) \subset U_\lambda.\)
+Take \(M\) such that
+\(\frac{1}{M} $LTS \frac{\epsilon}{2}.\)
+If \(y \in B(x,\frac{\epsilon}{2})\) and \(n \geq M,\) then 
+\[
+B(y,\frac{1}{n}) \subset
+B(y,\frac{1}{M}) \subset
+B(y,\frac{\epsilon}{2}) \subset B(x,\epsilon)
+\subset U_\lambda ,
+\]
+where \(B(y,\frac{\epsilon}{2}) \subset B(x,\epsilon)\)
+follows by triangle inequality.
+$PAR
+$BITALIC Q: What's the use of triangle inequality here? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+[
+"If \(z \in B(y,\frac{\epsilon}{2})\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{\epsilon}{2}+\frac{\epsilon}{2} . \)",
+"If \(z \in B(y,\epsilon\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \epsilon+\epsilon . \)",
+"If \(z \in B(y,\frac{1}{M})\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{1}{n}+\frac{1}{M} . \)",
+],
+],
+"If \(z \in B(y,\frac{\epsilon}{2})\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{\epsilon}{2}+\frac{\epsilon}{2} . \)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+In other words, for all \(n \geq M,\) \(x_n \notin B(x,\frac{\epsilon}{2}).\) 
+$PAR
+$BITALIC Q: Why? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+[
+"Because if \(y=x_n, \) then we get a contradiction that \(B(x_n,\frac{1}{n}) \subset U_{\lambda} .\)",
+"Because \(B(x_n,\frac{1}{n}) \subset U_{\lambda} .\)",
+"Because if \(y \neq x_n,\) then \(B(y,\frac{1}{n}) \subset B(x_n,\frac{1}{n}) .\)",
+"Because \(B(x_n,\epsilon) \subset B(x,\frac{1}{n}) .\)",
+],
+],
+"Because if \(y=x_n, \) then we get a contradiction that \(B(x_n,\frac{1}{n}) \subset U_{\lambda} .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+$PAR
+The sequence cannot have a subsequence converging to \(x.\)
+$PAR
+$BITALIC Q: Why? $EITALIC
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+[
+"Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would contain infinitely many \(x_n . \)",
+"Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) not contain any \(x_n .\)",
+"Because we defined \(x\) that way.",
+"Because \(x \in K .\)",
+],
+],
+"Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would contain infinitely many \(x_n . \)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+$PAR
+As \(x \in K\) was arbitrary we are done.
+QED.
+$PAR
+$PAR
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+
+ENDDOCUMENT();
