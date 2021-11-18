@@ -45,7 +45,7 @@ $BR
 \((0,1)\)
 \($LB 0, 1 $RB\)
 \($LB 1 $RB\)
-%CORRECT \($LB 0 $RB\)
+\($LB 0 $RB\)
 \( \emptyset \)
 %END
 

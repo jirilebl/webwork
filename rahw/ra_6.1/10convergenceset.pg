@@ -111,7 +111,7 @@ $q3 = RadioButtons([
 "\($LB 0 $RB\)",
 "\( \emptyset \)",
 ],
-"\($LB 0 $RB\)",
+"\([0,1]\)",
 );
 Context()->texStrings;
 BEGIN_TEXT

@@ -157,12 +157,12 @@ Context()->normalStrings;
 
 $q5 = RadioButtons([
 [
-"Because the negation of the final statement was that \(B(x_n,\frac{1}{n}) \not\subset U_\lambda .\)",
+"Because given any \(\delta, \) say \(\frac{1}{n},\) there exists an \(x,\) (call in \(x_n\)) such that \(B(x,\frac{1}{n}) \not\subset U_\lambda \) for all \(\lambda .\)",
 "We simply define \(x_n\) that way.",
 "Because \(K\) is sequentially compact.",
 ],
 ],
-"Because the negation of the final statement was that \(B(x_n,\frac{1}{n}) \not\subset U_\lambda .\)",
+"Because given any \(\delta, \) say \(\frac{1}{n},\) there exists an \(x,\) (call in \(x_n\)) such that \(B(x,\frac{1}{n}) \not\subset U_\lambda \) for all \(\lambda .\)",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -197,9 +197,9 @@ Take \(M\) such that
 \(\frac{1}{M} $LTS \frac{\epsilon}{2}.\)
 If \(y \in B(x,\frac{\epsilon}{2})\) and \(n \geq M,\) then 
 \[
-B(y,\frac{1}{n}) \subset
-B(y,\frac{1}{M}) \subset
-B(y,\frac{\epsilon}{2}) \subset B(x,\epsilon)
+B(y,\tfrac{1}{n}) \subset
+B(y,\tfrac{1}{M}) \subset
+B(y,\tfrac{\epsilon}{2}) \subset B(x,\epsilon)
 \subset U_\lambda ,
 \]
 where \(B(y,\frac{\epsilon}{2}) \subset B(x,\epsilon)\)
@@ -213,7 +213,7 @@ Context()->normalStrings;
 $q7 = RadioButtons([
 [
 "If \(z \in B(y,\frac{\epsilon}{2})\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{\epsilon}{2}+\frac{\epsilon}{2} . \)",
-"If \(z \in B(y,\epsilon\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \epsilon+\epsilon . \)",
+"If \(z \in B(y,\epsilon)\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \epsilon+\epsilon . \)",
 "If \(z \in B(y,\frac{1}{M})\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{1}{n}+\frac{1}{M} . \)",
 ],
 ],
@@ -256,7 +256,7 @@ Context()->normalStrings;
 $q9 = RadioButtons([
 [
 "Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would contain infinitely many \(x_n . \)",
-"Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) not contain any \(x_n .\)",
+"Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would not contain any \(x_n .\)",
 "Because we defined \(x\) that way.",
 "Because \(x \in K .\)",
 ],
