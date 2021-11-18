@@ -157,12 +157,12 @@ Context()->normalStrings;
 
 $q5 = RadioButtons([
 [
-"Because given any \(\delta, \) say \(\frac{1}{n},\) there exists an \(x,\) (call in \(x_n\)) such that \(B(x,\frac{1}{n}) \not\subset U_\lambda \) for all \(\lambda .\)",
+"Because given any \(\delta, \) say \(\frac{1}{n},\) there exists an \(x,\) (call it \(x_n\)) such that \(B(x,\frac{1}{n}) \not\subset U_\lambda \) for all \(\lambda .\)",
 "We simply define \(x_n\) that way.",
 "Because \(K\) is sequentially compact.",
 ],
 ],
-"Because given any \(\delta, \) say \(\frac{1}{n},\) there exists an \(x,\) (call in \(x_n\)) such that \(B(x,\frac{1}{n}) \not\subset U_\lambda \) for all \(\lambda .\)",
+"Because given any \(\delta, \) say \(\frac{1}{n},\) there exists an \(x,\) (call it \(x_n\)) such that \(B(x,\frac{1}{n}) \not\subset U_\lambda \) for all \(\lambda .\)",
 );
 Context()->texStrings;
 BEGIN_TEXT

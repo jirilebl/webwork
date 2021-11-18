@@ -1,4 +1,4 @@
-%DESC Prove that a well-ordered subset 
+%DESC Prove that a well-ordered countable subset of R is not compact
 %HINC head.txt
 %NOPARTIAL
 Prove:
