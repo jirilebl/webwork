@@ -6,12 +6,12 @@ Prove that \((X,d')\) is also a metric space.
 Besides the triangle inequality, we have to check some other properties.  Which of the following statements check those properties:
 $BR
 %CHECKBOXES
-For any \(x,y\), since \(d(x,y) \geq 0,\) we have \(d'(x,y) = \sqrt{d(x,y)} \geq 0 . \)
+For any \(x,y,\) since \(d(x,y) \geq 0,\) we have \(d'(x,y) = \sqrt{d(x,y)} \geq 0 . \)
 \(0 = d'(x,y) = \sqrt{d(x,y)} \) if and only if \(d(x,y) = 0\) if and only if \(x=y.\)
 For any \(x,y ,\) we have \(d'(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d'(y,x) . \)
 %EXTRA
-For any \(x,y\), \(d'(x,y) = \sqrt{d(x,y)} $GTS 0\)
-For any \(x,y\), \(d'(x,y) = d(x,y) \) for all \(x,y\)
+For any \(x,y,\) \(d'(x,y) = \sqrt{d(x,y)} $GTS 0 .\)
+For any \(x,y,\) \(d'(x,y) = d(x,y) \) for all \(x,y .\)
 %LAST None of the above
 %END
 

@@ -54,13 +54,13 @@ Context()->normalStrings;
 
 $q1 = new_checkbox_multiple_choice();
 $q1->qa("Check all that apply",
-"For any \(x,y\), since \(d(x,y) \geq 0,\) we have \(d'(x,y) = \sqrt{d(x,y)} \geq 0 . \)",
+"For any \(x,y,\) since \(d(x,y) \geq 0,\) we have \(d'(x,y) = \sqrt{d(x,y)} \geq 0 . \)",
 "\(0 = d'(x,y) = \sqrt{d(x,y)} \) if and only if \(d(x,y) = 0\) if and only if \(x=y.\)",
 "For any \(x,y ,\) we have \(d'(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d'(y,x) . \)",
 );
 $q1->extra(
-"For any \(x,y\), \(d'(x,y) = \sqrt{d(x,y)} $GTS 0\)",
-"For any \(x,y\), \(d'(x,y) = d(x,y) \) for all \(x,y\)",
+"For any \(x,y,\) \(d'(x,y) = \sqrt{d(x,y)} $GTS 0 .\)",
+"For any \(x,y,\) \(d'(x,y) = d(x,y) \) for all \(x,y .\)",
 "None of the above",
 );
 $q1->makeLast("None of the above");

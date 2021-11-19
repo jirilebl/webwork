@@ -100,9 +100,9 @@ follows by triangle inequality.
 $BITALIC Q: What's the use of triangle inequality here? $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT If \(z \in B(y,\frac{\epsilon}{2})\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{\epsilon}{2}+\frac{\epsilon}{2} . \)
-If \(z \in B(y,\epsilon)\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \epsilon+\epsilon . \)
-If \(z \in B(y,\frac{1}{M})\), then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{1}{n}+\frac{1}{M} . \)
+%CORRECT If \(z \in B(y,\frac{\epsilon}{2}) ,\) then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{\epsilon}{2}+\frac{\epsilon}{2} . \)
+If \(z \in B(y,\epsilon),\) then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \epsilon+\epsilon . \)
+If \(z \in B(y,\frac{1}{M}),\) then \(d(x,z) \leq d(x,y) + d(y,z) $LTS \frac{1}{n}+\frac{1}{M} . \)
 %END
 
 In other words, for all \(n \geq M,\) \(x_n \notin B(x,\frac{\epsilon}{2}).\) 

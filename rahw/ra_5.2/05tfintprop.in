@@ -27,7 +27,7 @@ True or false:
 If
 \(f \colon {\mathbb{R}} \to {\mathbb{R}}\)
 is integrable on \([-n,n]\) for every \(n \in {\mathbb{N}},\)
-then \(f\) is integrable on every bounded interval \([a,b]\).
+then \(f\) is integrable on every bounded interval \([a,b].\)
 $BR
 %RADIO
 %CORRECT True
