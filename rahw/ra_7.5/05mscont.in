@@ -1,0 +1,81 @@
+%DESC True/false and multiple choice questions on continuity in metric spaces
+%HINC head.txt
+%NOPARTIAL
+True or false:
+If \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) is a function
+such that \(x \mapsto f(x,y)\) is continuous for every \(y\)
+and
+\(y \mapsto f(x,y)\) is continuous for every \(x,\)
+then \(f\) is continuous.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is a function and
+\(f^{-1}(I)\) is open for every open interval \(I,\)
+then \(f\) is continuous.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f \colon X \to Y\) is a continuous function between metric spaces and \(S \subset X\) is closed, then \(f(S)\) is closed.
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon X \to Y\) is a continuous function between metric spaces and \(S \subset Y\) is closed, then \(f^{-1}(S)\) is closed.
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f \colon X \to Y\) is a continuous function between metric spaces and \(K \subset X\) is compact, then \(f(K)\) is compact.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f \colon X \to Y\) is a continuous function between metric spaces and \(K \subset Y\) is compact, then \(f^{-1}(K)\) is compact.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+Suppose \(f \colon X \to Y\) is a continuous function between metric spaces.  Suppose we modify the metric on both \(X\) and \(Y\)
+in such a way that the topology (the set of open sets) is unchanged.  Then \(f,\) with respect to the new metrics, is:
+$BR
+%RADIO
+%CORRECT Continuous.
+Discontinuous.
+Depends on the metric.
+%END
+
+Suppose \(f \colon X \to Y\) is an arbitrary function between metric space and the metric on \(X\) is
+the discrete metric.  Then \(f\) is:
+$BR
+%RADIO
+%CORRECT Continuous.
+Discontinuous.
+Depends on the function.
+%END
+
+Suppose \(f \colon X \to Y\) is an arbitrary function between metric space and the metric on \(Y\) is
+the discrete metric.  Then \(f\) is:
+$BR
+%RADIO
+Continuous.
+Discontinuous.
+%CORRECT Depends on the function.
+%END
