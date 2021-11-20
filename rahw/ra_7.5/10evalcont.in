@@ -4,7 +4,7 @@
 Let \(C([0,1],{\mathbb{R}})\) be our metric space with the uniform norm
 metric:
 \[
-d(f,g) = \sup_{x \in [0,1]} \lvert f(x)-g(x) \rvert .
+d(f,g) := \sup_{x \in [0,1]} \lvert f(x)-g(x) \rvert .
 \]
 
 Given any fixed \(p \in [0,1]\) show that the point evaluation map
