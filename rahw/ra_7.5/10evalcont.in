@@ -1,0 +1,47 @@
+%DESC Prove that point evaluation is continuous
+%HINC head.txt
+%NOPARTIAL
+Let \(C([0,1],{\mathbb{R}})\) be our metric space with the uniform norm
+metric:
+\[
+d(f,g) = \sup_{x \in [0,1]} \lvert f(x)-g(x) \rvert .
+\]
+
+Given any fixed \(p \in [0,1]\) show that the point evaluation map
+\(E_p \colon C([0,1],{\mathbb{R}}) \to {\mathbb{R}}\) defined by
+\(E_p(f) := f(p)\) is continuous.
+
+%PROOF
+Consider \(f,g \in C([0,1],{\mathbb{R}}) . \)
+Estimate: \(\lvert E_p(f)-E_p(g) \rvert = \lvert f(p)-g(p) \)
+\( \quad \leq \sup_{x \in [0,1]} \lvert f(x)-g(x) \rvert = d(f,g) . \)
+So given any \(\epsilon $GTS 0, \) let \(\delta := \epsilon .\)
+Now if \(d(f,g) $LTS \delta = \epsilon ,\) then \( \lvert E_p(f)-E_p(g) \rvert < \epsilon . \)
+%EXTRA
+Let \(\delta := 0.\)
+Suppose \(f=g .\)
+\( \quad \geq \sup_{x \in [0,1]} \lvert f(x)-g(x) \rvert = d(f,g) . \)
+%END
+
+
+Note that we seemingly didn't use the fact that \(f\) and \(g\) are continuous.
+The issue is that without some hypotheses, the set of all real-valued functions
+on \([0,1]\) is not a metric space using the metric given.  Why?
+
+%RADIORANDOM
+%CORRECT For arbitrary functions \(\lvert f(x)-g(x) \rvert\) could be unbounded.
+It makes no sense to talk about continuity of \(E_p\) with discontinuous functions.
+Actually, the set of all real-valued functions on \([0,1]\) is a metric space.
+%END
+
+What larger set of functions (larger than the set of continuous functions) we
+could use in the above proof without changing anything and still get a
+continuous map between metric spaces:
+
+%RADIORANDOM
+%CORRECT The set of bounded functions on \([0,1].\)
+The set of all real-valued functions on \([0,1].\)
+The set of all Riemann integrable functions on \([0,1].\)
+The set of all differentiable functions on \([0,1].\)
+The set of constant functions.
+%END
