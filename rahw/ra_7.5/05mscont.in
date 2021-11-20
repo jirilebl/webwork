@@ -25,6 +25,7 @@ False
 
 True or false:
 If \(f \colon X \to Y\) is a continuous function between metric spaces and \(S \subset X\) is closed, then \(f(S)\) is closed.
+$BR
 %RADIO
 True
 %CORRECT False
@@ -32,6 +33,7 @@ True
 
 True or false:
 If \(f \colon X \to Y\) is a continuous function between metric spaces and \(S \subset Y\) is closed, then \(f^{-1}(S)\) is closed.
+$BR
 %RADIO
 %CORRECT True
 False
@@ -62,7 +64,7 @@ Discontinuous.
 Depends on the metric.
 %END
 
-Suppose \(f \colon X \to Y\) is an arbitrary function between metric space and the metric on \(X\) is
+Suppose \(f \colon X \to Y\) is an arbitrary function between metric spaces and the metric on \(X\) is
 the discrete metric.  Then \(f\) is:
 $BR
 %RADIO
@@ -71,7 +73,7 @@ Discontinuous.
 Depends on the function.
 %END
 
-Suppose \(f \colon X \to Y\) is an arbitrary function between metric space and the metric on \(Y\) is
+Suppose \(f \colon X \to Y\) is an arbitrary function between metric spaces and the metric on \(Y\) is
 the discrete metric.  Then \(f\) is:
 $BR
 %RADIO

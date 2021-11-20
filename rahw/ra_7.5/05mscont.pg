@@ -85,6 +85,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(f \colon X \to Y\) is a continuous function between metric spaces and \(S \subset X\) is closed, then \(f(S)\) is closed.
+$BR
 END_TEXT
 Context()->normalStrings;
 
@@ -101,6 +102,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(f \colon X \to Y\) is a continuous function between metric spaces and \(S \subset Y\) is closed, then \(f^{-1}(S)\) is closed.
+$BR
 END_TEXT
 Context()->normalStrings;
 
@@ -167,7 +169,7 @@ BEGIN_TEXT
 \{ $q7->buttons \}
 
 $PAR
-Suppose \(f \colon X \to Y\) is an arbitrary function between metric space and the metric on \(X\) is
+Suppose \(f \colon X \to Y\) is an arbitrary function between metric spaces and the metric on \(X\) is
 the discrete metric.  Then \(f\) is:
 $BR
 END_TEXT
@@ -185,7 +187,7 @@ BEGIN_TEXT
 \{ $q8->buttons \}
 
 $PAR
-Suppose \(f \colon X \to Y\) is an arbitrary function between metric space and the metric on \(Y\) is
+Suppose \(f \colon X \to Y\) is an arbitrary function between metric spaces and the metric on \(Y\) is
 the discrete metric.  Then \(f\) is:
 $BR
 END_TEXT

@@ -13,7 +13,7 @@ Given any fixed \(p \in [0,1]\) show that the point evaluation map
 
 %PROOF
 Consider \(f,g \in C([0,1],{\mathbb{R}}) . \)
-Estimate: \(\lvert E_p(f)-E_p(g) \rvert = \lvert f(p)-g(p) \)
+Estimate: \(\lvert E_p(f)-E_p(g) \rvert = \lvert f(p)-g(p) \rvert \)
 \( \quad \leq \sup_{x \in [0,1]} \lvert f(x)-g(x) \rvert = d(f,g) . \)
 So given any \(\epsilon $GTS 0, \) let \(\delta := \epsilon .\)
 Now if \(d(f,g) $LTS \delta = \epsilon ,\) then \( \lvert E_p(f)-E_p(g) \rvert < \epsilon . \)
