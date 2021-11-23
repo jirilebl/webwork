@@ -36,9 +36,10 @@ with the macro manually installed.
 
 ## Where did the problems come from?
 
-All the problems were written from scratch mostly using a helper script.
+All the problems were written from scratch.  They were for the most part
+written with a simple helper script (*story-proof-template-maker.pl*).
 The script and the problem can be gotten from my scratchwork webwork github
-repository https://github.com/jirilebl/webwork .
+repository https://github.com/jirilebl/webwork
 
 ## Contributing
 
