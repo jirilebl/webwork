@@ -46,11 +46,11 @@ $PAR
 True or false:
 For any function \(f \colon {\mathbb{N}} \times {\mathbb{N}} \to {\mathbb{R}},\)
 if all the limits in the expressions
-\(lim_{n\to \infty} \lim_{k\to\infty) f(n,k)\)
+\(\lim\limits_{n\to \infty} \lim\limits_{k\to\infty} f(n,k)\)
 and
-\(lim_{k\to \infty} \lim_{n\to\infty) f(n,k)\)
+\(\lim\limits_{k\to \infty} \lim\limits_{n\to\infty} f(n,k)\)
 exist, then 
-\(lim_{n\to \infty} \lim_{k\to\infty) f(n,k) = lim_{k\to \infty} \lim_{n\to\infty) f(n,k) .\)
+\(\lim\limits_{n\to \infty} \lim\limits_{k\to\infty} f(n,k) = \lim\limits_{k\to \infty} \lim\limits_{n\to\infty} f(n,k) .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -69,11 +69,11 @@ $PAR
 True or false:
 Given a function \(f \colon {\mathbb{N}} \times {\mathbb{N}} \to {\mathbb{R}},\)
 if for all \(n \in {\mathbb{N}}\) the limit 
-\(\lim_{k\to\infty) f(n,k)\) exists and the limit
-\(lim_{n\to \infty} \lim_{k\to\infty) f(n,k)\)
+\(\lim\limits_{k\to\infty} f(n,k)\) exists and the limit
+\(\lim\limits_{n\to \infty} \lim\limits_{k\to\infty} f(n,k)\)
 exists, then
 all the limits in the expression
-\(lim_{k\to \infty} \lim_{n\to\infty) f(n,k)\)
+\(\lim\limits_{k\to \infty} \lim\limits_{n\to\infty} f(n,k)\)
 also exist.
 $BR
 END_TEXT
@@ -92,7 +92,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If a sequence of Riemann integrable functions \($LB f_n $RB\) defined on \([0,1]\)
-converge pointwise to \(0,\) then \(\lim_{n\to \infty} \int_0^1 f_n = 0.\)
+converge pointwise to \(0,\) then \(\lim\limits_{n\to \infty} \int_0^1 f_n = 0.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -110,7 +110,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If a sequence of Riemann integrable functions \($LB f_n $RB\) defined on \([0,1]\)
-converge uniformly to \(0,\) then \(\lim_{n\to \infty} \int_0^1 f_n = 0.\)
+converge uniformly to \(0,\) then \(\lim\limits_{n\to \infty} \int_0^1 f_n = 0.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -130,7 +130,7 @@ True or false:
 If a sequence of Riemann integrable functions \($LB f_n $RB\) defined on \([0,1]\)
 is such that \(0 \leq f_n(x) \leq \frac{1}{n}\) for all \(x \in [0,1]\)
 and all \(n \in \mathbb{N} ,\) then 
-\(\lim_{n\to \infty} \int_0^1 f_n = 0.\)
+\(\lim\limits_{n\to \infty} \int_0^1 f_n = 0.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -148,8 +148,8 @@ BEGIN_TEXT
 $PAR
 True or false:
 If a sequence of continuous functions \($LB f_n $RB\) defined on \([0,1]\)
-converges to \(0\) and \(g \colon [0,1] \to \mathbb{R}\) is continuous, then
-\(\lim_{n\to \infty} \int_0^1 g(x)f_n(x)\, dx = 0.\)
+converges uniformly to \(0\) and \(g \colon [0,1] \to \mathbb{R}\) is continuous, then
+\(\lim\limits_{n\to \infty} \int_0^1 g(x)f_n(x)\, dx = 0.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -233,7 +233,7 @@ $q10 = RadioButtons([
 "True",
 "False",
 ],
-"False",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
