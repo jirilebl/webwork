@@ -16,7 +16,7 @@ standard WeBWorK styling with variables.  The next line is bold.
 
 $BBOLD Proofs $EBOLD
 
-Proofs require draggableProof.pl to work (presumably from WeBWork 2.16
+Proofs require draggableProof.pl to work (presumably from WeBWorK 2.16
 onwards this works automatically).
 
 %PROOF

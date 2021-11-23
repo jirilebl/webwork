@@ -46,7 +46,7 @@ $PAR
 $PAR
 $BBOLD Proofs $EBOLD
 $PAR
-Proofs require draggableProof.pl to work (presumably from WeBWork 2.16
+Proofs require draggableProof.pl to work (presumably from WeBWorK 2.16
 onwards this works automatically).
 $PAR
 END_TEXT

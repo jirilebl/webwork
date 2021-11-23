@@ -1,3 +1,7 @@
+# Basic Analysis problems
+
+In the *rahw/* directory, there are problems for the *Basic Analysis* textbook volume I.  Read the *README.md* in that directory.
+
 # Webwork problems
 
 These are problems that for whatever reason I am not pushing into the OPL Contrib directory, templates for my own use (though of course feel free to use them), and a few scripts for working with webwork.
