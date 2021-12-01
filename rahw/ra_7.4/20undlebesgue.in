@@ -21,7 +21,7 @@ $BR
 But perhaps not all the \(U_\lambda\) are open.
 Not every \(x \in K\) is in some \(U_\lambda .\)
 We are restricting to \(x \in K .\)
-This holds in any metric space.
+In any metric space an open set is a union of open balls.
 We are just trying to make this difficult.
 %END
 
@@ -121,8 +121,8 @@ The sequence cannot have a subsequence converging to \(x.\)
 $BITALIC Q: Why? $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would contain infinitely many \(x_n . \)
-Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would not contain any \(x_n .\)
+%CORRECT Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would contain \(x_n\) for infinitely many \(n .\)
+Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would not contain \(x_n\) for any \(n .\)
 Because we defined \(x\) that way.
 Because \(x \in K .\)
 %END
