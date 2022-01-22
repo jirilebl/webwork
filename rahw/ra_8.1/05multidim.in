@@ -37,7 +37,7 @@ For what \(k\) are is the set
 \($LB (1,$a) , ($b,k) $RB\)
 linearly dependent?
 $BR
-%NUMBER $a*b
+%NUMBER $a*$b
 
 True or false:
 Any two bases of a finite dimensional vector space must have the same number

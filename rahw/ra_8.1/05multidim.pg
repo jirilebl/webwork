@@ -111,7 +111,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q4 = Formula("$a*b");
+$q4 = Formula("$a*$b");
 
 Context()->texStrings;
 BEGIN_TEXT
