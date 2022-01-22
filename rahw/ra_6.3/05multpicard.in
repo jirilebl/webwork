@@ -1,0 +1,94 @@
+%DESC True/false and multiple choice questions on Picard's theorem
+%HINC head.txt
+%NOPARTIAL
+True or false:
+Suppose \(F\) is continuous for \(x\) and \(y\) near zero.
+If a differentiable \(f(x)\) satisfies the equation \(f'(x) = F(x,f(x))\)
+with \(f(0)=0,\)
+then \(f(x)\) also satisfies the integral equation
+\(
+f(x) = \int_{0}^x F(t,f(t)) \, dt
+\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Let \(I,J,F,x_0,y_0\) be as in Picard's theorem.
+If a differentiable \(f(x)\) satisfies the equation \(f'(x) = F(x,f(x))\)
+with \(f(x_0)=y_0,\) then \(f\) is continuously differentiable.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(F\colon {\mathbb{R}} \times {\mathbb{R}} \to {\mathbb{R}}\)
+is continuous, then a solution to \(y' = F(x,y),\) \(f(0)=0,\)
+exists for all \(x .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+%SETUP $a=random(2,9,1);
+Select solutions to \(y' = $a y\)
+%CHECKBOXES
+\(y=e^{$a x}\)
+\(y=11 e^{$a x}\)
+\(y=0\)
+%EXTRA
+\(y=e^{$a x}+1\)
+\(y=e^x\)
+\(y=$a e^x\)
+%END
+
+Select solutions to \(y' = x+y\)
+%CHECKBOXES
+\(y=e^x-x-1\)
+\(y=-e^x-x-1\)
+\(y=3e^x-x-1\)
+\(y=0\)
+%EXTRA
+\(y=e^x\)
+\(y=-e^x\)
+\(y=-e^x+x+1\)
+\(y=e^x+x\)
+\(y=e^x-x\)
+%END
+
+Let \(F(x,y)=0\) if \(x $LTS 0\) and 
+\(F(x,y)=1\) if \(x \geq 0 .\)
+Does there exist a differentiable function \(f\) defined in some
+interval containing zero
+so that 
+\(f'(x) = F(x,f(x))?\)
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+True or false:
+If \(F\) is a continuous function only of \(x,\)
+then a solution to \(f'(x) = F(x)\) follows from the fundamental
+theorem of calculus (no need for Picard).
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(F \colon {\mathbb{R}} \to {\mathbb{R}}\) is a continuous function
+only of \(x,\) then a solution to \(f'(x) = F(x) ,\)
+with \(f(x_0) = y_0 \) must exist for all \(x.\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END

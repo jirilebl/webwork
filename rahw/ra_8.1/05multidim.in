@@ -1,0 +1,106 @@
+%DESC True/false, multiple choice, short answer questions on vector spaces, span, and dimension
+%HINC head.txt
+%NOPARTIAL
+%SETUP $a=random(2,9,1);
+%SETUP $b=random(2,9,1);
+%SETUP $c=random(2,9,1);
+%SETUP $cpo=$c+1;
+%SETUP $cmo=$c-1;
+True or false:
+The span of \($LB (1,1,$a) , ($b,0,0) , (0,0,$c) $RB\)
+is all of \({\mathbb{R}}^3\).
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+The vector space of all polynomials of even degree is infinite dimensional.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+The vector space of all polynomials of degree less than or equal to $c is
+$BR
+%RADIORANDOM
+%CORRECT $cpo
+$c
+$cmo
+infinite
+0
+%END
+
+For what \(k\) are is the set 
+\($LB (1,$a) , ($b,k) $RB\)
+linearly dependent?
+$BR
+%NUMBER $a*b
+
+True or false:
+Any two bases of a finite dimensional vector space must have the same number
+of elements.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If a vector space \(X\) contains a linearly independent set of \(\ell\)
+elements, then it necessarily must have a basis consisting of \(\ell\)
+elements.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If a vector space \(X\) is of dimension \(d,\) then any 
+set of \(d\) nonzero elements must form a basis of \(X\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If a vector space \(X\) is of dimension \(d,\) then any 
+set of \(d\) linearly independent elements must form a basis of \(X\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If a set \($LB v_1,v_2,\ldots,v_n $RB\) is a linearly dependent
+set, then any one of the elements of the set can be written
+as a linear combination of the others.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If a set \($LB v_1,v_2,\ldots,v_n $RB\) is a linearly dependent
+set, then at least one of the elements of the set can be written
+as a linear combination of the others.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(v_1 = v_2 + v_3 , \) then
+\($LB v_1,v_2,v_3 $RB\) is a linearly dependent set.
+$BR
+%RADIO
+%CORRECT True
+False
+%END

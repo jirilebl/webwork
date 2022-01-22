@@ -1,0 +1,72 @@
+%DESC True/false / Multiple choice questions on Picard's theorem and the fixed point theorem
+%HINC head.txt
+%NOPARTIAL
+What are the hypotheses of the fixed point theorem / contraction mapping principle for a metric space \(X\) and a mapping \(f \colon X \to X\)?
+%CHECKBOXES
+\(X\) is complete.
+\(X\) is nonempty.
+\(f\) is a contraction.
+%EXTRA
+\(f\) is differentiable.
+\(f\) is constant.
+\(X\) is compact.
+%END
+
+Suppose there exist two distinct fixed points for \(f \colon X \to X,\)
+can \(f\) be a contraction?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+True or false:
+If \(X\) is compact, and \(f \colon X \to X \) is continuous,
+then \(f\) must have a fixed point.
+Hint: Think about a circle.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is differentiable and
+\(\lvert f'(x) \rvert \leq \frac{1}{2} ,\) then \(f\) must have a fixed point.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is differentiable and
+\(\lvert f'(x) \rvert \leq 1 ,\) then \(f\) must have a fixed point.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(F \colon I \times J \to {\mathbb{R}}\) is Lipschitz continuous,
+that is, there is a \(K\) such that for all \(x,s \in I\)
+and all \(y,t \in J\) we have
+\(\lvert F(x,y)-F(s,t) \rvert\) \leq K \sqrt{(x-s)^2+(y-t)^2},\) then
+\(f\) satisfies the hypotheses of 
+Picard's theorem.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(F \colon I \times J \to {\mathbb{R}}\) is uniformly continuous,
+then \(f\) satisfies the hypotheses of 
+Picard's theorem.
+$BR
+%RADIO
+True
+%CORRECT False
+%END

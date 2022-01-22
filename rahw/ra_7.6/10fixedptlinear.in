@@ -1,0 +1,40 @@
+%DESC Fixed point in the linear case
+%HINC head.txt
+%NOPARTIAL
+%FORMULAVARS a,b
+Let \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) be defined by
+\(f(x) = ax+b \) for some \(a\) and \(b.\)
+
+What is the set of \(a\) and \(b\) for which \(f\) has at least one fixed point?
+$BR
+%RADIORANDOM
+%CORRECT \(a \not= 1\) or \(b = 0 \)
+\(a \not= 1\) and any \(b\)
+\(\lvert a\rvert $LTS 1\) and any \(b\)
+\(\lvert a\rvert \leq 1\) and any \(b\)
+\(a = 1\) and \(b = 0 \)
+%END
+
+For what set of \(a\) and \(b\) does the contraction mapping principle apply?
+$BR
+%RADIORANDOM
+\(a \not= 1\) or \(b = 0 \)
+\(a \not= 1\) and any \(b\)
+%CORRECT \(\lvert a\rvert $LTS 1\) and any \(b\)
+\(\lvert a\rvert \leq 1\) and any \(b\)
+\(a = 1\) and \(b = 0 \)
+%END
+
+For what set of \(a\) and \(b\) does \(f\) have more than one fixed point?
+$BR
+%RADIORANDOM
+\(a \not= 1\) or \(b = 0 \)
+\(a \not= 1\) and any \(b\)
+\(\lvert a\rvert $LTS 1\) and any \(b\)
+\(\lvert a\rvert \leq 1\) and any \(b\)
+%CORRECT \(a = 1\) and \(b = 0 \)
+%END
+
+What is the fixed point in case it is unique?
+$BR
+%FORMULA b/(1-a)

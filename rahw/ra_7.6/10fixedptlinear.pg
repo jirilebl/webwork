@@ -1,0 +1,138 @@
+##DESCRIPTION
+## Fixed point in the linear case
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('7.6')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(a=>"Real",b=>"Real");
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Let \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) be defined by
+\(f(x) = ax+b \) for some \(a\) and \(b.\)
+$PAR
+What is the set of \(a\) and \(b\) for which \(f\) has at least one fixed point?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+[
+"\(a \not= 1\) or \(b = 0 \)",
+"\(a \not= 1\) and any \(b\)",
+"\(\lvert a\rvert $LTS 1\) and any \(b\)",
+"\(\lvert a\rvert \leq 1\) and any \(b\)",
+"\(a = 1\) and \(b = 0 \)",
+],
+],
+"\(a \not= 1\) or \(b = 0 \)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+For what set of \(a\) and \(b\) does the contraction mapping principle apply?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+[
+"\(a \not= 1\) or \(b = 0 \)",
+"\(a \not= 1\) and any \(b\)",
+"\(\lvert a\rvert $LTS 1\) and any \(b\)",
+"\(\lvert a\rvert \leq 1\) and any \(b\)",
+"\(a = 1\) and \(b = 0 \)",
+],
+],
+"\(\lvert a\rvert $LTS 1\) and any \(b\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+For what set of \(a\) and \(b\) does \(f\) have more than one fixed point?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+[
+"\(a \not= 1\) or \(b = 0 \)",
+"\(a \not= 1\) and any \(b\)",
+"\(\lvert a\rvert $LTS 1\) and any \(b\)",
+"\(\lvert a\rvert \leq 1\) and any \(b\)",
+"\(a = 1\) and \(b = 0 \)",
+],
+],
+"\(a = 1\) and \(b = 0 \)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+What is the fixed point in case it is unique?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("b/(1-a)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+
+ENDDOCUMENT();

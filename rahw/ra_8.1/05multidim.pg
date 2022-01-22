@@ -1,0 +1,270 @@
+##DESCRIPTION
+## True/false, multiple choice, short answer questions on vector spaces, span, and dimension
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a=random(2,9,1);
+$b=random(2,9,1);
+$c=random(2,9,1);
+$cpo=$c+1;
+$cmo=$c-1;
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+The span of \($LB (1,1,$a) , ($b,0,0) , (0,0,$c) $RB\)
+is all of \({\mathbb{R}}^3\).
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+The vector space of all polynomials of even degree is infinite dimensional.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+The vector space of all polynomials of degree less than or equal to $c is
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+[
+"$cpo",
+"$c",
+"$cmo",
+"infinite",
+"0",
+],
+],
+"$cpo",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+For what \(k\) are is the set 
+\($LB (1,$a) , ($b,k) $RB\)
+linearly dependent?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("$a*b");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+True or false:
+Any two bases of a finite dimensional vector space must have the same number
+of elements.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+If a vector space \(X\) contains a linearly independent set of \(\ell\)
+elements, then it necessarily must have a basis consisting of \(\ell\)
+elements.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+True or false:
+If a vector space \(X\) is of dimension \(d,\) then any 
+set of \(d\) nonzero elements must form a basis of \(X\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+True or false:
+If a vector space \(X\) is of dimension \(d,\) then any 
+set of \(d\) linearly independent elements must form a basis of \(X\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+$PAR
+True or false:
+If a set \($LB v_1,v_2,\ldots,v_n $RB\) is a linearly dependent
+set, then any one of the elements of the set can be written
+as a linear combination of the others.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+$PAR
+True or false:
+If a set \($LB v_1,v_2,\ldots,v_n $RB\) is a linearly dependent
+set, then at least one of the elements of the set can be written
+as a linear combination of the others.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q10 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q10->buttons \}
+
+$PAR
+True or false:
+If \(v_1 = v_2 + v_3 , \) then
+\($LB v_1,v_2,v_3 $RB\) is a linearly dependent set.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q11 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q11->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+ANS($q10->cmp());
+ANS($q11->cmp());
+
+ENDDOCUMENT();
