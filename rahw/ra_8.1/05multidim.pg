@@ -50,7 +50,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 The span of \($LB (1,1,$a) , ($b,0,0) , (0,0,$c) $RB\)
-is all of \({\mathbb{R}}^3\).
+is all of \({\mathbb{R}}^3.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -83,21 +83,21 @@ BEGIN_TEXT
 \{ $q2->buttons \}
 
 $PAR
-The vector space of all polynomials of degree less than or equal to $c is
+The vector space of all polynomials of degree less than or equal to \($c\) is
 $BR
 END_TEXT
 Context()->normalStrings;
 
 $q3 = RadioButtons([
 [
-"$cpo",
-"$c",
-"$cmo",
+"\($cpo\)",
+"\($c\)",
+"\($cmo\)",
 "infinite",
-"0",
+"\(0\)",
 ],
 ],
-"$cpo",
+"\($cpo\)",
 );
 Context()->texStrings;
 BEGIN_TEXT
