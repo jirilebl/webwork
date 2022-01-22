@@ -24,6 +24,7 @@ False
 %END
 
 The vector space of all polynomials of degree less than or equal to \($c\) is
+of dimension
 $BR
 %RADIORANDOM
 %CORRECT \($cpo\)
@@ -60,7 +61,7 @@ True
 
 True or false:
 If a vector space \(X\) is of dimension \(d,\) then any 
-set of \(d\) nonzero elements must form a basis of \(X\)
+set of \(d\) nonzero elements must form a basis of \(X.\)
 $BR
 %RADIO
 True
@@ -69,7 +70,7 @@ True
 
 True or false:
 If a vector space \(X\) is of dimension \(d,\) then any 
-set of \(d\) linearly independent elements must form a basis of \(X\)
+set of \(d\) linearly independent elements must form a basis of \(X.\)
 $BR
 %RADIO
 %CORRECT True

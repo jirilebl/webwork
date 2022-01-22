@@ -140,8 +140,8 @@ True or false:
 If \(F \colon I \times J \to {\mathbb{R}}\) is Lipschitz continuous,
 that is, there is a \(K\) such that for all \(x,s \in I\)
 and all \(y,t \in J\) we have
-\(\lvert F(x,y)-F(s,t) \rvert\) \leq K \sqrt{(x-s)^2+(y-t)^2},\) then
-\(f\) satisfies the hypotheses of 
+\(\lvert F(x,y)-F(s,t) \rvert \leq K \sqrt{(x-s)^2+(y-t)^2},\) then
+\(F\) satisfies the hypotheses of 
 Picard's theorem.
 $BR
 END_TEXT

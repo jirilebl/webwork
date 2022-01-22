@@ -35,6 +35,6 @@ $BR
 %CORRECT \(a = 1\) and \(b = 0 \)
 %END
 
-What is the fixed point in case it is unique?
+What is the fixed point in case \(a\not=1\)
 $BR
 %FORMULA b/(1-a)

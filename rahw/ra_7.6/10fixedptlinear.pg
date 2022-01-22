@@ -110,7 +110,7 @@ BEGIN_TEXT
 \{ $q3->buttons \}
 
 $PAR
-What is the fixed point in case it is unique?
+What is the fixed point in case \(a\not=1\)
 $BR
 END_TEXT
 Context()->normalStrings;
