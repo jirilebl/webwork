@@ -1,0 +1,70 @@
+%DESC True/false and multiple choice about absolute value
+%HINC head.txt
+%NOPARTIAL
+Suppose \(f \colon D \to {\mathbb{R}}\) and 
+\(g \colon D \to {\mathbb{R}}\) are bounded functions
+such that \(f(x) \leq g(x)\) for all \(x \in D.\)
+Which of the following statements are necessarily true.
+%CHECKBOXES
+\(\inf_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)
+\(\sup_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)
+\(\inf_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)
+%EXTRA
+\(\sup_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)
+%END
+
+%SETUP $a=random(2,4,1);
+%SETUP $b=$a+random(1,4,1);
+%SETUP $bpa=$a+$b;
+%SETUP $bma=$b-$b;
+Suppose \(\lvert x \rvert \leq $a\) and
+\(\lvert y \rvert \leq $b .\)
+Which statements are necessarily true:
+%CHECKBOXES
+\(\lvert x+y \rvert \leq $bpa \)
+\(\lvert x-y \rvert \leq $bpa \)
+\($bma \leq \lvert x-y \rvert \)
+\($bma \leq \lvert x+y \rvert \)
+%EXTRA
+\(\lvert x-y \rvert \leq $bma \)
+\(\lvert x-y \rvert \leq $a \)
+\($b \leq \lvert x-y \rvert \)
+\($bpa \leq \lvert x+y \rvert \)
+%END
+
+True or false:
+If \(f \colon D \to {\mathbb{R}}\) is a bounded function
+and \(M = \sup_{x \in D} \lvert f(x) \rvert ,\)
+then \(\lvert f(x) \rvert \leq M\) for all \(x \in D .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f \colon D \to {\mathbb{R}}\) is a bounded function
+and \(M = \inf_{x \in D} \lvert f(x) \rvert ,\)
+then \(M \leq \lvert f(x) \rvert\) for all \(x \in D .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f \colon D \to {\mathbb{R}}\) and 
+\(g \colon D \to {\mathbb{R}}\) are bounded functions
+such that \(f(x) \geq 0\) and \(g(x) \geq 0\) for all \(x \in D,\)
+then for all \(x \in D\) we have
+\[
+\inf_{x \in D} \bigl( f(x) g(x) \bigr)
+\leq
+\left( \inf_{x \in D} f(x) \right)
+\left( \inf_{x \in D} g(x) \right) .
+\]
+$BR
+%RADIO
+%CORRECT True
+False
+%END
