@@ -137,10 +137,10 @@ If \(f \colon D \to {\mathbb{R}}\) and
 such that \(f(x) \geq 0\) and \(g(x) \geq 0\) for all \(x \in D,\)
 then for all \(x \in D\) we have
 \[
-\inf_{x \in D} \bigl( f(x) g(x) \bigr)
+\sup_{x \in D} \bigl( f(x) g(x) \bigr)
 \leq
-\left( \inf_{x \in D} f(x) \right)
-\left( \inf_{x \in D} g(x) \right) .
+\left( \sup_{x \in D} f(x) \right)
+\left( \sup_{x \in D} g(x) \right) .
 \]
 $BR
 END_TEXT
