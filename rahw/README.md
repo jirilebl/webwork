@@ -1,24 +1,28 @@
 # Basic Analysis Problems
 
 A set of WeBWorK problems for courses teaching a class with the
-*Basic Analysis* textbook volume I.  The idea is not to replace written
-homework but to supplement it.  There is some overlap in these problems and
-some of the problems in the book.  There are a lot of True/false questions and
-some multiple choice questions.  Then there are many problems where a proof is
-supposed to be constructed by drag and drop.  Finally there are a few problems
-where a proof is taken from the book (sometimes lightly edited) and control
-questions are asked throughout.
+*Basic Analysis* textbook volume I (and a few for volume II).  The idea is not
+to replace written homework but to supplement it.  There is some overlap in
+these problems and some of the problems in the book.  There are a lot of
+True/false questions and some multiple choice questions.  Then there are many
+problems where a proof is supposed to be constructed by drag and drop.  Finally
+there are a few problems where a proof is taken from the book (sometimes
+lightly edited) and control questions are asked throughout.
 
-Coverage is more or less reasonable for the non-optional bits, trying to
-get at least 2-3 questions per section (more for ones that take longer).
-A few sections only have 1 problem (3.5, 3.6, 4.4, 6.2) and a few sections
-do not yet have any problems yet (5.4, 5.5, 6.3, 7.6).
+For volume I, coverage is more or less reasonable for the non-optional bits,
+trying to get at least 2-3 questions per section (more for ones that take
+longer).  A few sections only have 1 problem (3.5, 3.6, 4.4, 6.2, 6.3) and a
+couple of sections do not yet have any problems yet (5.4, 5.5).
 
 When I ran the course in Fall 2021, I covered non-optional bits of chapters
-0-5 and chapter 7 (without Picard) and I had 6 problems per week the whole
-semester.  Those problems have been class tested.  Note that there are a few
-problems in the other sections that I didn't conver that have not been class
-tested yet.
+0-5 and chapter 7 (without Picard) and I had 6 of these problems per week
+the whole semester.  Those problems have been class tested, and the feedback
+from students has been positive.  There are a few problems, especially in the
+sections I did not cover, that have not been class tested yet.  So use with a
+bit of care.
+
+Volume II problems are right now work in progress and are being used in
+Spring 2022.
 
 ## How to use?
 
