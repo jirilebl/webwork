@@ -40,7 +40,7 @@ Context("Numeric");
 $a=random(2,4,1);
 $b=$a+random(1,4,1);
 $bpa=$a+$b;
-$bma=$b-$b;
+$bma=$b-$a;
 
 ############################
 # Main text
@@ -51,7 +51,7 @@ $PAR
 Suppose \(f \colon D \to {\mathbb{R}}\) and 
 \(g \colon D \to {\mathbb{R}}\) are bounded functions
 such that \(f(x) \leq g(x)\) for all \(x \in D.\)
-Which of the following statements are necessarily true.
+Which of the following statements are necessarily true:
 END_TEXT
 Context()->normalStrings;
 
@@ -96,7 +96,7 @@ $PAR
 True or false:
 If \(f \colon D \to {\mathbb{R}}\) is a bounded function
 and \(M = \sup_{x \in D} \lvert f(x) \rvert ,\)
-then \(\lvert f(x) \rvert \leq M\) for all \(x \in D .\)
+then \(-M \leq f(x) \leq M\) for all \(x \in D .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -115,7 +115,7 @@ $PAR
 True or false:
 If \(f \colon D \to {\mathbb{R}}\) is a bounded function
 and \(M = \inf_{x \in D} \lvert f(x) \rvert ,\)
-then \(M \leq \lvert f(x) \rvert\) for all \(x \in D .\)
+then \(M \leq f(x) \) for all \(x \in D .\)
 $BR
 END_TEXT
 Context()->normalStrings;

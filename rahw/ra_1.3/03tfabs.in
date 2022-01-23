@@ -4,7 +4,7 @@
 Suppose \(f \colon D \to {\mathbb{R}}\) and 
 \(g \colon D \to {\mathbb{R}}\) are bounded functions
 such that \(f(x) \leq g(x)\) for all \(x \in D.\)
-Which of the following statements are necessarily true.
+Which of the following statements are necessarily true:
 %CHECKBOXES
 \(\inf_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)
 \(\sup_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)
@@ -16,7 +16,7 @@ Which of the following statements are necessarily true.
 %SETUP $a=random(2,4,1);
 %SETUP $b=$a+random(1,4,1);
 %SETUP $bpa=$a+$b;
-%SETUP $bma=$b-$b;
+%SETUP $bma=$b-$a;
 Suppose \(\lvert x \rvert \leq $a\) and
 \(\lvert y \rvert \leq $b .\)
 Which statements are necessarily true:
@@ -35,7 +35,7 @@ Which statements are necessarily true:
 True or false:
 If \(f \colon D \to {\mathbb{R}}\) is a bounded function
 and \(M = \sup_{x \in D} \lvert f(x) \rvert ,\)
-then \(\lvert f(x) \rvert \leq M\) for all \(x \in D .\)
+then \(-M \leq f(x) \leq M\) for all \(x \in D .\)
 $BR
 %RADIO
 %CORRECT True
@@ -45,7 +45,7 @@ False
 True or false:
 If \(f \colon D \to {\mathbb{R}}\) is a bounded function
 and \(M = \inf_{x \in D} \lvert f(x) \rvert ,\)
-then \(M \leq \lvert f(x) \rvert\) for all \(x \in D .\)
+then \(M \leq f(x) \) for all \(x \in D .\)
 $BR
 %RADIO
 True
