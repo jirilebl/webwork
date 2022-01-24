@@ -145,7 +145,7 @@ BEGIN_TEXT
 $PAR
 Consider the sequence of functions
 \(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
-\(f_n(x) = (-1)^n {\left(\frac{1+x}{2}\right)}^{n} .\)  What is the largest subset of \([0,1]\)
+\(f_n(x) = (-1)^n {(1+x)}^{n} .\)  What is the largest subset of \([0,1]\)
 on which \($LB f_n $RB\) converges pointwise.
 $BR
 END_TEXT
