@@ -48,7 +48,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 True or false:
-If a linear mapping is invertible, then the the inverse is linear.
+If a linear mapping is invertible, then its inverse is linear.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -66,8 +66,8 @@ BEGIN_TEXT
 $PAR
 True or false:
 Suppose \(A \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2 \)
-and \(B \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2 \) are linear
-and \(A($a,$a) = B($a,$a)\) and \(A($a,-$a) = B($a,-$a).\)
+and \(B \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2 \) are linear,
+\(A($a,$a) = B($a,$a),\) and \(A($a,-$a) = B($a,-$a).\)
 Then \(A=B.\)
 $BR
 END_TEXT
