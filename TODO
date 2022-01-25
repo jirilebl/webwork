@@ -1,1 +1,15 @@
+For the story problem maker
 * Add %HINT
+* Add %PL for direct perl (not going up front as %SETUP)
+* Add a simple randomized versioning so that we can have some 
+  randomness in the multiple choice.  Something like (though that requires
+  two passes)
+    %RANDOMVERS
+      foo
+    %NEXTVER
+      foo
+    %NEXTVER
+      foo
+    %ENDVER
+* Seems like including just a "$a" or some such as radio option doesn't seem to
+  work.  Debug.
