@@ -52,7 +52,7 @@ Compute the operator norm of the linear operator given by
 END_TEXT
 Context()->normalStrings;
 
-$q1 = Formula("1/($a)");
+$q1 = Formula("1/($a+1)");
 
 Context()->texStrings;
 BEGIN_TEXT
