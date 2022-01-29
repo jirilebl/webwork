@@ -1,0 +1,233 @@
+##DESCRIPTION
+## True/false, multiple choice, short answer questions on normed vector spaces
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.2')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGchoicemacros.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a=random(2,9,1);
+$b=random(2,9,1);
+$c=random(2,9,1);
+$d=random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Consider \(x = (x_1,x_2,\ldots,x_n)\) denote vectors in \({\mathbb{R}}^n,\)
+\(n \geq 2.\)
+Which of the following expressions give a norm.
+END_TEXT
+Context()->normalStrings;
+
+$q1 = new_checkbox_multiple_choice();
+$q1->qa("Check all that apply",
+"\(\lvert x_1 \rvert+\lvert x_2 \rvert+\cdots+\lvert x_n \rvert\)",
+"\(\max $LB \lvert x_1 \rvert, \lvert x_2 \rvert, \ldots, \lvert x_n \rvert $RB\)",
+"\(\lvert x_1 \rvert+2 \lvert x_2 \rvert+\cdots+n \lvert x_n \rvert\)",
+"\(\sqrt{{x_1}^2+{x_2}^2+\cdots+{x_n}^2} \)",
+);
+$q1->extra(
+"\({\sqrt{\lvert x_1 \rvert}+\sqrt{\lvert x_2 \rvert}+\cdots+\sqrt{\lvert x_n \rvert}}^2 \)",
+"\(\max $LB x_1 , x_2 , \ldots,  x_n $RB\)",
+"\(\min $LB \lvert x_1 \rvert, \lvert x_2 \rvert, \ldots, \lvert x_n \rvert $RB\)",
+"\({x_1}^2+{x_2}^2+\cdots+{x_n}^2 \)",
+"\(\lvert x_1 \rvert\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->print_a() \}
+
+$PAR
+True or false:
+Every normed vector space is a metric space.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+Every metric on \({\mathbb{R}}^n\) comes from a norm.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+If \($LB A_n $RB\) is a sequence of invertible linear operators on
+a finite-dimensional normed vector space \(X\) (a sequence in \(GL(X)\))
+that converges to a linear operator \(A,\)
+then \(A\) is invertible.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+Suppose that \(A \in L(X)\) is a linear operator on
+a finite-dimensional normed vector space such that
+\(\lVert Ax \rVert = \frac{1}{$a}\)
+whenever
+\(\lVert x \rVert = 1.\)
+Then \(I+A\) is invertible.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+Consider the vector space \(C([0,1],{\mathbb{R}}\) with the uniform norm.
+Compute the operator norm of the linear operator given by
+\[f \mapsto \int_0^x t^{$a}f(t)\, dt \]
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("1/($a)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+Hint: Consider the biggest \(f\) whose uniform norm is 1.
+$PAR
+Consider the vectorspace \({\mathbb{R}}^2\) with euclidean norm.
+Compute the operator norm of the operators given by the following matrices.
+$PAR
+\( \left\lVert \begin{bmatrix} 1 & 0 \\ 0 & $b \end{bmatrix} \right\rVert = {} \)
+END_TEXT
+Context()->normalStrings;
+
+$q7 = Formula("$b");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\( \left\lVert \begin{bmatrix} 0 & 1 \\ -$c & 0 \end{bmatrix} \right\rVert = {} \)
+END_TEXT
+Context()->normalStrings;
+
+$q8 = Formula("$c");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\( \left\lVert \begin{bmatrix} 1 & 1 \\ 0 & $a \end{bmatrix} \right\rVert = {} \)
+END_TEXT
+Context()->normalStrings;
+
+$q9 = Formula("sqrt(1+($a)^2)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\( \left\lVert \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} \right\rVert = {} \)
+END_TEXT
+Context()->normalStrings;
+
+$q10 = Formula("sqrt(2)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp($q1->correct_ans()));
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+ANS($q10->cmp());
+
+ENDDOCUMENT();

@@ -28,6 +28,7 @@ $havecheckboxes = 0;
 
 $formulas = 0;
 $numbers = 0;
+$matrices = 0;
 
 $rulewidth = 0;
 
@@ -247,6 +248,26 @@ BEGIN_TEXT
 \\{ ans_rule($rw) \\}
 \\{ AnswerFormatHelp("numbers") \\}
 EOF
+	} elsif ($insolution == 0 and $line =~ m/^%MATRIX[ \t][ \t]*(.*)$/) {
+		$qnum++;
+		$qcheckers[$qnum-1]="ANS(\$q$qnum\->cmp());\n";
+		$matrices++;
+		$answer = $1;
+		$rw = 10;
+		if ($rulewidth > 0) {
+			$rw = $rulewidth;
+		}
+		$out .= << "EOF";
+END_TEXT
+Context()->normalStrings;
+
+\$q$qnum = Compute(\"$answer\");
+
+Context()->texStrings;
+BEGIN_TEXT
+\\{ ans_rule($rw) \\}
+\\{ AnswerFormatHelp("matrices") \\}
+EOF
 	} elsif ($insolution == 0 and $line =~ m/^%FORMULAVARS[ \t][ \t]*([a-zA-Z,]*)[ \t]*$/) {
 		$vars = $1;
 		$vars =~ s/,$//;
@@ -328,6 +349,11 @@ if ($havecheckboxes) {
 	 print " \"PGchoicemacros.pl\",\n";
 }
 
+$ctx = "Numeric";
+if ($matrices > 0) {
+	$ctx = "Matrix";
+}
+
 print << "EOF";
  \"PGcourse.pl\",
 );
@@ -339,7 +365,7 @@ TEXT(beginproblem());
 
 \$showPartialCorrectAnswers = $partialanswers;
 
-Context(\"Numeric\");
+Context(\"$ctx\");
 
 $setvars
 $setup

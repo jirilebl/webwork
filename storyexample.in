@@ -194,6 +194,12 @@ would be equivalent, but "goodbye" is not.  By default it is a 40-wide rule.
 
 %STRING Good Bye
 
+You can also ask for matrices.  If any matrix entry is encountered, the
+MathObjects context is changed to "Matrix" for the whole problem.
+The default rule width for matrices is 10 because this will be for every
+entry.
+
+%MATRIX [[1,2],[3,4]]
 
 $BBOLD Descriptive headers $EBOLD
 

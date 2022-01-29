@@ -17,7 +17,7 @@ TEXT(beginproblem());
 
 $showPartialCorrectAnswers = 1;
 
-Context("Numeric");
+Context("Matrix");
 
 Context()->variables->are(x=>"Real",y=>"Real",z=>"Real");
 
@@ -398,6 +398,20 @@ would be equivalent, but "goodbye" is not.  By default it is a 40-wide rule.
 $PAR
 \{ ans_rule(40) \}
 $PAR
+You can also ask for matrices.  If any matrix entry is encountered, the
+MathObjects context is changed to "Matrix" for the whole problem.
+The default rule width for matrices is 10 because this will be for every
+entry.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q19 = Compute("[[1,2],[3,4]]");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(10) \}
+\{ AnswerFormatHelp("matrices") \}
 $PAR
 $BBOLD Descriptive headers $EBOLD
 $PAR
@@ -450,5 +464,6 @@ ANS($q15->cmp());
 ANS($q16->cmp());
 ANS($q17->cmp());
 ANS(str_cmp("Good Bye"));
+ANS($q19->cmp());
 
 ENDDOCUMENT();

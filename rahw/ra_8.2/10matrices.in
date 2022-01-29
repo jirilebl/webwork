@@ -1,0 +1,51 @@
+%DESC True/false, multiple choice, short answer questions on matrices
+%HINC head.txt
+%NOPARTIAL
+True or false:
+Every linear operator from \( {\mathbb{R}}^n \) to
+\( {\mathbb{R}}^m \) can be represented by a matrix.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Given finite-dimensional vector spaces \(X\) and \(Y,\)
+a given matrix represents the same linear operator in \(L(X,Y)\)
+regardless of the choice of basis.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+Yes or no:
+Suppose that \(X\) and \(Y\) are 2-dimensional
+vector spaces.  Given an invertible linear operator
+\(A \in L(X,Y),\) can bases be chosen on \(X\) and \(Y\) such that
+\(A\) is represented by the identity matrix
+\(\left[ \begin{smallmatrix} 1 & 0 \\ 0 & 1 \end{smallmatrix} \right]?\)
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+Yes or no:
+Suppose that \(X\) and \(Y\) are 2-dimensional
+vector spaces.  Given a $BBOLD noninvertible $EBOLD linear operator
+\(A \in L(X,Y),\) can bases be chosen on \(X\) and \(Y\) such that
+\(A\) is represented by the identity matrix
+\(\left[ \begin{smallmatrix} 1 & 0 \\ 0 & 1 \end{smallmatrix} \right]?\)
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+Suppose \(X\) is the space of polynomials of degree 3 or less (a 4-dimensional
+vector space).  Let \(D\) be the derivative operator.  Given the basis
+\($LB 1,t,t^2,t^3 $RB\) on \(X\) what is the matrix giving \(D?\)
+$BR
+%MATRIX [[0,1,0,0],[0,0,2,0],[0,0,0,3],[0,0,0,0]]
