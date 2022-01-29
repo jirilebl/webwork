@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## True/false, multiple choice, short answer questions on normed vector spaces
+## True/false, multiple choice questions on normed vector spaces
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -38,9 +38,6 @@ Context("Numeric");
 
 
 $a=random(2,9,1);
-$b=random(2,9,1);
-$c=random(2,9,1);
-$d=random(2,9,1);
 
 ############################
 # Main text
@@ -62,7 +59,7 @@ $q1->qa("Check all that apply",
 "\(\sqrt{{x_1}^2+{x_2}^2+\cdots+{x_n}^2} \)",
 );
 $q1->extra(
-"\({\sqrt{\lvert x_1 \rvert}+\sqrt{\lvert x_2 \rvert}+\cdots+\sqrt{\lvert x_n \rvert}}^2 \)",
+"\({\bigl(\sqrt{\lvert x_1 \rvert}+\sqrt{\lvert x_2 \rvert}+\cdots+\sqrt{\lvert x_n \rvert}\bigr)}^2 \)",
 "\(\max $LB x_1 , x_2 , \ldots,  x_n $RB\)",
 "\(\min $LB \lvert x_1 \rvert, \lvert x_2 \rvert, \ldots, \lvert x_n \rvert $RB\)",
 "\({x_1}^2+{x_2}^2+\cdots+{x_n}^2 \)",
@@ -148,68 +145,6 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q5->buttons \}
 
-$PAR
-Consider the vector space \(C([0,1],{\mathbb{R}}\) with the uniform norm.
-Compute the operator norm of the linear operator given by
-\[f \mapsto \int_0^x t^{$a}f(t)\, dt \]
-END_TEXT
-Context()->normalStrings;
-
-$q6 = Formula("1/($a)");
-
-Context()->texStrings;
-BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
-$BR
-Hint: Consider the biggest \(f\) whose uniform norm is 1.
-$PAR
-Consider the vectorspace \({\mathbb{R}}^2\) with euclidean norm.
-Compute the operator norm of the operators given by the following matrices.
-$PAR
-\( \left\lVert \begin{bmatrix} 1 & 0 \\ 0 & $b \end{bmatrix} \right\rVert = {} \)
-END_TEXT
-Context()->normalStrings;
-
-$q7 = Formula("$b");
-
-Context()->texStrings;
-BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
-$PAR
-\( \left\lVert \begin{bmatrix} 0 & 1 \\ -$c & 0 \end{bmatrix} \right\rVert = {} \)
-END_TEXT
-Context()->normalStrings;
-
-$q8 = Formula("$c");
-
-Context()->texStrings;
-BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
-$PAR
-\( \left\lVert \begin{bmatrix} 1 & 1 \\ 0 & $a \end{bmatrix} \right\rVert = {} \)
-END_TEXT
-Context()->normalStrings;
-
-$q9 = Formula("sqrt(1+($a)^2)");
-
-Context()->texStrings;
-BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
-$PAR
-\( \left\lVert \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} \right\rVert = {} \)
-END_TEXT
-Context()->normalStrings;
-
-$q10 = Formula("sqrt(2)");
-
-Context()->texStrings;
-BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
 
 END_TEXT
 Context()->normalStrings;
@@ -224,10 +159,5 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
-ANS($q6->cmp());
-ANS($q7->cmp());
-ANS($q8->cmp());
-ANS($q9->cmp());
-ANS($q10->cmp());
 
 ENDDOCUMENT();
