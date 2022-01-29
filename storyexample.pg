@@ -410,8 +410,9 @@ $q19 = Compute("[[1,2],[3,4]]");
 
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(10) \}
+\{ $q19->ans_array(10) \}
 \{ AnswerFormatHelp("matrices") \}
+$PAR
 $PAR
 $BBOLD Descriptive headers $EBOLD
 $PAR

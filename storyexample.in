@@ -201,6 +201,7 @@ entry.
 
 %MATRIX [[1,2],[3,4]]
 
+
 $BBOLD Descriptive headers $EBOLD
 
 You can also include the standard description headers by "%H text here".
