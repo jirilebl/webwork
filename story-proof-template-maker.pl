@@ -265,7 +265,7 @@ Context()->normalStrings;
 
 Context()->texStrings;
 BEGIN_TEXT
-\\{ ans_rule($rw) \\}
+\\{ \$q$qnum->ans_array($rw) \\}
 \\{ AnswerFormatHelp("matrices") \\}
 EOF
 	} elsif ($insolution == 0 and $line =~ m/^%FORMULAVARS[ \t][ \t]*([a-zA-Z,]*)[ \t]*$/) {

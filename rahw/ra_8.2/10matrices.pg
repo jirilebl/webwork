@@ -133,7 +133,7 @@ $q5 = Compute("[[0,1,0,0],[0,0,2,0],[0,0,0,3],[0,0,0,0]]");
 
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(10) \}
+\{ $q5->ans_array(10) \}
 \{ AnswerFormatHelp("matrices") \}
 
 END_TEXT
