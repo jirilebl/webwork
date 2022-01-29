@@ -8,7 +8,7 @@
 Consider the vector space \(C([0,1],{\mathbb{R}}\) with the uniform norm.
 Compute the operator norm of the linear operator given by
 \[f \mapsto \int_0^x t^{$a}f(t)\, dt \]
-%NUMBER 1/($a)
+%NUMBER 1/($a+1)
 $BR
 $BITALIC Hint: Consider the biggest \(f\) whose uniform norm is 1. $EITALIC
 
