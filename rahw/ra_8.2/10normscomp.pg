@@ -38,6 +38,7 @@ Context("Numeric");
 $a=random(2,9,1);
 $b=random(2,9,1);
 $c=random(2,9,1);
+$d=random(2,9,1);
 
 ############################
 # Main text
@@ -58,7 +59,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $BR
-Hint: Consider the biggest \(f\) whose uniform norm is 1.
+$BITALIC Hint: Consider the biggest \(f\) whose uniform norm is 1. $EITALIC
 $PAR
 Consider the vectorspace \({\mathbb{R}}^2\) with euclidean norm.
 Compute the operator norm of the operators given by the following matrices.
@@ -85,11 +86,11 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-\( \left\lVert \begin{bmatrix} 1 & 1 \\ 0 & $a \end{bmatrix} \right\rVert = {} \)
+\( \left\lVert \begin{bmatrix} 1 & 1 \\ 0 & $d \end{bmatrix} \right\rVert = {} \)
 END_TEXT
 Context()->normalStrings;
 
-$q4 = Formula("sqrt(1+($a)^2)");
+$q4 = Formula("sqrt(1+($d)^2)");
 
 Context()->texStrings;
 BEGIN_TEXT

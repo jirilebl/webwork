@@ -4,12 +4,13 @@
 %SETUP $a=random(2,9,1);
 %SETUP $b=random(2,9,1);
 %SETUP $c=random(2,9,1);
+%SETUP $d=random(2,9,1);
 Consider the vector space \(C([0,1],{\mathbb{R}}\) with the uniform norm.
 Compute the operator norm of the linear operator given by
 \[f \mapsto \int_0^x t^{$a}f(t)\, dt \]
 %NUMBER 1/($a)
 $BR
-Hint: Consider the biggest \(f\) whose uniform norm is 1.
+$BITALIC Hint: Consider the biggest \(f\) whose uniform norm is 1. $EITALIC
 
 Consider the vectorspace \({\mathbb{R}}^2\) with euclidean norm.
 Compute the operator norm of the operators given by the following matrices.
@@ -20,8 +21,8 @@ Compute the operator norm of the operators given by the following matrices.
 \( \left\lVert \begin{bmatrix} 0 & 1 \\ -$c & 0 \end{bmatrix} \right\rVert = {} \)
 %NUMBER $c
 
-\( \left\lVert \begin{bmatrix} 1 & 1 \\ 0 & $a \end{bmatrix} \right\rVert = {} \)
-%NUMBER sqrt(1+($a)^2)
+\( \left\lVert \begin{bmatrix} 1 & 1 \\ 0 & $d \end{bmatrix} \right\rVert = {} \)
+%NUMBER sqrt(1+($d)^2)
 
 \( \left\lVert \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} \right\rVert = {} \)
 %NUMBER sqrt(2)
