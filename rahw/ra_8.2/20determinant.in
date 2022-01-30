@@ -1,0 +1,45 @@
+%DESC Questions on the determinant
+%HINC head.txt
+%NOPARTIAL
+%SETUP $a=random(2,5,1);
+%SETUP $b=$a+random(1,4,1);
+%SETUP $c=random(2,9,1);
+%SETUP $d=random(2,9,1);
+True or false:
+If \(X\) is a finite dimensional vector space and \(A \in L(X)\) is a linear operator,
+then the determinant of \(A\) does not depend on a choice of basis of \(X.\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(X\) is a finite dimensional normed vector space, then
+the determinant is a continuous function with respect to the metric
+induced by the operator norm on \(L(X).\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+Suppose \(\det(A) = $a\) and \(\det(B)=$b .\) Compute
+
+\(\det(AB) = {}\)
+%NUMBER $a*$b
+
+\(\det(A^{-1}) = {}\)
+%NUMBER 1/($a)
+
+\(\det(A^{-1}B) = {}\)
+%NUMBER ($b)/($a)
+
+For what \(k\) is 
+\[
+\begin{bmatrix} $c & $d \\ k & $a \end{bmatrix}
+\]
+not invertible?
+$BR
+\(k={}\)
+%NUMBER ($c*$a)/($d)

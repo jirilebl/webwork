@@ -1,0 +1,154 @@
+##DESCRIPTION
+## Questions on the determinant
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.2')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a=random(2,5,1);
+$b=$a+random(1,4,1);
+$c=random(2,9,1);
+$d=random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+If \(X\) is a finite dimensional vector space and \(A \in L(X)\) is a linear operator,
+then the determinant of \(A\) does not depend on a choice of basis of \(X.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+If \(X\) is a finite dimensional normed vector space, then
+the determinant is a continuous function with respect to the metric
+induced by the operator norm on \(L(X).\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+Suppose \(\det(A) = $a\) and \(\det(B)=$b .\) Compute
+$PAR
+\(\det(AB) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("$a*$b");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(\det(A^{-1}) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("1/($a)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(\det(A^{-1}B) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("($b)/($a)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+For what \(k\) is 
+\[
+\begin{bmatrix} $c & $d \\ k & $a \end{bmatrix}
+\]
+not invertible?
+$BR
+\(k={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("($c*$a)/($d)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+
+ENDDOCUMENT();
