@@ -1,0 +1,88 @@
+##DESCRIPTION
+## Simple proof using determinants
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.2')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Prove that the set \(GL({\mathbb{R}}^n)\) of invertible operators
+is not a connected set (for any \(n\)).
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Suppose for contradiction that \(GL({\mathbb{R}}^n)\) is connected.",
+"Suppose \(det(A) $GTS 0\) for some \(A \in GL({\mathbb{R}}^n) .\)",
+"As \(\det\) is a continuous function, then \(\det(B) $GTS 0\) for all \(B\) near \(A.\)",
+"Hence \(P\) of operators with positive determinant is an open set.",
+"Similarly, the set \(N\) of operators with a negative determinant is open.",
+"As bots sets are nonempty (\(I \in P\) and \(-I \in N\)), \(GL({\mathbb{R}}^n) = P \cup N\) must be disconnected.",
+],
+[
+"The determinant is discontinuous at the origin.",
+"Let \(A \in GL({\mathbb{R}}^n)\) be such that \(\det(A)=0.\)",
+"Let \(n=1.\)",
+"The set \(GL({\mathbb{R}}^n)\) is not convex as \(\frac{1}{2} I + \frac{1}{2}(-I) = 0.\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the left column
+to the right, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+
+ENDDOCUMENT();
