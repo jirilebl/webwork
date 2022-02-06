@@ -50,12 +50,11 @@ END_TEXT
 Context()->normalStrings;
 
 $q1 = DraggableProof([
-"Suppose for contradiction that \(GL({\mathbb{R}}^n)\) is connected.",
-"Suppose \(det(A) $GTS 0\) for some \(A \in GL({\mathbb{R}}^n) .\)",
+"Suppose \(\det(A) $GTS 0\) for some \(A \in GL({\mathbb{R}}^n) .\)",
 "As \(\det\) is a continuous function, then \(\det(B) $GTS 0\) for all \(B\) near \(A.\)",
-"Hence \(P\) of operators with positive determinant is an open set.",
+"Hence the set \(P\) of operators with positive determinant is an open set.",
 "Similarly, the set \(N\) of operators with a negative determinant is open.",
-"As bots sets are nonempty (\(I \in P\) and \(-I \in N\)), \(GL({\mathbb{R}}^n) = P \cup N\) must be disconnected.",
+"As both sets are nonempty (\(I \in P\) and \(-I \in N\)), \(GL({\mathbb{R}}^n) = P \cup N\) must be disconnected.",
 ],
 [
 "The determinant is discontinuous at the origin.",
