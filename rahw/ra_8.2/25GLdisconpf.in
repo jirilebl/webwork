@@ -1,0 +1,17 @@
+%DESC Simple proof using determinants
+%HINC head.txt
+Prove that the set \(GL({\mathbb{R}}^n)\) of invertible operators
+is not a connected set (for any \(n\)).
+
+%PROOF
+Suppose \(\det(A) $GTS 0\) for some \(A \in GL({\mathbb{R}}^n) .\)
+As \(\det\) is a continuous function, then \(\det(B) $GTS 0\) for all \(B\) near \(A.\)
+Hence the set \(P\) of operators with positive determinant is an open set.
+Similarly, the set \(N\) of operators with a negative determinant is open.
+As both sets are nonempty (\(I \in P\) and \(-I \in N\)), \(GL({\mathbb{R}}^n) = P \cup N\) must be disconnected.
+%EXTRA
+The determinant is discontinuous at the origin.
+Let \(A \in GL({\mathbb{R}}^n)\) be such that \(\det(A)=0.\)
+Let \(n=1.\)
+The set \(GL({\mathbb{R}}^n)\) is not convex as \(\frac{1}{2} I + \frac{1}{2}(-I) = 0.\)
+%END
