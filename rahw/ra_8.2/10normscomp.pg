@@ -86,11 +86,11 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-\( \left\lVert \begin{bmatrix} 1 & 1 \\ 0 & $d \end{bmatrix} \right\rVert = {} \)
+\( \left\lVert \begin{bmatrix} $d & 1 \\ 1 & $d \end{bmatrix} \right\rVert = {} \)
 END_TEXT
 Context()->normalStrings;
 
-$q4 = Formula("sqrt(1+($d)^2)");
+$q4 = Formula("$d+1");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -101,7 +101,7 @@ $PAR
 END_TEXT
 Context()->normalStrings;
 
-$q5 = Formula("sqrt(2)");
+$q5 = Formula("2");
 
 Context()->texStrings;
 BEGIN_TEXT
