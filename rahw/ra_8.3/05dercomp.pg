@@ -104,11 +104,11 @@ Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\)
 is given by
 \[
 f(x,y) =
-\begin{bmatrix}
+\begin{cases}
 ($a x^2+ $b y^2)\sin\left(\frac{1}{$c x^2+$d y^2}\right) + $e x + $f y
 & \text{if } (x,y) \not= (0,0) \\
 0 & \text{if } (x,y) = (0,0)
-\end{bmatrix}
+\end{cases}
 \]
 Compute the derivative at the origin:
 $BR

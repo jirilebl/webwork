@@ -79,7 +79,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) is differentiable at
-a point \(p \in {\mathbb{R}}^n,\) then every first order partial derivative \(f\) exists at \(p.\)
+a point \(p \in {\mathbb{R}}^n,\) then every first order partial derivative of \(f\) exists at \(p.\)
 $BR
 END_TEXT
 Context()->normalStrings;
