@@ -413,6 +413,21 @@ BEGIN_TEXT
 \{ $q19->ans_array(10) \}
 \{ AnswerFormatHelp("matrices") \}
 $PAR
+That asks for matrices by giving an entry array, but sometimes you want
+to see if the student knows what size the matrix should be, so you just
+want to give one entry where the matrix has to be entered using the webwork
+syntax.  For that use MATRIXENTRY.  Default rule width is 40.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q20 = Compute("[[1,2],[3,4]]");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("matrices") \}
+$PAR
 $PAR
 $BBOLD Descriptive headers $EBOLD
 $PAR
@@ -466,5 +481,6 @@ ANS($q16->cmp());
 ANS($q17->cmp());
 ANS(str_cmp("Good Bye"));
 ANS($q19->cmp());
+ANS($q20->cmp());
 
 ENDDOCUMENT();
