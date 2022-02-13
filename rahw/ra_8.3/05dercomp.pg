@@ -107,7 +107,7 @@ f(x,y) =
 \begin{bmatrix}
 ($a x^2+ $b y^2)\sin\left(\frac{1}{$c x^2+$d y^2}\right) + $e x + $f y
 & \text{if } (x,y) \not= (0,0) \\
-0 \text{if } (x,y) = (0,0)
+0 & \text{if } (x,y) = (0,0)
 \end{bmatrix}
 \]
 Compute the derivative at the origin:
@@ -116,7 +116,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q4 = Compute("[[$e,$f]]");
+$q4 = Compute("[$e,$f]");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -148,7 +148,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q5 = Compute("[[$c*$g+1,$h],[$d,$d*$h]]");
+$q5 = Compute("[[$c*$g,$g],[$c,$d*$h+1]]");
 
 Context()->texStrings;
 BEGIN_TEXT

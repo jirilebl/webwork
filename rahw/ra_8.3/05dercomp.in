@@ -42,13 +42,13 @@ f(x,y) =
 \begin{bmatrix}
 ($a x^2+ $b y^2)\sin\left(\frac{1}{$c x^2+$d y^2}\right) + $e x + $f y
 & \text{if } (x,y) \not= (0,0) \\
-0 \text{if } (x,y) = (0,0)
+0 & \text{if } (x,y) = (0,0)
 \end{bmatrix}
 \]
 Compute the derivative at the origin:
 $BR
 \(f'(0,0) = {}\)
-%MATRIXENTRY [[$e,$f]]
+%MATRIXENTRY [$e,$f]
 
 Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
 is differentiable at \((0,0),\) \(f(0,0) = ($a,$b) , \)
@@ -72,5 +72,5 @@ $g & 0 \\
 Suppose \( F = g \circ f  .\)  Compute the derivative
 $BR
 \(F'(0,0) = {}\)
-%MATRIXENTRY [[$c*$g+1,$h],[$d,$d*$h]]
+%MATRIXENTRY [[$c*$g,$g],[$c,$d*$h+1]]
 
