@@ -201,6 +201,13 @@ entry.
 
 %MATRIX [[1,2],[3,4]]
 
+That asks for matrices by giving an entry array, but sometimes you want
+to see if the student knows what size the matrix should be, so you just
+want to give one entry where the matrix has to be entered using the webwork
+syntax.  For that use MATRIXENTRY.  Default rule width is 40.
+
+%MATRIXENTRY [[1,2],[3,4]]
+
 
 $BBOLD Descriptive headers $EBOLD
 

@@ -1,0 +1,173 @@
+##DESCRIPTION
+## Compute the derivative
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.3')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Matrix");
+
+
+$a=random(2,9,1);
+$b=random(2,9,1);
+$c=random(2,9,1);
+$d=random(2,9,1);
+$e=random(2,9,1);
+$f=random(2,9,1);
+$g=random(2,9,1);
+$h=random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
+is given by
+\[
+f(x,y) = ($e+$a x + $b y + xy + y^2, $f + $c x + $d y + 3x^3)
+\]
+Compute the derivative at the origin:
+$BR
+\(f'(0,0) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Compute("[[$a,$b],[$c,$d]]");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("matrices") \}
+$PAR
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
+is constant.  Compute the derivative at any point:
+$BR
+\(f'(x,y) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Compute("[[0,0],[0,0]]");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("matrices") \}
+$PAR
+Suppose \(f \colon {\mathbb{R}} \to {\mathbb{R}}^2\)
+is given by
+\[
+f(x) = ($a + $b x + $c x^2,$d + $e x + $f x^2)
+\]
+Compute the derivative at the origin:
+$BR
+\(f'(0) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Compute("[[$b],[$e]]");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("matrices") \}
+$PAR
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\)
+is given by
+\[
+f(x,y) =
+\begin{bmatrix}
+($a x^2+ $b y^2)\sin\left(\frac{1}{$c x^2+$d y^2}\right) + $e x + $f y
+& \text{if } (x,y) \not= (0,0) \\
+0 \text{if } (x,y) = (0,0)
+\end{bmatrix}
+\]
+Compute the derivative at the origin:
+$BR
+\(f'(0,0) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Compute("[[$e,$f]]");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("matrices") \}
+$PAR
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
+is differentiable at \((0,0),\) \(f(0,0) = ($a,$b) , \)
+and \(f'(0,0) =
+\left[
+\begin{smallmatrix}
+$c & 1 \\
+0 & $d
+\end{smallmatrix}
+\right] .\)
+Also suppose
+\(g \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
+is differentiable at \(($a,$b),\) \(g($a,$b) = ($e,$f) , \)
+and \(g'($a,$b) =
+\left[
+\begin{smallmatrix}
+$g & 0 \\
+1 & $h
+\end{smallmatrix}
+\right] .\)
+Suppose \( F = g \circ f  .\)  Compute the derivative
+$BR
+\(F'(0,0) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Compute("[[$c*$g+1,$h],[$d,$d*$h]]");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("matrices") \}
+$PAR
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+
+ENDDOCUMENT();

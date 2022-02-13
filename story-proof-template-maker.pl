@@ -268,6 +268,26 @@ BEGIN_TEXT
 \\{ \$q$qnum->ans_array($rw) \\}
 \\{ AnswerFormatHelp("matrices") \\}
 EOF
+	} elsif ($insolution == 0 and $line =~ m/^%MATRIXENTRY[ \t][ \t]*(.*)$/) {
+		$qnum++;
+		$qcheckers[$qnum-1]="ANS(\$q$qnum\->cmp());\n";
+		$matrices++;
+		$answer = $1;
+		$rw = 40;
+		if ($rulewidth > 0) {
+			$rw = $rulewidth;
+		}
+		$out .= << "EOF";
+END_TEXT
+Context()->normalStrings;
+
+\$q$qnum = Compute(\"$answer\");
+
+Context()->texStrings;
+BEGIN_TEXT
+\\{ ans_rule($rw) \\}
+\\{ AnswerFormatHelp("matrices") \\}
+EOF
 	} elsif ($insolution == 0 and $line =~ m/^%FORMULAVARS[ \t][ \t]*([a-zA-Z,]*)[ \t]*$/) {
 		$vars = $1;
 		$vars =~ s/,$//;

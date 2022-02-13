@@ -1,0 +1,76 @@
+%DESC Compute the derivative
+%HINC head.txt
+%NOPARTIAL
+%SETUP $a=random(2,9,1);
+%SETUP $b=random(2,9,1);
+%SETUP $c=random(2,9,1);
+%SETUP $d=random(2,9,1);
+%SETUP $e=random(2,9,1);
+%SETUP $f=random(2,9,1);
+%SETUP $g=random(2,9,1);
+%SETUP $h=random(2,9,1);
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
+is given by
+\[
+f(x,y) = ($e+$a x + $b y + xy + y^2, $f + $c x + $d y + 3x^3)
+\]
+Compute the derivative at the origin:
+$BR
+\(f'(0,0) = {}\)
+%MATRIXENTRY [[$a,$b],[$c,$d]]
+
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
+is constant.  Compute the derivative at any point:
+$BR
+\(f'(x,y) = {}\)
+%MATRIXENTRY [[0,0],[0,0]]
+
+Suppose \(f \colon {\mathbb{R}} \to {\mathbb{R}}^2\)
+is given by
+\[
+f(x) = ($a + $b x + $c x^2,$d + $e x + $f x^2)
+\]
+Compute the derivative at the origin:
+$BR
+\(f'(0) = {}\)
+%MATRIXENTRY [[$b],[$e]]
+
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\)
+is given by
+\[
+f(x,y) =
+\begin{bmatrix}
+($a x^2+ $b y^2)\sin\left(\frac{1}{$c x^2+$d y^2}\right) + $e x + $f y
+& \text{if } (x,y) \not= (0,0) \\
+0 \text{if } (x,y) = (0,0)
+\end{bmatrix}
+\]
+Compute the derivative at the origin:
+$BR
+\(f'(0,0) = {}\)
+%MATRIXENTRY [[$e,$f]]
+
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
+is differentiable at \((0,0),\) \(f(0,0) = ($a,$b) , \)
+and \(f'(0,0) =
+\left[
+\begin{smallmatrix}
+$c & 1 \\
+0 & $d
+\end{smallmatrix}
+\right] .\)
+Also suppose
+\(g \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\)
+is differentiable at \(($a,$b),\) \(g($a,$b) = ($e,$f) , \)
+and \(g'($a,$b) =
+\left[
+\begin{smallmatrix}
+$g & 0 \\
+1 & $h
+\end{smallmatrix}
+\right] .\)
+Suppose \( F = g \circ f  .\)  Compute the derivative
+$BR
+\(F'(0,0) = {}\)
+%MATRIXENTRY [[$c*$g+1,$h],[$d,$d*$h]]
+

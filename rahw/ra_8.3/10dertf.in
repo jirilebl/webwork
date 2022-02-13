@@ -1,0 +1,61 @@
+%DESC True/false for derivative definition
+%HINC head.txt
+%NOPARTIAL
+True or false:
+Every continuous function \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) is differentiable.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Every differentiable function \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) is continuous.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) is differentiable at
+a point \(p \in {\mathbb{R}}^n,\) then every first order partial derivative \(f\) exists at \(p.\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If every first order partial derivative of \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) exists at
+a point \(p \in {\mathbb{R}}^n,\) then \(f\) is differentiable at \(p.\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+Suppose \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) is
+defined by
+\( f(x,y) = \sqrt{ x^2+y^2 } .\)
+$BR
+Is \(f\) differentiable at \((0,0)\)?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+$BR
+Is \(f\) differentiable at \((1,0)\)?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+$BR
+Is \(f\) differentiable at \((1,1)\)?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
