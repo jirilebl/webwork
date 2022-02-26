@@ -48,7 +48,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If all partial derivatives of
-\( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) exist then \(f\) is differentiable.
+\( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) exist, then \(f\) is differentiable.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -66,7 +66,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If all partial derivatives of
-\( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) exist and are continuous then \(f\) is differentiable.
+\( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) exist and are continuous, then \(f\) is differentiable.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -83,7 +83,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(U \subset {\mathbb{R}}^n\) is open, \( f \colon U \to {\mathbb{R}}^m \) is differentiable
+If \(U \subset {\mathbb{R}}^n\) is open, \( f \colon U \to {\mathbb{R}}^m \) is differentiable,
 and \(\lVert f'(x)\rVert \leq M\) for all \(x \in U,\) then
 \(\lVert f(x)-f(y)\rVert \leq M \lVert x-y\rVert \) for all \(x,y \in U.\)
 $BR
@@ -177,7 +177,6 @@ BEGIN_TEXT
 \{ $q7->buttons \}
 
 $PAR
-True or false:
 Suppose \(B(0,$a)\) is the ball of radius \($a\) around the origin in \({\mathbb{R}}^n.\)
 and \(f \colon B(0,$a) \to {\mathbb{R}}\) is differentiable, \(f(0)=0,\) and \(\lVert f'(x) \rVert \leq $b \)
 for all \(x.\)  Then
