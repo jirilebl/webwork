@@ -2,7 +2,7 @@
 %HINC head.txt
 %SETUP $a=random(2,9,1);
 %SETUP $b=random(2,9,1);
-%SETUP $amb=$a*$b
+%SETUP $amb=$a*$b;
 %NOPARTIAL
 True or false:
 If all partial derivatives of
