@@ -1,0 +1,74 @@
+%DESC True/false/MC for implicit/inverse function theorem
+%HINC head.txt
+%SETUP $a=random(2,9,1);
+%SETUP $b=random(2,9,1);
+%NOPARTIAL
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable and \(Df|_0\) is not invertible, then \(f|_U\) is not
+one-to-one for any neighborhood \(U\) of the origin.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable and \(Df|_p\) is invertible for all \(p \in {\mathbb{R}}^n,\)
+then \(f\) is one-to-one.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable and one-to-one, then \(Df|_p\) is invertible for all \(p \in {\mathbb{R}}^n.\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable and \(Df|_0\) is invertible, then 
+there exists a neighborhood \(U\) of the origin such that
+the restriction \(f|_U\) is one-to-one.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable, bijective, and \(Df|_p\) is invertible
+for all \(p \in {\mathbb{R}}^n,\)
+then \(f^{-1}\) is continuously differentiable
+and 
+\(Df^{-1}|_q\) is invertible
+for all \(p \in {\mathbb{R}}^n .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+Consider \( f \colon {\mathbb{R}}^3 \to {\mathbb{R}}^2 \)
+defined by
+\(f(x,y,z) := \bigl( x^2+xyz+$b y, $a x+x^2+y^2+z+e^z \bigr).\)
+Note that \(f(0,0,0)=(0,0).\)  For which of the following can we apply
+the implicit function theorem?
+%CHECKBOXES
+Solve for \(x,y\) in \(f(x,y,z)=(0,0)\) in terms of \(z\) near \(z=0 .\)
+Solve for \(y,z\) in \(f(x,y,z)=(0,0)\) in terms of \(x\) near \(x=0 .\)
+%EXTRA
+Solve for \(x,z\) in \(f(x,y,z)=(0,0)\) in terms of \(y\) near \(y=0 .\)
+Solve for \(x\) in \(f(x,y,z)=(0,0)\) in terms of \(y,z\) near \((y,z)=(0,0) .\)
+Solve for \(y\) in \(f(x,y,z)=(0,0)\) in terms of \(x,z\) near \((x,z)=(0,0) .\)
+Solve for \(z\) in \(f(x,y,z)=(0,0)\) in terms of \(x,y\) near \((x,y)=(0,0) .\)
+Invert \(f\) near the origin.
+%END

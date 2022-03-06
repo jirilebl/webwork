@@ -1,0 +1,180 @@
+##DESCRIPTION
+## True/false for differentiation under the integral
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('9.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is continuously
+differentiable, then
+\(g \colon [0,1] \to {\mathbb{R}}\) defined by
+\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
+differentiable, then
+\(g \colon [0,1] \to {\mathbb{R}}\) defined by
+\(g(y) := \int_0^1 f(x,y) \, dx\) is differentiable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
+continuous, then
+\(g \colon [0,1] \to {\mathbb{R}}\) defined by
+\(g(y) := \int_0^1 f(x,y) \, dx\) is differentiable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
+such that \(\frac{\partial f}{\partial y}\) exists and is continuous, then
+\(g \colon [0,1] \to {\mathbb{R}}\) defined by
+\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
+such that \(\frac{\partial f}{\partial x}\) exists and is continuous, then
+\(g \colon [0,1] \to {\mathbb{R}}\) defined by
+\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is continuous and
+\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable,
+then \(f\) is continuously differentiable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+
+ENDDOCUMENT();

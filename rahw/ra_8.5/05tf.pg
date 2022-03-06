@@ -1,0 +1,188 @@
+##DESCRIPTION
+## True/false/MC for implicit/inverse function theorem
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.5')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGchoicemacros.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a=random(2,9,1);
+$b=random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable and \(Df|_0\) is not invertible, then \(f|_U\) is not
+one-to-one for any neighborhood \(U\) of the origin.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable and \(Df|_p\) is invertible for all \(p \in {\mathbb{R}}^n,\)
+then \(f\) is one-to-one.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable and one-to-one, then \(Df|_p\) is invertible for all \(p \in {\mathbb{R}}^n.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable and \(Df|_0\) is invertible, then 
+there exists a neighborhood \(U\) of the origin such that
+the restriction \(f|_U\) is one-to-one.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^n \) is continuously
+differentiable, bijective, and \(Df|_p\) is invertible
+for all \(p \in {\mathbb{R}}^n,\)
+then \(f^{-1}\) is continuously differentiable
+and 
+\(Df^{-1}|_q\) is invertible
+for all \(p \in {\mathbb{R}}^n .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+Consider \( f \colon {\mathbb{R}}^3 \to {\mathbb{R}}^2 \)
+defined by
+\(f(x,y,z) := \bigl( x^2+xyz+$b y, $a x+x^2+y^2+z+e^z \bigr).\)
+Note that \(f(0,0,0)=(0,0).\)  For which of the following can we apply
+the implicit function theorem?
+END_TEXT
+Context()->normalStrings;
+
+$q6 = new_checkbox_multiple_choice();
+$q6->qa("Check all that apply",
+"Solve for \(x,y\) in \(f(x,y,z)=(0,0)\) in terms of \(z\) near \(z=0 .\)",
+"Solve for \(y,z\) in \(f(x,y,z)=(0,0)\) in terms of \(x\) near \(x=0 .\)",
+);
+$q6->extra(
+"Solve for \(x,z\) in \(f(x,y,z)=(0,0)\) in terms of \(y\) near \(y=0 .\)",
+"Solve for \(x\) in \(f(x,y,z)=(0,0)\) in terms of \(y,z\) near \((y,z)=(0,0) .\)",
+"Solve for \(y\) in \(f(x,y,z)=(0,0)\) in terms of \(x,z\) near \((x,z)=(0,0) .\)",
+"Solve for \(z\) in \(f(x,y,z)=(0,0)\) in terms of \(x,y\) near \((x,y)=(0,0) .\)",
+"Invert \(f\) near the origin.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->print_a() \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS(checkbox_cmp($q6->correct_ans()));
+
+ENDDOCUMENT();

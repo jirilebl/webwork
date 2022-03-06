@@ -1,0 +1,54 @@
+%DESC Counterexample for differentiation under the integral
+%HINC head.txt
+%FORMULAVARS x,y
+%NOPARTIAL
+Let \(h(x,y) := \frac{xy}{x^2+y^2} \) for \((x,y)\not=0\) and \(h(0,0)=0 .\)
+Let \(g(y) := \int_0^1 h(x,y) \, dx . \)
+
+Note that \(\frac{\partial h}{\partial y}\) exists for all \((x,y)\)
+including at the origin.
+
+For \((x,y)\not=(0,0),\) compute
+\(\displaystyle
+\frac{\partial h}{\partial y}(x,y)={}\)
+%FORMULA (x*(x^2-y^2))/((x^2+y^2)^2)
+
+For \((x,y)=(0,0),\) compute
+\(\displaystyle
+\frac{\partial h}{\partial y}(0,0)={}\)
+%NUMBER 0
+
+For \(y\not= 0,\) compute (don't be afraid of some calculus)
+\(\displaystyle
+g'(y) = {}\)
+%FORMULA (y^2)/(1+y^2)+(1/2)*ln(1+y^2)-1-(1/2)*ln(y^2)
+
+Does the limit of \(g'(y)\) as \(y \to 0\) exist?
+%BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+For \(x $GTS 0,\) compute
+\(\displaystyle \frac{\partial h}{\partial y} (x,0) = {}  \)
+%FORMULA 1/x
+
+Does
+\(\displaystyle \int_0^1 \frac{\partial h}{\partial y} (x,0) \, dx \) exist?
+%BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+Why can't we apply the Liebniz rule (differentiate under the integral)
+at \(y=0\)?
+%BR
+%RADIORANDOM
+%CORRECT \(\frac{\partial h}{\partial y}\) is not continuous.
+\(\frac{\partial h}{\partial y}\) does not exist.
+In fact, we could apply Liebniz rule at \(y=0.\)
+\(h\) is not defined at the origin.
+\(h\) is unbounded.
+%END
