@@ -24,7 +24,7 @@ g'(y) = {}\)
 %FORMULA (y^2)/(1+y^2)+(1/2)*ln(1+y^2)-1-(1/2)*ln(y^2)
 
 Does the limit of \(g'(y)\) as \(y \to 0\) exist?
-%BR
+$BR
 %RADIO
 Yes
 %CORRECT No
@@ -36,7 +36,7 @@ For \(x $GTS 0,\) compute
 
 Does
 \(\displaystyle \int_0^1 \frac{\partial h}{\partial y} (x,0) \, dx \) exist?
-%BR
+$BR
 %RADIO
 Yes
 %CORRECT No
@@ -44,7 +44,7 @@ Yes
 
 Why can't we apply the Liebniz rule (differentiate under the integral)
 at \(y=0\)?
-%BR
+$BR
 %RADIORANDOM
 %CORRECT \(\frac{\partial h}{\partial y}\) is not continuous.
 \(\frac{\partial h}{\partial y}\) does not exist.

@@ -65,7 +65,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
-differentiable, then
+continuous, then
 \(g \colon [0,1] \to {\mathbb{R}}\) defined by
 \(g(y) := \int_0^1 f(x,y) \, dx\) is differentiable.
 $BR
@@ -85,9 +85,9 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
-continuous, then
+such that \(\frac{\partial f}{\partial y}\) exists and is continuous, then
 \(g \colon [0,1] \to {\mathbb{R}}\) defined by
-\(g(y) := \int_0^1 f(x,y) \, dx\) is differentiable.
+\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -96,7 +96,7 @@ $q3 = RadioButtons([
 "True",
 "False",
 ],
-"False",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -105,7 +105,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
-such that \(\frac{\partial f}{\partial y}\) exists and is continuous, then
+such that \(\frac{\partial f}{\partial x}\) exists and is continuous, then
 \(g \colon [0,1] \to {\mathbb{R}}\) defined by
 \(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
 $BR
@@ -116,7 +116,7 @@ $q4 = RadioButtons([
 "True",
 "False",
 ],
-"True",
+"False",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -124,10 +124,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
-such that \(\frac{\partial f}{\partial x}\) exists and is continuous, then
-\(g \colon [0,1] \to {\mathbb{R}}\) defined by
-\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
+If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is continuous and
+\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable,
+then \(f\) is continuously differentiable.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -141,25 +140,6 @@ $q5 = RadioButtons([
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q5->buttons \}
-
-$PAR
-True or false:
-If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is continuous and
-\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable,
-then \(f\) is continuously differentiable.
-$BR
-END_TEXT
-Context()->normalStrings;
-
-$q6 = RadioButtons([
-"True",
-"False",
-],
-"False",
-);
-Context()->texStrings;
-BEGIN_TEXT
-\{ $q6->buttons \}
 
 
 END_TEXT
@@ -175,6 +155,5 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
-ANS($q6->cmp());
 
 ENDDOCUMENT();

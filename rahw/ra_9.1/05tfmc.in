@@ -14,17 +14,6 @@ False
 
 True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
-differentiable, then
-\(g \colon [0,1] \to {\mathbb{R}}\) defined by
-\(g(y) := \int_0^1 f(x,y) \, dx\) is differentiable.
-$BR
-%RADIO
-True
-%CORRECT False
-%END
-
-True or false:
-If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
 continuous, then
 \(g \colon [0,1] \to {\mathbb{R}}\) defined by
 \(g(y) := \int_0^1 f(x,y) \, dx\) is differentiable.

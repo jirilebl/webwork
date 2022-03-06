@@ -90,7 +90,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("formulas") \}
 $PAR
 Does the limit of \(g'(y)\) as \(y \to 0\) exist?
-%BR
+$BR
 END_TEXT
 Context()->normalStrings;
 
@@ -119,7 +119,7 @@ BEGIN_TEXT
 $PAR
 Does
 \(\displaystyle \int_0^1 \frac{\partial h}{\partial y} (x,0) \, dx \) exist?
-%BR
+$BR
 END_TEXT
 Context()->normalStrings;
 
@@ -136,7 +136,7 @@ BEGIN_TEXT
 $PAR
 Why can't we apply the Liebniz rule (differentiate under the integral)
 at \(y=0\)?
-%BR
+$BR
 END_TEXT
 Context()->normalStrings;
 
