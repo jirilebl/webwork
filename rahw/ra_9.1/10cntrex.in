@@ -8,6 +8,13 @@ Let \(g(y) := \int_0^1 h(x,y) \, dx . \)
 Note that \(\frac{\partial h}{\partial y}\) exists for all \((x,y)\)
 including at the origin.
 
+Is \(g(y)\) defined for all \(y \in {\mathbb{R}}\)?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
 For \((x,y)\not=(0,0),\) compute
 \(\displaystyle
 \frac{\partial h}{\partial y}(x,y)={}\)

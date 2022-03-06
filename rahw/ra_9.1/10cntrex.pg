@@ -50,13 +50,29 @@ $PAR
 Note that \(\frac{\partial h}{\partial y}\) exists for all \((x,y)\)
 including at the origin.
 $PAR
+Is \(g(y)\) defined for all \(y \in {\mathbb{R}}\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
 For \((x,y)\not=(0,0),\) compute
 \(\displaystyle
 \frac{\partial h}{\partial y}(x,y)={}\)
 END_TEXT
 Context()->normalStrings;
 
-$q1 = Formula("(x*(x^2-y^2))/((x^2+y^2)^2)");
+$q2 = Formula("(x*(x^2-y^2))/((x^2+y^2)^2)");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -69,7 +85,7 @@ For \((x,y)=(0,0),\) compute
 END_TEXT
 Context()->normalStrings;
 
-$q2 = Formula("0");
+$q3 = Formula("0");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -82,7 +98,7 @@ g'(y) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q3 = Formula("(y^2)/(1+y^2)+(1/2)*ln(1+y^2)-1-(1/2)*ln(y^2)");
+$q4 = Formula("(y^2)/(1+y^2)+(1/2)*ln(1+y^2)-1-(1/2)*ln(y^2)");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -94,7 +110,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q4 = RadioButtons([
+$q5 = RadioButtons([
 "Yes",
 "No",
 ],
@@ -102,7 +118,7 @@ $q4 = RadioButtons([
 );
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q4->buttons \}
+\{ $q5->buttons \}
 
 $PAR
 For \(x $GTS 0,\) compute
@@ -110,7 +126,7 @@ For \(x $GTS 0,\) compute
 END_TEXT
 Context()->normalStrings;
 
-$q5 = Formula("1/x");
+$q6 = Formula("1/x");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -123,7 +139,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q6 = RadioButtons([
+$q7 = RadioButtons([
 "Yes",
 "No",
 ],
@@ -131,7 +147,7 @@ $q6 = RadioButtons([
 );
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q6->buttons \}
+\{ $q7->buttons \}
 
 $PAR
 Why can't we apply the Liebniz rule (differentiate under the integral)
@@ -140,7 +156,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q7 = RadioButtons([
+$q8 = RadioButtons([
 [
 "\(\frac{\partial h}{\partial y}\) is not continuous.",
 "\(\frac{\partial h}{\partial y}\) does not exist.",
@@ -153,7 +169,7 @@ $q7 = RadioButtons([
 );
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q7->buttons \}
+\{ $q8->buttons \}
 
 
 END_TEXT
@@ -171,5 +187,6 @@ ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
+ANS($q8->cmp());
 
 ENDDOCUMENT();
