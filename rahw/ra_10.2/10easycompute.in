@@ -1,0 +1,46 @@
+%DESC Quick computations of integral in two variables via Fubini
+%HINC head.txt
+%SETUP $a = random(2,9,1);
+%SETUP $b = 2*random(2,5,1);
+%NOPARTIAL
+Let \(R = [0,2] \times [0,3] . \)
+Via Fubini (\(dA = dx\,dy\) is the area measure), compute:
+
+
+\(\displaystyle \int_{R} ($b y^3) \, dA = {}\)
+%NUMBER (1/2)*($b)*(3^4)
+
+
+If \(f \colon R \to {\mathbb{R}}\) is Riemann integable such that
+\(\underline{\int_0^2} f(x,y) \, dx = $a\) for every \(y,\) then
+
+\(\displaystyle \int_{R} f \, dA = {}\)
+%NUMBER 3*$a
+
+
+If \(g \colon R \to {\mathbb{R}}\) is Riemann integable such that
+for every fixed \(x \in [0,2],\)
+\(g(x,y) = $a\) for all but one \(y \in [0,3], \)
+then
+
+\(\displaystyle \int_{R} g \, dA = {}\)
+%NUMBER 6*$a
+
+
+Suppose \(h \colon R \to {\mathbb{R}} \) is such that
+\(\underline{\int_0^2} f(x,y) \, dx = -y\) and
+\(\overline{\int_0^2} f(x,y) \, dx = y .\)
+Then,
+
+\(\displaystyle \int_0^3 \underline{\int_0^2} f(x,y) \, dx \, dy = {} \)
+%NUMBER -3*3/2
+
+\(\displaystyle \int_0^3 \overline{\int_0^2} f(x,y) \, dx \, dy = {} \)
+%NUMBER 3*3/2
+
+Is \(h\) Riemann integrable on \(R\)?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END

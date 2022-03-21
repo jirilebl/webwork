@@ -1,0 +1,154 @@
+##DESCRIPTION
+## Quick computations of integral in two variables via Fubini
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('10.2')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a = random(2,9,1);
+$b = 2*random(2,5,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Let \(R = [0,2] \times [0,3] . \)
+Via Fubini (\(dA = dx\,dy\) is the area measure), compute:
+$PAR
+$PAR
+\(\displaystyle \int_{R} ($b y^3) \, dA = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("(1/2)*($b)*(3^4)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+$PAR
+If \(f \colon R \to {\mathbb{R}}\) is Riemann integable such that
+\(\underline{\int_0^2} f(x,y) \, dx = $a\) for every \(y,\) then
+$PAR
+\(\displaystyle \int_{R} f \, dA = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("3*$a");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+$PAR
+If \(g \colon R \to {\mathbb{R}}\) is Riemann integable such that
+for every fixed \(x \in [0,2],\)
+\(g(x,y) = $a\) for all but one \(y \in [0,3], \)
+then
+$PAR
+\(\displaystyle \int_{R} g \, dA = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("6*$a");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+$PAR
+Suppose \(h \colon R \to {\mathbb{R}} \) is such that
+\(\underline{\int_0^2} f(x,y) \, dx = -y\) and
+\(\overline{\int_0^2} f(x,y) \, dx = y .\)
+Then,
+$PAR
+\(\displaystyle \int_0^3 \underline{\int_0^2} f(x,y) \, dx \, dy = {} \)
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("-3*3/2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(\displaystyle \int_0^3 \overline{\int_0^2} f(x,y) \, dx \, dy = {} \)
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("3*3/2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Is \(h\) Riemann integrable on \(R\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+
+ENDDOCUMENT();

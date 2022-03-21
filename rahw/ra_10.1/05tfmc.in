@@ -1,0 +1,99 @@
+%DESC True/false/multiple choice/quick answer questions for definition of integral in several variables
+%HINC head.txt
+%NOPARTIAL
+Suppose that \(R = [0,1] \times [0,1] \) and the partition \(P\) is given by \(($LB 0,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB ) .\) 
+How many subrectangles does the partition have?
+$BR
+%NUMBER 6
+
+For same \(R\) and \(P\) as above,
+which of the following are the subrectangles of this partition?
+%CHECKBOXES
+\([0,0.5] \times [0,0.1] \)
+\([0,0.5] \times [0.1,0.9] \)
+\([0,0.5] \times [0.9,1] \)
+\([0.5,1] \times [0,0.1] \)
+\([0.5,1] \times [0.1,0.9] \)
+\([0.5,1] \times [0.9,1] \)
+%EXTRA
+\([0,1] \times [0,0.1] \)
+\([0.5,1] \times [0,0.9] \)
+\([0.5,1] \times [0,1] \)
+\([0,1] \times [0,1] \)
+%END
+
+For same \(R\) and \(P\) as above,
+what are valid refinements of \(P\)?
+%CHECKBOXES
+\(($LB 0,0.1,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB )\) 
+\(($LB 0,0.5,1 $RB , $LB 0,0.1,0.5,0.9,1 $RB )\) 
+\(($LB 0,0.1,0.5,1 $RB , $LB 0,0.1,0.5,0.9,1 $RB )\) 
+\(($LB 0,0.5,1 $RB , $LB 0,0.1,0.2,0.3,0.5,0.6,0.7,0.8,0.9,1 $RB )\) 
+%EXTRA
+\(($LB 0,0.1,1 $RB , $LB 0,0.1,0.9,1 $RB )\) 
+\(($LB 0,1 $RB , $LB 0,0.1,0.9,1 $RB )\) 
+\(($LB 0,0.5,1 $RB , $LB 0,0.5,1 $RB )\) 
+%END
+
+True or false:
+Every bounded
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is Riemann integrable.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If
+\(f \colon [0,2] \times [0,2] \to {\mathbb{R}}\) is Riemann integrable, then
+the restriction to \([0,1] \times [0,1]\) is Riemann integrable.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(R := [0,1] \times [0,1]\) and
+\(f \colon R \to {\mathbb{R}}\) is Riemann integrable
+and \(\int_R f = 0, \) then \(f(x,y) = 0\) for all \((x,y) \in R.\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+\(f \colon {\mathbb{R}}^n \to {\mathbb{R}}\) has compact support
+if and only if
+there exists an \(M > 0\) such that 
+\(f(x) = 0\) whenever \(\|x\| \geq M .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+Suppose \(R_1\) and \(R_2\) are two rectangles, \(R_1 \subset R_2,\)
+and \(f \colon R_2 \to {\mathbb{R}}\) is Riemann integrable.
+Which are true statements?
+%CHECKBOXES
+If \(f(x) \geq 0\) for all \(x \in R_2\) and \(\int_{R_2} f = 0, \) then \(\int_{R_1} f = 0 .\)
+If \(f(x) = 0\) for all \(x \in R_2\setminus R_1 \) and \(\int_{R_2} f = 0, \) then \(\int_{R_1} f = 0 .\)
+If \(f(x) = 0\) for all \(x \in R_2\setminus R_1 \) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)
+%EXTRA
+If \(f(x) \geq 0\) for all \(x \in \R_2\) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)
+If \(\int_{R_2} f = 0, \) then \(\int_{R_1} f = 0 .\)
+If \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)
+%END
+
+True or false:
+If \(R\) is closed rectangle, \(f \colon R \to {\mathbb{R}}\) is Riemann integrable, and 
+\(L(P,f) \leq 0 \leq U(P,f)\) for every partition \(P,\)
+then \(\int_R f = 0. \)
+$BR
+%RADIO
+%CORRECT True
+False
+%END

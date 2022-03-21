@@ -1,0 +1,62 @@
+%DESC Computations of integral (integrable and nonintegrable function) in several variables
+%HINC head.txt
+%SETUP $a = random(2,5,1);
+%SETUP $b = $a+random(2,5,1);
+%NOPARTIAL
+Suppose 
+\(R = [-1,2] \times [-3,4],\) and
+\(f \colon R \to {\mathbb{R}}\) is Riemann integrable,
+where
+\[
+f(x,y) 
+:=
+\begin{cases}
+$a & \text{if } x $GTS 0 \text{ and } y $GTS 0,
+\\
+$b & \text{if } x $LTS 0 \text{ and } y $LTS 0,
+\\
+0 & \text{else.}
+\]
+
+Note that \(f\) is Riemann integrable, what is the integral (use your intuition)?
+$BR
+\(\displaystyle \int_{R} f = {}\)
+%NUMBER 8*$a+3*$b
+
+
+Now define \(h \colon R \to {\mathbb{R}}\) by \(h(x,y) = x . \)
+Consider the partition \(P = ($LB -1,0,2 $RB , $LB -3,0,4 $RB ) . \) 
+Compute the upper and lower sums:
+
+\(\displaystyle L(P,h) = {} \)
+%NUMBER (-1)*3+(-1)*4
+
+\(\displaystyle U(P,h) = {} \)
+%NUMBER 2*6+2*8
+
+
+Next suppose we change the definition of \(f\) slightly to
+\[
+g(x,y) 
+:=
+\begin{cases}
+$a & \text{if } x $GTS 0 \text{ and } y $GTS 0 \text{ and } x \in \mathbb{Q},
+\\
+$b & \text{if } x $LTS 0 \text{ and } y $LTS 0,
+\\
+0 & \text{else.}
+\]
+Compute the upper and lower Darboux integrals:
+
+\(\displaystyle \underline{\int_{R}} g = {}\)
+%NUMBER 3*$b
+
+\(\displaystyle \overline{\int_{R}} g = {}\)
+%NUMBER 8*$a+3*$b
+
+Is \(g\) Riemann integrable on \(R\)?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END

@@ -1,0 +1,242 @@
+##DESCRIPTION
+## True/false/multiple choice/quick answer questions for definition of integral in several variables
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('10.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGchoicemacros.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose that \(R = [0,1] \times [0,1] \) and the partition \(P\) is given by \(($LB 0,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB ) .\) 
+How many subrectangles does the partition have?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("6");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+For same \(R\) and \(P\) as above,
+which of the following are the subrectangles of this partition?
+END_TEXT
+Context()->normalStrings;
+
+$q2 = new_checkbox_multiple_choice();
+$q2->qa("Check all that apply",
+"\([0,0.5] \times [0,0.1] \)",
+"\([0,0.5] \times [0.1,0.9] \)",
+"\([0,0.5] \times [0.9,1] \)",
+"\([0.5,1] \times [0,0.1] \)",
+"\([0.5,1] \times [0.1,0.9] \)",
+"\([0.5,1] \times [0.9,1] \)",
+);
+$q2->extra(
+"\([0,1] \times [0,0.1] \)",
+"\([0.5,1] \times [0,0.9] \)",
+"\([0.5,1] \times [0,1] \)",
+"\([0,1] \times [0,1] \)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->print_a() \}
+
+$PAR
+For same \(R\) and \(P\) as above,
+what are valid refinements of \(P\)?
+END_TEXT
+Context()->normalStrings;
+
+$q3 = new_checkbox_multiple_choice();
+$q3->qa("Check all that apply",
+"\(($LB 0,0.1,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB )\) ",
+"\(($LB 0,0.5,1 $RB , $LB 0,0.1,0.5,0.9,1 $RB )\) ",
+"\(($LB 0,0.1,0.5,1 $RB , $LB 0,0.1,0.5,0.9,1 $RB )\) ",
+"\(($LB 0,0.5,1 $RB , $LB 0,0.1,0.2,0.3,0.5,0.6,0.7,0.8,0.9,1 $RB )\) ",
+);
+$q3->extra(
+"\(($LB 0,0.1,1 $RB , $LB 0,0.1,0.9,1 $RB )\) ",
+"\(($LB 0,1 $RB , $LB 0,0.1,0.9,1 $RB )\) ",
+"\(($LB 0,0.5,1 $RB , $LB 0,0.5,1 $RB )\) ",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->print_a() \}
+
+$PAR
+True or false:
+Every bounded
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is Riemann integrable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+If
+\(f \colon [0,2] \times [0,2] \to {\mathbb{R}}\) is Riemann integrable, then
+the restriction to \([0,1] \times [0,1]\) is Riemann integrable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+If \(R := [0,1] \times [0,1]\) and
+\(f \colon R \to {\mathbb{R}}\) is Riemann integrable
+and \(\int_R f = 0, \) then \(f(x,y) = 0\) for all \((x,y) \in R.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+True or false:
+\(f \colon {\mathbb{R}}^n \to {\mathbb{R}}\) has compact support
+if and only if
+there exists an \(M > 0\) such that 
+\(f(x) = 0\) whenever \(\|x\| \geq M .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+Suppose \(R_1\) and \(R_2\) are two rectangles, \(R_1 \subset R_2,\)
+and \(f \colon R_2 \to {\mathbb{R}}\) is Riemann integrable.
+Which are true statements?
+END_TEXT
+Context()->normalStrings;
+
+$q8 = new_checkbox_multiple_choice();
+$q8->qa("Check all that apply",
+"If \(f(x) \geq 0\) for all \(x \in R_2\) and \(\int_{R_2} f = 0, \) then \(\int_{R_1} f = 0 .\)",
+"If \(f(x) = 0\) for all \(x \in R_2\setminus R_1 \) and \(\int_{R_2} f = 0, \) then \(\int_{R_1} f = 0 .\)",
+"If \(f(x) = 0\) for all \(x \in R_2\setminus R_1 \) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)",
+);
+$q8->extra(
+"If \(f(x) \geq 0\) for all \(x \in \R_2\) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)",
+"If \(\int_{R_2} f = 0, \) then \(\int_{R_1} f = 0 .\)",
+"If \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->print_a() \}
+
+$PAR
+True or false:
+If \(R\) is closed rectangle, \(f \colon R \to {\mathbb{R}}\) is Riemann integrable, and 
+\(L(P,f) \leq 0 \leq U(P,f)\) for every partition \(P,\)
+then \(\int_R f = 0. \)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS(checkbox_cmp($q2->correct_ans()));
+ANS(checkbox_cmp($q3->correct_ans()));
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS(checkbox_cmp($q8->correct_ans()));
+ANS($q9->cmp());
+
+ENDDOCUMENT();
