@@ -58,6 +58,7 @@ $a & \text{if } x $GTS 0 \text{ and } y $GTS 0,
 $b & \text{if } x $LTS 0 \text{ and } y $LTS 0,
 \\
 0 & \text{else.}
+\end{cases}
 \]
 $PAR
 Note that \(f\) is Riemann integrable, what is the integral (use your intuition)?
@@ -111,6 +112,7 @@ $a & \text{if } x $GTS 0 \text{ and } y $GTS 0 \text{ and } x \in \mathbb{Q},
 $b & \text{if } x $LTS 0 \text{ and } y $LTS 0,
 \\
 0 & \text{else.}
+\end{cases}
 \]
 Compute the upper and lower Darboux integrals:
 $PAR

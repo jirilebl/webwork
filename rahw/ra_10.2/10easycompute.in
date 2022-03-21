@@ -14,7 +14,7 @@ Via Fubini (\(dA = dx\,dy\) is the area measure), compute:
 If \(f \colon R \to {\mathbb{R}}\) is Riemann integable such that
 \(\underline{\int_0^2} f(x,y) \, dx = $a\) for every \(y,\) then
 
-\(\displaystyle \int_{R} f \, dA = {}\)
+\(\displaystyle \int_{R} f = {}\)
 %NUMBER 3*$a
 
 
@@ -23,7 +23,7 @@ for every fixed \(x \in [0,2],\)
 \(g(x,y) = $a\) for all but one \(y \in [0,3], \)
 then
 
-\(\displaystyle \int_{R} g \, dA = {}\)
+\(\displaystyle \int_{R} g = {}\)
 %NUMBER 6*$a
 
 

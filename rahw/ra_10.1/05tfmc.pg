@@ -44,7 +44,7 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Suppose that \(R = [0,1] \times [0,1] \) and the partition \(P\) is given by \(($LB 0,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB ) .\) 
+Suppose that \(R := [0,1] \times [0,1] \) and the partition \(P\) is given by \(($LB 0,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB ) .\) 
 How many subrectangles does the partition have?
 $BR
 END_TEXT
@@ -180,7 +180,7 @@ BEGIN_TEXT
 \{ $q7->buttons \}
 
 $PAR
-Suppose \(R_1\) and \(R_2\) are two rectangles, \(R_1 \subset R_2,\)
+Suppose \(R_1\) and \(R_2\) are two closed rectangles, \(R_1 \subset R_2,\)
 and \(f \colon R_2 \to {\mathbb{R}}\) is Riemann integrable.
 Which are true statements?
 END_TEXT
@@ -193,7 +193,7 @@ $q8->qa("Check all that apply",
 "If \(f(x) = 0\) for all \(x \in R_2\setminus R_1 \) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)",
 );
 $q8->extra(
-"If \(f(x) \geq 0\) for all \(x \in \R_2\) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)",
+"If \(f(x) \geq 0\) for all \(x \in R_2\) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)",
 "If \(\int_{R_2} f = 0, \) then \(\int_{R_1} f = 0 .\)",
 "If \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)",
 );

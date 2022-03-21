@@ -1,7 +1,7 @@
 %DESC True/false/multiple choice/quick answer questions for definition of integral in several variables
 %HINC head.txt
 %NOPARTIAL
-Suppose that \(R = [0,1] \times [0,1] \) and the partition \(P\) is given by \(($LB 0,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB ) .\) 
+Suppose that \(R := [0,1] \times [0,1] \) and the partition \(P\) is given by \(($LB 0,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB ) .\) 
 How many subrectangles does the partition have?
 $BR
 %NUMBER 6
@@ -75,7 +75,7 @@ $BR
 False
 %END
 
-Suppose \(R_1\) and \(R_2\) are two rectangles, \(R_1 \subset R_2,\)
+Suppose \(R_1\) and \(R_2\) are two closed rectangles, \(R_1 \subset R_2,\)
 and \(f \colon R_2 \to {\mathbb{R}}\) is Riemann integrable.
 Which are true statements?
 %CHECKBOXES
@@ -83,7 +83,7 @@ If \(f(x) \geq 0\) for all \(x \in R_2\) and \(\int_{R_2} f = 0, \) then \(\int_
 If \(f(x) = 0\) for all \(x \in R_2\setminus R_1 \) and \(\int_{R_2} f = 0, \) then \(\int_{R_1} f = 0 .\)
 If \(f(x) = 0\) for all \(x \in R_2\setminus R_1 \) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)
 %EXTRA
-If \(f(x) \geq 0\) for all \(x \in \R_2\) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)
+If \(f(x) \geq 0\) for all \(x \in R_2\) and \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)
 If \(\int_{R_2} f = 0, \) then \(\int_{R_1} f = 0 .\)
 If \(\int_{R_1} f = 0, \) then \(\int_{R_2} f = 0 .\)
 %END
