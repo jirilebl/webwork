@@ -62,7 +62,7 @@ True
 %END
 
 True or false:
-An uncountable set is of measure zero.
+An uncountable set always has positive measure (never of measure zero).
 $BR
 %RADIO
 True
