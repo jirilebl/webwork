@@ -1,0 +1,222 @@
+##DESCRIPTION
+## True/false/multiple choice/quick answer questions for null sets
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('10.3')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGchoicemacros.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a=random(2,5,1);
+$b=$a+random(2,5,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Which of the following are measure zero subsets of \(\mathbb{R}\):
+END_TEXT
+Context()->normalStrings;
+
+$q1 = new_checkbox_multiple_choice();
+$q1->qa("Check all that apply",
+"\(\mathbb{Q}\)",
+"\($LB $a,$b $RB\)",
+"\([$a,$b] \cap \mathbb{Q}\)",
+"\($LB \frac{1}{n} : n \in \mathbb{N} $RB\)",
+"\(\emptyset\)",
+"\($LB 0 $RB\)",
+);
+$q1->extra(
+"\(\mathbb{R}\)",
+"\([$a,$b]\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->print_a() \}
+
+$PAR
+Compute \(m^*([$a,$b])={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("$b-$a");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+True or false:
+If \(B\) is a measure zero set and \(A \subset B,\) then 
+\(A\) is of measure zero.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+If \(A\) is a measure zero set and \(A \subset B,\) then 
+\(B\) is of measure zero.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+A finite union of measure zero sets is of measure zero.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+A countable union of measure zero sets is of measure zero.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+True or false:
+An arbitrary union of measure zero sets is of measure zero.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+True or false:
+An uncountable set is of measure zero.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+$PAR
+True or false:
+If \(R \subset {\mathbb{R}}^n\) is a rectangle,
+then the boundary \(\partial R\) is of measure zero.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp($q1->correct_ans()));
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+
+ENDDOCUMENT();

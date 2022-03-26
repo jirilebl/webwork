@@ -1,0 +1,79 @@
+%DESC True/false/multiple choice/quick answer questions for null sets
+%HINC head.txt
+%NOPARTIAL
+%SETUP $a=random(2,5,1);
+%SETUP $b=$a+random(2,5,1);
+Which of the following are measure zero subsets of \(\mathbb{R}\):
+%CHECKBOXES
+\(\mathbb{Q}\)
+\($LB $a,$b $RB\)
+\([$a,$b] \cap \mathbb{Q}\)
+\($LB \frac{1}{n} : n \in \mathbb{N} $RB\)
+\(\emptyset\)
+\($LB 0 $RB\)
+%EXTRA
+\(\mathbb{R}\)
+\([$a,$b]\)
+%END
+
+Compute \(m^*([$a,$b])={}\)
+%NUMBER $b-$a
+
+True or false:
+If \(B\) is a measure zero set and \(A \subset B,\) then 
+\(A\) is of measure zero.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(A\) is a measure zero set and \(A \subset B,\) then 
+\(B\) is of measure zero.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+A finite union of measure zero sets is of measure zero.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+A countable union of measure zero sets is of measure zero.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+An arbitrary union of measure zero sets is of measure zero.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+An uncountable set is of measure zero.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(R \subset {\mathbb{R}}^n\) is a rectangle,
+then the boundary \(\partial R\) is of measure zero.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
