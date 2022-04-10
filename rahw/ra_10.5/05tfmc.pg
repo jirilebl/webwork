@@ -1,0 +1,205 @@
+##DESCRIPTION
+## True/false/multiple choice/quick answer questions for Jordan measurable sets
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('10.5')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGchoicemacros.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a=random(2,9,1);
+$b=random(2,9,1);
+$c=random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Which of the following subsets of \(\mathbb{R}\) are Jordan measurable?
+END_TEXT
+Context()->normalStrings;
+
+$q1 = new_checkbox_multiple_choice();
+$q1->qa("Check all that apply",
+"\([0,$a]\)",
+"\($LB $a,$b,$c $RB\)",
+"\((0,$a)\)",
+"\($LB \frac{1}{n} : n \in {\mathbb{N}} $RB\)",
+"\([0,1] \cup [2,3]\)",
+"\($LB 0 $RB \cup (2,3)\)",
+);
+$q1->extra(
+"\([0,$a]\cap {\mathbb{Q}}\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->print_a() \}
+
+$PAR
+If \(S:=[0,$a] \times [0,$b] \times [0,$c],\) then what
+is the Jordan volume:
+$BR
+\(V(S) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("$a*$b*$c");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+And what is the outer measure:
+$BR
+\(m^*(S) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("$a*$b*$c");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+True or false:
+A continuous function \( f \colon R \to \mathbb{R}\) for
+a closed rectangle \(R\) can be integrated over any Jordan
+measurable subset \(S \subset R .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+If \(S\) is of measure zero then it is Jordan measurable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+If \(S\) is closed and of measure zero then it is Jordan measurable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+True or false:
+If \(S\) is Jordan measurable and \(V(S)=0,\) then 
+\(S\) is of measure zero.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+True or false:
+If \(R\) is a closed rectangle in the plane, and
+\(L\) is a straight line, then \(R \setminus L\)
+is Jordan measurable and \(V(R \setminus L) = V(R).\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS(checkbox_cmp($q1->correct_ans()));
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+
+ENDDOCUMENT();

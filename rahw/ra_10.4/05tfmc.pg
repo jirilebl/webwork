@@ -1,0 +1,242 @@
+##DESCRIPTION
+## True/false/multiple choice questions for Riemann integrable functions
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('10.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Let \(R = [0,1] \times [0,1].\)
+Consider \(f \colon R \to {\mathbb{R}}\) defined
+by
+\[
+f(x,y) :=
+\begin{cases}
+\frac{xy}{x^2+y^2} & \text{if } (x,y) \not= (0,0) , \\
+0 & \text{if } (x,y) = (0,0).
+\end{cases}
+\]
+Is \(f\) integrable (on \(R\))?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+Let \(R = [0,1] \times [0,1].\)
+Consider \(g \colon R \to {\mathbb{R}}\) defined
+by
+\[
+g(x,y) :=
+\begin{cases}
+1 & \text{if } x = y \text{ and } x \in {\mathbb{Q}} , \\
+0 & \text{else.}
+\end{cases}
+\]
+Is \(g\) integrable (on \(R\))?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+Let \(R = [0,1] \times [0,1].\)
+Consider \(h \colon R \to {\mathbb{R}}\) defined
+by
+\[
+h(x,y) :=
+\begin{cases}
+1 & \text{if } x \in {\mathbb{Q}} , \\
+0 & \text{else.}
+\end{cases}
+\]
+Is \(h\) integrable (on \(R\))?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+If \(f \colon R \to {\mathbb{R}}\) is Riemann integrable on
+\(R\) and \(g(x)=f(x)\) for all \(x \in R\) except on a set of
+measure zero, then \(g\) is Riemann integrable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+If 
+\(f \colon R \to {\mathbb{R}}\) is continuous
+except at finitely many points then
+\(f\) is Riemann integrable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+If 
+\(f \colon R \to {\mathbb{R}}\) is such that
+there exists an \(\epsilon $GTS 0 \) such that
+\(o(f,x) $LTS \epsilon\) for every \(x \in R,\)
+then \(f\) is Riemann integrable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+True or false:
+Consider a bounded function
+\(f \colon R \to {\mathbb{R}}.\)
+The set \( $LB x \in R : o(f,x) $GTS 0 $RB \)
+is a closed subset of \(R.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+True or false:
+Consider a bounded function
+\(f \colon R \to {\mathbb{R}}.\)
+For every \(\epsilon $GTS 0,\)
+the set \( $LB x \in R : o(f,x) \geq \epsilon $RB \)
+is a closed subset of \(R.\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+
+ENDDOCUMENT();

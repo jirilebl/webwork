@@ -1,0 +1,109 @@
+%DESC True/false/multiple choice questions for Riemann integrable functions
+%HINC head.txt
+%NOPARTIAL
+Let \(R = [0,1] \times [0,1].\)
+Consider \(f \colon R \to {\mathbb{R}}\) defined
+by
+\[
+f(x,y) :=
+\begin{cases}
+\frac{xy}{x^2+y^2} & \text{if } (x,y) \not= (0,0) , \\
+0 & \text{if } (x,y) = (0,0).
+\end{cases}
+\]
+Is \(f\) integrable (on \(R\))?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+Let \(R = [0,1] \times [0,1].\)
+Consider \(g \colon R \to {\mathbb{R}}\) defined
+by
+\[
+g(x,y) :=
+\begin{cases}
+1 & \text{if } x = y \text{ and } x \in {\mathbb{Q}} , \\
+0 & \text{else.}
+\end{cases}
+\]
+Is \(g\) integrable (on \(R\))?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+Let \(R = [0,1] \times [0,1].\)
+Consider \(h \colon R \to {\mathbb{R}}\) defined
+by
+\[
+h(x,y) :=
+\begin{cases}
+1 & \text{if } x \in {\mathbb{Q}} , \\
+0 & \text{else.}
+\end{cases}
+\]
+Is \(h\) integrable (on \(R\))?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+True or false:
+If \(f \colon R \to {\mathbb{R}}\) is Riemann integrable on
+\(R\) and \(g(x)=f(x)\) for all \(x \in R\) except on a set of
+measure zero, then \(g\) is Riemann integrable.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If 
+\(f \colon R \to {\mathbb{R}}\) is continuous
+except at finitely many points then
+\(f\) is Riemann integrable.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If 
+\(f \colon R \to {\mathbb{R}}\) is such that
+there exists an \(\epsilon $GTS 0 \) such that
+\(o(f,x) $LTS \epsilon\) for every \(x \in R,\)
+then \(f\) is Riemann integrable.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Consider a bounded function
+\(f \colon R \to {\mathbb{R}}.\)
+The set \( $LB x \in R : o(f,x) $GTS 0 $RB \)
+is a closed subset of \(R.\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Consider a bounded function
+\(f \colon R \to {\mathbb{R}}.\)
+For every \(\epsilon $GTS 0,\)
+the set \( $LB x \in R : o(f,x) \geq \epsilon $RB \)
+is a closed subset of \(R.\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
