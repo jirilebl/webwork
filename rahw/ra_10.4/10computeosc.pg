@@ -98,7 +98,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-Consider the function \(g \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) defined
+Consider the function \(h \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) defined
 by \(h(x,y) := \frac{xy}{x^2+y^2}\) for \((x,y) \not= (0,0) \) and
 \(h(0,0):=0.\)
 Compute the "oscillation" at the following points:

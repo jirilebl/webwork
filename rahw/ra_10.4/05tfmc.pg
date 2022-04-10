@@ -53,7 +53,7 @@ f(x,y) :=
 0 & \text{if } (x,y) = (0,0).
 \end{cases}
 \]
-Is \(f\) integrable (on \(R\))?
+Is \(f\) Riemann integrable (on \(R\))?
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -79,7 +79,7 @@ g(x,y) :=
 0 & \text{else.}
 \end{cases}
 \]
-Is \(g\) integrable (on \(R\))?
+Is \(g\) Riemann integrable (on \(R\))?
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -105,7 +105,7 @@ h(x,y) :=
 0 & \text{else.}
 \end{cases}
 \]
-Is \(h\) integrable (on \(R\))?
+Is \(h\) Riemann integrable (on \(R\))?
 $BR
 END_TEXT
 Context()->normalStrings;
