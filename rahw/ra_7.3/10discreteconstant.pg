@@ -71,8 +71,8 @@ TargetLabel =>  "The proof",
 Context()->texStrings;
 BEGIN_TEXT
 
-$BITALIC (Drag the statements from the left column
-to the right, putting them in the correct order.  There could be extras.) $EITALIC
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
 
 \{ $q1->Print \}
 
@@ -104,8 +104,8 @@ TargetLabel =>  "The proof",
 Context()->texStrings;
 BEGIN_TEXT
 
-$BITALIC (Drag the statements from the left column
-to the right, putting them in the correct order.  There could be extras.) $EITALIC
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
 
 \{ $q2->Print \}
 

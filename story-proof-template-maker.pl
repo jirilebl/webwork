@@ -100,13 +100,13 @@ BEGIN_TEXT
 EOF
 				if ($hint) {
 					$out .= << "EOF";
-\$BITALIC (Drag \\{ \$q$qnum->numNeeded \\} statements from the left column
-to the right, putting them in the correct order.) \$EITALIC
+\$BITALIC (Drag \\{ \$q$qnum->numNeeded \\} statements from the first column
+to the second column, putting them in the correct order.) \$EITALIC
 EOF
 				} else {
 					$out .= << "EOF";
-\$BITALIC (Drag the statements from the left column
-to the right, putting them in the correct order.  There could be extras.) \$EITALIC
+\$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) \$EITALIC
 EOF
 				}
 				$out .= << "EOF";
