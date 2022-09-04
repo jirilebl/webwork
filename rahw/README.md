@@ -33,20 +33,21 @@ the "def" files from the diffyqs-webwork directory.  Alternatively go to
 library browser, look into the rahw directory, and pick problems one
 by one.
 
-The proof problems require draggableProof.pl to work (from WeBWorK 2.16
-onwards this should work automatically, with an older version you
-must install the draggableProof.pl macro manually).  I'm testing on 2.14
-with the macro manually installed.
+The proof problems require draggableProof.pl to work (from WeBWorK 2.16 onwards
+this should work automatically, with an older version you must install the
+draggableProof.pl macro manually).  I first tested on 2.14 with the macro
+manually installed, and now I'm testing with 2.17.
 
 ## Where did the problems come from?
 
-All the problems were written from scratch.  They were for the most part
-written with a simple helper script (*story-proof-template-maker.pl*).
-The script and the problem can be gotten from my scratchwork webwork github
+All the problems were written from scratch.  Vast majority, but not all, were
+written using a simple helper script (*story-proof-template-maker.pl*) which
+take file (the .in files) and produces the WebWorK problem file (.pg file).
+The script and the problems can be gotten from my scratchwork webwork github
 repository https://github.com/jirilebl/webwork
 
 ## Contributing
 
-Let me know if you have any fixes, or new problems, or suggestions.
+Let me know if you have any fixes, new problems, or suggestions.
 If you figure out how to modify the .in files in the repository you can
 just send pull requests.
