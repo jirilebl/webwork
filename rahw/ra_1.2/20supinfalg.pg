@@ -52,7 +52,7 @@ Context()->flags->set(
 
 BEGIN_PGML
 
-Let [:A:] be the interval [`([$a],[$b]) .`]
+Let [:A:] be the interval [`([$a],[$b]) ,`] that is, the set [`\{ x \in {\mathbb{R}} : [$a] < x < [$b] \} .`]
 
 Compute
 
