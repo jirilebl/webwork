@@ -28,7 +28,7 @@ Which statements are necessarily true:
 %EXTRA
 \(\lvert x-y \rvert \leq $bma \)
 \(\lvert x-y \rvert \leq $a \)
-\($b \leq \lvert x-y \rvert \)
+\($bma \leq \lvert x-y \rvert \)
 \($bpa \leq \lvert x+y \rvert \)
 %END
 
