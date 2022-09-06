@@ -57,12 +57,12 @@ Context()->normalStrings;
 
 $q1 = new_checkbox_multiple_choice();
 $q1->qa("Check all that apply",
-"\(\inf_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)",
-"\(\sup_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)",
-"\(\inf_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)",
+"\(\displaystyle \inf_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)",
+"\(\displaystyle \sup_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)",
+"\(\displaystyle \inf_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)",
 );
 $q1->extra(
-"\(\sup_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)",
+"\(\displaystyle \sup_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -85,7 +85,7 @@ $q2->qa("Check all that apply",
 $q2->extra(
 "\(\lvert x-y \rvert \leq $bma \)",
 "\(\lvert x-y \rvert \leq $a \)",
-"\($b \leq \lvert x-y \rvert \)",
+"\($bma \leq \lvert x-y \rvert \)",
 "\($bpa \leq \lvert x+y \rvert \)",
 );
 Context()->texStrings;
@@ -95,7 +95,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(f \colon D \to {\mathbb{R}}\) is a bounded function
-and \(M = \sup_{x \in D} \lvert f(x) \rvert ,\)
+and \(\displaystyle M = \sup_{x \in D} \lvert f(x) \rvert ,\)
 then \(-M \leq f(x) \leq M\) for all \(x \in D .\)
 $BR
 END_TEXT
@@ -114,7 +114,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(f \colon D \to {\mathbb{R}}\) is a bounded function
-and \(M = \inf_{x \in D} \lvert f(x) \rvert ,\)
+and \(\displaystyle M = \inf_{x \in D} \lvert f(x) \rvert ,\)
 then \(M \leq f(x) \) for all \(x \in D .\)
 $BR
 END_TEXT

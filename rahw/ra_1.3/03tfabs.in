@@ -6,11 +6,11 @@ Suppose \(f \colon D \to {\mathbb{R}}\) and
 such that \(f(x) \leq g(x)\) for all \(x \in D.\)
 Which of the following statements are necessarily true:
 %CHECKBOXES
-\(\inf_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)
-\(\sup_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)
-\(\inf_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)
+\(\displaystyle \inf_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)
+\(\displaystyle \sup_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)
+\(\displaystyle \inf_{x\in D} f(x) \leq \sup_{x\in D} g(x) \)
 %EXTRA
-\(\sup_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)
+\(\displaystyle \sup_{x\in D} f(x) \leq \inf_{x\in D} g(x) \)
 %END
 
 %SETUP $a=random(2,4,1);
@@ -34,7 +34,7 @@ Which statements are necessarily true:
 
 True or false:
 If \(f \colon D \to {\mathbb{R}}\) is a bounded function
-and \(M = \sup_{x \in D} \lvert f(x) \rvert ,\)
+and \(\displaystyle M = \sup_{x \in D} \lvert f(x) \rvert ,\)
 then \(-M \leq f(x) \leq M\) for all \(x \in D .\)
 $BR
 %RADIO
@@ -44,7 +44,7 @@ False
 
 True or false:
 If \(f \colon D \to {\mathbb{R}}\) is a bounded function
-and \(M = \inf_{x \in D} \lvert f(x) \rvert ,\)
+and \(\displaystyle M = \inf_{x \in D} \lvert f(x) \rvert ,\)
 then \(M \leq f(x) \) for all \(x \in D .\)
 $BR
 %RADIO
