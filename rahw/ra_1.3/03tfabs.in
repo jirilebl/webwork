@@ -23,8 +23,8 @@ Which statements are necessarily true:
 %CHECKBOXES
 \(\lvert x+y \rvert \leq $bpa \)
 \(\lvert x-y \rvert \leq $bpa \)
-\($bma \leq \lvert x-y \rvert \)
-\($bma \leq \lvert x+y \rvert \)
+\(0 \leq \lvert x-y \rvert \)
+\(0 \leq \lvert x+y \rvert \)
 %EXTRA
 \(\lvert x-y \rvert \leq $bma \)
 \(\lvert x-y \rvert \leq $a \)

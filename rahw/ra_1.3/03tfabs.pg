@@ -79,8 +79,8 @@ $q2 = new_checkbox_multiple_choice();
 $q2->qa("Check all that apply",
 "\(\lvert x+y \rvert \leq $bpa \)",
 "\(\lvert x-y \rvert \leq $bpa \)",
-"\($bma \leq \lvert x-y \rvert \)",
-"\($bma \leq \lvert x+y \rvert \)",
+"\(0 \leq \lvert x-y \rvert \)",
+"\(0 \leq \lvert x+y \rvert \)",
 );
 $q2->extra(
 "\(\lvert x-y \rvert \leq $bma \)",
