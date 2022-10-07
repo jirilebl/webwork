@@ -92,7 +92,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 $PAR
-Now let \(x_n :=
+Now let \(\displaystyle x_n :=
 \begin{cases}
 \frac{-$c}{n} & \text{if } n \text{ even,} \\
 \frac{$d n-1}{n} & \text{if } n \text{ odd.} \\
