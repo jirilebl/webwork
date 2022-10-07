@@ -91,8 +91,7 @@ Context()->normalStrings;
 
 $q3 = DraggableProof([
 "Let \(k\) be a fixed natural number.",
-"Let \( y_n := x_{n+k}-x_n = \sum_{j=n+1}^{n+k} \frac{1}{j} .\)",
-"What we need to show is that \(y_n \to 0 .\)",
+"Define \( y_n := x_{n+k}-x_n = \sum_{j=n+1}^{n+k} \frac{1}{j} .\)",
 "Estimate \( \displaystyle y_n = \sum_{j=n+1}^{n+k} \frac{1}{j} \)",
 "\(\displaystyle \qquad \leq \sum_{j=n+1}^{n+k} \frac{1}{n+1} \)",
 "\(\displaystyle \qquad = \frac{k}{n+1} . \)",
@@ -101,7 +100,6 @@ $q3 = DraggableProof([
 "As \(y_n \to 0 ,\) we get \(\lvert y_n \rvert \to 0 \) as well.",
 ],
 [
-"What we need to show is that \(y_n \to 1 .\)",
 "Let \(n\) be a fixed natural number.",
 "\(\displaystyle \qquad = \frac{k}{n+k} . \)",
 "\(\displaystyle \qquad \leq \sum_{j=n+1}^{n+k} \frac{1}{n+k} \)",
