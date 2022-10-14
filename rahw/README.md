@@ -11,18 +11,19 @@ lightly edited) and control questions are asked throughout.
 
 For volume I, coverage is more or less reasonable for the non-optional bits,
 trying to get at least 2-3 questions per section (more for ones that take
-longer).  A few sections only have 1 problem (3.5, 3.6, 4.4, 6.2, 6.3) and a
+longer).  A few sections only have 1 problem (3.6, 4.4, 6.2, 6.3) and a
 couple of sections do not yet have any problems yet (5.4, 5.5).
 
-When I ran the course in Fall 2021, I covered non-optional bits of chapters
-0-5 and chapter 7 (without Picard) and I had 6 of these problems per week
-the whole semester.  Those problems have been class tested, and the feedback
-from students has been positive.  There are a few problems, especially in the
-sections I did not cover, that have not been class tested yet.  So use with a
-bit of care.
+When I ran the course in Fall 2021, I covered non-optional bits of chapters 0-5
+and chapter 7 (without Picard) and I had 6 of these problems per week the whole
+semester, and I am doing almost the same thing in Fall 2022.  The problems
+in those sections have been class tested, and the feedback from students has
+been positive.  There are a few problems in the sections I did not cover that
+have not been class tested yet.  So use with a bit of care.
 
-Volume II problems are right now work in progress and are being used in
-Spring 2022.
+Volume II problems are a bit more sparse and kind of a work in progress,
+I have used them in Spring 2022 (with an extremely small class) and 
+plan to use them in Spring 2023 (with a hopefully slightly larger class).
 
 ## How to use?
 
