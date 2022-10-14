@@ -1,0 +1,50 @@
+%DESC Construct one of the definitions left out of the book
+%HINC head.txt
+%NOPARTIAL
+Construct the definition of "\(f(x) \to -\infty\) as \(x \to c\)."
+
+$BBOLD Definition: $EBOLD
+Let \(f \colon S \to \mathbb{R}\) be a function and suppose 
+$BR
+%RADIO
+\(S\) has \(x\) as a cluster point.
+%CORRECT \(S\) has \(c\) as a cluster point.
+\(S\) has \(\infty\) as a cluster point.
+\(S\) has \(-\infty\) as a cluster point.
+%END
+$BR
+We say \(f(x)\)
+$BITALIC diverges to negative infinity $EITALIC
+as \(x\) goes to \(c,\)
+$BR
+%RADIO
+if for every \(N \in \mathbb{R}\) there exists an \(M \in \mathbb{R}\)
+if for every \(\epsilon $GTS 0\) there exists an \(M \in \mathbb{R}\)
+%CORRECT if for every \(N \in \mathbb{R}\) there exists an \(\delta $GTS 0\)
+if for every \(\epsilon $GTS 0\) there exists an \(\delta $GTS 0\)
+%END
+$BR
+such that
+$BR
+%RADIO
+\(f(x) $GTS N\)
+%CORRECT \(f(x) $LTS N\)
+\(\lvert f(x) - L \rvert $LTS \epsilon\)
+\(\lvert f(x) \rvert $GTS N\)
+\(\lvert f(x) \rvert $LTS -N\)
+%END
+$BR
+whenever
+$BR
+%RADIO
+\(x \in S \setminus \{ c \}\) and \(x \geq M .\)
+\(x \in S \) and \(x \geq M .\)
+\(x \in S \) and \(\lvert x -c \rvert $LTS \delta .\)
+%CORRECT \(x \in S \setminus \{ c \}\) and \(\lvert x -c \rvert $LTS \delta .\)
+\(x \in S \setminus \{ c \}\) and \(\lvert x -c \rvert $LTS \epsilon .\)
+\(x \in S \) and \(x \leq -M .\)
+%END
+$BR
+We write
+\(\displaystyle \lim_{x \to c} f(x) := -\infty ,\)
+or we say that \(f(x) \to -\infty\) as \(x \to c .\)
