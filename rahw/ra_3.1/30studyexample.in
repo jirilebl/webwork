@@ -25,7 +25,7 @@ $BR
 %CORRECT Because if we prove the claim for an arbitrary fixed \(c,\) it is true for all \(c.\)
 Because the claim is true for only some \(c .\)
 Because \(c\) depends on \(\epsilon .\)
-Because we are allowed to choose \(c\) arbitrarily.
+Because we only need to prove the claim for small \(c .\)
 %END
 
 $BITALIC Q: Why are we taking an arbitrary \(\epsilon $GTS 0 ?\) $EITALIC
@@ -34,7 +34,7 @@ $BR
 %CORRECT Because we need to prove that the definition of the limit is satisfied for all \(\epsilon $GTS 0 .\)
 Because we need to prove that the definition of the limit for some specific \(\epsilon $GTS 0 .\)
 Because \( \epsilon \) depends on \(c .\)
-Because we are allowed to choose \(\epsilon\) arbitrarily.
+Because the value of \(\epsilon\) is irrelevant in the proof.
 %END
 
 Write
