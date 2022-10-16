@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Proof that a sequence converges using ratio test
+## Proof that a sequence converges using ratio test (ex 2.2.8)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -97,6 +97,6 @@ install_problem_grader(~~&std_problem_grader);
 ANS($q1->cmp());
 ANS($q2->cmp());
 
-COMMENT("Proof that a sequence converges using ratio test");
+COMMENT("Proof that a sequence converges using ratio test (ex 2.2.8)");
 
 ENDDOCUMENT();

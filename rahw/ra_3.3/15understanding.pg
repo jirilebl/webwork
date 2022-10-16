@@ -68,7 +68,7 @@ BEGIN_TEXT
 
 $PAR
 $BITALIC Proof: $EITALIC
-Let us prove this claim by contrapositive.
+We prove this claim by contrapositive.
 $PAR
 $BITALIC Q: Contrapositive of the statment of the lemma means what? $EITALIC
 $BR

@@ -1,4 +1,4 @@
-%DESC Diagonalization to prove that the power set of the natural numbers is uncountable.
+%DESC Diagonalization to prove that the power set of the natural numbers is uncountable
 %HINC head.txt
 Using the digonalization argument, prove that the power set of the natural numbers,
 \({\mathcal{P}}({\mathbb{N}}),\) is uncountable.

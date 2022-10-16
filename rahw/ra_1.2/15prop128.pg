@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove Proposition 1.2.8 from the Basic Analysis book
+## Prove Proposition 1.2.8 from the Basic Analysis book (ex 1.2.12)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -89,6 +89,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Prove Proposition 1.2.8 from the Basic Analysis book");
+COMMENT("Prove Proposition 1.2.8 from the Basic Analysis book (ex 1.2.12)");
 
 ENDDOCUMENT();

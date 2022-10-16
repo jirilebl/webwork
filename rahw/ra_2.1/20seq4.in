@@ -1,4 +1,4 @@
-%DESC Proof that an eventually constant sequence converges
+%DESC Proof that an eventually constant sequence converges (ex 2.1.19)
 %HINC head.txt
 Let \($LB x_n $RB\) be a sequence and \(x \in \mathbb{R}\) such that
 there exists a \(k \in \mathbb{N}\) such that for all \(n \geq k,\)

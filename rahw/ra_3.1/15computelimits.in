@@ -1,4 +1,4 @@
-%DESC Comppute a few function limits
+%DESC Compute a few function limits
 %HINC head.txt
 %FORMULAVARS DNE
 %SETUP $a = random(2,9,1);

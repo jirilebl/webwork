@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Proof that a certain sequence is Cauchy
+## Proof that a certain sequence is Cauchy (simpler version of ex 2.4.6)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -89,6 +89,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Proof that a certain sequence is Cauchy");
+COMMENT("Proof that a certain sequence is Cauchy (simpler version of ex 2.4.6)");
 
 ENDDOCUMENT();

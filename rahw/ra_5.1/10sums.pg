@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Compute simple Darboux sums.
+## Compute simple Darboux sums
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -169,6 +169,6 @@ ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
 
-COMMENT("Compute simple Darboux sums.");
+COMMENT("Compute simple Darboux sums");
 
 ENDDOCUMENT();

@@ -15,7 +15,7 @@ continuous if and only if bounded
 %END
 
 $BITALIC Proof: $EITALIC
-Let us prove this claim by contrapositive.
+We prove this claim by contrapositive.
 
 $BITALIC Q: Contrapositive of the statment of the lemma means what? $EITALIC
 $BR

@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Proof that if a nonnegative series converges, then the series of the squares converges (2.5.14)
+## Proof that if a nonnegative series converges, then the series of the squares converges (ex 2.5.14)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -86,6 +86,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Proof that if a nonnegative series converges, then the series of the squares converges (2.5.14)");
+COMMENT("Proof that if a nonnegative series converges, then the series of the squares converges (ex 2.5.14)");
 
 ENDDOCUMENT();

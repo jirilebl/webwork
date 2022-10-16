@@ -1,4 +1,4 @@
-%DESC Compute simple Darboux sums.
+%DESC Compute simple Darboux sums
 %HINC head.txt
 %SETUP $a = random(2,5,1);
 Consider partitions

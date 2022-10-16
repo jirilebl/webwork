@@ -1,4 +1,4 @@
-%DESC Series with an explicit partial sum
+%DESC Series with an explicit partial sum (randomized version of ex 2.5.1)
 %HINC head.txt
 %NOPARTIAL
 %FORMULAVARS n,DNE

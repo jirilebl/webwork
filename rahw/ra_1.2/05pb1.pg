@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## User Archimedean property on one over n squared
+## Use Archimedean property on one over n squared (ex 1.2.1)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -84,6 +84,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("User Archimedean property on one over n squared");
+COMMENT("Use Archimedean property on one over n squared (ex 1.2.1)");
 
 ENDDOCUMENT();

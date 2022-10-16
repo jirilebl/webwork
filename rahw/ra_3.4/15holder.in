@@ -1,4 +1,4 @@
-%DESC Showing a Hoelder continuous function is uniformly continuous.
+%DESC Showing a Hoelder continuous function is uniformly continuous
 %HINC head.txt
 %NOPARTIAL
 Suppose \(f \colon [a,b] \to {\mathbb{R}}\) is such that

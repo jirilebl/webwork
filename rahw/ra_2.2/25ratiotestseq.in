@@ -1,4 +1,4 @@
-%DESC Proof that a sequence converges using ratio test
+%DESC Proof that a sequence converges using ratio test (ex 2.2.8)
 %HINC head.txt
 %NOPARTIAL
 Prove that \(\left$LB \frac{n^2}{2^n} \right$RB\) converges to

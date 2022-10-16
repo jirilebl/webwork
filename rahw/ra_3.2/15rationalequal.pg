@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove that two continuous functions equal on rational points are equal.
+## Prove that two continuous functions equal on rational points are equal (ex 3.2.10)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -46,8 +46,8 @@ $PAR
 Prove that if
 \( f \colon {\mathbb{R}} \to {\mathbb{R}}\) and
 \( g \colon {\mathbb{R}} \to {\mathbb{R}}\) are continuous and
-\(f(r) = g(r)\) for all rational \(r,\) then
-\(f(x) = g(x)\) for all \(x.\)
+\(f(r) = g(r)\) for all \(r \in {\mathbb{Q}},\) then
+\(f(x) = g(x)\) for all \(x \in {\mathbb{R}}.\)
 $PAR
 END_TEXT
 Context()->normalStrings;
@@ -89,6 +89,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Prove that two continuous functions equal on rational points are equal.");
+COMMENT("Prove that two continuous functions equal on rational points are equal (ex 3.2.10)");
 
 ENDDOCUMENT();

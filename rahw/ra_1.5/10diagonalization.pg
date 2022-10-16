@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Diagonalization to prove that the power set of the natural numbers is uncountable.
+## Diagonalization to prove that the power set of the natural numbers is uncountable
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -84,6 +84,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Diagonalization to prove that the power set of the natural numbers is uncountable.");
+COMMENT("Diagonalization to prove that the power set of the natural numbers is uncountable");
 
 ENDDOCUMENT();

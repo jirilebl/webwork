@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Proof that an eventually constant sequence converges
+## Proof that an eventually constant sequence converges (ex 2.1.19)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -86,6 +86,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Proof that an eventually constant sequence converges");
+COMMENT("Proof that an eventually constant sequence converges (ex 2.1.19)");
 
 ENDDOCUMENT();

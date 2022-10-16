@@ -1,4 +1,4 @@
-%DESC Proofs about boundedness of the sum of functions
+%DESC Proofs about boundedness of the sum of functions (ex 1.3.8 b and 1.3.9 a)
 %HINC head.txt
 %NOPARTIAL
 Suppose that \(f \colon D \to {\mathbb{R}}\) and \(g \colon D \to {\mathbb{R}}\) are functions.

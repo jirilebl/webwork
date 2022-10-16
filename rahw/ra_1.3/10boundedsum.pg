@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Proofs about boundedness of the sum of functions
+## Proofs about boundedness of the sum of functions (ex 1.3.8 b and 1.3.9 a)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -166,6 +166,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
-COMMENT("Proofs about boundedness of the sum of functions");
+COMMENT("Proofs about boundedness of the sum of functions (ex 1.3.8 b and 1.3.9 a)");
 
 ENDDOCUMENT();

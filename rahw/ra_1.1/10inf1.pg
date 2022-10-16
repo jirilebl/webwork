@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Proof that if a lower bound is in the set, it is the greatest lower bound (inf)
+## Proof that if a lower bound is in the set, it is the greatest lower bound (inf) (similar to ex 1.1.5)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -85,6 +85,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Proof that if a lower bound is in the set, it is the greatest lower bound (inf)");
+COMMENT("Proof that if a lower bound is in the set, it is the greatest lower bound (inf) (similar to ex 1.1.5)");
 
 ENDDOCUMENT();

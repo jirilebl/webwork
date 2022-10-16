@@ -1,4 +1,4 @@
-%DESC Proof that if a nonnegative series converges, then the series of the squares converges (2.5.14)
+%DESC Proof that if a nonnegative series converges, then the series of the squares converges (ex 2.5.14)
 %HINC head.txt
 Suppose that \(\displaystyle\sum_{n=1}^{\infty} x_n\) converges where \(x_n \geq 0\)
 for all \(n\in \mathbb{N}.\)

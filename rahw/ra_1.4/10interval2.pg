@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Proof of one direction of charaterization of intervals
+## Proof of one direction of charaterization of intervals (a special case of ex 1.4.3 plus some true/false)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -143,6 +143,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
-COMMENT("Proof of one direction of charaterization of intervals");
+COMMENT("Proof of one direction of charaterization of intervals (a special case of ex 1.4.3 plus some true/false)");
 
 ENDDOCUMENT();
