@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove that c x^n is continuous at the origin
+## Prove that c x^n is continuous at the origin (randomized ex 3.2.1)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -88,6 +88,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Prove that c x^n is continuous at the origin");
+COMMENT("Prove that c x^n is continuous at the origin (randomized ex 3.2.1)");
 
 ENDDOCUMENT();

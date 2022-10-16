@@ -1,4 +1,4 @@
-%DESC Prove that c x^n is continuous at the origin
+%DESC Prove that c x^n is continuous at the origin (randomized ex 3.2.1)
 %HINC head.txt
 %SETUP $n = random(3,6,1);
 %SETUP $c = random(2,9,1);
