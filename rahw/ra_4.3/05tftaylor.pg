@@ -132,4 +132,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
+COMMENT("True/false and multiple choice questions on Taylor's theorem");
+
 ENDDOCUMENT();

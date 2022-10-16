@@ -166,4 +166,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
+COMMENT("Proofs about boundedness of the sum of functions");
+
 ENDDOCUMENT();

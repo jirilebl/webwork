@@ -92,4 +92,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 
+COMMENT("Compute some simple Taylor polynomials");
+
 ENDDOCUMENT();

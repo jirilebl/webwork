@@ -143,4 +143,6 @@ ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
 
+COMMENT("Finish definition of a metric");
+
 ENDDOCUMENT();

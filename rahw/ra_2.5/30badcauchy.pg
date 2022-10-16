@@ -132,4 +132,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 
+COMMENT("Working through the non-Cauchy sequence example given by the harmonic series (includes 2.5.12)");
+
 ENDDOCUMENT();

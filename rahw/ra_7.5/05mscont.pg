@@ -223,4 +223,6 @@ ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
 
+COMMENT("True/false and multiple choice questions on continuity in metric spaces");
+
 ENDDOCUMENT();

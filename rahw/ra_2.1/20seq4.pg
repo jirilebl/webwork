@@ -86,4 +86,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Proof that an eventually constant sequence converges");
+
 ENDDOCUMENT();

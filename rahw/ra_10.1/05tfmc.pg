@@ -239,4 +239,6 @@ ANS($q7->cmp());
 ANS(checkbox_cmp($q8->correct_ans()));
 ANS($q9->cmp());
 
+COMMENT("True/false/multiple choice/quick answer questions for definition of integral in several variables");
+
 ENDDOCUMENT();

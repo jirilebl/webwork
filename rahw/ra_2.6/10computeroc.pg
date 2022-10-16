@@ -156,4 +156,6 @@ ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
 
+COMMENT("Compute radius of convergence for a specific power series");
+
 ENDDOCUMENT();

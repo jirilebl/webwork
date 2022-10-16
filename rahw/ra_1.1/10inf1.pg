@@ -85,4 +85,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Proof that if a lower bound is in the set, it is the greatest lower bound (inf)");
+
 ENDDOCUMENT();

@@ -124,4 +124,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 
+COMMENT("Picking correct statements about infs and sups");
+
 ENDDOCUMENT();

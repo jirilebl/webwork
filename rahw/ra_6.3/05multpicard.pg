@@ -225,4 +225,6 @@ ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
 
+COMMENT("True/false and multiple choice questions on Picard's theorem");
+
 ENDDOCUMENT();

@@ -117,4 +117,6 @@ install_problem_grader(~~&std_problem_grader);
 ANS($q1->cmp());
 ANS($q2->cmp());
 
+COMMENT("Showing a Hoelder continuous function is uniformly continuous.");
+
 ENDDOCUMENT();

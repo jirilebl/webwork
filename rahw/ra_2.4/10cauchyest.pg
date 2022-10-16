@@ -102,4 +102,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 
+COMMENT("Explicit computation of the M for Cauchy");
+
 ENDDOCUMENT();

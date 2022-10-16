@@ -150,4 +150,6 @@ ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
 
+COMMENT("True/false, multiple choice, short answer questions on matrices");
+
 ENDDOCUMENT();

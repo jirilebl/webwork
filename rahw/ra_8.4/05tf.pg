@@ -217,4 +217,6 @@ ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
 
+COMMENT("True/false/MC for derivative continuity");
+
 ENDDOCUMENT();

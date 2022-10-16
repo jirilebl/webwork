@@ -150,4 +150,6 @@ ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
 
+COMMENT("Questions on convexity");
+
 ENDDOCUMENT();

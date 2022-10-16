@@ -122,4 +122,6 @@ Context()->normalStrings;
 ANS($q1->cmp());
 ANS($q2->cmp());
 
+COMMENT("Prove a simple limit exists");
+
 ENDDOCUMENT();

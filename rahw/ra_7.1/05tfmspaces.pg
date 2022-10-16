@@ -220,4 +220,6 @@ ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
 
+COMMENT("True/false questions on metric spaces");
+
 ENDDOCUMENT();

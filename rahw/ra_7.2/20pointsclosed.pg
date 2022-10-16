@@ -84,4 +84,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Prove that isolated points are closed");
+
 ENDDOCUMENT();

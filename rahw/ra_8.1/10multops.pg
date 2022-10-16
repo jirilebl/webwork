@@ -218,4 +218,6 @@ ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
 
+COMMENT("True/false, multiple choice, short answer questions on linear operators");
+
 ENDDOCUMENT();

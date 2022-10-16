@@ -181,4 +181,6 @@ ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
 
+COMMENT("True/false for derivative definition");
+
 ENDDOCUMENT();

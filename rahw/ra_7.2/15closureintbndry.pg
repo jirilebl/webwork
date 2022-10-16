@@ -301,4 +301,6 @@ ANS($q10->cmp());
 ANS($q11->cmp());
 ANS($q12->cmp());
 
+COMMENT("Compute closure / interior / boundary in R");
+
 ENDDOCUMENT();

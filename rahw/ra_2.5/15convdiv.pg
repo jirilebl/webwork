@@ -219,4 +219,6 @@ ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
 
+COMMENT("Deciding on convergence/divergence of series");
+
 ENDDOCUMENT();

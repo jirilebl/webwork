@@ -151,4 +151,6 @@ ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
 
+COMMENT("Questions on the determinant");
+
 ENDDOCUMENT();

@@ -99,4 +99,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 
+COMMENT("Compute a few distances in the plane.");
+
 ENDDOCUMENT();

@@ -121,4 +121,6 @@ Context()->normalStrings;
 ANS($q1->cmp());
 ANS($q2->cmp());
 
+COMMENT("Basic proof by induction");
+
 ENDDOCUMENT();

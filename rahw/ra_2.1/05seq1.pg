@@ -188,4 +188,6 @@ ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
 
+COMMENT("Yes/No questions about boundedness of sequences");
+
 ENDDOCUMENT();

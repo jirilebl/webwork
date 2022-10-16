@@ -185,4 +185,6 @@ ANS($q4->cmp());
 ANS($q5->cmp());
 ANS(checkbox_cmp($q6->correct_ans()));
 
+COMMENT("True/false/MC for implicit/inverse function theorem");
+
 ENDDOCUMENT();

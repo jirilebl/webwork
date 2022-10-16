@@ -258,4 +258,6 @@ ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
 
+COMMENT("Understanding the proof of Rolle's theorem");
+
 ENDDOCUMENT();

@@ -97,4 +97,6 @@ install_problem_grader(~~&std_problem_grader);
 ANS($q1->cmp());
 ANS($q2->cmp());
 
+COMMENT("Proof that a sequence converges using ratio test");
+
 ENDDOCUMENT();

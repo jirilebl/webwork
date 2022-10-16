@@ -140,4 +140,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
+COMMENT("Construct one of the definitions left out of the book");
+
 ENDDOCUMENT();

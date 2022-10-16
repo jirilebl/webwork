@@ -88,4 +88,6 @@ Context()->normalStrings;
 ANS($q1->cmp());
 ANS($q2->cmp());
 
+COMMENT("Differentiate some expressions with integrals (like problems 1 and 2)");
+
 ENDDOCUMENT();

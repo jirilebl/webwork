@@ -239,4 +239,6 @@ ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
 
+COMMENT("True/false/multiple choice questions for Riemann integrable functions");
+
 ENDDOCUMENT();

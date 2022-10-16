@@ -163,4 +163,6 @@ ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
 
+COMMENT("True/false and multiple choice about intervals");
+
 ENDDOCUMENT();

@@ -89,4 +89,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Prove that two continuous functions equal on rational points are equal.");
+
 ENDDOCUMENT();

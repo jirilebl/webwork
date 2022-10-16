@@ -125,4 +125,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
+COMMENT("Multiple choice questions about power sets, and computing the size of the power set");
+
 ENDDOCUMENT();

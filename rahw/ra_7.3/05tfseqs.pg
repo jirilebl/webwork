@@ -241,4 +241,6 @@ ANS($q8->cmp());
 ANS($q9->cmp());
 ANS($q10->cmp());
 
+COMMENT("True/false questions on sequences in metric spaces");
+
 ENDDOCUMENT();

@@ -119,4 +119,6 @@ Context()->normalStrings;
 ANS($q1->cmp());
 ANS($q2->cmp());
 
+COMMENT("Prove that in a discrete metric a sequence is convergent if and only if it is eventually constant.");
+
 ENDDOCUMENT();

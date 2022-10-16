@@ -268,4 +268,6 @@ ANS($q9->cmp());
 ANS($q10->cmp());
 ANS($q11->cmp());
 
+COMMENT("True/false, multiple choice, short answer questions on vector spaces, span, and dimension");
+
 ENDDOCUMENT();

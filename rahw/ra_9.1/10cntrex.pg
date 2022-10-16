@@ -189,4 +189,6 @@ ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
 
+COMMENT("Counterexample for differentiation under the integral");
+
 ENDDOCUMENT();

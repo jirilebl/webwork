@@ -37,6 +37,8 @@ $out = "";
 $setvars = "";
 $setup = "";
 $header = "";
+$comment = "";
+$setcomment = 0;
 
 $insolution = 0;
 
@@ -53,6 +55,17 @@ while ($line = <$in>) {
 		$nopartialcredit = 1;
 	} elsif ($line =~ m/^%DESC[ \t]*(.*)$/) {
 		$header .= "##DESCRIPTION\n## $1\n##ENDDESCRIPTION\n\n";
+		if ($setcomment == 0) {
+			$setcomment = 1;
+			$comment = "$1";
+		}
+	} elsif ($line =~ m/^%COMMENT[ \t]*(.*)$/) {
+		if ($setcomment == 1 or $setcomment == 0) {
+			$comment = "$1";
+		} else { # if ($setcomment == 2)
+			$comment .= "\n$1";
+		}
+		$setcomment = 2;
 	# If making an online version, this needs to be removed
 	} elsif ($allowinc and $line =~ m/^%HINC[ \t]*(.*)$/) {
 		if (open(my $headin, '<', $1)) {
@@ -420,6 +433,10 @@ if ($nopartialcredit) {
 
 for (my $i=0; $i < $qnum; $i++) {
 	print($qcheckers[$i]);
+}
+
+if ($setcomment > 0) {
+	print("\nCOMMENT(\"$comment\");\n");
 }
 
 print("\nENDDOCUMENT();\n");

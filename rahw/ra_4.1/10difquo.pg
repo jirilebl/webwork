@@ -126,4 +126,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
+COMMENT("Computing the difference quotients");
+
 ENDDOCUMENT();

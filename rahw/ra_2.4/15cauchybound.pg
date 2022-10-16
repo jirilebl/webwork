@@ -89,4 +89,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Proof that a certain sequence is Cauchy");
+
 ENDDOCUMENT();

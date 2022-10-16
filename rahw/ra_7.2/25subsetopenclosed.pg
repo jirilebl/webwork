@@ -196,4 +196,6 @@ ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
 
+COMMENT("Check openness / closedness of sets in R in subset topology");
+
 ENDDOCUMENT();

@@ -122,4 +122,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
+COMMENT("Compute a few distances in the taxicab distance");
+
 ENDDOCUMENT();

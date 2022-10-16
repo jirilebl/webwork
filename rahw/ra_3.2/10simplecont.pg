@@ -88,4 +88,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Prove that c x^n is continuous at the origin.");
+
 ENDDOCUMENT();

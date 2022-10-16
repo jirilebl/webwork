@@ -89,4 +89,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Proof about convergence using squeeze lemma");
+
 ENDDOCUMENT();

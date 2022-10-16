@@ -128,4 +128,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
+COMMENT("Series with an explicit partial sum");
+
 ENDDOCUMENT();

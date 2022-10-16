@@ -69,8 +69,8 @@ TargetLabel =>  "The proof",
 Context()->texStrings;
 BEGIN_TEXT
 
-$BITALIC (Drag the statements from the left column
-to the right, putting them in the correct order.  There could be extras.) $EITALIC
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
 
 \{ $q1->Print \}
 
@@ -93,8 +93,8 @@ TargetLabel =>  "The proof",
 Context()->texStrings;
 BEGIN_TEXT
 
-$BITALIC (Drag the statements from the left column
-to the right, putting them in the correct order.  There could be extras.) $EITALIC
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
 
 \{ $q2->Print \}
 
@@ -119,8 +119,8 @@ TargetLabel =>  "The proof",
 Context()->texStrings;
 BEGIN_TEXT
 
-$BITALIC (Drag \{ $q3->numNeeded \} statements from the left column
-to the right, putting them in the correct order.) $EITALIC
+$BITALIC (Drag \{ $q3->numNeeded \} statements from the first column
+to the second column, putting them in the correct order.) $EITALIC
 
 \{ $q3->Print \}
 
@@ -439,6 +439,11 @@ $PAR
 A header file can be included with "%HINC file.txt" (but not in the online
 version of this script).
 $PAR
+The "%DESC" line shuold be just one line (otherwise you should just use %H).
+This line will also be added into a "COMMENT();" statement that is visible
+in the Library Browser in WeBWorK.  Alternatively you can add a line
+with "%COMMENT Comment here":
+$PAR
 $PAR
 $BBOLD Solutions $EBOLD
 $PAR
@@ -482,5 +487,7 @@ ANS($q17->cmp());
 ANS(str_cmp("Good Bye"));
 ANS($q19->cmp());
 ANS($q20->cmp());
+
+COMMENT("This is a comment for this file.");
 
 ENDDOCUMENT();

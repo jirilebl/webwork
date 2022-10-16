@@ -91,4 +91,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Proof of a version of ratio test");
+
 ENDDOCUMENT();

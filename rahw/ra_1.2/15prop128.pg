@@ -89,4 +89,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Prove Proposition 1.2.8 from the Basic Analysis book");
+
 ENDDOCUMENT();

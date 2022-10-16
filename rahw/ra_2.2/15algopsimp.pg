@@ -93,4 +93,6 @@ install_problem_grader(~~&std_problem_grader);
 ANS($q1->cmp());
 ANS($q2->cmp());
 
+COMMENT("Compute and prove a simple limit by using algebraic operations");
+
 ENDDOCUMENT();

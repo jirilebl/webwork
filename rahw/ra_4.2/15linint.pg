@@ -88,4 +88,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Prove that a constant derivative implies f is affine");
+
 ENDDOCUMENT();

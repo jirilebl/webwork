@@ -84,4 +84,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
+COMMENT("Diagonalization to prove that the power set of the natural numbers is uncountable.");
+
 ENDDOCUMENT();

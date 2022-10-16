@@ -334,4 +334,6 @@ ANS($q12->cmp());
 ANS($q13->cmp());
 ANS($q14->cmp());
 
+COMMENT("True/false and multiple choice questions on series for section 2.6");
+
 ENDDOCUMENT();

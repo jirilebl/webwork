@@ -219,6 +219,12 @@ matter where they are in your input.
 A header file can be included with "%HINC file.txt" (but not in the online
 version of this script).
 
+The "%DESC" line shuold be just one line (otherwise you should just use %H).
+This line will also be added into a "COMMENT();" statement that is visible
+in the Library Browser in WeBWorK.  Alternatively you can add a line
+with "%COMMENT Comment here":
+%COMMENT This is a comment for this file.
+
 
 $BBOLD Solutions $EBOLD
 

@@ -121,4 +121,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
+COMMENT("Bounding a function based on Lipschitz constant");
+
 ENDDOCUMENT();
