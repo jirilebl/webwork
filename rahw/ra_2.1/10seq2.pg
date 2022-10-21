@@ -76,7 +76,7 @@ BEGIN_TEXT
 \{ $q2->buttons \}
 
 $PAR
-True or false: If \($LB x_n $RB_{n=1}^\infty\) converges to \(x\) and also converges to \(y,\) then
+True or false: If \({$LB x_n $RB}_{n=1}^\infty\) converges to \(x\) and also converges to \(y,\) then
 \(x=y,\)
 $BR
 END_TEXT
@@ -94,9 +94,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Given a sequence \($LB x_n$RB_{n=1}^\infty ,\)
+Given a sequence \({$LB x_n$RB}_{n=1}^\infty ,\)
 if for all \(N \in {\mathbb{N}}\) there exists an \(m $GTS N\) such that
-\(x_m = \frac{1}{m},\) then \($LB x_n$RB_{n=1}^\infty\) converges.
+\(x_m = \frac{1}{m},\) then \({$LB x_n$RB}_{n=1}^\infty\) converges.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -113,9 +113,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Given a sequence \($LB x_n$RB_{n=1}^\infty ,\)
+Given a sequence \({$LB x_n$RB}_{n=1}^\infty ,\)
 if there exists an \(N \in {\mathbb{N}}\) such that for all \(m $GTS N\) we have
-\(x_m = \frac{1}{m},\) then \($LB x_n$RB_{n=1}^\infty\) converges.
+\(x_m = \frac{1}{m},\) then \({$LB x_n$RB}_{n=1}^\infty\) converges.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -166,9 +166,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-\( \left$LB  \frac{1}{n+$a} \right$RB_{n=1}^\infty \)
+\( {\left$LB  \frac{1}{n+$a} \right$RB}_{n=1}^\infty \)
 is a tail of 
-\( \left$LB  \frac{1}{n} \right$RB_{n=1}^\infty . \)
+\( {\left$LB  \frac{1}{n} \right$RB}_{n=1}^\infty . \)
 $BR
 END_TEXT
 Context()->normalStrings;

@@ -42,7 +42,7 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Consider the sequence \($LB x_n $RB_{n=1}^\infty\) given by \(x_n := \frac{n+1}{n}.\)
+Consider the sequence \({$LB x_n $RB}_{n=1}^\infty\) given by \(x_n := \frac{n+1}{n}.\)
 $PAR
 Let \(L\) be the limit of this sequence.  What is it?
 $BR
