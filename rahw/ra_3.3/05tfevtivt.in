@@ -3,7 +3,7 @@
 %NOPARTIAL
 %SETUP $d = random(3,17,2);
 True or false:
-If every continuous \(f \colon S \to {\mathbb{R}}\) achieves a maximum
+If \(S\) is such that every continuous \(f \colon S \to {\mathbb{R}}\) achieves a maximum
 on \(S,\) then every continuous \(f\) also achieves a minimum on \(S.\)
 $BR
 %RADIO
