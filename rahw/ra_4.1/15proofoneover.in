@@ -1,6 +1,6 @@
 %DESC Prove that 1/x is differentiable
 %HINC head.txt
-Suppose that \(f \colon (0,\infty) \to \mathbb{R}\) is defined by \(f(x) = \frac{1}{x} .\)
+Suppose that \(f \colon (0,\infty) \to \mathbb{R}\) is defined by \(f(x) := \frac{1}{x} .\)
 Using the definition of the derivative, prove that \(f\) is differentiable at every \(c \in (0,\infty) .\)
 
 %PROOF
