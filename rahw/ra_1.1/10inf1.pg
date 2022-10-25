@@ -43,7 +43,7 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Suppose \(S\) is an ordered set and \(A \subset S\) with lower bound
+Suppose \(S\) is an ordered set and \(A \subset S\) has a lower bound
 \(x,\) which is such that \(x \in A.\)
 $PAR
 Prove that \(x\) is the greatest lower bound.
