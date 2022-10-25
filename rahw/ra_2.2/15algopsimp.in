@@ -2,7 +2,7 @@
 %HINC head.txt
 %NOPARTIAL
 %SETUP $a=random(2,9,1);
-Prove that \({$LB \frac{$a n^2-n}{n^2+1} $RB}_{n=1}^\infty\) converges to
+Prove that \({\left\lbrace \frac{$a n^2-n}{n^2+1} \right\rbrace}_{n=1}^\infty\) converges to
 %NUMBER $a
 
 %PROOF
