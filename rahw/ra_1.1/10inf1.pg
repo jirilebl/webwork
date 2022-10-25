@@ -44,7 +44,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 Suppose \(S\) is an ordered set and \(A \subset S\) with lower bound
-\(x\) which is such that \(x \in A.\)
+\(x,\) which is such that \(x \in A.\)
 $PAR
 Prove that \(x\) is the greatest lower bound.
 $PAR

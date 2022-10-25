@@ -135,7 +135,7 @@ True or false:
 If \(f \colon D \to {\mathbb{R}}\) and 
 \(g \colon D \to {\mathbb{R}}\) are bounded functions
 such that \(f(x) \geq 0\) and \(g(x) \geq 0\) for all \(x \in D,\)
-then for all \(x \in D\) we have
+then
 \[
 \sup_{x \in D} \bigl( f(x) g(x) \bigr)
 \leq

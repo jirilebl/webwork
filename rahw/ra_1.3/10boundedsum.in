@@ -10,12 +10,12 @@ Let \(M_1\) be such that \(|f(x)| \leq M_1\) for all \(x \in D.\)
 Let \(M_2\) be such that \(|g(x)|\leq M_2\) for all \(x \in D.\)
 Now for any \(x \in D\) we have
 \(|f(x)+g(x)| \leq |f(x)|+|g(x)|\)
-\(\qquad \leq M_1+M_2\)
+\(\qquad \leq M_1+M_2 .\)
 So \(f+g\) is bounded.
 %EXTRA
 \(|f(x)| = |f(x)|-|g(x)|\)
 \(\qquad \leq |f(x)-g(x)|+|g(x)|\)
-\(\qquad \leq \max $LB M_1,M_2 $RB \)
+\(\qquad \leq \max $LB M_1,M_2 $RB .\)
 Let \(M_1\) be such that \(|f(x)+g(x)|\leq M_1\) for all \(x \in D.\)
 %END
 
@@ -28,12 +28,12 @@ Let \(M_2\) be such that \(|g(x)|\leq M_2\) for all \(x \in D.\)
 Now for any \(x \in D\) we have
 \(|f(x)| = |f(x)+g(x)-g(x)|\)
 \(\qquad \leq |f(x)+g(x)|+|g(x)|\)
-\(\qquad \leq M_1+M_2\)
+\(\qquad \leq M_1+M_2 .\)
 So \(f\) is bounded.
 %EXTRA
 \(|f(x)| = |f(x)|-|g(x)|\)
 \(\qquad \leq |f(x)+g(x)|-|g(x)|\)
-\(\qquad \leq \max $LB M_1,M_2 $RB\)
+\(\qquad \leq \max $LB M_1,M_2 $RB .\)
 Let \(M_1\) be such that \(|f(x)| \leq M_1\) for all \(x \in D.\)
 %END
 
