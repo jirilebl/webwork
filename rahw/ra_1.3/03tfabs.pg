@@ -142,7 +142,6 @@ then
 \left( \sup_{x \in D} f(x) \right)
 \left( \sup_{x \in D} g(x) \right) .
 \]
-$BR
 END_TEXT
 Context()->normalStrings;
 
