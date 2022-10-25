@@ -1,0 +1,23 @@
+%DESC Finding best bounds of a function
+%HINC head.txt
+%SETUP $a = random(4,9,1);
+Suppose \(f \colon [-2,2] \to \mathbb{R}\) is given by
+\(f(x) = x^2-2x-$a .\)
+
+First, find the best (smallest) bound \(M\) for \(f,\) that is, find
+the smallest \(M\) such that
+\[
+\lvert f(x) \rvert \leq M
+\]
+for all \(x \in [-2,2] .\)
+
+\(M={}\)
+%NUMBER $a+1
+
+Now compute
+
+\(\sup_{x\in[-2,2]} f(x)={}\)
+%NUMBER 8-$a
+
+\(\inf_{x\in[-2,2]} f(x)={}\)
+%NUMBER -$a-1

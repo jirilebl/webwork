@@ -7,7 +7,7 @@
 ## DBsection()
 ## Institution(Oklahoma State University)
 ## Author(Jiri Lebl)
-## Level(4)
+## Level(6)
 ## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
 ## AuthorText1('Jiri Lebl')
 ## EditionText1('5')
@@ -22,8 +22,6 @@ loadMacros(
  "PGstandard.pl",
  "MathObjects.pl",
  "AnswerFormatHelp.pl",
- "parserFunction.pl",
- "PGML.pl",
  "PGcourse.pl",
 );
 
@@ -32,36 +30,74 @@ TEXT(beginproblem());
 ###########################
 # Setup
 
+$showPartialCorrectAnswers = 1;
+
 Context("Numeric");
 
-$a = random(4,9,1);
 
+$a = random(4,9,1);
 
 ############################
 # Main text
 
-BEGIN_PGML
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \(f \colon [-2,2] \to \mathbb{R}\) is given by
+\(f(x) = x^2-2x-$a .\)
+$PAR
+First, find the best (smallest) bound \(M\) for \(f,\) that is, find
+the smallest \(M\) such that
+\[
+\lvert f(x) \rvert \leq M
+\]
+for all \(x \in [-2,2] .\)
+$PAR
+\(M={}\)
+END_TEXT
+Context()->normalStrings;
 
-Suppose [`f \colon [-2,2] \to \mathbb{R}`] is given by
-[`f(x) = x^2-2x-[$a].`]
+$q1 = Formula("$a+1");
 
-First, find the best (smallest) bound [:M:] for [`f`], that is, find
-the smallest [:M:] such that
-
-[```|f(x)| \leq M```]
-
-for all [` x \in [-2,2] `]
-
-[`M={}`] [____________]{"$a+1"}{10}
-[@ AnswerFormatHelp("numbers") @]*
-
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
 Now compute
+$PAR
+\(\sup_{x\in[-2,2]} f(x)={}\)
+END_TEXT
+Context()->normalStrings;
 
-[``\sup_{x\in[-2,2]} f(x)={}``] [____________]{"8-$a"}{10}
-[@ AnswerFormatHelp("numbers") @]*
+$q2 = Formula("8-$a");
 
-[``\inf_{x\in[-2,2]} f(x)={}``] [____________]{"-$a-1"}{10}
-[@ AnswerFormatHelp("numbers") @]*
-END_PGML
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(\inf_{x\in[-2,2]} f(x)={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("-$a-1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+
+COMMENT("Finding best bounds of a function");
 
 ENDDOCUMENT();
