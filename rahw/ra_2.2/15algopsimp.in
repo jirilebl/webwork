@@ -1,16 +1,17 @@
 %DESC Compute and prove a simple limit by using algebraic operations
 %HINC head.txt
 %NOPARTIAL
-Prove that \($LB \frac{2n^2-n}{n^2+1} $RB\) converges to
-%NUMBER 2
+%SETUP $a=random(2,9,1);
+Prove that \({$LB \frac{$a n^2-n}{n^2+1} $RB}_{n=1}^\infty\) converges to
+%NUMBER $a
 
 %PROOF
-Write \(\frac{2n^2-n}{n^2+1} = \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)
-As \(\lim \frac{1}{n} = 0 \text{,}\) \(\lim \left(2-\frac{1}{n}\right) = 2\) and \(\lim \left(1+\left(\frac{1}{n}\right)^2\right) = 1\text{.}\)
-So as the denominator does not go to zero, \(\lim \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)^2} = 2\text{.}\)
+Write \(\frac{$a n^2-n}{n^2+1} = \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)
+As \(\lim\limits_{n\to\infty} \frac{1}{n} = 0 \text{,}\) \(\lim\limits_{n\to\infty} \left($a-\frac{1}{n}\right) = $a\) and \(\lim\limits_{n\to\infty} \left(1+\left(\frac{1}{n}\right)^2\right) = 1\text{.}\)
+So as the denominator does not go to zero, \(\lim\limits_{n\to\infty} \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)^2} = $a\text{.}\)
 %EXTRA
-Write \(\frac{2n^2-n}{n^2+1} $LTS \frac{2-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)
-\(\left|\frac{2n^2-n}{n^2+1}\right| $LTS 1\text{.}\)
+Write \(\frac{$a n^2-n}{n^2+1} $LTS \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)
+\(\left\lvert\frac{$a n^2-n}{n^2+1}\right\rvert $LTS 1\text{.}\)
 Let \(\epsilon:=1\text{.}\)
-As \(\lim \frac{1}{n} = 0\) and the denominator does not go to zero, \(\lim \frac{2n^2-n}{n^2+1} = 1\text{.}\)
+As \(\lim\limits_{n\to\infty} \frac{1}{n} = 0\) and the denominator does not go to zero, \(\lim\limits_{n\to\infty} \frac{$a n^2-n}{n^2+1} = 1\text{.}\)
 %END
