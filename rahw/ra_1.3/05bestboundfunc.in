@@ -16,8 +16,8 @@ for all \(x \in [-2,2] .\)
 
 Now compute
 
-\(\sup_{x\in[-2,2]} f(x)={}\)
+\(\sup\limits_{x\in[-2,2]} f(x)={}\)
 %NUMBER 8-$a
 
-\(\inf_{x\in[-2,2]} f(x)={}\)
+\(\inf\limits_{x\in[-2,2]} f(x)={}\)
 %NUMBER -$a-1

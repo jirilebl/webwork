@@ -51,7 +51,7 @@ Let \(A\) be the interval \(( $a , $b ) ,\) that is, the set \(\lbrace x \in {\m
 $PAR
 Compute
 $PAR
-\(\sup([$xpos] A)={}\)
+\(\sup($xpos A)={}\)
 END_TEXT
 Context()->normalStrings;
 
@@ -62,7 +62,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-\(\inf([$xpos] A)={}\)
+\(\inf($xpos A)={}\)
 END_TEXT
 Context()->normalStrings;
 
@@ -73,7 +73,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-\(\sup(([$xneg]) A)={}\)
+\(\sup(($xneg) A)={}\)
 END_TEXT
 Context()->normalStrings;
 
@@ -84,7 +84,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-\(\inf(A+[$xadd])={}\)
+\(\inf(A+$xadd)={}\)
 END_TEXT
 Context()->normalStrings;
 

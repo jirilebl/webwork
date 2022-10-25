@@ -7,8 +7,8 @@ Prove that \({$LB \frac{$a n^2-n}{n^2+1} $RB}_{n=1}^\infty\) converges to
 
 %PROOF
 Write \(\frac{$a n^2-n}{n^2+1} = \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)
-As \(\lim\limits_{n\to\infty} \frac{1}{n} = 0 \text{,}\) \(\lim\limits_{n\to\infty} \left($a-\frac{1}{n}\right) = $a\) and \(\lim\limits_{n\to\infty} \left(1+\left(\frac{1}{n}\right)^2\right) = 1\text{.}\)
-So as the denominator does not go to zero, \(\lim\limits_{n\to\infty} \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)^2} = $a\text{.}\)
+As \(\lim\limits_{n\to\infty} \frac{1}{n} = 0 \text{,}\) we have \(\lim\limits_{n\to\infty} \left($a-\frac{1}{n}\right) = $a\) and \(\lim\limits_{n\to\infty} \left(1+\left(\frac{1}{n}\right)^2\right) = 1\text{.}\)
+So as the denominator does not go to zero, \(\lim\limits_{n\to\infty} \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)^2} = \frac{\lim_{n\to\infty} $a-\frac{1}{n}}{\lim_{n\to\infty} 1+\left(\frac{1}{n}\right)^2} = $a\text{.}\)
 %EXTRA
 Write \(\frac{$a n^2-n}{n^2+1} $LTS \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)
 \(\left\lvert\frac{$a n^2-n}{n^2+1}\right\rvert $LTS 1\text{.}\)

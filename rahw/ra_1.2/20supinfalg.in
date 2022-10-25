@@ -9,16 +9,16 @@ Let \(A\) be the interval \(( $a , $b ) ,\) that is, the set \(\lbrace x \in {\m
 
 Compute
 
-\(\sup([$xpos] A)={}\)
+\(\sup($xpos A)={}\)
 %NUMBER $xpos*$b
 
-\(\inf([$xpos] A)={}\)
+\(\inf($xpos A)={}\)
 %NUMBER $xpos*$a
 
-\(\sup(([$xneg]) A)={}\)
+\(\sup(($xneg) A)={}\)
 %NUMBER $xneg*$a
 
-\(\inf(A+[$xadd])={}\)
+\(\inf(A+$xadd)={}\)
 %NUMBER $a+$xadd
 
 \(\sup((0) A)={}\)
