@@ -49,7 +49,7 @@ Compute
 $PAR
 \(
 \displaystyle
-\large{
+\Large{
 \frac{d}{dx}
 \int_{-x}^{$a x} e^{s^2} \, ds
 = {}
@@ -67,7 +67,7 @@ BEGIN_TEXT
 $PAR
 \(
 \displaystyle
-\large{
+\Large{
 \frac{d}{dx}
 \int_{0}^{x^{$b}} e^{s^2} \, ds
 = {}
