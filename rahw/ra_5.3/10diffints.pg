@@ -49,9 +49,11 @@ Compute
 $PAR
 \(
 \displaystyle
+\large{
 \frac{d}{dx}
 \int_{-x}^{$a x} e^{s^2} \, ds
 = {}
+}
 \)
 END_TEXT
 Context()->normalStrings;
@@ -65,9 +67,11 @@ BEGIN_TEXT
 $PAR
 \(
 \displaystyle
+\large{
 \frac{d}{dx}
 \int_{0}^{x^{$b}} e^{s^2} \, ds
 = {}
+}
 \)
 END_TEXT
 Context()->normalStrings;

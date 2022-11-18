@@ -7,16 +7,20 @@ Compute
 
 \(
 \displaystyle
+\large{
 \frac{d}{dx}
 \int_{-x}^{$a x} e^{s^2} \, ds
 = {}
+}
 \)
 %FORMULA $a*e^(($a*x)^2)+e^(x^2)
 
 \(
 \displaystyle
+\large{
 \frac{d}{dx}
 \int_{0}^{x^{$b}} e^{s^2} \, ds
 = {}
+}
 \)
 %FORMULA ($b)*(x^($b-1))*e^(x^(2*$b))
