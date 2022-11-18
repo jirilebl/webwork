@@ -41,6 +41,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -238,6 +239,8 @@ ANS($q6->cmp());
 ANS($q7->cmp());
 ANS(checkbox_cmp($q8->correct_ans()));
 ANS($q9->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("True/false/multiple choice/quick answer questions for definition of integral in several variables");
 

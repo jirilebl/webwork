@@ -42,6 +42,7 @@ $b = random(2,9,1);
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -49,7 +50,7 @@ Compute
 $PAR
 \(
 \displaystyle
-\Large{
+\large{
 \frac{d}{dx}
 \int_{-x}^{$a x} e^{s^2} \, ds
 = {}
@@ -67,7 +68,7 @@ BEGIN_TEXT
 $PAR
 \(
 \displaystyle
-\Large{
+\large{
 \frac{d}{dx}
 \int_{0}^{x^{$b}} e^{s^2} \, ds
 = {}
@@ -91,6 +92,8 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 ANS($q2->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Differentiate some expressions with integrals (like problems 1 and 2)");
 

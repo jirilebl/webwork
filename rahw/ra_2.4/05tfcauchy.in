@@ -1,5 +1,6 @@
 %DESC True/false questions on Cauchy sequences
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 A sequence is Cauchy if and only if it is convergent.

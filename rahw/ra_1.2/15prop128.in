@@ -1,5 +1,6 @@
 %DESC Prove Proposition 1.2.8 from the Basic Analysis book (ex 1.2.12)
 %HINC head.txt
+%LARGEFONT
 Prove Proposition 1.2.8 from [1]:
 If \(S \subset \mathbb{R}\) is nonempty and bounded above,
 then for every \(\epsilon $GTS 0\) there exists an \(x \in S\) such

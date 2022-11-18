@@ -1,5 +1,6 @@
 %DESC True/false questions on sequences in metric spaces
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 If a sequence converges in \((X,d),\) then the same sequence converges in \((X,d'),\)

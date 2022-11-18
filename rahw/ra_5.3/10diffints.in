@@ -1,5 +1,6 @@
 %DESC Differentiate some expressions with integrals (like problems 1 and 2)
 %HINC head.txt
+%LARGEFONT
 %FORMULAVARS x
 %SETUP $a = random(2,9,1);
 %SETUP $b = random(2,9,1);
@@ -7,7 +8,7 @@ Compute
 
 \(
 \displaystyle
-\Large{
+\large{
 \frac{d}{dx}
 \int_{-x}^{$a x} e^{s^2} \, ds
 = {}
@@ -17,7 +18,7 @@ Compute
 
 \(
 \displaystyle
-\Large{
+\large{
 \frac{d}{dx}
 \int_{0}^{x^{$b}} e^{s^2} \, ds
 = {}

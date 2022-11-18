@@ -1,5 +1,6 @@
 %DESC Use Archimedean property on one over n squared (ex 1.2.1)
 %HINC head.txt
+%LARGEFONT
 Prove that if \(t $GTS 0,\) then there exists an \(n \in {\mathbb{N}}\) such that
 \(\frac{1}{n^2} $LTS t.\)
 

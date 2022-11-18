@@ -41,6 +41,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -265,6 +266,8 @@ ANS($q8->cmp());
 ANS(checkbox_cmp($q9->correct_ans()));
 ANS(checkbox_cmp($q10->correct_ans()));
 ANS(checkbox_cmp($q11->correct_ans()));
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("True/false and multiple choice questions on completeness and compactness");
 

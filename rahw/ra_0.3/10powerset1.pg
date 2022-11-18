@@ -42,6 +42,7 @@ $ans = Compute("2^($n)");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -124,6 +125,8 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Multiple choice questions about power sets, and computing the size of the power set");
 

@@ -1,5 +1,6 @@
 %DESC True/false questions on inverse function theorem
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 If \(I,J \subset {\mathbb{R}}\) are intervals and \(f \colon I \to J\)

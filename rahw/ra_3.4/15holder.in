@@ -1,5 +1,6 @@
 %DESC Showing a Hoelder continuous function is uniformly continuous
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 Suppose \(f \colon [a,b] \to {\mathbb{R}}\) is such that
 \( \lvert f(x)-f(y) \rvert \leq {\lvert x-y \rvert}^{1/2} . \)

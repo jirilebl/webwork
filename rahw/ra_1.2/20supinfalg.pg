@@ -44,6 +44,7 @@ $xadd = random(2,9,1);
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -117,6 +118,8 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Computing infs/sups of sets after algebraic operations");
 

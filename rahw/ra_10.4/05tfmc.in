@@ -1,5 +1,6 @@
 %DESC True/false/multiple choice questions for Riemann integrable functions
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 Let \(R = [0,1] \times [0,1].\)
 Consider \(f \colon R \to {\mathbb{R}}\) defined

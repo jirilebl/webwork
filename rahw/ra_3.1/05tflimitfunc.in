@@ -1,5 +1,6 @@
 %DESC True/false questions on function limits
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 If \(c \in S ,\) then \(c\) is a cluster point of \(S.\)

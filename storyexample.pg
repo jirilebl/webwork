@@ -26,6 +26,7 @@ $a=random(2,9,1);
 ############################
 # Main text
 
+
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -443,6 +444,14 @@ The "%DESC" line shuold be just one line (otherwise you should just use %H).
 This line will also be added into a "COMMENT();" statement that is visible
 in the Library Browser in WeBWorK.  Alternatively you can add a line
 with "%COMMENT Comment here":
+$PAR
+$PAR
+$BBOLD Large fonts $EBOLD
+$PAR
+Sometimes font is too small in the HTML to be readable.  Adding "%LARGEFONT"
+on an empty line towards the beginning of the file will wrap the body of the
+problem in an HTML span with style "font-size:120%".  Add "%HUGEFONT" will
+make it 150%.
 $PAR
 $PAR
 $BBOLD Solutions $EBOLD

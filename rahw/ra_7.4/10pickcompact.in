@@ -1,5 +1,6 @@
 %DESC Pick the compact sets in R and in R with the discrete metric
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 Select the sets that are compact in \({\mathbb{R}}\)
 (with the standard metric):

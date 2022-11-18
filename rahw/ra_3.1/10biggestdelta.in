@@ -1,5 +1,6 @@
 %DESC Get the largest delta for a given epsilon
 %HINC head.txt
+%LARGEFONT
 %SETUP $n = random(2,6,1);
 Consider \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) given by \(f(x) := x^2.\)
 What is the largest \(\delta\) that will make the definition of limit at the origin (\(x=0\)) work

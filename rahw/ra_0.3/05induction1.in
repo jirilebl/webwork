@@ -1,5 +1,6 @@
 %DESC Basic proof by induction
 %HINC head.txt
+%LARGEFONT
 We wish to prove that \(3\) divides \(4^n-1\) for all
 natural numbers \(n.\)
 

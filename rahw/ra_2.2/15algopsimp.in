@@ -1,5 +1,6 @@
 %DESC Compute and prove a simple limit by using algebraic operations
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 %SETUP $a=random(2,9,1);
 Prove that \({\left\lbrace \frac{$a n^2-n}{n^2+1} \right\rbrace}_{n=1}^\infty\) converges to

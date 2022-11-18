@@ -1,5 +1,6 @@
 %DESC Understanding the proof of integrability of continuous functions
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 Let us study the proof that continuous functions are Riemann integrable (from the book [1]).  Answer the interspersed questions.
 

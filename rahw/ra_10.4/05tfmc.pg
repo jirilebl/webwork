@@ -40,6 +40,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -238,6 +239,8 @@ ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("True/false/multiple choice questions for Riemann integrable functions");
 

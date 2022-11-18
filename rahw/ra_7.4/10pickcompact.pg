@@ -41,6 +41,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -127,6 +128,8 @@ install_problem_grader(~~&std_problem_grader);
 ANS(checkbox_cmp($q1->correct_ans()));
 ANS(checkbox_cmp($q2->correct_ans()));
 ANS($q3->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Pick the compact sets in R and in R with the discrete metric");
 

@@ -226,6 +226,14 @@ with "%COMMENT Comment here":
 %COMMENT This is a comment for this file.
 
 
+$BBOLD Large fonts $EBOLD
+
+Sometimes font is too small in the HTML to be readable.  Adding "%LARGEFONT"
+on an empty line towards the beginning of the file will wrap the body of the
+problem in an HTML span with style "font-size:120%".  Add "%HUGEFONT" will
+make it 150%.
+
+
 $BBOLD Solutions $EBOLD
 
 Finally a solution can be started by putting %SOLUTION on an empty line.

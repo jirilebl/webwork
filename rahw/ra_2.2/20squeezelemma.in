@@ -1,5 +1,6 @@
 %DESC Proof about convergence using squeeze lemma
 %HINC head.txt
+%LARGEFONT
 Suppose that \( {$LB x_n $RB}_{n=1}^\infty \) is bounded.  Show that there exists a \( K $GTS 0 \) such that
 \( {\left$LB \left(\frac{x_n}{K}\right)^n \right$RB}_{n=1}^\infty \) converges to \(0\text{.}\)
 

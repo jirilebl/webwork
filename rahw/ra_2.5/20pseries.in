@@ -1,5 +1,6 @@
 %DESC Some questions on p-series and comparisons
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 %FORMULAVARS DNE
 %SETUP $a = random(2,9,1);

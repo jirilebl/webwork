@@ -43,6 +43,7 @@ $b = random(2,5,1);
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -127,6 +128,8 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Series with an explicit partial sum (randomized version of ex 2.5.1)");
 

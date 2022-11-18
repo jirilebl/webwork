@@ -1,5 +1,6 @@
 %DESC True/false questions on swapping of limits
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 For any function \(f \colon {\mathbb{N}} \times {\mathbb{N}} \to {\mathbb{R}},\)

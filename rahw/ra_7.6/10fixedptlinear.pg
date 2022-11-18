@@ -41,6 +41,7 @@ Context()->variables->are(a=>"Real",b=>"Real");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -134,6 +135,8 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Fixed point in the linear case");
 

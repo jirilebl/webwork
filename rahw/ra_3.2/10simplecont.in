@@ -1,5 +1,6 @@
 %DESC Prove that c x^n is continuous at the origin (randomized ex 3.2.1)
 %HINC head.txt
+%LARGEFONT
 %SETUP $n = random(3,6,1);
 %SETUP $c = random(2,9,1);
 Prove that \(f(x) := $c x^{$n}\) is continuous at the origin using directly the definition of continuity.

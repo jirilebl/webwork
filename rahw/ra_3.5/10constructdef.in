@@ -1,5 +1,6 @@
 %DESC Construct one of the definitions left out of the book
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 Construct the definition of "\(f(x) \to -\infty\) as \(x \to c\)."
 

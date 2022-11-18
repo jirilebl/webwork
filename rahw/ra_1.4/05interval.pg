@@ -40,6 +40,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -162,6 +163,8 @@ ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("True/false and multiple choice about intervals");
 

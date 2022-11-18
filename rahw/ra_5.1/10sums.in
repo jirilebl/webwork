@@ -1,5 +1,6 @@
 %DESC Compute simple Darboux sums
 %HINC head.txt
+%LARGEFONT
 %SETUP $a = random(2,5,1);
 Consider partitions
 \(P_1 = $LB 0, 1 $RB , \)

@@ -1,5 +1,6 @@
 %DESC True/false and multiple choice questions on Taylor's theorem
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 The Taylor series
 \(\displaystyle \sum_{k=0}^\infty

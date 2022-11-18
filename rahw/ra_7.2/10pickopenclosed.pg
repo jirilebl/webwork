@@ -40,6 +40,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -264,6 +265,8 @@ ANS($q8->cmp());
 ANS($q9->cmp());
 ANS($q10->cmp());
 ANS($q11->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Check openness / closedness of sets in R");
 

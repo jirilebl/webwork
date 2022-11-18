@@ -1,5 +1,6 @@
 %DESC True/false for derivative definition
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 Every continuous function \( f \colon {\mathbb{R}}^n \to {\mathbb{R}}^m \) is differentiable.

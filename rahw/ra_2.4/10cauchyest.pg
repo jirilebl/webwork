@@ -40,6 +40,7 @@ Context()->variables->are(n=>"Real");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -101,6 +102,8 @@ install_problem_grader(~~&std_problem_grader);
 ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Explicit computation of the M for Cauchy");
 

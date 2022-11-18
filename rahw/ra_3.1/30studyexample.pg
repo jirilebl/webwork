@@ -41,6 +41,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -310,6 +311,8 @@ ANS(checkbox_cmp($q8->correct_ans()));
 ANS(checkbox_cmp($q9->correct_ans()));
 ANS(checkbox_cmp($q10->correct_ans()));
 ANS(checkbox_cmp($q11->correct_ans()));
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Understanding the proof of Example 3.1.5");
 

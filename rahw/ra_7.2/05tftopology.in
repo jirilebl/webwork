@@ -1,5 +1,6 @@
 %DESC True/false or multiple choice questions on topology of metric spaces
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 In the following, \((X,d)\) is a metric space.  Note that we follow the convention that when we say open or closed ball,
 we mean that the radius is always positive.

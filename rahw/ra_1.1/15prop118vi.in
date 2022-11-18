@@ -1,5 +1,6 @@
 %DESC Prove part (vi) of Proposition 1.1.8 from the Basic Analysis book (ex 1.1.3)
 %HINC head.txt
+%LARGEFONT
 Prove part (vi) of Proposition 1.1.8 from [1].  That is, let \(x,y \in F,\) where
 \(F\) is an ordered field such that \(0 $LTS x $LTS y.\)  Show that \(x^2 $LTS y^2.\)
 

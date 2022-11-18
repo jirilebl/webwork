@@ -42,6 +42,7 @@ $c = $a+random(5,9,1);
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -98,6 +99,8 @@ Context()->normalStrings;
 ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Compute a few distances in the plane");
 

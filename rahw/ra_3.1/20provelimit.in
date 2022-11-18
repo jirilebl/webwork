@@ -1,5 +1,6 @@
 %DESC Prove a simple limit exists
 %HINC head.txt
+%LARGEFONT
 Suppose that \(f \colon \mathbb{R} \to \mathbb{R}\) is defined as degree 2 polynomial 
 \(f(x) := a_2 x^2+a_1 x + a_0 \) for some constants \(a_2,a_1,a_0 .\)
 Prove that

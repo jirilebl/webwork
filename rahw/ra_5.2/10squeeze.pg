@@ -40,6 +40,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -110,6 +111,8 @@ Context()->normalStrings;
 # Answers
 
 ANS($q1->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Prove that if a function can be approximated from above and below by integrable functions it is integrable");
 

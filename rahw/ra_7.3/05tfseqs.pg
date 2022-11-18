@@ -40,6 +40,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -240,6 +241,8 @@ ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
 ANS($q10->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("True/false questions on sequences in metric spaces");
 

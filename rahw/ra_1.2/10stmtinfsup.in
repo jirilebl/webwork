@@ -1,5 +1,6 @@
 %DESC Picking correct statements about infs and sups
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 Let \(A \subset \mathbb{R}\) is a set such that \(x $LTS 1 \) for all \(x \in A.\)
 What is the only definitely correct statement?

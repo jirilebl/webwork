@@ -41,6 +41,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -145,6 +146,8 @@ Context()->normalStrings;
 ANS(checkbox_cmp($q1->correct_ans()));
 ANS($q2->cmp());
 ANS($q3->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Prove that square root of a metric is a metric");
 

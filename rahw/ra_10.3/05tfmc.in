@@ -1,5 +1,6 @@
 %DESC True/false/multiple choice/quick answer questions for null sets
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 %SETUP $a=random(2,5,1);
 %SETUP $b=$a+random(2,5,1);

@@ -1,5 +1,6 @@
 %DESC Explicitly compute liminfs and limsups
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 %FORMULAVARS n
 %SETUP $a = random(2,5,1);

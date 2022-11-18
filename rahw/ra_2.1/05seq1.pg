@@ -45,6 +45,7 @@ $c = random(2,5,1);
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -187,6 +188,8 @@ ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Yes/No questions about boundedness of sequences");
 

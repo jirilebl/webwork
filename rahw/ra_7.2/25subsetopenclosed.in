@@ -1,5 +1,6 @@
 %DESC Check openness / closedness of sets in R in subset topology
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 In the following questions, suppose the metric space is \(\mathbb{R}\) with the standard metric.
 

@@ -1,5 +1,6 @@
 %DESC Bisection method
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 %SETUP $a = random(5,9,1);
 Consider \(f \colon [0,1] \to \mathbb{R}\) defined by \(f(x) := $a x^2 - 1 .\)

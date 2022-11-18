@@ -1,5 +1,6 @@
 %DESC Proof that an eventually constant sequence converges (ex 2.1.19)
 %HINC head.txt
+%LARGEFONT
 Let \({$LB x_n $RB}_{n=1}^\infty\) be a sequence and \(x \in \mathbb{R}\) such that
 there exists a \(k \in \mathbb{N}\) such that for all \(n \geq k,\)
 \(x_n = x.\)  Prove that \({$LB x_n $RB}_{n=1}^\infty\) converges to \(x.\)

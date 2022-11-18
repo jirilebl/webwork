@@ -1,5 +1,6 @@
 %DESC True/false questions on the derivative
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 For the next three questions, let \(f \colon [-1,1] \to {\mathbb{R}}\) be defined by
 \(f(x) := \lvert x \rvert \) and similarly let \(g \colon [-1,0] \to {\mathbb{R}}\)

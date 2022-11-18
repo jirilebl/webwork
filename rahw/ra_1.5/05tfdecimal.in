@@ -1,5 +1,6 @@
 %DESC True/false and multiple choice about decimal expansion
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false: 
 Every number in \((0,1]\) has a unique decimal expansion.

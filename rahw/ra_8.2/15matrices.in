@@ -1,5 +1,6 @@
 %DESC True/false, multiple choice, short answer questions on matrices
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 Every linear operator from \( {\mathbb{R}}^n \) to

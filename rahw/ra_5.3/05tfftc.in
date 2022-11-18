@@ -1,5 +1,6 @@
 %DESC True/false questions on the fundamental theorem of calculus
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 \(\displaystyle \frac{d}{dx} \int_a^x f = f(x)\) for every Riemann integrable function \(f .\)

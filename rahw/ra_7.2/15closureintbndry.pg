@@ -40,6 +40,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -300,6 +301,8 @@ ANS($q9->cmp());
 ANS($q10->cmp());
 ANS($q11->cmp());
 ANS($q12->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Compute closure / interior / boundary in R");
 

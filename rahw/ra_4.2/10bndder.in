@@ -1,5 +1,6 @@
 %DESC Prove that a bounded derivative implies Lipschitz
 %HINC head.txt
+%LARGEFONT
 Suppose \( f \colon [a,b] \to {\mathbb{R}}\) is differentiable, and suppose
 that \(\lvert f'(x) \rvert \leq K \) for all \(x \in [a,b] .\) 
 Prove that \(f\) is Lipschitz with Lipschitz constant 1.

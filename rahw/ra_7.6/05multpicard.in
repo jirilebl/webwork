@@ -1,5 +1,6 @@
 %DESC True/false / Multiple choice questions on Picard's theorem and the fixed point theorem
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 What are the hypotheses of the fixed point theorem / contraction mapping principle for a metric space \(X\) and a mapping \(f \colon X \to X\)?
 %CHECKBOXES

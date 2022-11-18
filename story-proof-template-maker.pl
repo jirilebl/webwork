@@ -42,6 +42,9 @@ $setcomment = 0;
 
 $insolution = 0;
 
+$fontsizebegin = "";
+$fontsizeend = "";
+
 
 while ($line = <$in>) {
 	$line =~ s/[\r\n]+//;
@@ -53,6 +56,12 @@ while ($line = <$in>) {
 	} elsif ($line eq "%NOPARTIAL") {
 		$partialanswers = 0;
 		$nopartialcredit = 1;
+	} elsif ($line eq "%LARGEFONT") {
+		$fontsizebegin = "TEXT(MODES(HTML => '<span style=\"font-size:120%;\">'));";
+		$fontsizeend = "TEXT(MODES(HTML => '</span>'));";
+	} elsif ($line eq "%HUGEFONT") {
+		$fontsizebegin = "TEXT(MODES(HTML => '<span style=\"font-size:150%;\">'));";
+		$fontsizeend = "TEXT(MODES(HTML => '</span>'));";
 	} elsif ($line =~ m/^%DESC[ \t]*(.*)$/) {
 		$header .= "##DESCRIPTION\n## $1\n##ENDDESCRIPTION\n\n";
 		if ($setcomment == 0) {
@@ -405,6 +414,7 @@ $setup
 ############################
 # Main text
 
+$fontsizebegin
 Context()->texStrings;
 BEGIN_TEXT
 \$PAR
@@ -433,6 +443,10 @@ if ($nopartialcredit) {
 
 for (my $i=0; $i < $qnum; $i++) {
 	print($qcheckers[$i]);
+}
+
+if (not $fontsizeend eq "") {
+	print ("\n$fontsizeend\n");
 }
 
 if ($setcomment > 0) {

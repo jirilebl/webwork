@@ -1,5 +1,6 @@
 %DESC True/false questions on series
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges if and only if

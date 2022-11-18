@@ -1,5 +1,6 @@
 %DESC True/false questions on sequence properties
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 %SETUP $a = random(2,5,1);
 True or false:

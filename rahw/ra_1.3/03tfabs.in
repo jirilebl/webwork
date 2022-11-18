@@ -1,5 +1,6 @@
 %DESC True/false and multiple choice about absolute value
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 Suppose \(f \colon D \to {\mathbb{R}}\) and 
 \(g \colon D \to {\mathbb{R}}\) are bounded functions

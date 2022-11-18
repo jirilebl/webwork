@@ -42,6 +42,7 @@ $c = random(2,9,1);
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -87,6 +88,8 @@ Context()->normalStrings;
 # Answers
 
 ANS($q1->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Prove that c x^n is continuous at the origin (randomized ex 3.2.1)");
 

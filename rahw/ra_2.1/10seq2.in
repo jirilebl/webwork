@@ -1,5 +1,6 @@
 %DESC True/false questions on sequences
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 %SETUP $a = random(3,8,1);
 True or false: Every bounded sequence is convergent.

@@ -47,6 +47,7 @@ $mpt = $m+2;
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -174,6 +175,8 @@ ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
 ANS($q7->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Some questions on p-series and comparisons");
 

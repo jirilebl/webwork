@@ -40,6 +40,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -141,6 +142,8 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("True/false questions on ordered sets");
 

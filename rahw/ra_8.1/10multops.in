@@ -1,5 +1,6 @@
 %DESC True/false, multiple choice, short answer questions on linear operators
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 If a linear mapping is invertible, then its inverse is linear.

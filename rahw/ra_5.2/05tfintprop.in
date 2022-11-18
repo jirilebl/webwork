@@ -1,5 +1,6 @@
 %DESC True/false questions on integral properties
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 The upper and lower Darboux integrals are linear.

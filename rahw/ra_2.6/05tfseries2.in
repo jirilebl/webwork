@@ -1,5 +1,6 @@
 %DESC True/false and multiple choice questions on series for section 2.6
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 \(\displaystyle \sum_{n=1}^\infty x_n\) converges via the 

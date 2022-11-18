@@ -1,5 +1,6 @@
 %DESC Simple proof using determinants
 %HINC head.txt
+%LARGEFONT
 Prove that the set \(GL({\mathbb{R}}^n)\) of invertible operators
 is not a connected set (for any \(n\)).
 

@@ -1,5 +1,6 @@
 %DESC Compute some simple Taylor polynomials
 %HINC head.txt
+%LARGEFONT
 %FORMULAVARS x
 %SETUP $a=random(2,5,1);
 %SETUP $b=random(2,5,1);

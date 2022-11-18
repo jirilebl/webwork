@@ -1,5 +1,6 @@
 %DESC Computing infs/sups of sets after algebraic operations
 %HINC head.txt
+%LARGEFONT
 %SETUP $a = random(2,9,1);
 %SETUP $b = $a+random(1,9,1);
 %SETUP $xpos = random(2,9,1);

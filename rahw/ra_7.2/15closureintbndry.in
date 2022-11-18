@@ -1,5 +1,6 @@
 %DESC Compute closure / interior / boundary in R
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 In the following questions, suppose the metric space is \(\mathbb{R}\) with the standard metric.
 Figure out the following.

@@ -44,6 +44,7 @@ $k = random(2,4,1);
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -115,6 +116,8 @@ Context()->normalStrings;
 ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Prove that a bounded derivative implies Lipschitz");
 

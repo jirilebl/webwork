@@ -1,5 +1,6 @@
 %DESC True/false questions on liminf and limsup
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 If \($LB x_n $RB\) is a bounded sequence and

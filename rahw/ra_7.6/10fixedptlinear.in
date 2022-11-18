@@ -1,5 +1,6 @@
 %DESC Fixed point in the linear case
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 %FORMULAVARS a,b
 Let \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) be defined by

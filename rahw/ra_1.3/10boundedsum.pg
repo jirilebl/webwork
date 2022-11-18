@@ -41,6 +41,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -165,6 +166,8 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Proofs about boundedness of the sum of functions (ex 1.3.8 b and 1.3.9 a)");
 

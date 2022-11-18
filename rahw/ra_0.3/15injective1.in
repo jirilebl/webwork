@@ -1,5 +1,6 @@
 %DESC Proof that composition is injective
 %HINC head.txt
+%LARGEFONT
 Let \( f \colon A \to B,\) \(g \colon B \to C \) be injective functions.
 
 Prove that \(g \circ f\) is injective.

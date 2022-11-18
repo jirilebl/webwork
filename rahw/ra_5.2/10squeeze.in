@@ -1,5 +1,6 @@
 %DESC Prove that if a function can be approximated from above and below by integrable functions it is integrable
 %HINC head.txt
+%LARGEFONT
 Prove that if a function can be approximated from above and below by integrable functions it is integrable:
 
 $BBOLD Lemma $EBOLD .

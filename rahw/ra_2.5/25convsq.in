@@ -1,5 +1,6 @@
 %DESC Proof that if a nonnegative series converges, then the series of the squares converges (ex 2.5.14)
 %HINC head.txt
+%LARGEFONT
 Suppose that \(\displaystyle\sum_{n=1}^{\infty} x_n\) converges where \(x_n \geq 0\)
 for all \(n\in \mathbb{N}.\)
 Prove that \(\displaystyle\sum_{n=1}^{\infty} x_n^2\) converges.

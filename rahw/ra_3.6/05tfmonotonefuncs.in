@@ -1,5 +1,6 @@
 %DESC True/false questions on monotone functions
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 A monotone function \(f \colon [0,1] \to {\mathbb{R}}\) is always continuous.

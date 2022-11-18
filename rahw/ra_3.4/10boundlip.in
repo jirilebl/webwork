@@ -1,5 +1,6 @@
 %DESC Bounding a function based on Lipschitz constant
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 %SETUP $a = random(2,9,1);
 %SETUP $len = random(2,9,1);

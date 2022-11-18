@@ -41,6 +41,7 @@ Context("Numeric");
 ############################
 # Main text
 
+TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -134,6 +135,8 @@ install_problem_grader(~~&std_problem_grader);
 ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
+
+TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Show that a removable singularity on a zero function is integrable");
 

@@ -1,5 +1,6 @@
 %DESC True/false questions on sequences
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false: Every monotone sequence is convergent.
 $BR

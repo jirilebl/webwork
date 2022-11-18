@@ -1,5 +1,6 @@
 %DESC Prove that a constant derivative implies f is affine
 %HINC head.txt
+%LARGEFONT
 Suppose that \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is differentiable,
 \(A\) and \(B\) are constants,
 \(f'(x) = B \) for all \(x \in {\mathbb{R}},\)  

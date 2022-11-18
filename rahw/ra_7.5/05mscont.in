@@ -1,5 +1,6 @@
 %DESC True/false and multiple choice questions on continuity in metric spaces
 %HINC head.txt
+%LARGEFONT
 %NOPARTIAL
 True or false:
 If \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) is a function

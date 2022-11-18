@@ -1,5 +1,6 @@
 %DESC Prove that in a discrete metric a sequence is convergent if and only if it is eventually constant
 %HINC head.txt
+%LARGEFONT
 Prove that in a metric space \((X,d)\) where \(d\) is the discrete metric, a sequence is convergent if and only if
 some \(K\)-tail is constant.
 
