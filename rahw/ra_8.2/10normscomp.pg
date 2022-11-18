@@ -24,6 +24,7 @@ loadMacros(
  "AnswerFormatHelp.pl",
  "PGcourse.pl",
 );
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
 
 TEXT(beginproblem());
 
@@ -43,7 +44,6 @@ $d=random(2,9,1);
 ############################
 # Main text
 
-TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -122,8 +122,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
-
-TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Compute some operator norms");
 

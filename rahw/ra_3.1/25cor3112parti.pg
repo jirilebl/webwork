@@ -25,6 +25,7 @@ loadMacros(
  "draggableProof.pl",
  "PGcourse.pl",
 );
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
 
 TEXT(beginproblem());
 
@@ -40,7 +41,6 @@ Context("Numeric");
 ############################
 # Main text
 
-TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -86,8 +86,6 @@ Context()->normalStrings;
 # Answers
 
 ANS($q1->cmp());
-
-TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Prove Corollary 3.1.12 part (i) (part of ex 3.1.12)");
 

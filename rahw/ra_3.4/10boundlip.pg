@@ -25,6 +25,7 @@ loadMacros(
  "parserRadioButtons.pl",
  "PGcourse.pl",
 );
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
 
 TEXT(beginproblem());
 
@@ -45,7 +46,6 @@ $v = random(1,9,1);
 ############################
 # Main text
 
-TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -121,8 +121,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
-
-TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Bounding a function based on Lipschitz constant");
 

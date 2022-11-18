@@ -25,6 +25,7 @@ loadMacros(
  "parserRadioButtons.pl",
  "PGcourse.pl",
 );
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
 
 TEXT(beginproblem());
 
@@ -40,7 +41,6 @@ Context("Numeric");
 ############################
 # Main text
 
-TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -236,8 +236,6 @@ ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
 ANS($q10->cmp());
-
-TEXT(MODES(HTML => '</span>'));
 
 COMMENT("True/false questions on monotone functions");
 

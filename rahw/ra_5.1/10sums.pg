@@ -24,6 +24,7 @@ loadMacros(
  "AnswerFormatHelp.pl",
  "PGcourse.pl",
 );
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
 
 TEXT(beginproblem());
 
@@ -40,7 +41,6 @@ $a = random(2,5,1);
 ############################
 # Main text
 
-TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -169,8 +169,6 @@ ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
-
-TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Compute simple Darboux sums");
 

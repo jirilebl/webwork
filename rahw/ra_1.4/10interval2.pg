@@ -26,6 +26,7 @@ loadMacros(
  "parserRadioButtons.pl",
  "PGcourse.pl",
 );
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
 
 TEXT(beginproblem());
 
@@ -41,7 +42,6 @@ Context("Numeric");
 ############################
 # Main text
 
-TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -143,8 +143,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
-
-TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Proof of one direction of charaterization of intervals (a special case of ex 1.4.3 plus some true/false)");
 

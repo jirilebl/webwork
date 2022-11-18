@@ -228,10 +228,11 @@ with "%COMMENT Comment here":
 
 $BBOLD Large fonts $EBOLD
 
-Sometimes font is too small in the HTML to be readable.  Adding "%LARGEFONT"
-on an empty line towards the beginning of the file will wrap the body of the
-problem in an HTML span with style "font-size:120%".  Add "%HUGEFONT" will
-make it 150%.
+Sometimes font is too small in the HTML to be readable, so for some problems
+it's better to just automatically zoom things.  Adding "%LARGEFONT" on an empty
+line towards the very beginning of the file will increase font size in the
+stylesheets to 120%.  "%HUGEFONT" will make it 150%.  This only affects the HTML
+and doesn't do anything to the hardcopy versions.
 
 
 $BBOLD Solutions $EBOLD

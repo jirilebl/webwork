@@ -27,6 +27,7 @@ loadMacros(
  "PGchoicemacros.pl",
  "PGcourse.pl",
 );
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
 
 TEXT(beginproblem());
 
@@ -42,7 +43,6 @@ Context("Numeric");
 ############################
 # Main text
 
-TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -155,8 +155,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS(checkbox_cmp($q3->correct_ans()));
 ANS(checkbox_cmp($q4->correct_ans()));
-
-TEXT(MODES(HTML => '</span>'));
 
 COMMENT("Prove that a well-ordered countable subset of R is not compact");
 

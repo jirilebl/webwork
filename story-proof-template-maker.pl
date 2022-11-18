@@ -42,8 +42,7 @@ $setcomment = 0;
 
 $insolution = 0;
 
-$fontsizebegin = "";
-$fontsizeend = "";
+$fontsizething = "";
 
 
 while ($line = <$in>) {
@@ -57,11 +56,9 @@ while ($line = <$in>) {
 		$partialanswers = 0;
 		$nopartialcredit = 1;
 	} elsif ($line eq "%LARGEFONT") {
-		$fontsizebegin = "TEXT(MODES(HTML => '<span style=\"font-size:120%;\">'));";
-		$fontsizeend = "TEXT(MODES(HTML => '</span>'));";
+		$fontsizething = "POST_HEADER_TEXT(MODES(HTML => \"<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>\"));";
 	} elsif ($line eq "%HUGEFONT") {
-		$fontsizebegin = "TEXT(MODES(HTML => '<span style=\"font-size:150%;\">'));";
-		$fontsizeend = "TEXT(MODES(HTML => '</span>'));";
+		$fontsizething = "POST_HEADER_TEXT(MODES(HTML => \"<style type='text/css'>#output_problem_body, .dd-item { font-size:150%; }</style>\"));";
 	} elsif ($line =~ m/^%DESC[ \t]*(.*)$/) {
 		$header .= "##DESCRIPTION\n## $1\n##ENDDESCRIPTION\n\n";
 		if ($setcomment == 0) {
@@ -399,6 +396,7 @@ if ($matrices > 0) {
 print << "EOF";
  \"PGcourse.pl\",
 );
+$fontsizething
 
 TEXT(beginproblem());
 
@@ -414,7 +412,6 @@ $setup
 ############################
 # Main text
 
-$fontsizebegin
 Context()->texStrings;
 BEGIN_TEXT
 \$PAR
@@ -443,10 +440,6 @@ if ($nopartialcredit) {
 
 for (my $i=0; $i < $qnum; $i++) {
 	print($qcheckers[$i]);
-}
-
-if (not $fontsizeend eq "") {
-	print ("\n$fontsizeend\n");
 }
 
 if ($setcomment > 0) {

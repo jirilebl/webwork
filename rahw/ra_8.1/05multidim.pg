@@ -25,6 +25,7 @@ loadMacros(
  "parserRadioButtons.pl",
  "PGcourse.pl",
 );
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
 
 TEXT(beginproblem());
 
@@ -45,7 +46,6 @@ $cmo=$c-1;
 ############################
 # Main text
 
-TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -268,8 +268,6 @@ ANS($q8->cmp());
 ANS($q9->cmp());
 ANS($q10->cmp());
 ANS($q11->cmp());
-
-TEXT(MODES(HTML => '</span>'));
 
 COMMENT("True/false, multiple choice, short answer questions on vector spaces, span, and dimension");
 

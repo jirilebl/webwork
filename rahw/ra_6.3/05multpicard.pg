@@ -26,6 +26,7 @@ loadMacros(
  "PGchoicemacros.pl",
  "PGcourse.pl",
 );
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
 
 TEXT(beginproblem());
 
@@ -42,7 +43,6 @@ $a=random(2,9,1);
 ############################
 # Main text
 
-TEXT(MODES(HTML => '<span style="font-size:120%;">'));
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
@@ -225,8 +225,6 @@ ANS(checkbox_cmp($q5->correct_ans()));
 ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
-
-TEXT(MODES(HTML => '</span>'));
 
 COMMENT("True/false and multiple choice questions on Picard's theorem");
 
