@@ -21,24 +21,24 @@ L:=
 \lim_{n\to\infty} \int_a^b f_n =
 \lim_{n\to\infty} \int_a^b g_n .
 \]
-Then \(h\) is Riemann integrable and \(\int_a^b h = L .\)
+Then \(h\) is Riemann integrable and \(\displaystyle \int_a^b h = L .\)
 $EITALIC
 
 %PROOF
-Estimate \(\int_a^b f_n = \underline{\int_a^b} f_n \)
-\(\qquad \leq \underline{\int_a^b} h \)
-\(\qquad \leq \underline{\int_a^b} g_n \)
-\(\qquad = \int_a^b g_n . \)
-Taking the limit, the we find \(L \leq \underline{\int_a^b} h \leq L . \)
-So \(\underline{\int_a^b} h = L . \)
-Similarly, \(\overline{\int_a^b} h = L .\)
-So \(h\) is integrable and \(\int_a^b h = L .\)
+Estimate \(\displaystyle \int_a^b f_n = \underline{\int_a^b} f_n \)
+\(\displaystyle \qquad \leq \underline{\int_a^b} h \)
+\(\displaystyle \qquad \leq \underline{\int_a^b} g_n \)
+\(\displaystyle \qquad = \int_a^b g_n . \)
+Taking the limit, the we find \(\displaystyle L \leq \underline{\int_a^b} h \leq L . \)
+So \(\displaystyle \underline{\int_a^b} h = L . \)
+Similarly, \(\displaystyle \overline{\int_a^b} h = L .\)
+So \(h\) is integrable and \(\displaystyle \int_a^b h = L .\)
 %EXTRA
 Let \(\epsilon $GTS 0\) be given.
 By squeeze lemma for sequences, \(\lim\limits_{n\to\infty} \int_a^b h = L .\)
-\(\qquad \leq \int_a^b h \)
-\(\qquad $LTS \overline{\int_a^b} g_n \)
-\(\qquad $LTS \epsilon \)
-Let \(\int_a^b h := L .\)
+\(\displaystyle \qquad \leq \int_a^b h \)
+\(\displaystyle \qquad $LTS \overline{\int_a^b} g_n \)
+\(\displaystyle \qquad $LTS \epsilon \)
+Let \(\displaystyle \int_a^b h := L .\)
 Consider a partition \(P = $LB x_0, \ldots, x_k $RB \) of \([a,b] .\)
 %END

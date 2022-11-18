@@ -51,7 +51,7 @@ If
 and
 \(g \colon [a,b] \to {\mathbb{R}}\)
 are Riemann integrable and
-\( \int_a^b f \leq \int_a^b g , \)
+\(\displaystyle \int_a^b f \leq \int_a^b g , \)
 then \(f(x) \leq g(x)\) for all \(x \in [a,b] .\)
 $BR
 %RADIO
@@ -65,7 +65,7 @@ If
 and
 \(g \colon [a,b] \to {\mathbb{R}}\)
 are Riemann integrable and
-\( \int_a^b f \leq \int_a^b g , \)
+\(\displaystyle \int_a^b f \leq \int_a^b g , \)
 then \(f(x) \leq g(x)\) for some \(x \in [a,b] .\)
 $BR
 %RADIO

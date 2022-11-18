@@ -2,7 +2,7 @@
 %HINC head.txt
 %NOPARTIAL
 True or false:
-\(\frac{d}{dx} \int_a^x f = f(x)\) for every Riemann integrable function \(f .\)
+\(\displaymath \frac{d}{dx} \int_a^x f = f(x)\) for every Riemann integrable function \(f .\)
 $BR
 %RADIO
 True
@@ -12,7 +12,7 @@ True
 True or false:
 If \(F \colon [a,b] \to {\mathbb{R}}\) is continuous and except
 at finitely many points, \(F\) is differentiable, and \(F'(x)=f(x),\)
-then \(\int_a^b f = F(b)-F(a) .\)
+then \(\displaymath \int_a^b f = F(b)-F(a) .\)
 $BR
 %RADIO
 %CORRECT True
@@ -45,7 +45,7 @@ True or false:
 Suppose \(f \colon [a,b] \to {\mathbb{R}}\) Riemann integrable.
 If \(f\) is continuous at \(c \in [a,b], \)
 then
-\(F(x) := \int_a^x f\) is differentiable at \(c .\)
+\(\displaymath F(x) := \int_a^x f\) is differentiable at \(c .\)
 $BR
 %RADIO
 %CORRECT True
@@ -55,7 +55,7 @@ False
 True or false:
 Suppose \(f \colon [a,b] \to {\mathbb{R}}\) Riemann integrable.
 If
-\(F(x) := \int_a^x f\) is differentiable at some \(c \in [a,b] , \)
+\(\displaymath F(x) := \int_a^x f\) is differentiable at some \(c \in [a,b] , \)
 then
 \(f\) is continuous at \(c .\)
 $BR
