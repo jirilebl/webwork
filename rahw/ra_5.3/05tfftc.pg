@@ -44,7 +44,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 True or false:
-\(\displaymath \frac{d}{dx} \int_a^x f = f(x)\) for every Riemann integrable function \(f .\)
+\(\displaystyle \frac{d}{dx} \int_a^x f = f(x)\) for every Riemann integrable function \(f .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -63,7 +63,7 @@ $PAR
 True or false:
 If \(F \colon [a,b] \to {\mathbb{R}}\) is continuous and except
 at finitely many points, \(F\) is differentiable, and \(F'(x)=f(x),\)
-then \(\displaymath \int_a^b f = F(b)-F(a) .\)
+then \(\displaystyle \int_a^b f = F(b)-F(a) .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -123,7 +123,7 @@ True or false:
 Suppose \(f \colon [a,b] \to {\mathbb{R}}\) Riemann integrable.
 If \(f\) is continuous at \(c \in [a,b], \)
 then
-\(\displaymath F(x) := \int_a^x f\) is differentiable at \(c .\)
+\(\displaystyle F(x) := \int_a^x f\) is differentiable at \(c .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -142,7 +142,7 @@ $PAR
 True or false:
 Suppose \(f \colon [a,b] \to {\mathbb{R}}\) Riemann integrable.
 If
-\(\displaymath F(x) := \int_a^x f\) is differentiable at some \(c \in [a,b] , \)
+\(\displaystyle F(x) := \int_a^x f\) is differentiable at some \(c \in [a,b] , \)
 then
 \(f\) is continuous at \(c .\)
 $BR
