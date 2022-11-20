@@ -1,4 +1,4 @@
-%DESC Prove that in a discrete metric a sequence is convergent if and only if it is eventually constant
+%DESC Prove that in a discrete metric a sequence is convergent if and only if it is eventually constant (includes ex 7.3.6)
 %HINC head.txt
 %LARGEFONT
 Prove that in a metric space \((X,d)\) where \(d\) is the discrete metric, a sequence is convergent if and only if
@@ -28,7 +28,7 @@ Then for all \(n \geq N\) we have
 Thus \($LB x_n $RB\) converges to \(x.\)
 %EXTRA
 Suppose \($LB x_n $RB\) is a convergent sequence,
-and let \(\epsilon = 1 .\)
+and let \(\epsilon := 1 .\)
 \(d(x_n,x) = \epsilon .\)
 \(d(x_n,x) = 1 .\)
 Thus \($LB x_n $RB\) diverges.

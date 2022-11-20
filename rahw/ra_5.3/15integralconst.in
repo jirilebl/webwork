@@ -1,4 +1,4 @@
-%DESC Prove that if integral is always the length of an interval, then the function is 1
+%DESC Prove that if the integral is always the length of an interval, then the function is 1
 %HINC head.txt
 %LARGEFONT
 Suppose \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is continuous.

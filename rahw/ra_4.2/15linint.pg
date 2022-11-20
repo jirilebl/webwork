@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove that a constant derivative implies f is affine
+## Prove that a constant derivative implies f is affine (simpler version of ex 4.2.12)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -89,6 +89,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Prove that a constant derivative implies f is affine");
+COMMENT("Prove that a constant derivative implies f is affine (simpler version of ex 4.2.12)");
 
 ENDDOCUMENT();

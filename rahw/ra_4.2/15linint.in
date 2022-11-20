@@ -1,4 +1,4 @@
-%DESC Prove that a constant derivative implies f is affine
+%DESC Prove that a constant derivative implies f is affine (simpler version of ex 4.2.12)
 %HINC head.txt
 %LARGEFONT
 Suppose that \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is differentiable,

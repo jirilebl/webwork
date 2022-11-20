@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Fixed point in the linear case
+## Fixed point in the linear case (similar to ex 7.6.4)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -136,6 +136,6 @@ ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 
-COMMENT("Fixed point in the linear case");
+COMMENT("Fixed point in the linear case (similar to ex 7.6.4)");
 
 ENDDOCUMENT();

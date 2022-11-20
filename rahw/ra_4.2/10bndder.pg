@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove that a bounded derivative implies Lipschitz
+## Prove that a bounded derivative implies Lipschitz (includes ex 4.2.3)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -117,6 +117,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 
-COMMENT("Prove that a bounded derivative implies Lipschitz");
+COMMENT("Prove that a bounded derivative implies Lipschitz (includes ex 4.2.3)");
 
 ENDDOCUMENT();

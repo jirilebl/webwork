@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove that if integral is always the length of an interval, then the function is 1
+## Prove that if the integral is always the length of an interval, then the function is 1
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -87,6 +87,6 @@ Context()->normalStrings;
 
 ANS($q1->cmp());
 
-COMMENT("Prove that if integral is always the length of an interval, then the function is 1");
+COMMENT("Prove that if the integral is always the length of an interval, then the function is 1");
 
 ENDDOCUMENT();

@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Differentiate some expressions with integrals (like problems 1 and 2)
+## Differentiate some expressions with integrals (like ex 5.3.1 and ex 5.3.2)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -93,6 +93,6 @@ Context()->normalStrings;
 ANS($q1->cmp());
 ANS($q2->cmp());
 
-COMMENT("Differentiate some expressions with integrals (like problems 1 and 2)");
+COMMENT("Differentiate some expressions with integrals (like ex 5.3.1 and ex 5.3.2)");
 
 ENDDOCUMENT();

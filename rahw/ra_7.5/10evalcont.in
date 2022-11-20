@@ -1,4 +1,4 @@
-%DESC Prove that point evaluation is continuous
+%DESC Prove that point evaluation is continuous (simpler version of ex 7.5.11)
 %HINC head.txt
 %LARGEFONT
 %NOPARTIAL

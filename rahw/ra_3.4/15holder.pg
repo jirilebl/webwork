@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Showing a Hoelder continuous function is uniformly continuous
+## Showing a Hoelder continuous function is uniformly continuous (partly similar to ex 3.4.16)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -118,6 +118,6 @@ install_problem_grader(~~&std_problem_grader);
 ANS($q1->cmp());
 ANS($q2->cmp());
 
-COMMENT("Showing a Hoelder continuous function is uniformly continuous");
+COMMENT("Showing a Hoelder continuous function is uniformly continuous (partly similar to ex 3.4.16)");
 
 ENDDOCUMENT();

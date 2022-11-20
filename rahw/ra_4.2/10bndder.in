@@ -1,4 +1,4 @@
-%DESC Prove that a bounded derivative implies Lipschitz
+%DESC Prove that a bounded derivative implies Lipschitz (includes ex 4.2.3)
 %HINC head.txt
 %LARGEFONT
 Suppose \( f \colon [a,b] \to {\mathbb{R}}\) is differentiable, and suppose

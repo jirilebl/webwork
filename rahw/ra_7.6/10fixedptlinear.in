@@ -1,4 +1,4 @@
-%DESC Fixed point in the linear case
+%DESC Fixed point in the linear case (similar to ex 7.6.4)
 %HINC head.txt
 %LARGEFONT
 %NOPARTIAL

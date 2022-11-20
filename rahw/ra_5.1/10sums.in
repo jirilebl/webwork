@@ -1,4 +1,4 @@
-%DESC Compute simple Darboux sums
+%DESC Compute simple Darboux sums (similar to ex 5.1.1)
 %HINC head.txt
 %LARGEFONT
 %SETUP $a = random(2,5,1);

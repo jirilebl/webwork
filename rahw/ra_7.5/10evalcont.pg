@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Prove that point evaluation is continuous
+## Prove that point evaluation is continuous (simpler version of ex 7.5.11)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -141,6 +141,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 
-COMMENT("Prove that point evaluation is continuous");
+COMMENT("Prove that point evaluation is continuous (simpler version of ex 7.5.11)");
 
 ENDDOCUMENT();

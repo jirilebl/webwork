@@ -1,4 +1,4 @@
-%DESC Show that a removable singularity on a zero function is integrable
+%DESC Show that a removable singularity on a zero function is integrable (like ex 5.1.6)
 %HINC head.txt
 %LARGEFONT
 %NOPARTIAL
@@ -34,7 +34,7 @@ What is the integral?
 \(\displaystyle \int_{-1}^1 f(x) \, dx = {} \)
 %NUMBER 0
 
-Why (choose the most complete and correct reason)?
+Why? (choose the most complete and correct reason)
 
 %RADIORANDOM
 Because \(L(P,f) = 0\) for any one of the partitions \(P.\)

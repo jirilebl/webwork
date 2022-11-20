@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Show that a removable singularity on a zero function is integrable
+## Show that a removable singularity on a zero function is integrable (like ex 5.1.6)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -102,7 +102,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-Why (choose the most complete and correct reason)?
+Why? (choose the most complete and correct reason)
 $PAR
 END_TEXT
 Context()->normalStrings;
@@ -136,6 +136,6 @@ ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 
-COMMENT("Show that a removable singularity on a zero function is integrable");
+COMMENT("Show that a removable singularity on a zero function is integrable (like ex 5.1.6)");
 
 ENDDOCUMENT();
