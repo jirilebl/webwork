@@ -1,0 +1,278 @@
+##DESCRIPTION
+## Going through what the example \(x^{2n}\) from the book says
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis I: Introduction to Real Analysis, Volume I')
+## AuthorText1('Jiri Lebl')
+## EditionText1('5')
+## Section1('6.2')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(x=>"Real",n=>"Real",m=>"Real");
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+In the book, [1], we looked at the functions \(f_n \colon [-1,1] \to {\mathbb{R}}\) defined by
+\(f_n(x) := x^{2n} \).  They converged pointwise (as \(n \to \infty\)) to \(f.\)  What is \(f\)?
+$PAR
+For \( -1 < x < 1,\) \(f(x) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+\(f(-1) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+\(f(1) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Is the convergence uniform?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+Is the function \(f\) continuous?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+Compute \(\displaystyle \int_{-1}^1 f = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Compute \(\displaystyle \int_{-1}^1 f_n = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q7 = Formula("2/(2*n+1)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Is it true that \(\displaystyle \lim_{n\to \infty} \int_{-1}^1 f_n = \int_{-1}^1 f\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+$PAR
+Does the theorem about convergence under the integral from the book
+(Theorem 6.2.4 in [1]) apply?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+"Yes",
+"No",
+],
+"No",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+$PAR
+Suppose we now fix a small \(\epsilon > 0\) and restrict all the functions
+to the interval \(I:=(-1+\epsilon,1-\epsilon).\) 
+$PAR
+Is the convergence \(f_n|_{I} \to f|_{I}\) uniform?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q10 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q10->buttons \}
+
+$PAR
+Is the function \(f|_{I}\) continuous?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q11 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q11->buttons \}
+
+$PAR
+Compute \(\displaystyle \int_{-1+\epsilon}^{1-\epsilon} f = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q12 = Formula("0");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Is it true that \(\displaystyle \lim_{n\to \infty} \int_{-1+\epsilon}^{1-\epsilon} f_n = \int_{-1+\epsilon}^{1-\epsilon} f\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q13 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q13->buttons \}
+
+$PAR
+Does the theorem about convergence under the integral from the book
+(Theorem 6.2.4 in [1]) apply now?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q14 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q14->buttons \}
+
+$PAR
+$PAR
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+ANS($q10->cmp());
+ANS($q11->cmp());
+ANS($q12->cmp());
+ANS($q13->cmp());
+ANS($q14->cmp());
+
+COMMENT("Going through what the example \(x^{2n}\) from the book says");
+
+ENDDOCUMENT();

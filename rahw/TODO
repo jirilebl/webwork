@@ -1,7 +1,7 @@
 * Short term goal: at least 3 problems per section for most sections except
   perhaps very short ones, at least in volume I, but the more the better,
   should have more in longer sections
-* Short term TODO by section:
+* Short term TODO by section ("none" means no problems in the section yet):
   * 1.4: only two problems, perhaps need one more
   * 1.5: only two problems, perhaps need one more
   * 2.6: only two problems, need at least one or two more
@@ -9,10 +9,10 @@
   * 3.6: only one (T/F) problem, need at least one more
   * 4.3: only two problems, perhaps need one more
   * 4.4: only one (T/F) problem, need at least one more
-  * 5.4: none
+  * 5.4: none 
   * 5.5: none
-  * 6.2: only one (T/F) problem, need at least one more
-  * 6.3: only one (T/F MC) problem, need at least one more
+  * 6.2: only two problems, perhaps need one more
+  * 6.3: only two problems, perhaps need one more
   * 7.3: only two problems, perhaps need one more
   * 7.5: only two problems, perhaps need one more
   * 7.6: only two problems, perhaps need one more

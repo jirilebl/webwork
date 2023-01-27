@@ -1,0 +1,89 @@
+%DESC Going through what the example \(x^{2n}\) from the book says
+%HINC head.txt
+%LARGEFONT
+%NOPARTIAL
+%FORMULAVARS x,n,m
+In the book, [1], we looked at the functions \(f_n \colon [-1,1] \to {\mathbb{R}}\) defined by
+\(f_n(x) := x^{2n} \).  They converged pointwise (as \(n \to \infty\)) to \(f.\)  What is \(f\)?
+
+For \( -1 < x < 1,\) \(f(x) = {}\)
+%FORMULA 0
+
+\(f(-1) = {}\)
+%FORMULA 1
+
+\(f(1) = {}\)
+%FORMULA 1
+
+Is the convergence uniform?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+Is the function \(f\) continuous?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+Compute \(\displaystyle \int_{-1}^1 f = {}\)
+%FORMULA 0
+
+Compute \(\displaystyle \int_{-1}^1 f_n = {}\)
+%FORMULA 2/(2*n+1)
+
+Is it true that \(\displaystyle \lim_{n\to \infty} \int_{-1}^1 f_n = \int_{-1}^1 f\)?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+Does the theorem about convergence under the integral from the book
+(Theorem 6.2.4 in [1]) apply?
+$BR
+%RADIO
+Yes
+%CORRECT No
+%END
+
+Suppose we now fix a small \(\epsilon > 0\) and restrict all the functions
+to the interval \(I:=(-1+\epsilon,1-\epsilon).\) 
+
+Is the convergence \(f_n|_{I} \to f|_{I}\) uniform?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+Is the function \(f|_{I}\) continuous?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+Compute \(\displaystyle \int_{-1+\epsilon}^{1-\epsilon} f = {}\)
+%FORMULA 0
+
+Is it true that \(\displaystyle \lim_{n\to \infty} \int_{-1+\epsilon}^{1-\epsilon} f_n = \int_{-1+\epsilon}^{1-\epsilon} f\)?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+Does the theorem about convergence under the integral from the book
+(Theorem 6.2.4 in [1]) apply now?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC

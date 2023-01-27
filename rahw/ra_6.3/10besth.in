@@ -1,0 +1,38 @@
+%DESC Find best h from the Picard theorem
+%HINC head.txt
+%LARGEFONT
+%NOPARTIAL
+%SETUP $a=random(2,5,1);
+%SETUP $b=$a+random(1,4,1);
+%SETUP $c=$a+random(1,4,1);
+%SETUP $d=random(2,9,1);
+Consider \(y'=$d \sin(xy),\) \(y(0)=1.\)  Suppose we consider
+\(I=[-$a,$a]\) and \(J=[-$b,$c]\) in the Picard's theorem from the book
+(Theorem 6.3.2 or Theorem 7.6.3 in [1]).
+
+What is the best (smallest) \(L={}\)
+%FORMULA $a*$d
+
+Hint: Recall how we showed that \(\sin\) is a Lipschitz function.
+
+What is the best (smallest) \(M={}\)
+%FORMULA $d
+
+What is the best (largest) \(\alpha={}\)
+%FORMULA $a
+
+What is the \(h\) we find for the interval \([-h,h]\)
+where the solution is guaranteed by the theorem:
+
+\(h={}\)
+%FORMULA $a/($d+$a*$d*$a)
+
+Is the interval \([-h,h]\) smaller than \(I\)?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+
+[1] J. Lebl, $BITALIC Basic Analysis I: Introduction to Analysis, Volume I $EITALIC
