@@ -1,0 +1,129 @@
+##DESCRIPTION
+## Proof that two finite-dimensional vector spaces are isomorphic
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \(X\) and \(Y\) are finite-dimensional vector spaces of the same dimension \(d .\)
+Prove that there exists an invertible linear map \(A \in L(X,Y) .\)  Use the propositions from
+chapter 8.1 of the book [1].
+$PAR
+First, prove that \(A\) exists:
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"By Proposition 8.1.14 (ii), every finite-dimensional vector space of dimension \(d\) has a basis of \(d\) elements.",
+"Suppose \(X\) has basis \(B_X = \lbrace x_1,x_2,\ldots,x_d\rbrace\) and \(Y\) has basis \(B_Y = \lbrace y_1,y_2,\ldots,y_d\rbrace\)",
+"Define \(\tilde{A} \colon B_X \to Y\) by setting \(\tilde{A}(x_j) = y_j\) for all \(j.\)",
+"By Proposition 8.1.17, \(\tilde{A}\) extends to a linear \(A \in L(X,Y).\)",
+],
+[
+"Define \(A \colon X \to Y\) by setting \(A(x) = x .\)",
+"Suppose \(X\) does not have a basis.",
+"The basis \(B_X\) spans \(X .\)",
+"The basis \(B_Y\) is linearly independent.",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+$PAR
+Second, prove that \(A\) is invertible.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"Define \(\tilde{B} \colon B_Y \to X\) by setting \(\tilde{B}(y_j) = x_j\) for all \(j.\)",
+"By Proposition 8.1.17, \(\tilde{B}\) extends to a linear \(B \in L(Y,X) .\)",
+"Note that the composition \(BA \in L(X)\) satisfies \(BAx_j = x_j\) for every \(j .\)",
+"The identity \(I \in L(X)\) also satisfies \(Ix_j = x_j \) for every \(j .\)",
+"By Proposition 8.1.17, \(BA\) is determined by its values on a basis, so \(BA = I .\)",
+"Thus \(A\) is invertible and \(A^{-1} = B .\)",
+],
+[
+"The basis \(B_X\) is linearly independent.",
+"The basis \(B_Y\) spans \(Y .\)",
+"Let \(B\) be the inverse of \(A .\)",
+"Define \(\tilde{A} \colon B_X \to Y\) by setting \(\tilde{A}(x_j) = y_j\) for all \(j.\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+$PAR
+$PAR
+[1] J. Lebl, $BITALIC Basic Analysis II: Introduction to Analysis, Volume II $EITALIC
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+
+COMMENT("Proof that two finite-dimensional vector spaces are isomorphic");
+
+ENDDOCUMENT();

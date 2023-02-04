@@ -1,0 +1,39 @@
+%DESC Proof that two finite-dimensional vector spaces are isomorphic
+%HINC head.txt
+%LARGEFONT
+Suppose \(X\) and \(Y\) are finite-dimensional vector spaces of the same dimension \(d .\)
+Prove that there exists an invertible linear map \(A \in L(X,Y) .\)  Use the propositions from
+chapter 8.1 of the book [1].
+
+First, prove that \(A\) exists:
+
+%PROOF
+By Proposition 8.1.14 (ii), every finite-dimensional vector space of dimension \(d\) has a basis of \(d\) elements.
+Suppose \(X\) has basis \(B_X = \lbrace x_1,x_2,\ldots,x_d\rbrace\) and \(Y\) has basis \(B_Y = \lbrace y_1,y_2,\ldots,y_d\rbrace\)
+Define \(\tilde{A} \colon B_X \to Y\) by setting \(\tilde{A}(x_j) = y_j\) for all \(j.\)
+By Proposition 8.1.17, \(\tilde{A}\) extends to a linear \(A \in L(X,Y).\)
+%EXTRA
+Define \(A \colon X \to Y\) by setting \(A(x) = x .\)
+Suppose \(X\) does not have a basis.
+The basis \(B_X\) spans \(X .\)
+The basis \(B_Y\) is linearly independent.
+%END
+
+Second, prove that \(A\) is invertible.
+
+%PROOF
+Define \(\tilde{B} \colon B_Y \to X\) by setting \(\tilde{B}(y_j) = x_j\) for all \(j.\)
+By Proposition 8.1.17, \(\tilde{B}\) extends to a linear \(B \in L(Y,X) .\)
+Note that the composition \(BA \in L(X)\) satisfies \(BAx_j = x_j\) for every \(j .\)
+The identity \(I \in L(X)\) also satisfies \(Ix_j = x_j \) for every \(j .\)
+By Proposition 8.1.17, \(BA\) is determined by its values on a basis, so \(BA = I .\)
+Thus \(A\) is invertible and \(A^{-1} = B .\)
+%EXTRA
+The basis \(B_X\) is linearly independent.
+The basis \(B_Y\) spans \(Y .\)
+Let \(B\) be the inverse of \(A .\)
+Define \(\tilde{A} \colon B_X \to Y\) by setting \(\tilde{A}(x_j) = y_j\) for all \(j.\)
+%END
+
+
+[1] J. Lebl, $BITALIC Basic Analysis II: Introduction to Analysis, Volume II $EITALIC

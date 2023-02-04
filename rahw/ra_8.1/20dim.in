@@ -1,0 +1,46 @@
+%DESC Asking to compute dimension for some vector spaces
+%HINC head.txt
+%LARGEFONT
+%NOPARTIAL
+%SETUP $a=random(5,9,1);
+%SETUP $b=random(2,9,1);
+%SETUP $c=random(2,9,1);
+%SETUP $d=random(2,9,1);
+%SETUP $e=random(2,9,1);
+Suppose \(X\) is a space of polynomials \(p(t)\) of degree \($a\) or less such that
+\(p(0)=0\) and \(p'(0)=0\).  What is the dimension of \(X\)?
+$BR
+\(\dim X = {}\)
+%NUMBER $a-1
+
+Let \(X\) be a vector space with basis \(\lbrace x_1,x_2,\ldots,x_n \rbrace.\)  Consider
+\(y_1 = $b x_1 + x_2 + x_3 , \)
+\(y_2 = $c x_2 + x_3 , \)
+\(y_3 = $d x_3 , \)
+\(y_4 = $e x_1 + x_3 , \)
+\(y_5 = x_1 + x_2 . \)  Find:
+$BR
+\(\dim \operatorname{span}(\lbrace y_1 , y_2 , y_3 , y_4 , y_5 \rbrace) = {}\)
+%NUMBER 3
+$BR
+\(\dim \operatorname{span}(\lbrace y_1 , y_2 , y_3 , y_4 \rbrace) = {}\)
+%NUMBER 3
+$BR
+\(\dim \operatorname{span}(\lbrace y_1 , y_2 , y_3 \rbrace) = {}\)
+%NUMBER 3
+$BR
+\(\dim \operatorname{span}(\lbrace y_1 , y_2  \rbrace) = {}\)
+%NUMBER 2
+
+Let \( Y \subset C([0,1],\mathbb{R}) \) be the set of continuous functions
+on \([0,1]\)
+whose graph is a straight line.  What is the dimension of \(Y\)?
+$BR
+\(\dim Y = {}\)
+%NUMBER 2
+
+Let \(Y\) be the same set of functions as above and
+take \(Z = \lbrace f \in Y : f(1) = 0 \rbrace .\)  Find:
+$BR
+\(\dim Z = {}\)
+%NUMBER 1
