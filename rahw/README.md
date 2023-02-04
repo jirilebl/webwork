@@ -10,8 +10,8 @@ there are a few problems where a proof is taken from the book (sometimes
 lightly edited) and control questions are asked throughout.
 
 For volume I, coverage is more or less reasonable for the non-optional bits,
-trying to get at least 2-3 questions per section (more for ones that take
-longer).  A few sections only have 1 problem (3.6, 4.4, 6.2, 6.3) and a
+with at least 2-3 questions per section (more for ones that take longer).
+A couple of sections only have 1 problem (3.6, 4.4) and a
 couple of sections do not yet have any problems yet (5.4, 5.5).
 
 When I ran the course in Fall 2021, I covered non-optional bits of chapters 0-5
@@ -21,7 +21,7 @@ in those sections have been class tested, and the feedback from students has
 been positive.  There are a few problems in the sections I did not cover that
 have not been class tested yet.  So use with a bit of care.
 
-Volume II problems are a bit more sparse and kind of a work in progress,
+Volume II problems are quite a bit more sparse and kind of a work in progress,
 I have used them in Spring 2022 (with an extremely small class) and 
 plan to use them in Spring 2023 (with a hopefully slightly larger class).
 
@@ -41,10 +41,10 @@ manually installed, and now I'm testing with 2.17.
 
 ## Where did the problems come from?
 
-All the problems were written from scratch.  Vast majority, but not all, were
-written using a simple helper script (*story-proof-template-maker.pl*) which
-take file (the .in files) and produces the WebWorK problem file (.pg file).
-The script and the problems can be gotten from my scratchwork webwork github
+All the problems were written from scratch.  They were all written using a
+simple helper script (*story-proof-template-maker.pl*) which takes an input
+file (the .in files) and produces the WebWorK problem file (.pg file).  The
+script and the problems can be gotten from my scratchwork webwork github
 repository https://github.com/jirilebl/webwork
 
 ## Contributing
