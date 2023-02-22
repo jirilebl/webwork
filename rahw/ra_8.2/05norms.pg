@@ -106,7 +106,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \($LB A_n $RB\) is a sequence of invertible linear operators on
+If \(\lbrace A_n \rbrace_{n=1}^\infty\) is a sequence of invertible linear operators on
 a finite-dimensional normed vector space \(X\) (a sequence in \(GL(X)\))
 that converges to a linear operator \(A,\)
 then \(A\) is invertible.
@@ -118,7 +118,7 @@ $q4 = RadioButtons([
 "True",
 "False",
 ],
-"True",
+"False",
 );
 Context()->texStrings;
 BEGIN_TEXT
