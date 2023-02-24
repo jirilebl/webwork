@@ -10,12 +10,14 @@ Show that for all \(t,\) treating \(f'(t)\) as a vector, we have \(f'(t) \cdot f
 
 First, let's prove a product rule for the dot product:
 $BBOLD Claim:$EBOLD
+$BITALIC
 For differentiable
 \(f \colon {\mathbb{R}} \to {\mathbb{R}}^n\)
 and
 \(g \colon {\mathbb{R}} \to {\mathbb{R}}^n,\)
 we have
 \(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)
+$EITALIC
 
 %PROOF
 Write \(f = (f_1,f_2,\ldots,f_n)\) and \(g = (g_1,g_2,\ldots,g_n).\)
@@ -29,7 +31,7 @@ Then \(\displaystyle\frac{d}{dt} \Bigl( f(t) \cdot f(t) \Bigr) = 2 f'(t) \cdot f
 \(\displaystyle\qquad =  f'(t) \cdot g'(t) . \)
 %END
 
-Now let's use the claim to prove the statement we had above.
+Now let's use the claim to prove the statement of the problem.
 
 %PROOF
 \(\|f(t)\| = 1\) means \(\|f(t)\|^2=1,\)

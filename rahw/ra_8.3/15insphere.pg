@@ -53,12 +53,14 @@ Show that for all \(t,\) treating \(f'(t)\) as a vector, we have \(f'(t) \cdot f
 $PAR
 First, let's prove a product rule for the dot product:
 $BBOLD Claim:$EBOLD
+$BITALIC
 For differentiable
 \(f \colon {\mathbb{R}} \to {\mathbb{R}}^n\)
 and
 \(g \colon {\mathbb{R}} \to {\mathbb{R}}^n,\)
 we have
 \(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)
+$EITALIC
 $PAR
 END_TEXT
 Context()->normalStrings;
@@ -89,7 +91,7 @@ to the second column, putting them in the correct order.  There could be extras.
 \{ $q1->Print \}
 
 $PAR
-Now let's use the claim to prove the statement we had above.
+Now let's use the claim to prove the statement of the problem.
 $PAR
 END_TEXT
 Context()->normalStrings;
