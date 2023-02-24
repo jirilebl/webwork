@@ -6,7 +6,7 @@ Suppose
 \(f \colon {\mathbb{R}} \to {\mathbb{R}}^n\)
 is differentiable
 and \(\|f(t)\| = 1\) for all \(t\) (that is, we have a curve in the unit sphere).
-Show that for all \(t,\) treating \(f'(t)\) as a vector, we have \(f'(t) \cdot f(t) = 0 .\)
+Show that \(f'(t) \cdot f(t) = 0\) (treating \(f'(t)\) as a vector) for all \(t.\) 
 
 First, let's prove a product rule for the dot product:
 $BBOLD Claim:$EBOLD
