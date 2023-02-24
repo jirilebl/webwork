@@ -1,0 +1,44 @@
+%DESC Derivative of a curve in the sphere is tangent to the sphere (ex 8.3.12)
+%HINC head.txt
+%LARGEFONT
+
+Suppose
+\(f \colon {\mathbb{R}} \to {\mathbb{R}}^n\)
+is differentiable
+and \(\|f(t)\| = 1\) for all \(t\) (that is, we have a curve in the unit sphere).
+Show that for all \(t,\) treating \(f'(t)\) as a vector, we have \(f'(t) \cdot f(t) = 0 .\)
+
+First, let's prove a product rule for the dot product:
+$BBOLD Claim:$EBOLD
+For differentiable
+\(f \colon {\mathbb{R}} \to {\mathbb{R}}^n\)
+and
+\(g \colon {\mathbb{R}} \to {\mathbb{R}}^n,\)
+we have
+\(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)
+
+%PROOF
+Write \(f = (f_1,f_2,\ldots,f_n)\) and \(g = (g_1,g_2,\ldots,g_n).\)
+Then \(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = \frac{d}{dt} \Bigl( f_1(t) g_1(t) + \cdots + f_n(t) g_n(t) \)
+\(\qquad =  f_1'(t) g_1(t) + f_1(t) g_1'(t) + \cdots + f_n'(t) g_n(t) + f_n(t) g_n'(t) \)
+\(\qquad =  f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)
+%EXTRA
+Let \(f=0\)
+Then \(\frac{d}{dt} \Bigl( f(t) \cdot f(t) \Bigr) = 2 f'(t) \cdot f(t) . \)
+\(\qquad =  f_1'(t) g_1'(t) + \cdots + f_n'(t) g_n'(t) \)
+\(\qquad =  f'(t) \cdot g'(t) . \)
+%END
+
+Now let's use the claim to prove the statement we had above.
+
+%PROOF
+\(\|f(t)\| = 1\) means \(\|f(t)\|^2=1,\)
+which means \(f(t) \cdot f(t) = 1 \) for all \(t.\)
+Differentiate to get \(f'(t) \cdot f(t) + f(t) \cdot f'(t) = 0 \) for all \(t.\)
+As dot product is commutative we get \( 2 f'(t) \cdot f(t) = 0 \) for all \(t.\)
+Thus, \( f'(t) \cdot f(t) = 0 \) for all \(t.\)
+%EXTRA
+Then \(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g'(t) . \)
+which means \(f(t) \cdot f(t) = f'(t) \cdot f'(t) \) for all \(t.\)
+which means \(f(t) \cdot f(t) = 0 \) for all \(t.\)
+%END

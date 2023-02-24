@@ -1,0 +1,134 @@
+##DESCRIPTION
+## Derivative of a curve in the sphere is tangent to the sphere (ex 8.3.12)
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.3')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+$PAR
+Suppose
+\(f \colon {\mathbb{R}} \to {\mathbb{R}}^n\)
+is differentiable
+and \(\|f(t)\| = 1\) for all \(t\) (that is, we have a curve in the unit sphere).
+Show that for all \(t,\) treating \(f'(t)\) as a vector, we have \(f'(t) \cdot f(t) = 0 .\)
+$PAR
+First, let's prove a product rule for the dot product:
+$BBOLD Claim:$EBOLD
+For differentiable
+\(f \colon {\mathbb{R}} \to {\mathbb{R}}^n\)
+and
+\(g \colon {\mathbb{R}} \to {\mathbb{R}}^n,\)
+we have
+\(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Write \(f = (f_1,f_2,\ldots,f_n)\) and \(g = (g_1,g_2,\ldots,g_n).\)",
+"Then \(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = \frac{d}{dt} \Bigl( f_1(t) g_1(t) + \cdots + f_n(t) g_n(t) \)",
+"\(\qquad =  f_1'(t) g_1(t) + f_1(t) g_1'(t) + \cdots + f_n'(t) g_n(t) + f_n(t) g_n'(t) \)",
+"\(\qquad =  f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)",
+],
+[
+"Let \(f=0\)",
+"Then \(\frac{d}{dt} \Bigl( f(t) \cdot f(t) \Bigr) = 2 f'(t) \cdot f(t) . \)",
+"\(\qquad =  f_1'(t) g_1'(t) + \cdots + f_n'(t) g_n'(t) \)",
+"\(\qquad =  f'(t) \cdot g'(t) . \)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+$PAR
+Now let's use the claim to prove the statement we had above.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"\(\|f(t)\| = 1\) means \(\|f(t)\|^2=1,\)",
+"which means \(f(t) \cdot f(t) = 1 \) for all \(t.\)",
+"Differentiate to get \(f'(t) \cdot f(t) + f(t) \cdot f'(t) = 0 \) for all \(t.\)",
+"As dot product is commutative we get \( 2 f'(t) \cdot f(t) = 0 \) for all \(t.\)",
+"Thus, \( f'(t) \cdot f(t) = 0 \) for all \(t.\)",
+],
+[
+"Then \(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g'(t) . \)",
+"which means \(f(t) \cdot f(t) = f'(t) \cdot f'(t) \) for all \(t.\)",
+"which means \(f(t) \cdot f(t) = 0 \) for all \(t.\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+
+COMMENT("Derivative of a curve in the sphere is tangent to the sphere (ex 8.3.12)");
+
+ENDDOCUMENT();
