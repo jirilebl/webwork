@@ -140,8 +140,8 @@ BEGIN_TEXT
 $PAR
 True or false:
 Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) is a function such that
-\(\frac{\partial f}{\partial x}\) and 
-\(\frac{\partial f}{\partial y}\) exist everywhere, are continuous, but are nowhere differentiable.
+\(\dfrac{\partial f}{\partial x}\) and 
+\(\dfrac{\partial f}{\partial y}\) exist everywhere, are continuous, but are nowhere differentiable.
 Then \(f\) is still differentiable as a function of two variables.
 $BR
 END_TEXT
@@ -160,8 +160,8 @@ BEGIN_TEXT
 $PAR
 True or false:
 Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) is a function such that
-\(\frac{\partial f}{\partial x}\) and 
-\(\frac{\partial f}{\partial y}\) exist everywhere and are bounded, but \(f\) is not necessarily differentiable.
+\(\dfrac{\partial f}{\partial x}\) and 
+\(\dfrac{\partial f}{\partial y}\) exist everywhere and are bounded, but \(f\) is not necessarily differentiable.
 Then \(f\) is continuous.
 $BR
 END_TEXT

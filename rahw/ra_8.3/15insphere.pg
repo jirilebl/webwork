@@ -58,7 +58,7 @@ For differentiable
 and
 \(g \colon {\mathbb{R}} \to {\mathbb{R}}^n,\)
 we have
-\(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)
+\(\dfrac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)
 $EITALIC
 $PAR
 END_TEXT
@@ -103,7 +103,7 @@ $q2 = DraggableProof([
 "Thus, \( f'(t) \cdot f(t) = 0 \) for all \(t.\)",
 ],
 [
-"Then \(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g'(t) . \)",
+"Then \(\displaystyle \frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g'(t) . \)",
 "which means \(f(t) \cdot f(t) = f'(t) \cdot f'(t) \) for all \(t.\)",
 "which means \(f(t) \cdot f(t) = 0 \) for all \(t.\)",
 ],

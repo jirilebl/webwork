@@ -15,7 +15,7 @@ For differentiable
 and
 \(g \colon {\mathbb{R}} \to {\mathbb{R}}^n,\)
 we have
-\(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)
+\(\dfrac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g(t) + f(t) \cdot g'(t) . \)
 $EITALIC
 
 %PROOF
@@ -39,7 +39,7 @@ Differentiate to get \(f'(t) \cdot f(t) + f(t) \cdot f'(t) = 0 \) for all \(t.\)
 As dot product is commutative we get \( 2 f'(t) \cdot f(t) = 0 \) for all \(t.\)
 Thus, \( f'(t) \cdot f(t) = 0 \) for all \(t.\)
 %EXTRA
-Then \(\frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g'(t) . \)
+Then \(\displaystyle \frac{d}{dt} \Bigl( f(t) \cdot g(t) \Bigr) = f'(t) \cdot g'(t) . \)
 which means \(f(t) \cdot f(t) = f'(t) \cdot f'(t) \) for all \(t.\)
 which means \(f(t) \cdot f(t) = 0 \) for all \(t.\)
 %END
