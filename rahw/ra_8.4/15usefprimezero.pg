@@ -1,0 +1,109 @@
+##DESCRIPTION
+## 
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) and
+\(g \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) are two functions such that
+\(\frac{\partial f}{\partial x},\)
+\(\frac{\partial f}{\partial y},\)
+\(\frac{\partial g}{\partial x},\)
+\(\frac{\partial g}{\partial y}\) exist at all points and
+such that
+\(\frac{\partial f}{\partial x}(x,y) = \frac{\partial g}{\partial x}(x,y)\)
+and
+\(\frac{\partial f}{\partial y}(x,y) = \frac{\partial g}{\partial y}(x,y)\)
+for all \((x,y) \in {\mathbb{R}}^n .\)
+Further suppose that \(f(0,0)=g(0,0) .\)
+Prove that \(f(x,y) = g(x,y)\) for all 
+\((x,y) \in {\mathbb{R}}^n .\)
+$PAR
+Remark: We are not assuming that \(f\) nor \(g\)
+are differentiable.  We are not even assuming they are continuous.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Let \(h = f-g .\)",
+"By hypothesis, \(\frac{\partial h}{\partial x}(x,y) = \frac{\partial f}{\partial x}(x,y) - \frac{\partial g}{\partial x}(x,y) = 0 \) for all \((x,y) .\)",
+"Similarly, \(\frac{\partial h}{\partial y}(x,y) = \frac{\partial f}{\partial y}(x,y) - \frac{\partial g}{\partial y}(x,y) = 0 \) for all \((x,y) .\)",
+"Both partial derivatives of \(h\) are continuous so \(h\) is differentiable.",
+"Moreover, \(h'(x,y) = 0 \) for all \((x,y) .\)",
+"Hence \(h\) is constant.",
+"As \(h(0,0)=0\), we find that \(h\) is identically zero.",
+"So \(f(x,y) = g(x,y)\) for all \((x,y).\)",
+],
+[
+"Let \(h=f+g .\)",
+"We have \(h'(x,y) = f'(x,y) - g'(x,y) \) for all \((x,y)\) .",
+"So both \(f\) and \(g\) are differentiable.",
+"Thus, \(h\) is not differentiable at \((0,0) .\)",
+"Moreover, \(h'(x,y) = (x,y) \) for all \((x,y) .\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+
+COMMENT("");
+
+ENDDOCUMENT();

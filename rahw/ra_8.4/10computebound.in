@@ -1,0 +1,33 @@
+%DESC Compute bound on derivative
+%HINC head.txt
+%LARGEFONT
+%SETUP $a=random(2,9,1);
+%SETUP $b=random(2,9,1);
+%SETUP $c=random(2,9,1);
+%SETUP $d=random(2,9,1);
+%NOPARTIAL
+Let \( U = (0,$c) \times (0,$d) \subset {\mathbb{R}}^2 . \)
+
+Let
+\(f \colon U \to {\mathbb{R}} \) be given by
+\(f(x,y) = $a x^2 + $b xy . \)
+Find the best (smallest) \(M\) such that \(\|f'(x,y)\| \leq M\) on \(U.\)
+$BR
+\(M={}\)
+%NUMBER sqrt((2*$a*$c+$b*$d)^2+($b*$c)^2)
+
+Let
+\(g \colon (0,$c) \to {\mathbb{R}}^2 \) be given by
+\(g(t) = ($a t^2, $b t) . \)
+Find the best (smallest) \(M\) such that \(\|g'(t)\| \leq M\) on \(U.\)
+$BR
+\(M={}\)
+%NUMBER sqrt((2*$a*$c)^2+($b)^2)
+
+Now let
+\(h \colon U \to {\mathbb{R}}^2 \) be given by
+\(h(x,y) = ( y , $b x^2 )  . \)
+Find the best (smallest) \(M\) such that \(\|h'(x,y)\| \leq M\) on \(U.\)
+$BR
+\(M={}\)
+%NUMBER 2*$b*$c

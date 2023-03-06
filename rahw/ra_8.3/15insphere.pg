@@ -44,7 +44,6 @@ Context("Numeric");
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-$PAR
 Suppose
 \(f \colon {\mathbb{R}} \to {\mathbb{R}}^n\)
 is differentiable

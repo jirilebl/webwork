@@ -1,0 +1,37 @@
+%DESC 
+%HINC head.txt
+%LARGEFONT
+Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) and
+\(g \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) are two functions such that
+\(\frac{\partial f}{\partial x},\)
+\(\frac{\partial f}{\partial y},\)
+\(\frac{\partial g}{\partial x},\)
+\(\frac{\partial g}{\partial y}\) exist at all points and
+such that
+\(\frac{\partial f}{\partial x}(x,y) = \frac{\partial g}{\partial x}(x,y)\)
+and
+\(\frac{\partial f}{\partial y}(x,y) = \frac{\partial g}{\partial y}(x,y)\)
+for all \((x,y) \in {\mathbb{R}}^n .\)
+Further suppose that \(f(0,0)=g(0,0) .\)
+Prove that \(f(x,y) = g(x,y)\) for all 
+\((x,y) \in {\mathbb{R}}^n .\)
+
+Remark: We are not assuming that \(f\) nor \(g\)
+are differentiable.  We are not even assuming they are continuous.
+
+%PROOF
+Let \(h = f-g .\)
+By hypothesis, \(\frac{\partial h}{\partial x}(x,y) = \frac{\partial f}{\partial x}(x,y) - \frac{\partial g}{\partial x}(x,y) = 0 \) for all \((x,y) .\)
+Similarly, \(\frac{\partial h}{\partial y}(x,y) = \frac{\partial f}{\partial y}(x,y) - \frac{\partial g}{\partial y}(x,y) = 0 \) for all \((x,y) .\)
+Both partial derivatives of \(h\) are continuous so \(h\) is differentiable.
+Moreover, \(h'(x,y) = 0 \) for all \((x,y) .\)
+Hence \(h\) is constant.
+As \(h(0,0)=0\), we find that \(h\) is identically zero.
+So \(f(x,y) = g(x,y)\) for all \((x,y).\)
+%EXTRA
+Let \(h=f+g .\)
+We have \(h'(x,y) = f'(x,y) - g'(x,y) \) for all \((x,y)\) .
+So both \(f\) and \(g\) are differentiable.
+Thus, \(h\) is not differentiable at \((0,0) .\)
+Moreover, \(h'(x,y) = (x,y) \) for all \((x,y) .\)
+%END

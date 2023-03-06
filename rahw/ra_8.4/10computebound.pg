@@ -1,0 +1,114 @@
+##DESCRIPTION
+## Compute bound on derivative
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+
+$a=random(2,9,1);
+$b=random(2,9,1);
+$c=random(2,9,1);
+$d=random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Let \( U = (0,$c) \times (0,$d) \subset {\mathbb{R}}^2 . \)
+$PAR
+Let
+\(f \colon U \to {\mathbb{R}} \) be given by
+\(f(x,y) = $a x^2 + $b xy . \)
+Find the best (smallest) \(M\) such that \(\|f'(x,y)\| \leq M\) on \(U.\)
+$BR
+\(M={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("sqrt((2*$a*$c+$b*$d)^2+($b*$c)^2)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Let
+\(g \colon (0,$c) \to {\mathbb{R}}^2 \) be given by
+\(g(t) = ($a t^2, $b t) . \)
+Find the best (smallest) \(M\) such that \(\|g'(t)\| \leq M\) on \(U.\)
+$BR
+\(M={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q2 = Formula("sqrt((2*$a*$c)^2+($b)^2)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Now let
+\(h \colon U \to {\mathbb{R}}^2 \) be given by
+\(h(x,y) = ( y , $b x^2 )  . \)
+Find the best (smallest) \(M\) such that \(\|h'(x,y)\| \leq M\) on \(U.\)
+$BR
+\(M={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("2*$b*$c");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+
+COMMENT("Compute bound on derivative");
+
+ENDDOCUMENT();
