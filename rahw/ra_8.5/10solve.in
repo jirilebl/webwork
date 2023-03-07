@@ -9,9 +9,9 @@
 %SETUP $bsq=$b*$b;
 %SETUP $yi=random(2,5,1);
 %SETUP $yimo=$yi-1;
-%SETUP $cterm=$asq*$yimo+$bsq
+%SETUP $cterm=$asq*$yimo+$bsq;
 %SETUP $asqptb=$asq+$tb;
-%SETUP $xi=-$a +$yi-$b;
+%SETUP $xi=-$a+$yi-$b;
 %FORMULAVARS x,y
 %NOPARTIAL
 Consider \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \)

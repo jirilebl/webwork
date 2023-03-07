@@ -46,9 +46,9 @@ $tb=2*$b;
 $bsq=$b*$b;
 $yi=random(2,5,1);
 $yimo=$yi-1;
-$cterm=$asq*$yimo+$bsq
+$cterm=$asq*$yimo+$bsq;
 $asqptb=$asq+$tb;
-$xi=-$a +$yi-$b;
+$xi=-$a+$yi-$b;
 
 ############################
 # Main text
