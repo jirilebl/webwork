@@ -13,14 +13,14 @@ is Lipschitz with constant \(M.\)
 
 %PROOF
 \(\displaystyle \lvert g(y)-g(z) \rvert = \left\lvert \int_0^1 \bigl( f(x,y) - f(x,z) \bigr) \, dx \right\rvert \)
-\qquad \(\displaystyle \leq \int_0^1 \lvert f(x,y) - f(x,z) \rvert \, dx \)
-\qquad \(\displaystyle \leq \int_0^1 M \lvert y - z \rvert \, dx \)
-\qquad \(\displaystyle = M \lvert y - z \rvert \)
+\(\qquad \displaystyle \leq \int_0^1 \lvert f(x,y) - f(x,z) \rvert \, dx \)
+\(\qquad \displaystyle \leq \int_0^1 M \lvert y - z \rvert \, dx \)
+\(\qquad \displaystyle = M \lvert y - z \rvert \)
 %EXTRA
-\qquad \(\displaystyle \leq \int_0^1 M \lvert f(x,y) \rvert \, dx \)
+\(\qquad \displaystyle \leq \int_0^1 M \lvert f(x,y) \rvert \, dx \)
 \(\displaystyle g'(y) = \int_0^1 \frac{\partial f}{\partial y}(x,y)\, dx \)
-\qquad \(\displaystyle \leq \int_0^1 M \, dx \)
-\qquad \(\displaystyle = M \)
+\(\qquad \displaystyle \leq \int_0^1 M \, dx \)
+\(\qquad \displaystyle = M \)
 %END
 
 If the interval above is replaced by \([0,2]\) and the integral by \(\int_0^2 ,\)
