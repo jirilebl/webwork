@@ -1,0 +1,118 @@
+##DESCRIPTION
+## Solve for variable
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.5')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(x=>"Real",y=>"Real");
+
+$a=random(2,5,1);
+$asq=$a*$a;
+$asqmo=$asq-1;
+$b=$a+random(1,4,1);
+$tb=2*$b;
+$bsq=$b*$b;
+$yi=random(2,5,1);
+$yimo=$yi-1;
+$cterm=$asq*$yimo+$bsq
+$asqptb=$asq+$tb;
+$xi=-$a +$yi-$b;
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Consider \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \)
+defined by
+\(f(x,y) := x^2 - 2xy + y^2 + $tb x - $asqptb y + $cterm .\)
+Note that \(f($xi,$yi)=0\).
+$PAR
+Compute \(\dfrac{\partial f}{\partial x}($xi,$yi) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q1 = Formula("(2*$xi)-(2*$yi)+$tb");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Does the implicit function theorem apply?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+Solve for \(x\) in terms of \(y\) near \(($xi,$yi).\)
+$BR
+\(x={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("-sqrt($asq (y-$yimo))+y-$b");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+
+COMMENT("Solve for variable");
+
+ENDDOCUMENT();
