@@ -1,0 +1,51 @@
+%DESC Counterexample for differentiation under the integral
+%HINC head.txt
+%LARGEFONT
+%FORMULAVARS x,y
+%NOPARTIAL
+Suppose that \(f \colon [0,1] \times {\mathbb{R}} \to {\mathbb{R}}\) is continuous and
+Lipschitz in the second variable with constant \(M,\)
+that is, \(\lvert f(x,y)-f(x,z) \rvert \leq M \lvert y-z \rvert .\)
+Prove that \( g\colon {\mathbb{R}} \to {\mathbb{R}}\)
+defined by
+\(\displaystyle g(y) := \int_0^1 f(x,y) \, dx \)
+is Lipschitz with constant \(M.\)
+
+%PROOF
+\(\displaystyle \lvert g(y)-g(z) \rvert = \left\lvert \int_0^1 \bigl( f(x,y) - f(x,z) \bigr) \, dx \right\rvert \)
+\qquad \(\displaystyle \leq \int_0^1 \lvert f(x,y) - f(x,z) \rvert \, dx \)
+\qquad \(\displaystyle \leq \int_0^1 M \lvert y - z \rvert \, dx \)
+\qquad \(\displaystyle = M \lvert y - z \rvert \)
+%EXTRA
+\qquad \(\displaystyle \leq \int_0^1 M \lvert f(x,y) \rvert \, dx \)
+\(\displaystyle g'(y) = \int_0^1 \frac{\partial f}{\partial y}(x,y)\, dx \)
+\qquad \(\displaystyle \leq \int_0^1 M \, dx \)
+\qquad \(\displaystyle = M \)
+%END
+
+If the interval above is replaced by \([0,2]\) and the integral by \(\int_0^2 ,\)
+then what can you say about \(g\):
+$BR
+%RADIO
+\(g\) need not be Lipschitz.
+\(g\) is Lipschitz with constant \(M .\)
+%CORRECT \(g\) is Lipschitz with constant \(2M .\)
+\(g\) is differentiable.
+%END
+
+If \(\dfrac{\partial f}{\partial y}\) exists and is continuous, is \(g\)
+differentiable?
+$BR
+%RADIO
+%CORRECT Yes
+No
+%END
+
+If \(\dfrac{\partial f}{\partial y}\) exists, is continuous, and is bounded
+by \(M ,\) what can you say about \(g'\)?
+$BR
+%RADIO
+\(g'\) need not exist.
+\(g'\) exists but is not necessarily bounded.
+%CORRECT \(g'\) exists is bounded by \(M .\)
+%END

@@ -1,0 +1,155 @@
+##DESCRIPTION
+## Counterexample for differentiation under the integral
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('9.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(x=>"Real",y=>"Real");
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose that \(f \colon [0,1] \times {\mathbb{R}} \to {\mathbb{R}}\) is continuous and
+Lipschitz in the second variable with constant \(M,\)
+that is, \(\lvert f(x,y)-f(x,z) \rvert \leq M \lvert y-z \rvert .\)
+Prove that \( g\colon {\mathbb{R}} \to {\mathbb{R}}\)
+defined by
+\(\displaystyle g(y) := \int_0^1 f(x,y) \, dx \)
+is Lipschitz with constant \(M.\)
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"\(\displaystyle \lvert g(y)-g(z) \rvert = \left\lvert \int_0^1 \bigl( f(x,y) - f(x,z) \bigr) \, dx \right\rvert \)",
+"\qquad \(\displaystyle \leq \int_0^1 \lvert f(x,y) - f(x,z) \rvert \, dx \)",
+"\qquad \(\displaystyle \leq \int_0^1 M \lvert y - z \rvert \, dx \)",
+"\qquad \(\displaystyle = M \lvert y - z \rvert \)",
+],
+[
+"\qquad \(\displaystyle \leq \int_0^1 M \lvert f(x,y) \rvert \, dx \)",
+"\(\displaystyle g'(y) = \int_0^1 \frac{\partial f}{\partial y}(x,y)\, dx \)",
+"\qquad \(\displaystyle \leq \int_0^1 M \, dx \)",
+"\qquad \(\displaystyle = M \)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+$PAR
+If the interval above is replaced by \([0,2]\) and the integral by \(\int_0^2 ,\)
+then what can you say about \(g\):
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"\(g\) need not be Lipschitz.",
+"\(g\) is Lipschitz with constant \(M .\)",
+"\(g\) is Lipschitz with constant \(2M .\)",
+"\(g\) is differentiable.",
+],
+"\(g\) is Lipschitz with constant \(2M .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+If \(\dfrac{\partial f}{\partial y}\) exists and is continuous, is \(g\)
+differentiable?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"Yes",
+"No",
+],
+"Yes",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+If \(\dfrac{\partial f}{\partial y}\) exists, is continuous, and is bounded
+by \(M ,\) what can you say about \(g'\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"\(g'\) need not exist.",
+"\(g'\) exists but is not necessarily bounded.",
+"\(g'\) exists is bounded by \(M .\)",
+],
+"\(g'\) exists is bounded by \(M .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+
+COMMENT("Counterexample for differentiation under the integral");
+
+ENDDOCUMENT();

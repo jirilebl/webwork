@@ -3,10 +3,10 @@
 %LARGEFONT
 %FORMULAVARS x,y
 %NOPARTIAL
-Let \(h(x,y) := \frac{xy}{x^2+y^2} \) for \((x,y)\not=0\) and \(h(0,0)=0 .\)
-Let \(g(y) := \int_0^1 h(x,y) \, dx . \)
+Let \(\displaystyle h(x,y) := \frac{xy}{x^2+y^2} \) for \((x,y)\not=0\) and \(h(0,0)=0 .\)
+Let \(\displaystyle g(y) := \int_0^1 h(x,y) \, dx . \)
 
-Note that \(\frac{\partial h}{\partial y}\) exists for all \((x,y)\)
+Note that \(\displaystyle \frac{\partial h}{\partial y}\) exists for all \((x,y)\)
 including at the origin.
 
 Is \(g(y)\) defined for all \(y \in {\mathbb{R}}\)?
@@ -54,8 +54,8 @@ Why can't we apply the Liebniz rule (differentiate under the integral)
 at \(y=0\)?
 $BR
 %RADIORANDOM
-%CORRECT \(\frac{\partial h}{\partial y}\) is not continuous.
-\(\frac{\partial h}{\partial y}\) does not exist.
+%CORRECT \(\dfrac{\partial h}{\partial y}\) is not continuous.
+\(\dfrac{\partial h}{\partial y}\) does not exist.
 In fact, we could apply Liebniz rule at \(y=0.\)
 \(h\) is not defined at the origin.
 \(h\) is unbounded.

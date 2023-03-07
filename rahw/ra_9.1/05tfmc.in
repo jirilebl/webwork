@@ -6,7 +6,7 @@ True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is continuously
 differentiable, then
 \(g \colon [0,1] \to {\mathbb{R}}\) defined by
-\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
+\(\displaystyle g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
 $BR
 %RADIO
 %CORRECT True
@@ -17,7 +17,7 @@ True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
 continuous, then
 \(g \colon [0,1] \to {\mathbb{R}}\) defined by
-\(g(y) := \int_0^1 f(x,y) \, dx\) is differentiable.
+\(\displaystyle g(y) := \int_0^1 f(x,y) \, dx\) is differentiable.
 $BR
 %RADIO
 True
@@ -28,7 +28,7 @@ True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
 such that \(\frac{\partial f}{\partial y}\) exists and is continuous, then
 \(g \colon [0,1] \to {\mathbb{R}}\) defined by
-\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
+\(\displaystyle g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
 $BR
 %RADIO
 %CORRECT True
@@ -39,7 +39,7 @@ True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is
 such that \(\frac{\partial f}{\partial x}\) exists and is continuous, then
 \(g \colon [0,1] \to {\mathbb{R}}\) defined by
-\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
+\(\displaystyle g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable.
 $BR
 %RADIO
 True
@@ -48,7 +48,7 @@ True
 
 True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is continuous and
-\(g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable,
+\(\displaystyle g(y) := \int_0^1 f(x,y) \, dx\) is continuously differentiable,
 then \(f\) is continuously differentiable.
 $BR
 %RADIO
