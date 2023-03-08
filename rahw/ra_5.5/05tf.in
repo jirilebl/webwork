@@ -1,0 +1,99 @@
+%DESC True/false questions on improper integrals
+%HINC head.txt
+%LARGEFONT
+%NOPARTIAL
+True or false:
+If \(f\) is Riemann integrable on every interval
+and
+\(\displaystyle \int_{0}^\infty f \) converges,
+then the function
+\(\displaystyle x \mapsto \int_{x}^\infty f \) is continuous.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f,\) \(g,\) and \(h\) are Riemann integrable on every interval,
+\(\displaystyle \int_{0}^\infty f \) and
+\(\displaystyle \int_{0}^\infty h \) converge,
+and \(f(x) \leq g(x) \leq h(x)\) for all \(x,\)
+then
+\(\displaystyle \int_{0}^\infty f \) converes
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f\) is Riemann integrable on every interval
+and \(\displaystyle \int_{0}^\infty f \) converges,
+then
+\(\displaystyle \int_{0}^\infty \lvert f\rvert \) converges.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f\) is Riemann integrable on every interval,
+\(f(x) \geq 0 \) for all \(x\),
+and 
+\(\displaystyle \int_{0}^a f \leq 1 \) for all \(a > 0,\)
+then
+\(\displaystyle \int_{0}^\infty f \) converges.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f\) is Riemann integrable on every interval
+and 
+\(\displaystyle -1 \leq \int_{0}^a f \leq 1 \) for all \(a > 0,\)
+then
+\(\displaystyle \int_{0}^\infty f \) converges.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f\) is Riemann integrable on every interval
+and 
+\(\displaystyle \lim_{a \to \infty} \int_{-a}^a f \) exists, then 
+\(\displaystyle \int_{-\infty}^\infty f \) converges.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(f\) is Riemann integrable on every interval,
+\(f(x) \geq 0 \) for all \(x\),
+and 
+\(\displaystyle \lim_{a \to \infty} \int_{-a}^a f \) exists, then 
+\(\displaystyle \int_{-\infty}^\infty f \) converges.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(f\) is Riemann integrable on every interval
+and 
+\(\displaystyle \int_{-\infty}^\infty f \) converges,
+then 
+\(\displaystyle \lim_{a \to \infty} \int_{-2a}^{3a} f = \int_{-\infty}^\infty f . \)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
