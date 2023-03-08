@@ -118,7 +118,8 @@ Suppose \(f(x) = C e^{a x}\) for some constants \(C\) and \(a .\)
 Suppose that \(f\) doubles on as \(x\) goes from \(0\) to \(1\) (that is,
 \(f(1)\) is twice \(f(0)\)).  What does it do as \(x\) goes from \(1\) to \(2\)?
 $BR
-\(f(2)\) is
+\(f(2)\) is how many times 
+\(f(1)\)?
 END_TEXT
 Context()->normalStrings;
 
@@ -128,7 +129,6 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
-times \(f(1)\)
 
 END_TEXT
 Context()->normalStrings;
