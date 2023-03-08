@@ -20,7 +20,7 @@ If \(f,\) \(g,\) and \(h\) are Riemann integrable on every interval,
 \(\displaystyle \int_{0}^\infty h \) converge,
 and \(f(x) \leq g(x) \leq h(x)\) for all \(x,\)
 then
-\(\displaystyle \int_{0}^\infty f \) converes
+\(\displaystyle \int_{0}^\infty f \) converges.
 $BR
 %RADIO
 %CORRECT True
