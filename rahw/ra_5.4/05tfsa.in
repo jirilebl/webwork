@@ -1,7 +1,7 @@
 %DESC True/false/short answer questions on exponential and logarithm
 %HINC head.txt
+%SETUP Context()->variables->are(x=>["Real",limits=>[-2,-0.1]]);
 %SETUP $a=random(2,9,1);
-%FORMULAVARS x
 %LARGEFONT
 %NOPARTIAL
 True or false:
