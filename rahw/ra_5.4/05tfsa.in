@@ -1,0 +1,50 @@
+%DESC True/false/short answer questions on exponential and logarithm
+%HINC head.txt
+%SETUP $a=random(2,9,1);
+%FORMULAVARS x
+%LARGEFONT
+%NOPARTIAL
+True or false:
+The exponential is infinitely differentiable (has derivatives of all orders).
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+The logarithm is infinitely differentiable (has derivatives of all orders).
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+What is the unique differentiable
+function \(F \colon \mathbb{R} \to \mathbb{R}\) such that
+\(F'(x)=F(x)\) like the exponential, but \(F(0)= $a .\)
+$BR
+\(F(x)={}\)
+%FORMULA $a*e^x
+
+What is the unique differentiable
+function \(G \colon \mathbb{R} \to \mathbb{R}\) such that
+\(G'(x)=-G(x)\) and \(G(0)= 1 .\)
+$BR
+\(G(x)={}\)
+%FORMULA e^(-x)
+
+The logarithm is the unique function on \((0,\infty)\)
+whose derivative is \(\frac{1}{x}\) and which vanishes at \(1.\)
+What is the unique function on \((-\infty,0)\)
+whose derivative is \(\frac{1}{x}\) and which vanishes at \(-1\)?
+$BR
+%FORMULA ln(-x)
+
+Suppose \(f(x) = C e^{a x}\) for some constants \(C\) and \(a .\)
+Suppose that \(f\) doubles on as \(x\) goes from \(0\) to \(1\) (that is,
+\(f(1)\) is twice \(f(0)\)).  What does it do as \(x\) goes from \(1\) to \(2\)?
+$BR
+\(f(2\) is
+%NUMBER 2
+times \(f(1)\)

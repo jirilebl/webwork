@@ -9,7 +9,7 @@
   * 3.6: only one (T/F) problem, need at least one more
   * 4.3: only two problems, perhaps need one more
   * 4.4: only one (T/F) problem, need at least one more
-  * 5.4: none 
+  * 5.4: only one problem, need some more 
   * 5.5: none
   * 6.2: only two problems, perhaps need one more
   * 6.3: only two problems, perhaps need one more
@@ -17,12 +17,12 @@
   * 7.5: only two problems, perhaps need one more
   * 7.6: only two problems, perhaps need one more
 
-* Vol II: goal is something like 2 problems per section, perhaps more for
+* Vol II: goal is something 2-3 problems per section, perhaps more for
   longer ones
   * 8.3: need some more perhaps
   * 8.5: need some more perhaps
   * 8.6: none
-  * 9.1: The counterexample problem kind of sucks, replace
+  * 9.1: The counterexample problem kind of sucks, perhaps replace
   * 9.2: none
   * 9.3: none
   * 10.1: this needs more than 2, some more computation to test understanding of notation.

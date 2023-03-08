@@ -1,0 +1,150 @@
+##DESCRIPTION
+## True/false/short answer questions on exponential and logarithm
+##ENDDESCRIPTION
+
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+
+Context()->variables->are(x=>"Real");
+
+$a=random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+The exponential is infinitely differentiable (has derivatives of all orders).
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+The logarithm is infinitely differentiable (has derivatives of all orders).
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+What is the unique differentiable
+function \(F \colon \mathbb{R} \to \mathbb{R}\) such that
+\(F'(x)=F(x)\) like the exponential, but \(F(0)= $a .\)
+$BR
+\(F(x)={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("$a*e^x");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+What is the unique differentiable
+function \(G \colon \mathbb{R} \to \mathbb{R}\) such that
+\(G'(x)=-G(x)\) and \(G(0)= 1 .\)
+$BR
+\(G(x)={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("e^(-x)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+The logarithm is the unique function on \((0,\infty)\)
+whose derivative is \(\frac{1}{x}\) and which vanishes at \(1.\)
+What is the unique function on \((-\infty,0)\)
+whose derivative is \(\frac{1}{x}\) and which vanishes at \(-1\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("ln(-x)");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(40) \}
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+Suppose \(f(x) = C e^{a x}\) for some constants \(C\) and \(a .\)
+Suppose that \(f\) doubles on as \(x\) goes from \(0\) to \(1\) (that is,
+\(f(1)\) is twice \(f(0)\)).  What does it do as \(x\) goes from \(1\) to \(2\)?
+$BR
+\(f(2\) is
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+times \(f(1)\)
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+
+COMMENT("True/false/short answer questions on exponential and logarithm");
+
+ENDDOCUMENT();
