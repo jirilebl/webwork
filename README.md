@@ -2,11 +2,15 @@
 
 In the *rahw/* directory, there are problems for the *Basic Analysis* textbook volume I.  Read the *README.md* in that directory.
 
-# Webwork problems
+# Webwork problems/templates
 
 These are problems that for whatever reason I am not pushing into the OPL Contrib directory, templates for my own use (though of course feel free to use them), and a few scripts for working with webwork.
 
-There are no guarantees here
+There are no guarantees here.
+
+# Webwork scripts
+
+*story-proof-template-maker.pl* is a problem maker script, useful for quickly creating simple problems, including proof problems.  Used for the Basic Analysis problem collection.
 
 *test-pg-file.pl* is a very rudimentary check that a pg file contains some of the most basic elements it should.  Prints out the name of the file if it fails.
 
