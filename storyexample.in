@@ -223,10 +223,10 @@ obviously include variables such as [$a,$b] or something like that.
 
 Note that by default the context is set up with the flags
 num_points=50, granularity=10000, tolType="relative", tolerance=0.00001,
-reduceConstants=0, which is a rather stricter than the normal webwork setup
-which is kind of loose.  You can change it by adding %SETUP flags
-of course, or modifying the output.  The variables from %FORMULAVARS
-are by default set to "Real" type.
+reduceConstants=0, reduceConstantFunctions=0, which is a rather stricter than
+the normal webwork setup which is kind of loose.  You can change it by
+adding %SETUP flags of course, or modifying the output.  The variables
+from %FORMULAVARS are by default set to "Real" type.
 
 
 $BBOLD Descriptive headers $EBOLD
