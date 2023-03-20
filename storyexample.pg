@@ -447,7 +447,7 @@ but is a little bit faster to type.  If you have other setup before, this can
 obviously include variables such as [$a,$b] or something like that.
 $PAR
 $PAR
-Note that by default the context setup is with the flags
+Note that by default the context is set up with the flags
 num_points=50, granularity=10000, tolType="relative", tolerance=0.00001,
 reduceConstants=0, which is a rather stricter than the normal webwork setup
 which is kind of loose.  You can change it by adding %SETUP flags
