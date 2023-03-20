@@ -150,7 +150,8 @@ all formulas here will use.
 
 %FORMULAVARS x,y,z
 
-Then we ask a formula as follows.
+Then we ask a formula as follows (see also below about ranges and
+more complicated setup).
 
 How about a formula:
 %FORMULA x^2+y^2+z^2
@@ -207,6 +208,25 @@ want to give one entry where the matrix has to be entered using the webwork
 syntax.  For that use MATRIXENTRY.  Default rule width is 40.
 
 %MATRIXENTRY [[1,2],[3,4]]
+
+
+$BBOLD Advanced variable setup $EBOLD
+
+If a range of values is to be used for a variable when testing formulas you can
+put %VARRANGE x [2,5] on a separate line.  So we will test formulas with x in
+that range.  It is equivalent to
+adding "%SETUP Context()->variables->set(x => {limits => [2,5]});" on a line,
+but is a little bit faster to type.  If you have other setup before, this can
+obviously include variables such as [$a,$b] or something like that.
+
+%VARRANGE x [2,5]
+
+Note that by default the context setup is with the flags
+num_points=50, granularity=10000, tolType="relative", tolerance=0.00001,
+reduceConstants=0, which is a rather stricter than the normal webwork setup
+which is kind of loose.  You can change it by adding %SETUP flags
+of course, or modifying the output.  The variables from %FORMULAVARS
+are by default set to "Real" type.
 
 
 $BBOLD Descriptive headers $EBOLD

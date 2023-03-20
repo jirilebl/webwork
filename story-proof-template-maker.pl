@@ -245,6 +245,8 @@ EOF
 		}
 	} elsif ($line =~ m/^%SETUP[ \t][ \t]*(.*)$/ or $line =~ m/^%S[ \t][ \t]*(.*)$/) {
 		$setup .= "$1\n";
+	} elsif ($line =~ m/^%VARRANGE[ \t][ \t]*(.*)[ \t][ \t]*(.*)$/) {
+		$setup .= "Context()->variables->set($1 => {limits => $2});\n";
 	} elsif ($insolution == 0 and $line =~ m/^%RULEWIDTH[ \t][ \t]*([0-9]*)$/) {
 		$rulewidth = int($1);
 	} elsif ($insolution == 0 and $line =~ m/^%NUMBER[ \t][ \t]*(.*)$/) {
@@ -406,6 +408,11 @@ TEXT(beginproblem());
 \$showPartialCorrectAnswers = $partialanswers;
 
 Context(\"$ctx\");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0);
 
 $setvars
 $setup
