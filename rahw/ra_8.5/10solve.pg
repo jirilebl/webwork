@@ -35,6 +35,11 @@ TEXT(beginproblem());
 $showPartialCorrectAnswers = 0;
 
 Context("Numeric");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0);
 
 Context()->variables->are(x=>"Real",y=>"Real");
 
@@ -49,6 +54,7 @@ $yimo=$yi-1;
 $cterm=$asq*$yimo+$bsq;
 $asqptb=$asq+$tb;
 $xi=-$a+$yi-$b;
+Context()->variables->set(y => {limits => [$yi,$yi+5]});
 
 ############################
 # Main text
@@ -59,7 +65,7 @@ $PAR
 Consider \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \)
 defined by
 \(f(x,y) := x^2 - 2xy + y^2 + $tb x - $asqptb y + $cterm .\)
-Note that \(f($xi,$yi)=0\).
+Note that \(f($xi,$yi)=0.\)
 $PAR
 Compute \(\dfrac{\partial f}{\partial x}($xi,$yi) = {}\)
 END_TEXT

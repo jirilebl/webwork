@@ -13,11 +13,12 @@
 %SETUP $asqptb=$asq+$tb;
 %SETUP $xi=-$a+$yi-$b;
 %FORMULAVARS x,y
+%VARRANGE y [$yi,$yi+5]
 %NOPARTIAL
 Consider \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \)
 defined by
 \(f(x,y) := x^2 - 2xy + y^2 + $tb x - $asqptb y + $cterm .\)
-Note that \(f($xi,$yi)=0\).
+Note that \(f($xi,$yi)=0.\)
 
 Compute \(\dfrac{\partial f}{\partial x}($xi,$yi) = {}\)
 %NUMBER (2*$xi)-(2*$yi)+$tb
