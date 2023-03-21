@@ -1,0 +1,32 @@
+%DESC Coordinate change simple proof
+%HINC head.txt
+%LARGEFONT
+%NOPARTIAL
+Suppose \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) and
+\( g \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) 
+are continuously differentiable functions,
+\(\nabla f(0,0) \not= 0,\)
+\(\nabla g(0,0) \not= 0,\) and
+\(\nabla f(0,0)\) is not a multiple of
+\(\nabla g(0,0) .\)
+Then there exist neighborhoods \(U,V \subset {\mathbb{R}}^2\) of
+the origin and a continuously differentiable bijective function \(\varphi \colon U \to V\)
+with nonzero derivative everywhere, so that \(f \circ \varphi\) vanishes on the
+\(y\)-axis and \(g \circ \varphi\) vaishes on the \(x\)-axis.
+
+%PROOF
+Define \(F \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\) by \(F=(f,g).\)
+\(F\) is \(C^1\) as its components are \(C^1 .\)
+The first row of \(F'(0,0)\) is \(\nabla f(0,0),\)
+and the second row of \(F'(0,0)\) is \(\nabla g(0,0).\)
+As \(\nabla f(0,0)\) and \(\nabla g(0,0)\) are nonzero and not multiples of each other
+they are linearly independent.
+Thus, \(F'(0,0)\) is invertible.
+The inverse function theorem gives neighborhoods \(U,V\) and \(\varphi \colon U \to V\) so that \(F \circ \varphi\) is the identity.
+As \(f(\varphi(x,y)) = x\) and \(g(\varphi(x,y)) = y ,\) the claim is prooved.
+%EXTRA
+The first column of \(F'(0,0)\) is \(\nabla f(0,0),\)
+and the second column of \(F'(0,0)\) is \(\nabla g(0,0).\)
+they are nonzero.
+Thus, \(F'(0,0)\) is zero.
+%END

@@ -1,0 +1,111 @@
+##DESCRIPTION
+## Coordinate change simple proof
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('8.5')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0,
+                      reduceConstantFunctions => 0);
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) and
+\( g \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) 
+are continuously differentiable functions,
+\(\nabla f(0,0) \not= 0,\)
+\(\nabla g(0,0) \not= 0,\) and
+\(\nabla f(0,0)\) is not a multiple of
+\(\nabla g(0,0) .\)
+Then there exist neighborhoods \(U,V \subset {\mathbb{R}}^2\) of
+the origin and a continuously differentiable bijective function \(\varphi \colon U \to V\)
+with nonzero derivative everywhere, so that \(f \circ \varphi\) vanishes on the
+\(y\)-axis and \(g \circ \varphi\) vaishes on the \(x\)-axis.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Define \(F \colon {\mathbb{R}}^2 \to {\mathbb{R}}^2\) by \(F=(f,g).\)",
+"\(F\) is \(C^1\) as its components are \(C^1 .\)",
+"The first row of \(F'(0,0)\) is \(\nabla f(0,0),\)",
+"and the second row of \(F'(0,0)\) is \(\nabla g(0,0).\)",
+"As \(\nabla f(0,0)\) and \(\nabla g(0,0)\) are nonzero and not multiples of each other",
+"they are linearly independent.",
+"Thus, \(F'(0,0)\) is invertible.",
+"The inverse function theorem gives neighborhoods \(U,V\) and \(\varphi \colon U \to V\) so that \(F \circ \varphi\) is the identity.",
+"As \(f(\varphi(x,y)) = x\) and \(g(\varphi(x,y)) = y ,\) the claim is prooved.",
+],
+[
+"The first column of \(F'(0,0)\) is \(\nabla f(0,0),\)",
+"and the second column of \(F'(0,0)\) is \(\nabla g(0,0).\)",
+"they are nonzero.",
+"Thus, \(F'(0,0)\) is zero.",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+
+COMMENT("Coordinate change simple proof");
+
+ENDDOCUMENT();

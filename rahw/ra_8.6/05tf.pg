@@ -1,0 +1,159 @@
+##DESCRIPTION
+## True/false for higher partial derivatives in several variables
+##ENDDESCRIPTION
+
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0,
+                      reduceConstantFunctions => 0);
+
+
+$a=random(2,9,1);
+$b=random(2,9,1);
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+In the following problems, let \((x,y) \in {\mathbb{R}}^2\) be the coordinates.
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) is twice continuously
+differentiable, then necessarily
+\(\dfrac{\partial^2 f}{\partial x \partial y} = \dfrac{\partial^2 f}{\partial y \partial x}\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) is twice continuously
+differentiable, then necessarily
+\(\dfrac{\partial^2 f}{\partial x^2} = \dfrac{\partial^2 f}{\partial y^2}\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) is differentiable and all the second order partial derivatives
+exist, then necessarily
+\(\dfrac{\partial^2 f}{\partial x \partial y} = \dfrac{\partial^2 f}{\partial y \partial x}\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) is differentiable, all the second order partial derivatives
+exist, and 
+\(\dfrac{\partial^2 f}{\partial x \partial y}\) and \(\dfrac{\partial^2 f}{\partial y \partial x}\)
+are continuous,
+then necessarily
+\(\dfrac{\partial^2 f}{\partial x \partial y} = \dfrac{\partial^2 f}{\partial y \partial x}\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+If \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) is such that all the first and second order partial
+derivatives exist, then \(f\) is (once) continuously differentiable.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+
+COMMENT("True/false for higher partial derivatives in several variables");
+
+ENDDOCUMENT();
