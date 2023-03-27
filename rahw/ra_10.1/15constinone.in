@@ -1,0 +1,41 @@
+%DESC Prove that a function independent of one variable and integrable in the other is integrable
+%HINC head.txt
+%LARGEFONT
+%NOPARTIAL
+Suppose that \(R := [0,1] \times [0,1] \) and \(f \colon R \to {\mathbb{R}}\) is
+such that \(f(x,y) = g(x) \) for all \((x,y) \in R\) where \(g \colon [0,1] \to {\mathbb{R}}\)
+is a Riemann integrable function of one variable.
+
+Prove that \(f\) is integrable on \(R\) and that \(\displaystyle \int_R f = \int_0^1 g .\)
+
+First that \(f\) is integrable:
+
+%PROOF
+Let \(\epsilon $GTS 0 \) be given.
+Let \(P_1 = \lbrace x_0,x_1,\ldots,x_n \rbrace \) be a partition of \([0,1]\) so that \(U(P_1,g) - L(P_1,g) $LTS \epsilon .\)
+Consider the partition \(P=(P_1,\lbrace 0,1\rbrace) \) of \(R.\)
+Subrectangles of \(P\) are of the form \(R_i = [x_{i-1},x_i] \times [0,1] . \)
+Notice \( \sup \lbrace f(x,y) : (x,y) \in R_i \rbrace =\sup \lbrace g(x) : x \in [x_{i-1},x_i] \rbrace . \)
+Similarly, \( \inf \lbrace f(x,y) : (x,y) \in R_i \rbrace = \inf \lbrace g(x) : x \in [x_{i-1},x_i] \rbrace . \)
+So \(L(P,f) = L(P_1,g)\) and \(U(P,f) = U(P_1,g) .\)
+Hence, \(f\) is integrable as \(U(P,f) - L(P,f) $LTS \epsilon . \)
+%EXTRA
+Consider the partition \(P=(\lbrace 0,1 \rbrace,\lbrace 0,1\rbrace) \) of \(R.\)
+Similarly, \( \inf \lbrace f(x,y) : (x,y) \in R_i \rbrace = \sup \lbrace g(x) : x \in [x_{i-1},x_i] \rbrace . \)
+Notice \( \sup \lbrace f(x,y) : (x,y) \in R_i \rbrace =\inf \lbrace g(x) : x \in [x_{i-1},x_i] \rbrace . \)
+Hence, \(f\) is integrable as \(U(P,f) = L(P,f) . \)
+%END
+
+Now let's show that the integrals are equal.
+
+%PROOF
+Let \(\epsilon $GTS 0\) and \(P\) be as above.
+As \(L(P_1,g) \leq \int_0^1 g \leq U(P_1,g) \) and \(L(P,f) \leq \int_R f \leq U(P,f) , \)
+we get \(L(P_1,g) - U(P,f) \leq \int_0^1 g - \int_R f \leq U(P_1,g)-L(P,f) . \)
+Hence, \(- \epsilon $LTS L(P,f) - U(P,f) \leq \int_0^1 g - \int_R f \leq U(P,f)-L(P,f) $LTS \epsilon . \)
+Meaning, \(\int_0^1 g = \int_R f .\)
+%EXTRA
+Meaning, \(\int_0^1 g = 0 .\)
+As \(L(P_1,g) = \int_0^1 g = U(P_1,g) \) and \(L(P,f) = \int_R f = U(P,f) , \)
+we get \(L(P_1,g) - L(P,f) \leq \int_0^1 g - \int_R f \leq U(P_1,g)-U(P,f) . \)
+%END

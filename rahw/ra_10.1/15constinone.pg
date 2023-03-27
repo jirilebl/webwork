@@ -1,0 +1,138 @@
+##DESCRIPTION
+## Prove that a function independent of one variable and integrable in the other is integrable
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('10.1')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0,
+                      reduceConstantFunctions => 0);
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose that \(R := [0,1] \times [0,1] \) and \(f \colon R \to {\mathbb{R}}\) is
+such that \(f(x,y) = g(x) \) for all \((x,y) \in R\) where \(g \colon [0,1] \to {\mathbb{R}}\)
+is a Riemann integrable function of one variable.
+$PAR
+Prove that \(f\) is integrable on \(R\) and that \(\displaystyle \int_R f = \int_0^1 g .\)
+$PAR
+First that \(f\) is integrable:
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Let \(\epsilon $GTS 0 \) be given.",
+"Let \(P_1 = \lbrace x_0,x_1,\ldots,x_n \rbrace \) be a partition of \([0,1]\) so that \(U(P_1,g) - L(P_1,g) $LTS \epsilon .\)",
+"Consider the partition \(P=(P_1,\lbrace 0,1\rbrace) \) of \(R.\)",
+"Subrectangles of \(P\) are of the form \(R_i = [x_{i-1},x_i] \times [0,1] . \)",
+"Notice \( \sup \lbrace f(x,y) : (x,y) \in R_i \rbrace =\sup \lbrace g(x) : x \in [x_{i-1},x_i] \rbrace . \)",
+"Similarly, \( \inf \lbrace f(x,y) : (x,y) \in R_i \rbrace = \inf \lbrace g(x) : x \in [x_{i-1},x_i] \rbrace . \)",
+"So \(L(P,f) = L(P_1,g)\) and \(U(P,f) = U(P_1,g) .\)",
+"Hence, \(f\) is integrable as \(U(P,f) - L(P,f) $LTS \epsilon . \)",
+],
+[
+"Consider the partition \(P=(\lbrace 0,1 \rbrace,\lbrace 0,1\rbrace) \) of \(R.\)",
+"Similarly, \( \inf \lbrace f(x,y) : (x,y) \in R_i \rbrace = \sup \lbrace g(x) : x \in [x_{i-1},x_i] \rbrace . \)",
+"Notice \( \sup \lbrace f(x,y) : (x,y) \in R_i \rbrace =\inf \lbrace g(x) : x \in [x_{i-1},x_i] \rbrace . \)",
+"Hence, \(f\) is integrable as \(U(P,f) = L(P,f) . \)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+$PAR
+Now let's show that the integrals are equal.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"Let \(\epsilon $GTS 0\) and \(P\) be as above.",
+"As \(L(P_1,g) \leq \int_0^1 g \leq U(P_1,g) \) and \(L(P,f) \leq \int_R f \leq U(P,f) , \)",
+"we get \(L(P_1,g) - U(P,f) \leq \int_0^1 g - \int_R f \leq U(P_1,g)-L(P,f) . \)",
+"Hence, \(- \epsilon $LTS L(P,f) - U(P,f) \leq \int_0^1 g - \int_R f \leq U(P,f)-L(P,f) $LTS \epsilon . \)",
+"Meaning, \(\int_0^1 g = \int_R f .\)",
+],
+[
+"Meaning, \(\int_0^1 g = 0 .\)",
+"As \(L(P_1,g) = \int_0^1 g = U(P_1,g) \) and \(L(P,f) = \int_R f = U(P,f) , \)",
+"we get \(L(P_1,g) - L(P,f) \leq \int_0^1 g - \int_R f \leq U(P_1,g)-U(P,f) . \)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q2->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+
+COMMENT("Prove that a function independent of one variable and integrable in the other is integrable");
+
+ENDDOCUMENT();
