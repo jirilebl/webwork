@@ -98,7 +98,7 @@ Context()->normalStrings;
 
 $q2 = DraggableProof([
 "Let \(\epsilon $GTS 0\) and \(P\) be as above.",
-"As \(L(P_1,g) \leq \int_0^1 g \leq U(P_1,g) \) and \(L(P,f) \leq \int_R f \leq U(P,f) , \)",
+"As \(\displaystyle L(P_1,g) \leq \int_0^1 g \leq U(P_1,g) \) and \(\displaystyle L(P,f) \leq \int_R f \leq U(P,f) , \)",
 "we get \(L(P_1,g) - U(P,f) \)\(\displaystyle \leq \int_0^1 g - \int_R f \)\( \leq U(P_1,g)-L(P,f) . \)",
 "Hence, \(- \epsilon $LTS L(P,f) - U(P,f) \)\(\displaystyle  \leq \int_0^1 g - \int_R f \)\(\leq U(P,f)-L(P,f) $LTS \epsilon . \)",
 "Meaning, \(\displaystyle \int_0^1 g = \int_R f .\)",
