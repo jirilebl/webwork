@@ -88,7 +88,7 @@ BEGIN_TEXT
 \{ ans_rule(40) \}
 \{ AnswerFormatHelp("formulas") \}
 $PAR
-\(\displaystyle \int_0^{$c} \int_0^{$b}  ($a xy+y^2) \, dy \, dx = {}\)
+\(\displaystyle \int_0^{$b} \int_0^{$c}  ($a xy+y^2) \, dy \, dx = {}\)
 END_TEXT
 Context()->normalStrings;
 

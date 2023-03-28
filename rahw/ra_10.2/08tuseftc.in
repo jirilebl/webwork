@@ -17,7 +17,7 @@ Let's use Fubini with the fundamental theorem of calculus to compute a simple in
 \(\displaystyle \int_0^{$c}  ($a xy+y^2) \, dy = {}\)
 %FORMULA ((($c)^2)*(2*($c)+3*($a)*x))/6
 
-\(\displaystyle \int_0^{$c} \int_0^{$b}  ($a xy+y^2) \, dy \, dx = {}\)
+\(\displaystyle \int_0^{$b} \int_0^{$c}  ($a xy+y^2) \, dy \, dx = {}\)
 %NUMBER (($b)*(($c)^2)*(3*($a)*($b)+4*($c)))/(12)
 
 \(\displaystyle \int_{[0,$b] \times [0,$c]}  ($a xy+y^2) \, dA = {}\)
