@@ -1,0 +1,66 @@
+%DESC Computations of lower/upper sums of a polynomial
+%HINC head.txt
+%LARGEFONT
+%SETUP $a = random(2,9,1);
+Suppose 
+\(R = [0,1] \times [0,1],\) and \(f(x,y) := $a (x-0.2)^2+ $a y^2 . \)
+
+For partition \(P = \bigl( \lbrace 0,1 \rbrace , \lbrace 0,1 \rbrace \bigr) , \)
+
+Number of subrectangles \(=\)
+%NUMBER 1
+
+\(L(P,f) := \)
+%NUMBER 0
+
+\(U(P,f) := \)
+%NUMBER ($a)*(0.8^2+1)
+
+For partition \(P' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,1 \rbrace \bigr) , \)
+
+Number of subrectangles \(=\)
+%NUMBER 2
+
+\(L(P',f) := \)
+%NUMBER ($a)*0.7*0.1^2
+
+\(U(P',f) := \)
+%NUMBER ($a)*(0.3*(0.2^2+1)+0.7*(0.8^2+1))
+
+For partition \(P'' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,0.5,1 \rbrace \bigr) , \)
+
+Number of subrectangles \(=\)
+%NUMBER 4
+
+\(L(P'',f) := \)
+%NUMBER ($a)*(0.5*(0.1^2+0.5^2)+0.7*0.5*0.1^2)
+
+\(U(P'',f) := \)
+%NUMBER ($a)*(0.3*0.5*(0.2^2+0.5^2)+0.3*0.5*(0.2^2+1)+0.7*0.5*(0.8^2+0.5^2)+0.7*0.5*(0.8^2+1))
+
+\(P\) is a refinement of
+$BR
+%RADIO
+\(P'\) and \(P''\)
+\(P'\) only
+\(P''\) only
+%CORRECT Neither
+%END
+
+\(P'\) is a refinement of
+$BR
+%RADIO
+\(P\) and \(P''\)
+%CORRECT \(P\) only
+\(P''\) only
+Neither
+%END
+
+\(P''\) is a refinement of
+$BR
+%RADIO
+%CORRECT \(P\) and \(P'\)
+\(P\) only
+\(P'\) only
+Neither
+%END
