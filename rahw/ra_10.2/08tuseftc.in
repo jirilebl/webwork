@@ -1,0 +1,24 @@
+%DESC Use FTC with Fubini to compute an integral.
+%HINC head.txt
+%LARGEFONT
+%SETUP $a = random(2,9,1);
+%SETUP $b = random(2,4,1);
+%SETUP $c = $b+random(1,5,1);
+%FORMULAVARS x,y
+%NOPARTIAL
+Let's use Fubini with the fundamental theorem of calculus to compute a simple integral.
+
+\(\displaystyle \int_0^{$b}  ($a xy+y^2) \, dx = {}\)
+%FORMULA (($b)*y*(($a)*($b)+2*y))/2
+
+\(\displaystyle \int_0^{$c} \int_0^{$b}  ($a xy+y^2) \, dx \, dy = {}\)
+%NUMBER (($b)*(($c)^2)*(3*($a)*($b)+4*($c)))/(12)
+
+\(\displaystyle \int_0^{$c}  ($a xy+y^2) \, dy = {}\)
+%FORMULA ((($c)^2)*(2*($c)+3*($a)*x))/6
+
+\(\displaystyle \int_0^{$c} \int_0^{$b}  ($a xy+y^2) \, dy \, dx = {}\)
+%NUMBER (($b)*(($c)^2)*(3*($a)*($b)+4*($c)))/(12)
+
+\(\displaystyle \int_{[0,$b] \times [0,$c]}  ($a xy+y^2) \, dA = {}\)
+%NUMBER (($b)*(($c)^2)*(3*($a)*($b)+4*($c)))/(12)
