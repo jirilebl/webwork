@@ -171,7 +171,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If
-\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\)
 is such that \(y \to f(x,y)\) is continuous for every \(x \in [0,1] ,\) then
 \(f\) is continuous.
 $BR
@@ -191,7 +191,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If
-\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\)
 is such that \(y \to f(x,y)\) is bounded for every \(x \in [0,1] ,\) then
 \(f\) is bounded.
 $BR
@@ -211,7 +211,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If
-\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\)
 is continuous,
 then \(y \to f(x,y)\) is continuous for every \(x \in [0,1] .\) 
 $BR
@@ -231,7 +231,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If
-\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\)
 is bounded,
 then \(y \to f(x,y)\) is bounded for every \(x \in [0,1] .\) 
 $BR
@@ -251,7 +251,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If
-\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\)
 is Riemann integrable,
 then \(y \to f(x,y)\) is Riemann integrable for every \(x \in [0,1] .\) 
 $BR
