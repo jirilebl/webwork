@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Quick computations of integral in two variables via Fubini
+## True/false questions for Fubini
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -43,8 +43,6 @@ Context()->flags->set(num_points => 50,
                       reduceConstantFunctions => 0);
 
 
-$a = random(2,9,1);
-$b = 2*random(2,5,1);
 
 ############################
 # Main text
@@ -52,91 +50,119 @@ $b = 2*random(2,5,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Let \(R = [0,2] \times [0,3] . \)
-Via Fubini (\(dA = dx\,dy\) is the area measure), compute:
-$PAR
-$PAR
-\(\displaystyle \int_{R} ($b y^3) \, dA = {}\)
+True or false:
+For any bounded 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \int_0^1 \int_0^1 f(x,y) \,dx \, dy\)
+is well defined
+$BR
 END_TEXT
 Context()->normalStrings;
 
-$q1 = Formula("(1/2)*($b)*(3^4)");
-
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
+\{ $q1->buttons \}
+
 $PAR
-$PAR
-If \(f \colon R \to {\mathbb{R}}\) is Riemann integable such that
-\(\displaystyle \underline{\int_0^2} f(x,y) \, dx = $a\) for every \(y,\) then
-$PAR
-\(\displaystyle \int_{R} f = {}\)
+True or false:
+For any continuous 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \int_0^1 \int_0^1 f(x,y) \,dx \, dy\)
+is well defined
+$BR
 END_TEXT
 Context()->normalStrings;
 
-$q2 = Formula("3*$a");
-
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
+\{ $q2->buttons \}
+
 $PAR
-$PAR
-If \(g \colon R \to {\mathbb{R}}\) is Riemann integable such that
-for every fixed \(x \in [0,2],\)
-\(g(x,y) = $a\) for all but one \(y \in [0,3], \)
-then
-$PAR
-\(\displaystyle \int_{R} g = {}\)
+True or false:
+For any bounded 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \int_0^1 \underline{\int_0^1} f(x,y) \,dx \, dy\)
+is well defined
+$BR
 END_TEXT
 Context()->normalStrings;
 
-$q3 = Formula("6*$a");
-
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
+\{ $q3->buttons \}
+
 $PAR
-$PAR
-Suppose \(h \colon R \to {\mathbb{R}} \) is such that
-\(\displaystyle \underline{\int_0^2} f(x,y) \, dx = -y\) and
-\(\displaystyle \overline{\int_0^2} f(x,y) \, dx = y .\)
-Then,
-$PAR
-\(\displaystyle \int_0^3 \underline{\int_0^2} f(x,y) \, dx \, dy = {} \)
+True or false:
+For any Riemann integrable 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \int_0^1 \underline{\int_0^1} f(x,y) \,dx \, dy\)
+is well defined
+$BR
 END_TEXT
 Context()->normalStrings;
 
-$q4 = Formula("-3*3/2");
-
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
+\{ $q4->buttons \}
+
 $PAR
-\(\displaystyle \int_0^3 \overline{\int_0^2} f(x,y) \, dx \, dy = {} \)
+True or false:
+For any bounded 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \underline{\int_0^1} \underline{\int_0^1} f(x,y) \,dx \, dy\)
+is well defined
+$BR
 END_TEXT
 Context()->normalStrings;
 
-$q5 = Formula("3*3/2");
-
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
 Context()->texStrings;
 BEGIN_TEXT
-\{ ans_rule(20) \}
-\{ AnswerFormatHelp("numbers") \}
+\{ $q5->buttons \}
+
 $PAR
-Is \(h\) Riemann integrable on \(R\)?
+True or false:
+For any continuous 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+we have \(\displaystyle \int_0^1 \int_0^1 f(x,y) \,dx \, dy = \int_0^1 \int_0^1 f(x,y) \,dy \, dx .\)
 $BR
 END_TEXT
 Context()->normalStrings;
 
 $q6 = RadioButtons([
-"Yes",
-"No",
+"True",
+"False",
 ],
-"No",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -158,6 +184,6 @@ ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
 
-COMMENT("Quick computations of integral in two variables via Fubini");
+COMMENT("True/false questions for Fubini");
 
 ENDDOCUMENT();

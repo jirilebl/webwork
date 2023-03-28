@@ -1,0 +1,68 @@
+%DESC True/false questions for Fubini
+%HINC head.txt
+%LARGEFONT
+%NOPARTIAL
+True or false:
+For any bounded 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \int_0^1 \int_0^1 f(x,y) \,dx \, dy\)
+is well defined
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+For any continuous 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \int_0^1 \int_0^1 f(x,y) \,dx \, dy\)
+is well defined
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+For any bounded 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \int_0^1 \underline{\int_0^1} f(x,y) \,dx \, dy\)
+is well defined
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+For any Riemann integrable 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \int_0^1 \underline{\int_0^1} f(x,y) \,dx \, dy\)
+is well defined
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+For any bounded 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+the expression \(\displaystyle \underline{\int_0^1} \underline{\int_0^1} f(x,y) \,dx \, dy\)
+is well defined
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+For any continuous 
+\(f \colon [0,1] \times [0,1] \to {\mathbb{R}},\)
+we have \(\displaystyle \int_0^1 \int_0^1 f(x,y) \,dx \, dy = \int_0^1 \int_0^1 f(x,y) \,dy \, dx .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END

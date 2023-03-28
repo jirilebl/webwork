@@ -5,9 +5,9 @@
 Suppose 
 \(R = [0,1] \times [0,1],\) and \(f(x,y) := $a (x-0.2)^2+ $a y^2 . \)
 
-For partition \(P = \bigl( \lbrace 0,1 \rbrace , \lbrace 0,1 \rbrace \bigr) , \)
+Consider the partition \(P = \bigl( \lbrace 0,1 \rbrace , \lbrace 0,1 \rbrace \bigr) . \)
 
-Number of subrectangles \(=\)
+Number of subrectangles of \(P\) \(=\)
 %NUMBER 1
 
 \(L(P,f) := \)
@@ -16,9 +16,9 @@ Number of subrectangles \(=\)
 \(U(P,f) := \)
 %NUMBER ($a)*(0.8^2+1)
 
-For partition \(P' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,1 \rbrace \bigr) , \)
+Consider the partition \(P' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,1 \rbrace \bigr) . \)
 
-Number of subrectangles \(=\)
+Number of subrectangles of \(P'\) \(=\)
 %NUMBER 2
 
 \(L(P',f) := \)
@@ -27,9 +27,9 @@ Number of subrectangles \(=\)
 \(U(P',f) := \)
 %NUMBER ($a)*(0.3*(0.2^2+1)+0.7*(0.8^2+1))
 
-For partition \(P'' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,0.5,1 \rbrace \bigr) , \)
+Consider the partition \(P'' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,0.5,1 \rbrace \bigr) . \)
 
-Number of subrectangles \(=\)
+Number of subrectangles of \(P''\) \(=\)
 %NUMBER 4
 
 \(L(P'',f) := \)

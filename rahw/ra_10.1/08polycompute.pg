@@ -54,9 +54,9 @@ $PAR
 Suppose 
 \(R = [0,1] \times [0,1],\) and \(f(x,y) := $a (x-0.2)^2+ $a y^2 . \)
 $PAR
-For partition \(P = \bigl( \lbrace 0,1 \rbrace , \lbrace 0,1 \rbrace \bigr) , \)
+Consider the partition \(P = \bigl( \lbrace 0,1 \rbrace , \lbrace 0,1 \rbrace \bigr) . \)
 $PAR
-Number of subrectangles \(=\)
+Number of subrectangles of \(P\) \(=\)
 END_TEXT
 Context()->normalStrings;
 
@@ -89,9 +89,9 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-For partition \(P' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,1 \rbrace \bigr) , \)
+Consider the partition \(P' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,1 \rbrace \bigr) . \)
 $PAR
-Number of subrectangles \(=\)
+Number of subrectangles of \(P'\) \(=\)
 END_TEXT
 Context()->normalStrings;
 
@@ -124,9 +124,9 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-For partition \(P'' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,0.5,1 \rbrace \bigr) , \)
+Consider the partition \(P'' = \bigl( \lbrace 0,0.3,1 \rbrace , \lbrace 0,0.5,1 \rbrace \bigr) . \)
 $PAR
-Number of subrectangles \(=\)
+Number of subrectangles of \(P''\) \(=\)
 END_TEXT
 Context()->normalStrings;
 

@@ -13,7 +13,7 @@ Via Fubini (\(dA = dx\,dy\) is the area measure), compute:
 
 
 If \(f \colon R \to {\mathbb{R}}\) is Riemann integable such that
-\(\underline{\int_0^2} f(x,y) \, dx = $a\) for every \(y,\) then
+\(\displaystyle \underline{\int_0^2} f(x,y) \, dx = $a\) for every \(y,\) then
 
 \(\displaystyle \int_{R} f = {}\)
 %NUMBER 3*$a
@@ -29,8 +29,8 @@ then
 
 
 Suppose \(h \colon R \to {\mathbb{R}} \) is such that
-\(\underline{\int_0^2} f(x,y) \, dx = -y\) and
-\(\overline{\int_0^2} f(x,y) \, dx = y .\)
+\(\displaystyle \underline{\int_0^2} f(x,y) \, dx = -y\) and
+\(\displaystyle \overline{\int_0^2} f(x,y) \, dx = y .\)
 Then,
 
 \(\displaystyle \int_0^3 \underline{\int_0^2} f(x,y) \, dx \, dy = {} \)
