@@ -154,7 +154,7 @@ BEGIN_TEXT
 $PAR
 Consider \( f \colon {\mathbb{R}}^3 \to {\mathbb{R}}^2 \)
 defined by
-\(f(x,y,z) := \bigl( x^2+xyz+$b y, $a x+x^2+y^2+z+e^z \bigr).\)
+\(f(x,y,z) := \bigl( x^2+xyz+$b y, $a x+x^2+y^2+z+e^z-1 \bigr).\)
 Note that \(f(0,0,0)=(0,0).\)  For which of the following can we apply
 the implicit function theorem?
 END_TEXT
