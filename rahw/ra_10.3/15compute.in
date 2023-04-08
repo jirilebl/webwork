@@ -5,7 +5,7 @@
 %SETUP $b=random(2,9,1);
 Using your intuition and what you know about outer measure, find the following outer measures.
 All sets are considered subsets of \(\mathbb{R},\) so we are using the 1-dimensional volume.
-Type ${LQ}infinity${RQ} for infinity
+Type ${LQ}inf${RQ} for infinity
 
 \(m^*({\mathbb{R}}) = {}\)
 %NUMBER infinity

@@ -53,7 +53,7 @@ BEGIN_TEXT
 $PAR
 Using your intuition and what you know about outer measure, find the following outer measures.
 All sets are considered subsets of \(\mathbb{R},\) so we are using the 1-dimensional volume.
-Type ${LQ}infinity${RQ} for infinity
+Type ${LQ}inf${RQ} for infinity
 $PAR
 \(m^*({\mathbb{R}}) = {}\)
 END_TEXT
