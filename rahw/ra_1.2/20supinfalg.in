@@ -6,7 +6,7 @@
 %SETUP $xpos = random(2,9,1);
 %SETUP $xneg = -random(2,9,1);
 %SETUP $xadd = random(2,9,1);
-Let \(A\) be the interval \(( $a , $b ) ,\) that is, the set \(\lbrace x \in {\mathbb{R}} : $a < x < $b \rbrace .\)
+Let \(A\) be the interval \(( $a , $b ) ,\) that is, the set \(\lbrace x \in {\mathbb{R}} : $a $LTS x $LTS $b \rbrace .\)
 
 Compute
 

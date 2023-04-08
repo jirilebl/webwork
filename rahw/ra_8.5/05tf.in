@@ -51,7 +51,7 @@ for all \(p \in {\mathbb{R}}^n,\)
 then \(f^{-1}\) is continuously differentiable
 and 
 \(Df^{-1}|_q\) is invertible
-for all \(p \in {\mathbb{R}}^n .\)
+for all \(q \in {\mathbb{R}}^n .\)
 $BR
 %RADIO
 %CORRECT True

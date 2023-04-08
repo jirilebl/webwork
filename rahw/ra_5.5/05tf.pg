@@ -106,7 +106,7 @@ True or false:
 If \(f\) is Riemann integrable on every interval,
 \(f(x) \geq 0 \) for all \(x\),
 and 
-\(\displaystyle \int_{0}^a f \leq 1 \) for all \(a > 0,\)
+\(\displaystyle \int_{0}^a f \leq 1 \) for all \(a $GTS 0,\)
 then
 \(\displaystyle \int_{0}^\infty f \) converges.
 $BR
@@ -127,7 +127,7 @@ $PAR
 True or false:
 If \(f\) is Riemann integrable on every interval
 and 
-\(\displaystyle -1 \leq \int_{0}^a f \leq 1 \) for all \(a > 0,\)
+\(\displaystyle -1 \leq \int_{0}^a f \leq 1 \) for all \(a $GTS 0,\)
 then
 \(\displaystyle \int_{0}^\infty f \) converges.
 $BR

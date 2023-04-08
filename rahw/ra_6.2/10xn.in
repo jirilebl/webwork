@@ -50,7 +50,7 @@ Yes
 %CORRECT No
 %END
 
-Suppose we now fix a small \(\epsilon > 0\) and restrict all the functions
+Suppose we now fix a small \(\epsilon $GTS 0\) and restrict all the functions
 to the interval \(I:=(-1+\epsilon,1-\epsilon).\) 
 
 Is the convergence \(f_n|_{I} \to f|_{I}\) uniform?
