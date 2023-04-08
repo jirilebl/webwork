@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## True/false/multiple choice/quick answer questions for null sets
+## Some outer measures in R
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -22,8 +22,6 @@ loadMacros(
  "PGstandard.pl",
  "MathObjects.pl",
  "AnswerFormatHelp.pl",
- "parserRadioButtons.pl",
- "PGchoicemacros.pl",
  "PGcourse.pl",
 );
 POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
@@ -33,7 +31,7 @@ TEXT(beginproblem());
 ###########################
 # Setup
 
-$showPartialCorrectAnswers = 0;
+$showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 Context()->flags->set(num_points => 50,
@@ -44,8 +42,8 @@ Context()->flags->set(num_points => 50,
                       reduceConstantFunctions => 0);
 
 
-$a=random(2,5,1);
-$b=$a+random(2,5,1);
+$a=random(2,9,1);
+$b=random(2,9,1);
 
 ############################
 # Main text
@@ -53,177 +51,130 @@ $b=$a+random(2,5,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Which of the following are measure zero subsets of \(\mathbb{R}\):
-END_TEXT
-Context()->normalStrings;
-
-$q1 = new_checkbox_multiple_choice();
-$q1->qa("Check all that apply",
-"\(\mathbb{Q}\)",
-"\($LB $a,$b $RB\)",
-"\([$a,$b] \cap \mathbb{Q}\)",
-"\($LB \frac{1}{n} : n \in \mathbb{N} $RB\)",
-"\(\emptyset\)",
-"\($LB 0 $RB\)",
-);
-$q1->extra(
-"\(\mathbb{R}\)",
-"\([$a,$b]\)",
-);
-Context()->texStrings;
-BEGIN_TEXT
-\{ $q1->print_a() \}
-
+Using your intuition and what you know about outer measure, find the following outer measures.
+All sets are considered subsets of \(\mathbb{R},\) so we are using the 1-dimensional volume.
+Type ${LQ}infinity${RQ} for infinity
 $PAR
-Compute \(m^*([$a,$b])={}\)
+\(m^*({\mathbb{R}}) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q2 = Formula("$b-$a");
+$q1 = Formula("infinity");
 
 Context()->texStrings;
 BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-True or false:
-If \(B\) is a measure zero set and \(A \subset B,\) then 
-\(A\) is of measure zero.
-$BR
+\(m^*(\emptyset) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q3 = RadioButtons([
-"True",
-"False",
-],
-"True",
-);
+$q2 = Formula("0");
+
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q3->buttons \}
-
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
 $PAR
-True or false:
-If \(A\) is a measure zero set and \(A \subset B,\) then 
-\(B\) is of measure zero.
-$BR
+\(m^*\bigl(\lbrace 0, $b, 20 \rbrace\bigr) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q4 = RadioButtons([
-"True",
-"False",
-],
-"False",
-);
+$q3 = Formula("0");
+
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q4->buttons \}
-
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
 $PAR
-True or false:
-A finite union of measure zero sets is of measure zero.
-$BR
+\(m^*\bigl([$a,20]\bigr) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q5 = RadioButtons([
-"True",
-"False",
-],
-"True",
-);
+$q4 = Formula("20-$a");
+
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q5->buttons \}
-
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
 $PAR
-True or false:
-A countable union of measure zero sets is of measure zero.
-$BR
+\(m^*\bigl([$b,\infty)\bigr) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q6 = RadioButtons([
-"True",
-"False",
-],
-"True",
-);
+$q5 = Formula("infinity");
+
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q6->buttons \}
-
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
 $PAR
-True or false:
-An arbitrary union of measure zero sets is of measure zero.
-$BR
+\(m^*(\mathbb{Q}) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q7 = RadioButtons([
-"True",
-"False",
-],
-"False",
-);
+$q6 = Formula("0");
+
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q7->buttons \}
-
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
 $PAR
-True or false:
-An uncountable set always has positive measure (never of measure zero).
-$BR
+\(m^*\bigl(\mathbb{Q} \cup [$a,20]\bigr) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q8 = RadioButtons([
-"True",
-"False",
-],
-"False",
-);
+$q7 = Formula("20-$a");
+
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q8->buttons \}
-
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
 $PAR
-True or false:
-If \(R \subset {\mathbb{R}}^n\) is a rectangle,
-then the boundary \(\partial R\) is of measure zero.
-$BR
+\(m^*\bigl(\mathbb{Q} \cap [$a,20]\bigr) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q9 = RadioButtons([
-"True",
-"False",
-],
-"True",
-);
+$q8 = Formula("0");
+
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q9->buttons \}
-
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
 $PAR
-True or false:
-Every measure zero set is bounded.
-$BR
+\(m^*\bigl([0,$a) \cup (100,101]\bigr) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q10 = RadioButtons([
-"True",
-"False",
-],
-"False",
-);
+$q9 = Formula("$a+1");
+
 Context()->texStrings;
 BEGIN_TEXT
-\{ $q10->buttons \}
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(m^*\bigl([0,$b) \cup (1,100]\bigr) = {}\)
+END_TEXT
+Context()->normalStrings;
 
+$q10 = Formula("100");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(m^*\left(\bigcup_{k=0} [k,k+2^{-k})\right) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q11 = Formula("2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
 
 END_TEXT
 Context()->normalStrings;
@@ -231,9 +182,7 @@ Context()->normalStrings;
 ############################
 # Answers
 
-install_problem_grader(~~&std_problem_grader);
-
-ANS(checkbox_cmp($q1->correct_ans()));
+ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
@@ -243,7 +192,8 @@ ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
 ANS($q10->cmp());
+ANS($q11->cmp());
 
-COMMENT("True/false/multiple choice/quick answer questions for null sets");
+COMMENT("Some outer measures in R");
 
 ENDDOCUMENT();

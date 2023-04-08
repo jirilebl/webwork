@@ -1,0 +1,97 @@
+##DESCRIPTION
+## Prove monotonicity of outer measure ((ex. 10.3.2)
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('10.3')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0,
+                      reduceConstantFunctions => 0);
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Prove that if \(A \subset B \subset {\mathbb{R}}^n,\)
+then \( m^*(A) \leq m^*(B) .\)
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"If \(\lbrace R_j \rbrace_{j=1}^\infty\) are open rectangles such that \(B \subset \bigcup_{j=1}^\infty R_j, \) then",
+"\(A \subset \bigcup_{j=1}^\infty R_j. \)",
+"\(m^*(A) = \inf \bigl\lbrace \sum_j R_j : \lbrace R_j \rbrace cover A \bigr\rbrace \)",
+"\(\qquad \leq \inf \bigl\lbrace \sum_j R_j : \lbrace R_j \rbrace cover B \bigr\rbrace \)",
+"\(\qquad = m^*(B) . \)",
+],
+[
+"Let \(\epsilon $GTS 0 \) be given.",
+"If \(\lbrace R_j \rbrace_{j=1}^\infty\) are open rectangles such that \(A \subset \bigcup_{j=1}^\infty R_j, \) then",
+"\(B \subset \bigcup_{j=1}^\infty R_j. \)",
+"\(\qquad = m^*(A) . \)",
+"\(m^*(B) = \inf \bigl\lbrace \sum_j R_j : \lbrace R_j \rbrace cover B \bigr\rbrace \)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+
+COMMENT("Prove monotonicity of outer measure ((ex. 10.3.2)");
+
+ENDDOCUMENT();
