@@ -43,5 +43,5 @@ Type ${LQ}inf${RQ} for infinity
 \(m^*\bigl([0,$b) \cup (1,100]\bigr) = {}\)
 %NUMBER 100
 
-\(m^*\left(\bigcup_{k=0} [k,k+2^{-k})\right) = {}\)
+\(m^*\left(\bigcup_{k=0}^{\infty} [k,k+2^{-k})\right) = {}\)
 %NUMBER 2

@@ -187,7 +187,7 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-\(m^*\left(\bigcup_{k=0} [k,k+2^{-k})\right) = {}\)
+\(m^*\left(\bigcup_{k=0}^{\infty} [k,k+2^{-k})\right) = {}\)
 END_TEXT
 Context()->normalStrings;
 
