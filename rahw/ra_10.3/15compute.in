@@ -19,6 +19,12 @@ Type ${LQ}infinity${RQ} for infinity
 \(m^*\bigl([$a,20]\bigr) = {}\)
 %NUMBER 20-$a
 
+\(m^*\bigl([$a,20)\bigr) = {}\)
+%NUMBER 20-$a
+
+\(m^*\bigl(($a,20)\bigr) = {}\)
+%NUMBER 20-$a
+
 \(m^*\bigl([$b,\infty)\bigr) = {}\)
 %NUMBER infinity
 

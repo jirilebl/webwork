@@ -99,11 +99,33 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
+\(m^*\bigl([$a,20)\bigr) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("20-$a");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+\(m^*\bigl(($a,20)\bigr) = {}\)
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("20-$a");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
 \(m^*\bigl([$b,\infty)\bigr) = {}\)
 END_TEXT
 Context()->normalStrings;
 
-$q5 = Formula("infinity");
+$q7 = Formula("infinity");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -114,7 +136,7 @@ $PAR
 END_TEXT
 Context()->normalStrings;
 
-$q6 = Formula("0");
+$q8 = Formula("0");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -125,7 +147,7 @@ $PAR
 END_TEXT
 Context()->normalStrings;
 
-$q7 = Formula("20-$a");
+$q9 = Formula("20-$a");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -136,7 +158,7 @@ $PAR
 END_TEXT
 Context()->normalStrings;
 
-$q8 = Formula("0");
+$q10 = Formula("0");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -147,7 +169,7 @@ $PAR
 END_TEXT
 Context()->normalStrings;
 
-$q9 = Formula("$a+1");
+$q11 = Formula("$a+1");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -158,7 +180,7 @@ $PAR
 END_TEXT
 Context()->normalStrings;
 
-$q10 = Formula("100");
+$q12 = Formula("100");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -169,7 +191,7 @@ $PAR
 END_TEXT
 Context()->normalStrings;
 
-$q11 = Formula("2");
+$q13 = Formula("2");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -193,6 +215,8 @@ ANS($q8->cmp());
 ANS($q9->cmp());
 ANS($q10->cmp());
 ANS($q11->cmp());
+ANS($q12->cmp());
+ANS($q13->cmp());
 
 COMMENT("Some outer measures in R");
 

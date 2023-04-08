@@ -59,8 +59,8 @@ Context()->normalStrings;
 $q1 = DraggableProof([
 "If \(\lbrace R_j \rbrace_{j=1}^\infty\) are open rectangles such that \(B \subset \bigcup_{j=1}^\infty R_j, \) then",
 "\(A \subset \bigcup_{j=1}^\infty R_j. \)",
-"\(m^*(A) = \inf \bigl\lbrace \sum_j R_j : \lbrace R_j \rbrace cover A \bigr\rbrace \)",
-"\(\qquad \leq \inf \bigl\lbrace \sum_j R_j : \lbrace R_j \rbrace cover B \bigr\rbrace \)",
+"\(m^*(A) = \inf \bigl\lbrace \sum_j R_j : \lbrace R_j \rbrace \text{ cover } A \bigr\rbrace \)",
+"\(\qquad \leq \inf \bigl\lbrace \sum_j R_j : \lbrace R_j \rbrace \text{ cover } B \bigr\rbrace \)",
 "\(\qquad = m^*(B) . \)",
 ],
 [
@@ -68,7 +68,7 @@ $q1 = DraggableProof([
 "If \(\lbrace R_j \rbrace_{j=1}^\infty\) are open rectangles such that \(A \subset \bigcup_{j=1}^\infty R_j, \) then",
 "\(B \subset \bigcup_{j=1}^\infty R_j. \)",
 "\(\qquad = m^*(A) . \)",
-"\(m^*(B) = \inf \bigl\lbrace \sum_j R_j : \lbrace R_j \rbrace cover B \bigr\rbrace \)",
+"\(m^*(B) = \inf \bigl\lbrace \sum_j R_j : \lbrace R_j \rbrace \text{ cover } B \bigr\rbrace \)",
 ],
 
 SourceLabel => "Choose from these statements",
