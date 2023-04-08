@@ -17,7 +17,7 @@ $BR
 %NUMBER 0
 
 Consider the function \(g \colon {\mathbb{R}} \to {\mathbb{R}}\) defined
-by \(g(x) := $c \sin(1/x)\) for \(x \not= 0 \) and \(g(0):=0.\)
+by \(g(x) := ($c+x^2) \sin(1/x)\) for \(x \not= 0 \) and \(g(0):=0.\)
 Compute the "oscillation" at the following points:
 $BR
 \(o(g,0)={}\)
