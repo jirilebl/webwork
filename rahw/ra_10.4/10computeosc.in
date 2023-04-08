@@ -1,7 +1,6 @@
 %DESC Compute oscillation of a couple of functions
 %HINC head.txt
 %LARGEFONT
-%NOPARTIAL
 %SETUP $a=random(2,9,1);
 %SETUP $b=random(2,9,1);
 %SETUP $c=random(2,9,1);
@@ -15,6 +14,34 @@ $BR
 $BR
 \(o(f,1)={}\)
 %NUMBER 0
+
+Consider the function \(\varphi \colon {\mathbb{R}} \to {\mathbb{R}}\) defined
+by \(\varphi(x) := $a + x\) for \(x $GTS 0,\) and 
+\(\varphi(x) := x\) for \(x \leq 0.\)
+Compute:
+$BR
+\(o(\varphi,0,1)={}\)
+%NUMBER $a+2
+$BR
+\(o(\varphi,0,0.5)={}\)
+%NUMBER $a+1
+$BR
+\(o(\varphi,0)={}\)
+%NUMBER $a
+
+Consider the function \(\psi \colon {\mathbb{R}} \to {\mathbb{R}}\) defined
+by \(\psi(x) := $b - x\) for \(x $GTS 0,\) and 
+\(\psi(x) := -x\) for \(x \leq 0.\)
+Compute:
+$BR
+\(o(\psi,0,1)={}\)
+%NUMBER $b
+$BR
+\(o(\psi,0,0.5)={}\)
+%NUMBER $b
+$BR
+\(o(\psi,0)={}\)
+%NUMBER $b
 
 Consider the function \(g \colon {\mathbb{R}} \to {\mathbb{R}}\) defined
 by \(g(x) := ($c+x^2) \sin(1/x)\) for \(x \not= 0 \) and \(g(0):=0.\)

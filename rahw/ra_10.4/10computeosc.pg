@@ -31,7 +31,7 @@ TEXT(beginproblem());
 ###########################
 # Setup
 
-$showPartialCorrectAnswers = 0;
+$showPartialCorrectAnswers = 1;
 
 Context("Numeric");
 Context()->flags->set(num_points => 50,
@@ -79,6 +79,82 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
+Consider the function \(\varphi \colon {\mathbb{R}} \to {\mathbb{R}}\) defined
+by \(\varphi(x) := $a + x\) for \(x $GTS 0,\) and 
+\(\varphi(x) := x\) for \(x \leq 0.\)
+Compute:
+$BR
+\(o(\varphi,0,1)={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q3 = Formula("$a+2");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+\(o(\varphi,0,0.5)={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q4 = Formula("$a+1");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+\(o(\varphi,0)={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q5 = Formula("$a");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+Consider the function \(\psi \colon {\mathbb{R}} \to {\mathbb{R}}\) defined
+by \(\psi(x) := $b - x\) for \(x $GTS 0,\) and 
+\(\psi(x) := -x\) for \(x \leq 0.\)
+Compute:
+$BR
+\(o(\psi,0,1)={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q6 = Formula("$b");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+\(o(\psi,0,0.5)={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q7 = Formula("$b");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+\(o(\psi,0)={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q8 = Formula("$b");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
 Consider the function \(g \colon {\mathbb{R}} \to {\mathbb{R}}\) defined
 by \(g(x) := ($c+x^2) \sin(1/x)\) for \(x \not= 0 \) and \(g(0):=0.\)
 Compute the "oscillation" at the following points:
@@ -87,7 +163,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q3 = Formula("2*$c");
+$q9 = Formula("2*$c");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -98,7 +174,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q4 = Formula("0");
+$q10 = Formula("0");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -114,7 +190,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q5 = Formula("1");
+$q11 = Formula("1");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -125,7 +201,7 @@ $BR
 END_TEXT
 Context()->normalStrings;
 
-$q6 = Formula("0");
+$q12 = Formula("0");
 
 Context()->texStrings;
 BEGIN_TEXT
@@ -138,14 +214,18 @@ Context()->normalStrings;
 ############################
 # Answers
 
-install_problem_grader(~~&std_problem_grader);
-
 ANS($q1->cmp());
 ANS($q2->cmp());
 ANS($q3->cmp());
 ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+ANS($q10->cmp());
+ANS($q11->cmp());
+ANS($q12->cmp());
 
 COMMENT("Compute oscillation of a couple of functions");
 
