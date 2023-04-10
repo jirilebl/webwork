@@ -54,7 +54,7 @@ $xadd = random(2,9,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Let \(A\) be the interval \(( $a , $b ) ,\) that is, the set \(\lbrace x \in {\mathbb{R}} : $a < x < $b \rbrace .\)
+Let \(A\) be the interval \(( $a , $b ) ,\) that is, the set \(\lbrace x \in {\mathbb{R}} : $a $LTS x $LTS $b \rbrace .\)
 $PAR
 Compute
 $PAR

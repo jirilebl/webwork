@@ -207,6 +207,23 @@ Context()->texStrings;
 BEGIN_TEXT
 \{ $q9->buttons \}
 
+$PAR
+True or false:
+Every measure zero set is bounded.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q10 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q10->buttons \}
+
 
 END_TEXT
 Context()->normalStrings;
@@ -225,6 +242,7 @@ ANS($q6->cmp());
 ANS($q7->cmp());
 ANS($q8->cmp());
 ANS($q9->cmp());
+ANS($q10->cmp());
 
 COMMENT("True/false/multiple choice/quick answer questions for null sets");
 

@@ -78,3 +78,11 @@ $BR
 %CORRECT True
 False
 %END
+
+True or false:
+Every measure zero set is bounded.
+$BR
+%RADIO
+True
+%CORRECT False
+%END

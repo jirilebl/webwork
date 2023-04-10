@@ -170,7 +170,7 @@ $PAR
 True or false:
 \(f \colon {\mathbb{R}}^n \to {\mathbb{R}}\) has compact support
 if and only if
-there exists an \(M > 0\) such that 
+there exists an \(M $GTS 0\) such that 
 \(f(x) = 0\) whenever \(\|x\| \geq M .\)
 $BR
 END_TEXT

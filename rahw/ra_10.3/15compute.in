@@ -1,0 +1,47 @@
+%DESC Some outer measures in R
+%HINC head.txt
+%LARGEFONT
+%SETUP $a=random(2,9,1);
+%SETUP $b=random(2,9,1);
+Using your intuition and what you know about outer measure, find the following outer measures.
+All sets are considered subsets of \(\mathbb{R},\) so we are using the 1-dimensional volume.
+Type ${LQ}inf${RQ} for infinity
+
+\(m^*({\mathbb{R}}) = {}\)
+%NUMBER infinity
+
+\(m^*(\emptyset) = {}\)
+%NUMBER 0
+
+\(m^*\bigl(\lbrace 0, $b, 20 \rbrace\bigr) = {}\)
+%NUMBER 0
+
+\(m^*\bigl([$a,20]\bigr) = {}\)
+%NUMBER 20-$a
+
+\(m^*\bigl([$a,20)\bigr) = {}\)
+%NUMBER 20-$a
+
+\(m^*\bigl(($a,20)\bigr) = {}\)
+%NUMBER 20-$a
+
+\(m^*\bigl([$b,\infty)\bigr) = {}\)
+%NUMBER infinity
+
+\(m^*(\mathbb{Q}) = {}\)
+%NUMBER 0
+
+\(m^*\bigl(\mathbb{Q} \cup [$a,20]\bigr) = {}\)
+%NUMBER 20-$a
+
+\(m^*\bigl(\mathbb{Q} \cap [$a,20]\bigr) = {}\)
+%NUMBER 0
+
+\(m^*\bigl([0,$a) \cup (100,101]\bigr) = {}\)
+%NUMBER $a+1
+
+\(m^*\bigl([0,$b) \cup (1,100]\bigr) = {}\)
+%NUMBER 100
+
+\(m^*\left(\bigcup_{k=0}^{\infty} [k,k+2^{-k})\right) = {}\)
+%NUMBER 2
