@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Compute oscillation of a couple of functions
+## Compute oscillation of some of functions (one of the functions is ex. 10.4.10)
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -147,6 +147,6 @@ ANS($q4->cmp());
 ANS($q5->cmp());
 ANS($q6->cmp());
 
-COMMENT("Compute oscillation of a couple of functions");
+COMMENT("Compute oscillation of some of functions (one of the functions is ex. 10.4.10)");
 
 ENDDOCUMENT();
