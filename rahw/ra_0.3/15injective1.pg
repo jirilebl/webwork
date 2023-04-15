@@ -1,5 +1,5 @@
 ##DESCRIPTION
-## Proof that composition is injective
+## Proof that composition of bijections is a bijection
 ##ENDDESCRIPTION
 
 ## DBsubject(Real analysis)
@@ -50,7 +50,7 @@ Context()->flags->set(num_points => 50,
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Let \( f \colon A \to B,\) \(g \colon B \to C \) be injective functions.
+Let \( f \colon A \to B,\) \(g \colon B \to C \) be injective (one-to-one) functions.
 $PAR
 Prove that \(g \circ f\) is injective.
 $PAR
@@ -83,6 +83,45 @@ to the second column, putting them in the correct order.) $EITALIC
 
 \{ $q1->Print \}
 
+$PAR
+Next, suppose \( f \colon A \to B,\) \(g \colon B \to C \) are surjective (onto) functions.
+$PAR
+Prove that \(g \circ f\) is surjective.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = DraggableProof([
+"For every \(z \in C ,\)",
+"there is a \(y \in B\)",
+"such that \(g(y)=z .\)",
+"So there exists an \(x \in A\)",
+"such that \(f(x)=y .\)",
+"In other words, \((g \circ f)(x) = z .\)",
+"Therefore, \(g \circ f\) is surjective.",
+],
+[
+"For every \(x \in A ,\)",
+"There exists \(z \in C ,\)",
+"Therefore, \(g \circ f\) is injective.",
+"such that \(f(x)=z .\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag \{ $q2->numNeeded \} statements from the first column
+to the second column, putting them in the correct order.) $EITALIC
+
+\{ $q2->Print \}
+
+$PAR
+Therefore, we conclude that if \(f\) and \(g\) are bijections, then
+\(g \circ f\) is a bijection.
 
 END_TEXT
 Context()->normalStrings;
@@ -91,7 +130,8 @@ Context()->normalStrings;
 # Answers
 
 ANS($q1->cmp());
+ANS($q2->cmp());
 
-COMMENT("Proof that composition is injective");
+COMMENT("Proof that composition of bijections is a bijection");
 
 ENDDOCUMENT();
