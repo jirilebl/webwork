@@ -2,11 +2,12 @@
 %HINC head.txt
 %LARGEFONT
 Suppose \(R \subset {\mathbb{R}}^n\) is a rectangle
-and \(f \colon R \to \R\) is a Riemann integrable function.
+and \(f \colon R \to \mathbb{R}\) is a Riemann integrable function.
 A common integral that comes up is the so-called
 \(L^2\) norm
 \[
 \|f\|_{L^2(R)}
+=
 \sqrt{\int_R |f(x)|^2 \, dx} .
 \]
 Prove that \(\|f\|_{L^2(R)}\) exists, that is, that the function
