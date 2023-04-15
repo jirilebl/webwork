@@ -1,0 +1,110 @@
+##DESCRIPTION
+## Show that |f|^2 is integrable if f is.
+##ENDDESCRIPTION
+
+## DBsubject(Real analysis)
+## DBchapter()
+## DBsection()
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(6)
+## TitleText1('Basic Analysis II: Introduction to Real Analysis, Volume II')
+## AuthorText1('Jiri Lebl')
+## EditionText1('2')
+## Section1('10.4')
+## Problem1('')
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "draggableProof.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0,
+                      reduceConstantFunctions => 0);
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \(R \subset {\mathbb{R}}^n\) is a rectangle
+and \(f \colon R \to \R\) is a Riemann integrable function.
+A common integral that comes up is the so-called
+\(L^2\) norm
+\[
+\|f\|_{L^2(R)}
+\sqrt{\int_R |f(x)|^2 \, dx} .
+\]
+Prove that \(\|f\|_{L^2(R)}\) exists, that is, that the function
+\(|f|^2\) is Riemann integrable.
+$PAR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = DraggableProof([
+"Suppose that \(f\) is continuous at \(p \in R.\)",
+"As \(\displaystyle \lim_{x\to p} f(x) = f(p) ,\)",
+"we obtain that \(\displaystyle \lim_{x\to p} |f(x)|^2 = |f(p)|^2 .\)",
+"So \(|f|^2\) is continuous at \(p .\)",
+"If \(E\) is the set of discontinuities of \(f,\)",
+"and \(F\) is the set of discontinuities of \(|f|^2,\) then",
+"\(F \subset E .\)",
+"As \(f\) is Riemann integrable, \(E\) is of measure zero,",
+"and so \(F\) is of measure zero.",
+"Thus \(|f|^2\) is Riemann integrable.",
+],
+[
+"Suppose that \(|f|^2\) is continuous at \(p \in R.\)",
+"Suppose that \(f\) is continuous everywhere.",
+"So \(f\) is continuous at \(p .\)",
+"\(E \subset F .\)",
+"\(E = F .\)",
+],
+
+SourceLabel => "Choose from these statements",
+TargetLabel =>  "The proof",
+);
+
+Context()->texStrings;
+BEGIN_TEXT
+
+$BITALIC (Drag the statements from the first column
+to the second column, putting them in the correct order.  There could be extras.) $EITALIC
+
+\{ $q1->Print \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+
+COMMENT("Show that |f|^2 is integrable if f is.");
+
+ENDDOCUMENT();

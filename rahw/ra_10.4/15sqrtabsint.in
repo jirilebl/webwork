@@ -1,0 +1,32 @@
+%DESC Show that |f|^2 is integrable if f is.
+%HINC head.txt
+%LARGEFONT
+Suppose \(R \subset {\mathbb{R}}^n\) is a rectangle
+and \(f \colon R \to \R\) is a Riemann integrable function.
+A common integral that comes up is the so-called
+\(L^2\) norm
+\[
+\|f\|_{L^2(R)}
+\sqrt{\int_R |f(x)|^2 \, dx} .
+\]
+Prove that \(\|f\|_{L^2(R)}\) exists, that is, that the function
+\(|f|^2\) is Riemann integrable.
+
+%PROOF
+Suppose that \(f\) is continuous at \(p \in R.\)
+As \(\displaystyle \lim_{x\to p} f(x) = f(p) ,\)
+we obtain that \(\displaystyle \lim_{x\to p} |f(x)|^2 = |f(p)|^2 .\)
+So \(|f|^2\) is continuous at \(p .\)
+If \(E\) is the set of discontinuities of \(f,\)
+and \(F\) is the set of discontinuities of \(|f|^2,\) then
+\(F \subset E .\)
+As \(f\) is Riemann integrable, \(E\) is of measure zero,
+and so \(F\) is of measure zero.
+Thus \(|f|^2\) is Riemann integrable.
+%EXTRA
+Suppose that \(|f|^2\) is continuous at \(p \in R.\)
+Suppose that \(f\) is continuous everywhere.
+So \(f\) is continuous at \(p .\)
+\(E \subset F .\)
+\(E = F .\)
+%END
