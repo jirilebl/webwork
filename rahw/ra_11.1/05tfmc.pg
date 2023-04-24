@@ -186,12 +186,12 @@ Context()->normalStrings;
 $q10 = RadioButtons([
 "\(z+\bar{z}\)",
 "\(z-\bar{z}\)",
-"\(\frac{z+\bar{z}}{2}\)",
-"\(\frac{z-\bar{z}}{2i}\)",
+"\(\dfrac{z+\bar{z}}{2}\)",
+"\(\dfrac{z-\bar{z}}{2i}\)",
 "\(\lvert z \rvert\)",
 "\(z\bar{z}\)",
 ],
-"\(\frac{z+\bar{z}}{2}\)",
+"\(\dfrac{z+\bar{z}}{2}\)",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -206,12 +206,12 @@ Context()->normalStrings;
 $q11 = RadioButtons([
 "\(z+\bar{z}\)",
 "\(z-\bar{z}\)",
-"\(\frac{z+\bar{z}}{2}\)",
-"\(\frac{z-\bar{z}}{2i}\)",
+"\(\dfrac{z+\bar{z}}{2}\)",
+"\(\dfrac{z-\bar{z}}{2i}\)",
 "\(\lvert z \rvert\)",
 "\(z\bar{z}\)",
 ],
-"\(\frac{z-\bar{z}}{2i}\)",
+"\(\dfrac{z-\bar{z}}{2i}\)",
 );
 Context()->texStrings;
 BEGIN_TEXT

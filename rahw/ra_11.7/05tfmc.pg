@@ -40,7 +40,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 True or false:
-Any continuous function on \([0,1]\) can be approximated by polynomials.
+Any continuous function on \([0,1]\) can be uniformly approximated by polynomials.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -57,7 +57,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Any continuous function on \((0,1)\) can be approximated by polynomials.
+Any continuous function on \((0,1)\) can be uniformly approximated by polynomials.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -74,7 +74,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Any continuous function on \(\mathbb{R}\) can be approximated by polynomials.
+Any continuous function on \(\mathbb{R}\) can be uniformly approximated by polynomials.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -91,7 +91,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Any bounded continuous function on \(\mathbb{R}\) can be approximated by polynomials.
+Any bounded continuous function on \(\mathbb{R}\) can be uniformly approximated by polynomials.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -208,7 +208,7 @@ $PAR
 True or false:
 If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
 that includes the function \(x ,\) 
-then necessarily \(\overline{mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
+then necessarily \(\overline{\mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -227,7 +227,7 @@ $PAR
 True or false:
 If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
 that includes the functions \(1\) and \(x ,\) 
-then necessarily \(\overline{mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
+then necessarily \(\overline{\mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -246,7 +246,7 @@ $PAR
 True or false:
 If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
 that includes the function \(e^x ,\) 
-then necessarily \(\overline{mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
+then necessarily \(\overline{\mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
 $BR
 END_TEXT
 Context()->normalStrings;

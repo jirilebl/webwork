@@ -68,8 +68,8 @@ $BR
 %RADIO
 \(z+\bar{z}\)
 \(z-\bar{z}\)
-%CORRECT \(\frac{z+\bar{z}}{2}\)
-\(\frac{z-\bar{z}}{2i}\)
+%CORRECT \(\dfrac{z+\bar{z}}{2}\)
+\(\dfrac{z-\bar{z}}{2i}\)
 \(\lvert z \rvert\)
 \(z\bar{z}\)
 %END
@@ -79,8 +79,8 @@ $BR
 %RADIO
 \(z+\bar{z}\)
 \(z-\bar{z}\)
-\(\frac{z+\bar{z}}{2}\)
-%CORRECT \(\frac{z-\bar{z}}{2i}\)
+\(\dfrac{z+\bar{z}}{2}\)
+%CORRECT \(\dfrac{z-\bar{z}}{2i}\)
 \(\lvert z \rvert\)
 \(z\bar{z}\)
 %END
