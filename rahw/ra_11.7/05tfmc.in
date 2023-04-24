@@ -80,7 +80,7 @@ True
 
 True or false:
 If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
-then \(\mathcal{A}\) contains the constant functions.
+then \(\mathcal{A}\) necessarily contains the constant functions.
 $BR
 %RADIO
 True
