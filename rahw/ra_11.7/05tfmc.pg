@@ -280,7 +280,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-The set of real-valued constant functions is a complex algebra.
+The set of complex-valued constant functions is a complex algebra.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -289,45 +289,11 @@ $q14 = RadioButtons([
 "True",
 "False",
 ],
-"False",
+"True",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q14->buttons \}
-
-$PAR
-True or false:
-The set of complex-valued constant functions is a real algebra.
-$BR
-END_TEXT
-Context()->normalStrings;
-
-$q15 = RadioButtons([
-"True",
-"False",
-],
-"True",
-);
-Context()->texStrings;
-BEGIN_TEXT
-\{ $q15->buttons \}
-
-$PAR
-True or false:
-The set of complex-valued constant functions is a complex algebra.
-$BR
-END_TEXT
-Context()->normalStrings;
-
-$q16 = RadioButtons([
-"True",
-"False",
-],
-"True",
-);
-Context()->texStrings;
-BEGIN_TEXT
-\{ $q16->buttons \}
 
 
 END_TEXT
@@ -352,8 +318,6 @@ ANS($q11->cmp());
 ANS($q12->cmp());
 ANS($q13->cmp());
 ANS($q14->cmp());
-ANS($q15->cmp());
-ANS($q16->cmp());
 
 COMMENT("True/false/multiple choice questions Stone-Weierstrass");
 
