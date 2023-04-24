@@ -1,0 +1,118 @@
+%DESC True/false/multiple choice questions Stone-Weierstrass
+%HINC head.txt
+%LARGEFONT
+%NOPARTIAL
+True or false:
+Any continuous function on \([0,1]\) can be approximated by polynomials.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Any continuous function on \((0,1)\) can be approximated by polynomials.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Any continuous function on \(\mathbb{R}\) can be approximated by polynomials.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Any bounded continuous function on \(\mathbb{R}\) can be approximated by polynomials.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Any continuous function \(f \colon [0,1] \to \mathbb{R}\)
+such that \(f(0)=0\) is the uniform limit (on \([0,1]\))
+of polynomials \(\lbrace p_n \rbrace_{n=1}^\infty\)
+such that \(p_n(0)=0\) for all \(n .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Any continuous function \(f \colon [0,1] \to \mathbb{R}\)
+such that \(f(0)=f(1)=0\) is the uniform limit (on \([0,1]\))
+of polynomials \(\lbrace p_n \rbrace_{n=1}^\infty\)
+such that \(p_n(0)=p_n(1)=0\) for all \(n .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Any continuous function \(f \colon [0,1] \to \mathbb{R}\)
+is the uniform limit (on \([0,1]\))
+of even polynomials \(\lbrace p_n \rbrace_{n=1}^\infty ,\)
+that is, polynomials with only even powers.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Any continuous function \(f \colon [-1,1] \to \mathbb{R}\)
+is the uniform limit (on \([-1,1]\))
+of even polynomials \(\lbrace p_n \rbrace_{n=1}^\infty ,\)
+that is, polynomials with only even powers.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
+then \(\mathcal{A}\) contains the constant functions.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
+that includes the function \(x ,\) 
+then necessarily \(\overline{mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
+that includes the functions \(1\) and \(x ,\) 
+then necessarily \(\overline{mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
+that includes the function \(e^x ,\) 
+then necessarily \(\overline{mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
+$BR
+%RADIO
+%CORRECT True
+False
+%END

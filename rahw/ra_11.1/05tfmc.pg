@@ -1,0 +1,243 @@
+##DESCRIPTION
+## True/false/multiple choice/quick answer questions for complex numbers
+##ENDDESCRIPTION
+
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0,
+                      reduceConstantFunctions => 0);
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+For complex numbers, \(z^2\) is always positive, just like for reals.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+Complex numbers are a field.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+Complex numbers are an ordered field.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+Complex numbers are a complete metric space.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+When thinking of \(\mathbb{C}\) as \({\mathbb{R}}^2,\)
+the standard metrics on \(\mathbb{C}\) and
+\({\mathbb{R}}^2\) are exactly the same.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+A closed and bounded subset of \(\mathbb{C}\) is compact.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+Compute the modulus
+$BR
+\(\lvert 3+4i\rvert={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q7 = Formula("5");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+\(\lvert -3i\rvert={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q8 = Formula("3");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$BR
+\(\lvert 3-4i\rvert={}\)
+END_TEXT
+Context()->normalStrings;
+
+$q9 = Formula("5");
+
+Context()->texStrings;
+BEGIN_TEXT
+\{ ans_rule(20) \}
+\{ AnswerFormatHelp("numbers") \}
+$PAR
+How does one compute the real part of \(z\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q10 = RadioButtons([
+"\(z+\bar{z}\)",
+"\(z-\bar{z}\)",
+"\(\frac{z+\bar{z}}{2}\)",
+"\(\frac{z-\bar{z}}{2i}\)",
+"\(\lvert z \rvert\)",
+"\(z\bar{z}\)",
+],
+"\(\frac{z+\bar{z}}{2}\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q10->buttons \}
+
+$PAR
+How does one compute the imaginary part of \(z\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q11 = RadioButtons([
+"\(z+\bar{z}\)",
+"\(z-\bar{z}\)",
+"\(\frac{z+\bar{z}}{2}\)",
+"\(\frac{z-\bar{z}}{2i}\)",
+"\(\lvert z \rvert\)",
+"\(z\bar{z}\)",
+],
+"\(\frac{z-\bar{z}}{2i}\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q11->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+ANS($q10->cmp());
+ANS($q11->cmp());
+
+COMMENT("True/false/multiple choice/quick answer questions for complex numbers");
+
+ENDDOCUMENT();

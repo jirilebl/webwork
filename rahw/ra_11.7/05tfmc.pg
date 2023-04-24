@@ -1,0 +1,288 @@
+##DESCRIPTION
+## True/false/multiple choice questions Stone-Weierstrass
+##ENDDESCRIPTION
+
+
+######################################################
+
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 0;
+
+Context("Numeric");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0,
+                      reduceConstantFunctions => 0);
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+True or false:
+Any continuous function on \([0,1]\) can be approximated by polynomials.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+True or false:
+Any continuous function on \((0,1)\) can be approximated by polynomials.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+True or false:
+Any continuous function on \(\mathbb{R}\) can be approximated by polynomials.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+True or false:
+Any bounded continuous function on \(\mathbb{R}\) can be approximated by polynomials.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+True or false:
+Any continuous function \(f \colon [0,1] \to \mathbb{R}\)
+such that \(f(0)=0\) is the uniform limit (on \([0,1]\))
+of polynomials \(\lbrace p_n \rbrace_{n=1}^\infty\)
+such that \(p_n(0)=0\) for all \(n .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+True or false:
+Any continuous function \(f \colon [0,1] \to \mathbb{R}\)
+such that \(f(0)=f(1)=0\) is the uniform limit (on \([0,1]\))
+of polynomials \(\lbrace p_n \rbrace_{n=1}^\infty\)
+such that \(p_n(0)=p_n(1)=0\) for all \(n .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+True or false:
+Any continuous function \(f \colon [0,1] \to \mathbb{R}\)
+is the uniform limit (on \([0,1]\))
+of even polynomials \(\lbrace p_n \rbrace_{n=1}^\infty ,\)
+that is, polynomials with only even powers.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+True or false:
+Any continuous function \(f \colon [-1,1] \to \mathbb{R}\)
+is the uniform limit (on \([-1,1]\))
+of even polynomials \(\lbrace p_n \rbrace_{n=1}^\infty ,\)
+that is, polynomials with only even powers.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+$PAR
+True or false:
+If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
+then \(\mathcal{A}\) contains the constant functions.
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+$PAR
+True or false:
+If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
+that includes the function \(x ,\) 
+then necessarily \(\overline{mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q10 = RadioButtons([
+"True",
+"False",
+],
+"False",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q10->buttons \}
+
+$PAR
+True or false:
+If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
+that includes the functions \(1\) and \(x ,\) 
+then necessarily \(\overline{mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q11 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q11->buttons \}
+
+$PAR
+True or false:
+If \(\mathcal{A}\) is a real algebra of continuous functions on \([0,1] ,\)
+that includes the function \(e^x ,\) 
+then necessarily \(\overline{mathcal{A}} = C\bigl([0,1],\mathbb{R}\bigr) .\)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q12 = RadioButtons([
+"True",
+"False",
+],
+"True",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q12->buttons \}
+
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+install_problem_grader(~~&std_problem_grader);
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+ANS($q10->cmp());
+ANS($q11->cmp());
+ANS($q12->cmp());
+
+COMMENT("True/false/multiple choice questions Stone-Weierstrass");
+
+ENDDOCUMENT();

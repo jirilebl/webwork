@@ -1,0 +1,86 @@
+%DESC True/false/multiple choice/quick answer questions for complex numbers
+%HINC head.txt
+%LARGEFONT
+%NOPARTIAL
+True or false:
+For complex numbers, \(z^2\) is always positive, just like for reals.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Complex numbers are a field.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+Complex numbers are an ordered field.
+$BR
+%RADIO
+True
+%CORRECT False
+%END
+
+True or false:
+Complex numbers are a complete metric space.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+When thinking of \(\mathbb{C}\) as \({\mathbb{R}}^2,\)
+the standard metrics on \(\mathbb{C}\) and
+\({\mathbb{R}}^2\) are exactly the same.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+True or false:
+A closed and bounded subset of \(\mathbb{C}\) is compact.
+$BR
+%RADIO
+%CORRECT True
+False
+%END
+
+Compute the modulus
+$BR
+\(\lvert 3+4i\rvert={}\)
+%NUMBER 5
+$BR
+\(\lvert -3i\rvert={}\)
+%NUMBER 3
+$BR
+\(\lvert 3-4i\rvert={}\)
+%NUMBER 5
+
+How does one compute the real part of \(z\)?
+$BR
+%RADIO
+\(z+\bar{z}\)
+\(z-\bar{z}\)
+%CORRECT \(\frac{z+\bar{z}}{2}\)
+\(\frac{z-\bar{z}}{2i}\)
+\(\lvert z \rvert\)
+\(z\bar{z}\)
+%END
+
+How does one compute the imaginary part of \(z\)?
+$BR
+%RADIO
+\(z+\bar{z}\)
+\(z-\bar{z}\)
+\(\frac{z+\bar{z}}{2}\)
+%CORRECT \(\frac{z-\bar{z}}{2i}\)
+\(\lvert z \rvert\)
+\(z\bar{z}\)
+%END
