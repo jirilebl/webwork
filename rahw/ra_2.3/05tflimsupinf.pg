@@ -51,9 +51,9 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 True or false:
-If \($LB x_n $RB\) is a bounded sequence and
-\(a_n := \sup $LB x_k : k \geq n $RB , \)
-then \($LB a_n $RB\) is a subsequence of \($LB x_n $RB .\)
+If \(\lbrace x_n \rbrace_{n=1}^\infty\) is a bounded sequence and
+\(a_n := \sup \lbrace x_k : k \geq n \rbrace , \)
+then \(\lbrace a_n \rbrace_{n=1}^\infty\) is a subsequence of \(\lbrace x_n \rbrace_{n=1}^\infty .\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -71,7 +71,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(\liminf \, x_n $LTS \limsup \, x_n ,\) then
-\($LB x_n $RB\) diverges.
+\(\lbrace x_n \rbrace_{n=1}^\infty\) diverges.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -88,11 +88,11 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Let \($LB x_n $RB\) be a bounded sequence.
+Let \(\lbrace x_n \rbrace_{n=1}^\infty\) be a bounded sequence.
 Then for every \(x\) such that
 \(\liminf \, x_n \leq x \leq \limsup \, x_n ,\) there
 exists a subsequence
-\($LB x_{n_k} $RB\) converging to \(x.\)
+\(\lbrace x_{n_k} \rbrace_{k=1}^\infty\) converging to \(x.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -109,9 +109,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Let \($LB x_n $RB\) be a bounded sequence and
-\($LB x_{n_k} $RB\) be a subsequence.
-Then there exists a subsequence \($LB x_{n_{k_i}} $RB\) of the subsequence
+Let \(\lbrace x_n \rbrace_{n=1}^\infty\) be a bounded sequence and
+\(\lbrace x_{n_k} \rbrace_{k=1}^\infty\) be a subsequence.
+Then there exists a subsequence \(\lbrace x_{n_{k_i}} \rbrace_{i=1}^\infty\) of the subsequence
 that converges.
 $BR
 END_TEXT
@@ -129,11 +129,11 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Let \($LB x_n $RB\) be a bounded sequence and
-\(a_n := \sup $LB x_k : k \geq n $RB . \)
+Let \(\lbrace x_n \rbrace_{n=1}^\infty\) be a bounded sequence and
+\(a_n := \sup \lbrace x_k : k \geq n \rbrace . \)
 Then
-\($LB a_n : n \in {\mathbb{N}} $RB\) is
-a subset of \($LB x_n : n \in {\mathbb{N}} $RB.\)
+\(\lbrace a_n : n \in {\mathbb{N}} \rbrace\) is
+a subset of \(\lbrace x_n : n \in {\mathbb{N}} \rbrace.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -150,12 +150,12 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Let \($LB x_n $RB\) be a bounded sequence and
-\(a_n := \sup $LB x_k : k \geq n $RB . \)
-If \($LB x_n : n \in {\mathbb{N}} $RB\)
+Let \(\lbrace x_n \rbrace_{n=1}^\infty\) be a bounded sequence and
+\(a_n := \sup \lbrace x_k : k \geq n \rbrace . \)
+If \(\lbrace x_n : n \in {\mathbb{N}} \rbrace\)
 is a finite set, then
-\($LB a_n : n \in {\mathbb{N}} $RB\) is
-a subset of \($LB x_n : n \in {\mathbb{N}} $RB.\)
+\(\lbrace a_n : n \in {\mathbb{N}} \rbrace\) is
+a subset of \(\lbrace x_n : n \in {\mathbb{N}} \rbrace.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -172,8 +172,8 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \($LB x_n $RB\) be a bounded sequence of nonnegative numbers
-and \(\limsup\, x_n  = 0,\) then \( $LB x_n $RB \) converges to \(0.\)
+If \(\lbrace x_n \rbrace_{n=1}^\infty\) be a bounded sequence of nonnegative numbers
+and \(\limsup\, x_n  = 0,\) then \( \lbrace x_n \rbrace_{n=1}^\infty \) converges to \(0.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -192,7 +192,7 @@ $PAR
 True or false:
 If \(\liminf \, x_n $LTS \limsup \, x_n ,\) then
 there exists a divergent subsequence
-\($LB x_{n_k} $RB .\)
+\(\lbrace x_{n_k} \rbrace_{k=1}^\infty .\)
 $BR
 END_TEXT
 Context()->normalStrings;

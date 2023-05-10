@@ -1,22 +1,22 @@
 %DESC Proof that a certain sequence is Cauchy (simpler version of ex 2.4.6)
 %HINC head.txt
-Suppose that \( $LB x_n $RB \) is a sequence such that whenever \( k \leq m , \) we have
-\( |x_k - x_m| $LTS \frac{1}{k} . \)
-Prove that \( $LB x_n $RB \) is Cauchy.
+Suppose that \( \lbrace x_n \rbrace_{n=1}^\infty \) is a sequence such that whenever \( k \leq m , \) we have
+\( |x_k - x_m| $LTS \dfrac{1}{k} . \)
+Prove that \( \lbrace x_n \rbrace_{n=1}^\infty \) is Cauchy.
 
 %PROOF
 Let \(\epsilon $GTS 0\) be given.
-Find \(M \in {\mathbb{N}}\) such that \(\frac{1}{M} $LTS \epsilon .\)
+Find \(M \in {\mathbb{N}}\) such that \(\dfrac{1}{M} $LTS \epsilon .\)
 Suppose \(k,m \geq M .\)
 Without loss of generality suppose \(k \leq m .\)
-Then \( |x_k - x_m| $LTS \frac{1}{k} \)
-\( \qquad \leq \frac{1}{M} \)
+Then \( |x_k - x_m| $LTS \dfrac{1}{k} \)
+\( \qquad \leq \dfrac{1}{M} \)
 \( \qquad $LTS \epsilon \)
-Therefore, \( $LB x_n $RB \) is Cauchy.
+Therefore, \( \lbrace x_n \rbrace_{n=1}^\infty \) is Cauchy.
 %EXTRA
 Find \(M \in {\mathbb{N}}\) such that \(M $GTS \epsilon .\)
 Suppose \(k,m \leq M .\)
 Then \( |x_k - x_m| $GTS \epsilon . \)
-\( \qquad \leq \frac{1}{\epsilon} \)
+\( \qquad \leq \dfrac{1}{\epsilon} \)
 Without loss of generality suppose \(k = m .\)
 %END

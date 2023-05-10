@@ -1,24 +1,24 @@
 %DESC Proof of a version of ratio test
 %HINC head.txt
-Let \($LB x_n $RB\) be a bounded sequence of nonnegative
+Let \(\lbrace x_n \rbrace_{n=1}^\infty\) be a bounded sequence of nonnegative
 numbers such that
-\(\limsup \, x_n $LTS 1 .\)  Prove that 
-\($LB (x_{n})^n $RB\) converges to zero.
+\(\limsup\limits_{n\to\infty} x_n $LTS 1 .\)  Prove that 
+\(\lbrace (x_{n})^n \rbrace_{n=1}^\infty\) converges to zero.
 
-In the following proof, write \(a:=\limsup \, x_n ,\) and
-let \(a_n := \sup $LB x_k : k \geq n $RB \) as usual.
+In the following proof, write \(a:=\limsup\limits_{n\to\infty} x_n ,\) and
+let \(a_n := \sup \lbrace x_k : k \geq n \rbrace \) as usual.
 
 %PROOF
 Given \(\epsilon $GTS 0,\) find \(M\) such that \(a_n $LTS 1-\epsilon \) for all \(n \geq M .\)
 We have \( x_n \leq a_n \leq 1-\epsilon \) for all \(n \geq M .\)
 And so \( (x_n)^n \leq (a_n)^n \leq (1-\epsilon)^n \) for all \(n \geq M .\)
-The sequence \( $LB (1-\epsilon)^n $RB \) converges to 0.
-As \( 0 \leq (x_n)^n \leq (1-\epsilon)^n , \) the \(M\)-tail of \($LB (x_{n})^n $RB\) converges to zero by the squeeze lemma.
-So, \($LB (x_{n})^n $RB\) converges to zero.
+The sequence \( \lbrace (1-\epsilon)^n \rbrace_{n=1}^\infty \) converges to 0.
+As \( 0 \leq (x_n)^n \leq (1-\epsilon)^n , \) the \(M\)-tail of \(\lbrace (x_{n})^n \rbrace_{n=1}^\infty\) converges to zero by the squeeze lemma.
+So, \(\lbrace (x_{n})^n \rbrace_{n=1}^\infty\) converges to zero.
 %EXTRA
 Given \(\epsilon $GTS 0,\) find \(M\) such that \(a_n $GTS 1+\epsilon \) for all \(n \geq M .\)
 We have \( x_n \geq a_n \geq 1+\epsilon \) for all \(n \geq M .\)
 And so \( (x_n)^n \geq (a_n)^n \geq (1+\epsilon)^n \) for all \(n \geq M .\)
-The sequence \( $LB (1+\epsilon)^n $RB \) is unbounded.
-So, \($LB (x_{n})^n $RB\) converges to \(1 .\)
+The sequence \( \lbrace (1+\epsilon)^n \rbrace_{n=1}^\infty \) is unbounded.
+So, \(\lbrace (x_{n})^n \rbrace_{n=1}^\infty\) converges to \(1 .\)
 %END

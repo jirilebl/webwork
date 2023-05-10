@@ -59,32 +59,32 @@ Context()->normalStrings;
 
 $q1 = RadioButtons([
 "\(\emptyset\)",
-"\($LB \emptyset $RB\)",
-"\($LB \emptyset , $LB \emptyset $RB $RB\)",
-"\($LB $LB \emptyset $RB $RB\)",
+"\(\lbrace \emptyset \rbrace\)",
+"\(\lbrace \emptyset , \lbrace \emptyset \rbrace \rbrace\)",
+"\(\lbrace \lbrace \emptyset \rbrace \rbrace\)",
 "None of these",
 ],
-"\($LB \emptyset $RB\)",
+"\(\lbrace \emptyset \rbrace\)",
 );
 Context()->texStrings;
 BEGIN_TEXT
 \{ $q1->buttons \}
 
 $PAR
-What is the power set of \( $LB a,b $RB \)?
+What is the power set of \( \lbrace a,b \rbrace \)?
 $BR
 END_TEXT
 Context()->normalStrings;
 
 $q2 = RadioButtons([
-"\($LB \emptyset $RB\)",
-"\($LB a,b $RB\)",
-"\($LB \emptyset , a, b $RB\)",
-"\($LB $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
-"\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
+"\(\lbrace \emptyset \rbrace\)",
+"\(\lbrace a,b \rbrace\)",
+"\(\lbrace \emptyset , a, b \rbrace\)",
+"\(\lbrace \lbrace a \rbrace , \lbrace b \rbrace , \lbrace a,b \rbrace \rbrace\)",
+"\(\lbrace \emptyset , \lbrace a \rbrace , \lbrace b \rbrace , \lbrace a,b \rbrace \rbrace\)",
 "None of these",
 ],
-"\($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)",
+"\(\lbrace \emptyset , \lbrace a \rbrace , \lbrace b \rbrace , \lbrace a,b \rbrace \rbrace\)",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -109,7 +109,7 @@ BEGIN_TEXT
 \{ $q3->buttons \}
 
 $PAR
-The power set of \( $LB 1,2,\ldots, $n $RB \) has how many elements?
+The power set of \( \lbrace 1,2,\ldots, $n \rbrace \) has how many elements?
 $BR
 END_TEXT
 Context()->normalStrings;

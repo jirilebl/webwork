@@ -1,7 +1,7 @@
 %DESC True/false and multiple choice about intervals
 %HINC head.txt
 %NOPARTIAL
-True or false: If \(I\) is an interval, \(x,y \in I,\) then \(\frac{x+y}{2} \in I .\)
+True or false: If \(I\) is an interval, \(x,y \in I,\) then \(\dfrac{x+y}{2} \in I .\)
 $BR
 %RADIO
 %CORRECT True
@@ -39,12 +39,12 @@ False
 Which one of the following is a bijection \(f \colon (0,1) \to {\mathbb{R}}\) (if one exists):
 $BR
 %RADIORANDOM
-%CORRECT \( f(x) := \frac{1}{x}+\frac{1}{x-1} \)
-\( f(x) := \frac{1}{x(x-1)} \)
-\( f(x) := \tan\left(\frac{x \pi}{2}\right) \)
-\( f(x) := \frac{1}{2}+\frac{\operatorname{arctan}(x)}{\pi} \)
-\( f(x) := \frac{2 \operatorname{arctan}(x)}{\pi} \)
-\( f(x) := \frac{1}{x} \)
+%CORRECT \( f(x) := \dfrac{1}{x}+\dfrac{1}{x-1} \)
+\( f(x) := \dfrac{1}{x(x-1)} \)
+\( f(x) := \tan\left(\dfrac{x \pi}{2}\right) \)
+\( f(x) := \dfrac{1}{2}+\dfrac{\operatorname{arctan}(x)}{\pi} \)
+\( f(x) := \dfrac{2 \operatorname{arctan}(x)}{\pi} \)
+\( f(x) := \dfrac{1}{x} \)
 \( f(x) := x \)
 %ENDRANDOM
 None of these.

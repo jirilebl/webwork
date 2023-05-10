@@ -49,7 +49,7 @@ Context()->flags->set(num_points => 50,
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Consider the sequence \({$LB x_n $RB}_{n=1}^\infty\) given by \(x_n := \frac{n+1}{n}.\)
+Consider the sequence \({\lbrace x_n \rbrace}_{n=1}^\infty\) given by \(x_n := \dfrac{n+1}{n}.\)
 $PAR
 Let \(L\) be the limit of this sequence.  What is it?
 $BR

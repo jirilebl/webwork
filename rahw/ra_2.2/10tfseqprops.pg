@@ -53,7 +53,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(x_n $GTS 0\) for all \(n\) and \(\lim\limits_{n\to\infty} x_n\) exists, then
-\(\lim \, x_n $GTS 0\text{.}\)
+\(\lim\limits_{n\to\infty} x_n $GTS 0\text{.}\)
 $BR
 END_TEXT
 Context()->normalStrings;

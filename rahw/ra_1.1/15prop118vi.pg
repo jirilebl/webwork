@@ -67,7 +67,7 @@ $q1 = DraggableProof([
 [
 "(*) Since \( x $GTS 0, \) then by (i) we have \(-x $LTS 0.\)",
 "(*) Since \( x $GTS 0, \) then \(x\not=0\) and so \(x^2 $GTS 0\) by (iv).",
-"By (v) we have \(\frac{1}{y} $LTS \frac{1}{x}.\)",
+"By (v) we have \(\dfrac{1}{y} $LTS \dfrac{1}{x}.\)",
 "Since \( x $LTS y , \) then by definition of ordered field we have \(2x $LTS x+y.\)",
 "Since \( xy $GTS 0 , \) we must have that \(x^2 $LTS y^2.\)",
 ],

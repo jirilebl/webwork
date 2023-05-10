@@ -6,20 +6,20 @@ What is the power set of \( \emptyset \)?
 $BR
 %RADIO
 \(\emptyset\)
-%CORRECT \($LB \emptyset $RB\)
-\($LB \emptyset , $LB \emptyset $RB $RB\)
-\($LB $LB \emptyset $RB $RB\)
+%CORRECT \(\lbrace \emptyset \rbrace\)
+\(\lbrace \emptyset , \lbrace \emptyset \rbrace \rbrace\)
+\(\lbrace \lbrace \emptyset \rbrace \rbrace\)
 None of these
 %END
 
-What is the power set of \( $LB a,b $RB \)?
+What is the power set of \( \lbrace a,b \rbrace \)?
 $BR
 %RADIO
-\($LB \emptyset $RB\)
-\($LB a,b $RB\)
-\($LB \emptyset , a, b $RB\)
-\($LB $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)
-%CORRECT \($LB \emptyset , $LB a $RB , $LB b $RB , $LB a,b $RB $RB\)
+\(\lbrace \emptyset \rbrace\)
+\(\lbrace a,b \rbrace\)
+\(\lbrace \emptyset , a, b \rbrace\)
+\(\lbrace \lbrace a \rbrace , \lbrace b \rbrace , \lbrace a,b \rbrace \rbrace\)
+%CORRECT \(\lbrace \emptyset , \lbrace a \rbrace , \lbrace b \rbrace , \lbrace a,b \rbrace \rbrace\)
 None of these
 %END
 
@@ -32,6 +32,6 @@ Depends on what \(X\) is
 None of these
 %END
 
-The power set of \( $LB 1,2,\ldots, $n $RB \) has how many elements?
+The power set of \( \lbrace 1,2,\ldots, $n \rbrace \) has how many elements?
 $BR
 %NUMBER $ans

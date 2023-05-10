@@ -87,7 +87,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Suppose \($LB x_n $RB\) is a monotone decreasing sequence converging to \(0\) and
+Suppose \(\lbrace x_n \rbrace_{n=1}^\infty\) is a monotone decreasing sequence converging to \(0\) and
 \(y_n\) is the sequence \( -1,-1,1,1,-1,-1,1,1,-1,-1, \ldots,\) that is,
 two negative ones followed by two positive ones, and so on.  Then
 \(\displaystyle \sum_{n=1}^\infty y_n x_n\) converges.
@@ -107,7 +107,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Suppose \($LB x_n $RB\) is a monotone decreasing sequence converging to \(0\) and
+Suppose \(\lbrace x_n \rbrace_{n=1}^\infty\) is a monotone decreasing sequence converging to \(0\) and
 \(y_n\) is the sequence \( -1,-1,1,-1,-1,1,-1,-1, \ldots,\) that is,
 two negative ones followed by one positive one, and so on.  Then
 \(\displaystyle \sum_{n=1}^\infty y_n x_n\) converges.

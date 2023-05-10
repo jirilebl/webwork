@@ -65,7 +65,7 @@ $q1 = DraggableProof([
 ],
 [
 "\(n \in T\) if and only if \(n \in S_n .\)",
-"\(T := S_n \setminus $LB n $RB \) for all \(n.\)",
+"\(T := S_n \setminus \lbrace n \rbrace \) for all \(n.\)",
 "\(T := S_n \setminus S_{n-1} \) for all \(n.\)",
 "So every countable subset of \({\mathcal{P}}({\mathbb{N}})\) is equal to \({\mathcal{P}}({\mathbb{N}}) .\)",
 ],

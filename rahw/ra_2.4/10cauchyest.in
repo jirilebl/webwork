@@ -2,16 +2,17 @@
 %HINC head.txt
 %NOPARTIAL
 %FORMULAVARS n
-Suppose \( x_n = \frac{(-1)^n}{n} . \)  (Note: The sequence \($LB x_n $RB\) is Cauchy as it converges)
+Suppose \( x_n = \dfrac{(-1)^n}{n} . \)  (Note: The sequence \(\lbrace x_n \rbrace_{n=1}^\infty\)
+is Cauchy as it converges)
 
-Given \(\epsilon = \frac{1}{2} , \) what is the smallest \(M \in \mathbb{N}\)
+Given \(\epsilon = \dfrac{1}{2} , \) what is the smallest \(M \in \mathbb{N}\)
 such that for all \(k,m \geq M ,\) we have
 \( | x_k - x_m | $LTS \epsilon . \)
 $BR
 \(M={}\)
 %NUMBER 4
 
-Given \(\epsilon = \frac{1}{10} , \) what is the smallest \(M \in \mathbb{N}\)
+Given \(\epsilon = \dfrac{1}{10} , \) what is the smallest \(M \in \mathbb{N}\)
 such that for all \(k,m \geq M ,\) we have
 \( | x_k - x_m | $LTS \epsilon . \)
 $BR

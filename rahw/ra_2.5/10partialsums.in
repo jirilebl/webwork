@@ -7,7 +7,7 @@
 Consider the series
 \(\displaystyle \sum_{n=1}^\infty x_n ,\) where
 the partial sum is
-\(\displaystyle \sum_{n=1}^k x_n = \frac{$a k}{$b k+1} .\)
+\(\displaystyle \sum_{n=1}^k x_n = \dfrac{$a k}{$b k+1} .\)
 
 Find
 $BR

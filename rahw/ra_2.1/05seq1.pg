@@ -55,7 +55,7 @@ $c = random(2,5,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Consider the sequence \({\left$LB \frac{(-1)^n}{n^2} \right$RB}_{n=1}^\infty .\)
+Consider the sequence \({\left\lbrace \dfrac{(-1)^n}{n^2} \right\rbrace}_{n=1}^\infty .\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -86,7 +86,7 @@ BEGIN_TEXT
 
 $PAR
 $PAR
-Consider the sequence \({\left$LB n^2 \right$RB}_{n=1}^\infty .\)
+Consider the sequence \({\left\lbrace n^2 \right\rbrace}_{n=1}^\infty .\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -117,7 +117,7 @@ BEGIN_TEXT
 
 $PAR
 $PAR
-Consider the sequence \({\left$LB \frac{n(-1)^n}{n+$c} \right$RB}_{n=1}^\infty .\)
+Consider the sequence \({\left\lbrace \dfrac{n(-1)^n}{n+$c} \right\rbrace}_{n=1}^\infty .\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -148,7 +148,7 @@ BEGIN_TEXT
 
 $PAR
 $PAR
-Consider the sequence \({\left$LB \frac{$ab n}{$b n+1} \right$RB}_{n=1}^\infty .\)
+Consider the sequence \({\left\lbrace \dfrac{$ab n}{$b n+1} \right\rbrace}_{n=1}^\infty .\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR

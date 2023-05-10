@@ -11,7 +11,7 @@ False
 
 True or false:
 The sequence
-\($LB 2^n $RB\) is Cauchy.
+\(\lbrace 2^n \rbrace_{n=1}^\infty\) is Cauchy.
 $BR
 %RADIO
 True
@@ -20,7 +20,7 @@ True
 
 True or false:
 The sequence
-\($LB 2^{-n} $RB\) is Cauchy.
+\(\lbrace 2^{-n} \rbrace_{n=1}^\infty\) is Cauchy.
 $BR
 %RADIO
 %CORRECT True
@@ -46,7 +46,7 @@ True
 True or false:
 If
 \(\displaystyle \lim_{n\to\infty} |x_{n+1}-x_{n}| = 0 , \)
-then \($LB x_n $RB\) is Cauchy.
+then \(\lbrace x_n \rbrace_{n=1}^\infty\) is Cauchy.
 $BR
 %RADIO
 True
@@ -57,7 +57,7 @@ True or false:
 If
 \(\displaystyle \lim_{n\to\infty} |x_{n+k}-x_{n}| = 0 \)
 for every \(k \in \mathbb{N} ,\)
-then \($LB x_n $RB\) is Cauchy.
+then \(\lbrace x_n \rbrace_{n=1}^\infty\) is Cauchy.
 $BR
 %RADIO
 True

@@ -101,13 +101,13 @@ $PAR
 $PAR
 Now let \(\displaystyle x_n :=
 \begin{cases}
-\frac{-$c}{n} & \text{if } n \text{ even,} \\
-\frac{$d n-1}{n} & \text{if } n \text{ odd.} \\
+\dfrac{-$c}{n} & \text{if } n \text{ even,} \\
+\dfrac{$d n-1}{n} & \text{if } n \text{ odd.} \\
 \end{cases}\)
 $PAR
 Let
-\(a_n := \sup $LB x_k : k \geq n $RB \) and
-\(b_n := \inf $LB x_k : k \geq n $RB . \)
+\(a_n := \sup \lbrace x_k : k \geq n \rbrace \) and
+\(b_n := \inf \lbrace x_k : k \geq n \rbrace . \)
 $PAR
 For \(n\) even,
 $BR

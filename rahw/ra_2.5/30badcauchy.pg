@@ -53,7 +53,7 @@ BEGIN_TEXT
 $PAR
 Let \(\displaystyle x_n := \sum_{j=1}^n \frac{1}{j}.\)
 $PAR
-Is the sequence \( $LB x_n $RB \) a Cauchy sequence?
+Is the sequence \( \lbrace x_n \rbrace_{n=1}^\infty \) a Cauchy sequence?
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -77,10 +77,10 @@ Context()->normalStrings;
 $q2 = RadioButtons([
 [
 "Because \(x_n\) is the \(n\)th partial sum of the harmonic series, which is divergent.",
-"Because \( $LB x_n $RB \) converges.",
-"Because \( $LB \frac{1}{n} $RB \) converges to \(0.\)",
-"Because \( $LB x_n $RB \) satisfies the ratio test.",
-"Because \( \frac{1}{j} $GTS 0 \) for all \(j \in {\mathbb{N}}.\)",
+"Because \( $LB x_n \rbrace_{n=1}^\infty \) converges.",
+"Because \( $LB \dfrac{1}{n} \rbrace_{n=1}^\infty \) converges to \(0.\)",
+"Because \( $LB x_n \rbrace_{n=1}^\infty \) satisfies the ratio test.",
+"Because \( \dfrac{1}{j} $GTS 0 \) for all \(j \in {\mathbb{N}}.\)",
 ],
 ],
 "Because \(x_n\) is the \(n\)th partial sum of the harmonic series, which is divergent.",
@@ -98,19 +98,19 @@ Context()->normalStrings;
 
 $q3 = DraggableProof([
 "Let \(k\) be a fixed natural number.",
-"Define \( y_n := x_{n+k}-x_n = \sum_{j=n+1}^{n+k} \frac{1}{j} .\)",
+"Define \( \displaystyle y_n := x_{n+k}-x_n = \sum_{j=n+1}^{n+k} \frac{1}{j} .\)",
 "Estimate \( \displaystyle y_n = \sum_{j=n+1}^{n+k} \frac{1}{j} \)",
 "\(\displaystyle \qquad \leq \sum_{j=n+1}^{n+k} \frac{1}{n+1} \)",
 "\(\displaystyle \qquad = \frac{k}{n+1} . \)",
-"We know that \( \frac{k}{n+1} \to 0 \) as \(n \to \infty.\)",
-"So by sequeeze lemma, as \( 0 \leq y_n \leq \frac{k}{n+1} ,\) we have \(y_n \to 0 .\)",
+"We know that \( \dfrac{k}{n+1} \to 0 \) as \(n \to \infty.\)",
+"So by sequeeze lemma, as \( 0 \leq y_n \leq \dfrac{k}{n+1} ,\) we have \(y_n \to 0 .\)",
 "As \(y_n \to 0 ,\) we get \(\lvert y_n \rvert \to 0 \) as well.",
 ],
 [
 "Let \(n\) be a fixed natural number.",
 "\(\displaystyle \qquad = \frac{k}{n+k} . \)",
 "\(\displaystyle \qquad \leq \sum_{j=n+1}^{n+k} \frac{1}{n+k} \)",
-"So by sequeeze lemma, as \( 0 \leq y_n \leq \frac{n}{k+1} ,\) we have \(y_n \to 0 .\)",
+"So by sequeeze lemma, as \( 0 \leq y_n \leq \dfrac{n}{k+1} ,\) we have \(y_n \to 0 .\)",
 "\(\displaystyle \qquad $LTS 1 . \)",
 ],
 

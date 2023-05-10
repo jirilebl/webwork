@@ -11,7 +11,7 @@ Suppose you cannot use Proposition 1.4.1.  Prove that
 %PROOF
 Suppose that \(x\) is such that \(a $LTS x $LTS b.\)
 As \(a,b \in I\) and \(a $LTS x $LTS b ,\) then by assumption \(x \in I.\)
-So the set \((a,b) = $LB x : a $LTS x $LTS b $RB \subset I .\)
+So the set \((a,b) = \lbrace x : a $LTS x $LTS b \rbrace \subset I .\)
 Also \(a,b \in I,\) so \([a,b] \subset I .\)
 %EXTRA
 Suppose that \(x \in I.\)
