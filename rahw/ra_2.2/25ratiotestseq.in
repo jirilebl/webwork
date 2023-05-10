@@ -1,6 +1,5 @@
 %DESC Proof that a sequence converges using ratio test (ex 2.2.8)
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 Prove that \({\left\lbrace \frac{n^2}{2^n} \right\rbrace}_{n=1}^\infty\) converges to
 %NUMBER 0

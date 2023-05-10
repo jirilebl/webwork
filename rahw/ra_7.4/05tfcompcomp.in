@@ -1,6 +1,5 @@
 %DESC True/false and multiple choice questions on completeness and compactness
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false:
 Every Cauchy sequence in a metric space is convergent.

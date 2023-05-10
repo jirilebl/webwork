@@ -1,6 +1,5 @@
 %DESC Proof that if a lower bound is in the set, it is the greatest lower bound (inf) (similar to ex 1.1.5)
 %HINC head.txt
-%LARGEFONT
 Suppose \(S\) is an ordered set and \(A \subset S\) has a lower bound
 \(x,\) which is such that \(x \in A.\)
 

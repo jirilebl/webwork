@@ -1,6 +1,5 @@
 %DESC True/false questions on metric spaces
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 %SETUP $a = random(2,9,1);
 True or false:

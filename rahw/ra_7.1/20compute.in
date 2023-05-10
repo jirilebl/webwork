@@ -1,6 +1,5 @@
 %DESC Compute a few distances in the plane
 %HINC head.txt
-%LARGEFONT
 %SETUP $a = random(2,5,1);
 %SETUP $b = $a+random(1,4,1);
 %SETUP $c = $a+random(5,9,1);

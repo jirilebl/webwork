@@ -1,6 +1,5 @@
 %DESC True/false questions on the integral using Darboux
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false:
 Every bounded function \(f \colon [a,b] \to {\mathbb{R}}\) is integrable.

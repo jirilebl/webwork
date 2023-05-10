@@ -1,6 +1,5 @@
 %DESC True/false/multiple choice questions Stone-Weierstrass
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false:
 Any continuous function on \([0,1]\) can be uniformly approximated by polynomials.

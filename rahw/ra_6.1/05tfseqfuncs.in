@@ -1,6 +1,5 @@
 %DESC True/false questions on sequences of functions
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false:
 If a sequence of functions converges uniformly, then it converges pointwise.

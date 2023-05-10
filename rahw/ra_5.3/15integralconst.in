@@ -1,6 +1,5 @@
 %DESC Prove that if the integral is always the length of an interval, then the function is 1
 %HINC head.txt
-%LARGEFONT
 Suppose \(f \colon {\mathbb{R}} \to {\mathbb{R}}\) is continuous.
 Prove that if \(\displaystyle \int_a^b f = b-a\) whenever \(a $LTS b,\) then
 \(f(x) = 1 .\)

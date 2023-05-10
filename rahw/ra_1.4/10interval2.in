@@ -1,6 +1,5 @@
 %DESC Proof of one direction of charaterization of intervals (a special case of ex 1.4.3 plus some true/false)
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 Suppose that \(I\) is a set and \(a,b\in I\) where \(a $LTS b \) are given.
 Suppose furthermore that whenever \(c $LTS d $LTS e\) where \(c,e \in I , \)

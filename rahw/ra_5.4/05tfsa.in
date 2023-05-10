@@ -2,7 +2,6 @@
 %HINC head.txt
 %SETUP Context()->variables->are(x=>["Real",limits=>[-2,-0.1]]);
 %SETUP $a=random(2,9,1);
-%LARGEFONT
 %NOPARTIAL
 True or false:
 The exponential is infinitely differentiable (has derivatives of all orders).

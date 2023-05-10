@@ -1,6 +1,5 @@
 %DESC True/false/multiple choice/quick answer questions for complex numbers
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false:
 For complex numbers, \(z^2\) is always positive, just like for reals.

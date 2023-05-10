@@ -1,6 +1,5 @@
 %DESC True/false, multiple choice questions on normed vector spaces
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 %SETUP $a=random(2,9,1);
 Consider \(x = (x_1,x_2,\ldots,x_n)\) denote vectors in \({\mathbb{R}}^n,\)

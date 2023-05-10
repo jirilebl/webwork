@@ -1,6 +1,5 @@
 %DESC Multiple choice questions about power sets, and computing the size of the power set
 %HINC head.txt
-%LARGEFONT
 %SETUP $n = random(5,9,1);
 %SETUP $ans = Compute("2^($n)");
 What is the power set of \( \emptyset \)?

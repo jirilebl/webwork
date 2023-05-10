@@ -1,6 +1,5 @@
 %DESC Use FTC with Fubini to compute an integral.
 %HINC head.txt
-%LARGEFONT
 %SETUP $a = random(2,9,1);
 %SETUP $b = random(2,4,1);
 %SETUP $c = $b+random(1,5,1);

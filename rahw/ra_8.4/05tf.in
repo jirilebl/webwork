@@ -1,6 +1,5 @@
 %DESC True/false/MC for derivative continuity
 %HINC head.txt
-%LARGEFONT
 %SETUP $a=random(2,9,1);
 %SETUP $b=random(2,9,1);
 %SETUP $amb=$a*$b;

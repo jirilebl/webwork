@@ -1,6 +1,5 @@
 %DESC True/false and multiple choice about intervals
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false: If \(I\) is an interval, \(x,y \in I,\) then \(\frac{x+y}{2} \in I .\)
 $BR

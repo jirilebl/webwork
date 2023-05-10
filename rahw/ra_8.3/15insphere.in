@@ -1,6 +1,5 @@
 %DESC Derivative of a curve in the sphere is tangent to the sphere (ex 8.3.12)
 %HINC head.txt
-%LARGEFONT
 Suppose
 \(f \colon {\mathbb{R}} \to {\mathbb{R}}^n\)
 is differentiable

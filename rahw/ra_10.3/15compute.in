@@ -1,6 +1,5 @@
 %DESC Some outer measures in R
 %HINC head.txt
-%LARGEFONT
 %SETUP $a=random(2,9,1);
 %SETUP $b=random(2,9,1);
 Using your intuition and what you know about outer measure, find the following outer measures.

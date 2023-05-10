@@ -1,6 +1,5 @@
 %DESC Prove that isolated points are closed
 %HINC head.txt
-%LARGEFONT
 Prove that in a metric space \((X,d),\) one point sets are closed.
 
 %PROOF

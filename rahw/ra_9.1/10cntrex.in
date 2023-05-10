@@ -1,6 +1,5 @@
 %DESC Counterexample for differentiation under the integral
 %HINC head.txt
-%LARGEFONT
 %FORMULAVARS x,y
 %NOPARTIAL
 Let \(\displaystyle h(x,y) := \frac{xy}{x^2+y^2} \) for \((x,y)\not=0\) and \(h(0,0)=0 .\)

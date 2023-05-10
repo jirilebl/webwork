@@ -1,6 +1,5 @@
 %DESC True/false questions on the mean value theorem
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false:
 If \(f\colon [a,b] \to {\mathbb{R}}\) is differentiable, then the derivative \(f'\)

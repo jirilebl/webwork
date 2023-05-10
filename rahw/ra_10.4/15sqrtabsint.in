@@ -1,6 +1,5 @@
 %DESC Show that |f|^2 is integrable if f is.
 %HINC head.txt
-%LARGEFONT
 Suppose \(R \subset {\mathbb{R}}^n\) is a rectangle
 and \(f \colon R \to \mathbb{R}\) is a Riemann integrable function.
 A common integral that comes up is the so-called

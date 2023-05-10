@@ -1,6 +1,5 @@
 %DESC Computations of integral (integrable and nonintegrable function) in several variables
 %HINC head.txt
-%LARGEFONT
 %SETUP $a = random(2,5,1);
 %SETUP $b = $a+random(2,5,1);
 %NOPARTIAL

@@ -1,6 +1,5 @@
 %DESC Going through what the example \(x^{2n}\) from the book says
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 %FORMULAVARS x,n,m
 In the book, [1], we looked at the functions \(f_n \colon [-1,1] \to {\mathbb{R}}\) defined by

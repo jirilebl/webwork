@@ -1,6 +1,5 @@
 %DESC Prove that a function independent of one variable and integrable in the other is integrable
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 Suppose that \(R := [0,1] \times [0,1] \) and \(f \colon R \to {\mathbb{R}}\) is
 such that \(f(x,y) = g(x) \) for all \((x,y) \in R\) where \(g \colon [0,1] \to {\mathbb{R}}\)

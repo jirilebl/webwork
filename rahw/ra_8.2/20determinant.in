@@ -1,6 +1,5 @@
 %DESC Questions on the determinant
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 %SETUP $a=random(2,5,1);
 %SETUP $b=$a+random(1,4,1);

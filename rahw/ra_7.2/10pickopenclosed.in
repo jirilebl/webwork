@@ -1,6 +1,5 @@
 %DESC Check openness / closedness of sets in R
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 In the following questions, suppose the metric space is \(\mathbb{R}\) with the standard metric.
 For each set check if it is open, closed, both, or neither.

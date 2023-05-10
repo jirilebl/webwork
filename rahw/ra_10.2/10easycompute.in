@@ -1,6 +1,5 @@
 %DESC Quick computations of integral in two variables via Fubini
 %HINC head.txt
-%LARGEFONT
 %SETUP $a = random(2,9,1);
 %SETUP $b = 2*random(2,5,1);
 %NOPARTIAL

@@ -1,6 +1,5 @@
 %DESC Counterexample for differentiation under the integral
 %HINC head.txt
-%LARGEFONT
 %FORMULAVARS x,y
 %NOPARTIAL
 Suppose that \(f \colon [0,1] \times {\mathbb{R}} \to {\mathbb{R}}\) is continuous and

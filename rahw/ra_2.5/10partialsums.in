@@ -1,6 +1,5 @@
 %DESC Series with an explicit partial sum (randomized version of ex 2.5.1)
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 %FORMULAVARS n,DNE
 %SETUP $a = random(2,5,1);

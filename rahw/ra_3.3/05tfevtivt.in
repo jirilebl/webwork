@@ -1,6 +1,5 @@
 %DESC True/false questions on extreme and intermediate value theorems
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 %SETUP $d = random(3,17,2);
 True or false:

@@ -1,6 +1,5 @@
 %DESC Prove that two continuous functions equal on rational points are equal (ex 3.2.10)
 %HINC head.txt
-%LARGEFONT
 Prove that if
 \( f \colon {\mathbb{R}} \to {\mathbb{R}}\) and
 \( g \colon {\mathbb{R}} \to {\mathbb{R}}\) are continuous and

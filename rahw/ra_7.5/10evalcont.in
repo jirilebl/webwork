@@ -1,6 +1,5 @@
 %DESC Prove that point evaluation is continuous (simpler version of ex 7.5.11)
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 Let \(C([0,1],{\mathbb{R}})\) be our metric space with the uniform norm
 metric:

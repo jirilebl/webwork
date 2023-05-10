@@ -1,6 +1,5 @@
 %DESC True/false for differentiation under the integral
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false:
 If \(f \colon [0,1] \times [0,1] \to {\mathbb{R}}\) is continuously

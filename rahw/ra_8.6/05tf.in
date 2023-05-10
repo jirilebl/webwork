@@ -1,6 +1,5 @@
 %DESC True/false for higher partial derivatives in several variables
 %HINC head.txt
-%LARGEFONT
 %SETUP $a=random(2,9,1);
 %SETUP $b=random(2,9,1);
 %NOPARTIAL

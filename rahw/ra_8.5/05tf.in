@@ -1,6 +1,5 @@
 %DESC True/false/MC for implicit/inverse function theorem
 %HINC head.txt
-%LARGEFONT
 %SETUP $a=random(2,9,1);
 %SETUP $b=random(2,9,1);
 %NOPARTIAL

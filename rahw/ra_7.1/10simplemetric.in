@@ -1,6 +1,5 @@
 %DESC Finish definition of a metric
 %HINC head.txt
-%LARGEFONT
 %SETUP $a = random(2,5,1);
 %SETUP $b = $a+random(2,4,1);
 Suppose \(X := $LB a,b,c $RB .\)

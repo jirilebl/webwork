@@ -1,6 +1,5 @@
 %DESC Select the set where a sequence of functions converges uniformly
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 Consider the sequence of functions
 \(f_n \colon [0,1] \to {\mathbb{R}}\) defined by

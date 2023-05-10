@@ -1,6 +1,5 @@
 %DESC Working through the non-Cauchy sequence example given by the harmonic series (includes ex 2.5.12)
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 Let \(\displaystyle x_n := \sum_{j=1}^n \frac{1}{j}.\)
 

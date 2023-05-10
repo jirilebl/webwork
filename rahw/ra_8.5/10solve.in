@@ -1,6 +1,5 @@
 %DESC Solve for variable
 %HINC head.txt
-%LARGEFONT
 %SETUP $a=random(2,5,1);
 %SETUP $asq=$a*$a;
 %SETUP $asqmo=$asq-1;

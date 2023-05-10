@@ -1,6 +1,5 @@
 %DESC Explicit computations of M given epsilon
 %HINC head.txt
-%LARGEFONT
 Consider the sequence \({$LB x_n $RB}_{n=1}^\infty\) given by \(x_n := \frac{n+1}{n}.\)
 
 Let \(L\) be the limit of this sequence.  What is it?

@@ -1,6 +1,5 @@
 %DESC Differentiate some expressions with integrals (like ex 5.3.1 and ex 5.3.2)
 %HINC head.txt
-%LARGEFONT
 %FORMULAVARS x
 %SETUP $a = random(2,9,1);
 %SETUP $b = random(2,9,1);

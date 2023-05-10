@@ -1,6 +1,5 @@
 %DESC Find best h from the Picard theorem
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 %SETUP $a=random(2,5,1);
 %SETUP $b=$a+random(1,4,1);

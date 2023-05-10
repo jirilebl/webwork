@@ -1,6 +1,5 @@
 %DESC True/false/multiple choice/quick answer questions for Jordan measurable sets
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 %SETUP $a=random(2,9,1);
 %SETUP $b=random(2,9,1);

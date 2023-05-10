@@ -1,6 +1,5 @@
 %DESC Proof about convergence using squeeze lemma
 %HINC head.txt
-%LARGEFONT
 Suppose that \( {\lbrace x_n \rbrace}_{n=1}^\infty \) is bounded.  Show that there exists a \( K $GTS 0 \) such that
 \( {\left\lbrace \left(\frac{x_n}{K}\right)^n \right\rbrace}_{n=1}^\infty \) converges to \(0\text{.}\)
 

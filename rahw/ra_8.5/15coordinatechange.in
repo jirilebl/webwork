@@ -1,6 +1,5 @@
 %DESC Coordinate change simple proof
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 Suppose \( f \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) and
 \( g \colon {\mathbb{R}}^2 \to {\mathbb{R}} \) 

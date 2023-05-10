@@ -1,6 +1,5 @@
 %DESC Prove that square root of a metric is a metric
 %HINC head.txt
-%LARGEFONT
 Suppose \((X,d)\) is a metric space.  Define \(d'(x,y) := \sqrt{d(x,y)} .\)
 Prove that \((X,d')\) is also a metric space.
 

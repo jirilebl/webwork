@@ -1,6 +1,5 @@
 %DESC Show that a removable singularity on a zero function is integrable (like ex 5.1.6)
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 Suppose 
 \[

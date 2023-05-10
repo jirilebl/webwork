@@ -1,6 +1,5 @@
 %DESC Prove monotonicity of outer measure ((ex. 10.3.2)
 %HINC head.txt
-%LARGEFONT
 Prove that if \(A \subset B \subset {\mathbb{R}}^n,\)
 then \( m^*(A) \leq m^*(B) .\)
 

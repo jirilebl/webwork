@@ -1,6 +1,5 @@
 %DESC Computations of lower/upper sums of a polynomial
 %HINC head.txt
-%LARGEFONT
 %SETUP $a = random(2,9,1);
 Suppose 
 \(R = [0,1] \times [0,1],\) and \(f(x,y) := $a (x-0.2)^2+ $a y^2 . \)

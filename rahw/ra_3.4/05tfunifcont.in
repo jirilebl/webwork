@@ -1,6 +1,5 @@
 %DESC True/false questions on uniform/Lipschitz continuity
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false:
 Every uniformly continuous function is Lipschitz continuous.

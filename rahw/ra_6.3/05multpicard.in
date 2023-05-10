@@ -1,6 +1,5 @@
 %DESC True/false and multiple choice questions on Picard's theorem
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 True or false:
 Suppose \(F\) is continuous for \(x\) and \(y\) near zero.

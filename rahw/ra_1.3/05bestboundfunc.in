@@ -1,6 +1,5 @@
 %DESC Finding best bounds of a function
 %HINC head.txt
-%LARGEFONT
 %SETUP $a = random(4,9,1);
 Suppose \(f \colon [-2,2] \to \mathbb{R}\) is given by
 \(f(x) = x^2-2x-$a .\)

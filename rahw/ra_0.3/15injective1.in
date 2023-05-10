@@ -1,6 +1,5 @@
 %DESC Proof that composition of bijections is a bijection
 %HINC head.txt
-%LARGEFONT
 Let \( f \colon A \to B,\) \(g \colon B \to C \) be injective (one-to-one) functions.
 
 Prove that \(g \circ f\) is injective.

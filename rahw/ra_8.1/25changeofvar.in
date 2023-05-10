@@ -1,6 +1,5 @@
 %DESC Proof that two finite-dimensional vector spaces are isomorphic
 %HINC head.txt
-%LARGEFONT
 Suppose \(X\) and \(Y\) are finite-dimensional vector spaces of the same dimension \(d .\)
 Prove that there exists an invertible linear map \(A \in L(X,Y) .\)  Use the propositions from
 chapter 8.1 of the book [1].

@@ -1,6 +1,5 @@
 %DESC Yes/No questions about boundedness of sequences
 %HINC head.txt
-%LARGEFONT
 %NOPARTIAL
 %FORMULAVARS DNE
 %SETUP $a = random(2,5,1);

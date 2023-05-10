@@ -1,6 +1,5 @@
 %DESC Compute a few distances in the taxicab distance
 %HINC head.txt
-%LARGEFONT
 %SETUP $a = random(2,9,1);
 %SETUP $b = random(2,9,1);
 Consider \({\mathbb{R}}^2\) with the so called taxicab distance

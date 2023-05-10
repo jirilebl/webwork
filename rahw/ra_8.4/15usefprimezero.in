@@ -1,6 +1,5 @@
 %DESC 
 %HINC head.txt
-%LARGEFONT
 Suppose \(f \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) and
 \(g \colon {\mathbb{R}}^2 \to {\mathbb{R}}\) are two functions such that
 \(\dfrac{\partial f}{\partial x},\)
