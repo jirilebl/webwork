@@ -73,7 +73,7 @@ True or false:
 If \(a_n $LTS x_n $LTS b_n\) for all \(n\) and
 \(\lim\limits_{n\to\infty} a_n\) and
 \(\lim\limits_{n\to\infty} b_n\) exist, then
-\({$LB x_n $RB}_{n=1}^\infty\) converges.
+\({\lbrace x_n \rbrace}_{n=1}^\infty\) converges.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -109,9 +109,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \({$LB x_n y_n $RB}_{n=1}^\infty\) converges to \(xy\text{,}\) then
-\({$LB x_n $RB}_{n=1}^\infty\) converges to \(x\) and
-\({$LB y_n $RB}_{n=1}^\infty\) converges to \(y\text{.}\)
+If \({\lbrace x_n y_n \rbrace}_{n=1}^\infty\) converges to \(xy\text{,}\) then
+\({\lbrace x_n \rbrace}_{n=1}^\infty\) converges to \(x\) and
+\({\lbrace y_n \rbrace}_{n=1}^\infty\) converges to \(y\text{.}\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -128,9 +128,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \({$LB x_n y_n $RB}_{n=1}^\infty\) converges and
-\({$LB y_n $RB}_{n=1}^\infty\) converges, then
-\({$LB x_n $RB}_{n=1}^\infty\) converges.
+If \({\lbrace x_n y_n \rbrace}_{n=1}^\infty\) converges and
+\({\lbrace y_n \rbrace}_{n=1}^\infty\) converges, then
+\({\lbrace x_n \rbrace}_{n=1}^\infty\) converges.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -147,9 +147,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \({$LB x_n y_n $RB}_{n=1}^\infty\) converges and
-\({$LB y_n $RB}_{n=1}^\infty\) converges to something nonzero, then
-\({$LB x_n $RB}_{n=1}^\infty\) converges.
+If \({\lbrace x_n y_n \rbrace}_{n=1}^\infty\) converges and
+\({\lbrace y_n \rbrace}_{n=1}^\infty\) converges to something nonzero, then
+\({\lbrace x_n \rbrace}_{n=1}^\infty\) converges.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -167,8 +167,8 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \( x_n \geq 0 \) for all \(n\) and
-\({$LB x_n^2 $RB}_{n=1}^\infty\) converges, then
-\({$LB x_n $RB}_{n=1}^\infty\) converges.
+\({\lbrace x_n^2 \rbrace}_{n=1}^\infty\) converges, then
+\({\lbrace x_n \rbrace}_{n=1}^\infty\) converges.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -186,8 +186,8 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(0 $LTS c $LTS 1\) and 
-\({$LB c^n x_n $RB}_{n=1}^\infty\) converges, then
-\({$LB x_n $RB}_{n=1}^\infty\) is bounded.
+\({\lbrace c^n x_n \rbrace}_{n=1}^\infty\) converges, then
+\({\lbrace x_n \rbrace}_{n=1}^\infty\) is bounded.
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -205,8 +205,8 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(0 $LTS c $LTS 1\) and 
-\({$LB c^n x_n $RB}_{n=1}^\infty\) converges to \(0\text{,}\) then
-\({$LB x_n $RB}_{n=1}^\infty\) is bounded.
+\({\lbrace c^n x_n \rbrace}_{n=1}^\infty\) converges to \(0\text{,}\) then
+\({\lbrace x_n \rbrace}_{n=1}^\infty\) is bounded.
 $BR
 END_TEXT
 Context()->normalStrings;

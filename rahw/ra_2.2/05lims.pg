@@ -51,7 +51,7 @@ $a = random(2,5,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Consider the sequence \({\left$LB \frac{n\cos(n)+$a}{n} \right$RB}_{n=1}^\infty \text{.}\)
+Consider the sequence \({\left\lbrace \frac{n\cos(n)+$a}{n} \right\rbrace}_{n=1}^\infty \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -66,7 +66,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 $PAR
-Consider the sequence \({\left$LB \frac{n\cos(n)+$a}{n^2} \right$RB}_{n=1}^\infty \text{.}\)
+Consider the sequence \({\left\lbrace \frac{n\cos(n)+$a}{n^2} \right\rbrace}_{n=1}^\infty \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -81,7 +81,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 $PAR
-Consider the sequence \({\left$LB \frac{\cos(n)+$a n}{n} \right$RB}_{n=1}^\infty \text{.}\)
+Consider the sequence \({\left\lbrace \frac{\cos(n)+$a n}{n} \right\rbrace}_{n=1}^\infty \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -96,7 +96,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 $PAR
-Consider the sequence \({\left$LB c^{\sqrt{n}} \right$RB}_{n=1}^\infty\) where \( 0 $LTS c $LTS 1 \text{.}\)
+Consider the sequence \({\left\lbrace c^{\sqrt{n}} \right\rbrace}_{n=1}^\infty\) where \( 0 $LTS c $LTS 1 \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR

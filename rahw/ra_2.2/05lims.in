@@ -4,28 +4,28 @@
 %NOPARTIAL
 %FORMULAVARS DNE
 %SETUP $a = random(2,5,1);
-Consider the sequence \({\left$LB \frac{n\cos(n)+$a}{n} \right$RB}_{n=1}^\infty \text{.}\)
+Consider the sequence \({\left\lbrace \frac{n\cos(n)+$a}{n} \right\rbrace}_{n=1}^\infty \text{.}\)
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
 %NUMBER DNE
 
 
-Consider the sequence \({\left$LB \frac{n\cos(n)+$a}{n^2} \right$RB}_{n=1}^\infty \text{.}\)
+Consider the sequence \({\left\lbrace \frac{n\cos(n)+$a}{n^2} \right\rbrace}_{n=1}^\infty \text{.}\)
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
 %NUMBER 0
 
 
-Consider the sequence \({\left$LB \frac{\cos(n)+$a n}{n} \right$RB}_{n=1}^\infty \text{.}\)
+Consider the sequence \({\left\lbrace \frac{\cos(n)+$a n}{n} \right\rbrace}_{n=1}^\infty \text{.}\)
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
 %NUMBER $a
 
 
-Consider the sequence \({\left$LB c^{\sqrt{n}} \right$RB}_{n=1}^\infty\) where \( 0 $LTS c $LTS 1 \text{.}\)
+Consider the sequence \({\left\lbrace c^{\sqrt{n}} \right\rbrace}_{n=1}^\infty\) where \( 0 $LTS c $LTS 1 \text{.}\)
 
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR

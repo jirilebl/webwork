@@ -50,8 +50,8 @@ Context()->flags->set(num_points => 50,
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Suppose that \( {$LB x_n $RB}_{n=1}^\infty \) is bounded.  Show that there exists a \( K $GTS 0 \) such that
-\( {\left$LB \left(\frac{x_n}{K}\right)^n \right$RB}_{n=1}^\infty \) converges to \(0\text{.}\)
+Suppose that \( {\lbrace x_n \rbrace}_{n=1}^\infty \) is bounded.  Show that there exists a \( K $GTS 0 \) such that
+\( {\left\lbrace \left(\frac{x_n}{K}\right)^n \right\rbrace}_{n=1}^\infty \) converges to \(0\text{.}\)
 $PAR
 END_TEXT
 Context()->normalStrings;
