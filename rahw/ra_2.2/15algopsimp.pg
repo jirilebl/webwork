@@ -25,7 +25,7 @@ loadMacros(
  "draggableProof.pl",
  "PGcourse.pl",
 );
-POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
 
 TEXT(beginproblem());
 
@@ -51,7 +51,7 @@ $a=random(2,9,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Prove that \({\left\lbrace \frac{$a n^2-n}{n^2+1} \right\rbrace}_{n=1}^\infty\) converges to
+Prove that \({\left\lbrace \dfrac{$a n^2-n}{n^2+1} \right\rbrace}_{n=1}^\infty\) converges to
 END_TEXT
 Context()->normalStrings;
 
@@ -66,15 +66,15 @@ END_TEXT
 Context()->normalStrings;
 
 $q2 = DraggableProof([
-"Write \(\frac{$a n^2-n}{n^2+1} = \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)",
+"Write \(\dfrac{$a n^2-n}{n^2+1} = \dfrac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)",
 "As \(\lim\limits_{n\to\infty} \frac{1}{n} = 0 \text{,}\) we have \(\lim\limits_{n\to\infty} \left($a-\frac{1}{n}\right) = $a\) and \(\lim\limits_{n\to\infty} \left(1+\left(\frac{1}{n}\right)^2\right) = 1\text{.}\)",
-"So as the denominator does not go to zero, \(\lim\limits_{n\to\infty} \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)^2} = \frac{\lim_{n\to\infty} $a-\frac{1}{n}}{\lim_{n\to\infty} 1+\left(\frac{1}{n}\right)^2} = $a\text{.}\)",
+"So as the denominator does not go to zero, \(\lim\limits_{n\to\infty} \dfrac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)^2} = \dfrac{\lim_{n\to\infty} $a-\frac{1}{n}}{\lim_{n\to\infty} 1+\left(\frac{1}{n}\right)^2} = $a\text{.}\)",
 ],
 [
-"Write \(\frac{$a n^2-n}{n^2+1} $LTS \frac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)",
-"\(\left\lvert\frac{$a n^2-n}{n^2+1}\right\rvert $LTS 1\text{.}\)",
+"Write \(\dfrac{$a n^2-n}{n^2+1} $LTS \dfrac{$a-\frac{1}{n}}{1+\left(\frac{1}{n}\right)\left(\frac{1}{n}\right)}\text{.}\)",
+"\(\left\lvert\dfrac{$a n^2-n}{n^2+1}\right\rvert $LTS 1\text{.}\)",
 "Let \(\epsilon:=1\text{.}\)",
-"As \(\lim\limits_{n\to\infty} \frac{1}{n} = 0\) and the denominator does not go to zero, \(\lim\limits_{n\to\infty} \frac{$a n^2-n}{n^2+1} = 1\text{.}\)",
+"As \(\lim\limits_{n\to\infty} \dfrac{1}{n} = 0\) and the denominator does not go to zero, \(\lim\limits_{n\to\infty} \dfrac{$a n^2-n}{n^2+1} = 1\text{.}\)",
 ],
 
 SourceLabel => "Choose from these statements",

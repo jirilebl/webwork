@@ -25,7 +25,7 @@ loadMacros(
  "draggableProof.pl",
  "PGcourse.pl",
 );
-POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
 
 TEXT(beginproblem());
 
@@ -51,7 +51,7 @@ Context()->texStrings;
 BEGIN_TEXT
 $PAR
 Suppose that \( {\lbrace x_n \rbrace}_{n=1}^\infty \) is bounded.  Show that there exists a \( K $GTS 0 \) such that
-\( {\left\lbrace \left(\frac{x_n}{K}\right)^n \right\rbrace}_{n=1}^\infty \) converges to \(0\text{.}\)
+\( {\left\lbrace \left(\dfrac{x_n}{K}\right)^n \right\rbrace}_{n=1}^\infty \) converges to \(0\text{.}\)
 $PAR
 END_TEXT
 Context()->normalStrings;
@@ -59,20 +59,20 @@ Context()->normalStrings;
 $q1 = DraggableProof([
 "Suppose \(B $GTS 0\) is such that \( \lvert x_n \rvert \leq B \) for all \( n \in \mathbb{N} \text{.}\)",
 "Let \(K := 2B\text{.}\)",
-"We have \( 0 \leq \left\lvert \left(\frac{x_n}{K}\right)^n\right\rvert \)",
-"\( \qquad = \left(\frac{\lvert x_n \rvert}{K}\right)^n \)",
-"\( \qquad \leq \left(\frac{B}{K}\right)^n \)",
-"\( \qquad \leq \left( \frac{1}{2} \right)^n \)",
-"As \(\frac{1}{2^n}\) goes to \(0\text{,}\) the Squeeze Lemma says",
-"\(\left\lvert \left(\frac{x_n}{K}\right)^n\right\rvert\) goes to zero.",
-"And so \(\left(\frac{x_n}{K}\right)^n\) goes to zero.",
+"We have \( 0 \leq \left\lvert \left(\dfrac{x_n}{K}\right)^n\right\rvert \)",
+"\( \qquad = \left(\dfrac{\lvert x_n \rvert}{K}\right)^n \)",
+"\( \qquad \leq \left(\dfrac{B}{K}\right)^n \)",
+"\( \qquad \leq \left( \dfrac{1}{2} \right)^n \)",
+"As \(\dfrac{1}{2^n}\) goes to \(0\text{,}\) the Squeeze Lemma says",
+"\(\left\lvert \left(\dfrac{x_n}{K}\right)^n\right\rvert\) goes to zero.",
+"And so \(\left(\dfrac{x_n}{K}\right)^n\) goes to zero.",
 ],
 [
 "\( \qquad \leq 2^n \)",
 "\( \qquad \leq 1 \)",
 "As \(2^n\) goes to \(0\text{,}\) the Squeeze Lemma says",
 "Let \(K := B\text{.}\)",
-"Let \(K := \frac{2}{B}\text{.}\)",
+"Let \(K := \dfrac{2}{B}\text{.}\)",
 ],
 
 SourceLabel => "Choose from these statements",

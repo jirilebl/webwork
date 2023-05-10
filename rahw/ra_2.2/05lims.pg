@@ -24,7 +24,7 @@ loadMacros(
  "AnswerFormatHelp.pl",
  "PGcourse.pl",
 );
-POST_HEADER_TEXT(MODES(HTML => "<style type='text/css'>#output_problem_body, .dd-item { font-size:120%; }</style>"));
+
 
 TEXT(beginproblem());
 
@@ -51,7 +51,7 @@ $a = random(2,5,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Consider the sequence \({\left\lbrace \frac{n\cos(n)+$a}{n} \right\rbrace}_{n=1}^\infty \text{.}\)
+Consider the sequence \({\left\lbrace \dfrac{n\cos(n)+$a}{n} \right\rbrace}_{n=1}^\infty \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -66,7 +66,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 $PAR
-Consider the sequence \({\left\lbrace \frac{n\cos(n)+$a}{n^2} \right\rbrace}_{n=1}^\infty \text{.}\)
+Consider the sequence \({\left\lbrace \dfrac{n\cos(n)+$a}{n^2} \right\rbrace}_{n=1}^\infty \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
@@ -81,7 +81,7 @@ BEGIN_TEXT
 \{ AnswerFormatHelp("numbers") \}
 $PAR
 $PAR
-Consider the sequence \({\left\lbrace \frac{\cos(n)+$a n}{n} \right\rbrace}_{n=1}^\infty \text{.}\)
+Consider the sequence \({\left\lbrace \dfrac{\cos(n)+$a n}{n} \right\rbrace}_{n=1}^\infty \text{.}\)
 $PAR
 If the limit of this sequence exists, what is it, otherwise write DNE.
 $BR
