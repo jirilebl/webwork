@@ -53,7 +53,8 @@ $PAR
 Suppose \( x_n = \dfrac{(-1)^n}{n} . \)  (Note: The sequence \(\lbrace x_n \rbrace_{n=1}^\infty\)
 is Cauchy as it converges)
 $PAR
-Given \(\epsilon = \dfrac{1}{2} , \) what is the smallest \(M \in \mathbb{N}\)
+Given \(\epsilon = \dfrac{1}{2} , \vphantom{\dfrac{\big|}{\big|}}\)
+what is the smallest \(M \in \mathbb{N}\)
 such that for all \(k,m \geq M ,\) we have
 \( | x_k - x_m | $LTS \epsilon . \)
 $BR
@@ -68,7 +69,8 @@ BEGIN_TEXT
 \{ ans_rule(20) \}
 \{ AnswerFormatHelp("numbers") \}
 $PAR
-Given \(\epsilon = \dfrac{1}{10} , \) what is the smallest \(M \in \mathbb{N}\)
+Given \(\epsilon = \dfrac{1}{10} , \vphantom{\dfrac{\big|}{\big|}}\)
+what is the smallest \(M \in \mathbb{N}\)
 such that for all \(k,m \geq M ,\) we have
 \( | x_k - x_m | $LTS \epsilon . \)
 $BR

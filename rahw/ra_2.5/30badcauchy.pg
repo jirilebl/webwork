@@ -78,9 +78,9 @@ $q2 = RadioButtons([
 [
 "Because \(x_n\) is the \(n\)th partial sum of the harmonic series, which is divergent.",
 "Because \( \lbrace x_n \rbrace_{n=1}^\infty \) converges.",
-"Because \( \left\lbrace \dfrac{1}{n} \right\rbrace_{n=1}^\infty \) converges to \(0.\)",
+"Because \( \left\lbrace \dfrac{1}{n} \right\rbrace_{n=1}^\infty \vphantom{\dfrac{\big|}{\big|}} \) converges to \(0.\)",
 "Because \( \lbrace x_n \rbrace_{n=1}^\infty \) satisfies the ratio test.",
-"Because \( \dfrac{1}{j} $GTS 0 \) for all \(j \in {\mathbb{N}}.\)",
+"Because \( \dfrac{1}{j} $GTS 0 \vphantom{\dfrac{\big|}{\big|}} \) for all \(j \in {\mathbb{N}}.\)",
 ],
 ],
 "Because \(x_n\) is the \(n\)th partial sum of the harmonic series, which is divergent.",

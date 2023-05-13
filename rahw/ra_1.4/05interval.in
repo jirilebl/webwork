@@ -39,12 +39,12 @@ False
 Which one of the following is a bijection \(f \colon (0,1) \to {\mathbb{R}}\) (if one exists):
 $BR
 %RADIORANDOM
-%CORRECT \( f(x) := \dfrac{1}{x}+\dfrac{1}{x-1} \)
-\( f(x) := \dfrac{1}{x(x-1)} \)
-\( f(x) := \tan\left(\dfrac{x \pi}{2}\right) \)
-\( f(x) := \dfrac{1}{2}+\dfrac{\operatorname{arctan}(x)}{\pi} \)
-\( f(x) := \dfrac{2 \operatorname{arctan}(x)}{\pi} \)
-\( f(x) := \dfrac{1}{x} \)
+%CORRECT \( f(x) := \dfrac{1}{x}+\dfrac{1}{x-1} \vphantom{\dfrac{\big|}{\big|}} \)
+\( f(x) := \dfrac{1}{x(x-1)} \vphantom{\dfrac{\big|}{\big|}}\)
+\( f(x) := \tan\left(\dfrac{x \pi}{2}\right) \vphantom{\dfrac{\big|}{\big|}}\)
+\( f(x) := \dfrac{1}{2}+\dfrac{\operatorname{arctan}(x)}{\pi} \vphantom{\dfrac{\big|}{\big|}}\)
+\( f(x) := \dfrac{2 \operatorname{arctan}(x)}{\pi} \vphantom{\dfrac{\big|}{\big|}}\)
+\( f(x) := \dfrac{1}{x} \vphantom{\dfrac{\big|}{\big|}}\)
 \( f(x) := x \)
 %ENDRANDOM
 None of these.

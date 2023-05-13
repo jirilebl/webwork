@@ -20,9 +20,9 @@ False
 Which of the following numbers numbers has a unique decimal expansion:
 $BR
 %RADIORANDOM
-%CORRECT \(\dfrac{1}{3}\)
+%CORRECT \(\dfrac{1}{3}\vphantom{\dfrac{\big|}{\big|}}\)
 \(0.123\)
-\(\dfrac{56}{100}\)
+\(\dfrac{56}{100}\vphantom{\dfrac{\big|}{\big|}}\)
 \(0.5\)
 %ENDRANDOM
 None of them
