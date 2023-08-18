@@ -111,7 +111,7 @@ BEGIN_TEXT
 \{ $q3->buttons \}
 
 $PAR
-If \( A= $LB 2 $RB \) and \(B = {\mathbb{Z}} , \)
+If \( A= \lbrace 2 \rbrace \) and \(B = {\mathbb{Z}} , \)
 then \(A\) is
 $BR
 END_TEXT

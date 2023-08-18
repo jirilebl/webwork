@@ -69,7 +69,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-The sequence \($LB \frac{1}{n} $RB\) converges in \(({\mathbb{R}},d),\)
+The sequence \(\lbrace \frac{1}{n} \rbrace_{n=1}^\infty\) converges in \(({\mathbb{R}},d),\)
 where \(d\) is the discrete metric.
 $BR
 END_TEXT
@@ -87,7 +87,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-The constant sequence \($LB 1 $RB\) converges in \(({\mathbb{R}},d),\)
+The constant sequence \(\lbrace 1 \rbrace_{n=1}^\infty\) converges in \(({\mathbb{R}},d),\)
 where \(d\) is the discrete metric.
 $BR
 END_TEXT
@@ -105,7 +105,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(A \subset X\) is closed subset of a metric space \((X,d),\) and \($LB x_n $RB\) is a convergent sequence
+If \(A \subset X\) is closed subset of a metric space \((X,d),\) and \(\lbrace x_n \rbrace_{n=1}^\infty\) is a convergent sequence
 of elements of \(A,\) then the limit is in \(A.\)
 $BR
 END_TEXT
@@ -123,7 +123,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \($LB x_n $RB\) is a convergent sequence in a metric space,
+If \(\lbrace x_n \rbrace_{n=1}^\infty\) is a convergent sequence in a metric space,
 then some \(K\)-tail is a constant sequence.
 $BR
 END_TEXT
@@ -192,9 +192,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Suppose \($LB x_n $RB\) is a convergent sequence in a metric space \((X,d)\)
+Suppose \(\lbrace x_n \rbrace_{n=1}^\infty\) is a convergent sequence in a metric space \((X,d)\)
 with limit \(p \in X.\)  Suppose \(A \subset X \) and suppose \(x_n \in A\) for
-all \(n.\)  Then \($LB x_n $RB\) is convergent in the subspace \(A.\)
+all \(n.\)  Then \(\lbrace x_n \rbrace_{n=1}^\infty\) is convergent in the subspace \(A.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -211,9 +211,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-Suppose \($LB x_n $RB\) is a convergent sequence in a metric space \((X,d)\)
+Suppose \(\lbrace x_n \rbrace_{n=1}^\infty\) is a convergent sequence in a metric space \((X,d)\)
 with limit \(p \in X.\)  Suppose \(A \subset X \) and suppose \(x_n \in A\) for
-all \(n\) and \(p \in A.\)  Then \($LB x_n $RB\) is convergent in the subspace \(A.\)
+all \(n\) and \(p \in A.\)  Then \(\lbrace x_n \rbrace_{n=1}^\infty\) is convergent in the subspace \(A.\)
 $BR
 END_TEXT
 Context()->normalStrings;

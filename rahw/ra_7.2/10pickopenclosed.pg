@@ -216,7 +216,7 @@ BEGIN_TEXT
 \{ $q9->buttons \}
 
 $PAR
-\( $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+\( \lbrace \frac{1}{n} : n \in {\mathbb{N}} \rbrace \)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -234,7 +234,7 @@ BEGIN_TEXT
 \{ $q10->buttons \}
 
 $PAR
-\( $LB 0 $RB \cup $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+\( \lbrace 0 \rbrace \cup \lbrace \frac{1}{n} : n \in {\mathbb{N}} \rbrace \)
 $BR
 END_TEXT
 Context()->normalStrings;

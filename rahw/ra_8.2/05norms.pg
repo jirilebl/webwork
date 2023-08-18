@@ -61,14 +61,14 @@ Context()->normalStrings;
 $q1 = new_checkbox_multiple_choice();
 $q1->qa("Check all that apply",
 "\(\lvert x_1 \rvert+\lvert x_2 \rvert+\cdots+\lvert x_n \rvert\)",
-"\(\max $LB \lvert x_1 \rvert, \lvert x_2 \rvert, \ldots, \lvert x_n \rvert $RB\)",
+"\(\max \lbrace \lvert x_1 \rvert, \lvert x_2 \rvert, \ldots, \lvert x_n \rvert \rbrace\)",
 "\(\lvert x_1 \rvert+2 \lvert x_2 \rvert+\cdots+n \lvert x_n \rvert\)",
 "\(\sqrt{{x_1}^2+{x_2}^2+\cdots+{x_n}^2} \)",
 );
 $q1->extra(
 "\({\bigl(\sqrt{\lvert x_1 \rvert}+\sqrt{\lvert x_2 \rvert}+\cdots+\sqrt{\lvert x_n \rvert}\bigr)}^2 \)",
-"\(\max $LB x_1 , x_2 , \ldots,  x_n $RB\)",
-"\(\min $LB \lvert x_1 \rvert, \lvert x_2 \rvert, \ldots, \lvert x_n \rvert $RB\)",
+"\(\max \lbrace x_1 , x_2 , \ldots,  x_n \rbrace\)",
+"\(\min \lbrace \lvert x_1 \rvert, \lvert x_2 \rvert, \ldots, \lvert x_n \rvert \rbrace\)",
 "\({x_1}^2+{x_2}^2+\cdots+{x_n}^2 \)",
 "\(\lvert x_1 \rvert\)",
 );

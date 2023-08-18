@@ -98,7 +98,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If a sequence of Riemann integrable functions \($LB f_n $RB\) defined on \([0,1]\)
+If a sequence of Riemann integrable functions \(\lbrace f_n \rbrace_{n=1}^\infty\) defined on \([0,1]\)
 converge pointwise to \(0,\) then \(\lim\limits_{n\to \infty} \int_0^1 f_n = 0.\)
 $BR
 END_TEXT
@@ -116,7 +116,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If a sequence of Riemann integrable functions \($LB f_n $RB\) defined on \([0,1]\)
+If a sequence of Riemann integrable functions \(\lbrace f_n \rbrace_{n=1}^\infty\) defined on \([0,1]\)
 converge uniformly to \(0,\) then \(\lim\limits_{n\to \infty} \int_0^1 f_n = 0.\)
 $BR
 END_TEXT
@@ -134,7 +134,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If a sequence of Riemann integrable functions \($LB f_n $RB\) defined on \([0,1]\)
+If a sequence of Riemann integrable functions \(\lbrace f_n \rbrace_{n=1}^\infty\) defined on \([0,1]\)
 is such that \(0 \leq f_n(x) \leq \frac{1}{n}\) for all \(x \in [0,1]\)
 and all \(n \in \mathbb{N} ,\) then 
 \(\lim\limits_{n\to \infty} \int_0^1 f_n = 0.\)
@@ -154,7 +154,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If a sequence of continuous functions \($LB f_n $RB\) defined on \([0,1]\)
+If a sequence of continuous functions \(\lbrace f_n \rbrace_{n=1}^\infty\) defined on \([0,1]\)
 converges uniformly to \(0\) and \(g \colon [0,1] \to \mathbb{R}\) is continuous, then
 \(\lim\limits_{n\to \infty} \int_0^1 g(x)f_n(x)\, dx = 0.\)
 $BR
@@ -173,7 +173,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If a sequence of Riemann integrable functions \($LB f_n $RB\) defined on \([0,1]\)
+If a sequence of Riemann integrable functions \(\lbrace f_n \rbrace_{n=1}^\infty\) defined on \([0,1]\)
 converge pointwise, then the limit function is Riemann integrable.
 $BR
 END_TEXT
@@ -191,7 +191,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If a sequence of continuous functions \($LB f_n $RB\) defined on \([0,1]\)
+If a sequence of continuous functions \(\lbrace f_n \rbrace_{n=1}^\infty\) defined on \([0,1]\)
 converge pointwise to a continuous function, then the limit is uniform.
 $BR
 END_TEXT
@@ -209,7 +209,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If a sequence of continuously differentiable functions \($LB f_n $RB\) defined on \([0,1]\)
+If a sequence of continuously differentiable functions \(\lbrace f_n \rbrace_{n=1}^\infty\) defined on \([0,1]\)
 converge uniformly to a function \(f \colon [0,1] \to \mathbb{R} ,\) then the \(f\)
 is continuously differentiable.
 $BR
@@ -228,9 +228,9 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If a sequence of continuously differentiable functions \($LB f_n $RB\) defined on \([0,1]\)
+If a sequence of continuously differentiable functions \(\lbrace f_n \rbrace_{n=1}^\infty\) defined on \([0,1]\)
 converge uniformly to a function \(f \colon [0,1] \to \mathbb{R} \) and
-the sequence of derivatives \($LB f_n' $RB\) also converge uniformly, then the \(f\)
+the sequence of derivatives \(\lbrace f_n' \rbrace_{n=1}^\infty\) also converge uniformly, then the \(f\)
 is continuously differentiable.
 $BR
 END_TEXT

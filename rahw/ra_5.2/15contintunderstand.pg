@@ -98,7 +98,7 @@ BEGIN_TEXT
 \{ $q2->buttons \}
 
 $PAR
-Let \(P = $LB x_0, x_1, \ldots, x_n $RB \)
+Let \(P = \lbrace x_0, x_1, \ldots, x_n \rbrace \)
 be a partition of \([a,b]\) such that \(\Delta x_i $LTS \delta\) for all \(i = 1,2, \ldots, n.\)
 For example,
 take \(n\) such that \(\frac{b-a}{n} $LTS \delta,\) and
@@ -174,14 +174,14 @@ Context()->normalStrings;
 
 $q6 = RadioButtons([
 [
-"\(m_i = \inf $LB f(x) : x \in [x_{i-1},x_i] $RB \) and \(M_i = \sup $LB f(x) : x \in [x_{i-1},x_i] $RB .\)",
-"\(m_i = \sup $LB f(x) : x \in [x_{i-1},x_i] $RB \) and \(M_i = \inf $LB f(x) : x \in [x_{i-1},x_i] $RB .\)",
-"\(m_i = \inf $LB f(x) : x \in [x_{i},x_{i+1}] $RB \) and \(M_i = \sup $LB f(x) : x \in [x_{i},x_{i+1}] $RB .\)",
-"\(m_i = \sup $LB f(x) : x \in [x_{i},x_{i+1}] $RB \) and \(M_i = \inf $LB f(x) : x \in [x_{i},x_{i+1}] $RB .\)",
-"\(m_i = \inf $LB f(x) : x \in [a,b] $RB \) and \(M_i = \sup $LB f(x) : x \in [a,b] $RB .\)",
+"\(m_i = \inf \lbrace f(x) : x \in [x_{i-1},x_i] \rbrace \) and \(M_i = \sup \lbrace f(x) : x \in [x_{i-1},x_i] \rbrace .\)",
+"\(m_i = \sup \lbrace f(x) : x \in [x_{i-1},x_i] \rbrace \) and \(M_i = \inf \lbrace f(x) : x \in [x_{i-1},x_i] \rbrace .\)",
+"\(m_i = \inf \lbrace f(x) : x \in [x_{i},x_{i+1}] \rbrace \) and \(M_i = \sup \lbrace f(x) : x \in [x_{i},x_{i+1}] \rbrace .\)",
+"\(m_i = \sup \lbrace f(x) : x \in [x_{i},x_{i+1}] \rbrace \) and \(M_i = \inf \lbrace f(x) : x \in [x_{i},x_{i+1}] \rbrace .\)",
+"\(m_i = \inf \lbrace f(x) : x \in [a,b] \rbrace \) and \(M_i = \sup \lbrace f(x) : x \in [a,b] \rbrace .\)",
 ],
 ],
-"\(m_i = \inf $LB f(x) : x \in [x_{i-1},x_i] $RB \) and \(M_i = \sup $LB f(x) : x \in [x_{i-1},x_i] $RB .\)",
+"\(m_i = \inf \lbrace f(x) : x \in [x_{i-1},x_i] \rbrace \) and \(M_i = \sup \lbrace f(x) : x \in [x_{i-1},x_i] \rbrace .\)",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -261,13 +261,13 @@ Context()->normalStrings;
 
 $q8 = RadioButtons([
 [
-"That if \(f\) is continuous, then \(\displaystyle \int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf \left$LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \leq \frac{i}{n}(b-a) + a \right$RB \right) .\)",
+"That if \(f\) is continuous, then \(\displaystyle \int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf \left\lbrace f(x) : \frac{i-1}{n}(b-a) + a \leq x \leq \frac{i}{n}(b-a) + a \right\rbrace \right) .\)",
 "That \(f\) is continuous",
 "That \(\displaystyle \int_a^b f = 0 . \)",
 "That the uniform partition can be used to integrate any Riemann integrable function.",
 ],
 ],
-"That if \(f\) is continuous, then \(\displaystyle \int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf \left$LB f(x) : \frac{i-1}{n}(b-a) + a \leq x \leq \frac{i}{n}(b-a) + a \right$RB \right) .\)",
+"That if \(f\) is continuous, then \(\displaystyle \int_a^b f = \lim\limits_{n\to\infty} \frac{1}{n} \sum\limits_{i=1}^n \left(\inf \left\lbrace f(x) : \frac{i-1}{n}(b-a) + a \leq x \leq \frac{i}{n}(b-a) + a \right\rbrace \right) .\)",
 );
 Context()->texStrings;
 BEGIN_TEXT

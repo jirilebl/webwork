@@ -191,7 +191,7 @@ $PAR
 True or false:
 Consider a bounded function
 \(f \colon R \to {\mathbb{R}}.\)
-The set \( $LB x \in R : o(f,x) $GTS 0 $RB \)
+The set \( \lbrace x \in R : o(f,x) $GTS 0 \rbrace \)
 is a closed subset of \(R.\)
 $BR
 END_TEXT
@@ -212,7 +212,7 @@ True or false:
 Consider a bounded function
 \(f \colon R \to {\mathbb{R}}.\)
 For every \(\epsilon $GTS 0,\)
-the set \( $LB x \in R : o(f,x) \geq \epsilon $RB \)
+the set \( \lbrace x \in R : o(f,x) \geq \epsilon \rbrace \)
 is a closed subset of \(R.\)
 $BR
 END_TEXT

@@ -51,7 +51,7 @@ $b = $a+random(2,4,1);
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Suppose \(X := $LB a,b,c $RB .\)
+Suppose \(X := \lbrace a,b,c \rbrace .\)
 Finish the definition of a metric \(d\) so that the remaining distances are as
 small as possible.
 $PAR

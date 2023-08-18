@@ -59,15 +59,15 @@ Context()->normalStrings;
 
 $q1 = new_checkbox_multiple_choice();
 $q1->qa("Check all that apply",
-"\($LB (x,y) \in {\mathbb{R}}^2 : 0 \leq x \leq $a, 0 \leq y \leq $b $RB \)",
-"\($LB (x,y) \in {\mathbb{R}}^2 : 0 \leq x \leq $a $RB \)",
-"\($LB (x,y) \in {\mathbb{R}}^2 : x \geq 0, y \geq 0 $RB \)",
-"\($LB (x,y) \in {\mathbb{R}}^2 : x^2+y^2 $LTS 1 $RB \)",
-"\($LB (x,y) \in {\mathbb{R}}^2 : y \geq x^2 $RB \)",
+"\(\lbrace (x,y) \in {\mathbb{R}}^2 : 0 \leq x \leq $a, 0 \leq y \leq $b \rbrace \)",
+"\(\lbrace (x,y) \in {\mathbb{R}}^2 : 0 \leq x \leq $a \rbrace \)",
+"\(\lbrace (x,y) \in {\mathbb{R}}^2 : x \geq 0, y \geq 0 \rbrace \)",
+"\(\lbrace (x,y) \in {\mathbb{R}}^2 : x^2+y^2 $LTS 1 \rbrace \)",
+"\(\lbrace (x,y) \in {\mathbb{R}}^2 : y \geq x^2 \rbrace \)",
 );
 $q1->extra(
-"\($LB (x,y) \in {\mathbb{R}}^2 : xy \geq 0 $RB \)",
-"\($LB (x,y) \in {\mathbb{R}}^2 : y \geq x^3 $RB \)",
+"\(\lbrace (x,y) \in {\mathbb{R}}^2 : xy \geq 0 \rbrace \)",
+"\(\lbrace (x,y) \in {\mathbb{R}}^2 : y \geq x^3 \rbrace \)",
 );
 Context()->texStrings;
 BEGIN_TEXT

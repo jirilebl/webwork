@@ -60,11 +60,11 @@ Context()->normalStrings;
 $q1 = new_checkbox_multiple_choice();
 $q1->qa("Check all that apply",
 "\(\mathbb{Q}\)",
-"\($LB $a,$b $RB\)",
+"\(\lbrace $a,$b \rbrace\)",
 "\([$a,$b] \cap \mathbb{Q}\)",
-"\($LB \frac{1}{n} : n \in \mathbb{N} $RB\)",
+"\(\lbrace \frac{1}{n} : n \in \mathbb{N} \rbrace\)",
 "\(\emptyset\)",
-"\($LB 0 $RB\)",
+"\(\lbrace 0 \rbrace\)",
 );
 $q1->extra(
 "\(\mathbb{R}\)",

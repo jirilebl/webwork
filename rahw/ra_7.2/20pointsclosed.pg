@@ -60,14 +60,14 @@ $q1 = DraggableProof([
 "Let \(q \in X\) be such that \(p\neq q .\)",
 "Let \(r := d(p,q).\)",
 "As \(d(p,q) = r,\) we have \(p \notin B(q,r).\)",
-"Thus \(B(q,r) \subset X \setminus $LB p $RB \) and so",
-"\(X \setminus $LB p $RB\) is open, and \($LB p $RB\) is closed.",
+"Thus \(B(q,r) \subset X \setminus \lbrace p \rbrace \) and so",
+"\(X \setminus \lbrace p \rbrace\) is open, and \(\lbrace p \rbrace\) is closed.",
 ],
 [
 "Then \(q=p.\)",
 "As \(d(p,q) = r,\) we have \(p \in C(q,r).\)",
-"Thus \(X \setminus $LB p $RB\) is closed.",
-"Thus \($LB p $RB\) is open.",
+"Thus \(X \setminus \lbrace p \rbrace\) is closed.",
+"Thus \(\lbrace p \rbrace\) is open.",
 ],
 
 SourceLabel => "Choose from these statements",

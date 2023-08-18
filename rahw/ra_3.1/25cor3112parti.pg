@@ -57,15 +57,15 @@ Context()->normalStrings;
 
 $q1 = DraggableProof([
 "Let \(S,f,g,c\) be as in the Corollary and suppose \(f(x) \to L_f\) and \(g(x) \to L_g\) as \(x \to c.\)",
-"Consider an arbitrary sequence \( $LB x_n $RB \) in \( S \setminus $LB c $RB \) that converges to \(c.\)",
+"Consider an arbitrary sequence \( \lbrace x_n \rbrace_{n=1}^\infty \) in \( S \setminus \lbrace c \rbrace \) that converges to \(c.\)",
 "As \(f(x) \to L_f\) as \(x \to c,\) Lemma 3.1.7 says that \(\lim\limits_{n\to\infty} f(x_n) = L_f .\)",
 "Similarly, \(\lim\limits_{n\to\infty} g(x_n) = L_g .\)",
 "Then Proposition 2.2.5 part (i) says that \(\lim\limits_{n\to\infty} \bigl( f(x_n) + g(x_n) \bigr) = L_f + L_g .\)",
-"As \( $LB x_n $RB \) was an arbitrary sequence in \( S \setminus $LB c $RB \) converging to \(c,\) we have \(\lim\limits_{x\to c} \bigl( f(x) + g(x) \bigr) = L_f + L_g .\)",
+"As \( \lbrace x_n \rbrace_{n=1}^\infty \) was an arbitrary sequence in \( S \setminus \lbrace c \rbrace \) converging to \(c,\) we have \(\lim\limits_{x\to c} \bigl( f(x) + g(x) \bigr) = L_f + L_g .\)",
 ],
 [
-"Consider an arbitrary sequence \( $LB x_n $RB \) in \( S \setminus $LB c $RB . \)",
-"As \( $LB x_n $RB \) does not converge to \(c,\) the corollary is proved.",
+"Consider an arbitrary sequence \( \lbrace x_n \rbrace_{n=1}^\infty \) in \( S \setminus \lbrace c \rbrace . \)",
+"As \( \lbrace x_n \rbrace_{n=1}^\infty \) does not converge to \(c,\) the corollary is proved.",
 "Then \( L_f = L_g . \)",
 ],
 

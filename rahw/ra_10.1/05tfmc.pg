@@ -51,7 +51,7 @@ Context()->flags->set(num_points => 50,
 Context()->texStrings;
 BEGIN_TEXT
 $PAR
-Suppose that \(R := [0,1] \times [0,1] \) and the partition \(P\) is given by \(($LB 0,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB ) .\) 
+Suppose that \(R := [0,1] \times [0,1] \) and the partition \(P\) is given by \((\lbrace 0,0.5,1 \rbrace , \lbrace 0,0.1,0.9,1 \rbrace ) .\) 
 How many subrectangles does the partition have?
 $BR
 END_TEXT
@@ -96,15 +96,15 @@ Context()->normalStrings;
 
 $q3 = new_checkbox_multiple_choice();
 $q3->qa("Check all that apply",
-"\(($LB 0,0.1,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB )\) ",
-"\(($LB 0,0.5,1 $RB , $LB 0,0.1,0.5,0.9,1 $RB )\) ",
-"\(($LB 0,0.1,0.5,1 $RB , $LB 0,0.1,0.5,0.9,1 $RB )\) ",
-"\(($LB 0,0.5,1 $RB , $LB 0,0.1,0.2,0.3,0.5,0.6,0.7,0.8,0.9,1 $RB )\) ",
+"\((\lbrace 0,0.1,0.5,1 \rbrace , \lbrace 0,0.1,0.9,1 \rbrace )\) ",
+"\((\lbrace 0,0.5,1 \rbrace , \lbrace 0,0.1,0.5,0.9,1 \rbrace )\) ",
+"\((\lbrace 0,0.1,0.5,1 \rbrace , \lbrace 0,0.1,0.5,0.9,1 \rbrace )\) ",
+"\((\lbrace 0,0.5,1 \rbrace , \lbrace 0,0.1,0.2,0.3,0.5,0.6,0.7,0.8,0.9,1 \rbrace )\) ",
 );
 $q3->extra(
-"\(($LB 0,0.1,1 $RB , $LB 0,0.1,0.9,1 $RB )\) ",
-"\(($LB 0,1 $RB , $LB 0,0.1,0.9,1 $RB )\) ",
-"\(($LB 0,0.5,1 $RB , $LB 0,0.5,1 $RB )\) ",
+"\((\lbrace 0,0.1,1 \rbrace , \lbrace 0,0.1,0.9,1 \rbrace )\) ",
+"\((\lbrace 0,1 \rbrace , \lbrace 0,0.1,0.9,1 \rbrace )\) ",
+"\((\lbrace 0,0.5,1 \rbrace , \lbrace 0,0.5,1 \rbrace )\) ",
 );
 Context()->texStrings;
 BEGIN_TEXT

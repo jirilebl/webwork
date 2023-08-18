@@ -70,7 +70,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(\liminf \, x_n $LTS \limsup \, x_n ,\) then
+If \(\displaystyle \liminf_{n\to\infty} x_n $LTS \limsup_{n\to\infty} x_n ,\) then
 \(\lbrace x_n \rbrace_{n=1}^\infty\) diverges.
 $BR
 END_TEXT
@@ -90,7 +90,7 @@ $PAR
 True or false:
 Let \(\lbrace x_n \rbrace_{n=1}^\infty\) be a bounded sequence.
 Then for every \(x\) such that
-\(\liminf \, x_n \leq x \leq \limsup \, x_n ,\) there
+\(\displaystyle \liminf_{n\to\infty} x_n \leq x \leq \limsup_{n\to\infty} x_n ,\) there
 exists a subsequence
 \(\lbrace x_{n_k} \rbrace_{k=1}^\infty\) converging to \(x.\)
 $BR
@@ -173,7 +173,7 @@ BEGIN_TEXT
 $PAR
 True or false:
 If \(\lbrace x_n \rbrace_{n=1}^\infty\) be a bounded sequence of nonnegative numbers
-and \(\limsup\, x_n  = 0,\) then \( \lbrace x_n \rbrace_{n=1}^\infty \) converges to \(0.\)
+and \(\displaystyle \limsup_{n\to\infty} x_n  = 0,\) then \( \lbrace x_n \rbrace_{n=1}^\infty \) converges to \(0.\)
 $BR
 END_TEXT
 Context()->normalStrings;
@@ -190,7 +190,7 @@ BEGIN_TEXT
 
 $PAR
 True or false:
-If \(\liminf \, x_n $LTS \limsup \, x_n ,\) then
+If \(\displaystyle \liminf_{n\to\infty} x_n $LTS \limsup_{n\to\infty} x_n ,\) then
 there exists a divergent subsequence
 \(\lbrace x_{n_k} \rbrace_{k=1}^\infty .\)
 $BR

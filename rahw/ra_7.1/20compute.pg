@@ -70,7 +70,7 @@ BEGIN_TEXT
 $PAR
 If \(p := ($c,0),\) then compute
 $BR
-\(\inf \, $LB d(p,q) : q \in R $RB = {} \)
+\(\inf \, \lbrace d(p,q) : q \in R \rbrace = {} \)
 END_TEXT
 Context()->normalStrings;
 

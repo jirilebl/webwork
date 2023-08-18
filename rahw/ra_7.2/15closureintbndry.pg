@@ -62,7 +62,7 @@ $q1 = RadioButtons([
 "\([0,1]\)",
 "\((0,1)\)",
 "\((0,1]\)",
-"\($LB 0,1 $RB \)",
+"\(\lbrace 0,1 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
@@ -82,11 +82,11 @@ $q2 = RadioButtons([
 "\([0,1]\)",
 "\((0,1)\)",
 "\((0,1]\)",
-"\($LB 0,1 $RB \)",
+"\(\lbrace 0,1 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
-"\($LB 0,1 $RB \)",
+"\(\lbrace 0,1 \rbrace \)",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -102,7 +102,7 @@ $q3 = RadioButtons([
 "\([0,1]\)",
 "\((0,1)\)",
 "\((0,1]\)",
-"\($LB 0,1 $RB \)",
+"\(\lbrace 0,1 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
@@ -122,7 +122,7 @@ $q4 = RadioButtons([
 "\([0,1]\)",
 "\((0,1)\)",
 "\((0,1]\)",
-"\($LB 0,1 $RB \)",
+"\(\lbrace 0,1 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
@@ -142,11 +142,11 @@ $q5 = RadioButtons([
 "\([0,1]\)",
 "\((0,1)\)",
 "\((0,1]\)",
-"\($LB 0,1 $RB \)",
+"\(\lbrace 0,1 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
-"\($LB 0,1 $RB \)",
+"\(\lbrace 0,1 \rbrace \)",
 );
 Context()->texStrings;
 BEGIN_TEXT
@@ -162,7 +162,7 @@ $q6 = RadioButtons([
 "\([0,1]\)",
 "\((0,1)\)",
 "\((0,1]\)",
-"\($LB 0,1 $RB \)",
+"\(\lbrace 0,1 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
@@ -181,7 +181,7 @@ Context()->normalStrings;
 $q7 = RadioButtons([
 "\({\mathbb{Q}}\)",
 "\({\mathbb{R}} \setminus {\mathbb{Q}}\)",
-"\($LB 0 $RB \)",
+"\(\lbrace 0 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
@@ -200,7 +200,7 @@ Context()->normalStrings;
 $q8 = RadioButtons([
 "\({\mathbb{Q}}\)",
 "\({\mathbb{R}} \setminus {\mathbb{Q}}\)",
-"\($LB 0 $RB \)",
+"\(\lbrace 0 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
@@ -219,7 +219,7 @@ Context()->normalStrings;
 $q9 = RadioButtons([
 "\({\mathbb{Q}}\)",
 "\({\mathbb{R}} \setminus {\mathbb{Q}}\)",
-"\($LB 0 $RB \)",
+"\(\lbrace 0 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
@@ -238,7 +238,7 @@ Context()->normalStrings;
 $q10 = RadioButtons([
 "\({\mathbb{Q}}\)",
 "\({\mathbb{R}} \setminus {\mathbb{Q}}\)",
-"\($LB 0 $RB \)",
+"\(\lbrace 0 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
@@ -257,7 +257,7 @@ Context()->normalStrings;
 $q11 = RadioButtons([
 "\({\mathbb{Q}}\)",
 "\({\mathbb{R}} \setminus {\mathbb{Q}}\)",
-"\($LB 0 $RB \)",
+"\(\lbrace 0 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
@@ -276,7 +276,7 @@ Context()->normalStrings;
 $q12 = RadioButtons([
 "\({\mathbb{Q}}\)",
 "\({\mathbb{R}} \setminus {\mathbb{Q}}\)",
-"\($LB 0 $RB \)",
+"\(\lbrace 0 \rbrace \)",
 "\(\emptyset \)",
 "\(\mathbb{R} \)",
 ],
