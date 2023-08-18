@@ -27,8 +27,8 @@ False
 
 True or false:
 The partition
-\($LB 0, 0.1, 0.2, 0.9, 1 $RB \) is a refinement of
-\($LB 0, 0.2, 1 $RB . \)
+\(\lbrace 0, 0.1, 0.2, 0.9, 1 \rbrace \) is a refinement of
+\(\lbrace 0, 0.2, 1 \rbrace . \)
 $BR
 %RADIO
 %CORRECT True
@@ -37,8 +37,8 @@ False
 
 True or false:
 The partition
-\($LB 0, 0.1, 0.2, 0.9, 1 $RB \) is a refinement of
-\($LB 0, 0.2, 0.8, 1 $RB . \)
+\(\lbrace 0, 0.1, 0.2, 0.9, 1 \rbrace \) is a refinement of
+\(\lbrace 0, 0.2, 0.8, 1 \rbrace . \)
 $BR
 %RADIO
 True
@@ -47,7 +47,7 @@ True
 
 True or false:
 If \(f \colon [0,1] \to {\mathbb{R}}\) is such that
-for every \(n \in {\mathbb{N}}\) there is an \(M \in {\mathbb{N}}\) such that \( P = \left$LB 0, \frac{1}{M} , \frac{2}{M} , \ldots, 1 \right$RB \)
+for every \(n \in {\mathbb{N}}\) there is an \(M \in {\mathbb{N}}\) such that \( P = \left\lbrace 0, \frac{1}{M} , \frac{2}{M} , \ldots, 1 \right\rbrace \)
 is such that \( U(P,f) - L(P,f) $LTS \frac{1}{n} , \)
 then \(f\) is Riemann integrable.
 $BR

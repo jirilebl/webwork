@@ -26,7 +26,7 @@ $BR
 
 
 Now define \(h \colon R \to {\mathbb{R}}\) by \(h(x,y) = x . \)
-Consider the partition \(P = ($LB -1,0,2 $RB , $LB -3,0,4 $RB ) . \) 
+Consider the partition \(P = (\lbrace -1,0,2 \rbrace , \lbrace -3,0,4 \rbrace ) . \) 
 Compute the upper and lower sums:
 
 \(\displaystyle L(P,h) = {} \)

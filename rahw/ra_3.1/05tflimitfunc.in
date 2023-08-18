@@ -12,7 +12,7 @@ True
 True or false:
 Suppose \(f\colon {\mathbb{R}} \to {\mathbb{R}}\) is a function and \(c \in {\mathbb{R}} .\)
 \(\displaystyle \lim_{x \to c} f(x) = L \) whenever there exists
-a sequence \( $LB x_n $RB \) such that \(\lim x_n = c\) and \(\displaystyle \lim_{n\to \infty} f(x_n) = L .\)
+a sequence \( \lbrace x_n \rbrace_{n=1}^{\infty} \) such that \(\displaystyle \lim_{n\to\infty} x_n = c\) and \(\displaystyle \lim_{n\to \infty} f(x_n) = L .\)
 $BR
 %RADIO
 True

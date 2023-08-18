@@ -5,14 +5,14 @@ Consider the sequence of functions
 \(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
 \(f_n(x) = x^n .\)  The sequence converges pointwise.
 Select all the sets \(S\) such that the sequence of restrictions 
-\($LB f_n|_S $RB\) converges uniformly.
+\(\lbrace f_n|_S \rbrace_{n=1}^\infty\) converges uniformly.
 $BR
 %CHECKBOXES
 \([0,0.9]\)
 \([0,0.9)\)
 \([0.1,0.9]\)
-\($LB 0, 0.9 $RB\)
-\($LB 0, 1 $RB\)
+\(\lbrace 0, 0.9 \rbrace\)
+\(\lbrace 0, 1 \rbrace\)
 %EXTRA
 \([0,1]\)
 \([0,1)\)
@@ -22,14 +22,14 @@ Consider the sequence of functions
 \(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
 \(f_n(x) = x^{1/n} .\)  The sequence converges pointwise.
 Select all the sets \(S\) such that the sequence of restrictions 
-\($LB f_n|_S $RB\) converges uniformly.
+\(\lbrace f_n|_S \rbrace_{n=1}^\infty\) converges uniformly.
 $BR
 %CHECKBOXES
 \([0.1,0.9]\)
 \((0.1,0.9)\)
 \([0.1,1]\)
-\($LB 0.1, 0.9 $RB\)
-\($LB 0, 1 $RB\)
+\(\lbrace 0.1, 0.9 \rbrace\)
+\(\lbrace 0, 1 \rbrace\)
 %EXTRA
 \((0,0.9]\)
 \([0,0.9]\)

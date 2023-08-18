@@ -13,7 +13,7 @@ $BR
 
 If \(p := ($c,0),\) then compute
 $BR
-\(\inf \, $LB d(p,q) : q \in R $RB = {} \)
+\(\inf \, \lbrace d(p,q) : q \in R \rbrace = {} \)
 %NUMBER $c-$a
 
 Compute the smallest real \(M\)

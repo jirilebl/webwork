@@ -49,7 +49,7 @@ Because the domain of \(f\) is open.
 Every bounded sequence must have an bounded subsequence.
 %END
 
-The sequence \($LB x_n $RB\) is bounded as \(a \leq x_n \leq b .\)
+The sequence \(\lbrace x_n \rbrace_{n=1}^\infty\) is bounded as \(a \leq x_n \leq b .\)
 
 $BITALIC Q: Why? $EITALIC
 $BR
@@ -59,7 +59,7 @@ We choose the sequence to be such.
 The sequence is convergent.
 %END
 
-$BITALIC Q: Is the sequence \($LB x_n $RB\) necessarily convergent? $EITALIC
+$BITALIC Q: Is the sequence \(\lbrace x_n \rbrace_{n=1}^\infty\) necessarily convergent? $EITALIC
 $BR
 %RADIO
 Yes.
@@ -68,8 +68,8 @@ No, the series necessarily diverges.
 %END
 
 By the Bolzano-Weierstrass theorem,
-there is a convergent subsequence \($LB x_{n_i} $RB.\)
-Let \(x := \lim\, x_{n_i} .\)
+there is a convergent subsequence \(\lbrace x_{n_i} \rbrace_{i=1}^\infty.\)
+Let \(x := \lim\limits_{i\to\infty} x_{n_i} .\)
 
 $BITALIC Q: This limit is a ... $EITALIC
 $BR
@@ -81,7 +81,7 @@ function limit as \(x_{n_i}\) goes to \(x .\)
 %END
 
 Since \(a \leq x_{n_i} \leq b\) for all \(i,\) then \(a \leq x \leq b .\)
-The sequence \($LB f(x_{n_i}) $RB\) is not bounded 
+The sequence \(\lbrace f(x_{n_i}) \rbrace_{i=1}^\infty\) is not bounded 
 as 
 \(\lvert f(x_{n_i}) \rvert \geq n_i \geq i .\)
 Thus \(f\) is not continuous at \(x\) as
@@ -106,9 +106,9 @@ QED
 $BITALIC Q: Why do we need to find the subsequence? $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT The original sequence \($LB x_n $RB\) might not be convergent.
+%CORRECT The original sequence \(\lbrace x_n \rbrace_{n=1}^\infty\) might not be convergent.
 To make the sequence bounded.
-To make sure we find an nonconvergent sequence \($LB f(x_{n_i}) $RB .\)
+To make sure we find an nonconvergent sequence \(\lbrace f(x_{n_i}) \rbrace_{i=1}^\infty .\)
 Because we want to make the proof more complicated.
 %END
 

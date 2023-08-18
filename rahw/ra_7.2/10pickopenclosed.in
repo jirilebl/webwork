@@ -86,7 +86,7 @@ open and closed (clopen)
 neither
 %END
 
-\( $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+\( \lbrace \frac{1}{n} : n \in {\mathbb{N}} \rbrace \)
 $BR
 %RADIO
 open
@@ -95,7 +95,7 @@ open and closed (clopen)
 %CORRECT neither
 %END
 
-\( $LB 0 $RB \cup $LB \frac{1}{n} : n \in {\mathbb{N}} $RB \)
+\( \lbrace 0 \rbrace \cup \lbrace \frac{1}{n} : n \in {\mathbb{N}} \rbrace \)
 $BR
 %RADIO
 open

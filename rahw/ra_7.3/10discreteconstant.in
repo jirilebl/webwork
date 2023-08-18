@@ -6,7 +6,7 @@ some \(K\)-tail is constant.
 First prove that a convergent sequence is eventually constant:
 
 %PROOF
-Suppose \($LB x_n $RB\) is a convergent sequence in \((X,d),\) converging to \(x \in X.\)
+Suppose \(\lbrace x_n \rbrace_{n=1}^\infty\) is a convergent sequence in \((X,d),\) converging to \(x \in X.\)
 There exists an \(N\) such that for all \(n \geq N,\) we have \(d(x_n,x) $LTS 1 .\)
 As \(d\) is the discrete metric, \(d(x_n,x) $LTS 1\) implies \(d(x_n,x) = 0,\)
 and so \(x_n = x\) for all \(n \geq N.\)
@@ -14,21 +14,21 @@ and so \(x_n = x\) for all \(n \geq N.\)
 and so \(x_n = 0\) for all \(n \geq N.\)
 and so \(x_n = x\) for all \(n \in {\mathbb{N}}.\)
 There exists an \(N\) such that for all \(n \leq N,\) we have \(d(x_n,x) $LTS 1 .\)
-Suppose \($LB x_n $RB\) is a divergent sequence in \((X,d).\)
+Suppose \(\lbrace x_n \rbrace_{n=1}^\infty\) is a divergent sequence in \((X,d).\)
 %END
 
 Now prove that every eventually convergent sequence is convergent.
 
 %PROOF
-Suppose \($LB x_n $RB\) is a sequence, \(N\) a number, and \(x \in X\) such that \(x_n=x\) for all \(n \geq N ,\)
+Suppose \(\lbrace x_n \rbrace_{n=1}^\infty\) is a sequence, \(N\) a number, and \(x \in X\) such that \(x_n=x\) for all \(n \geq N ,\)
 and let \(\epsilon $GTS 0 \) be given.
 Then for all \(n \geq N\) we have
 \(d(x_n,x) = 0 $LTS \epsilon .\)
-Thus \($LB x_n $RB\) converges to \(x.\)
+Thus \(\lbrace x_n \rbrace_{n=1}^\infty\) converges to \(x.\)
 %EXTRA
-Suppose \($LB x_n $RB\) is a convergent sequence,
+Suppose \(\lbrace x_n \rbrace_{n=1}^\infty\) is a convergent sequence,
 and let \(\epsilon := 1 .\)
 \(d(x_n,x) = \epsilon .\)
 \(d(x_n,x) = 1 .\)
-Thus \($LB x_n $RB\) diverges.
+Thus \(\lbrace x_n \rbrace_{n=1}^\infty\) diverges.
 %END

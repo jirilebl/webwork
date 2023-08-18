@@ -7,7 +7,7 @@
 %SETUP $cpo=$c+1;
 %SETUP $cmo=$c-1;
 True or false:
-The span of \($LB (1,1,$a) , ($b,0,0) , (0,0,$c) $RB\)
+The span of \(\lbrace (1,1,$a) , ($b,0,0) , (0,0,$c) \rbrace\)
 is all of \({\mathbb{R}}^3.\)
 $BR
 %RADIO
@@ -35,7 +35,7 @@ infinite
 %END
 
 For what \(k\) are is the set 
-\($LB (1,$a) , ($b,k) $RB\)
+\(\lbrace (1,$a) , ($b,k) \rbrace\)
 linearly dependent?
 $BR
 %NUMBER $a*$b
@@ -78,7 +78,7 @@ False
 %END
 
 True or false:
-If a set \($LB v_1,v_2,\ldots,v_n $RB\) is a linearly dependent
+If a set \(\lbrace v_1,v_2,\ldots,v_n \rbrace\) is a linearly dependent
 set, then any one of the elements of the set can be written
 as a linear combination of the others.
 $BR
@@ -88,7 +88,7 @@ True
 %END
 
 True or false:
-If a set \($LB v_1,v_2,\ldots,v_n $RB\) is a linearly dependent
+If a set \(\lbrace v_1,v_2,\ldots,v_n \rbrace\) is a linearly dependent
 set, then at least one of the elements of the set can be written
 as a linear combination of the others.
 $BR
@@ -99,7 +99,7 @@ False
 
 True or false:
 If \(v_1 = v_2 + v_3 , \) then
-\($LB v_1,v_2,v_3 $RB\) is a linearly dependent set.
+\(\lbrace v_1,v_2,v_3 \rbrace\) is a linearly dependent set.
 $BR
 %RADIO
 %CORRECT True

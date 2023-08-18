@@ -4,79 +4,79 @@
 Consider the sequence of functions
 \(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
 \(f_n(x) = x^n .\)  What is the largest subset of \([0,1]\)
-on which \($LB f_n $RB\) converges pointwise.
+on which \(\lbrace f_n \rbrace_{n=1}^\infty\) converges pointwise.
 $BR
 %RADIO
 %CORRECT \([0,1]\)
 \([0,1)\)
 \((0,1]\)
 \((0,1)\)
-\($LB 0, 1 $RB\)
-\($LB 1 $RB\)
-\($LB 0 $RB\)
+\(\lbrace 0, 1 \rbrace\)
+\(\lbrace 1 \rbrace\)
+\(\lbrace 0 \rbrace\)
 \( \emptyset \)
 %END
 
 Consider the sequence of functions
 \(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
 \(f_n(x) = (-1)^n x^n .\)  What is the largest subset of \([0,1]\)
-on which \($LB f_n $RB\) converges pointwise.
+on which \(\lbrace f_n \rbrace_{n=1}^\infty\) converges pointwise.
 $BR
 %RADIO
 \([0,1]\)
 %CORRECT \([0,1)\)
 \((0,1]\)
 \((0,1)\)
-\($LB 0, 1 $RB\)
-\($LB 1 $RB\)
-\($LB 0 $RB\)
+\(\lbrace 0, 1 \rbrace\)
+\(\lbrace 1 \rbrace\)
+\(\lbrace 0 \rbrace\)
 \( \emptyset \)
 %END
 
 Consider the sequence of functions
 \(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
 \(f_n(x) = x^{1/n} .\)  What is the largest subset of \([0,1]\)
-on which \($LB f_n $RB\) converges pointwise.
+on which \(\lbrace f_n \rbrace_{n=1}^\infty\) converges pointwise.
 $BR
 %RADIO
 %CORRECT \([0,1]\)
 \([0,1)\)
 \((0,1]\)
 \((0,1)\)
-\($LB 0, 1 $RB\)
-\($LB 1 $RB\)
-\($LB 0 $RB\)
+\(\lbrace 0, 1 \rbrace\)
+\(\lbrace 1 \rbrace\)
+\(\lbrace 0 \rbrace\)
 \( \emptyset \)
 %END
 
 Consider the sequence of functions
 \(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
 \(f_n(x) = (-1)^n x^{1/n} .\)  What is the largest subset of \([0,1]\)
-on which \($LB f_n $RB\) converges pointwise.
+on which \(\lbrace f_n \rbrace_{n=1}^\infty\) converges pointwise.
 $BR
 %RADIO
 \([0,1]\)
 \([0,1)\)
 \((0,1]\)
 \((0,1)\)
-\($LB 0, 1 $RB\)
-\($LB 1 $RB\)
-%CORRECT \($LB 0 $RB\)
+\(\lbrace 0, 1 \rbrace\)
+\(\lbrace 1 \rbrace\)
+%CORRECT \(\lbrace 0 \rbrace\)
 \( \emptyset \)
 %END
 
 Consider the sequence of functions
 \(f_n \colon [0,1] \to {\mathbb{R}}\) defined by
 \(f_n(x) = (-1)^n {(1+x)}^{n} .\)  What is the largest subset of \([0,1]\)
-on which \($LB f_n $RB\) converges pointwise.
+on which \(\lbrace f_n \rbrace_{n=1}^\infty\) converges pointwise.
 $BR
 %RADIO
 \([0,1]\)
 \([0,1)\)
 \((0,1]\)
 \((0,1)\)
-\($LB 0, 1 $RB\)
-\($LB 1 $RB\)
-\($LB 0 $RB\)
+\(\lbrace 0, 1 \rbrace\)
+\(\lbrace 1 \rbrace\)
+\(\lbrace 0 \rbrace\)
 %CORRECT \( \emptyset \)
 %END

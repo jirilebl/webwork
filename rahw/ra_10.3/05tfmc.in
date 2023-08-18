@@ -6,11 +6,11 @@
 Which of the following are measure zero subsets of \(\mathbb{R}\):
 %CHECKBOXES
 \(\mathbb{Q}\)
-\($LB $a,$b $RB\)
+\(\lbrace $a,$b \rbrace\)
 \([$a,$b] \cap \mathbb{Q}\)
-\($LB \frac{1}{n} : n \in \mathbb{N} $RB\)
+\(\lbrace \frac{1}{n} : n \in \mathbb{N} \rbrace\)
 \(\emptyset\)
-\($LB 0 $RB\)
+\(\lbrace 0 \rbrace\)
 %EXTRA
 \(\mathbb{R}\)
 \([$a,$b]\)

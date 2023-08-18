@@ -7,11 +7,11 @@
 Which of the following subsets of \(\mathbb{R}\) are Jordan measurable?
 %CHECKBOXES
 \([0,$a]\)
-\($LB $a,$b,$c $RB\)
+\(\lbrace $a,$b,$c \rbrace\)
 \((0,$a)\)
-\($LB \frac{1}{n} : n \in {\mathbb{N}} $RB\)
+\(\lbrace \frac{1}{n} : n \in {\mathbb{N}} \rbrace\)
 \([0,1] \cup [2,3]\)
-\($LB 0 $RB \cup (2,3)\)
+\(\lbrace 0 \rbrace \cup (2,3)\)
 %EXTRA
 \([0,$a]\cap {\mathbb{Q}}\)
 %END

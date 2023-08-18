@@ -20,7 +20,7 @@ True
 True or false:
 Suppose \(X \subset {\mathbb{R}}\) is finite and
 \(f_n \colon X \to {\mathbb{R}}\) give a sequence of functions
-that converges pointwise.  Then \($LB f_n $RB\) converges uniformly.
+that converges pointwise.  Then \(\lbrace f_n \rbrace_{n=1}^\infty\) converges uniformly.
 $BR
 %RADIO
 %CORRECT True
@@ -30,7 +30,7 @@ False
 True or false:
 Suppose \(f_n \colon [a,b] \to {\mathbb{R}}\) are such that
 \(f_n(x) \leq f_{n+1}(x)\) for all \(n \in {\mathbb{N}}\) and all \(x \in [a,b] .\)
-Then \($LB f_n $RB\) converges pointwise.
+Then \(\lbrace f_n \rbrace_{n=1}^\infty\) converges pointwise.
 $BR
 %RADIO
 True
@@ -40,7 +40,7 @@ True
 True or false:
 Suppose \(f_n \colon [a,b] \to {\mathbb{R}}\) are bounded functions such that
 \(f_n(x) \leq f_{n+1}(x)\) for all \(n \in {\mathbb{N}}\) and all \(x \in [a,b] .\)
-Then \($LB f_n $RB\) converges pointwise.
+Then \(\lbrace f_n \rbrace_{n=1}^\infty\) converges pointwise.
 $BR
 %RADIO
 True
@@ -52,7 +52,7 @@ Suppose \(f_n \colon [a,b] \to {\mathbb{R}}\) are such that
 \(f_n(x) \leq f_{n+1}(x)\) for all \(n \in {\mathbb{N}}\) and all \(x \in [a,b] .\)
 Suppose also that for each \(x \in [a,b]\) there is a \(B_x \in {\mathbb{R}}\) such that \(f_n(x) \leq B_x\)
 for all \(n \in {\mathbb{N}}.\)
-Then \($LB f_n $RB\) converges pointwise.
+Then \(\lbrace f_n \rbrace_{n=1}^\infty\) converges pointwise.
 $BR
 %RADIO
 %CORRECT True
@@ -65,7 +65,7 @@ Suppose \(f_n \colon [a,b] \to {\mathbb{R}}\) are such that
 Suppose also that there exists a \(B \in {\mathbb{R}}\)
 such that \(f_n(x) \leq B\)
 for all \(n \in {\mathbb{N}} \) and all \(x \in [a,b] .\)
-Then \($LB f_n $RB\) converges pointwise.
+Then \(\lbrace f_n \rbrace_{n=1}^\infty\) converges pointwise.
 $BR
 %RADIO
 %CORRECT True

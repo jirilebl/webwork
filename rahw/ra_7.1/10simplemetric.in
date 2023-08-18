@@ -2,7 +2,7 @@
 %HINC head.txt
 %SETUP $a = random(2,5,1);
 %SETUP $b = $a+random(2,4,1);
-Suppose \(X := $LB a,b,c $RB .\)
+Suppose \(X := \lbrace a,b,c \rbrace .\)
 Finish the definition of a metric \(d\) so that the remaining distances are as
 small as possible.
 

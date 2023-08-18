@@ -1,7 +1,7 @@
 %DESC True/false/multiple choice/quick answer questions for definition of integral in several variables
 %HINC head.txt
 %NOPARTIAL
-Suppose that \(R := [0,1] \times [0,1] \) and the partition \(P\) is given by \(($LB 0,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB ) .\) 
+Suppose that \(R := [0,1] \times [0,1] \) and the partition \(P\) is given by \((\lbrace 0,0.5,1 \rbrace , \lbrace 0,0.1,0.9,1 \rbrace ) .\) 
 How many subrectangles does the partition have?
 $BR
 %NUMBER 6
@@ -25,14 +25,14 @@ which of the following are the subrectangles of this partition?
 For same \(R\) and \(P\) as above,
 what are valid refinements of \(P\)?
 %CHECKBOXES
-\(($LB 0,0.1,0.5,1 $RB , $LB 0,0.1,0.9,1 $RB )\) 
-\(($LB 0,0.5,1 $RB , $LB 0,0.1,0.5,0.9,1 $RB )\) 
-\(($LB 0,0.1,0.5,1 $RB , $LB 0,0.1,0.5,0.9,1 $RB )\) 
-\(($LB 0,0.5,1 $RB , $LB 0,0.1,0.2,0.3,0.5,0.6,0.7,0.8,0.9,1 $RB )\) 
+\((\lbrace 0,0.1,0.5,1 \rbrace , \lbrace 0,0.1,0.9,1 \rbrace )\) 
+\((\lbrace 0,0.5,1 \rbrace , \lbrace 0,0.1,0.5,0.9,1 \rbrace )\) 
+\((\lbrace 0,0.1,0.5,1 \rbrace , \lbrace 0,0.1,0.5,0.9,1 \rbrace )\) 
+\((\lbrace 0,0.5,1 \rbrace , \lbrace 0,0.1,0.2,0.3,0.5,0.6,0.7,0.8,0.9,1 \rbrace )\) 
 %EXTRA
-\(($LB 0,0.1,1 $RB , $LB 0,0.1,0.9,1 $RB )\) 
-\(($LB 0,1 $RB , $LB 0,0.1,0.9,1 $RB )\) 
-\(($LB 0,0.5,1 $RB , $LB 0,0.5,1 $RB )\) 
+\((\lbrace 0,0.1,1 \rbrace , \lbrace 0,0.1,0.9,1 \rbrace )\) 
+\((\lbrace 0,1 \rbrace , \lbrace 0,0.1,0.9,1 \rbrace )\) 
+\((\lbrace 0,0.5,1 \rbrace , \lbrace 0,0.5,1 \rbrace )\) 
 %END
 
 True or false:

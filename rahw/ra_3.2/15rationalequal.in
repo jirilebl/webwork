@@ -8,9 +8,9 @@ Prove that if
 
 %PROOF
 Let \(x \in {\mathbb{R}}\) be arbitrary.
-Take a sequence \($LB r_n $RB\) of rational numbers that converges to \(x.\)
+Take a sequence \(\lbrace r_n \rbrace_{n=1}^\infty\) of rational numbers that converges to \(x.\)
 We have \(f(r_n)=g(r_n)\) for all \(n,\) as \(r_n\) is rational.
-As \(f\) and \(g\) are continuous at \(x,\) we have \(f(x) = \lim\, f(r_n) = \lim\, g(r_n) = g(x) .\)
+As \(f\) and \(g\) are continuous at \(x,\) we have \(f(x) = \lim\limits_{n\to\infty} f(r_n) = \lim\limits_{n\to\infty} g(r_n) = g(x) .\)
 %EXTRA
 As \(f\) is continuous, \( \lvert f(x) - f(r_n) \lvert $LTS \epsilon . \)
 As \(g\) is continuous, \( \lvert g(x) - g(r_n) \lvert $LTS \epsilon . \)
@@ -18,5 +18,5 @@ Take \(M\) large enough so that \(\lvert x-r_n\rvert $LTS \epsilon . \)
 Define \(g(x) := f(x) . \)
 Let \(\epsilon $GTS 0 \) be given.
 Let \(\delta := \epsilon .\)
-Take an arbitrary sequence \($LB r_n $RB . \)
+Take an arbitrary sequence \(\lbrace r_n \rbrace_{n=1}^\infty . \)
 %END

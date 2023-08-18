@@ -40,7 +40,7 @@ Because the value of \(\epsilon\) is irrelevant in the proof.
 Write
 \[
 \newcommand{\abs}[1]{\left\lvert {#1} \right\rvert}
-\delta := \min \left$LB 1 , \, \frac{\epsilon}{2\abs{c}+1} \right$RB .
+\delta := \min \left\lbrace 1 , \, \frac{\epsilon}{2\abs{c}+1} \right\rbrace .
 \]
 
 $BITALIC Q: Is \(\delta\) always positive? $EITALIC

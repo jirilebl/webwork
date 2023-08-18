@@ -10,7 +10,7 @@ $BR
 %CORRECT \([0,1]\)
 \((0,1)\)
 \((0,1]\)
-\($LB 0,1 $RB \)
+\(\lbrace 0,1 \rbrace \)
 \(\emptyset \)
 \(\mathbb{R} \)
 %END
@@ -21,7 +21,7 @@ $BR
 \([0,1]\)
 \((0,1)\)
 \((0,1]\)
-%CORRECT \($LB 0,1 $RB \)
+%CORRECT \(\lbrace 0,1 \rbrace \)
 \(\emptyset \)
 \(\mathbb{R} \)
 %END
@@ -32,7 +32,7 @@ $BR
 \([0,1]\)
 %CORRECT \((0,1)\)
 \((0,1]\)
-\($LB 0,1 $RB \)
+\(\lbrace 0,1 \rbrace \)
 \(\emptyset \)
 \(\mathbb{R} \)
 %END
@@ -43,7 +43,7 @@ $BR
 %CORRECT \([0,1]\)
 \((0,1)\)
 \((0,1]\)
-\($LB 0,1 $RB \)
+\(\lbrace 0,1 \rbrace \)
 \(\emptyset \)
 \(\mathbb{R} \)
 %END
@@ -54,7 +54,7 @@ $BR
 \([0,1]\)
 \((0,1)\)
 \((0,1]\)
-%CORRECT \($LB 0,1 $RB \)
+%CORRECT \(\lbrace 0,1 \rbrace \)
 \(\emptyset \)
 \(\mathbb{R} \)
 %END
@@ -65,7 +65,7 @@ $BR
 \([0,1]\)
 %CORRECT \((0,1)\)
 \((0,1]\)
-\($LB 0,1 $RB \)
+\(\lbrace 0,1 \rbrace \)
 \(\emptyset \)
 \(\mathbb{R} \)
 %END
@@ -75,7 +75,7 @@ $BR
 %RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
-\($LB 0 $RB \)
+\(\lbrace 0 \rbrace \)
 \(\emptyset \)
 %CORRECT \(\mathbb{R} \)
 %END
@@ -85,7 +85,7 @@ $BR
 %RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
-\($LB 0 $RB \)
+\(\lbrace 0 \rbrace \)
 \(\emptyset \)
 %CORRECT \(\mathbb{R} \)
 %END
@@ -95,7 +95,7 @@ $BR
 %RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
-\($LB 0 $RB \)
+\(\lbrace 0 \rbrace \)
 %CORRECT \(\emptyset \)
 \(\mathbb{R} \)
 %END
@@ -105,7 +105,7 @@ $BR
 %RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
-\($LB 0 $RB \)
+\(\lbrace 0 \rbrace \)
 \(\emptyset \)
 %CORRECT \(\mathbb{R} \)
 %END
@@ -115,7 +115,7 @@ $BR
 %RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
-\($LB 0 $RB \)
+\(\lbrace 0 \rbrace \)
 %CORRECT \(\emptyset \)
 \(\mathbb{R} \)
 %END
@@ -125,7 +125,7 @@ $BR
 %RADIO
 \({\mathbb{Q}}\)
 \({\mathbb{R}} \setminus {\mathbb{Q}}\)
-\($LB 0 $RB \)
+\(\lbrace 0 \rbrace \)
 \(\emptyset \)
 %CORRECT \(\mathbb{R} \)
 %END

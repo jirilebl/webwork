@@ -46,6 +46,6 @@ Yes
 
 Suppose \(X\) is the space of polynomials of degree 3 or less (a 4-dimensional
 vector space).  Let \(D\) be the derivative operator.  Given the basis
-\($LB 1,t,t^2,t^3 $RB\) on \(X\) what is the matrix giving \(D?\)
+\(\lbrace 1,t,t^2,t^3 \rbrace\) on \(X\) what is the matrix giving \(D?\)
 $BR
 %MATRIX [[0,1,0,0],[0,0,2,0],[0,0,0,3],[0,0,0,0]]

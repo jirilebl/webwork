@@ -40,5 +40,5 @@ By squeeze lemma for sequences, \(\lim\limits_{n\to\infty} \int_a^b h = L .\)
 \(\displaystyle \qquad $LTS \overline{\int_a^b} g_n \)
 \(\displaystyle \qquad $LTS \epsilon \)
 Let \(\displaystyle \int_a^b h := L .\)
-Consider a partition \(P = $LB x_0, \ldots, x_k $RB \) of \([a,b] .\)
+Consider a partition \(P = \lbrace x_0, \ldots, x_k \rbrace \) of \([a,b] .\)
 %END

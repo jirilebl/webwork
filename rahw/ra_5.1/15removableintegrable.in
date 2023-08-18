@@ -15,7 +15,7 @@ Prove that \(f\) is Riemann integrable on on \([-1,1]\) and compute the integral
 
 %PROOF
 Let \(\epsilon $GTS 0\) be given.
-Consider the partition \(P = \left$LB -1,\frac{-\epsilon}{2},\frac{\epsilon}{2},1 \right$RB . \)
+Consider the partition \(P = \left\lbrace -1,\frac{-\epsilon}{2},\frac{\epsilon}{2},1 \right\rbrace . \)
 Next, \(m_1 = m_2 = m_3 = 0\) and \(M_1 = 0, M_2 = 1, M_3 = 0 . \)
 Compute \(L(P,f) = 0 \Delta x_1 + 0 \Delta x_2 + 0 \Delta x_3 = 0 , \)
 and \(U(P,f) = 0 \Delta x_1 + 1 \Delta x_2 + 0 \Delta x_3 = \epsilon . \)
@@ -25,7 +25,7 @@ As \( \epsilon $GTS 0 \) is arbitrary, \(\overline{\int_{-1}^1} f(x)\, dx = \und
 %EXTRA
 Compute \(L(P,f) = \Delta x_1 + \Delta x_2 + \Delta x_3 = 1 , \)
 Next, \(m_1 = m_2 = m_3 = 1\) and \(M_1 = 1, M_2 = 0, M_3 = 1 . \)
-Consider the partition \(P = \left$LB -1,0,1 \right$RB . \)
+Consider the partition \(P = \left\lbrace -1,0,1 \right\rbrace . \)
 %END
 
 What is the integral?

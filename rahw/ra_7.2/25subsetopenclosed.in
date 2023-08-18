@@ -35,7 +35,7 @@ open and closed (clopen) in \(B\)
 neither
 %END
 
-If \( A= $LB 2 $RB \) and \(B = {\mathbb{Z}} , \)
+If \( A= \lbrace 2 \rbrace \) and \(B = {\mathbb{Z}} , \)
 then \(A\) is
 $BR
 %RADIO

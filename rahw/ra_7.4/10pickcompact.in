@@ -7,14 +7,14 @@ $BR
 %CHECKBOXES
 \([0,1]\)
 \(\emptyset\)
-\($LB 0,1 $RB \)
-\($LB 0,1,2,3,4,5 $RB \)
-\([-1,1] \cup $LB 3 $RB \)
+\(\lbrace 0,1 \rbrace \)
+\(\lbrace 0,1,2,3,4,5 \rbrace \)
+\([-1,1] \cup \lbrace 3 \rbrace \)
 %EXTRA
 \({\mathbb{N}}\)
 \({\mathbb{Q}}\)
 \({\mathbb{Q}} \cap [-1,1]\)
-\([-1,1] \setminus $LB 0 $RB \)
+\([-1,1] \setminus \lbrace 0 \rbrace \)
 \([0,\infty)\)
 %END
 
@@ -24,15 +24,15 @@ metric:
 $BR
 %CHECKBOXES
 \(\emptyset\)
-\($LB 0,1 $RB \)
-\($LB 0,1,2,3,4,5 $RB \)
+\(\lbrace 0,1 \rbrace \)
+\(\lbrace 0,1,2,3,4,5 \rbrace \)
 %EXTRA
-\([-1,1] \cup $LB 3 $RB \)
+\([-1,1] \cup \lbrace 3 \rbrace \)
 \([0,1]\)
 \({\mathbb{N}}\)
 \({\mathbb{Q}}\)
 \({\mathbb{Q}} \cap [-1,1]\)
-\([-1,1] \setminus $LB 0 $RB \)
+\([-1,1] \setminus \lbrace 0 \rbrace \)
 \([0,\infty)\)
 %END
 

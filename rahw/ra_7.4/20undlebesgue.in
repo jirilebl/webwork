@@ -7,7 +7,7 @@ $BBOLD Lemma $EBOLD (Lebesgue covering lemma).
 $BITALIC
 Let \((X,d)\) be a metric space and \(K \subset X.\)  Suppose 
 every sequence in \(K\) has a subsequence convergent in \(K.\)  Given
-an open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) there exists a
+an open cover \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) there exists a
 \(\delta $GTS 0\) such that for every \(x \in K,\) there exists a \(\lambda \in I\)
 with \(B(x,\delta) \subset U_\lambda.\)
 $EITALIC
@@ -31,25 +31,25 @@ We prove the lemma by contrapositive.
 $BITALIC Q: The conclusion is (in more concise and formal notation): $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
-\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
-\(\exists \delta $GTS 0 ,\) \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
-\(\forall x \in K ,\) \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\)  \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
-\(\exists \lambda \in I ,\) \(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(B(x,\delta) \subset U_\lambda .\)
+%CORRECT \(\forall\) open covers \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\exists\) open cover \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\exists \delta $GTS 0 ,\) \(\forall\) open covers \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\forall x \in K ,\) \(\forall\) open covers \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\)  \(\exists \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\exists \lambda \in I ,\) \(\forall\) open covers \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(B(x,\delta) \subset U_\lambda .\)
 %END
 
 $BITALIC Q: The negation of the conclusion is (in more concise and formal notation): $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT \(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)
-\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
-\(\forall\) open covers \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)
-\(\forall \delta $GTS 0 ,\) \(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\forall \lambda \in I ,\) \(\exists x \in K ,\) \(B(x,\delta) \not\subset U_\lambda .\)
-\(\exists\) open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)
+%CORRECT \(\exists\) open cover \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)
+\(\exists\) open cover \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\forall \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\forall \lambda \in I ,\) \(B(x,\delta) \subset U_\lambda .\)
+\(\forall\) open covers \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\forall x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)
+\(\forall \delta $GTS 0 ,\) \(\exists\) open cover \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\forall \lambda \in I ,\) \(\exists x \in K ,\) \(B(x,\delta) \not\subset U_\lambda .\)
+\(\exists\) open cover \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K,\) \(\exists \delta $GTS 0 ,\) \(\exists x \in K ,\) \(\exists \lambda \in I ,\) \(B(x,\delta) \not\subset U_\lambda .\)
 %END
 
 If the conclusion is not true, then there is
-an open cover \({$LB U_\lambda $RB}_{\lambda \in I}\) of \(K\) with
+an open cover \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) of \(K\) with
 the following property.
 For every \(n \in {\mathbb{N}},\) there exists an \(x_n \in K\) such that
 \(B(x_n,\frac{1}{n})\) is not a subset of any \(U_\lambda.\)
@@ -78,7 +78,7 @@ a \(\lambda \in I\) such that \(x \in U_\lambda.\)
 $BITALIC Q: Why does such a \(\lambda\) exist? $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT Because \({$LB U_\lambda $RB}_{\lambda \in I}\) is an open cover.
+%CORRECT Because \({\lbrace U_\lambda \rbrace}_{\lambda \in I}\) is an open cover.
 Because \(K\) is sequentially compact.
 Because \(x\) is arbitrary.
 %END
@@ -121,8 +121,8 @@ The sequence cannot have a subsequence converging to \(x.\)
 $BITALIC Q: Why? $EITALIC
 $BR
 %RADIORANDOM
-%CORRECT Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would contain \(x_n\) for infinitely many \(n .\)
-Because if \($LB x_n $RB\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would not contain \(x_n\) for any \(n .\)
+%CORRECT Because if \(\lbrace x_n \rbrace_{n=1}^\infty\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would contain \(x_n\) for infinitely many \(n .\)
+Because if \(\lbrace x_n \rbrace_{n=1}^\infty\) had a subsequence converging to \(x,\) then \(B(x,\frac{\epsilon}{2})\) would not contain \(x_n\) for any \(n .\)
 Because we defined \(x\) that way.
 Because \(x \in K .\)
 %END

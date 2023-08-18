@@ -2,9 +2,9 @@
 %HINC head.txt
 %SETUP $a = random(2,5,1);
 Consider partitions
-\(P_1 = $LB 0, 1 $RB , \)
-\(P_2 = $LB 0, 0.5, 1 $RB , \)
-\(P_3 = $LB 0, 0.3, 0.7, 1 $RB . \)
+\(P_1 = \lbrace 0, 1 \rbrace , \)
+\(P_2 = \lbrace 0, 0.5, 1 \rbrace , \)
+\(P_3 = \lbrace 0, 0.3, 0.7, 1 \rbrace . \)
 Consider \(f \colon [0,1] \to {\mathbb{R}}\) defined by \(f(x) = $a x^2 . \)
 
 Compute:
