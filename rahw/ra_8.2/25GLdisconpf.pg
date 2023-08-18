@@ -61,7 +61,7 @@ $q1 = DraggableProof([
 "As \(\det\) is a continuous function, then \(\det(B) $GTS 0\) for all \(B\) near \(A.\)",
 "Hence the set \(P\) of operators with positive determinant is an open set.",
 "Similarly, the set \(N\) of operators with a negative determinant is open.",
-"As both sets are nonempty (\(I \in P\) and \(-I \in N\)), \(GL({\mathbb{R}}^n) = P \cup N\) must be disconnected.",
+"As both sets are nonempty (\(I \in P,\) \(-I \in N\)), \(GL({\mathbb{R}}^n) = P \cup N\) must be disconnected.",
 ],
 [
 "The determinant is discontinuous at the origin.",
