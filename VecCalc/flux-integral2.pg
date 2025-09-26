@@ -1,0 +1,64 @@
+##DESCRIPTION
+## Compute a flux integral of a vector field over a triangle surface
+##ENDDESCRIPTION
+
+## DBsubject(Calculus - multivariable)
+## DBchapter(Vector calculus)
+## DBsection(Surface integrals of vector fields)
+## Institution(Oklahoma State University)
+## Author(Jiri Lebl)
+## Level(4)
+## MO(1)
+## KEYWORDS('flux integral', 'surface integral', 'graph')
+
+###########################
+# Initialization
+
+DOCUMENT();      
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "PGML.pl",
+ "PGcourse.pl",
+);
+
+Context("Numeric");
+Context()->variables->are(x=>"Real",y=>"Real");
+
+$a = random(2,9);
+$b = random(2,9);
+$c = random(2,9);
+
+$z1 = Compute("$a+$c");
+$z2 = Compute("$b+$c");
+$z3 = Compute("$c");
+
+TEXT(beginproblem());
+
+###########################
+# Main text
+
+BEGIN_PGML
+Let [`T`] be the triangle with vertices at
+[`(1,0,[$z1]) ,`]
+[`(0,1,[$z2]) ,`] and
+[`(0,0,[$z3]) .`]
+First find the equation for the triangle as a graph:
+
+[``z = {} ``][_________________]{"$a*x + $b*y + $c"}
+[@ AnswerFormatHelp("formulas") @]*
+
+Let [`\hat{n}`] be the upward pointing unit normal and let
+[`vec{F} = \langle x,2y,z\rangle .`]  Compute
+
+[``\iint_T \vec{F} \cdot \hat{n} \, dS = ``][_________________]{"$c/2 - $b/6"}
+[@ AnswerFormatHelp("numbers") @]*
+END_PGML
+
+###########################
+
+COMMENT("Compute a flux integral of a vector field over a triangle surface");
+
+ENDDOCUMENT();
