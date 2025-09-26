@@ -1,0 +1,34 @@
+###########################
+# Initialization
+
+DOCUMENT();      
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "PGchoicemacros.pl",
+ "PGML.pl",
+ "PGcourse.pl",
+);
+
+$a = random(2,9);
+$b = random(2,9);
+
+
+TEXT(beginproblem());
+
+###########################
+# Main text
+
+BEGIN_PGML
+Let [`S`] be the the unit sphere and [`\hat{n}`] the outward unit normal. Let [`S_1`] be the upper hemisphere and [`S_2`] the lower hemisphere.  Suppose that
+[`\iint_{S_1} \mathbf{F} \cdot \mathbf{\hat{n}} \, dS = [$a]`]
+and
+[`\iint_{S_2} \mathbf{F} \cdot \mathbf{\hat{n}} \, dS = [$b] .`]
+Then
+
+[``\iint_S \mathbf{F} \cdot \mathbf{\hat{n}} \, dS = {}``][_________________]{"$a+$b"}
+END_PGML
+
+ENDDOCUMENT();        
+

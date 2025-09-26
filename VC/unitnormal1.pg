@@ -1,0 +1,97 @@
+#sort of like II-1, but only a couple of surfaces
+
+DOCUMENT();
+loadMacros(
+"PGstandard.pl",
+"MathObjects.pl",
+"AnswerFormatHelp.pl",
+);
+
+Context("Numeric");
+ 
+
+$showPartialCorrectAnswers = 1;
+
+
+$a = random(2,9,1);
+$b = random(2,9,1);
+$c = random(2,9,1);
+
+Context()->variables->add(y => "Real");
+
+# z = $a x^2 - y^2
+$answer1_1 = Compute("-2*$a x / sqrt( 4*$a^2*x^2 + 4*y^2 + 1 )")->reduce();
+$answer1_2 = Compute("2y / sqrt( 4*$a^2*x^2 + 4*y^2 + 1 )")->reduce();
+$answer1_3 = Compute("1 / sqrt( 4*$a^2*x^2 + 4*y^2 + 1 )")->reduce();
+
+# z = e^($b x)-$c y
+$answer2_1 = Compute("- $b e^($b x) / sqrt( $b^2*e^(2 $b x) + $c^2 + 1 )")->reduce();
+$answer2_2 = Compute("$c / sqrt( $b^2*e^(2 $b x) + $c^2 + 1 )")->reduce();
+$answer2_3 = Compute("1 / sqrt( $b^2*e^(2 $b x) + $c^2 + 1 )")->reduce();
+
+## Ok, we are ready to begin the problem...
+##
+TEXT(beginproblem());
+
+
+BEGIN_TEXT
+$BR
+a)
+For the surface given by \(z = $a x^2 - y^2 \), find the unit normal (the one pointing roughly upwards)
+$PAR
+\(\mathbf{\hat{n}} = \)
+\{ans_rule(40)\} \(\mathbf{i}\)
+$BR
+\( \qquad + \) \{ans_rule(40)\} \(\mathbf{j}\)
+$BR
+\( \qquad + \) \{ans_rule(40)\} \( \mathbf{k} \).
+$BR
+\{ AnswerFormatHelp("formulas") \}
+$PAR
+b)
+For the surface given by \(z = e^{$b x}-$c y \), find the unit normal (the one pointing roughly upwards)
+$PAR
+\(\mathbf{\hat{n}} = \)
+\{ans_rule(40)\} \(\mathbf{i}\)
+$BR
+\(\qquad + \)
+\{ans_rule(40)\} \(\mathbf{j}\)
+$BR
+\(\qquad + \)
+\{ans_rule(40)\} \( \mathbf{k} \).
+$BR
+\{ AnswerFormatHelp("formulas") \}
+
+END_TEXT
+
+$showPartialCorrectAnswers = 1;
+
+ANS( $answer1_1->cmp() );
+ANS( $answer1_2->cmp() );
+ANS( $answer1_3->cmp() );
+
+ANS( $answer2_1->cmp() );
+ANS( $answer2_2->cmp() );
+ANS( $answer2_3->cmp() );
+
+Context()->texStrings;
+BEGIN_SOLUTION
+a)
+\(
+\displaystyle
+$answer1_1 \mathbf{i} + $answer1_2 \mathbf{j} + $answer1_3 \mathbf{k} 
+\).
+$PAR
+b)
+\(
+\displaystyle
+$answer2_1 \mathbf{i} + $answer2_2 \mathbf{j} + $answer2_3 \mathbf{k} 
+\).
+END_SOLUTION
+Context()->normalStrings;
+
+COMMENT('MathObject version.');
+
+ENDDOCUMENT();
+
+
