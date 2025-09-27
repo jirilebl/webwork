@@ -53,7 +53,7 @@ First find the equation for the triangle as a graph:
 Let [`\hat{n}`] be the upward pointing unit normal and let
 [`\vec{F} = \langle x,2y,z\rangle .`]  Compute
 
-[``\iint_T \vec{F} \cdot \hat{n} \, dS = ``][_________________]{"$c/2 - $b/6"}
+[``\iint_T \vec{F} \cdot \hat{n} \, dS = {} ``][_________________]{"$c/2 - $b/6"}
 [@ AnswerFormatHelp("numbers") @]*
 END_PGML
 

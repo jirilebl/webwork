@@ -1,0 +1,248 @@
+DOCUMENT();
+
+loadMacros(
+ "PGstandard.pl",
+ "MathObjects.pl",
+ "AnswerFormatHelp.pl",
+ "parserRadioButtons.pl",
+ "PGcourse.pl",
+);
+
+
+TEXT(beginproblem());
+
+###########################
+# Setup
+
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+Context()->flags->set(num_points => 50,
+		      granularity => 10000,
+		      tolType => "relative",
+                      tolerance => 0.00001,
+                      reduceConstants => 0,
+                      reduceConstantFunctions => 0);
+
+
+
+############################
+# Main text
+
+Context()->texStrings;
+BEGIN_TEXT
+$PAR
+Suppose \(S\) is a closed surface, \(\hat{\mathbf{n}}\) the outward unit normal,
+\(V\) is the volume enclosed by \(S,\) and \(\mathbf{F}\) a vector field.
+$PAR
+What best describes \(\nabla \cdot \mathbf{F}\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q1 = RadioButtons([
+[
+"It is a vector.",
+"It is a number/scalar.",
+"It is a scalar-valued function.",
+"It is a vector field.",
+"It is a constant.",
+"It is positive.",
+"It is yellow and sticky.",
+],
+],
+"It is a scalar-valued function.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q1->buttons \}
+
+$PAR
+What best describes
+\(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q2 = RadioButtons([
+[
+"It is a vector.",
+"It is a number/scalar.",
+"It is a scalar-valued function.",
+"It is a vector field.",
+"It is a constant.",
+"It is positive.",
+"It is green.",
+],
+],
+"It is a number/scalar.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q2->buttons \}
+
+$PAR
+The integral
+\(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS\) equals (by the divergence theorem)
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q3 = RadioButtons([
+[
+"\(\displaystyle \iint_S \nabla \cdot \mathbf{F} \, dS\)",
+"\(\displaystyle \iiint_S \nabla \cdot \mathbf{F} \, dV\)",
+"\(\displaystyle \iiint_V \nabla \cdot \mathbf{F} \, dV\)",
+"\(\displaystyle - \iiint_V \nabla \cdot \mathbf{F} \, dV\)",
+"\(\displaystyle \iiint_V \mathbf{F} \, dV\)",
+"\((\nabla \cdot \mathbf{F}) \operatorname{vol}(V)\)",
+"\(-(\nabla \cdot \mathbf{F}) \operatorname{vol}(V)\)",
+"\((\nabla \cdot \mathbf{F}) \operatorname{area}(S)\)",
+"\(\operatorname{div}(\mathbf{F}) \operatorname{vol}(V)\)",
+],
+],
+"\(\displaystyle \iiint_V \nabla \cdot \mathbf{F} \, dV\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q3->buttons \}
+
+$PAR
+The integral
+\(\displaystyle \iiint_V \nabla \cdot \mathbf{F} \, dV\) equals
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q4 = RadioButtons([
+[
+"To know that we'd have to do the integration.",
+"\((\nabla \cdot \mathbf{F}) \operatorname{vol}(V)\)",
+"0",
+"42",
+],
+],
+"To know that we'd have to do the integration.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q4->buttons \}
+
+$PAR
+When, and really only when, can one say that
+\(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS\) equals
+\((\nabla \cdot \mathbf{F}) \operatorname{vol}(V)\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q5 = RadioButtons([
+[
+"If \(V\) is small.",
+"If \(\nabla \cdot \mathbf{F}\) is small.",
+"If \(\nabla \cdot \mathbf{F}\) is a constant.",
+],
+],
+"If \(\nabla \cdot \mathbf{F}\) is a constant.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q5->buttons \}
+
+$PAR
+So if \(\nabla \cdot \mathbf{F} = 2\) at all points, can we say that
+in this case \(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = 2 \operatorname{vol}(V)\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q6 = RadioButtons([
+"Yes.",
+"No.",
+],
+"Yes.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q6->buttons \}
+
+$PAR
+And if \(\nabla \cdot \mathbf{F} = 2x-z,\) can we say that
+in this case \(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = (2x-z) \operatorname{vol}(V)\)?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q7 = RadioButtons([
+"Yes.",
+"No.",
+],
+"No.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q7->buttons \}
+
+$PAR
+Is it true that for small \(V\) around a point \(p\) that
+\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS\) equals
+\(\nabla \cdot \mathbf{F}|_p\) (divergence at \(p\))?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q8 = RadioButtons([
+[
+"Not necessarily.",
+"Yes.",
+"Yes, but only for very small \(V.\)",
+"Yes, even for large \(V.\)",
+"Yes on Sundays but not during the rest of the week.",
+],
+],
+"Not necessarily.",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q8->buttons \}
+
+$PAR
+What can one say?
+$BR
+END_TEXT
+Context()->normalStrings;
+
+$q9 = RadioButtons([
+[
+"\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = \nabla \cdot \mathbf{F}|_p .\)",
+"\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS \approx \nabla \cdot \mathbf{F}|_p .\)",
+"\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = - \nabla \cdot \mathbf{F}|_p .\)",
+"\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = 0 .\)",
+],
+],
+"\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS \approx \nabla \cdot \mathbf{F}|_p .\)",
+);
+Context()->texStrings;
+BEGIN_TEXT
+\{ $q9->buttons \}
+
+$PAR
+
+END_TEXT
+Context()->normalStrings;
+
+############################
+# Answers
+
+ANS($q1->cmp());
+ANS($q2->cmp());
+ANS($q3->cmp());
+ANS($q4->cmp());
+ANS($q5->cmp());
+ANS($q6->cmp());
+ANS($q7->cmp());
+ANS($q8->cmp());
+ANS($q9->cmp());
+
+ENDDOCUMENT();
+

@@ -1,0 +1,99 @@
+Suppose \(S\) is a closed surface, \(\hat{\mathbf{n}}\) the outward unit normal,
+\(V\) is the volume enclosed by \(S,\) and \(\mathbf{F}\) a vector field.
+
+What best describes \(\nabla \cdot \mathbf{F}\)?
+$BR
+%RADIORANDOM
+It is a vector.
+It is a number/scalar.
+%CORRECT It is a scalar-valued function.
+It is a vector field.
+It is a constant.
+It is positive.
+It is yellow and sticky.
+%END
+
+What best describes
+\(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS\)?
+$BR
+%RADIORANDOM
+It is a vector.
+%CORRECT It is a number/scalar.
+It is a scalar-valued function.
+It is a vector field.
+It is a constant.
+It is positive.
+It is green.
+%END
+
+The integral
+\(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS\) equals (by the divergence theorem)
+$BR
+%RADIORANDOM
+\(\displaystyle \iint_S \nabla \cdot \mathbf{F} \, dS\)
+\(\displaystyle \iiint_S \nabla \cdot \mathbf{F} \, dV\)
+%CORRECT \(\displaystyle \iiint_V \nabla \cdot \mathbf{F} \, dV\)
+\(\displaystyle - \iiint_V \nabla \cdot \mathbf{F} \, dV\)
+\(\displaystyle \iiint_V \mathbf{F} \, dV\)
+\((\nabla \cdot \mathbf{F}) \operatorname{vol}(V)\)
+\(-(\nabla \cdot \mathbf{F}) \operatorname{vol}(V)\)
+\((\nabla \cdot \mathbf{F}) \operatorname{area}(S)\)
+\(\operatorname{div}(\mathbf{F}) \operatorname{vol}(V)\)
+%END
+
+The integral
+\(\displaystyle \iiint_V \nabla \cdot \mathbf{F} \, dV\) equals
+$BR
+%RADIORANDOM
+%CORRECT To know that we'd have to do the integration.
+\((\nabla \cdot \mathbf{F}) \operatorname{vol}(V)\)
+0
+42
+%END
+
+When, and really only when, can one say that
+\(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS\) equals
+\((\nabla \cdot \mathbf{F}) \operatorname{vol}(V)\)?
+$BR
+%RADIORANDOM
+If \(V\) is small.
+If \(\nabla \cdot \mathbf{F}\) is small.
+%CORRECT If \(\nabla \cdot \mathbf{F}\) is a constant.
+%END
+
+So if \(\nabla \cdot \mathbf{F} = 2\) at all points, can we say that
+in this case \(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = 2 \operatorname{vol}(V)\)?
+$BR
+%RADIO
+%CORRECT Yes.
+No.
+%END
+
+And if \(\nabla \cdot \mathbf{F} = 2x-z,\) can we say that
+in this case \(\displaystyle \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = (2x-z) \operatorname{vol}(V)\)?
+$BR
+%RADIO
+Yes.
+%CORRECT No.
+%END
+
+Is it true that for small \(V\) around a point \(p\) that
+\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS\) equals
+\(\nabla \cdot \mathbf{F}|_p\) (divergence at \(p\))?
+$BR
+%RADIORANDOM
+%CORRECT Not necessarily.
+Yes.
+Yes, but only for very small \(V.\)
+Yes, even for large \(V.\)
+Yes on Sundays but not during the rest of the week.
+%END
+
+What can one say?
+$BR
+%RADIORANDOM
+\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = \nabla \cdot \mathbf{F}|_p .\)
+%CORRECT \(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS \approx \nabla \cdot \mathbf{F}|_p .\)
+\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = - \nabla \cdot \mathbf{F}|_p .\)
+\(\displaystyle \frac{1}{\operatorname{vol}(V)} \iint_S \mathbf{F} \cdot \hat{\mathbf{n}} \, dS = 0 .\)
+%END
