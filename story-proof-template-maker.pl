@@ -409,8 +409,8 @@ TEXT(beginproblem());
 
 Context(\"$ctx\");
 Context()->flags->set(num_points => 50,
-		      granularity => 10000,
-		      tolType => "relative",
+                      granularity => 10000,
+                      tolType => "relative",
                       tolerance => 0.00001,
                       reduceConstants => 0,
                       reduceConstantFunctions => 0);
