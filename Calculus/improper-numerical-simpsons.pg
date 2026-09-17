@@ -1,0 +1,127 @@
+DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "MathObjects.pl",
+  "PGML.pl",
+  "PGgraphmacros.pl",
+  "parserRadioButtons.pl",
+  "PGcourse.pl",
+);
+
+TEXT(beginproblem());
+$showPartialCorrectAnswers = 1;
+
+Context("Numeric");
+Context()->flags->set(
+  tolerance => 0.005,
+  tolType => "absolute",
+);
+
+# 1. Define the function and exact answer
+$f = Compute("2*x*e^(-x^2)");
+$exact_ans = Real(1);
+
+# 2. Subroutine to compute Simpson's Rule
+# S_n = (dx/3) * [f(x_0) + 4f(x_1) + 2f(x_2) + ... + 4f(x_{n-1}) + f(x_n)]
+sub simpson {
+    my ($func, $a, $b, $n) = @_;
+    my $dx = ($b - $a) / $n;
+    my $sum = $func->eval(x=>$a) + $func->eval(x=>$b);
+    for (my $i = 1; $i < $n; $i++) {
+        my $x = $a + $i * $dx;
+        my $coeff = ($i % 2 == 0) ? 2 : 4;
+        $sum += $coeff * $func->eval(x=>$x);
+    }
+    return Real($sum * $dx / 3);
+}
+
+$simp3   = simpson($f, 0, 3, 6);
+$simp10  = simpson($f, 0, 10, 6);
+$simp100 = simpson($f, 0, 100, 6);
+
+# 3. Generate the three graphs
+# We set ymax to 1 since the global max of 2x*e^(-x^2) is approx 0.858 at x = 1/sqrt(2)
+#$refreshCachedImages = 1; # Good for development; you can remove for production
+
+$gr3 = init_graph(-0.5, -0.2, 3, 1, axes=>[0,0], size=>[400,250]);
+($fn3) = add_functions($gr3, "$f for x in <0,3> using color:blue and weight:2");
+$fn3->steps(400); 
+$gr3->lb( new Label(2.8, -0.05, 'x', 'black', 'center', 'middle') );
+
+$gr10 = init_graph(-1, -0.2, 10, 1, axes=>[0,0], size=>[400,250]);
+($fn10) = add_functions($gr10, "$f for x in <0,10> using color:blue and weight:2");
+$fn10->steps(500);
+$gr10->lb( new Label(9.5, -0.05, 'x', 'black', 'center', 'middle') );
+
+$gr100 = init_graph(-10, -0.2, 100, 1, axes=>[0,0], size=>[400,250]);
+($fn100) = add_functions($gr100, "$f for x in <0,100> using color:blue and weight:2");
+$fn100->steps(500);
+$gr100->lb( new Label(95, -0.05, 'x', 'black', 'center', 'middle') );
+
+# 4. Set up the multiple choice question
+$mc = RadioButtons(
+  [[
+    "The step size (\(\Delta x\)) becomes too large, causing the sampling points to completely step over the narrow 'bump' of the function near the origin.",
+    "The function becomes negative for large \(x\), which incorrectly subtracts from the true area near the origin.",
+    "Simpson's rule is only valid for polynomials up to degree 3, so it fundamentally fails on exponential functions.",
+    "The exact improper integral diverges, so it is impossible for the numerical approximations to settle on a single value.",
+    "Round-off error from floating point arithmetic dominates the calculation when the upper limit is large."
+  ]],
+  "The step size (\(\Delta x\)) becomes too large, causing the sampling points to completely step over the narrow 'bump' of the function near the origin." # Correct answer
+);
+
+# 5. Display the problem
+BEGIN_PGML
+Consider the improper integral 
+
+>> [`` \int_0^\infty 2x e^{-x^2} \, dx ``] <<
+
+**a)** Evaluate the integral exactly by writing it as a limit and using the fundamental theorem of calculus.
+
+Exact value = [_______________]{$exact_ans}
+
+---
+
+**b)** Now, suppose we try to approximate this improper integral by numerically integrating over larger and larger finite intervals. We will use Simpson's Rule with exactly [` n = 6 `] subintervals in each case. 
+
+Compute the Simpson's rule approximations for the following intervals (keep at least 4 decimal places):
+
+On [` [0, 3] `]: [` S_6 = `] [_______________]{$simp3}  
+On [` [0, 10] `]: [` S_6 = `] [_______________]{$simp10}  
+On [` [0, 100] `]: [` S_6 = `] [_______________]{$simp100}
+
+That's strange, isn't it?
+
+---
+
+To help visualize what is happening mathematically, here are the graphs of [`f(x) = 2x e^{-x^2}`]
+scaled to fit these three intervals. Notice how the visual "width" of the non-zero part of the
+function changes relative to the size of the interval.  On the other hand note that the actual area under
+the graph is roughly the same for all three graphs as the actual width of the peak is always the same.
+In the pictgures, we are simply "zooming out" in the x-direction.
+
+>>
+[@ image( insertGraph($gr3), width=>400, height=>250, tex_size=>400 ) @]*  
+Graph on [`[0, 3]`]
+<<
+
+>>
+[@ image( insertGraph($gr10), width=>400, height=>250, tex_size=>400 ) @]*  
+Graph on [`[0, 10]`]
+<<
+
+>>
+[@ image( insertGraph($gr100), width=>400, height=>250, tex_size=>400 ) @]*  
+Graph on [`[0, 100]`]
+<<
+
+---
+
+**c)** Based on your numerical results and the graphs, why do the approximations get completely ruined as the interval gets larger, even though the total area under the curve is barely changing?
+
+[_]{$mc}
+
+END_PGML
+
+ENDDOCUMENT();
